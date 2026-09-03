@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIẾNG VIỆT 1 - Cô giáo Thỏ Hồng</title>
+    <meta name="referrer" content="no-referrer">
+    <title>Tiếng Việt 1 - Cô giáo Thỏ Hồng</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome 6 -->
@@ -86,11 +87,11 @@
         }
     </style>
 </head>
-<body class="p-1.5 md:p-2 w-full">
+<body class="p-1 md:p-2 w-full">
 
     <div class="w-full flex justify-center items-center flex-1">
         <!-- 1. MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ -->
-        <div id="screen-login" class="w-full max-w-md pastel-card p-6 md:p-8 flex flex-col items-center text-center">
+        <div id="screen-login" class="w-full max-w-md pastel-card p-6 md:p-8 flex flex-col items-center text-center my-auto">
             <div class="mb-2">
                 <span class="text-7xl md:text-8xl swaying select-none">🐰</span>
             </div>
@@ -106,7 +107,7 @@
             <div id="form-login" class="w-full space-y-3">
                 <div class="relative">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-id-card"></i></span>
-                    <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (VD: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (ví dụ: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
                 </div>
                 <div class="relative">
                     <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-lock"></i></span>
@@ -159,22 +160,22 @@
             <p id="auth-error-msg" class="text-xs font-bold text-rose-500 mt-3 hidden"></p>
         </div>
 
-        <!-- 2. KHUNG CHÍNH (APP SHELL) -->
-        <div id="screen-dashboard" class="w-full max-w-6xl hidden flex flex-col space-y-2.5 p-1.5 md:p-2.5">
+        <!-- 2. KHUNG CHÍNH CHUẨN TỶ LỆ 16:9 / 16:10 -->
+        <div id="screen-dashboard" class="w-full max-w-5xl hidden flex flex-col space-y-1.5 md:space-y-2 p-1 md:p-2">
             
-            <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2.5">
+            <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2">
                 <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto pb-0.5">
-                    <div class="h-11 flex flex-col justify-center text-center bg-white px-3.5 rounded-xl border-2 border-pink-200 shadow-sm shrink-0">
+                    <div class="h-10 flex flex-col justify-center text-center bg-white px-3 rounded-xl border-2 border-pink-200 shadow-sm shrink-0">
                         <span class="text-xs font-extrabold text-pink-600 uppercase tracking-wide leading-tight">Tiếng Việt 1</span>
-                        <span class="text-[11px] font-bold text-purple-600 leading-tight">Cô giáo Thỏ Hồng</span>
+                        <span class="text-[10px] font-bold text-purple-600 leading-tight">Cô giáo Thỏ Hồng</span>
                     </div>
                     
-                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-11 w-11 bg-white hover:bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center pastel-btn border-2 border-pink-200 shrink-0 shadow-sm">
-                        <i class="fa-solid fa-house text-lg"></i>
+                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-10 w-10 bg-white hover:bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center pastel-btn border-2 border-pink-200 shrink-0 shadow-sm">
+                        <i class="fa-solid fa-house text-base"></i>
                     </button>
 
                     <div id="header-level2-tab" class="hidden items-center">
-                        <button onclick="returnToTopicLecture()" class="h-11 px-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 pastel-btn shadow-sm border border-pink-300 shrink-0 max-w-[200px] md:max-w-[260px]">
+                        <button onclick="returnToTopicLecture()" class="h-10 px-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 pastel-btn shadow-sm border border-pink-300 shrink-0 max-w-[200px] md:max-w-[260px]">
                             <span id="header-level2-icon">🌸</span>
                             <span id="header-level2-title" class="truncate">Chủ đề học</span>
                         </button>
@@ -182,13 +183,13 @@
 
                     <div id="header-level3-tab" class="hidden items-center space-x-1">
                         <span class="text-pink-300 font-bold text-xs">/</span>
-                        <div class="h-11 px-3 bg-purple-50 border border-purple-200 text-purple-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
+                        <div class="h-10 px-2.5 bg-purple-50 border border-purple-200 text-purple-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
                             <span id="header-level3-title" class="truncate">Mục nhỏ</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex items-center space-x-2.5 w-full md:w-auto justify-between md:justify-end ml-auto shrink-0">
+                <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-end ml-auto shrink-0">
                     <div class="flex flex-col space-y-0.5 bg-pink-50/90 px-2.5 py-1 rounded-xl border border-pink-200 shadow-inner">
                         <div class="flex items-center justify-between space-x-2 font-extrabold">
                             <span class="px-1.5 py-0.2 bg-emerald-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Đúng</span>
@@ -202,61 +203,63 @@
 
                     <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
 
-                    <button onclick="clickProgressOrExam('progress')" class="h-11 px-3.5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0">
-                        <i class="fa-solid fa-map-location-dot"></i><span>Bản đồ lộ trình tuần</span>
+                    <button onclick="clickProgressOrExam('progress')" class="h-10 px-3 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0">
+                        <i class="fa-solid fa-map-location-dot"></i><span>Bản đồ tuần</span>
                     </button>
                 </div>
             </header>
 
             <main id="app-viewport" class="w-full">
                 
-                <!-- VIEW 1: DASHBOARD 12 CHỦ ĐỀ -->
+                <!-- VIEW 1: TRANG CHỦ 12 CHỦ ĐỀ -->
                 <div id="view-dashboard-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5"></div>
 
                 <!-- VIEW 2: BÀI GIẢNG -->
-                <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[480px]">
                     <div class="w-full max-w-4xl flex flex-col items-center">
                         <div class="w-full flex items-center justify-center space-x-2 text-purple-600 font-extrabold text-sm md:text-base mb-1">
                             <span>📖</span><span>Bài giảng học tập</span>
                         </div>
-                        <h2 id="lecture-title" class="text-lg md:text-xl font-extrabold text-pink-600 text-center mb-2.5"></h2>
-                        <div class="w-full bg-pink-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-pink-100 mb-3.5">
+                        <h2 id="lecture-title" class="text-lg md:text-xl font-extrabold text-pink-600 text-center mb-2"></h2>
+                        <div class="w-full bg-pink-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-pink-100 mb-3">
                             <p id="lecture-content" class="text-base md:text-lg text-gray-700 leading-relaxed whitespace-pre-line text-center"></p>
                         </div>
 
-                        <button onclick="speakLecture()" class="w-full max-w-xs py-2.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-purple-200 shadow-sm mb-3">
+                        <button onclick="speakLecture()" class="w-full max-w-xs py-2 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-purple-200 shadow-sm mb-2.5">
                             <i class="fa-solid fa-volume-high text-base"></i><span>Nghe cô đọc</span>
                         </button>
 
-                        <div class="w-full pt-2.5 border-t border-pink-100 flex flex-col items-center">
-                            <p class="text-xs md:text-sm font-extrabold text-gray-600 text-center mb-2.5">Bé hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé:</p>
-                            <div id="lecture-subtopics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-2xl"></div>
+                        <div class="w-full pt-2 border-t border-pink-100 flex flex-col items-center">
+                            <p class="text-xs md:text-sm font-extrabold text-gray-600 text-center mb-2">Bé hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé:</p>
+                            <div id="lecture-subtopics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-2xl"></div>
                         </div>
                     </div>
 
-                    <div class="w-full flex justify-center mt-3 pt-2">
-                        <button onclick="selectSubtopic(null)" class="w-full max-w-xs py-2.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
+                    <div class="w-full flex justify-center mt-2.5 pt-1">
+                        <button onclick="selectSubtopic(null)" class="w-full max-w-xs py-2 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
                             🌟 Học trộn tất cả các mục
                         </button>
                     </div>
                 </div>
 
-                <!-- VIEW 3: PHÒNG THI / LÀM BÀI -->
-                <div id="view-quiz" class="w-full hidden flex flex-col space-y-3">
-                    <div class="w-full bg-white rounded-2xl p-3 border-2 border-pink-200 flex flex-wrap items-center justify-between gap-3 shadow-xs">
-                        <div class="flex items-center space-x-2.5">
-                            <div class="w-9 h-9 rounded-xl bg-pink-50 border border-pink-200 flex items-center justify-center text-pink-500 font-bold text-base">
+                <!-- VIEW 3: PHÒNG LÀM BÀI / THI CHUẨN 16:9 -->
+                <div id="view-quiz" class="w-full hidden flex flex-col space-y-1.5">
+                    
+                    <!-- TOP BAR CỦA ĐỀ THI (ẨN HOÀN TOÀN TRONG CHẾ ĐỘ LUYỆN TẬP) -->
+                    <div id="quiz-top-bar" class="w-full bg-white rounded-2xl p-2.5 border-2 border-pink-200 flex flex-wrap items-center justify-between gap-2.5 shadow-xs">
+                        <div id="quiz-timer-container" class="flex items-center space-x-2">
+                            <div class="w-8 h-8 rounded-xl bg-pink-50 border border-pink-200 flex items-center justify-center text-pink-500 font-bold text-sm">
                                 <i class="fa-solid fa-stopwatch"></i>
                             </div>
                             <div>
-                                <span class="text-[10px] font-bold text-gray-400 uppercase tracking-wider block">Thời gian</span>
-                                <span id="quiz-timer-display" class="text-base md:text-lg font-black text-rose-500 tracking-wider">35:00</span>
+                                <span class="text-[9px] font-bold text-gray-400 uppercase tracking-wider block">Thời gian</span>
+                                <span id="quiz-timer-display" class="text-base font-black text-rose-500 tracking-wider">40:00</span>
                             </div>
                         </div>
 
                         <div class="flex-grow max-w-md mx-2">
                             <div class="flex justify-between items-center text-xs font-bold mb-1">
-                                <span class="text-gray-500 truncate" id="quiz-session-title">Đang làm: Bài luyện tập</span>
+                                <span class="text-gray-500 truncate" id="quiz-session-title">Đang làm: Đề thi</span>
                                 <span id="quiz-fraction-display" class="text-pink-600 font-black shrink-0 ml-2">1 / 13 câu</span>
                             </div>
                             <div class="w-full bg-pink-100 rounded-full h-2 overflow-hidden">
@@ -264,14 +267,17 @@
                             </div>
                         </div>
 
-                        <button onclick="triggerSubmitQuizPrompt()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black text-xs md:text-sm flex items-center space-x-1.5 transition-all shadow-sm pastel-btn">
+                        <button id="btn-submit-quiz" onclick="triggerSubmitQuizPrompt()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-black text-xs md:text-sm flex items-center space-x-1.5 transition-all shadow-sm pastel-btn">
                             <i class="fa-solid fa-circle-check"></i>
                             <span>Nộp bài thi</span>
                         </button>
                     </div>
 
-                    <div class="w-full pastel-card p-4 md:p-6 flex flex-col justify-between min-h-[480px]">
-                        <div class="flex items-center justify-between flex-wrap gap-2 border-b border-pink-100 pb-2.5">
+                    <!-- THẺ CARD LÀM BÀI CHÍNH (ĐẨY CAO, TỐI ƯU 16:9) -->
+                    <div class="w-full pastel-card p-3.5 md:p-5 flex flex-col justify-between min-h-[480px]">
+                        
+                        <!-- HEADER TRONG CARD (CHỈ HIỆN KHI THI, ẨN HOÀN TOÀN KHI LUYỆN TẬP ĐỂ ĐẨY NỘI DUNG LÊN SÁT TRÊN) -->
+                        <div id="quiz-card-header" class="hidden items-center justify-between flex-wrap gap-2 border-b border-pink-100 pb-2">
                             <div class="flex items-center space-x-2">
                                 <span id="q-badge-index" class="px-2.5 py-1 bg-pink-100 text-pink-800 text-xs font-black rounded-lg">CÂU 1 / 13</span>
                                 <span id="q-badge-skill" class="px-2.5 py-1 bg-pink-50 text-pink-700 border border-pink-200 text-xs font-bold rounded-lg flex items-center space-x-1">
@@ -281,31 +287,53 @@
                                 <span id="q-badge-score" class="px-2 py-1 bg-amber-50 text-amber-700 border border-amber-200 text-xs font-bold rounded-lg">(0.5 điểm)</span>
                             </div>
                             
-                            <button id="btn-tts-speaker" onclick="speakCurrentQuestion()" class="px-3 py-1.5 bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 rounded-xl text-xs font-extrabold flex items-center space-x-1.5 transition-all pastel-btn">
+                            <button onclick="speakCurrentQuestion()" class="px-3 py-1.5 bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200 rounded-xl text-xs font-extrabold flex items-center space-x-1.5 transition-all pastel-btn shadow-xs">
                                 <i class="fa-solid fa-volume-high text-pink-600"></i>
-                                <span>Đọc đề (Chị Ban Mai)</span>
+                                <span>Nghe câu hỏi</span>
                             </button>
                         </div>
 
-                        <div id="question-box" class="w-full my-3 flex flex-col justify-center items-center flex-1"></div>
+                        <!-- KHU VỰC CÂU HỎI & ĐÁP ÁN (NỘI DUNG ĐẨY LÊN TRÊN THEO ẢNH VẼ TAY) -->
+                        <div id="question-box" class="w-full flex flex-col justify-center items-center flex-1 my-0.5"></div>
 
-                        <div class="w-full flex flex-col md:flex-row items-center justify-between gap-3 pt-3 border-t border-pink-100">
-                            <button id="btn-prev-q" onclick="prevQuestion()" class="w-full md:w-auto px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200 flex items-center justify-center space-x-1.5 shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed">
-                                <i class="fa-solid fa-chevron-left"></i><span>Câu trước</span>
-                            </button>
+                        <!-- ĐIỀU HƯỚNG ĐÁY (ĐÃ BỎ ĐƯỜNG KẺ NGĂN CÁCH ĐÚNG THEO ẢNH YÊU CẦU) -->
+                        <div id="quiz-bottom-nav" class="w-full pt-1">
+                            <!-- 1. GIAO DIỆN LUYỆN TẬP: [Câu trước] [🌸 Câu 1 / 59 🌸] [Câu tiếp theo >] -->
+                            <div id="nav-group-practice" class="flex items-center justify-center gap-3 w-full">
+                                <button id="btn-prev-q-prac" onclick="prevQuestion()" class="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-2xl text-xs md:text-sm pastel-btn border border-gray-200 flex items-center justify-center space-x-1.5 shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                                    <i class="fa-solid fa-chevron-left"></i><span>Câu trước</span>
+                                </button>
 
-                            <div id="quiz-pallet-container" class="flex flex-wrap items-center justify-center gap-1.5 max-w-lg overflow-x-auto py-1"></div>
+                                <div id="practice-step-indicator" class="px-5 py-1.5 bg-pink-50 border border-pink-200 text-pink-700 font-black rounded-full text-xs md:text-sm flex items-center justify-center space-x-1.5 shadow-xs select-none">
+                                    <span>🌸</span><span id="practice-step-text">Câu 1 / 59</span><span>🌸</span>
+                                </div>
 
-                            <button id="btn-next-q" onclick="nextQuestion()" class="w-full md:w-auto px-5 py-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
-                                <span id="btn-next-text">Câu tiếp theo</span>
-                                <i id="btn-next-icon" class="fa-solid fa-chevron-right ml-1"></i>
-                            </button>
+                                <button id="btn-next-q-prac" onclick="nextQuestion()" class="px-6 py-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black rounded-2xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
+                                    <span id="btn-next-text-prac">Câu tiếp theo</span>
+                                    <i id="btn-next-icon-prac" class="fa-solid fa-chevron-right ml-1"></i>
+                                </button>
+                            </div>
+
+                            <!-- 2. GIAO DIỆN ĐỀ THI: [Câu trước] [Dải số 1..13] [Câu tiếp theo >] -->
+                            <div id="nav-group-exam" class="hidden items-center justify-between w-full">
+                                <button id="btn-prev-q-exam" onclick="prevQuestion()" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200 flex items-center justify-center space-x-1.5 shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                                    <i class="fa-solid fa-chevron-left"></i><span>Câu trước</span>
+                                </button>
+
+                                <div id="quiz-pallet-container" class="flex flex-wrap items-center justify-center gap-1.5 max-w-lg overflow-x-auto py-1 mx-2"></div>
+
+                                <button id="btn-next-q-exam" onclick="nextQuestion()" class="px-5 py-2 bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-black rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
+                                    <span id="btn-next-text-exam">Câu tiếp theo</span>
+                                    <i id="btn-next-icon-exam" class="fa-solid fa-chevron-right ml-1"></i>
+                                </button>
+                            </div>
                         </div>
+
                     </div>
                 </div>
 
                 <!-- VIEW 4: BẢN ĐỒ LỘ TRÌNH 12 TUẦN SVG CHỮ S -->
-                <div id="view-roadmap" class="w-full hidden pastel-card p-3 md:p-5 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div id="view-roadmap" class="w-full hidden pastel-card p-3 md:p-5 flex flex-col justify-between items-center min-h-[480px]">
                     <div class="w-full max-w-5xl flex flex-col items-center">
                         <div class="flex flex-col sm:flex-row items-center justify-between w-full px-2 mb-2 gap-2">
                             <div>
@@ -328,7 +356,7 @@
                 </div>
 
                 <!-- VIEW 5: ĐẤU TRƯỜNG ĐỀ THI (MỤC 12) -->
-                <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[480px]">
                     <div class="w-full max-w-5xl">
                         <div class="text-center mb-5">
                             <h2 class="font-extrabold text-amber-600 text-lg md:text-xl flex items-center justify-center space-x-2">
@@ -340,14 +368,14 @@
                     </div>
                 </div>
 
-                <!-- VIEW 6: MÀN HÌNH KẾT QUẢ & VINH DANH -->
-                <div id="view-result" class="w-full hidden flex flex-col space-y-3.5">
+                <!-- VIEW 6: MÀN HÌNH KẾT QUẢ & BÁO CÁO -->
+                <div id="view-result" class="w-full hidden flex flex-col space-y-3">
                     
                     <div class="bg-gradient-to-tr from-rose-900 via-pink-950 to-rose-900 rounded-3xl p-4 sm:p-5 text-white shadow-xl relative overflow-hidden">
                         <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
                             <div class="space-y-1 text-center md:text-left">
                                 <span class="px-3 py-0.5 bg-white/10 backdrop-blur-md rounded-full text-xs font-bold tracking-wider text-pink-200 border border-white/15 inline-block" id="report-exam-badge">
-                                    KẾT QUẢ BÀI THI
+                                    Kết quả bài thi
                                 </span>
                                 <h2 id="report-student-display" class="text-lg sm:text-xl font-black tracking-tight">Học sinh: --</h2>
                                 <p id="report-meta-display" class="text-xs text-pink-200">Lớp: -- | Mã số: -- | Thời gian: --</p>
@@ -384,7 +412,6 @@
                         <div id="report-pedagogy-advice" class="text-xs text-slate-700 leading-relaxed space-y-1"></div>
                     </div>
 
-                    <!-- 3 NÚT CHỨC NĂNG DƯỚI ĐÁY KẾT QUẢ (CẬP NHẬT CHUẨN MẪU ẢNH 029244.png) -->
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-0.5">
                         <button onclick="openReviewWrongModal()" class="py-2.5 px-3 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-black text-xs rounded-2xl shadow-xs transition-all flex items-center justify-center space-x-1.5 pastel-btn">
                             <i class="fa-solid fa-circle-question text-rose-500"></i>
@@ -408,7 +435,7 @@
         </div>
     </div>
 
-    <!-- MODAL XEM LẠI CÁC CÂU LÀM SAI -->
+    <!-- MODAL XEM LẠI CÂU SAI -->
     <div id="modal-review-wrong" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-3">
         <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl border border-pink-100 overflow-hidden">
             <div class="p-3.5 border-b border-pink-100 flex items-center justify-between bg-rose-50/50">
@@ -427,11 +454,11 @@
         </div>
     </div>
 
-    <!-- MODAL BÁO CÁO TIẾN TRÌNH & BIỂU ĐỒ NĂNG LỰC RADAR -->
+    <!-- MODAL BÁO CÁO TIẾN TRÌNH & BIỂU ĐỒ RADAR -->
     <div id="modal-history-progress" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4">
-        <div class="bg-white rounded-3xl max-w-6xl w-full max-h-[96vh] flex flex-col shadow-2xl border-2 border-pink-200 overflow-hidden">
+        <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[96vh] flex flex-col shadow-2xl border-2 border-pink-200 overflow-hidden">
             
-            <div id="printable-report-area" class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-grow bg-white">
+            <div id="printable-report-area" class="p-4 sm:p-6 overflow-y-auto space-y-4 flex-grow bg-white">
                 
                 <div class="p-3.5 sm:p-4 rounded-2xl border border-pink-200 bg-pink-50/70 flex flex-col md:flex-row items-center justify-between gap-3 shadow-xs">
                     <div class="flex items-center space-x-3 text-pink-950 flex-1">
@@ -439,8 +466,8 @@
                             <i class="fa-solid fa-award text-xl"></i>
                         </div>
                         <div>
-                            <h3 class="font-black text-base sm:text-lg text-pink-950" id="hist-modal-title">Kết quả tiến trình học tập - Học kỳ 1</h3>
-                            <p class="text-xs font-bold text-pink-600 whitespace-nowrap">Phân tích chuyên sâu 6 chủ đề & Nhận xét sư phạm chi tiết</p>
+                            <h3 class="font-black text-base sm:text-lg text-pink-950" id="hist-modal-title">Kết quả tiến trình học tập</h3>
+                            <p class="text-xs font-bold text-pink-600 whitespace-nowrap">Phân tích chuyên sâu 6 chủ đề & nhận xét sư phạm chi tiết</p>
                         </div>
                     </div>
 
@@ -494,7 +521,7 @@
                         </div>
                         <div>
                             <h4 class="text-base font-black text-amber-950 leading-tight">Nhận xét sư phạm & kế hoạch bồi dưỡng của giáo viên</h4>
-                            <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & Lời khuyên phụ huynh đồng hành</p>
+                            <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & lời khuyên phụ huynh đồng hành</p>
                         </div>
                     </div>
                     <div id="pedagogical-evaluation-box" class="space-y-2.5 text-xs sm:text-sm text-slate-800 leading-normal font-semibold"></div>
@@ -512,12 +539,12 @@
                                     <th class="py-2.5 px-2 whitespace-nowrap">Lần thi</th>
                                     <th class="py-2.5 px-2 whitespace-nowrap">Đề / Tuần</th>
                                     <th class="py-2.5 px-2 whitespace-nowrap text-rose-600">Tổng điểm</th>
-                                    <th class="py-2 px-1 leading-tight">C1: Nhận diện<br><span class="text-[10px] text-pink-700">(Nhận biết)</span></th>
-                                    <th class="py-2 px-1 leading-tight">C2: Thanh điệu<br><span class="text-[10px] text-pink-700">(Quy tắc)</span></th>
-                                    <th class="py-2 px-1 leading-tight">C3: Ghép âm<br><span class="text-[10px] text-pink-700">(Thực hành)</span></th>
-                                    <th class="py-2 px-1 leading-tight">C4: Chính tả<br><span class="text-[10px] text-pink-700">(Bắt bệnh)</span></th>
-                                    <th class="py-2 px-1 leading-tight">C5: Từ loại<br><span class="text-[10px] text-pink-700">(Vận dụng)</span></th>
-                                    <th class="py-2 px-1 leading-tight">C6: Đọc hiểu/IQ<br><span class="text-[10px] text-pink-700">(Nâng cao)</span></th>
+                                    <th class="py-2 px-1 leading-tight">C1: Ngữ âm<br><span class="text-[10px] text-pink-700">(Nhận biết)</span></th>
+                                    <th class="py-2 px-1 leading-tight">C2: Chính tả<br><span class="text-[10px] text-pink-700">(Quy tắc)</span></th>
+                                    <th class="py-2 px-1 leading-tight">C3: Vốn từ<br><span class="text-[10px] text-pink-700">(Mở rộng)</span></th>
+                                    <th class="py-2 px-1 leading-tight">C4: Cú pháp<br><span class="text-[10px] text-pink-700">(Sắp câu)</span></th>
+                                    <th class="py-2 px-1 leading-tight">C5: Đọc hiểu<br><span class="text-[10px] text-pink-700">(Cảm thụ)</span></th>
+                                    <th class="py-2 px-1 leading-tight">C6: Tư duy IQ<br><span class="text-[10px] text-pink-700">(Nâng cao)</span></th>
                                     <th class="py-2.5 px-2 whitespace-nowrap">Ngày làm</th>
                                     <th class="py-2.5 px-2 whitespace-nowrap">Thời gian</th>
                                 </tr>
@@ -542,11 +569,12 @@
         </div>
     </div>
 
-    <footer class="w-full py-2.5 text-center text-xs font-bold text-pink-500 tracking-wider">
+    <!-- CHÂN TRANG BẢN QUYỀN CHUẨN ĐỊNH DẠNG -->
+    <footer class="w-full py-2 text-center text-xs font-bold text-pink-500 tracking-wider">
         epsilon.vn@gmail.com
     </footer>
 
-    <!-- NẠP ENGINE JAVASCRIPT -->
-    <script src="assets/js/app.js?v=3.4"></script>
+    <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
+    <script src="assets/js/app.js?v=4.2"></script>
 </body>
 </html>

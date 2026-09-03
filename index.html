@@ -84,6 +84,9 @@
                 padding: 10px !important;
             }
             .no-print { display: none !important; }
+            .page-break-1 { page-break-after: always; break-after: page; }
+            .page-break-2 { page-break-before: always; break-before: page; page-break-after: always; break-after: page; }
+            .page-break-3 { page-break-before: always; break-before: page; }
         }
     </style>
 </head>
@@ -276,7 +279,7 @@
                     <!-- THẺ CARD LÀM BÀI CHÍNH (ĐẨY CAO, TỐI ƯU 16:9) -->
                     <div class="w-full pastel-card p-3.5 md:p-5 flex flex-col justify-between min-h-[480px]">
                         
-                        <!-- HEADER TRONG CARD (CHỈ HIỆN KHI THI, ẨN HOÀN TOÀN KHI LUYỆN TẬP ĐỂ ĐẨY NỘI DUNG LÊN SÁT TRÊN) -->
+                        <!-- HEADER TRONG CARD (CHỈ HIỆN KHI THI) -->
                         <div id="quiz-card-header" class="hidden items-center justify-between flex-wrap gap-2 border-b border-pink-100 pb-2">
                             <div class="flex items-center space-x-2">
                                 <span id="q-badge-index" class="px-2.5 py-1 bg-pink-100 text-pink-800 text-xs font-black rounded-lg">CÂU 1 / 13</span>
@@ -293,10 +296,10 @@
                             </button>
                         </div>
 
-                        <!-- KHU VỰC CÂU HỎI & ĐÁP ÁN (NỘI DUNG ĐẨY LÊN TRÊN THEO ẢNH VẼ TAY) -->
+                        <!-- KHU VỰC CÂU HỎI & ĐÁP ÁN (ĐÃ ĐẨY LÊN SÁT TRÊN) -->
                         <div id="question-box" class="w-full flex flex-col justify-center items-center flex-1 my-0.5"></div>
 
-                        <!-- ĐIỀU HƯỚNG ĐÁY (ĐÃ BỎ ĐƯỜNG KẺ NGĂN CÁCH ĐÚNG THEO ẢNH YÊU CẦU) -->
+                        <!-- ĐIỀU HƯỚNG ĐÁY (ĐÃ BỎ ĐƯỜNG KẺ NGĂN CÁCH) -->
                         <div id="quiz-bottom-nav" class="w-full pt-1">
                             <!-- 1. GIAO DIỆN LUYỆN TẬP: [Câu trước] [🌸 Câu 1 / 59 🌸] [Câu tiếp theo >] -->
                             <div id="nav-group-practice" class="flex items-center justify-center gap-3 w-full">
@@ -454,80 +457,87 @@
         </div>
     </div>
 
-    <!-- MODAL BÁO CÁO TIẾN TRÌNH & BIỂU ĐỒ RADAR -->
+    <!-- MODAL BÁO CÁO TIẾN TRÌNH & BIỂU ĐỒ (PHÂN TRANG 3 TRANG KHI XUẤT PDF) -->
     <div id="modal-history-progress" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-2 sm:p-4">
         <div class="bg-white rounded-3xl max-w-5xl w-full max-h-[96vh] flex flex-col shadow-2xl border-2 border-pink-200 overflow-hidden">
             
             <div id="printable-report-area" class="p-4 sm:p-6 overflow-y-auto space-y-4 flex-grow bg-white">
                 
-                <div class="p-3.5 sm:p-4 rounded-2xl border border-pink-200 bg-pink-50/70 flex flex-col md:flex-row items-center justify-between gap-3 shadow-xs">
-                    <div class="flex items-center space-x-3 text-pink-950 flex-1">
-                        <div class="w-10 h-10 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center shadow-xs shrink-0">
-                            <i class="fa-solid fa-award text-xl"></i>
+                <!-- TRANG 1: THÔNG TIN & BIỂU ĐỒ -->
+                <div class="space-y-4 page-break-1">
+                    <div class="p-3.5 sm:p-4 rounded-2xl border border-pink-200 bg-pink-50/70 flex flex-col md:flex-row items-center justify-between gap-3 shadow-xs">
+                        <div class="flex items-center space-x-3 text-pink-950 flex-1">
+                            <div class="w-10 h-10 rounded-2xl bg-pink-100 text-pink-600 flex items-center justify-center shadow-xs shrink-0">
+                                <i class="fa-solid fa-award text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-black text-base sm:text-lg text-pink-950" id="hist-modal-title">Kết quả tiến trình học tập</h3>
+                                <p class="text-xs font-bold text-pink-600 whitespace-nowrap">Phân tích chuyên sâu 6 chủ đề & nhận xét sư phạm chi tiết</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="font-black text-base sm:text-lg text-pink-950" id="hist-modal-title">Kết quả tiến trình học tập</h3>
-                            <p class="text-xs font-bold text-pink-600 whitespace-nowrap">Phân tích chuyên sâu 6 chủ đề & nhận xét sư phạm chi tiết</p>
+
+                        <div class="bg-white/95 border-2 border-pink-200 px-4 py-2 rounded-2xl shadow-xs text-left shrink-0">
+                            <div class="text-sm font-black text-slate-900 leading-tight">
+                                Học sinh: <span id="hist-info-name" class="text-pink-600">--</span>
+                            </div>
+                            <div class="text-xs font-bold text-slate-600 mt-0.5">
+                                Lớp: <span id="hist-info-class" class="text-slate-900 font-extrabold">--</span> &nbsp;|&nbsp; 
+                                Mã số: <span id="hist-info-code" class="text-slate-900 font-extrabold">--</span> &nbsp;|&nbsp; 
+                                Ngày sinh: <span id="hist-info-dob" class="text-slate-900 font-extrabold">--</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-2 shrink-0">
+                            <div class="text-xs font-bold text-slate-700 bg-white/95 px-3 py-2 rounded-xl border border-pink-200 text-center shadow-xs">
+                                Ngày báo cáo: <span id="hist-report-date" class="font-bold text-rose-600">03/09/2026</span>
+                            </div>
+                            <button onclick="closeHistoryModal()" class="w-8 h-8 rounded-full bg-white border border-pink-200 flex items-center justify-center text-pink-400 hover:text-rose-600 transition-all shadow-xs no-print">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </div>
                     </div>
 
-                    <div class="bg-white/95 border-2 border-pink-200 px-4 py-2 rounded-2xl shadow-xs text-left shrink-0">
-                        <div class="text-sm font-black text-slate-900 leading-tight">
-                            Học sinh: <span id="hist-info-name" class="text-pink-600">--</span>
+                    <div class="flex flex-col md:flex-row gap-4 w-full">
+                        <div class="w-full md:w-[60%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
+                            <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
+                                <i class="fa-solid fa-chart-line text-pink-600"></i>
+                                <span>Biến thiên tổng điểm các bài thi (/10)</span>
+                            </h4>
+                            <div class="h-64 w-full relative">
+                                <canvas id="progressChartCanvas"></canvas>
+                            </div>
                         </div>
-                        <div class="text-xs font-bold text-slate-600 mt-0.5">
-                            Lớp: <span id="hist-info-class" class="text-slate-900 font-extrabold">--</span> &nbsp;|&nbsp; 
-                            Mã số: <span id="hist-info-code" class="text-slate-900 font-extrabold">--</span> &nbsp;|&nbsp; 
-                            Ngày sinh: <span id="hist-info-dob" class="text-slate-900 font-extrabold">--</span>
-                        </div>
-                    </div>
 
-                    <div class="flex items-center space-x-2 shrink-0">
-                        <div class="text-xs font-bold text-slate-700 bg-white/95 px-3 py-2 rounded-xl border border-pink-200 text-center shadow-xs">
-                            Ngày báo cáo: <span id="hist-report-date" class="font-bold text-rose-600">03/09/2026</span>
+                        <div class="w-full md:w-[40%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
+                            <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
+                                <i class="fa-solid fa-chart-bar text-rose-600"></i>
+                                <span>Năng lực trung bình 6 chủ đề (%)</span>
+                            </h4>
+                            <div class="h-64 w-full relative">
+                                <canvas id="topicRadarChartCanvas"></canvas>
+                            </div>
                         </div>
-                        <button onclick="closeHistoryModal()" class="w-8 h-8 rounded-full bg-white border border-pink-200 flex items-center justify-center text-pink-400 hover:text-rose-600 transition-all shadow-xs no-print">
-                            <i class="fa-solid fa-xmark"></i>
-                        </button>
                     </div>
                 </div>
 
-                <div class="flex flex-col md:flex-row gap-4 w-full">
-                    <div class="w-full md:w-[60%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
-                        <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
-                            <i class="fa-solid fa-chart-line text-pink-600"></i>
-                            <span>Biến thiên tổng điểm các bài thi (/10)</span>
-                        </h4>
-                        <div class="h-64 w-full relative">
-                            <canvas id="progressChartCanvas"></canvas>
+                <!-- TRANG 2: NHẬN XÉT SƯ PHẠM CHI TIẾT -->
+                <div class="space-y-4 page-break-2">
+                    <div class="bg-gradient-to-br from-amber-50/90 via-orange-50/60 to-rose-50/50 border border-amber-200/80 rounded-2xl p-4 space-y-3 shadow-xs">
+                        <div class="flex items-center space-x-2.5 border-b border-amber-200/60 pb-1.5">
+                            <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-xs shrink-0">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-base font-black text-amber-950 leading-tight">Nhận xét sư phạm & kế hoạch bồi dưỡng của giáo viên</h4>
+                                <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & lời khuyên phụ huynh đồng hành</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="w-full md:w-[40%] bg-pink-50/40 border border-pink-100 rounded-2xl p-4 flex flex-col justify-between shadow-xs">
-                        <h4 class="text-xs sm:text-sm font-black text-slate-800 mb-2 flex items-center space-x-1.5">
-                            <i class="fa-solid fa-chart-pie text-rose-600"></i>
-                            <span>Năng lực trung bình 6 chủ đề (%)</span>
-                        </h4>
-                        <div class="h-64 w-full relative">
-                            <canvas id="topicRadarChartCanvas"></canvas>
-                        </div>
+                        <div id="pedagogical-evaluation-box" class="space-y-2.5 text-xs sm:text-sm text-slate-800 leading-normal font-semibold"></div>
                     </div>
                 </div>
 
-                <div class="bg-gradient-to-br from-amber-50/90 via-orange-50/60 to-rose-50/50 border border-amber-200/80 rounded-2xl p-4 space-y-3 shadow-xs">
-                    <div class="flex items-center space-x-2.5 border-b border-amber-200/60 pb-1.5">
-                        <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shadow-xs shrink-0">
-                            <i class="fa-solid fa-award"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-base font-black text-amber-950 leading-tight">Nhận xét sư phạm & kế hoạch bồi dưỡng của giáo viên</h4>
-                            <p class="text-xs font-bold text-amber-700">Đánh giá năng lực tư duy 6 chủ đề & lời khuyên phụ huynh đồng hành</p>
-                        </div>
-                    </div>
-                    <div id="pedagogical-evaluation-box" class="space-y-2.5 text-xs sm:text-sm text-slate-800 leading-normal font-semibold"></div>
-                </div>
-
-                <div class="space-y-2">
+                <!-- TRANG 3: BẢNG THỐNG KÊ CHI TIẾT TỪNG BÀI THI -->
+                <div class="space-y-3 page-break-3">
                     <h4 class="text-base font-black text-slate-900 flex items-center space-x-2">
                         <i class="fa-solid fa-table text-pink-600"></i>
                         <span>Bảng thống kê điểm số chi tiết từng bài thi</span>
@@ -575,6 +585,6 @@
     </footer>
 
     <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
-    <script src="assets/js/app.js?v=4.2"></script>
+    <script src="assets/js/app.js?v=4.4"></script>
 </body>
 </html>

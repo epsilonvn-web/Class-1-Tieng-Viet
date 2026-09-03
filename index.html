@@ -54,24 +54,22 @@
             display: inline-block;
             transform-origin: bottom center;
         }
+        @keyframes pulse-glow {
+            0%, 100% { filter: drop-shadow(0 0 6px rgba(236, 72, 153, 0.6)); transform: scale(1); }
+            50% { filter: drop-shadow(0 0 16px rgba(236, 72, 153, 0.9)); transform: scale(1.04); }
+        }
+        .node-current {
+            animation: pulse-glow 2s infinite ease-in-out;
+            transform-origin: center;
+        }
         /* THANH TRƯỢT SIÊU MẢNH 3PX */
-        ::-webkit-scrollbar {
-            width: 3px;
-            height: 3px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #fdf2f8;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #f472b6;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #ec4899;
-        }
+        ::-webkit-scrollbar { width: 3px; height: 3px; }
+        ::-webkit-scrollbar-track { background: #fdf2f8; }
+        ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
     </style>
 </head>
-<body class="p-1.5 md:p-2.5 w-full">
+<body class="p-1.5 md:p-2 w-full">
 
     <div class="w-full flex justify-center items-center flex-1">
         <!-- 1. MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ -->
@@ -195,7 +193,7 @@
                     <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
 
                     <button onclick="clickProgressOrExam('progress')" class="h-11 px-3.5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0">
-                        <i class="fa-solid fa-calendar-days"></i><span>Tiến trình tuần</span>
+                        <i class="fa-solid fa-map-location-dot"></i><span>Bản đồ lộ trình tuần</span>
                     </button>
                 </div>
             </header>
@@ -203,10 +201,10 @@
             <!-- VIEWPORT NỘI DUNG CHÍNH -->
             <main id="app-viewport" class="w-full">
                 
-                <!-- VIEW 1 -->
+                <!-- VIEW 1: DASHBOARD CHỦ ĐỀ -->
                 <div id="view-dashboard-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5"></div>
 
-                <!-- VIEW 2 -->
+                <!-- VIEW 2: BÀI GIẢNG -->
                 <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-4xl flex flex-col items-center">
                         <div class="w-full flex items-center justify-center space-x-2 text-purple-600 font-extrabold text-sm md:text-base mb-1">
@@ -234,7 +232,7 @@
                     </div>
                 </div>
 
-                <!-- VIEW 3 -->
+                <!-- VIEW 3: PHÒNG THI / TRẮC NGHIỆM -->
                 <div id="view-quiz" class="w-full hidden pastel-card p-3.5 md:p-5 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-3xl flex justify-between items-center pb-2 border-b border-pink-100">
                         <button id="btn-back-subtopics" onclick="returnToTopicLecture()" class="hidden px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-xs pastel-btn border border-purple-200 flex items-center space-x-1 shadow-sm">
@@ -242,7 +240,7 @@
                         </button>
                         <div class="flex items-center space-x-2 bg-pink-50 px-3 py-1 rounded-xl border border-pink-200 text-xs md:text-sm font-extrabold text-pink-700 ml-auto">
                             <span>Câu số:</span>
-                            <span id="current-q-idx" class="font-extrabold text-pink-600 text-base md:text-lg">1</span>/<span id="total-q-idx" class="text-xs md:text-sm">5</span>
+                            <span id="current-q-idx" class="font-extrabold text-pink-600 text-base md:text-lg">1</span>/<span id="total-q-idx" class="text-xs md:text-sm">20</span>
                         </div>
                     </div>
 
@@ -258,20 +256,31 @@
                     </div>
                 </div>
 
-                <!-- VIEW 4 -->
-                <div id="view-roadmap" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
-                    <div class="w-full max-w-4xl">
-                        <div class="text-center mb-4">
-                            <h2 class="text-lg md:text-xl font-extrabold text-indigo-600 flex items-center justify-center space-x-2">
-                                <span>📅</span><span>Lộ trình tiến trình 12 tuần</span>
-                            </h2>
-                            <p class="text-xs md:text-sm text-gray-500 mt-1 font-bold">Mỗi tuần hoàn thành từ 7 điểm trở lên sẽ tự động mở khóa tuần tiếp theo nhé!</p>
+                <!-- VIEW 4: BẢN ĐỒ TIẾN TRÌNH TUẦN SVG (TỐI ƯU TAB S9 FE 16:10 KHÔNG CUỘN) -->
+                <div id="view-roadmap" class="w-full hidden pastel-card p-3 md:p-4 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                    <div class="w-full max-w-5xl flex flex-col items-center">
+                        <div class="flex items-center justify-between w-full px-2 mb-1.5">
+                            <div>
+                                <h2 class="text-base md:text-lg font-extrabold text-indigo-600 flex items-center space-x-2">
+                                    <span>🗺️</span><span>Bản đồ Lộ trình 12 Tuần Bứt Phá</span>
+                                </h2>
+                                <p class="text-[11px] md:text-xs text-gray-500 font-bold">Mỗi tuần 20 câu (tỷ lệ 3:4:3). Đạt từ 80% trở lên để mở khóa tuần kế tiếp!</p>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-indigo-50 px-2.5 py-1 rounded-xl border border-indigo-200 text-[11px] font-extrabold text-indigo-700">
+                                <span>⭐ 3 Sao = 100%</span>
+                                <span>|</span>
+                                <span>⭐ 2 Sao ≥ 85%</span>
+                                <span>|</span>
+                                <span>⭐ 1 Sao ≥ 80%</span>
+                            </div>
                         </div>
-                        <div id="roadmap-list" class="grid grid-cols-1 md:grid-cols-2 gap-2.5 w-full"></div>
+
+                        <!-- KHUNG BẢN ĐỒ SVG UỐN LƯỢN CHỮ S -->
+                        <div id="roadmap-svg-container" class="w-full flex justify-center items-center overflow-hidden bg-gradient-to-b from-pink-50/30 to-purple-50/30 rounded-2xl border-2 border-pink-100 p-1"></div>
                     </div>
                 </div>
 
-                <!-- VIEW 5 -->
+                <!-- VIEW 5: ĐẤU TRƯỜNG ĐỀ THI -->
                 <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-5xl">
                         <div class="text-center mb-5">
@@ -284,22 +293,22 @@
                     </div>
                 </div>
 
-                <!-- VIEW 6 -->
+                <!-- VIEW 6: KẾT QUẢ -->
                 <div id="view-result" class="w-full hidden pastel-card p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-md flex flex-col items-center">
-                        <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center text-4xl mb-3 shadow-inner floating border-4 border-yellow-200">🏆</div>
-                        <h2 class="text-xl md:text-2xl font-extrabold text-pink-600 mb-1">Hoàn thành xuất sắc!</h2>
-                        <p class="text-xs font-bold text-gray-500 mb-5">Cô giáo Thỏ Hồng khen bé đã hoàn thành rất tốt bài học hôm hôm nay.</p>
+                        <div id="res-trophy-icon" class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center text-4xl mb-3 shadow-inner floating border-4 border-yellow-200">🏆</div>
+                        <h2 id="res-title-txt" class="text-xl md:text-2xl font-extrabold text-pink-600 mb-1">Hoàn thành xuất sắc!</h2>
+                        <p id="res-desc-txt" class="text-xs font-bold text-gray-500 mb-4">Cô giáo Thỏ Hồng khen bé đã hoàn thành rất tốt bài học hôm nay.</p>
                         
                         <div class="bg-pink-50/70 w-full p-4 rounded-2xl border border-pink-200 mb-5 flex justify-around items-center">
                             <div>
                                 <p class="text-xs text-gray-500 font-bold">Số câu đúng</p>
-                                <p id="res-correct-txt" class="text-xl md:text-2xl font-extrabold text-pink-600 mt-1">5/5</p>
+                                <p id="res-correct-txt" class="text-xl md:text-2xl font-extrabold text-pink-600 mt-1">16/20</p>
                             </div>
                             <div class="h-8 w-px bg-pink-200"></div>
                             <div>
                                 <p class="text-xs text-gray-500 font-bold">Sao nhận được</p>
-                                <p id="res-star-txt" class="text-xl md:text-2xl font-extrabold text-yellow-600 mt-1">+5 ⭐</p>
+                                <p id="res-star-txt" class="text-xl md:text-2xl font-extrabold text-yellow-600 mt-1">⭐⭐⭐</p>
                             </div>
                         </div>
 
@@ -315,7 +324,7 @@
     </div>
 
     <!-- FOOTER CHÍNH GIỮA -->
-    <footer class="w-full py-3 text-center text-xs font-bold text-pink-500 tracking-wider">
+    <footer class="w-full py-2.5 text-center text-xs font-bold text-pink-500 tracking-wider">
         epsilon.vn@gmail.com
     </footer>
 

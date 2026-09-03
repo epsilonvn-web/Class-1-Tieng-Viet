@@ -6,7 +6,7 @@
     <title>TIẾNG VIỆT 1 - Cô giáo Thỏ Hồng</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts: Quicksand & Nunito -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
@@ -62,7 +62,7 @@
             animation: pulse-glow 2s infinite ease-in-out;
             transform-origin: center;
         }
-        /* THANH TRƯỢT SIÊU MẢNH 3PX */
+        /* THANH TRƯỢT SIÊU MẢNH ĐÚNG 3PX */
         ::-webkit-scrollbar { width: 3px; height: 3px; }
         ::-webkit-scrollbar-track { background: #fdf2f8; }
         ::-webkit-scrollbar-thumb { background: #f472b6; border-radius: 10px; }
@@ -201,7 +201,7 @@
             <!-- VIEWPORT NỘI DUNG CHÍNH -->
             <main id="app-viewport" class="w-full">
                 
-                <!-- VIEW 1: DASHBOARD CHỦ ĐỀ -->
+                <!-- VIEW 1: DASHBOARD 12 CHỦ ĐỀ -->
                 <div id="view-dashboard-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5"></div>
 
                 <!-- VIEW 2: BÀI GIẢNG -->
@@ -232,7 +232,7 @@
                     </div>
                 </div>
 
-                <!-- VIEW 3: PHÒNG THI / TRẮC NGHIỆM -->
+                <!-- VIEW 3: PHÒNG THI / TRẮC NGHIỆM KHUNG CỐ ĐỊNH -->
                 <div id="view-quiz" class="w-full hidden pastel-card p-3.5 md:p-5 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-3xl flex justify-between items-center pb-2 border-b border-pink-100">
                         <button id="btn-back-subtopics" onclick="returnToTopicLecture()" class="hidden px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-xs pastel-btn border border-purple-200 flex items-center space-x-1 shadow-sm">
@@ -256,13 +256,13 @@
                     </div>
                 </div>
 
-                <!-- VIEW 4: BẢN ĐỒ TIẾN TRÌNH TUẦN SVG (TỐI ƯU TAB S9 FE 16:10 KHÔNG CUỘN) -->
+                <!-- VIEW 4: BẢN ĐỒ LỘ TRÌNH 12 TUẦN SVG CHỮ S (TAB S9 FE 16:10 KHÔNG CUỘN) -->
                 <div id="view-roadmap" class="w-full hidden pastel-card p-3 md:p-4 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-5xl flex flex-col items-center">
                         <div class="flex items-center justify-between w-full px-2 mb-1.5">
                             <div>
                                 <h2 class="text-base md:text-lg font-extrabold text-indigo-600 flex items-center space-x-2">
-                                    <span>🗺️</span><span>Bản đồ Lộ trình 12 Tuần Bứt Phá</span>
+                                    <span>🗺️</span><span>Bản đồ lộ trình 12 tuần bứt phá</span>
                                 </h2>
                                 <p class="text-[11px] md:text-xs text-gray-500 font-bold">Mỗi tuần 20 câu (tỷ lệ 3:4:3). Đạt từ 80% trở lên để mở khóa tuần kế tiếp!</p>
                             </div>
@@ -275,12 +275,12 @@
                             </div>
                         </div>
 
-                        <!-- KHUNG BẢN ĐỒ SVG UỐN LƯỢN CHỮ S -->
+                        <!-- KHUNG CHỨA SVG ĐƯỜNG MÒN UỐN LƯỢN -->
                         <div id="roadmap-svg-container" class="w-full flex justify-center items-center overflow-hidden bg-gradient-to-b from-pink-50/30 to-purple-50/30 rounded-2xl border-2 border-pink-100 p-1"></div>
                     </div>
                 </div>
 
-                <!-- VIEW 5: ĐẤU TRƯỜNG ĐỀ THI -->
+                <!-- VIEW 5: ĐẤU TRƯỜNG ĐỀ THI (MỤC 12) -->
                 <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-5xl">
                         <div class="text-center mb-5">
@@ -293,7 +293,7 @@
                     </div>
                 </div>
 
-                <!-- VIEW 6: KẾT QUẢ -->
+                <!-- VIEW 6: MÀN HÌNH KẾT QUẢ & VINH DANH -->
                 <div id="view-result" class="w-full hidden pastel-card p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[500px] md:min-h-[530px]">
                     <div class="w-full max-w-md flex flex-col items-center">
                         <div id="res-trophy-icon" class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center text-4xl mb-3 shadow-inner floating border-4 border-yellow-200">🏆</div>
@@ -323,12 +323,12 @@
         </div>
     </div>
 
-    <!-- FOOTER CHÍNH GIỮA -->
+    <!-- CHÂN TRANG CĂN CHÍNH GIỮA CẠNH DƯỚI -->
     <footer class="w-full py-2.5 text-center text-xs font-bold text-pink-500 tracking-wider">
         epsilon.vn@gmail.com
     </footer>
 
-    <!-- NẠP FILE JAVASCRIPT RIÊNG BIỆT -->
-    <script src="assets/js/app.js"></script>
+    <!-- NẠP FILE JAVASCRIPT RIÊNG BIỆT (GẮN THẺ PHIÊN BẢN CHỐNG DÍNH CACHE TRÌNH DUYỆT) -->
+    <script src="assets/js/app.js?v=2.2"></script>
 </body>
 </html>

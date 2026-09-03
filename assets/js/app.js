@@ -23,20 +23,28 @@ const SUBTOPIC_PALETTES = [
     { card: "bg-rose-50/80 hover:bg-rose-100 border-rose-300 text-rose-800", num: "text-rose-600", badge: "bg-white text-rose-600 border-rose-200" }
 ];
 
-const ROADMAP_DATA = [
-    { week: 1, topicId: 2, title: "Tuần 1: Năm thanh điệu kì diệu" },
-    { week: 2, topicId: 3, title: "Tuần 2: Ghép âm - vần (phần dễ)" },
-    { week: 3, topicId: 3, title: "Tuần 3: Ghép âm - vần (vần khó)" },
-    { week: 4, topicId: 4, title: "Tuần 4: Điền chữ cái còn thiếu" },
-    { week: 5, topicId: 5, title: "Tuần 5: Bác sĩ bắt bệnh chính tả" },
-    { week: 6, topicId: 6, title: "Tuần 6: Từ vựng mở rộng" },
-    { week: 7, topicId: 7, title: "Tuần 7: Gia đình từ loại" },
-    { week: 8, topicId: 8, title: "Tuần 8: Nhà thông thái sắp câu" },
-    { week: 9, topicId: 9, title: "Tuần 9: Điền từ & tục ngữ" },
-    { week: 10, topicId: 10, title: "Tuần 10: Đố vui bé ngoan (IQ)" },
-    { week: 11, topicId: 11, title: "Tuần 11: Đọc hiểu - trả lời" },
-    { week: 12, topicId: 12, title: "Tuần 12: Đấu trường thi thử tổng ôn" }
-];
+// 1. CẤU HÌNH ROADMAP MAPPING CHUẨN NOTEBOOK (MULTI-TOPIC)
+const roadmapConfig = {
+    1: { name: "Tuần 1: Làm chủ 5 Thanh điệu", topicIds: [1, 2], desc: "Luyện phát âm, phân biệt nguyên âm, phụ âm và 5 thanh điệu", icon: "🎵" },
+    2: { name: "Tuần 2: Khởi động Ghép âm - Vần", topicIds: [3], desc: "Học cách ghép phụ âm đầu với nguyên âm đơn và vần xuôi", icon: "🧩" },
+    3: { name: "Tuần 3: Vần đôi - Vần ghép phức tạp", topicIds: [3, 6], desc: "Chinh phục các vần đôi khó và từ vựng mở rộng", icon: "🌿" },
+    4: { name: "Tuần 4: Điền chữ cái còn thiếu", topicIds: [4], desc: "Luyện luật chính tả c/k, g/gh, ng/ngh và s/x, tr/ch, l/n", icon: "✍️" },
+    5: { name: "Tuần 5: Bác sĩ sửa lỗi chính tả", topicIds: [5], desc: "Bắt bệnh và sửa từ viết sai chính tả, sửa quy tắc viết hoa", icon: "🩺" },
+    6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6], desc: "Mở rộng vốn từ chỉ cảm giác, mùi vị trực quan qua hình ảnh", icon: "👁️" },
+    7: { name: "Tuần 7: Gia đình Ba nhóm Từ loại", topicIds: [7], desc: "Phân biệt từ chỉ Sự vật, Hoạt động và Đặc điểm", icon: "🧸" },
+    8: { name: "Tuần 8: Nhà thông thái sắp xếp câu", topicIds: [8], desc: "Sắp xếp từ xáo trộn thành câu kể, câu tả hoàn chỉnh đúng ngữ pháp", icon: "🧠" },
+    9: { name: "Tuần 9: Điền từ vào câu & Tục ngữ", topicIds: [9], desc: "Hoàn thiện câu ca dao tục ngữ rèn luyện đạo đức làm người", icon: "📜" },
+    10: { name: "Tuần 10: Trí tuệ IQ cùng Đố vui bé ngoan", topicIds: [10], desc: "Giải mã 100 câu đố thơ dân gian lục bát rèn luyện tư duy", icon: "🎯" },
+    11: { name: "Tuần 11: Đọc hiểu cảm thụ văn học", topicIds: [11], desc: "Luyện đọc diễn cảm truyện ngụ ngôn, thơ ngắn và trả lời câu hỏi", icon: "📖" },
+    12: { name: "Tuần 12: Đấu trường Đề thi tổng hợp", isExam: true, topicIds: [], desc: "Chinh phục đề thi HK1, HK2 và HSG để đạt điểm 10 tuyệt đối", icon: "🏆" }
+};
+
+// TỌA ĐỘ 12 NÚT BẢN ĐỒ SVG (ZIC-ZAC 3 HÀNG) CHO VIEWBOX 1200x650
+const ROADMAP_COORDS = {
+    1: { x: 150, y: 130 },  2: { x: 415, y: 130 },  3: { x: 680, y: 130 },  4: { x: 950, y: 130 },
+    5: { x: 950, y: 330 },  6: { x: 680, y: 330 },  7: { x: 415, y: 330 },  8: { x: 150, y: 330 },
+    9: { x: 150, y: 530 }, 10: { x: 415, y: 530 }, 11: { x: 680, y: 530 }, 12: { x: 1050, y: 530 }
+};
 
 const examFileMap = {
     hocky1: { file: 'de_thi_tieng_viet_1.json', label: 'Học kỳ 1', color: 'pink' },
@@ -64,7 +72,14 @@ let quizWrongAnswers = [];
 let quizAnsweredLog = [];
 let quizStartTime = null;
 
-// --- BỘ CHUYỂN ĐỔI CHUẨN HÓA DỮ LIỆU RÚT GỌN (MINIFIED KEYS ADAPTER) ---
+// LẤY TÊN GỌI CỦA HỌC SINH ĐỂ CÁ NHÂN HÓA GIỌNG ĐỌC
+function getStudentFirstName() {
+    if (!currentUser || currentUser.isGuest || !currentUser.hoTen) return "Bé";
+    const parts = currentUser.hoTen.trim().split(/\s+/);
+    return parts[parts.length - 1] || "Bé";
+}
+
+// BỘ CHUYỂN ĐỔI CHUẨN HÓA DỮ LIỆU RÚT GỌN (MINIFIED KEYS ADAPTER)
 function normalizeQuestion(q) {
     if (!q) return null;
     return {
@@ -116,6 +131,34 @@ function getCycleQuestions(questions, poolKey, batchSize = 10) {
     return shuffled.slice(0, targetCount);
 }
 
+// 2. THUẬT TOÁN BỐC 20 CÂU CHUẨN TỶ LỆ 3:4:3 (DỄ - TRUNG BÌNH - KHÓ)
+function getQuestionsForWeek343(weekNumber) {
+    const config = roadmapConfig[weekNumber];
+    if (!config || !allTopicsDataCache) return [];
+    
+    let pool = [];
+    config.topicIds.forEach(topicId => {
+        const topicData = allTopicsDataCache.find(t => t.topic_id === topicId);
+        if (topicData && topicData.questions) {
+            pool = pool.concat(topicData.questions);
+        }
+    });
+    
+    if (pool.length < 20) return shuffleArray([...pool]);
+    
+    const size = pool.length;
+    const basket1 = pool.slice(0, Math.floor(size * 0.35)); // Rổ Dễ: 35% đầu
+    const basket2 = pool.slice(Math.floor(size * 0.35), Math.floor(size * 0.75)); // Rổ Trung bình: 40% giữa
+    const basket3 = pool.slice(Math.floor(size * 0.75)); // Rổ Khó: 25% cuối
+    
+    const easy = shuffleArray([...basket1]).slice(0, 6);       // 30% = 6 câu
+    const medium = shuffleArray([...basket2]).slice(0, 8);     // 40% = 8 câu
+    const hard = shuffleArray([...basket3]).slice(0, 6);       // 30% = 6 câu
+    
+    // Trộn chung lần cuối để xáo ngẫu nhiên vị trí câu hỏi
+    return shuffleArray([...easy, ...medium, ...hard]);
+}
+
 function capitalizeFirstLetter(val) {
     if (!val) return '';
     const s = String(val).trim();
@@ -133,7 +176,7 @@ function beautifySubtopicName(name) {
     return s;
 }
 
-// --- NẠP DỮ LIỆU TỪ FILE KHO HỌC TỐI ƯU kho_hoc_tieng_viet_1.json ---
+// NẠP DỮ LIỆU TỪ KHO HỌC
 async function fetchAllTopicsData() {
     if (allTopicsDataCache) return allTopicsDataCache;
     const res = await fetch('assets/data/kho_hoc_tieng_viet_1.json');
@@ -159,18 +202,15 @@ async function loadExamDataFile(file) {
     return data;
 }
 
-// --- RENDER GIAO DIỆN CHÍNH ---
+// RENDER GIAO DIỆN CHÍNH
 async function renderDashboardGrid() {
     const container = document.getElementById('view-dashboard-grid');
     if (!container) return;
     
     let topicsData = [];
-    try {
-        topicsData = await fetchAllTopicsData();
-    } catch (e) {}
+    try { topicsData = await fetchAllTopicsData(); } catch (e) {}
 
     let html = '';
-    
     TOPICS_CONFIG.forEach(t => {
         const topicObj = topicsData.find(item => Number(item.topic_id) === Number(t.id));
         const totalCount = topicObj && topicObj.questions ? topicObj.questions.length : 0;
@@ -220,9 +260,7 @@ async function renderExamHubGrid() {
     if (!container) return;
 
     let examData = null;
-    try {
-        examData = await loadExamDataFile('de_thi_tieng_viet_1.json');
-    } catch (e) {}
+    try { examData = await loadExamDataFile('de_thi_tieng_viet_1.json'); } catch (e) {}
 
     const getCountForCat = (catName) => {
         if (!examData || !examData.exams) return 3;
@@ -308,11 +346,8 @@ function switchAppView(viewId) {
     ['view-dashboard-grid', 'view-lecture', 'view-quiz', 'view-roadmap', 'view-exam-hub', 'view-result'].forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
-        if (id === viewId) {
-            el.classList.remove('hidden');
-        } else {
-            el.classList.add('hidden');
-        }
+        if (id === viewId) el.classList.remove('hidden');
+        else el.classList.add('hidden');
     });
 }
 
@@ -423,7 +458,7 @@ function logout() {
 }
 
 function handleGuestMode() {
-    currentUser = { name: "Khách (Guest)", isGuest: true };
+    currentUser = { name: "Khách (Guest)", isGuest: true, tuanHienTai: 1 };
     enterDashboard();
 }
 
@@ -462,7 +497,7 @@ function resetStars() {
     if (redEl) redEl.textContent = 0;
 }
 
-// --- LUYỆN TẬP THEO CHỦ ĐỀ & LỘ TRÌNH TUẦN ---
+// 4. BẢN ĐỒ LỘ TRÌNH TUẦN (SVG ZIC-ZAC 1200x650 CHO GALAXY TAB S9 FE)
 function clickProgressOrExam(type) {
     if (!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để sử dụng tính năng này nhé!');
     if (type === 'progress') openRoadmap();
@@ -471,55 +506,98 @@ function clickProgressOrExam(type) {
 
 function openRoadmap() {
     stopSpeaking();
-    updateNavTabs("Tiến trình tuần", "📅", null);
-    renderRoadmapList();
+    updateNavTabs("Bản đồ tiến trình tuần", "🗺️", null);
+    renderRoadmapSVG();
     switchAppView('view-roadmap');
 }
 
-function renderRoadmapList() {
-    const tuanHienTai = Number(currentUser.tuanHienTai) || 1;
-    let html = '';
-    ROADMAP_DATA.forEach(item => {
-        const isDone = item.week < tuanHienTai;
-        const isCurrent = item.week === tuanHienTai;
-        const badge = isDone ? '<span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">✓ Đã qua</span>'
-            : isCurrent ? '<span class="text-xs font-extrabold text-pink-600 bg-pink-100 px-2 py-0.5 rounded-full animate-pulse">⭐ Đang học</span>'
-            : '<span class="text-xs font-extrabold text-gray-400 bg-gray-100 px-2 py-0.5 rounded-full"><i class="fa-solid fa-lock"></i> Khóa</span>';
-        
-        const cls = isDone ? 'border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50 cursor-pointer'
-            : isCurrent ? 'border-pink-400 bg-pink-50 hover:bg-pink-100 cursor-pointer shadow-md'
-            : 'border-gray-200 bg-gray-50 opacity-60 cursor-not-allowed';
+function renderRoadmapSVG() {
+    const container = document.getElementById('roadmap-svg-container');
+    if (!container) return;
+    const tuanHienTai = Number(currentUser?.tuanHienTai) || 1;
 
-        html += `
-            <div ${!isDone && !isCurrent ? '' : `onclick="selectRoadmapWeek(${item.week})"`} class="w-full p-3 border-2 rounded-xl font-bold text-gray-700 flex items-center justify-between transition-all ${cls}">
-                <span class="text-xs md:text-sm">${escapeHtml(item.title)}</span>${badge}
-            </div>`;
-    });
-    document.getElementById('roadmap-list').innerHTML = html;
+    let nodesHtml = '';
+    for (let w = 1; w <= 12; w++) {
+        const item = roadmapConfig[w];
+        const coord = ROADMAP_COORDS[w];
+        const isDone = w < tuanHienTai;
+        const isCurrent = w === tuanHienTai;
+        const isLocked = w > tuanHienTai;
+
+        let nodeColor = isDone ? "#10b981" : (isCurrent ? "#ec4899" : "#cbd5e1");
+        let strokeColor = isDone ? "#34d399" : (isCurrent ? "#f43f5e" : "#94a3b8");
+        let badgeHtml = '';
+
+        if (isDone) {
+            badgeHtml = `<text x="${coord.x}" y="${coord.y + 40}" text-anchor="middle" font-size="16" fill="#f59e0b">⭐⭐⭐</text>`;
+        } else if (isCurrent) {
+            badgeHtml = `<text x="${coord.x}" y="${coord.y + 40}" text-anchor="middle" font-size="12" font-weight="900" fill="#ec4899">ĐANG HỌC</text>`;
+        } else {
+            badgeHtml = `<text x="${coord.x}" y="${coord.y + 38}" text-anchor="middle" font-size="14" fill="#94a3b8">🔒 Khóa</text>`;
+        }
+
+        const cursorCls = isLocked ? "cursor-not-allowed opacity-60" : "cursor-pointer hover:scale-105 transition-transform";
+        const animCls = isCurrent ? "node-current" : "";
+
+        nodesHtml += `
+            <g class="${cursorCls} ${animCls}" onclick="selectRoadmapWeek(${w})" id="svg-node-week-${w}">
+                <!-- Vòng tròn nền -->
+                <circle cx="${coord.x}" cy="${coord.y}" r="40" fill="#ffffff" stroke="${strokeColor}" stroke-width="4" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.08))"/>
+                <circle cx="${coord.x}" cy="${coord.y}" r="34" fill="${nodeColor}" opacity="${isLocked ? '0.25' : '0.15'}"/>
+                
+                <!-- Icon hoặc Emoji -->
+                <text x="${coord.x}" y="${coord.y - 4}" text-anchor="middle" font-size="24">${item.icon || '🌸'}</text>
+                
+                <!-- Nhãn Tuần -->
+                <text x="${coord.x}" y="${coord.y + 18}" text-anchor="middle" font-size="13" font-weight="800" fill="${isLocked ? '#64748b' : '#1e293b'}">Tuần ${w}</text>
+                
+                <!-- Trạng thái sao/khóa -->
+                ${badgeHtml}
+            </g>
+        `;
+    }
+
+    const svgHtml = `
+        <svg viewBox="0 0 1200 650" class="w-full max-h-[66vh] select-none" xmlns="http://www.w3.org/2000/svg">
+            <!-- ĐƯỜNG MÒN CHẤM BI CHỮ S UỐN LƯỢN -->
+            <path d="M 150,130 Q 550,130 950,130 C 1120,130 1120,330 950,330 Q 550,330 150,330 C -20,330 -20,530 150,530 Q 550,530 1050,530" 
+                  fill="none" stroke="#fbcfe8" stroke-width="12" stroke-dasharray="14,14" stroke-linecap="round"/>
+            <path d="M 150,130 Q 550,130 950,130 C 1120,130 1120,330 950,330 Q 550,330 150,330 C -20,330 -20,530 150,530 Q 550,530 1050,530" 
+                  fill="none" stroke="#f472b6" stroke-width="4" stroke-dasharray="14,14" stroke-linecap="round"/>
+
+            <!-- CÁC TRẠM TUẦN HỌC -->
+            ${nodesHtml}
+        </svg>
+    `;
+    container.innerHTML = svgHtml;
 }
 
 async function selectRoadmapWeek(weekNum) {
     stopSpeaking();
-    const item = ROADMAP_DATA.find(r => r.week === weekNum);
-    if (!item) return;
-    if (item.topicId === 12) return openExamHub();
+    const config = roadmapConfig[weekNum];
+    if (!config) return;
+    
+    const tuanHienTai = Number(currentUser?.tuanHienTai) || 1;
+    if (weekNum > tuanHienTai) {
+        return alert(`Tuần ${weekNum} đang bị khóa. Bé hãy hoàn thành Tuần ${tuanHienTai} đạt từ 80% trở lên để mở khóa nhé!`);
+    }
 
-    activeRoadmapContext = { week: weekNum, topicId: item.topicId, chuDe: item.title };
+    if (config.isExam) return openExamHub();
+
+    activeRoadmapContext = { week: weekNum, topicId: config.topicIds[0] || 1, chuDe: config.name };
     pendingTopicQuiz = null; activeExamContext = null;
     updateNavTabs("Tiến trình tuần", "📅", `Tuần ${weekNum}`);
 
-    showLoadingOverlay(`Đang tải Tuần ${weekNum}...`);
+    showLoadingOverlay(`Đang bốc 20 câu hỏi Tuần ${weekNum} (tỷ lệ 3:4:3)...`);
     try {
-        const topics = await fetchAllTopicsData();
-        const topicObj = topics.find(t => Number(t.topic_id) === Number(item.topicId));
+        await fetchAllTopicsData();
         hideLoadingOverlay();
-        if (!topicObj || !topicObj.questions) throw new Error("Không tìm thấy dữ liệu chủ đề tương ứng");
 
-        const weekQuestions = topicObj.questions.filter(q => Number(q.week) === weekNum);
+        // Bốc 20 câu chuẩn tỷ lệ vàng 3:4:3
+        const weekQuestions = getQuestionsForWeek343(weekNum);
         if (!weekQuestions.length) return alert('Tuần này đang chuẩn bị thêm câu hỏi, bé quay lại sau nhé!');
-        
-        const cycledQuestions = getCycleQuestions(weekQuestions, `roadmap_week_${weekNum}`, 10);
-        startTopicQuiz(item.topicId, item.title, cycledQuestions, null);
+
+        startTopicQuiz(config.topicIds[0] || 1, config.name, weekQuestions, null);
     } catch (err) {
         hideLoadingOverlay();
         alert(`Lỗi tải dữ liệu tuần: ${err.message}`);
@@ -616,7 +694,7 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
     loadQuestion();
 }
 
-// --- ĐẤU TRƯỜNG ĐỀ THI ---
+// ĐẤU TRƯỜNG ĐỀ THI
 function openExamHub() {
     if (!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để vào Đấu trường đề thi nhé!');
     stopSpeaking();
@@ -673,7 +751,7 @@ async function startRandomExam(categoryKey) {
     }
 }
 
-// --- QUẢN LÝ CÂU HỎI TRẮC NGHIỆM ---
+// QUẢN LÝ CÂU HỎI TRẮC NGHIỆM
 function loadQuestion() {
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
@@ -792,10 +870,12 @@ function updateNavButtons() {
     }
 }
 
+// 5. CHẤM ĐIỂM VÀ LỒNG GIỌNG ĐỌC KHEN NGỢI CÁ NHÂN HÓA
 function checkAnswer(selectedOpt) {
     const q = activeQuestionsList[currentQIndex];
     const isCorrect = selectedOpt === q.answer;
     const isFreeMode = !activeRoadmapContext && !activeExamContext;
+    const studentName = getStudentFirstName();
 
     if (isFreeMode) {
         if (userAnswers[currentQIndex] !== undefined) return;
@@ -816,7 +896,7 @@ function checkAnswer(selectedOpt) {
 
             playAudio('correct');
             confetti({ particleCount: 30, spread: 55, origin: { y: 0.7 } });
-            setTimeout(() => speakVietnamese(q.answer, 0.95, 1.05), 180);
+            setTimeout(() => speakVietnamese(`${q.answer}. ${studentName} giỏi quá, cố lên con yêu!`, 0.95, 1.05), 180);
 
             quizAnsweredLog.push({
                 question_id: q.question_id,
@@ -850,7 +930,7 @@ function checkAnswer(selectedOpt) {
             });
 
             playAudio('wrong');
-            setTimeout(() => speakVietnamese(selectedOpt, 0.95, 1.05), 300);
+            setTimeout(() => speakVietnamese(`Tiếc quá, ${studentName} suy nghĩ thêm một chút nhé!`, 0.95, 1.05), 300);
         }
     } else {
         if (userAnswers[currentQIndex] !== undefined) return;
@@ -876,7 +956,7 @@ function checkAnswer(selectedOpt) {
             document.getElementById('star-green-count').textContent = starGreenCount;
             playAudio('correct');
             confetti({ particleCount: 30, spread: 55, origin: { y: 0.7 } });
-            setTimeout(() => speakVietnamese(q.answer, 0.95, 1.05), 180);
+            setTimeout(() => speakVietnamese(`${q.answer}. ${studentName} giỏi quá, cố lên con yêu!`, 0.95, 1.05), 180);
         } else {
             starRedCount++;
             document.getElementById('star-red-count').textContent = starRedCount;
@@ -887,7 +967,7 @@ function checkAnswer(selectedOpt) {
                 dap_an_chon: selectedOpt,
                 dap_an_dung: q.answer
             });
-            setTimeout(() => speakVietnamese(q.answer, 0.95, 1.05), 300);
+            setTimeout(() => speakVietnamese(`Tiếc quá, ${studentName} suy nghĩ thêm một chút nhé!`, 0.95, 1.05), 300);
         }
 
         quizAnsweredLog.push({
@@ -915,11 +995,8 @@ function nextQuestion() {
     const isFreeMode = !activeRoadmapContext && !activeExamContext;
 
     if (userAnswers[currentQIndex] === undefined) {
-        if (isFreeMode) {
-            alert('Bé hãy tìm đáp án đúng để hoàn thành câu này nhé!');
-        } else {
-            alert('Bé hãy chọn một đáp án trước khi qua câu tiếp theo nhé!');
-        }
+        if (isFreeMode) alert('Bé hãy tìm đáp án đúng để hoàn thành câu này nhé!');
+        else alert('Bé hãy chọn một đáp án trước khi qua câu tiếp theo nhé!');
         return;
     }
 
@@ -931,18 +1008,36 @@ function nextQuestion() {
     }
 }
 
+// 3. HIỂN THỊ KẾT QUẢ VÀ TÍNH SAO (NGƯỠNG MỞ KHÓA 80%)
 function showResultScreen() {
     stopSpeaking();
     switchAppView('view-result');
-    document.getElementById('res-correct-txt').textContent = `${score}/${activeQuestionsList.length}`;
-    document.getElementById('res-star-txt').textContent = `+${score * 2} ⭐`;
+    const totalQ = activeQuestionsList.length;
+    const percent = Math.round((score / totalQ) * 100);
+    const studentName = getStudentFirstName();
 
-    confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
-    playAudio('win');
+    let starCount = 0;
+    let starStr = 'Cần cố gắng';
+    if (percent === 100) { starCount = 3; starStr = '⭐⭐⭐ (Xuất sắc)'; }
+    else if (percent >= 85) { starCount = 2; starStr = '⭐⭐ (Giỏi)'; }
+    else if (percent >= 80) { starCount = 1; starStr = '⭐ (Đạt)'; }
+
+    document.getElementById('res-correct-txt').textContent = `${score}/${totalQ} (${percent}%)`;
+    document.getElementById('res-star-txt').textContent = starStr;
+
+    if (percent >= 80) {
+        document.getElementById('res-title-txt').textContent = `Chúc mừng ${studentName} yêu quý! 🎉`;
+        document.getElementById('res-desc-txt').textContent = `Con đã xuất sắc đạt ${percent}% điểm, đủ điều kiện mở khóa tuần học mới!`;
+        confetti({ particleCount: 130, spread: 85, origin: { y: 0.6 } });
+        playAudio('win');
+    } else {
+        document.getElementById('res-title-txt').textContent = `Cố gắng lên nhé ${studentName}! 💪`;
+        document.getElementById('res-desc-txt').textContent = `Bé đạt ${percent}% điểm. Bé cần đạt từ 80% trở lên để mở khóa tuần kế tiếp nhé!`;
+    }
 
     if (currentUser && !currentUser.isGuest) {
         if (activeExamContext) saveExamResultToSheet();
-        else if (activeRoadmapContext) saveWeeklyProgressToSheet();
+        else if (activeRoadmapContext) saveWeeklyProgressToSheet(percent, starCount);
     }
 }
 
@@ -971,22 +1066,43 @@ async function saveExamResultToSheet() {
     try { await callAppsScript('saveExamResult', payload); } catch (e) {}
 }
 
-async function saveWeeklyProgressToSheet() {
+async function saveWeeklyProgressToSheet(percent, starCount) {
     const { week, topicId, chuDe } = activeRoadmapContext;
     const thoiGianLamBai = quizStartTime ? formatDuration(Date.now() - quizStartTime) : '';
+    const scoreThang10 = ((score / activeQuestionsList.length) * 10).toFixed(1);
+
+    const payload = {
+        student_id: currentUser.maHS,
+        maHS: currentUser.maHS,
+        week_completed: week,
+        tuan: week,
+        chuDe,
+        topicId,
+        score: scoreThang10,
+        stars_earned: starCount,
+        tongCauHoi: activeQuestionsList.length,
+        total_questions: activeQuestionsList.length,
+        soCauDung: score,
+        percent,
+        thoiGianLamBai,
+        wrongQuestions: quizWrongAnswers,
+        timestamp: new Date().toISOString()
+    };
+
     try {
-        const res = await callAppsScript('saveWeeklyProgress', {
-            maHS: currentUser.maHS, tuan: week, chuDe, topicId,
-            tongCauHoi: activeQuestionsList.length, soCauDung: score, thoiGianLamBai, wrongQuestions: quizWrongAnswers
-        });
-        if (res.ok && res.unlockedNextWeek) {
-            currentUser.tuanHienTai = res.tuanHienTai;
-            setTimeout(() => alert(`🎉 Chúc mừng bé đạt từ 7 điểm trở lên! Tuần ${res.tuanHienTai} đã được mở khóa!`), 600);
+        const res = await callAppsScript('saveWeeklyProgress', payload);
+        // Kiểm tra ngưỡng >= 80% để mở khóa tuần tiếp theo
+        if (percent >= 80) {
+            const nextWeek = week + 1;
+            if (nextWeek > (Number(currentUser.tuanHienTai) || 1) && nextWeek <= 12) {
+                currentUser.tuanHienTai = nextWeek;
+                setTimeout(() => alert(`🎉 Chúc mừng bé đạt ${percent}% điểm! Tuần ${nextWeek} đã được mở khóa trên bản đồ!`), 500);
+            }
         }
     } catch (e) {}
 }
 
-// --- TIỆN ÍCH & WEB SPEECH TTS BAN MAI ---
+// TIỆN ÍCH & WEB SPEECH TTS BAN MAI
 function formatDuration(ms) {
     const s = Math.round(ms / 1000);
     return `${Math.floor(s / 60)} phút ${s % 60} giây`;
@@ -1033,9 +1149,7 @@ if ('speechSynthesis' in window) {
 }
 
 function stopSpeaking() { 
-    if ('speechSynthesis' in window) {
-        window.speechSynthesis.cancel();
-    }
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
 }
 
 function speakVietnamese(text, rate, pitch) {
@@ -1061,31 +1175,26 @@ function speakCurrentQuestion() {
 function playAudio(type) {
     try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
-
         if (type === 'correct') {
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
-            osc.connect(gain);
-            gain.connect(ctx.destination);
+            osc.connect(gain); gain.connect(ctx.destination);
             osc.type = 'sine';
             osc.frequency.setValueAtTime(587.33, ctx.currentTime);
             osc.frequency.exponentialRampToValueAtTime(880, ctx.currentTime + 0.2);
             gain.gain.setValueAtTime(0.2, ctx.currentTime);
             gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
-            osc.start();
-            osc.stop(ctx.currentTime + 0.3);
+            osc.start(); osc.stop(ctx.currentTime + 0.3);
         } else if (type === 'wrong') {
             [0, 0.14].forEach(delay => {
                 const osc = ctx.createOscillator();
                 const gain = ctx.createGain();
-                osc.connect(gain);
-                gain.connect(ctx.destination);
+                osc.connect(gain); gain.connect(ctx.destination);
                 osc.type = 'sine';
                 osc.frequency.setValueAtTime(220, ctx.currentTime + delay);
                 gain.gain.setValueAtTime(0.25, ctx.currentTime + delay);
                 gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + delay + 0.09);
-                osc.start(ctx.currentTime + delay);
-                osc.stop(ctx.currentTime + delay + 0.09);
+                osc.start(ctx.currentTime + delay); osc.stop(ctx.currentTime + delay + 0.09);
             });
         } else if (type === 'win') {
             [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {

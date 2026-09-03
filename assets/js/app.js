@@ -64,6 +64,40 @@ let quizWrongAnswers = [];
 let quizAnsweredLog = [];
 let quizStartTime = null;
 
+// --- BỘ CHUYỂN ĐỔI CHUẨN HÓA DỮ LIỆU RÚT GỌN (MINIFIED KEYS ADAPTER) ---
+function normalizeQuestion(q) {
+    if (!q) return null;
+    return {
+        question_id: q.id ?? q.question_id ?? 0,
+        sub_topic: q.sub ?? q.sub_topic ?? 'Câu hỏi chung',
+        week: q.week ?? q.w ?? null,
+        question_text: q.q ?? q.question_text ?? '',
+        options: Array.isArray(q.o) ? q.o : (Array.isArray(q.options) ? q.options : []),
+        answer: q.a ?? q.answer ?? '',
+        hint: q.h ?? q.hint ?? '',
+        image_url: q.img ?? q.image_url ?? '',
+        audio_text: q.aud ?? q.audio_text ?? '',
+        reading_title: q.r_title ?? q.reading_title ?? '',
+        reading_passage: q.r_passage ?? q.reading_passage ?? q.passage_text ?? '',
+        skill_tag: q.skill_tag ?? null,
+        diem: q.diem ?? null
+    };
+}
+
+function normalizeTopic(t) {
+    if (!t) return null;
+    const rawQuestions = t.qs || t.questions || [];
+    return {
+        topic_id: Number(t.id ?? t.topic_id),
+        topic_name: t.name ?? t.topic_name ?? '',
+        description: t.desc ?? t.description ?? '',
+        lecture_title: t.l_title ?? t.lecture_title ?? '',
+        lecture_content: t.l_content ?? t.lecture_content ?? '',
+        lecture_audio_text: t.l_audio ?? t.lecture_audio_text ?? '',
+        questions: rawQuestions.map(normalizeQuestion).filter(Boolean)
+    };
+}
+
 // XÁO TRỘN FISHER-YATES
 function shuffleArray(arr) {
     if (!arr) return [];
@@ -83,38 +117,44 @@ function getCycleQuestions(questions, poolKey, batchSize = 10) {
 }
 
 function capitalizeFirstLetter(val) {
-    if(!val) return '';
+    if (!val) return '';
     const s = String(val).trim();
     return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 function beautifySubtopicName(name) {
-    if(!name) return '';
+    if (!name) return '';
     let s = name.trim();
-    if(/đa giác quan/i.test(s)) return 'Trải nghiệm đa giác quan';
-    if(/trái nghĩa.*đồng nghĩa/i.test(s) || /đồng nghĩa.*trái nghĩa/i.test(s)) return 'Trái nghĩa - đồng nghĩa';
-    if(s.length > 25 && s.includes('(')) {
+    if (/đa giác quan/i.test(s)) return 'Trải nghiệm đa giác quan';
+    if (/trái nghĩa.*đồng nghĩa/i.test(s) || /đồng nghĩa.*trái nghĩa/i.test(s)) return 'Trái nghĩa - đồng nghĩa';
+    if (s.length > 25 && s.includes('(')) {
         s = s.replace(/\s*\([^)]*\)/g, '').trim();
     }
     return s;
 }
 
-// --- NẠP DỮ LIỆU TỪ FILE GỘP tat_ca_chude.json ---
+// --- NẠP DỮ LIỆU TỪ FILE KHO HỌC TỐI ƯU kho_hoc_tieng_viet_1.json ---
 async function fetchAllTopicsData() {
-    if(allTopicsDataCache) return allTopicsDataCache;
+    if (allTopicsDataCache) return allTopicsDataCache;
     const res = await fetch('assets/data/kho_hoc_tieng_viet_1.json');
-    if(!res.ok) throw new Error("Không thể tải file dữ liệu gộp");
+    if (!res.ok) throw new Error("Không thể tải file dữ liệu kho_hoc_tieng_viet_1.json");
     const data = await res.json();
-    const topicsArr = Array.isArray(data) ? data : (data.topics || []);
-    allTopicsDataCache = topicsArr;
-    return topicsArr;
+    const rawTopics = Array.isArray(data) ? data : (data.topics || []);
+    allTopicsDataCache = rawTopics.map(normalizeTopic).filter(Boolean);
+    return allTopicsDataCache;
 }
 
 async function loadExamDataFile(file) {
-    if(examsCache[file]) return examsCache[file];
+    if (examsCache[file]) return examsCache[file];
     const res = await fetch(`assets/data/${file}`);
-    if(!res.ok) throw new Error("Không thể tải file đề thi");
+    if (!res.ok) throw new Error("Không thể tải file đề thi");
     const data = await res.json();
+    if (data && Array.isArray(data.exams)) {
+        data.exams = data.exams.map(ex => ({
+            ...ex,
+            questions: (ex.qs || ex.questions || []).map(normalizeQuestion).filter(Boolean)
+        }));
+    }
     examsCache[file] = data;
     return data;
 }
@@ -122,12 +162,12 @@ async function loadExamDataFile(file) {
 // --- RENDER GIAO DIỆN CHÍNH ---
 async function renderDashboardGrid() {
     const container = document.getElementById('view-dashboard-grid');
-    if(!container) return;
+    if (!container) return;
     
     let topicsData = [];
     try {
         topicsData = await fetchAllTopicsData();
-    } catch(e) {}
+    } catch (e) {}
 
     let html = '';
     
@@ -154,12 +194,11 @@ async function renderDashboardGrid() {
         `;
     });
 
-    // Đếm tổng số lượng đề thi cho mục 12
-    let totalExamsCount = 3; // Mặc định
+    let totalExamsCount = 3;
     try {
         const examData = await loadExamDataFile('de_thi_tieng_viet_1.json');
-        if(examData && examData.exams) totalExamsCount = examData.exams.length;
-    } catch(e) {}
+        if (examData && examData.exams) totalExamsCount = examData.exams.length;
+    } catch (e) {}
 
     html += `
         <div onclick="openExamHub()" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[95px]">
@@ -178,15 +217,15 @@ async function renderDashboardGrid() {
 
 async function renderExamHubGrid() {
     const container = document.getElementById('exam-categories-grid');
-    if(!container) return;
+    if (!container) return;
 
     let examData = null;
     try {
         examData = await loadExamDataFile('de_thi_tieng_viet_1.json');
-    } catch(e) {}
+    } catch (e) {}
 
     const getCountForCat = (catName) => {
-        if(!examData || !examData.exams) return 3;
+        if (!examData || !examData.exams) return 3;
         return examData.exams.filter(e => (e.exam_category || '').toLowerCase().includes(catName)).length || 3;
     };
 
@@ -201,7 +240,7 @@ async function renderExamHubGrid() {
                 <h3 class="font-extrabold text-pink-600 text-lg mb-1">Học kỳ 1</h3>
                 <p class="text-xs text-gray-500 font-bold">Kiểm tra kiến thức HK1</p>
             </div>
-            <span class="w-full py-2.5 bg-pink-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countCountLabel(countHK1)}</span>
+            <span class="w-full py-2.5 bg-pink-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countHK1} đề thi</span>
         </div>
 
         <div onclick="startRandomExam('hocky2')" class="bg-purple-50/70 p-5 rounded-2xl border-2 border-purple-200 flex flex-col justify-between items-center text-center cursor-pointer hover:border-purple-400 transition-all group min-h-[220px] pastel-card">
@@ -210,7 +249,7 @@ async function renderExamHubGrid() {
                 <h3 class="font-extrabold text-purple-600 text-lg mb-1">Học kỳ 2</h3>
                 <p class="text-xs text-gray-500 font-bold">Kiểm tra kiến thức HK2</p>
             </div>
-            <span class="w-full py-2.5 bg-purple-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countCountLabel(countHK2)}</span>
+            <span class="w-full py-2.5 bg-purple-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countHK2} đề thi</span>
         </div>
 
         <div onclick="startRandomExam('hsg')" class="bg-amber-50/70 p-5 rounded-2xl border-2 border-amber-200 flex flex-col justify-between items-center text-center cursor-pointer hover:border-amber-400 transition-all group min-h-[220px] pastel-card">
@@ -219,14 +258,10 @@ async function renderExamHubGrid() {
                 <h3 class="font-extrabold text-amber-600 text-lg mb-1">Học sinh giỏi</h3>
                 <p class="text-xs text-gray-500 font-bold">Thử thách nâng cao IQ</p>
             </div>
-            <span class="w-full py-2.5 bg-amber-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countCountLabel(countHSG)}</span>
+            <span class="w-full py-2.5 bg-amber-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countHSG} đề thi</span>
         </div>
     `;
     container.innerHTML = html;
-}
-
-function countCountLabel(n) {
-    return `${n} đề thi`;
 }
 
 function updateNavTabs(level2Title, level2Icon, level3Title) {
@@ -234,7 +269,7 @@ function updateNavTabs(level2Title, level2Icon, level3Title) {
     const tab3 = document.getElementById('header-level3-tab');
     const homeBtn = document.getElementById('btn-header-home');
 
-    if(level2Title) {
+    if (level2Title) {
         document.getElementById('header-level2-title').textContent = level2Title;
         document.getElementById('header-level2-icon').textContent = level2Icon || '🌸';
         tab2.classList.remove('hidden');
@@ -246,7 +281,7 @@ function updateNavTabs(level2Title, level2Icon, level3Title) {
         homeBtn.classList.remove('opacity-80');
     }
 
-    if(level3Title) {
+    if (level3Title) {
         document.getElementById('header-level3-title').textContent = level3Title;
         tab3.classList.remove('hidden');
         tab3.classList.add('flex');
@@ -258,12 +293,12 @@ function updateNavTabs(level2Title, level2Icon, level3Title) {
 
 function returnToTopicLecture() {
     stopSpeaking();
-    if(activeExamContext) {
+    if (activeExamContext) {
         openExamHub();
-    } else if(activeRoadmapContext) {
+    } else if (activeRoadmapContext) {
         openRoadmap();
-    } else if(pendingTopicQuiz) {
-        updateNavTabs(pendingTopicQuiz.topicName, TOPICS_CONFIG.find(t=>t.id===pendingTopicQuiz.topicNum)?.icon, null);
+    } else if (pendingTopicQuiz) {
+        updateNavTabs(pendingTopicQuiz.topicName, TOPICS_CONFIG.find(t => t.id === pendingTopicQuiz.topicNum)?.icon, null);
         switchAppView('view-lecture');
     }
 }
@@ -272,8 +307,8 @@ function switchAppView(viewId) {
     stopSpeaking();
     ['view-dashboard-grid', 'view-lecture', 'view-quiz', 'view-roadmap', 'view-exam-hub', 'view-result'].forEach(id => {
         const el = document.getElementById(id);
-        if(!el) return;
-        if(id === viewId) {
+        if (!el) return;
+        if (id === viewId) {
             el.classList.remove('hidden');
         } else {
             el.classList.add('hidden');
@@ -315,7 +350,7 @@ async function callAppsScript(action, payload) {
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify({ action, payload })
     });
-    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return res.json();
 }
 
@@ -323,18 +358,18 @@ async function doLogin() {
     hideAuthError();
     const maHS = document.getElementById('login-mahs').value.trim();
     const maPin = document.getElementById('login-mapin').value.trim();
-    if(!maHS || !maPin) return showAuthError('Bé nhập đủ Mã ID và Mã PIN nhé!');
+    if (!maHS || !maPin) return showAuthError('Bé nhập đủ Mã ID và Mã PIN nhé!');
 
     const btn = document.getElementById('btn-do-login');
     btn.disabled = true; btn.textContent = 'Đang đăng nhập...';
     try {
         const result = await callAppsScript('login', { maHS, maPin });
-        if(!result.ok) return showAuthError(result.error);
+        if (!result.ok) return showAuthError(result.error);
         currentUser = { ...result.student, isGuest: false };
         localStorage.setItem('tv1_mahs', maHS);
         localStorage.setItem('tv1_mapin', maPin);
         enterDashboard();
-    } catch(err) {
+    } catch (err) {
         showAuthError('Lỗi kết nối: ' + err.message);
     } finally {
         btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập';
@@ -349,8 +384,8 @@ async function doRegister() {
     const soThuTu = document.getElementById('reg-stt').value.trim();
     const maPin = document.getElementById('reg-mapin').value.trim();
 
-    if(!hoTen || !ngaySinhRaw || !lop || !soThuTu || !maPin) return showAuthError('Bé điền đủ tất cả các ô có dấu * nhé!');
-    if(!/^\d{4}$/.test(maPin)) return showAuthError('Mã PIN phải gồm đúng 4 chữ số!');
+    if (!hoTen || !ngaySinhRaw || !lop || !soThuTu || !maPin) return showAuthError('Bé điền đủ tất cả các ô có dấu * nhé!');
+    if (!/^\d{4}$/.test(maPin)) return showAuthError('Mã PIN phải gồm đúng 4 chữ số!');
 
     const [y, m, d] = ngaySinhRaw.split('-');
     const ngaySinh = `${d}-${m}-${y.slice(2)}`;
@@ -358,11 +393,11 @@ async function doRegister() {
     btn.disabled = true; btn.textContent = 'Đang đăng ký...';
     try {
         const result = await callAppsScript('register', { hoTen, ngaySinh, lop, soThuTu, maPin });
-        if(!result.ok) return showAuthError(result.error);
+        if (!result.ok) return showAuthError(result.error);
         alert(`Đã gửi đăng ký thành công, vui lòng chờ Admin duyệt! Mã ID của bé là: ${result.student.maHS}`);
         document.getElementById('login-mahs').value = result.student.maHS;
         switchAuthTab('login');
-    } catch(err) {
+    } catch (err) {
         showAuthError('Lỗi kết nối: ' + err.message);
     } finally {
         btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay';
@@ -372,11 +407,11 @@ async function doRegister() {
 async function tryAutoLogin() {
     const maHS = localStorage.getItem('tv1_mahs');
     const maPin = localStorage.getItem('tv1_mapin');
-    if(!maHS || !maPin) return;
+    if (!maHS || !maPin) return;
     try {
         const res = await callAppsScript('login', { maHS, maPin });
-        if(res.ok) { currentUser = { ...res.student, isGuest: false }; enterDashboard(); }
-    } catch(e) {}
+        if (res.ok) { currentUser = { ...res.student, isGuest: false }; enterDashboard(); }
+    } catch (e) {}
 }
 
 function logout() {
@@ -404,8 +439,8 @@ function enterDashboard() {
 
 function updateUserInfoBox() {
     const box = document.getElementById('user-info-box');
-    if(!box) return;
-    if(currentUser && !currentUser.isGuest) {
+    if (!box) return;
+    if (currentUser && !currentUser.isGuest) {
         box.innerHTML = `
             <div class="flex items-center space-x-2">
                 <div class="text-right">
@@ -423,15 +458,15 @@ function resetStars() {
     starGreenCount = 0; starRedCount = 0;
     const greenEl = document.getElementById('star-green-count');
     const redEl = document.getElementById('star-red-count');
-    if(greenEl) greenEl.textContent = 0;
-    if(redEl) redEl.textContent = 0;
+    if (greenEl) greenEl.textContent = 0;
+    if (redEl) redEl.textContent = 0;
 }
 
 // --- LUYỆN TẬP THEO CHỦ ĐỀ & LỘ TRÌNH TUẦN ---
 function clickProgressOrExam(type) {
-    if(!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để sử dụng tính năng này nhé!');
-    if(type === 'progress') openRoadmap();
-    else if(type === 'exam') openExamHub();
+    if (!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để sử dụng tính năng này nhé!');
+    if (type === 'progress') openRoadmap();
+    else if (type === 'exam') openExamHub();
 }
 
 function openRoadmap() {
@@ -466,8 +501,8 @@ function renderRoadmapList() {
 async function selectRoadmapWeek(weekNum) {
     stopSpeaking();
     const item = ROADMAP_DATA.find(r => r.week === weekNum);
-    if(!item) return;
-    if(item.topicId === 12) return openExamHub();
+    if (!item) return;
+    if (item.topicId === 12) return openExamHub();
 
     activeRoadmapContext = { week: weekNum, topicId: item.topicId, chuDe: item.title };
     pendingTopicQuiz = null; activeExamContext = null;
@@ -478,14 +513,14 @@ async function selectRoadmapWeek(weekNum) {
         const topics = await fetchAllTopicsData();
         const topicObj = topics.find(t => Number(t.topic_id) === Number(item.topicId));
         hideLoadingOverlay();
-        if(!topicObj || !topicObj.questions) throw new Error("Không tìm thấy dữ liệu chủ đề tương ứng");
+        if (!topicObj || !topicObj.questions) throw new Error("Không tìm thấy dữ liệu chủ đề tương ứng");
 
         const weekQuestions = topicObj.questions.filter(q => Number(q.week) === weekNum);
-        if(!weekQuestions.length) return alert('Tuần này đang chuẩn bị thêm câu hỏi, bé quay lại sau nhé!');
+        if (!weekQuestions.length) return alert('Tuần này đang chuẩn bị thêm câu hỏi, bé quay lại sau nhé!');
         
         const cycledQuestions = getCycleQuestions(weekQuestions, `roadmap_week_${weekNum}`, 10);
         startTopicQuiz(item.topicId, item.title, cycledQuestions, null);
-    } catch(err) {
+    } catch (err) {
         hideLoadingOverlay();
         alert(`Lỗi tải dữ liệu tuần: ${err.message}`);
     }
@@ -501,10 +536,10 @@ async function openTopic(topicNum, topicName, icon) {
         const topics = await fetchAllTopicsData();
         const topicObj = topics.find(t => Number(t.topic_id) === Number(topicNum));
         hideLoadingOverlay();
-        if(!topicObj || !topicObj.questions || !topicObj.questions.length) throw new Error("Chủ đề không có câu hỏi nào");
+        if (!topicObj || !topicObj.questions || !topicObj.questions.length) throw new Error("Chủ đề không có câu hỏi nào");
         
         showLectureAndSubtopics(topicNum, topicName, topicObj);
-    } catch(err) {
+    } catch (err) {
         hideLoadingOverlay();
         alert(`Không thể tải chủ đề: ${err.message}`);
     }
@@ -520,7 +555,7 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     const groups = [], groupMap = {};
     topicObj.questions.forEach(q => {
         const k = q.sub_topic || 'Câu hỏi chung';
-        if(!groupMap[k]) { groupMap[k] = []; groups.push(k); }
+        if (!groupMap[k]) { groupMap[k] = []; groups.push(k); }
         groupMap[k].push(q);
     });
     pendingTopicQuiz.groups = groups; 
@@ -540,17 +575,17 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     });
     document.getElementById('lecture-subtopics-list').innerHTML = subHtml;
 
-    updateNavTabs(topicName, TOPICS_CONFIG.find(t=>t.id===topicNum)?.icon || '🌸', null);
+    updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', null);
     switchAppView('view-lecture');
 }
 
 function speakLecture() {
-    speakVietnamese(document.getElementById('view-lecture').dataset.audioText || '', 0.9, 1.05);
+    speakVietnamese(document.getElementById('view-lecture').dataset.audioText || '', 0.92, 1.05);
 }
 
 function selectSubtopic(idx) {
     stopSpeaking();
-    if(!pendingTopicQuiz) return;
+    if (!pendingTopicQuiz) return;
     const { topicNum, topicName, questions, groups, groupMap } = pendingTopicQuiz;
     const subLabel = idx !== null ? groups[idx] : null;
     const pool = idx !== null ? groupMap[subLabel] : questions;
@@ -559,7 +594,7 @@ function selectSubtopic(idx) {
 
     const cycledQuestions = getCycleQuestions(pool, poolKey, 10);
 
-    updateNavTabs(topicName, TOPICS_CONFIG.find(t=>t.id===topicNum)?.icon || '🌸', subLabel ? beautifySubtopicName(subLabel) : 'Tất cả các mục');
+    updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', subLabel ? beautifySubtopicName(subLabel) : 'Tất cả các mục');
     startTopicQuiz(topicNum, finalTitle, cycledQuestions, subLabel);
 }
 
@@ -583,7 +618,7 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
 
 // --- ĐẤU TRƯỜNG ĐỀ THI ---
 function openExamHub() {
-    if(!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để vào Đấu trường đề thi nhé!');
+    if (!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để vào Đấu trường đề thi nhé!');
     stopSpeaking();
     updateNavTabs("Đấu trường đề thi", "🏆", null);
     renderExamHubGrid();
@@ -593,24 +628,23 @@ function openExamHub() {
 async function startRandomExam(categoryKey) {
     stopSpeaking();
     const mapInfo = examFileMap[categoryKey];
-    if(!mapInfo) return;
+    if (!mapInfo) return;
 
     showLoadingOverlay('Đang chọn ngẫu nhiên đề thi...');
     try {
         const data = await loadExamDataFile(mapInfo.file);
         hideLoadingOverlay();
-        if(!data.exams || !data.exams.length) throw new Error("Không có đề thi nào");
+        if (!data.exams || !data.exams.length) throw new Error("Không có đề thi nào");
 
         const filteredExams = data.exams.filter(e => {
             const cat = (e.exam_category || '').toLowerCase();
-            if(categoryKey === 'hocky1') return cat.includes('học kỳ 1') || cat.includes('hk1');
-            if(categoryKey === 'hocky2') return cat.includes('học kỳ 2') || cat.includes('hk2');
-            if(categoryKey === 'hsg') return cat.includes('giỏi') || cat.includes('hsg');
+            if (categoryKey === 'hocky1') return cat.includes('học kỳ 1') || cat.includes('hk1');
+            if (categoryKey === 'hocky2') return cat.includes('học kỳ 2') || cat.includes('hk2');
+            if (categoryKey === 'hsg') return cat.includes('giỏi') || cat.includes('hsg');
             return true;
         });
 
         const targetList = filteredExams.length ? filteredExams : data.exams;
-        // Chọn ngẫu nhiên 1 đề thi trong danh sách
         const randomIdx = Math.floor(Math.random() * targetList.length);
         const selectedExam = targetList[randomIdx];
 
@@ -619,7 +653,6 @@ async function startRandomExam(categoryKey) {
         pendingTopicQuiz = null; 
         activeRoadmapContext = null;
 
-        // Xáo trộn câu hỏi trong đề thi ngẫu nhiên
         activeQuestionsList = shuffleArray(selectedExam.questions); 
         currentQIndex = 0; 
         score = 0;
@@ -634,7 +667,7 @@ async function startRandomExam(categoryKey) {
         document.getElementById('btn-back-subtopics').classList.add('hidden');
         switchAppView('view-quiz');
         loadQuestion();
-    } catch(err) {
+    } catch (err) {
         hideLoadingOverlay();
         alert(`Lỗi tải đề thi: ${err.message}`);
     }
@@ -644,16 +677,16 @@ async function startRandomExam(categoryKey) {
 function loadQuestion() {
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
-    if(!q) return;
+    if (!q) return;
     document.getElementById('current-q-idx').textContent = currentQIndex + 1;
 
     let mediaHtml = '';
-    if(q.image_url) {
+    if (q.image_url) {
         mediaHtml = `<img src="${q.image_url}" alt="minh họa" class="w-16 h-16 md:w-20 md:h-20 object-contain mb-1.5 floating" onerror="this.remove()">`;
     }
 
-    const pText = q.reading_passage || q.passage_text;
-    const pTitle = q.reading_title || q.passage_title;
+    const pText = q.reading_passage;
+    const pTitle = q.reading_title;
     const passageHtml = pText ? `
         <div class="w-full max-w-2xl bg-pink-50/70 border-2 border-pink-200 rounded-2xl p-3 md:p-4 mb-2 text-left">
             ${pTitle ? `<p class="font-extrabold text-pink-600 text-xs md:text-sm mb-1">${escapeHtml(pTitle)}</p>` : ''}
@@ -701,10 +734,10 @@ function restoreQuestionState(q) {
     const completedAnswer = userAnswers[currentQIndex];
     const wrongAttempts = wrongAttemptsByQ[currentQIndex] || [];
 
-    if(isFreeMode && wrongAttempts.length > 0) {
+    if (isFreeMode && wrongAttempts.length > 0) {
         document.querySelectorAll('.option-btn').forEach(b => {
             const bOpt = b.getAttribute('data-opt');
-            if(wrongAttempts.includes(bOpt)) {
+            if (wrongAttempts.includes(bOpt)) {
                 b.classList.remove('bg-pink-50/50', 'border-pink-200');
                 b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
                 b.disabled = true;
@@ -712,23 +745,23 @@ function restoreQuestionState(q) {
         });
     }
 
-    if(completedAnswer !== undefined) {
+    if (completedAnswer !== undefined) {
         const isCorrect = completedAnswer === q.answer;
         document.querySelectorAll('.option-btn').forEach(b => {
             b.disabled = true;
             const bOpt = b.getAttribute('data-opt');
 
-            if(isFreeMode) {
-                if(bOpt === q.answer) {
+            if (isFreeMode) {
+                if (bOpt === q.answer) {
                     b.classList.remove('bg-pink-50/50', 'border-pink-200');
                     b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
                 }
             } else {
-                if(bOpt === completedAnswer) {
+                if (bOpt === completedAnswer) {
                     b.classList.remove('bg-pink-50/50', 'border-pink-200');
                     b.classList.add(isCorrect ? 'bg-green-100' : 'bg-red-200', isCorrect ? 'border-green-400' : 'border-red-500', isCorrect ? 'text-green-800' : 'text-red-900');
                 }
-                if(!isCorrect && bOpt === q.answer) {
+                if (!isCorrect && bOpt === q.answer) {
                     b.classList.remove('bg-pink-50/50', 'border-pink-200');
                     b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
                 }
@@ -742,7 +775,7 @@ function updateNavButtons() {
     const nextText = document.getElementById('btn-next-text');
     const nextIcon = document.getElementById('btn-next-icon');
 
-    if(currentQIndex === 0) {
+    if (currentQIndex === 0) {
         btnPrev.disabled = true;
         btnPrev.classList.add('opacity-40', 'cursor-not-allowed');
     } else {
@@ -750,7 +783,7 @@ function updateNavButtons() {
         btnPrev.classList.remove('opacity-40', 'cursor-not-allowed');
     }
 
-    if(currentQIndex === activeQuestionsList.length - 1) {
+    if (currentQIndex === activeQuestionsList.length - 1) {
         nextText.textContent = "Hoàn thành";
         nextIcon.className = "fa-solid fa-trophy ml-1.5";
     } else {
@@ -764,10 +797,10 @@ function checkAnswer(selectedOpt) {
     const isCorrect = selectedOpt === q.answer;
     const isFreeMode = !activeRoadmapContext && !activeExamContext;
 
-    if(isFreeMode) {
-        if(userAnswers[currentQIndex] !== undefined) return;
+    if (isFreeMode) {
+        if (userAnswers[currentQIndex] !== undefined) return;
 
-        if(isCorrect) {
+        if (isCorrect) {
             userAnswers[currentQIndex] = selectedOpt;
             score++;
             starGreenCount++;
@@ -775,7 +808,7 @@ function checkAnswer(selectedOpt) {
 
             document.querySelectorAll('.option-btn').forEach(b => {
                 b.disabled = true;
-                if(b.getAttribute('data-opt') === q.answer) {
+                if (b.getAttribute('data-opt') === q.answer) {
                     b.classList.remove('bg-pink-50/50', 'border-pink-200');
                     b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
                 }
@@ -795,8 +828,8 @@ function checkAnswer(selectedOpt) {
                 dap_an_dung: q.answer
             });
         } else {
-            if(!wrongAttemptsByQ[currentQIndex]) wrongAttemptsByQ[currentQIndex] = [];
-            if(!wrongAttemptsByQ[currentQIndex].includes(selectedOpt)) {
+            if (!wrongAttemptsByQ[currentQIndex]) wrongAttemptsByQ[currentQIndex] = [];
+            if (!wrongAttemptsByQ[currentQIndex].includes(selectedOpt)) {
                 wrongAttemptsByQ[currentQIndex].push(selectedOpt);
                 starRedCount++;
                 document.getElementById('star-red-count').textContent = starRedCount;
@@ -809,7 +842,7 @@ function checkAnswer(selectedOpt) {
             }
 
             document.querySelectorAll('.option-btn').forEach(b => {
-                if(b.getAttribute('data-opt') === selectedOpt) {
+                if (b.getAttribute('data-opt') === selectedOpt) {
                     b.classList.remove('bg-pink-50/50', 'border-pink-200');
                     b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
                     b.disabled = true;
@@ -820,24 +853,24 @@ function checkAnswer(selectedOpt) {
             setTimeout(() => speakVietnamese(selectedOpt, 0.95, 1.05), 300);
         }
     } else {
-        if(userAnswers[currentQIndex] !== undefined) return;
+        if (userAnswers[currentQIndex] !== undefined) return;
         userAnswers[currentQIndex] = selectedOpt;
 
         document.querySelectorAll('.option-btn').forEach(b => {
             b.disabled = true;
             const bOpt = b.getAttribute('data-opt');
 
-            if(bOpt === selectedOpt) {
+            if (bOpt === selectedOpt) {
                 b.classList.remove('bg-pink-50/50', 'border-pink-200');
                 b.classList.add(isCorrect ? 'bg-green-100' : 'bg-red-200', isCorrect ? 'border-green-400' : 'border-red-500', isCorrect ? 'text-green-800' : 'text-red-900');
             }
-            if(!isCorrect && bOpt === q.answer) {
+            if (!isCorrect && bOpt === q.answer) {
                 b.classList.remove('bg-pink-50/50', 'border-pink-200');
                 b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
             }
         });
 
-        if(isCorrect) {
+        if (isCorrect) {
             score++;
             starGreenCount++;
             document.getElementById('star-green-count').textContent = starGreenCount;
@@ -871,7 +904,7 @@ function checkAnswer(selectedOpt) {
 
 function prevQuestion() {
     stopSpeaking();
-    if(currentQIndex > 0) {
+    if (currentQIndex > 0) {
         currentQIndex--;
         loadQuestion();
     }
@@ -881,8 +914,8 @@ function nextQuestion() {
     stopSpeaking();
     const isFreeMode = !activeRoadmapContext && !activeExamContext;
 
-    if(userAnswers[currentQIndex] === undefined) {
-        if(isFreeMode) {
+    if (userAnswers[currentQIndex] === undefined) {
+        if (isFreeMode) {
             alert('Bé hãy tìm đáp án đúng để hoàn thành câu này nhé!');
         } else {
             alert('Bé hãy chọn một đáp án trước khi qua câu tiếp theo nhé!');
@@ -890,7 +923,7 @@ function nextQuestion() {
         return;
     }
 
-    if(currentQIndex < activeQuestionsList.length - 1) {
+    if (currentQIndex < activeQuestionsList.length - 1) {
         currentQIndex++;
         loadQuestion();
     } else {
@@ -907,9 +940,9 @@ function showResultScreen() {
     confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
     playAudio('win');
 
-    if(currentUser && !currentUser.isGuest) {
-        if(activeExamContext) saveExamResultToSheet();
-        else if(activeRoadmapContext) saveWeeklyProgressToSheet();
+    if (currentUser && !currentUser.isGuest) {
+        if (activeExamContext) saveExamResultToSheet();
+        else if (activeRoadmapContext) saveWeeklyProgressToSheet();
     }
 }
 
@@ -935,7 +968,7 @@ async function saveExamResultToSheet() {
         answeredQuestions: activeQuestionsList[0]?.skill_tag ? quizAnsweredLog : undefined,
         tongCauHoi: activeQuestionsList.length, soCauDung: score, wrongQuestions: quizWrongAnswers
     };
-    try { await callAppsScript('saveExamResult', payload); } catch(e) {}
+    try { await callAppsScript('saveExamResult', payload); } catch (e) {}
 }
 
 async function saveWeeklyProgressToSheet() {
@@ -946,11 +979,11 @@ async function saveWeeklyProgressToSheet() {
             maHS: currentUser.maHS, tuan: week, chuDe, topicId,
             tongCauHoi: activeQuestionsList.length, soCauDung: score, thoiGianLamBai, wrongQuestions: quizWrongAnswers
         });
-        if(res.ok && res.unlockedNextWeek) {
+        if (res.ok && res.unlockedNextWeek) {
             currentUser.tuanHienTai = res.tuanHienTai;
             setTimeout(() => alert(`🎉 Chúc mừng bé đạt từ 7 điểm trở lên! Tuần ${res.tuanHienTai} đã được mở khóa!`), 600);
         }
-    } catch(e) {}
+    } catch (e) {}
 }
 
 // --- TIỆN ÍCH & WEB SPEECH TTS BAN MAI ---
@@ -965,7 +998,7 @@ function escapeHtml(str) {
 
 function showLoadingOverlay(msg) {
     let el = document.getElementById('loading-overlay');
-    if(!el) {
+    if (!el) {
         el = document.createElement('div');
         el.id = 'loading-overlay';
         el.className = 'fixed inset-0 bg-black/30 flex items-center justify-center z-50';
@@ -979,11 +1012,12 @@ function hideLoadingOverlay() { document.getElementById('loading-overlay')?.clas
 
 let cachedViVoice = null;
 function findBestViVoice() {
-    if(!('speechSynthesis' in window)) return null;
+    if (!('speechSynthesis' in window)) return null;
     const voices = window.speechSynthesis.getVoices();
     const vi = voices.filter(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('vi'));
     return vi.find(v => !v.localService && /google/i.test(v.name))
         || vi.find(v => /google/i.test(v.name))
+        || vi.find(v => /hoaimy/i.test(v.name))
         || vi.find(v => !v.localService)
         || vi[0] || null;
 }
@@ -993,19 +1027,19 @@ function loadVietnameseVoice() {
     return cachedViVoice;
 }
 
-if('speechSynthesis' in window) {
+if ('speechSynthesis' in window) {
     loadVietnameseVoice();
     window.speechSynthesis.onvoiceschanged = loadVietnameseVoice;
 }
 
 function stopSpeaking() { 
-    if('speechSynthesis' in window) {
+    if ('speechSynthesis' in window) {
         window.speechSynthesis.cancel();
     }
 }
 
 function speakVietnamese(text, rate, pitch) {
-    if(!text || !('speechSynthesis' in window)) return;
+    if (!text || !('speechSynthesis' in window)) return;
     window.speechSynthesis.cancel();
     window.speechSynthesis.resume();
     const u = new SpeechSynthesisUtterance(text);
@@ -1013,14 +1047,14 @@ function speakVietnamese(text, rate, pitch) {
     u.rate = rate || 0.92;
     u.pitch = pitch || 1.05;
     const v = cachedViVoice || findBestViVoice();
-    if(v) u.voice = v;
+    if (v) u.voice = v;
     window.speechSynthesis.speak(u);
 }
 
 function speakCurrentQuestion() {
     const q = activeQuestionsList[currentQIndex];
-    if(!q) return;
-    const textToRead = q.audio_text || q.reading_passage || q.passage_text || q.question_text;
+    if (!q) return;
+    const textToRead = q.audio_text || q.reading_passage || q.question_text;
     speakVietnamese(textToRead, 0.92, 1.05);
 }
 
@@ -1028,7 +1062,7 @@ function playAudio(type) {
     try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();
 
-        if(type === 'correct') {
+        if (type === 'correct') {
             const osc = ctx.createOscillator();
             const gain = ctx.createGain();
             osc.connect(gain);
@@ -1040,7 +1074,7 @@ function playAudio(type) {
             gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.3);
             osc.start();
             osc.stop(ctx.currentTime + 0.3);
-        } else if(type === 'wrong') {
+        } else if (type === 'wrong') {
             [0, 0.14].forEach(delay => {
                 const osc = ctx.createOscillator();
                 const gain = ctx.createGain();
@@ -1053,7 +1087,7 @@ function playAudio(type) {
                 osc.start(ctx.currentTime + delay);
                 osc.stop(ctx.currentTime + delay + 0.09);
             });
-        } else if(type === 'win') {
+        } else if (type === 'win') {
             [523.25, 659.25, 783.99, 1046.50].forEach((freq, i) => {
                 setTimeout(() => {
                     const o = ctx.createOscillator(), g = ctx.createGain();
@@ -1064,7 +1098,7 @@ function playAudio(type) {
                 }, i * 150);
             });
         }
-    } catch(e) {}
+    } catch (e) {}
 }
 
 tryAutoLogin();

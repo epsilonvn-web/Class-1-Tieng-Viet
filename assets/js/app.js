@@ -1,16 +1,16 @@
 // CẤU HÌNH 12 CHỦ ĐỀ CHÍNH
 const TOPICS_CONFIG = [
-    { id: 1, title: "1. Bảng chữ cái ngộ nghĩnh", desc: "Nguyên âm, phụ âm, âm ghép", count: "100 câu", icon: "🅰️", color: "pink" },
-    { id: 2, title: "2. Năm thanh điệu kì diệu", desc: "Sắc, huyền, hỏi, ngã, nặng", count: "91 câu", icon: "🎵", color: "purple" },
-    { id: 3, title: "3. Ghép âm - vần", desc: "Vần xuôi & phức tạp", count: "52 câu", icon: "🧩", color: "blue" },
-    { id: 4, title: "4. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", count: "52 câu", icon: "✍️", color: "amber" },
-    { id: 5, title: "5. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", count: "54 câu", icon: "S/X", color: "rose", isCustomTextIcon: true },
-    { id: 6, title: "6. Từ vựng mở rộng", desc: "Giác quan, hình ảnh thực tế", count: "185 câu", icon: "🌿", color: "emerald" },
-    { id: 7, title: "7. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", count: "153 câu", icon: "🧸", color: "teal" },
-    { id: 8, title: "8. Nhà thông thái sắp câu", desc: "Ghép câu ngắn & câu dài", count: "55 câu", icon: "🧠", color: "indigo" },
-    { id: 9, title: "9. Điền từ vào câu & tục ngữ", desc: "Tục ngữ dân gian", count: "52 câu", icon: "📜", color: "cyan" },
-    { id: 10, title: "10. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", count: "300 câu", icon: "🎯", color: "yellow" },
-    { id: 11, title: "11. Đọc hiểu - trả lời", desc: "Truyện ngụ ngôn & thơ nhạc", count: "50 bài", icon: "📖", color: "pink" }
+    { id: 1, title: "1. Bảng chữ cái ngộ nghĩnh", desc: "Nguyên âm, phụ âm, âm ghép", icon: "🅰️", color: "pink" },
+    { id: 2, title: "2. Năm thanh điệu kì diệu", desc: "Sắc, huyền, hỏi, ngã, nặng", icon: "🎵", color: "purple" },
+    { id: 3, title: "3. Ghép âm - vần", desc: "Vần xuôi & phức tạp", icon: "🧩", color: "blue" },
+    { id: 4, title: "4. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", icon: "✍️", color: "amber" },
+    { id: 5, title: "5. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
+    { id: 6, title: "6. Từ vựng mở rộng", desc: "Giác quan, hình ảnh thực tế", icon: "🌿", color: "emerald" },
+    { id: 7, title: "7. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
+    { id: 8, title: "8. Nhà thông thái sắp câu", desc: "Ghép câu ngắn & câu dài", icon: "🧠", color: "indigo" },
+    { id: 9, title: "9. Điền từ vào câu & tục ngữ", desc: "Tục ngữ dân gian", icon: "📜", color: "cyan" },
+    { id: 10, title: "10. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", icon: "🎯", color: "yellow" },
+    { id: 11, title: "11. Đọc hiểu - trả lời", desc: "Truyện ngụ ngôn & thơ nhạc", icon: "📖", color: "pink" }
 ];
 
 // BẢNG MÀU PASTEL CHO TỪNG CHỦ ĐỀ CON
@@ -103,20 +103,39 @@ function beautifySubtopicName(name) {
 async function fetchAllTopicsData() {
     if(allTopicsDataCache) return allTopicsDataCache;
     const res = await fetch('assets/data/kho_hoc_tieng_viet_1.json');
-    if(!res.ok) throw new Error("Không thể tải file dữ liệu gộp tat_ca_chude.json");
+    if(!res.ok) throw new Error("Không thể tải file dữ liệu gộp");
     const data = await res.json();
     const topicsArr = Array.isArray(data) ? data : (data.topics || []);
     allTopicsDataCache = topicsArr;
     return topicsArr;
 }
 
+async function loadExamDataFile(file) {
+    if(examsCache[file]) return examsCache[file];
+    const res = await fetch(`assets/data/${file}`);
+    if(!res.ok) throw new Error("Không thể tải file đề thi");
+    const data = await res.json();
+    examsCache[file] = data;
+    return data;
+}
+
 // --- RENDER GIAO DIỆN CHÍNH ---
-function renderDashboardGrid() {
+async function renderDashboardGrid() {
     const container = document.getElementById('view-dashboard-grid');
     if(!container) return;
+    
+    let topicsData = [];
+    try {
+        topicsData = await fetchAllTopicsData();
+    } catch(e) {}
+
     let html = '';
     
     TOPICS_CONFIG.forEach(t => {
+        const topicObj = topicsData.find(item => Number(item.topic_id) === Number(t.id));
+        const totalCount = topicObj && topicObj.questions ? topicObj.questions.length : 0;
+        const countLabel = totalCount > 0 ? `${totalCount} câu` : t.desc;
+
         const iconHtml = t.isCustomTextIcon 
             ? `<div class="w-8 h-8 bg-rose-100 rounded-xl flex items-center justify-center text-[11px] font-black text-rose-600 shadow-inner group-hover:scale-110 transition-transform shrink-0 tracking-tight">S/X</div>`
             : `<div class="w-8 h-8 bg-${t.color}-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-${t.color}-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">${t.icon}</div>`;
@@ -129,11 +148,18 @@ function renderDashboardGrid() {
                 </div>
                 <div class="flex justify-between items-center mt-2 pt-1.5 border-t border-pink-100 text-[11px] font-bold text-gray-500">
                     <span>${t.desc}</span>
-                    <span class="bg-${t.color}-50 text-${t.color}-600 px-2 py-0.5 rounded-full">${t.count}</span>
+                    <span class="bg-${t.color}-50 text-${t.color}-600 px-2 py-0.5 rounded-full">${countLabel}</span>
                 </div>
             </div>
         `;
     });
+
+    // Đếm tổng số lượng đề thi cho mục 12
+    let totalExamsCount = 3; // Mặc định
+    try {
+        const examData = await loadExamDataFile('de_thi_tieng_viet_1.json');
+        if(examData && examData.exams) totalExamsCount = examData.exams.length;
+    } catch(e) {}
 
     html += `
         <div onclick="openExamHub()" class="pastel-card p-3 flex flex-col justify-between cursor-pointer hover:border-amber-400 transition-all group bg-gradient-to-br from-white to-amber-50/50 min-h-[95px]">
@@ -142,29 +168,65 @@ function renderDashboardGrid() {
                 <h3 class="font-extrabold text-amber-700 text-sm md:text-base leading-tight">12. Đấu trường đề thi</h3>
             </div>
             <div class="flex justify-between items-center mt-2 pt-1.5 border-t border-amber-100 text-[11px] font-bold text-amber-600">
-                <span>Đăng nhập xem đề 🔒</span>
-                <span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">HK1, HK2, HSG</span>
+                <span>HK1, HK2, HSG</span>
+                <span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">${totalExamsCount} đề thi</span>
             </div>
         </div>
     `;
     container.innerHTML = html;
 }
 
-function renderExamHubGrid() {
+async function renderExamHubGrid() {
     const container = document.getElementById('exam-categories-grid');
     if(!container) return;
-    let html = '';
-    for(const [key, info] of Object.entries(examFileMap)) {
-        html += `
-            <div class="bg-${info.color}-50/70 p-4 rounded-2xl border-2 border-${info.color}-200 space-y-2">
-                <h3 class="font-extrabold text-${info.color}-600 text-base mb-1 text-center">${info.label}</h3>
-                <button onclick="loadExamData('${key}', 0)" class="w-full py-2 bg-${info.color}-400 hover:bg-${info.color}-500 text-white font-bold rounded-xl text-xs pastel-btn shadow-sm">Đề số 1</button>
-                <button onclick="loadExamData('${key}', 1)" class="w-full py-2 bg-${info.color}-400 hover:bg-${info.color}-500 text-white font-bold rounded-xl text-xs pastel-btn shadow-sm">Đề số 2</button>
-                <button onclick="loadExamData('${key}', 2)" class="w-full py-2 bg-${info.color}-400 hover:bg-${info.color}-500 text-white font-bold rounded-xl text-xs pastel-btn shadow-sm">Đề số 3</button>
+
+    let examData = null;
+    try {
+        examData = await loadExamDataFile('de_thi_tieng_viet_1.json');
+    } catch(e) {}
+
+    const getCountForCat = (catName) => {
+        if(!examData || !examData.exams) return 3;
+        return examData.exams.filter(e => (e.exam_category || '').toLowerCase().includes(catName)).length || 3;
+    };
+
+    const countHK1 = getCountForCat('học kỳ 1') || getCountForCat('hk1');
+    const countHK2 = getCountForCat('học kỳ 2') || getCountForCat('hk2');
+    const countHSG = getCountForCat('giỏi') || getCountForCat('hsg');
+
+    let html = `
+        <div onclick="startRandomExam('hocky1')" class="bg-pink-50/70 p-5 rounded-2xl border-2 border-pink-200 flex flex-col justify-between items-center text-center cursor-pointer hover:border-pink-400 transition-all group min-h-[220px] pastel-card">
+            <div>
+                <div class="text-4xl mb-2 group-hover:scale-110 transition-transform">🌸</div>
+                <h3 class="font-extrabold text-pink-600 text-lg mb-1">Học kỳ 1</h3>
+                <p class="text-xs text-gray-500 font-bold">Kiểm tra kiến thức HK1</p>
             </div>
-        `;
-    }
+            <span class="w-full py-2.5 bg-pink-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countCountLabel(countHK1)}</span>
+        </div>
+
+        <div onclick="startRandomExam('hocky2')" class="bg-purple-50/70 p-5 rounded-2xl border-2 border-purple-200 flex flex-col justify-between items-center text-center cursor-pointer hover:border-purple-400 transition-all group min-h-[220px] pastel-card">
+            <div>
+                <div class="text-4xl mb-2 group-hover:scale-110 transition-transform">⭐</div>
+                <h3 class="font-extrabold text-purple-600 text-lg mb-1">Học kỳ 2</h3>
+                <p class="text-xs text-gray-500 font-bold">Kiểm tra kiến thức HK2</p>
+            </div>
+            <span class="w-full py-2.5 bg-purple-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countCountLabel(countHK2)}</span>
+        </div>
+
+        <div onclick="startRandomExam('hsg')" class="bg-amber-50/70 p-5 rounded-2xl border-2 border-amber-200 flex flex-col justify-between items-center text-center cursor-pointer hover:border-amber-400 transition-all group min-h-[220px] pastel-card">
+            <div>
+                <div class="text-4xl mb-2 group-hover:scale-110 transition-transform">🏆</div>
+                <h3 class="font-extrabold text-amber-600 text-lg mb-1">Học sinh giỏi</h3>
+                <p class="text-xs text-gray-500 font-bold">Thử thách nâng cao IQ</p>
+            </div>
+            <span class="w-full py-2.5 bg-amber-400 text-white font-extrabold rounded-xl text-xs pastel-btn shadow-sm">${countCountLabel(countHSG)}</span>
+        </div>
+    `;
     container.innerHTML = html;
+}
+
+function countCountLabel(n) {
+    return `${n} đề thi`;
 }
 
 function updateNavTabs(level2Title, level2Icon, level3Title) {
@@ -297,7 +359,7 @@ async function doRegister() {
     try {
         const result = await callAppsScript('register', { hoTen, ngaySinh, lop, soThuTu, maPin });
         if(!result.ok) return showAuthError(result.error);
-        alert(`Đăng ký thành công! Mã ID của bé là: ${result.student.maHS}`);
+        alert(`Đã gửi đăng ký thành công, vui lòng chờ Admin duyệt! Mã ID của bé là: ${result.student.maHS}`);
         document.getElementById('login-mahs').value = result.student.maHS;
         switchAuthTab('login');
     } catch(err) {
@@ -468,11 +530,12 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     groups.forEach((subName, idx) => {
         const style = SUBTOPIC_PALETTES[idx % SUBTOPIC_PALETTES.length];
         const displayTitle = beautifySubtopicName(subName);
+        const count = groupMap[subName].length;
 
         subHtml += `
             <button onclick="selectSubtopic(${idx})" class="p-3 ${style.card} border-2 rounded-xl font-bold text-left transition-all flex items-center justify-between shadow-sm pastel-btn">
                 <span class="text-xs md:text-sm leading-snug"><strong class="${style.num} mr-1.5">${idx + 1}.</strong> ${escapeHtml(displayTitle)}</span>
-                <span class="text-[10px] md:text-xs font-extrabold ${style.badge} px-2 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${groupMap[subName].length} câu</span>
+                <span class="text-[10px] md:text-xs font-extrabold ${style.badge} px-2 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${count} câu</span>
             </button>`;
     });
     document.getElementById('lecture-subtopics-list').innerHTML = subHtml;
@@ -518,64 +581,63 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
     loadQuestion();
 }
 
-// --- ĐẤU TRƯỜNG ĐỀ THI (de_thi_tong_hop.json) ---
+// --- ĐẤU TRƯỜNG ĐỀ THI ---
 function openExamHub() {
     if(!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để vào Đấu trường đề thi nhé!');
     stopSpeaking();
     updateNavTabs("Đấu trường đề thi", "🏆", null);
+    renderExamHubGrid();
     switchAppView('view-exam-hub');
 }
 
-function loadExamData(categoryKey, examIndex) {
+async function startRandomExam(categoryKey) {
     stopSpeaking();
     const mapInfo = examFileMap[categoryKey];
     if(!mapInfo) return;
-    activeExamContext = { categoryKey, examIndex };
 
-    if(examsCache[mapInfo.file]) return startExamQuiz(mapInfo, examsCache[mapInfo.file], categoryKey, examIndex);
+    showLoadingOverlay('Đang chọn ngẫu nhiên đề thi...');
+    try {
+        const data = await loadExamDataFile(mapInfo.file);
+        hideLoadingOverlay();
+        if(!data.exams || !data.exams.length) throw new Error("Không có đề thi nào");
 
-    showLoadingOverlay(`Đang tải bộ đề thi...`);
-    fetch(`assets/data/${mapInfo.file}`)
-        .then(r => r.json())
-        .then(data => {
-            if(!data.exams || !data.exams.length) throw new Error("File không có đề thi nào");
-            examsCache[mapInfo.file] = data;
-            hideLoadingOverlay();
-            startExamQuiz(mapInfo, data, categoryKey, examIndex);
-        })
-        .catch(err => { hideLoadingOverlay(); alert(`Lỗi tải đề thi: ${err.message}`); });
-}
+        const filteredExams = data.exams.filter(e => {
+            const cat = (e.exam_category || '').toLowerCase();
+            if(categoryKey === 'hocky1') return cat.includes('học kỳ 1') || cat.includes('hk1');
+            if(categoryKey === 'hocky2') return cat.includes('học kỳ 2') || cat.includes('hk2');
+            if(categoryKey === 'hsg') return cat.includes('giỏi') || cat.includes('hsg');
+            return true;
+        });
 
-function startExamQuiz(mapInfo, data, categoryKey, examIndex) {
-    stopSpeaking();
-    const filteredExams = data.exams.filter(e => {
-        const cat = (e.exam_category || '').toLowerCase();
-        if(categoryKey === 'hocky1') return cat.includes('học kỳ 1') || cat.includes('hk1');
-        if(categoryKey === 'hocky2') return cat.includes('học kỳ 2') || cat.includes('hk2');
-        if(categoryKey === 'hsg') return cat.includes('giỏi') || cat.includes('hsg');
-        return true;
-    });
+        const targetList = filteredExams.length ? filteredExams : data.exams;
+        // Chọn ngẫu nhiên 1 đề thi trong danh sách
+        const randomIdx = Math.floor(Math.random() * targetList.length);
+        const selectedExam = targetList[randomIdx];
 
-    const targetExam = filteredExams[examIndex] || data.exams[examIndex];
-    if(!targetExam) return alert('Không tìm thấy đề thi tương ứng!');
+        activeExamContext = { categoryKey, examIndex: randomIdx };
+        activeTopicId = null; 
+        pendingTopicQuiz = null; 
+        activeRoadmapContext = null;
 
-    activeTopicId = null; 
-    pendingTopicQuiz = null; 
-    activeRoadmapContext = null;
-    activeQuestionsList = targetExam.questions; 
-    currentQIndex = 0; 
-    score = 0;
-    userAnswers = {};
-    wrongAttemptsByQ = {};
-    quizWrongAnswers = []; 
-    quizAnsweredLog = []; 
-    quizStartTime = Date.now();
+        // Xáo trộn câu hỏi trong đề thi ngẫu nhiên
+        activeQuestionsList = shuffleArray(selectedExam.questions); 
+        currentQIndex = 0; 
+        score = 0;
+        userAnswers = {};
+        wrongAttemptsByQ = {};
+        quizWrongAnswers = []; 
+        quizAnsweredLog = []; 
+        quizStartTime = Date.now();
 
-    updateNavTabs("Đấu trường đề thi", "🏆", `${mapInfo.label} - Đề ${examIndex + 1}`);
-    document.getElementById('total-q-idx').textContent = activeQuestionsList.length;
-    document.getElementById('btn-back-subtopics').classList.add('hidden');
-    switchAppView('view-quiz');
-    loadQuestion();
+        updateNavTabs("Đấu trường đề thi", "🏆", `${mapInfo.label}`);
+        document.getElementById('total-q-idx').textContent = activeQuestionsList.length;
+        document.getElementById('btn-back-subtopics').classList.add('hidden');
+        switchAppView('view-quiz');
+        loadQuestion();
+    } catch(err) {
+        hideLoadingOverlay();
+        alert(`Lỗi tải đề thi: ${err.message}`);
+    }
 }
 
 // --- QUẢN LÝ CÂU HỎI TRẮC NGHIỆM ---

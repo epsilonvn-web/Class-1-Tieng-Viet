@@ -23,7 +23,7 @@ const SUBTOPIC_PALETTES = [
     { card: "bg-rose-50/80 hover:bg-rose-100 border-rose-300 text-rose-800", num: "text-rose-600", badge: "bg-white text-rose-600 border-rose-200" }
 ];
 
-// 1. CẤU HÌNH ROADMAP MAPPING CHUẨN NOTEBOOK (MULTI-TOPIC)
+// CẤU HÌNH ROADMAP MAPPING ĐA CHỦ ĐỀ (MULTI-TOPIC)
 const roadmapConfig = {
     1: { name: "Tuần 1: Làm chủ 5 Thanh điệu", topicIds: [1, 2], desc: "Luyện phát âm, phân biệt nguyên âm, phụ âm và 5 thanh điệu", icon: "🎵" },
     2: { name: "Tuần 2: Khởi động Ghép âm - Vần", topicIds: [3], desc: "Học cách ghép phụ âm đầu với nguyên âm đơn và vần xuôi", icon: "🧩" },
@@ -39,7 +39,7 @@ const roadmapConfig = {
     12: { name: "Tuần 12: Đấu trường Đề thi tổng hợp", isExam: true, topicIds: [], desc: "Chinh phục đề thi HK1, HK2 và HSG để đạt điểm 10 tuyệt đối", icon: "🏆" }
 };
 
-// TỌA ĐỘ 12 NÚT BẢN ĐỒ SVG (ZIC-ZAC 3 HÀNG) CHO VIEWBOX 1200x650
+// TỌA ĐỘ 12 TRẠM NÚT BẢN ĐỒ SVG (ZIC-ZAC 3 HÀNG) CHO KHUNG VIEWBOX 1200x650
 const ROADMAP_COORDS = {
     1: { x: 150, y: 130 },  2: { x: 415, y: 130 },  3: { x: 680, y: 130 },  4: { x: 950, y: 130 },
     5: { x: 950, y: 330 },  6: { x: 680, y: 330 },  7: { x: 415, y: 330 },  8: { x: 150, y: 330 },
@@ -72,7 +72,7 @@ let quizWrongAnswers = [];
 let quizAnsweredLog = [];
 let quizStartTime = null;
 
-// LẤY TÊN GỌI CỦA HỌC SINH ĐỂ CÁ NHÂN HÓA GIỌNG ĐỌC
+// LẤY TÊN GỌI ĐỂ CÁ NHÂN HÓA LỜI KHEN VÀ ĐỘNG VIÊN
 function getStudentFirstName() {
     if (!currentUser || currentUser.isGuest || !currentUser.hoTen) return "Bé";
     const parts = currentUser.hoTen.trim().split(/\s+/);
@@ -113,7 +113,7 @@ function normalizeTopic(t) {
     };
 }
 
-// XÁO TRỘN FISHER-YATES
+// THUẬT TOÁN XÁO TRỘN FISHER-YATES
 function shuffleArray(arr) {
     if (!arr) return [];
     const a = arr.map(item => ({ ...item }));
@@ -131,7 +131,7 @@ function getCycleQuestions(questions, poolKey, batchSize = 10) {
     return shuffled.slice(0, targetCount);
 }
 
-// 2. THUẬT TOÁN BỐC 20 CÂU CHUẨN TỶ LỆ 3:4:3 (DỄ - TRUNG BÌNH - KHÓ)
+// THUẬT TOÁN BỐC 20 CÂU CHUẨN TỶ LỆ VÀNG 3:4:3[cite: 3]
 function getQuestionsForWeek343(weekNumber) {
     const config = roadmapConfig[weekNumber];
     if (!config || !allTopicsDataCache) return [];
@@ -147,15 +147,15 @@ function getQuestionsForWeek343(weekNumber) {
     if (pool.length < 20) return shuffleArray([...pool]);
     
     const size = pool.length;
-    const basket1 = pool.slice(0, Math.floor(size * 0.35)); // Rổ Dễ: 35% đầu
-    const basket2 = pool.slice(Math.floor(size * 0.35), Math.floor(size * 0.75)); // Rổ Trung bình: 40% giữa
-    const basket3 = pool.slice(Math.floor(size * 0.75)); // Rổ Khó: 25% cuối
+    const basket1 = pool.slice(0, Math.floor(size * 0.35)); // Rổ 1 (Cơ bản): 35% đầu[cite: 3]
+    const basket2 = pool.slice(Math.floor(size * 0.35), Math.floor(size * 0.75)); // Rổ 2 (Thực hành): 40% giữa[cite: 3]
+    const basket3 = pool.slice(Math.floor(size * 0.75)); // Rổ 3 (Vận dụng/IQ): 25% cuối[cite: 3]
     
-    const easy = shuffleArray([...basket1]).slice(0, 6);       // 30% = 6 câu
-    const medium = shuffleArray([...basket2]).slice(0, 8);     // 40% = 8 câu
-    const hard = shuffleArray([...basket3]).slice(0, 6);       // 30% = 6 câu
+    const easy = shuffleArray([...basket1]).slice(0, 6);       // 30% = 6 câu[cite: 3]
+    const medium = shuffleArray([...basket2]).slice(0, 8);     // 40% = 8 câu[cite: 3]
+    const hard = shuffleArray([...basket3]).slice(0, 6);       // 30% = 6 câu[cite: 3]
     
-    // Trộn chung lần cuối để xáo ngẫu nhiên vị trí câu hỏi
+    // Trộn xáo lần cuối để vị trí câu hỏi xuất hiện ngẫu nhiên[cite: 3]
     return shuffleArray([...easy, ...medium, ...hard]);
 }
 
@@ -202,7 +202,7 @@ async function loadExamDataFile(file) {
     return data;
 }
 
-// RENDER GIAO DIỆN CHÍNH
+// RENDER GIAO DIỆN TRANG CHỦ
 async function renderDashboardGrid() {
     const container = document.getElementById('view-dashboard-grid');
     if (!container) return;
@@ -255,6 +255,7 @@ async function renderDashboardGrid() {
     container.innerHTML = html;
 }
 
+// RENDER ĐẤU TRƯỜNG ĐỀ THI (3 Ô LỚN)
 async function renderExamHubGrid() {
     const container = document.getElementById('exam-categories-grid');
     if (!container) return;
@@ -497,7 +498,7 @@ function resetStars() {
     if (redEl) redEl.textContent = 0;
 }
 
-// 4. BẢN ĐỒ LỘ TRÌNH TUẦN (SVG ZIC-ZAC 1200x650 CHO GALAXY TAB S9 FE)
+// BẢN ĐỒ LỘ TRÌNH TUẦN (SVG ZIC-ZAC 1200x650 CHO TAB S9 FE)[cite: 3]
 function clickProgressOrExam(type) {
     if (!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để sử dụng tính năng này nhé!');
     if (type === 'progress') openRoadmap();
@@ -541,17 +542,17 @@ function renderRoadmapSVG() {
 
         nodesHtml += `
             <g class="${cursorCls} ${animCls}" onclick="selectRoadmapWeek(${w})" id="svg-node-week-${w}">
-                <!-- Vòng tròn nền -->
+                <!-- VÒNG TRÒN NỀN TRẠM -->
                 <circle cx="${coord.x}" cy="${coord.y}" r="40" fill="#ffffff" stroke="${strokeColor}" stroke-width="4" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.08))"/>
                 <circle cx="${coord.x}" cy="${coord.y}" r="34" fill="${nodeColor}" opacity="${isLocked ? '0.25' : '0.15'}"/>
                 
-                <!-- Icon hoặc Emoji -->
+                <!-- ICON HOẠT HỌA -->
                 <text x="${coord.x}" y="${coord.y - 4}" text-anchor="middle" font-size="24">${item.icon || '🌸'}</text>
                 
-                <!-- Nhãn Tuần -->
+                <!-- NHÃN TUẦN -->
                 <text x="${coord.x}" y="${coord.y + 18}" text-anchor="middle" font-size="13" font-weight="800" fill="${isLocked ? '#64748b' : '#1e293b'}">Tuần ${w}</text>
                 
-                <!-- Trạng thái sao/khóa -->
+                <!-- TRẠNG THÁI SAO / KHÓA -->
                 ${badgeHtml}
             </g>
         `;
@@ -559,13 +560,13 @@ function renderRoadmapSVG() {
 
     const svgHtml = `
         <svg viewBox="0 0 1200 650" class="w-full max-h-[66vh] select-none" xmlns="http://www.w3.org/2000/svg">
-            <!-- ĐƯỜNG MÒN CHẤM BI CHỮ S UỐN LƯỢN -->
+            <!-- ĐƯỜNG MÒN NÉT ĐỨT CHỮ S UỐN LƯỢN[cite: 3] -->
             <path d="M 150,130 Q 550,130 950,130 C 1120,130 1120,330 950,330 Q 550,330 150,330 C -20,330 -20,530 150,530 Q 550,530 1050,530" 
                   fill="none" stroke="#fbcfe8" stroke-width="12" stroke-dasharray="14,14" stroke-linecap="round"/>
             <path d="M 150,130 Q 550,130 950,130 C 1120,130 1120,330 950,330 Q 550,330 150,330 C -20,330 -20,530 150,530 Q 550,530 1050,530" 
                   fill="none" stroke="#f472b6" stroke-width="4" stroke-dasharray="14,14" stroke-linecap="round"/>
 
-            <!-- CÁC TRẠM TUẦN HỌC -->
+            <!-- 12 TRẠM NÚT TUẦN HỌC -->
             ${nodesHtml}
         </svg>
     `;
@@ -593,7 +594,7 @@ async function selectRoadmapWeek(weekNum) {
         await fetchAllTopicsData();
         hideLoadingOverlay();
 
-        // Bốc 20 câu chuẩn tỷ lệ vàng 3:4:3
+        // Bốc 20 câu theo tỷ lệ 3:4:3[cite: 3]
         const weekQuestions = getQuestionsForWeek343(weekNum);
         if (!weekQuestions.length) return alert('Tuần này đang chuẩn bị thêm câu hỏi, bé quay lại sau nhé!');
 
@@ -694,7 +695,7 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
     loadQuestion();
 }
 
-// ĐẤU TRƯỜNG ĐỀ THI
+// BỐC ĐỀ VÀ XÁO TRỘN ĐỀ THI NGẪU NHIÊN (MỤC 12)
 function openExamHub() {
     if (!currentUser || currentUser.isGuest) return alert('Bé vui lòng đăng nhập để vào Đấu trường đề thi nhé!');
     stopSpeaking();
@@ -731,6 +732,7 @@ async function startRandomExam(categoryKey) {
         pendingTopicQuiz = null; 
         activeRoadmapContext = null;
 
+        // Xáo trộn ngẫu nhiên thứ tự câu hỏi trong đề
         activeQuestionsList = shuffleArray(selectedExam.questions); 
         currentQIndex = 0; 
         score = 0;
@@ -751,7 +753,7 @@ async function startRandomExam(categoryKey) {
     }
 }
 
-// QUẢN LÝ CÂU HỎI TRẮC NGHIỆM
+// QUẢN LÝ CÂU HỎI TRẮC NGHIỆM (LƯỚI 2x2 CÂN ĐỐI)
 function loadQuestion() {
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
@@ -784,6 +786,7 @@ function loadQuestion() {
             </button>
         </div>
         
+        <!-- BỐ CỤC 4 ĐÁP ÁN LƯỚI 2x2 (CỘT TRÁI: A, B; CỘT PHẢI: C, D) -->
         <div class="w-full max-w-2xl grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 md:grid-flow-col gap-2.5">
     `;
 
@@ -870,7 +873,7 @@ function updateNavButtons() {
     }
 }
 
-// 5. CHẤM ĐIỂM VÀ LỒNG GIỌNG ĐỌC KHEN NGỢI CÁ NHÂN HÓA
+// XỬ LÝ CHẤM ĐIỂM & LỒNG LỜI KHEN TTS CÁ NHÂN HÓA
 function checkAnswer(selectedOpt) {
     const q = activeQuestionsList[currentQIndex];
     const isCorrect = selectedOpt === q.answer;
@@ -878,6 +881,7 @@ function checkAnswer(selectedOpt) {
     const studentName = getStudentFirstName();
 
     if (isFreeMode) {
+        // CHẾ ĐỘ HỌC TỰ DO (ĐƯỢC THỬ LẠI CHO ĐẾN KHI ĐÚNG)
         if (userAnswers[currentQIndex] !== undefined) return;
 
         if (isCorrect) {
@@ -933,6 +937,7 @@ function checkAnswer(selectedOpt) {
             setTimeout(() => speakVietnamese(`Tiếc quá, ${studentName} suy nghĩ thêm một chút nhé!`, 0.95, 1.05), 300);
         }
     } else {
+        // CHẾ ĐỘ ĐÁNH GIÁ (TIẾN TRÌNH TUẦN & ĐẤU TRƯỜNG: 1 CHẠM KHÓA TOÀN BỘ)
         if (userAnswers[currentQIndex] !== undefined) return;
         userAnswers[currentQIndex] = selectedOpt;
 
@@ -1008,7 +1013,7 @@ function nextQuestion() {
     }
 }
 
-// 3. HIỂN THỊ KẾT QUẢ VÀ TÍNH SAO (NGƯỠNG MỞ KHÓA 80%)
+// HIỂN THỊ KẾT QUẢ VÀ TÍNH SAO (NGƯỠNG MỞ KHÓA 80%)[cite: 3]
 function showResultScreen() {
     stopSpeaking();
     switchAppView('view-result');
@@ -1018,9 +1023,9 @@ function showResultScreen() {
 
     let starCount = 0;
     let starStr = 'Cần cố gắng';
-    if (percent === 100) { starCount = 3; starStr = '⭐⭐⭐ (Xuất sắc)'; }
-    else if (percent >= 85) { starCount = 2; starStr = '⭐⭐ (Giỏi)'; }
-    else if (percent >= 80) { starCount = 1; starStr = '⭐ (Đạt)'; }
+    if (percent === 100) { starCount = 3; starStr = '⭐⭐⭐ (Xuất sắc)'; }[cite: 3]
+    else if (percent >= 85) { starCount = 2; starStr = '⭐⭐ (Giỏi)'; }[cite: 3]
+    else if (percent >= 80) { starCount = 1; starStr = '⭐ (Đạt)'; }[cite: 3]
 
     document.getElementById('res-correct-txt').textContent = `${score}/${totalQ} (${percent}%)`;
     document.getElementById('res-star-txt').textContent = starStr;
@@ -1090,8 +1095,8 @@ async function saveWeeklyProgressToSheet(percent, starCount) {
     };
 
     try {
-        const res = await callAppsScript('saveWeeklyProgress', payload);
-        // Kiểm tra ngưỡng >= 80% để mở khóa tuần tiếp theo
+        await callAppsScript('saveWeeklyProgress', payload);
+        // Ngưỡng >= 80% để mở khóa tuần tiếp theo
         if (percent >= 80) {
             const nextWeek = week + 1;
             if (nextWeek > (Number(currentUser.tuanHienTai) || 1) && nextWeek <= 12) {
@@ -1102,7 +1107,7 @@ async function saveWeeklyProgressToSheet(percent, starCount) {
     } catch (e) {}
 }
 
-// TIỆN ÍCH & WEB SPEECH TTS BAN MAI
+// TIỆN ÍCH & TỔNG HỢP GIỌNG ĐỌC WEB SPEECH TTS
 function formatDuration(ms) {
     const s = Math.round(ms / 1000);
     return `${Math.floor(s / 60)} phút ${s % 60} giây`;
@@ -1131,6 +1136,7 @@ function findBestViVoice() {
     if (!('speechSynthesis' in window)) return null;
     const voices = window.speechSynthesis.getVoices();
     const vi = voices.filter(v => v.lang && v.lang.toLowerCase().replace('_', '-').startsWith('vi'));
+    // Ưu tiên giọng trực tuyến chất lượng cao của Google (Chị Ban Mai) hoặc Microsoft HoaiMy
     return vi.find(v => !v.localService && /google/i.test(v.name))
         || vi.find(v => /google/i.test(v.name))
         || vi.find(v => /hoaimy/i.test(v.name))
@@ -1172,6 +1178,7 @@ function speakCurrentQuestion() {
     speakVietnamese(textToRead, 0.92, 1.05);
 }
 
+// TỔNG HỢP ÂM THANH BẰNG WEB AUDIO API (KHÔNG CẦN TẢI MP3 NGOÀI)
 function playAudio(type) {
     try {
         const ctx = new (window.AudioContext || window.webkitAudioContext)();

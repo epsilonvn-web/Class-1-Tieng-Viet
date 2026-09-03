@@ -20,8 +20,9 @@
             user-select: none;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: space-between;
         }
         .pastel-card {
             background: #ffffff;
@@ -70,246 +71,253 @@
         }
     </style>
 </head>
-<body class="p-1.5 md:p-2.5 w-full flex justify-center items-center">
+<body class="p-1.5 md:p-2.5 w-full">
 
-    <!-- 1. MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ -->
-    <div id="screen-login" class="w-full max-w-md pastel-card p-6 md:p-8 flex flex-col items-center text-center">
-        <div class="mb-2">
-            <span class="text-7xl md:text-8xl swaying select-none">🐰</span>
-        </div>
-
-        <h1 class="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide uppercase mb-1">Tiếng Việt 1</h1>
-        <p class="text-sm font-bold text-purple-600 mb-5">🌸 Cô giáo Thỏ Hồng 🌸</p>
-
-        <!-- TAB CHUYỂN ĐỔI -->
-        <div class="w-full grid grid-cols-2 bg-pink-50 rounded-2xl p-1 mb-5 border border-pink-200">
-            <button id="tab-btn-login" onclick="switchAuthTab('login')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn bg-white text-pink-600 shadow-sm">Đăng nhập</button>
-            <button id="tab-btn-register" onclick="switchAuthTab('register')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn text-gray-400">Đăng ký tài khoản</button>
-        </div>
-
-        <!-- FORM ĐĂNG NHẬP -->
-        <div id="form-login" class="w-full space-y-3">
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-id-card"></i></span>
-                <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (VD: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+    <div class="w-full flex justify-center items-center flex-1">
+        <!-- 1. MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ -->
+        <div id="screen-login" class="w-full max-w-md pastel-card p-6 md:p-8 flex flex-col items-center text-center">
+            <div class="mb-2">
+                <span class="text-7xl md:text-8xl swaying select-none">🐰</span>
             </div>
-            <div class="relative">
-                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-lock"></i></span>
-                <input type="password" id="login-mapin" maxlength="4" inputmode="numeric" placeholder="Mã PIN (4 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
-            </div>
-            <button onclick="doLogin()" id="btn-do-login" class="w-full py-3.5 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
-                <i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập
-            </button>
-        </div>
 
-        <!-- FORM ĐĂNG KÝ -->
-        <div id="form-register" class="w-full space-y-3 hidden text-left">
-            <div>
-                <label class="text-xs font-extrabold text-pink-600">Họ và tên học sinh <span class="text-rose-400">*</span></label>
-                <input type="text" id="reg-hoten" placeholder="Ví dụ: Phùng Tường Vy" class="w-full mt-1 px-4 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+            <h1 class="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide uppercase mb-1">Tiếng Việt 1</h1>
+            <p class="text-sm font-bold text-purple-600 mb-5">🌸 Cô giáo Thỏ Hồng 🌸</p>
+
+            <!-- TAB CHUYỂN ĐỔI -->
+            <div class="w-full grid grid-cols-2 bg-pink-50 rounded-2xl p-1 mb-5 border border-pink-200">
+                <button id="tab-btn-login" onclick="switchAuthTab('login')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn bg-white text-pink-600 shadow-sm">Đăng nhập</button>
+                <button id="tab-btn-register" onclick="switchAuthTab('register')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn text-gray-400">Đăng ký tài khoản</button>
             </div>
-            <div class="grid grid-cols-2 gap-2">
-                <div>
-                    <label class="text-xs font-extrabold text-pink-600">Ngày sinh <span class="text-rose-400">*</span></label>
-                    <input type="date" id="reg-ngaysinh" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 bg-pink-50/20 text-sm">
+
+            <!-- FORM ĐĂNG NHẬP -->
+            <div id="form-login" class="w-full space-y-3">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-id-card"></i></span>
+                    <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (VD: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
                 </div>
-                <div>
-                    <label class="text-xs font-extrabold text-pink-600">Tên lớp <span class="text-rose-400">*</span></label>
-                    <input type="text" id="reg-lop" placeholder="1A" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" id="login-mapin" maxlength="4" inputmode="numeric" placeholder="Mã PIN (4 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
                 </div>
+                <button onclick="doLogin()" id="btn-do-login" class="w-full py-3.5 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
+                    <i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập
+                </button>
             </div>
-            <div class="grid grid-cols-2 gap-2">
+
+            <!-- FORM ĐĂNG KÝ -->
+            <div id="form-register" class="w-full space-y-3 hidden text-left">
                 <div>
-                    <label class="text-xs font-extrabold text-pink-600">Số thứ tự <span class="text-rose-400">*</span></label>
-                    <input type="number" id="reg-stt" placeholder="09" min="1" max="99" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    <label class="text-xs font-extrabold text-pink-600">Họ và tên học sinh <span class="text-rose-400">*</span></label>
+                    <input type="text" id="reg-hoten" placeholder="Ví dụ: Phùng Tường Vy" class="w-full mt-1 px-4 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
                 </div>
-                <div>
-                    <label class="text-xs font-extrabold text-pink-600">Mã PIN (4 số) <span class="text-rose-400">*</span></label>
-                    <input type="password" id="reg-mapin" maxlength="4" inputmode="numeric" placeholder="••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="text-xs font-extrabold text-pink-600">Ngày sinh <span class="text-rose-400">*</span></label>
+                        <input type="date" id="reg-ngaysinh" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 bg-pink-50/20 text-sm">
+                    </div>
+                    <div>
+                        <label class="text-xs font-extrabold text-pink-600">Tên lớp <span class="text-rose-400">*</span></label>
+                        <input type="text" id="reg-lop" placeholder="1A" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    </div>
                 </div>
+                <div class="grid grid-cols-2 gap-2">
+                    <div>
+                        <label class="text-xs font-extrabold text-pink-600">Số thứ tự <span class="text-rose-400">*</span></label>
+                        <input type="number" id="reg-stt" placeholder="09" min="1" max="99" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    </div>
+                    <div>
+                        <label class="text-xs font-extrabold text-pink-600">Mã PIN (4 số) <span class="text-rose-400">*</span></label>
+                        <input type="password" id="reg-mapin" maxlength="4" inputmode="numeric" placeholder="••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                    </div>
+                </div>
+                <div class="flex items-center justify-between bg-pink-50 border border-pink-200 rounded-xl px-3 py-2.5">
+                    <span class="text-xs font-bold text-gray-500">Mã ID thẻ học sinh:</span>
+                    <span id="mahs-preview" class="text-sm font-extrabold text-pink-600 bg-white px-2.5 py-1 rounded-lg border border-pink-200">--</span>
+                </div>
+                <button onclick="doRegister()" id="btn-do-register" class="w-full py-3.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
+                    <i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay
+                </button>
             </div>
-            <div class="flex items-center justify-between bg-pink-50 border border-pink-200 rounded-xl px-3 py-2.5">
-                <span class="text-xs font-bold text-gray-500">Mã ID thẻ học sinh:</span>
-                <span id="mahs-preview" class="text-sm font-extrabold text-pink-600 bg-white px-2.5 py-1 rounded-lg border border-pink-200">--</span>
+
+            <div class="w-full mt-4 pt-4 border-t border-pink-100">
+                <button onclick="handleGuestMode()" class="w-full py-3 bg-gradient-to-r from-pink-100 to-purple-100 text-purple-700 font-extrabold rounded-2xl text-xs md:text-sm pastel-btn hover:from-pink-200 hover:to-purple-200 border border-purple-200 flex items-center justify-center space-x-1.5">
+                    <i class="fa-solid fa-compass"></i><span>Vào học thử - không cần tài khoản (khách)</span>
+                </button>
             </div>
-            <button onclick="doRegister()" id="btn-do-register" class="w-full py-3.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
-                <i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay
-            </button>
+            <p id="auth-error-msg" class="text-xs font-bold text-rose-500 mt-3 hidden"></p>
         </div>
 
-        <div class="w-full mt-4 pt-4 border-t border-pink-100">
-            <button onclick="handleGuestMode()" class="w-full py-3 bg-gradient-to-r from-pink-100 to-purple-100 text-purple-700 font-extrabold rounded-2xl text-xs md:text-sm pastel-btn hover:from-pink-200 hover:to-purple-200 border border-purple-200 flex items-center justify-center space-x-1.5">
-                <i class="fa-solid fa-compass"></i><span>Vào học thử - không cần tài khoản (khách)</span>
-            </button>
-        </div>
-        <p id="auth-error-msg" class="text-xs font-bold text-rose-500 mt-3 hidden"></p>
-    </div>
-
-    <!-- 2. KHUNG CHÍNH (APP SHELL) -->
-    <div id="screen-dashboard" class="w-full max-w-6xl hidden flex flex-col space-y-2.5 p-1.5 md:p-2.5">
-        
-        <!-- TOOLBAR HEADER CỐ ĐỊNH -->
-        <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2.5">
+        <!-- 2. KHUNG CHÍNH (APP SHELL) -->
+        <div id="screen-dashboard" class="w-full max-w-6xl hidden flex flex-col space-y-2.5 p-1.5 md:p-2.5">
             
-            <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto pb-0.5">
-                <div class="h-11 flex flex-col justify-center text-center bg-white px-3.5 rounded-xl border-2 border-pink-200 shadow-sm shrink-0">
-                    <span class="text-xs font-extrabold text-pink-600 uppercase tracking-wide leading-tight">Tiếng Việt 1</span>
-                    <span class="text-[11px] font-bold text-purple-600 leading-tight">Cô giáo Thỏ Hồng</span>
-                </div>
+            <!-- TOOLBAR HEADER CỐ ĐỊNH -->
+            <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2.5">
                 
-                <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-11 w-11 bg-white hover:bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center pastel-btn border-2 border-pink-200 shrink-0 shadow-sm">
-                    <i class="fa-solid fa-house text-lg"></i>
-                </button>
-
-                <!-- TAB CẤP 2 -->
-                <div id="header-level2-tab" class="hidden items-center">
-                    <button onclick="returnToTopicLecture()" class="h-11 px-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 pastel-btn shadow-sm border border-pink-300 shrink-0 max-w-[200px] md:max-w-[260px]">
-                        <span id="header-level2-icon">🌸</span>
-                        <span id="header-level2-title" class="truncate">Chủ đề học</span>
-                    </button>
-                </div>
-
-                <!-- TAB CẤP 3 -->
-                <div id="header-level3-tab" class="hidden items-center space-x-1">
-                    <span class="text-pink-300 font-bold text-xs">/</span>
-                    <div class="h-11 px-3 bg-purple-50 border border-purple-200 text-purple-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
-                        <span id="header-level3-title" class="truncate">Mục nhỏ</span>
+                <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto pb-0.5">
+                    <div class="h-11 flex flex-col justify-center text-center bg-white px-3.5 rounded-xl border-2 border-pink-200 shadow-sm shrink-0">
+                        <span class="text-xs font-extrabold text-pink-600 uppercase tracking-wide leading-tight">Tiếng Việt 1</span>
+                        <span class="text-[11px] font-bold text-purple-600 leading-tight">Cô giáo Thỏ Hồng</span>
                     </div>
-                </div>
-            </div>
-
-            <div class="flex items-center space-x-2.5 w-full md:w-auto justify-between md:justify-end ml-auto shrink-0">
-                <div class="flex flex-col space-y-0.5 bg-pink-50/90 px-2.5 py-1 rounded-xl border border-pink-200 shadow-inner">
-                    <div class="flex items-center justify-between space-x-2 font-extrabold">
-                        <span class="px-1.5 py-0.2 bg-emerald-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Đúng</span>
-                        <span class="text-emerald-600 font-extrabold text-xs" id="star-green-count">0</span>
-                    </div>
-                    <div class="flex items-center justify-between space-x-2 font-extrabold">
-                        <span class="px-1.5 py-0.2 bg-rose-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Sai</span>
-                        <span class="text-rose-600 font-extrabold text-xs" id="star-red-count">0</span>
-                    </div>
-                </div>
-
-                <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
-
-                <button onclick="clickProgressOrExam('progress')" class="h-11 px-3.5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0">
-                    <i class="fa-solid fa-calendar-days"></i><span>Tiến trình tuần</span>
-                </button>
-            </div>
-        </header>
-
-        <!-- VIEWPORT NỘI DUNG CHÍNH -->
-        <main id="app-viewport" class="w-full">
-            
-            <!-- VIEW 1 -->
-            <div id="view-dashboard-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5"></div>
-
-            <!-- VIEW 2 -->
-            <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
-                <div class="w-full max-w-4xl flex flex-col items-center">
-                    <div class="w-full flex items-center justify-center space-x-2 text-purple-600 font-extrabold text-sm md:text-base mb-1">
-                        <span>📖</span><span>Bài giảng học tập</span>
-                    </div>
-                    <h2 id="lecture-title" class="text-lg md:text-xl font-extrabold text-pink-600 text-center mb-2.5"></h2>
-                    <div class="w-full bg-pink-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-pink-100 mb-3.5">
-                        <p id="lecture-content" class="text-sm md:text-base text-gray-700 leading-relaxed whitespace-pre-line text-center"></p>
-                    </div>
-
-                    <button onclick="speakLecture()" class="w-full max-w-xs py-2.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-purple-200 shadow-sm mb-3">
-                        <i class="fa-solid fa-volume-high text-base"></i><span>Nghe cô đọc</span>
-                    </button>
-
-                    <div class="w-full pt-2.5 border-t border-pink-100 flex flex-col items-center">
-                        <p class="text-xs md:text-sm font-extrabold text-gray-600 text-center mb-2.5">Bé hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé:</p>
-                        <div id="lecture-subtopics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-2xl"></div>
-                    </div>
-                </div>
-
-                <div class="w-full flex justify-center mt-3 pt-2">
-                    <button onclick="selectSubtopic(null)" class="w-full max-w-xs py-2.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
-                        🌟 Học trộn tất cả các mục
-                    </button>
-                </div>
-            </div>
-
-            <!-- VIEW 3 -->
-            <div id="view-quiz" class="w-full hidden pastel-card p-3.5 md:p-5 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
-                <div class="w-full max-w-3xl flex justify-between items-center pb-2 border-b border-pink-100">
-                    <button id="btn-back-subtopics" onclick="returnToTopicLecture()" class="hidden px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-xs pastel-btn border border-purple-200 flex items-center space-x-1 shadow-sm">
-                        <i class="fa-solid fa-arrow-left"></i><span>Đổi mục con</span>
-                    </button>
-                    <div class="flex items-center space-x-2 bg-pink-50 px-3 py-1 rounded-xl border border-pink-200 text-xs md:text-sm font-extrabold text-pink-700 ml-auto">
-                        <span>Câu số:</span>
-                        <span id="current-q-idx" class="font-extrabold text-pink-600 text-base md:text-lg">1</span>/<span id="total-q-idx" class="text-xs md:text-sm">5</span>
-                    </div>
-                </div>
-
-                <div id="question-box" class="w-full max-w-3xl flex-1 flex flex-col justify-center items-center my-2"></div>
-
-                <div class="w-full max-w-2xl grid grid-cols-2 gap-3 pt-2.5 border-t border-pink-100">
-                    <button id="btn-prev-q" onclick="prevQuestion()" class="py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200 flex items-center justify-center space-x-1.5 shadow-sm transition-all">
-                        <i class="fa-solid fa-arrow-left"></i><span>Câu trước</span>
-                    </button>
-                    <button id="btn-next-q" onclick="nextQuestion()" class="py-2.5 px-4 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
-                        <span id="btn-next-text">Câu sau</span><i id="btn-next-icon" class="fa-solid fa-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- VIEW 4 -->
-            <div id="view-roadmap" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
-                <div class="w-full max-w-4xl">
-                    <div class="text-center mb-4">
-                        <h2 class="text-lg md:text-xl font-extrabold text-indigo-600 flex items-center justify-center space-x-2">
-                            <span>📅</span><span>Lộ trình tiến trình 12 tuần</span>
-                        </h2>
-                        <p class="text-xs md:text-sm text-gray-500 mt-1 font-bold">Mỗi tuần hoàn thành từ 7 điểm trở lên sẽ tự động mở khóa tuần tiếp theo nhé!</p>
-                    </div>
-                    <div id="roadmap-list" class="grid grid-cols-1 md:grid-cols-2 gap-2.5 w-full"></div>
-                </div>
-            </div>
-
-            <!-- VIEW 5 -->
-            <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
-                <div class="w-full max-w-5xl">
-                    <div class="text-center mb-5">
-                        <h2 class="font-extrabold text-amber-600 text-lg md:text-xl flex items-center justify-center space-x-2">
-                            <span>🏆</span><span>Đấu trường đề thi thử</span>
-                        </h2>
-                        <p class="text-xs md:text-sm text-gray-500 font-bold mt-1">Thử sức các bộ đề thi chuẩn ma trận 13 câu - 6 nhóm năng lực</p>
-                    </div>
-                    <div id="exam-categories-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
-                </div>
-            </div>
-
-            <!-- VIEW 6 -->
-            <div id="view-result" class="w-full hidden pastel-card p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[500px] md:min-h-[530px]">
-                <div class="w-full max-w-md flex flex-col items-center">
-                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center text-4xl mb-3 shadow-inner floating border-4 border-yellow-200">🏆</div>
-                    <h2 class="text-xl md:text-2xl font-extrabold text-pink-600 mb-1">Hoàn thành xuất sắc!</h2>
-                    <p class="text-xs font-bold text-gray-500 mb-5">Cô giáo Thỏ Hồng khen bé đã hoàn thành rất tốt bài học hôm nay.</p>
                     
-                    <div class="bg-pink-50/70 w-full p-4 rounded-2xl border border-pink-200 mb-5 flex justify-around items-center">
-                        <div>
-                            <p class="text-xs text-gray-500 font-bold">Số câu đúng</p>
-                            <p id="res-correct-txt" class="text-xl md:text-2xl font-extrabold text-pink-600 mt-1">5/5</p>
-                        </div>
-                        <div class="h-8 w-px bg-pink-200"></div>
-                        <div>
-                            <p class="text-xs text-gray-500 font-bold">Sao nhận được</p>
-                            <p id="res-star-txt" class="text-xl md:text-2xl font-extrabold text-yellow-600 mt-1">+5 ⭐</p>
-                        </div>
+                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-11 w-11 bg-white hover:bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center pastel-btn border-2 border-pink-200 shrink-0 shadow-sm">
+                        <i class="fa-solid fa-house text-lg"></i>
+                    </button>
+
+                    <!-- TAB CẤP 2 -->
+                    <div id="header-level2-tab" class="hidden items-center">
+                        <button onclick="returnToTopicLecture()" class="h-11 px-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 pastel-btn shadow-sm border border-pink-300 shrink-0 max-w-[200px] md:max-w-[260px]">
+                            <span id="header-level2-icon">🌸</span>
+                            <span id="header-level2-title" class="truncate">Chủ đề học</span>
+                        </button>
                     </div>
 
-                    <div class="flex space-x-3 w-full">
-                        <button onclick="goHome()" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200">Về trang chủ</button>
-                        <button onclick="retryQuiz()" class="flex-1 py-3 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">Làm lại 🔄</button>
+                    <!-- TAB CẤP 3 -->
+                    <div id="header-level3-tab" class="hidden items-center space-x-1">
+                        <span class="text-pink-300 font-bold text-xs">/</span>
+                        <div class="h-11 px-3 bg-purple-50 border border-purple-200 text-purple-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
+                            <span id="header-level3-title" class="truncate">Mục nhỏ</span>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </main>
+                <div class="flex items-center space-x-2.5 w-full md:w-auto justify-between md:justify-end ml-auto shrink-0">
+                    <div class="flex flex-col space-y-0.5 bg-pink-50/90 px-2.5 py-1 rounded-xl border border-pink-200 shadow-inner">
+                        <div class="flex items-center justify-between space-x-2 font-extrabold">
+                            <span class="px-1.5 py-0.2 bg-emerald-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Đúng</span>
+                            <span class="text-emerald-600 font-extrabold text-xs" id="star-green-count">0</span>
+                        </div>
+                        <div class="flex items-center justify-between space-x-2 font-extrabold">
+                            <span class="px-1.5 py-0.2 bg-rose-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Sai</span>
+                            <span class="text-rose-600 font-extrabold text-xs" id="star-red-count">0</span>
+                        </div>
+                    </div>
+
+                    <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
+
+                    <button onclick="clickProgressOrExam('progress')" class="h-11 px-3.5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0">
+                        <i class="fa-solid fa-calendar-days"></i><span>Tiến trình tuần</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- VIEWPORT NỘI DUNG CHÍNH -->
+            <main id="app-viewport" class="w-full">
+                
+                <!-- VIEW 1 -->
+                <div id="view-dashboard-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5"></div>
+
+                <!-- VIEW 2 -->
+                <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                    <div class="w-full max-w-4xl flex flex-col items-center">
+                        <div class="w-full flex items-center justify-center space-x-2 text-purple-600 font-extrabold text-sm md:text-base mb-1">
+                            <span>📖</span><span>Bài giảng học tập</span>
+                        </div>
+                        <h2 id="lecture-title" class="text-lg md:text-xl font-extrabold text-pink-600 text-center mb-2.5"></h2>
+                        <div class="w-full bg-pink-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-pink-100 mb-3.5">
+                            <p id="lecture-content" class="text-sm md:text-base text-gray-700 leading-relaxed whitespace-pre-line text-center"></p>
+                        </div>
+
+                        <button onclick="speakLecture()" class="w-full max-w-xs py-2.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-purple-200 shadow-sm mb-3">
+                            <i class="fa-solid fa-volume-high text-base"></i><span>Nghe cô đọc</span>
+                        </button>
+
+                        <div class="w-full pt-2.5 border-t border-pink-100 flex flex-col items-center">
+                            <p class="text-xs md:text-sm font-extrabold text-gray-600 text-center mb-2.5">Bé hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé:</p>
+                            <div id="lecture-subtopics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-2xl"></div>
+                        </div>
+                    </div>
+
+                    <div class="w-full flex justify-center mt-3 pt-2">
+                        <button onclick="selectSubtopic(null)" class="w-full max-w-xs py-2.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
+                            🌟 Học trộn tất cả các mục
+                        </button>
+                    </div>
+                </div>
+
+                <!-- VIEW 3 -->
+                <div id="view-quiz" class="w-full hidden pastel-card p-3.5 md:p-5 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                    <div class="w-full max-w-3xl flex justify-between items-center pb-2 border-b border-pink-100">
+                        <button id="btn-back-subtopics" onclick="returnToTopicLecture()" class="hidden px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-xs pastel-btn border border-purple-200 flex items-center space-x-1 shadow-sm">
+                            <i class="fa-solid fa-arrow-left"></i><span>Đổi mục con</span>
+                        </button>
+                        <div class="flex items-center space-x-2 bg-pink-50 px-3 py-1 rounded-xl border border-pink-200 text-xs md:text-sm font-extrabold text-pink-700 ml-auto">
+                            <span>Câu số:</span>
+                            <span id="current-q-idx" class="font-extrabold text-pink-600 text-base md:text-lg">1</span>/<span id="total-q-idx" class="text-xs md:text-sm">5</span>
+                        </div>
+                    </div>
+
+                    <div id="question-box" class="w-full max-w-3xl flex-1 flex flex-col justify-center items-center my-2"></div>
+
+                    <div class="w-full max-w-2xl grid grid-cols-2 gap-3 pt-2.5 border-t border-pink-100">
+                        <button id="btn-prev-q" onclick="prevQuestion()" class="py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200 flex items-center justify-center space-x-1.5 shadow-sm transition-all">
+                            <i class="fa-solid fa-arrow-left"></i><span>Câu trước</span>
+                        </button>
+                        <button id="btn-next-q" onclick="nextQuestion()" class="py-2.5 px-4 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
+                            <span id="btn-next-text">Câu sau</span><i id="btn-next-icon" class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- VIEW 4 -->
+                <div id="view-roadmap" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                    <div class="w-full max-w-4xl">
+                        <div class="text-center mb-4">
+                            <h2 class="text-lg md:text-xl font-extrabold text-indigo-600 flex items-center justify-center space-x-2">
+                                <span>📅</span><span>Lộ trình tiến trình 12 tuần</span>
+                            </h2>
+                            <p class="text-xs md:text-sm text-gray-500 mt-1 font-bold">Mỗi tuần hoàn thành từ 7 điểm trở lên sẽ tự động mở khóa tuần tiếp theo nhé!</p>
+                        </div>
+                        <div id="roadmap-list" class="grid grid-cols-1 md:grid-cols-2 gap-2.5 w-full"></div>
+                    </div>
+                </div>
+
+                <!-- VIEW 5 -->
+                <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                    <div class="w-full max-w-5xl">
+                        <div class="text-center mb-5">
+                            <h2 class="font-extrabold text-amber-600 text-lg md:text-xl flex items-center justify-center space-x-2">
+                                <span>🏆</span><span>Đấu trường đề thi thử</span>
+                            </h2>
+                            <p class="text-xs md:text-sm text-gray-500 font-bold mt-1">Thử sức các bộ đề thi chuẩn ma trận 13 câu - 6 nhóm năng lực</p>
+                        </div>
+                        <div id="exam-categories-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+                    </div>
+                </div>
+
+                <!-- VIEW 6 -->
+                <div id="view-result" class="w-full hidden pastel-card p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[500px] md:min-h-[530px]">
+                    <div class="w-full max-w-md flex flex-col items-center">
+                        <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center text-4xl mb-3 shadow-inner floating border-4 border-yellow-200">🏆</div>
+                        <h2 class="text-xl md:text-2xl font-extrabold text-pink-600 mb-1">Hoàn thành xuất sắc!</h2>
+                        <p class="text-xs font-bold text-gray-500 mb-5">Cô giáo Thỏ Hồng khen bé đã hoàn thành rất tốt bài học hôm hôm nay.</p>
+                        
+                        <div class="bg-pink-50/70 w-full p-4 rounded-2xl border border-pink-200 mb-5 flex justify-around items-center">
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold">Số câu đúng</p>
+                                <p id="res-correct-txt" class="text-xl md:text-2xl font-extrabold text-pink-600 mt-1">5/5</p>
+                            </div>
+                            <div class="h-8 w-px bg-pink-200"></div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-bold">Sao nhận được</p>
+                                <p id="res-star-txt" class="text-xl md:text-2xl font-extrabold text-yellow-600 mt-1">+5 ⭐</p>
+                            </div>
+                        </div>
+
+                        <div class="flex space-x-3 w-full">
+                            <button onclick="goHome()" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200">Về trang chủ</button>
+                            <button onclick="retryQuiz()" class="flex-1 py-3 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">Làm lại 🔄</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+        </div>
     </div>
+
+    <!-- FOOTER CHÍNH GIỮA -->
+    <footer class="w-full py-3 text-center text-xs font-bold text-pink-500 tracking-wider">
+        epsilon.vn@gmail.com
+    </footer>
 
     <!-- NẠP FILE JAVASCRIPT RIÊNG BIỆT -->
     <script src="assets/js/app.js"></script>

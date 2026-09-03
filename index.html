@@ -1,746 +1,317 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>📖 BÉ VUI HỌC TIẾNG VIỆT LỚP 1 🎒</title>
-  <style>
-    :root {
-      --primary: #00A699;
-      --secondary: #27AE60;
-      --accent: #FFB400;
-      --coral: #FF5A5F;
-      --blue: #2980B9;
-      --purple: #8E44AD;
-      --dark: #2C3E50;
-      --bg: #F0FDF4;
-    }
-    * {
-      box-sizing: border-box;
-      user-select: none;
-      -webkit-user-select: none;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', 'Comic Sans MS', -apple-system, sans-serif;
-      background: linear-gradient(135deg, #A8EDEA 0%, #FED6E3 100%);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 12px;
-      overflow-x: hidden;
-    }
-    #app-container {
-      background: rgba(255, 255, 255, 0.98);
-      width: 100%;
-      max-width: 960px;
-      min-height: 700px;
-      border-radius: 36px;
-      box-shadow: 0 24px 60px rgba(0,0,0,0.15);
-      border: 8px solid #FFF;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-    #start-overlay {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(135deg, #00A699 0%, #27AE60 100%);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      text-align: center;
-      color: white;
-    }
-    .big-start-btn {
-      background: #FFE66D;
-      color: #0E6251;
-      font-size: 26px;
-      font-weight: 900;
-      padding: 16px 44px;
-      border-radius: 50px;
-      border: none;
-      box-shadow: 0 8px 0 #F39C12;
-      cursor: pointer;
-      margin-top: 24px;
-      animation: pulse 1.5s infinite;
-      transition: 0.15s;
-    }
-    .big-start-btn:active { transform: translateY(6px); box-shadow: 0 2px 0 #F39C12; }
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-    }
-    header {
-      background: #F8FAFC;
-      padding: 12px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 3px dashed #CBD5E1;
-      gap: 12px;
-    }
-    .header-center-title {
-      font-size: 22px;
-      font-weight: 900;
-      color: var(--primary);
-      text-transform: uppercase;
-      text-align: center;
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .score-badge {
-      background: linear-gradient(135deg, #FFE66D, #FFB400);
-      color: #7A3E00;
-      font-size: 18px;
-      font-weight: 800;
-      padding: 8px 18px;
-      border-radius: 50px;
-      box-shadow: 0 4px 0 #D48800;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      white-space: nowrap;
-    }
-    .nav-btns { display: flex; gap: 8px; }
-    .btn-nav {
-      background: #EDF2F7;
-      border: none;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--dark);
-      padding: 8px 14px;
-      border-radius: 14px;
-      cursor: pointer;
-      box-shadow: 0 4px 0 #CBD5E1;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      transition: 0.1s;
-      white-space: nowrap;
-    }
-    .btn-nav:active { transform: translateY(4px); box-shadow: none; }
-    #main-content {
-      flex: 1;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hub-title {
-      font-size: 28px;
-      font-weight: 900;
-      color: var(--dark);
-      margin-bottom: 20px;
-    }
-    .topics-grid-10 {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
-      width: 100%;
-      max-width: 920px;
-    }
-    @media (max-width: 860px) {
-      .topics-grid-10 { grid-template-columns: repeat(3, 1fr); }
-    }
-    @media (max-width: 550px) {
-      .topics-grid-10 { grid-template-columns: repeat(2, 1fr); }
-    }
-    .subject-card {
-      background: #FFF;
-      border: 3px solid var(--primary);
-      border-radius: 20px;
-      padding: 14px 10px;
-      cursor: pointer;
-      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      box-shadow: 0 5px 0 var(--primary);
-      min-height: 110px;
-    }
-    .subject-card:hover { transform: translateY(-5px); }
-    .subject-card:active { transform: translateY(2px); }
-    .subject-card .icon-wrap { font-size: 34px; }
-    .subject-card .title { font-size: 13.5px; font-weight: 800; color: var(--dark); line-height: 1.2; }
-    
-    .question-prompt {
-      font-size: 21px;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 12px;
-      line-height: 1.4;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .speaker-btn {
-      background: #E8F0FE;
-      border: 2px solid #3498DB;
-      font-size: 14px;
-      padding: 5px 12px;
-      border-radius: 12px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-weight: 700;
-      color: #2980B9;
-      box-shadow: 0 3px 0 #CBD5E1;
-    }
-    .speaker-btn:active { transform: translateY(2px); box-shadow: none; }
-    
-    .stage-box {
-      min-height: 180px;
-      background: #F8FAFC;
-      border-radius: 24px;
-      border: 3px dashed #CBD5E1;
-      width: 100%;
-      max-width: 900px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      padding: 16px;
-      margin-bottom: 16px;
-    }
-    
-    .choices-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 12px;
-      width: 100%;
-      max-width: 760px;
-    }
-    .choice-btn {
-      background: #FFF;
-      border: 3px solid var(--secondary);
-      color: var(--dark);
-      font-size: 21px;
-      font-weight: 800;
-      padding: 12px 8px;
-      border-radius: 16px;
-      cursor: pointer;
-      box-shadow: 0 5px 0 #1E8449;
-      transition: all 0.15s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .choice-btn:active { transform: translateY(4px); box-shadow: 0 1px 0 #1E8449; }
-    .choice-btn.correct { background: #2ECC71 !important; color: white !important; border-color: #27AE60 !important; box-shadow: 0 5px 0 #219653 !important; }
-    .choice-btn.wrong { background: #E74C3C !important; color: white !important; border-color: #C0392B !important; box-shadow: 0 5px 0 #A93226 !important; }
-    
-    .char-big-display {
-      font-size: 58px;
-      font-weight: 900;
-      color: var(--primary);
-      text-shadow: 2px 2px 0 #E2E8F0;
-    }
-
-    #fx-canvas {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      z-index: 99;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIẾNG VIỆT 1 - Cô giáo Thỏ Hồng</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Quicksand & Nunito -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        body {
+            font-family: 'Quicksand', 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fae8ff 50%, #f3e8ff 100%);
+            color: #4a4a4a;
+            user-select: none;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .pastel-card {
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 12px 30px rgba(236, 72, 153, 0.12);
+            border: 3px solid #fbcfe8;
+        }
+        .pastel-btn {
+            transition: all 0.2s ease;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .pastel-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.09);
+        }
+        .pastel-btn:active { transform: translateY(1px); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+        .floating { animation: float 3s ease-in-out infinite; }
+        @keyframes sway {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            25% { transform: translateY(-5px) rotate(-7deg); }
+            75% { transform: translateY(-5px) rotate(7deg); }
+        }
+        .swaying {
+            animation: sway 2.4s ease-in-out infinite;
+            display: inline-block;
+            transform-origin: bottom center;
+        }
+        /* THANH TRƯỢT SIÊU MẢNH 3PX */
+        ::-webkit-scrollbar {
+            width: 3px;
+            height: 3px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf2f8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f472b6;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ec4899;
+        }
+    </style>
 </head>
-<body>
+<body class="p-1.5 md:p-2.5 w-full flex justify-center items-center">
 
-  <div id="app-container">
-    <canvas id="fx-canvas"></canvas>
+    <!-- 1. MÀN HÌNH ĐĂNG NHẬP / ĐĂNG KÝ -->
+    <div id="screen-login" class="w-full max-w-md pastel-card p-6 md:p-8 flex flex-col items-center text-center">
+        <div class="mb-2">
+            <span class="text-7xl md:text-8xl swaying select-none">🐰</span>
+        </div>
 
-    <div id="start-overlay">
-      <h1 style="font-size: 36px; font-weight: 900; margin-bottom: 12px;">📖 BÉ VUI HỌC TIẾNG VIỆT LỚP 1 🎒</h1>
-      <p style="font-size: 19px; font-weight: 700; color: #FFE66D; margin-bottom: 24px;">
-        Cùng bé làm quen 29 chữ cái, 5 thanh điệu, ghép vần và chính tả nhé!
-      </p>
-      <button class="big-start-btn" onclick="initAppAudio()">🚀 BẮT ĐẦU HỌC TIẾNG VIỆT</button>
+        <h1 class="text-2xl md:text-3xl font-extrabold text-pink-600 tracking-wide uppercase mb-1">Tiếng Việt 1</h1>
+        <p class="text-sm font-bold text-purple-600 mb-5">🌸 Cô giáo Thỏ Hồng 🌸</p>
+
+        <!-- TAB CHUYỂN ĐỔI -->
+        <div class="w-full grid grid-cols-2 bg-pink-50 rounded-2xl p-1 mb-5 border border-pink-200">
+            <button id="tab-btn-login" onclick="switchAuthTab('login')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn bg-white text-pink-600 shadow-sm">Đăng nhập</button>
+            <button id="tab-btn-register" onclick="switchAuthTab('register')" class="py-2.5 rounded-xl font-extrabold text-sm pastel-btn text-gray-400">Đăng ký tài khoản</button>
+        </div>
+
+        <!-- FORM ĐĂNG NHẬP -->
+        <div id="form-login" class="w-full space-y-3">
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-id-card"></i></span>
+                <input type="text" id="login-mahs" placeholder="Mã ID thẻ học sinh (VD: 1A-09)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+            </div>
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-4 text-pink-400"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" id="login-mapin" maxlength="4" inputmode="numeric" placeholder="Mã PIN (4 số)" class="w-full pl-11 pr-4 py-3.5 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+            </div>
+            <button onclick="doLogin()" id="btn-do-login" class="w-full py-3.5 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
+                <i class="fa-solid fa-right-to-bracket mr-1"></i> Đăng nhập
+            </button>
+        </div>
+
+        <!-- FORM ĐĂNG KÝ -->
+        <div id="form-register" class="w-full space-y-3 hidden text-left">
+            <div>
+                <label class="text-xs font-extrabold text-pink-600">Họ và tên học sinh <span class="text-rose-400">*</span></label>
+                <input type="text" id="reg-hoten" placeholder="Ví dụ: Phùng Tường Vy" class="w-full mt-1 px-4 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label class="text-xs font-extrabold text-pink-600">Ngày sinh <span class="text-rose-400">*</span></label>
+                    <input type="date" id="reg-ngaysinh" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 bg-pink-50/20 text-sm">
+                </div>
+                <div>
+                    <label class="text-xs font-extrabold text-pink-600">Tên lớp <span class="text-rose-400">*</span></label>
+                    <input type="text" id="reg-lop" placeholder="1A" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+                <div>
+                    <label class="text-xs font-extrabold text-pink-600">Số thứ tự <span class="text-rose-400">*</span></label>
+                    <input type="number" id="reg-stt" placeholder="09" min="1" max="99" oninput="updateMaHSPreview()" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                </div>
+                <div>
+                    <label class="text-xs font-extrabold text-pink-600">Mã PIN (4 số) <span class="text-rose-400">*</span></label>
+                    <input type="password" id="reg-mapin" maxlength="4" inputmode="numeric" placeholder="••••" class="w-full mt-1 px-3 py-3 rounded-2xl border-2 border-pink-200 focus:border-pink-400 focus:outline-none font-bold text-gray-700 placeholder-gray-300 bg-pink-50/20 text-sm">
+                </div>
+            </div>
+            <div class="flex items-center justify-between bg-pink-50 border border-pink-200 rounded-xl px-3 py-2.5">
+                <span class="text-xs font-bold text-gray-500">Mã ID thẻ học sinh:</span>
+                <span id="mahs-preview" class="text-sm font-extrabold text-pink-600 bg-white px-2.5 py-1 rounded-lg border border-pink-200">--</span>
+            </div>
+            <button onclick="doRegister()" id="btn-do-register" class="w-full py-3.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-2xl text-sm pastel-btn shadow-md">
+                <i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay
+            </button>
+        </div>
+
+        <div class="w-full mt-4 pt-4 border-t border-pink-100">
+            <button onclick="handleGuestMode()" class="w-full py-3 bg-gradient-to-r from-pink-100 to-purple-100 text-purple-700 font-extrabold rounded-2xl text-xs md:text-sm pastel-btn hover:from-pink-200 hover:to-purple-200 border border-purple-200 flex items-center justify-center space-x-1.5">
+                <i class="fa-solid fa-compass"></i><span>Vào học thử - không cần tài khoản (khách)</span>
+            </button>
+        </div>
+        <p id="auth-error-msg" class="text-xs font-bold text-rose-500 mt-3 hidden"></p>
     </div>
 
-    <header>
-      <div class="nav-btns">
-        <button class="btn-nav" onclick="renderHub()">🏠 Danh mục chuyên đề</button>
-      </div>
-      <div class="header-center-title">📖 TIẾNG VIỆT TIỀN TIỂU HỌC</div>
-      <div class="score-badge">⭐ <span id="stars-count">0</span> Sao</div>
-    </header>
+    <!-- 2. KHUNG CHÍNH (APP SHELL) -->
+    <div id="screen-dashboard" class="w-full max-w-6xl hidden flex flex-col space-y-2.5 p-1.5 md:p-2.5">
+        
+        <!-- TOOLBAR HEADER CỐ ĐỊNH -->
+        <header class="w-full bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2.5">
+            
+            <div class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto pb-0.5">
+                <div class="h-11 flex flex-col justify-center text-center bg-white px-3.5 rounded-xl border-2 border-pink-200 shadow-sm shrink-0">
+                    <span class="text-xs font-extrabold text-pink-600 uppercase tracking-wide leading-tight">Tiếng Việt 1</span>
+                    <span class="text-[11px] font-bold text-purple-600 leading-tight">Cô giáo Thỏ Hồng</span>
+                </div>
+                
+                <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="h-11 w-11 bg-white hover:bg-pink-50 text-pink-600 rounded-xl flex items-center justify-center pastel-btn border-2 border-pink-200 shrink-0 shadow-sm">
+                    <i class="fa-solid fa-house text-lg"></i>
+                </button>
 
-    <div id="main-content"></div>
-  </div>
+                <!-- TAB CẤP 2 -->
+                <div id="header-level2-tab" class="hidden items-center">
+                    <button onclick="returnToTopicLecture()" class="h-11 px-3.5 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm flex items-center space-x-1.5 pastel-btn shadow-sm border border-pink-300 shrink-0 max-w-[200px] md:max-w-[260px]">
+                        <span id="header-level2-icon">🌸</span>
+                        <span id="header-level2-title" class="truncate">Chủ đề học</span>
+                    </button>
+                </div>
 
-  <script>
-    // ==========================================
-    // 1. QUẢN LÝ DỮ LIỆU BÀI HỌC VÀ CÂU HỎI
-    // ==========================================
-    const DECK_CONTAINER = {};
-    function getNextDeckItem(deckKey, sourceArray) {
-      if (!DECK_CONTAINER[deckKey] || DECK_CONTAINER[deckKey].length === 0) {
-        DECK_CONTAINER[deckKey] = [...sourceArray].sort(() => Math.random() - 0.5);
-      }
-      return DECK_CONTAINER[deckKey].pop();
-    }
+                <!-- TAB CẤP 3 -->
+                <div id="header-level3-tab" class="hidden items-center space-x-1">
+                    <span class="text-pink-300 font-bold text-xs">/</span>
+                    <div class="h-11 px-3 bg-purple-50 border border-purple-200 text-purple-700 font-extrabold rounded-xl text-xs md:text-sm max-w-[170px] md:max-w-[210px] truncate shadow-inner flex items-center">
+                        <span id="header-level3-title" class="truncate">Mục nhỏ</span>
+                    </div>
+                </div>
+            </div>
 
-    // ==========================================
-    // 2. HỆ THỐNG ÂM THANH & GIỌNG NỮ TIẾNG VIỆT
-    // ==========================================
-    let stars = 0, currentTopicFunc = null, currentAnswer = null, audioCtx = null;
-    const onlineAudioPlayer = new Audio();
-    let preferredFemaleVoice = null;
+            <div class="flex items-center space-x-2.5 w-full md:w-auto justify-between md:justify-end ml-auto shrink-0">
+                <div class="flex flex-col space-y-0.5 bg-pink-50/90 px-2.5 py-1 rounded-xl border border-pink-200 shadow-inner">
+                    <div class="flex items-center justify-between space-x-2 font-extrabold">
+                        <span class="px-1.5 py-0.2 bg-emerald-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Đúng</span>
+                        <span class="text-emerald-600 font-extrabold text-xs" id="star-green-count">0</span>
+                    </div>
+                    <div class="flex items-center justify-between space-x-2 font-extrabold">
+                        <span class="px-1.5 py-0.2 bg-rose-500 text-white rounded text-[10px] shadow-sm"><i class="fa-solid fa-star mr-0.5"></i> Sai</span>
+                        <span class="text-rose-600 font-extrabold text-xs" id="star-red-count">0</span>
+                    </div>
+                </div>
 
-    function initVoiceSetup() {
-      if ('speechSynthesis' in window) {
-        const loadVoices = () => {
-          const voices = window.speechSynthesis.getVoices();
-          preferredFemaleVoice = voices.find(v => 
-            v.lang.includes('vi') && (
-              v.name.includes('Google') || 
-              v.name.includes('HoaiMy') || 
-              v.name.includes('Linh') || 
-              v.name.includes('Mai') ||
-              v.name.toLowerCase().includes('female')
-            )
-          ) || voices.find(v => v.lang.includes('vi')) || null;
-        };
-        loadVoices();
-        if (window.speechSynthesis.onvoiceschanged !== undefined) {
-          window.speechSynthesis.onvoiceschanged = loadVoices;
-        }
-      }
-    }
-    initVoiceSetup();
+                <div id="user-info-box" class="text-xs font-bold text-gray-600 text-right"></div>
 
-    function initAppAudio() {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (AudioContext) {
-        audioCtx = new AudioContext();
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-      }
-      playTone('correct');
-      speakClear("Chào bé yêu! Cùng khám phá 10 chuyên đề Tiếng Việt thật vui nhé!");
-      document.getElementById('start-overlay').style.display = 'none';
-      renderHub();
-    }
+                <button onclick="clickProgressOrExam('progress')" class="h-11 px-3.5 bg-gradient-to-r from-purple-500 to-indigo-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md hover:from-purple-600 hover:to-indigo-600 flex items-center space-x-1.5 shrink-0">
+                    <i class="fa-solid fa-calendar-days"></i><span>Tiến trình tuần</span>
+                </button>
+            </div>
+        </header>
 
-    function playTone(type) {
-      try {
-        if (!audioCtx) {
-          const AudioContext = window.AudioContext || window.webkitAudioContext;
-          if (AudioContext) audioCtx = new AudioContext();
-        }
-        if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-        if (!audioCtx) return;
+        <!-- VIEWPORT NỘI DUNG CHÍNH -->
+        <main id="app-viewport" class="w-full">
+            
+            <!-- VIEW 1 -->
+            <div id="view-dashboard-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5"></div>
 
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        const now = audioCtx.currentTime;
+            <!-- VIEW 2 -->
+            <div id="view-lecture" class="w-full hidden pastel-card p-4 md:p-6 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div class="w-full max-w-4xl flex flex-col items-center">
+                    <div class="w-full flex items-center justify-center space-x-2 text-purple-600 font-extrabold text-sm md:text-base mb-1">
+                        <span>📖</span><span>Bài giảng học tập</span>
+                    </div>
+                    <h2 id="lecture-title" class="text-lg md:text-xl font-extrabold text-pink-600 text-center mb-2.5"></h2>
+                    <div class="w-full bg-pink-50/40 p-3.5 md:p-4 rounded-2xl border-2 border-pink-100 mb-3.5">
+                        <p id="lecture-content" class="text-sm md:text-base text-gray-700 leading-relaxed whitespace-pre-line text-center"></p>
+                    </div>
 
-        if (type === 'correct') {
-          osc.frequency.setValueAtTime(523.25, now);
-          osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.15);
-          gain.gain.setValueAtTime(0.3, now);
-          gain.gain.linearRampToValueAtTime(0.01, now + 0.35);
-          osc.start(now);
-          osc.stop(now + 0.35);
-        } else {
-          osc.frequency.setValueAtTime(250, now);
-          osc.frequency.linearRampToValueAtTime(160, now + 0.22);
-          gain.gain.setValueAtTime(0.25, now);
-          gain.gain.linearRampToValueAtTime(0.01, now + 0.25);
-          osc.start(now);
-          osc.stop(now + 0.25);
-        }
-      } catch (e) {}
-    }
+                    <button onclick="speakLecture()" class="w-full max-w-xs py-2.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-sm md:text-base pastel-btn flex items-center justify-center space-x-2 border-2 border-purple-200 shadow-sm mb-3">
+                        <i class="fa-solid fa-volume-high text-base"></i><span>Nghe cô đọc</span>
+                    </button>
 
-    function speakClear(text) {
-      try {
-        onlineAudioPlayer.pause();
-        if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+                    <div class="w-full pt-2.5 border-t border-pink-100 flex flex-col items-center">
+                        <p class="text-xs md:text-sm font-extrabold text-gray-600 text-center mb-2.5">Bé hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé:</p>
+                        <div id="lecture-subtopics-list" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-2xl"></div>
+                    </div>
+                </div>
 
-        let cleanText = text.replace(/b-a/g, 'bờ a ba')
-                            .replace(/c-a-sắc-cá/g, 'cờ, a, ca, sắc, cá')
-                            .replace(/c\/k/g, 'cờ hoặc ca')
-                            .replace(/g\/gh/g, 'gờ đơn hoặc gờ kép');
+                <div class="w-full flex justify-center mt-3 pt-2">
+                    <button onclick="selectSubtopic(null)" class="w-full max-w-xs py-2.5 bg-gradient-to-r from-purple-400 to-indigo-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">
+                        🌟 Học trộn tất cả các mục
+                    </button>
+                </div>
+            </div>
 
-        const encoded = encodeURIComponent(cleanText.trim());
-        const ttsUrl = `https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=${encoded}`;
+            <!-- VIEW 3 -->
+            <div id="view-quiz" class="w-full hidden pastel-card p-3.5 md:p-5 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div class="w-full max-w-3xl flex justify-between items-center pb-2 border-b border-pink-100">
+                    <button id="btn-back-subtopics" onclick="returnToTopicLecture()" class="hidden px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 font-extrabold rounded-xl text-xs pastel-btn border border-purple-200 flex items-center space-x-1 shadow-sm">
+                        <i class="fa-solid fa-arrow-left"></i><span>Đổi mục con</span>
+                    </button>
+                    <div class="flex items-center space-x-2 bg-pink-50 px-3 py-1 rounded-xl border border-pink-200 text-xs md:text-sm font-extrabold text-pink-700 ml-auto">
+                        <span>Câu số:</span>
+                        <span id="current-q-idx" class="font-extrabold text-pink-600 text-base md:text-lg">1</span>/<span id="total-q-idx" class="text-xs md:text-sm">5</span>
+                    </div>
+                </div>
 
-        onlineAudioPlayer.src = ttsUrl;
-        onlineAudioPlayer.playbackRate = 0.95;
-        const playPromise = onlineAudioPlayer.play();
+                <div id="question-box" class="w-full max-w-3xl flex-1 flex flex-col justify-center items-center my-2"></div>
 
-        if (playPromise !== undefined) {
-          playPromise.catch(() => { fallbackWebSpeech(cleanText); });
-        }
-      } catch (err) {
-        fallbackWebSpeech(text);
-      }
-    }
+                <div class="w-full max-w-2xl grid grid-cols-2 gap-3 pt-2.5 border-t border-pink-100">
+                    <button id="btn-prev-q" onclick="prevQuestion()" class="py-2.5 px-4 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200 flex items-center justify-center space-x-1.5 shadow-sm transition-all">
+                        <i class="fa-solid fa-arrow-left"></i><span>Câu trước</span>
+                    </button>
+                    <button id="btn-next-q" onclick="nextQuestion()" class="py-2.5 px-4 bg-gradient-to-r from-pink-400 to-rose-400 hover:from-pink-500 hover:to-rose-500 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md flex items-center justify-center space-x-1.5 transition-all">
+                        <span id="btn-next-text">Câu sau</span><i id="btn-next-icon" class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
 
-    function fallbackWebSpeech(text) {
-      if (!('speechSynthesis' in window)) return;
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'vi-VN';
-      utterance.rate = 0.92;
-      utterance.pitch = 1.05;
-      if (preferredFemaleVoice) utterance.voice = preferredFemaleVoice;
-      window.speechSynthesis.speak(utterance);
-    }
+            <!-- VIEW 4 -->
+            <div id="view-roadmap" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div class="w-full max-w-4xl">
+                    <div class="text-center mb-4">
+                        <h2 class="text-lg md:text-xl font-extrabold text-indigo-600 flex items-center justify-center space-x-2">
+                            <span>📅</span><span>Lộ trình tiến trình 12 tuần</span>
+                        </h2>
+                        <p class="text-xs md:text-sm text-gray-500 mt-1 font-bold">Mỗi tuần hoàn thành từ 7 điểm trở lên sẽ tự động mở khóa tuần tiếp theo nhé!</p>
+                    </div>
+                    <div id="roadmap-list" class="grid grid-cols-1 md:grid-cols-2 gap-2.5 w-full"></div>
+                </div>
+            </div>
 
-    // ==========================================
-    // 3. HIỆU ỨNG PHÁO HOA
-    // ==========================================
-    const canvas = document.getElementById('fx-canvas');
-    const ctx = canvas.getContext('2d');
-    let particles = [];
+            <!-- VIEW 5 -->
+            <div id="view-exam-hub" class="w-full hidden pastel-card p-5 md:p-7 flex flex-col justify-between items-center min-h-[500px] md:min-h-[530px]">
+                <div class="w-full max-w-5xl">
+                    <div class="text-center mb-5">
+                        <h2 class="font-extrabold text-amber-600 text-lg md:text-xl flex items-center justify-center space-x-2">
+                            <span>🏆</span><span>Đấu trường đề thi thử</span>
+                        </h2>
+                        <p class="text-xs md:text-sm text-gray-500 font-bold mt-1">Thử sức các bộ đề thi chuẩn ma trận 13 câu - 6 nhóm năng lực</p>
+                    </div>
+                    <div id="exam-categories-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
+                </div>
+            </div>
 
-    function resizeCanvas() {
-      canvas.width = canvas.parentElement.clientWidth;
-      canvas.height = canvas.parentElement.clientHeight;
-    }
-    window.addEventListener('resize', resizeCanvas);
-    resizeCanvas();
+            <!-- VIEW 6 -->
+            <div id="view-result" class="w-full hidden pastel-card p-6 md:p-8 flex flex-col justify-center items-center text-center min-h-[500px] md:min-h-[530px]">
+                <div class="w-full max-w-md flex flex-col items-center">
+                    <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center text-4xl mb-3 shadow-inner floating border-4 border-yellow-200">🏆</div>
+                    <h2 class="text-xl md:text-2xl font-extrabold text-pink-600 mb-1">Hoàn thành xuất sắc!</h2>
+                    <p class="text-xs font-bold text-gray-500 mb-5">Cô giáo Thỏ Hồng khen bé đã hoàn thành rất tốt bài học hôm nay.</p>
+                    
+                    <div class="bg-pink-50/70 w-full p-4 rounded-2xl border border-pink-200 mb-5 flex justify-around items-center">
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold">Số câu đúng</p>
+                            <p id="res-correct-txt" class="text-xl md:text-2xl font-extrabold text-pink-600 mt-1">5/5</p>
+                        </div>
+                        <div class="h-8 w-px bg-pink-200"></div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold">Sao nhận được</p>
+                            <p id="res-star-txt" class="text-xl md:text-2xl font-extrabold text-yellow-600 mt-1">+5 ⭐</p>
+                        </div>
+                    </div>
 
-    function triggerConfetti() {
-      resizeCanvas();
-      particles = [];
-      const colors = ['#FF5A5F', '#00A699', '#FFB400', '#8E44AD', '#27AE60', '#2980B9'];
-      for (let i = 0; i < 40; i++) {
-        particles.push({
-          x: canvas.width / 2, y: canvas.height / 2,
-          vx: (Math.random() - 0.5) * 14, vy: (Math.random() - 0.5) * 14 - 3,
-          color: colors[Math.floor(Math.random() * colors.length)],
-          size: Math.random() * 8 + 4, life: 1
-        });
-      }
-    }
+                    <div class="flex space-x-3 w-full">
+                        <button onclick="goHome()" class="flex-1 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold rounded-xl text-xs md:text-sm pastel-btn border border-gray-200">Về trang chủ</button>
+                        <button onclick="retryQuiz()" class="flex-1 py-3 bg-gradient-to-r from-pink-400 to-rose-400 text-white font-extrabold rounded-xl text-xs md:text-sm pastel-btn shadow-md">Làm lại 🔄</button>
+                    </div>
+                </div>
+            </div>
 
-    function renderFX() {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      particles.forEach((p, idx) => {
-        p.x += p.vx; p.y += p.vy; p.vy += 0.3; p.life -= 0.025;
-        ctx.fillStyle = p.color; ctx.globalAlpha = Math.max(0, p.life);
-        ctx.beginPath(); ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2); ctx.fill();
-        if (p.life <= 0) particles.splice(idx, 1);
-      });
-      requestAnimationFrame(renderFX);
-    }
-    renderFX();
+        </main>
+    </div>
 
-    // ==========================================
-    // 4. DANH MỤC TRANG CHỦ & 10 CHUYÊN ĐỀ
-    // ==========================================
-    const container = document.getElementById('main-content');
-
-    function renderHub() {
-      currentTopicFunc = null;
-      container.innerHTML = `
-        <h1 class="hub-title">📖 10 CHUYÊN ĐỀ TIẾNG VIỆT LỚP 1</h1>
-        <div class="topics-grid-10">
-          <div class="subject-card" onclick="startVietLetter()"><div class="icon-wrap">🅰️</div><div class="title">1. 29 Chữ Cái</div></div>
-          <div class="subject-card" onclick="startVietTone()"><div class="icon-wrap">🪶</div><div class="title">2. 5 Thanh Điệu</div></div>
-          <div class="subject-card" onclick="startVietBlend()"><div class="icon-wrap">🧩</div><div class="title">3. Ghép Âm - Vần</div></div>
-          <div class="subject-card" onclick="startVietMissing()"><div class="icon-wrap">✏️</div><div class="title">4. Điền Chữ Tranh</div></div>
-          <div class="subject-card" onclick="startVietFirstSound()"><div class="icon-wrap">🔍</div><div class="title">5. Âm Đầu Từ</div></div>
-          <div class="subject-card" onclick="startVietSpellingRules()"><div class="icon-wrap">📚</div><div class="title">6. Chính Tả c/k, g/gh</div></div>
-          <div class="subject-card" onclick="startVietDiphthongs()"><div class="icon-wrap">🌿</div><div class="title">7. Vần Đôi ia, ua, ưa</div></div>
-          <div class="subject-card" onclick="startVietSentenceMake()"><div class="icon-wrap">📝</div><div class="title">8. Ghép Từ Vào Câu</div></div>
-          <div class="subject-card" onclick="startVietWordMatch()"><div class="icon-wrap">🎯</div><div class="title">9. Nối Từ Với Hình</div></div>
-          <div class="subject-card" onclick="startVietRiddles()"><div class="icon-wrap">💡</div><div class="title">10. Đố Vui Bé Ngoan</div></div>
-        </div>
-      `;
-    }
-
-    // --- Chuyên đề 1: 29 Chữ cái ---
-    function startVietLetter() {
-      currentTopicFunc = startVietLetter;
-      const target = getNextDeckItem('viet_letters', [
-        { upper: 'A', lower: 'a', name: 'Chữ A', sound: 'A' },
-        { upper: 'Ă', lower: 'ă', name: 'Chữ Á', sound: 'Á' },
-        { upper: 'Â', lower: 'â', name: 'Chữ Ớ', sound: 'Ớ' },
-        { upper: 'B', lower: 'b', name: 'Chữ Bờ', sound: 'Bờ' },
-        { upper: 'C', lower: 'c', name: 'Chữ Cờ', sound: 'Cờ' },
-        { upper: 'D', lower: 'd', name: 'Chữ Dờ', sound: 'Dờ' },
-        { upper: 'Đ', lower: 'đ', name: 'Chữ Đờ', sound: 'Đờ' },
-        { upper: 'E', lower: 'e', name: 'Chữ E', sound: 'E' },
-        { upper: 'Ê', lower: 'ê', name: 'Chữ Ê', sound: 'Ê' },
-        { upper: 'G', lower: 'g', name: 'Chữ Gờ', sound: 'Gờ' },
-        { upper: 'H', lower: 'h', name: 'Chữ Hát', sound: 'Hát' },
-        { upper: 'I', lower: 'i', name: 'Chữ I ngắn', sound: 'I ngắn' },
-        { upper: 'K', lower: 'k', name: 'Chữ Ca', sound: 'Ca' },
-        { upper: 'L', lower: 'l', name: 'Chữ Lờ cao', sound: 'Lờ' },
-        { upper: 'M', lower: 'm', name: 'Chữ Mờ', sound: 'Mờ' },
-        { upper: 'N', lower: 'n', name: 'Chữ Nờ thấp', sound: 'Nờ' },
-        { upper: 'O', lower: 'o', name: 'Chữ O tròn', sound: 'O' },
-        { upper: 'Ô', lower: 'ô', name: 'Chữ Ô đội mũ', sound: 'Ô' },
-        { upper: 'Ơ', lower: 'ơ', name: 'Chữ Ơ có râu', sound: 'Ơ' }
-      ]);
-      currentAnswer = `${target.upper} ${target.lower}`;
-      const pool = ['A a', 'Ă ă', 'Â â', 'B b', 'C c', 'D d', 'Đ đ', 'E e', 'Ê ê', 'G g', 'H h', 'O o', 'Ô ô', 'Ơ ơ'];
-      let choices = [currentAnswer, ...pool.filter(x => x !== currentAnswer).slice(0, 3)].sort(() => Math.random() - 0.5);
-      const promptText = `Bé hãy tìm: ${target.name}`;
-      container.innerHTML = `
-        <div class="question-prompt">${promptText} <button class="speaker-btn" onclick="speakClear('${target.name}')">🔊 Nghe</button></div>
-        <div class="stage-box"><div class="char-big-display">👂 ${target.sound}</div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(promptText);
-    }
-
-    // --- Chuyên đề 2: 5 Thanh điệu ---
-    function startVietTone() {
-      currentTopicFunc = startVietTone;
-      const target = getNextDeckItem('viet_tones', [
-        { word: 'cá', tone: 'Dấu Sắc ( / )', guide: 'Con cá mang dấu sắc' },
-        { word: 'bà', tone: 'Dấu Huyền ( \\ )', guide: 'Bà ngoại mang dấu huyền' },
-        { word: 'thỏ', tone: 'Dấu Hỏi ( ? )', guide: 'Chú thỏ mang dấu hỏi' },
-        { word: 'gỗ', tone: 'Dấu Ngã ( ~ )', guide: 'Cây gỗ mang dấu ngã' },
-        { word: 'ngựa', tone: 'Dấu Nặng ( . )', guide: 'Con ngựa mang dấu nặng' },
-        { word: 'hoa', tone: 'Thanh Ngang (Không dấu)', guide: 'Bông hoa thanh ngang không dấu' }
-      ]);
-      currentAnswer = target.tone;
-      const choices = ['Dấu Sắc ( / )', 'Dấu Huyền ( \\ )', 'Dấu Hỏi ( ? )', 'Dấu Ngã ( ~ )', 'Dấu Nặng ( . )', 'Thanh Ngang (Không dấu)'].sort(() => Math.random() - 0.5).slice(0, 4);
-      if (!choices.includes(target.tone)) choices[0] = target.tone;
-      choices.sort(() => Math.random() - 0.5);
-
-      const promptText = `Tiếng "${target.word}" mang thanh điệu gì?`;
-      container.innerHTML = `
-        <div class="question-prompt">${promptText} <button class="speaker-btn" onclick="speakClear('${target.guide}')">🔊 Nghe</button></div>
-        <div class="stage-box"><div class="char-big-display" style="color:#E74C3C;">${target.word}</div></div>
-        <div class="choices-grid" style="grid-template-columns:1fr 1fr;">${choices.map(c => `<button class="choice-btn" style="font-size:17px;" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.guide);
-    }
-
-    // --- Chuyên đề 3: Ghép âm - Vần ---
-    function startVietBlend() {
-      currentTopicFunc = startVietBlend;
-      const target = getNextDeckItem('viet_blends', [
-        { c: 'b', v: 'a', res: 'ba', sp: 'Bờ a ba' },
-        { c: 'c', v: 'o', res: 'co', sp: 'Cờ o co' },
-        { c: 'g', v: 'à', res: 'gà', sp: 'Gờ a ga huyền gà' },
-        { c: 'c', v: 'á', res: 'cá', sp: 'Cờ a ca sắc cá' },
-        { c: 'n', v: 'a', res: 'na', sp: 'Nờ a na quả na' },
-        { c: 'm', v: 'ẹ', res: 'mẹ', sp: 'Mờ e me nặng mẹ' }
-      ]);
-      currentAnswer = target.res;
-      let choices = [target.res, 'bo', 'ca', 'ga', 'me'].filter(x => x !== target.res).slice(0, 3);
-      choices.push(target.res);
-      choices.sort(() => Math.random() - 0.5);
-
-      const promptText = `Ghép: "${target.c}" + "${target.v}" thành tiếng gì?`;
-      container.innerHTML = `
-        <div class="question-prompt">${promptText} <button class="speaker-btn" onclick="speakClear('${target.sp}')">🔊 Nghe</button></div>
-        <div class="stage-box"><div style="font-size:42px; font-weight:900; color:var(--dark);">${target.c} + ${target.v} = <span style="color:var(--primary);">?</span></div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.sp);
-    }
-
-    // --- Chuyên đề 4: Điền chữ còn thiếu qua tranh ---
-    function startVietMissing() {
-      currentTopicFunc = startVietMissing;
-      const target = getNextDeckItem('viet_missing', [
-        { d: '_À', m: 'G', emo: '🐔', snd: 'Con gà' },
-        { d: '_Á', m: 'C', emo: '🐟', snd: 'Con cá' },
-        { d: '_Ò', m: 'B', emo: '🐄', snd: 'Con bò' },
-        { d: '_ÈO', m: 'M', emo: '🐱', snd: 'Con mèo' },
-        { d: '_ÙA', m: 'R', emo: '🐢', snd: 'Con rùa' },
-        { d: '_Ổ', m: 'H', emo: '🐯', snd: 'Con hổ' }
-      ]);
-      currentAnswer = target.m;
-      let choices = [target.m, 'D', 'H', 'N', 'V', 'T'].filter(x => x !== target.m).slice(0, 3);
-      choices.push(target.m);
-      choices.sort(() => Math.random() - 0.5);
-
-      const promptText = `Bé điền chữ cái còn thiếu vào dấu gạch:`;
-      container.innerHTML = `
-        <div class="question-prompt">${promptText} <button class="speaker-btn" onclick="speakClear('${target.snd}')">🔊 Gợi ý</button></div>
-        <div class="stage-box"><span style="font-size:60px;">${target.emo}</span><div style="font-size:38px; font-weight:900; color:var(--dark);">${target.d}</div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.snd);
-    }
-
-    // --- Chuyên đề 5: Âm đầu của từ ---
-    function startVietFirstSound() {
-      currentTopicFunc = startVietFirstSound;
-      const target = getNextDeckItem('viet_first_snd', [
-        { w: 'Hổ', l: 'H', emo: '🐯' },
-        { w: 'Rùa', l: 'R', emo: '🐢' },
-        { w: 'Khỉ', l: 'K', emo: '🐵' },
-        { w: 'Sư tử', l: 'S', emo: '🦁' },
-        { w: 'Voi', l: 'V', emo: '🐘' },
-        { w: 'Bướm', l: 'B', emo: '🦋' }
-      ]);
-      currentAnswer = target.l;
-      let choices = [target.l, 'B', 'M', 'T', 'D'].filter(x => x !== target.l).slice(0, 3);
-      choices.push(target.l);
-      choices.sort(() => Math.random() - 0.5);
-
-      const promptText = `Từ "${target.w}" bắt đầu bằng chữ cái nào?`;
-      container.innerHTML = `
-        <div class="question-prompt">${promptText} <button class="speaker-btn" onclick="speakClear('Phát âm từ: ${target.w}')">🔊 Nghe: ${target.w}</button></div>
-        <div class="stage-box"><span style="font-size:62px;">${target.emo}</span><div style="font-size:32px; font-weight:900; color:var(--dark);">${target.w}</div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(promptText);
-    }
-
-    // --- Chuyên đề 6: Quy tắc chính tả (c/k, g/gh, ng/ngh) ---
-    function startVietSpellingRules() {
-      currentTopicFunc = startVietSpellingRules;
-      const target = getNextDeckItem('viet_spell', [
-        { q: 'Điền c hay k: "___em que"', a: 'k', hint: 'K đi với e, ê, i', f: 'cái kem que' },
-        { q: 'Điền c hay k: "___on cá"', a: 'c', hint: 'C đi với a, o, ô, u', f: 'con cá' },
-        { q: 'Điền g hay gh: "___ế gỗ"', a: 'gh', hint: 'Gh đi với e, ê, i', f: 'cái ghế gỗ' },
-        { q: 'Điền g hay gh: "con ___à"', a: 'g', hint: 'G đi với a, o, ô, u', f: 'con gà' },
-        { q: 'Điền ng hay ngh: "___ỉ ngơi"', a: 'ngh', hint: 'Ngh đi với e, ê, i', f: 'nghỉ ngơi' },
-        { q: 'Điền ng hay ngh: "ngôi ___à"', a: 'ng', hint: 'Ng đi với a, o, ô, u', f: 'ngôi nhà' }
-      ]);
-      currentAnswer = target.a;
-      let choices = [];
-      if (target.a === 'c' || target.a === 'k') choices = ['c', 'k'];
-      else if (target.a === 'g' || target.a === 'gh') choices = ['g', 'gh'];
-      else choices = ['ng', 'ngh'];
-
-      container.innerHTML = `
-        <div class="question-prompt">${target.q} <button class="speaker-btn" onclick="speakClear('${target.f}')">🔊 Phát âm</button></div>
-        <div class="stage-box"><div style="font-size:32px; font-weight:900; color:var(--dark);">${target.q}</div><div style="font-size:16px; font-weight:700; color:#7F8C8D; margin-top:8px;">💡 Gợi ý: ${target.hint}</div></div>
-        <div class="choices-grid" style="max-width:340px;">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.q);
-    }
-
-    // --- Chuyên đề 7: Vần đôi (ia, ua, ưa) ---
-    function startVietDiphthongs() {
-      currentTopicFunc = startVietDiphthongs;
-      const target = getNextDeckItem('viet_diphthongs', [
-        { q: 'Tiếng "lá m___" (cây mía) điền vần gì?', a: 'ia', word: 'mía', sp: 'Mờ ia mia sắc mía' },
-        { q: 'Tiếng "con c___" (con cua) điền vần gì?', a: 'ua', word: 'cua', sp: 'Cờ ua cua' },
-        { q: 'Tiếng "cây d___" (cây dừa) điền vần gì?', a: 'ưa', word: 'dừa', sp: 'Dờ ưa dưa huyền dừa' },
-        { q: 'Tiếng "quả c___" (quả cà chua) điền vần gì?', a: 'ua', word: 'chua', sp: 'Chờ ua chua' }
-      ]);
-      currentAnswer = target.a;
-      const choices = ['ia', 'ua', 'ưa', 'ai'].sort(() => Math.random() - 0.5);
-      container.innerHTML = `
-        <div class="question-prompt">${target.q} <button class="speaker-btn" onclick="speakClear('${target.sp}')">🔊 Đánh vần</button></div>
-        <div class="stage-box"><div style="font-size:30px; font-weight:900; color:var(--dark);">${target.q}</div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.q);
-    }
-
-    // --- Chuyên đề 8: Ghép từ thành câu ---
-    function startVietSentenceMake() {
-      currentTopicFunc = startVietSentenceMake;
-      const target = getNextDeckItem('viet_sent_make', [
-        { q: 'Bé chọn từ thích hợp: "Bé đi ___"', a: 'học', full: 'Bé đi học', pool: ['học', 'cá', 'ngủ', 'bút'] },
-        { q: 'Bé chọn từ thích hợp: "Bà đi ___"', a: 'chợ', full: 'Bà đi chợ', pool: ['chợ', 'vở', 'sách', 'bay'] },
-        { q: 'Bé chọn từ thích hợp: "Mẹ mua ___"', a: 'cá', full: 'Mẹ mua cá', pool: ['cá', 'chạy', 'nhảy', 'hát'] },
-        { q: 'Bé chọn từ thích hợp: "Hoa nở rất ___"', a: 'đẹp', full: 'Hoa nở rất đẹp', pool: ['đẹp', 'chạy', 'bơi', 'vở'] }
-      ]);
-      currentAnswer = target.a;
-      let choices = [...target.pool].sort(() => Math.random() - 0.5);
-      container.innerHTML = `
-        <div class="question-prompt">Ghép từ tạo câu đúng <button class="speaker-btn" onclick="speakClear('${target.full}')">🔊 Nghe mẫu</button></div>
-        <div class="stage-box"><div style="font-size:28px; font-weight:900; color:var(--dark);">${target.q}</div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.full);
-    }
-
-    // --- Chuyên đề 9: Nối từ với hình ---
-    function startVietWordMatch() {
-      currentTopicFunc = startVietWordMatch;
-      const target = getNextDeckItem('viet_word_match', [
-        { emo: '🌸', word: 'bông hoa', sp: 'Bông hoa' },
-        { emo: '☀️', word: 'ông mặt trời', sp: 'Ông mặt trời' },
-        { emo: '🚗', word: 'xe ô tô', sp: 'Xe ô tô' },
-        { emo: '📖', word: 'quyển sách', sp: 'Quyển sách' },
-        { emo: '🍎', word: 'quả táo', sp: 'Quả táo' },
-        { emo: '🐱', word: 'chú mèo', sp: 'Chú mèo' }
-      ]);
-      currentAnswer = target.word;
-      const pool = ['bông hoa', 'ông mặt trời', 'xe ô tô', 'quyển sách', 'quả táo', 'chú mèo'];
-      let choices = [target.word, ...pool.filter(x => x !== target.word).slice(0, 3)].sort(() => Math.random() - 0.5);
-      const promptText = `Bức hình này tương ứng với từ nào?`;
-      container.innerHTML = `
-        <div class="question-prompt">${promptText} <button class="speaker-btn" onclick="speakClear('${target.sp}')">🔊 Gợi ý</button></div>
-        <div class="stage-box"><span style="font-size:72px;">${target.emo}</span></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" style="font-size:18px;" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(promptText);
-    }
-
-    // --- Chuyên đề 10: Đố vui bé ngoan ---
-    function startVietRiddles() {
-      currentTopicFunc = startVietRiddles;
-      const target = getNextDeckItem('viet_riddles', [
-        { r: 'Con gì kêu meo meo, thích leo trèo, bắt chuột rất tài?', a: 'Con mèo', sp: 'Con gì kêu meo meo, bắt chuột rất tài?' },
-        { r: 'Cái gì để bé đội trên đầu khi đi học trời nắng?', a: 'Cái mũ', sp: 'Cái gì để bé đội trên đầu khi đi học?' },
-        { r: 'Quả gì vỏ đỏ, giòn ngọt, chứa nhiều vitamin bé thích ăn?', a: 'Quả táo', sp: 'Quả gì vỏ đỏ, giòn ngọt bé thích ăn?' },
-        { r: 'Con gì gáy ò ó o mỗi sáng sớm gọi bé thức dậy đi học?', a: 'Con gà trống', sp: 'Con gì gáy ò ó o gọi bé dậy?' }
-      ]);
-      currentAnswer = target.a;
-      let pool = ['Con mèo', 'Cái mũ', 'Quả táo', 'Con gà trống', 'Con cá heo', 'Cây bút chì'];
-      let choices = [target.a, ...pool.filter(x => x !== target.a).slice(0, 3)].sort(() => Math.random() - 0.5);
-      container.innerHTML = `
-        <div class="question-prompt">Đố vui bé ngoan <button class="speaker-btn" onclick="speakClear('${target.sp}')">🔊 Nghe câu đố</button></div>
-        <div class="stage-box"><div style="font-size:24px; font-weight:800; color:var(--purple); line-height:1.5;">${target.r}</div></div>
-        <div class="choices-grid">${choices.map(c => `<button class="choice-btn" style="font-size:18px;" onclick="checkAnswer(this, '${c}')">${c}</button>`).join('')}</div>
-      `;
-      speakClear(target.sp);
-    }
-
-    // ==========================================
-    // 5. XỬ LÝ ĐÁP ÁN CHUNG
-    // ==========================================
-    function checkAnswer(btnElement, selected) {
-      const allBtns = document.querySelectorAll('.choice-btn');
-      allBtns.forEach(b => b.disabled = true);
-
-      if (String(selected).trim().toLowerCase() === String(currentAnswer).trim().toLowerCase()) {
-        btnElement.classList.add('correct');
-        playTone('correct');
-        triggerConfetti();
-        stars += 1;
-        document.getElementById('stars-count').innerText = stars;
-        speakClear("Hoan hô! Bé giỏi quá!");
-
-        setTimeout(() => { if (currentTopicFunc) currentTopicFunc(); }, 1400);
-      } else {
-        btnElement.classList.add('wrong');
-        playTone('wrong');
-        speakClear("Bé thử lại nhé!");
-
-        setTimeout(() => {
-          btnElement.classList.remove('wrong');
-          allBtns.forEach(b => b.disabled = false);
-        }, 900);
-      }
-    }
-  </script>
+    <!-- NẠP FILE JAVASCRIPT RIÊNG BIỆT -->
+    <script src="assets/js/app.js"></script>
 </body>
 </html>

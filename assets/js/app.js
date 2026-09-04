@@ -25,19 +25,34 @@ const SUBTOPIC_PALETTES = [
 ];
 
 const roadmapConfig = {
-    1: { name: "Tuần 1: Làm chủ 5 thanh điệu", topicIds: [1, 2], desc: "Luyện phát âm, phân biệt nguyên âm, phụ âm và 5 thanh điệu", icon: "🎵" },
-    2: { name: "Tuần 2: Khởi động ghép âm - vần", topicIds: [3], desc: "Học cách ghép phụ âm đầu với nguyên âm đơn và vần xuôi", icon: "🧩" },
-    3: { name: "Tuần 3: Vần đôi - vần ghép phức tạp", topicIds: [3, 6], desc: "Chinh phục các vần đôi khó và từ vựng mở rộng", icon: "🌿" },
-    4: { name: "Tuần 4: Điền chữ cái còn thiếu", topicIds: [4], desc: "Luyện luật chính tả c/k, g/gh, ng/ngh và s/x, tr/ch, l/n", icon: "✍️" },
-    5: { name: "Tuần 5: Bác sĩ sửa lỗi chính tả", topicIds: [5], desc: "Bắt bệnh và sửa từ viết sai chính tả, sửa quy tắc viết hoa", icon: "🩺" },
-    6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6], desc: "Mở rộng vốn từ chỉ cảm giác, mùi vị trực quan qua hình ảnh", icon: "👁️" },
-    7: { name: "Tuần 7: Gia đình ba nhóm từ loại", topicIds: [7], desc: "Phân biệt từ chỉ sự vật, hoạt động và đặc điểm", icon: "🧸" },
-    8: { name: "Tuần 8: Nhà thông thái sắp xếp câu", topicIds: [8], desc: "Sắp xếp từ xáo trộn thành câu kể, câu tả hoàn chỉnh đúng ngữ pháp", icon: "🧠" },
-    9: { name: "Tuần 9: Điền từ vào câu & tục ngữ", topicIds: [9], desc: "Hoàn thiện câu ca dao tục ngữ rèn luyện đạo đức làm người", icon: "📜" },
-    10: { name: "Tuần 10: Trí tuệ IQ cùng đố vui bé ngoan", topicIds: [10], desc: "Giải mã 100 câu đố thơ dân gian lục bát rèn luyện tư duy", icon: "🎯" },
-    11: { name: "Tuần 11: Đọc hiểu cảm thụ văn học", topicIds: [11], desc: "Luyện đọc diễn cảm truyện ngụ ngôn, thơ ngắn và trả lời câu hỏi", icon: "📖" },
-    12: { name: "Tuần 12: Đấu trường đề thi tổng hợp", isExam: true, topicIds: [], desc: "Chinh phục đề thi HK1, HK2 và HSG để đạt điểm 10 tuyệt đối", icon: "🏆" }
+    1: { name: "Tuần 1: Làm chủ 5 thanh điệu", topicIds: [1, 2], desc: "Nhận diện mặt chữ cái, nguyên âm/phụ âm và phân biệt 5 thanh điệu chính xác.", icon: "🎵" },
+    2: { name: "Tuần 2: Khởi động ghép âm - vần", topicIds: [3], desc: "Ghép phụ âm đầu với nguyên âm đơn và vần xuôi cơ bản để đánh vần trơn.", icon: "🧩" },
+    3: { name: "Tuần 3: Vần đôi - vần ghép phức tạp", topicIds: [3, 6], desc: "Chinh phục các nguyên âm đôi, vần có âm đệm và âm cuối khó lắt léo.", icon: "🌿" },
+    4: { name: "Tuần 4: Điền chữ cái còn thiếu", topicIds: [4], desc: "Nắm vững quy tắc chính tả c/k, g/gh, ng/ngh và phân biệt s/x, tr/ch, l/n.", icon: "✍️" },
+    5: { name: "Tuần 5: Bác sĩ sửa lỗi chính tả", topicIds: [5], desc: "Tìm và sửa lỗi từ sai chính tả, quy tắc viết hoa tên riêng, địa danh.", icon: "🩺" },
+    6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6, 8], desc: "Mở rộng vốn từ qua hình ảnh trực quan con vật, vị giác, xúc giác thực tế.", icon: "👁️" },
+    7: { name: "Tuần 7: Gia đình ba nhóm từ loại", topicIds: [7], desc: "Phân loại từ ngữ quanh bé thành nhóm từ chỉ sự vật, hoạt động và đặc điểm.", icon: "🧸" },
+    8: { name: "Tuần 8: Nhà thông thái sắp xếp câu", topicIds: [8], desc: "Sắp xếp các từ xáo trộn thành câu kể, câu tả hoàn chỉnh đúng ngữ pháp.", icon: "🧠" },
+    9: { name: "Tuần 9: Điền từ vào câu & tục ngữ", topicIds: [9], desc: "Điền từ theo ngữ cảnh phù hợp, ghi nhớ ca dao tục ngữ rèn đức tính tốt.", icon: "📜" },
+    10: { name: "Tuần 10: Trí tuệ IQ cùng đố vui bé ngoan", topicIds: [10], desc: "Giải quyết 100 câu đố lục bát dân gian hóm hỉnh mô tả thế giới xung quanh.", icon: "🎯" },
+    11: { name: "Tuần 11: Đọc hiểu cảm thụ văn học sâu", topicIds: [11], desc: "Đọc diễn cảm các văn bản ngụ ngôn, thơ ngắn và trả lời câu hỏi phân tích.", icon: "📖" },
+    12: { name: "Tuần 12: Đấu trường đề thi tổng hợp", isExam: true, topicIds: [], desc: "Thi thử tổng hợp đa năng lực bám sát ma trận đề thi học kỳ.", icon: "🏆" }
 };
+
+const TOPIC_TO_SKILL = {
+    1: 'C1', 2: 'C1', 3: 'C1',
+    4: 'C2', 5: 'C2',
+    6: 'C3',
+    7: 'C4', 8: 'C4',
+    9: 'C5', 11: 'C5',
+    10: 'C6'
+};
+
+function skillsForWeek(weekNum) {
+    const cfg = roadmapConfig[weekNum];
+    if (!cfg) return [];
+    return [...new Set(cfg.topicIds.map(id => TOPIC_TO_SKILL[id] || 'C1'))];
+}
 
 const ROADMAP_COORDS = {
     1: { x: 150, y: 130 },  2: { x: 415, y: 130 },  3: { x: 680, y: 130 },  4: { x: 950, y: 130 },
@@ -52,12 +67,12 @@ const examFileMap = {
 };
 
 const SKILL_TAXONOMY = {
-    C1: { code: 'C1', sheetCol: 'C1_NguAm', name: 'Ngữ âm nền tảng', advice: 'Cần ôn lại bảng chữ cái, phân biệt nguyên âm và phụ âm ghép.' },
-    C2: { code: 'C2', sheetCol: 'C2_ChinhTa', name: 'Quy tắc chính tả', advice: 'Rèn luyện thêm quy tắc đặt 5 dấu thanh, phân biệt c/k, g/gh, ng/ngh.' },
-    C3: { code: 'C3', sheetCol: 'C3_VonTu', name: 'Vốn từ mở rộng', advice: 'Luyện đọc các vần đôi, mở rộng vốn từ miêu tả qua đời sống hàng ngày.' },
-    C4: { code: 'C4', sheetCol: 'C4_CuPhap', name: 'Cú pháp câu kể', advice: 'Rèn luyện sắp xếp từ ngữ xáo trộn thành câu kể hoàn chỉnh có nghĩa.' },
-    C5: { code: 'C5', sheetCol: 'C5_DocHieu', name: 'Đọc hiểu văn bản', advice: 'Tăng cường đọc diễn cảm truyện ngụ ngôn và nắm bắt nội dung mẩu chuyện.' },
-    C6: { code: 'C6', sheetCol: 'C6_TuDuyIQ', name: 'Tư duy IQ & đố vui', advice: 'Rèn kỹ năng suy luận logic, giải mã các câu đố thơ dân gian.' }
+    C1: { code: 'C1', sheetCol: 'C1_NguAm', totalCol: 'C1_NguAm_Tong', name: 'Ngữ âm nền tảng', advice: 'Cần ôn lại bảng chữ cái, phân biệt nguyên âm và phụ âm ghép.' },
+    C2: { code: 'C2', sheetCol: 'C2_ChinhTa', totalCol: 'C2_ChinhTa_Tong', name: 'Quy tắc chính tả', advice: 'Rèn luyện thêm quy tắc đặt 5 dấu thanh, phân biệt c/k, g/gh, ng/ngh.' },
+    C3: { code: 'C3', sheetCol: 'C3_VonTu', totalCol: 'C3_VonTu_Tong', name: 'Vốn từ mở rộng', advice: 'Luyện đọc các vần đôi, mở rộng vốn từ miêu tả qua đời sống hàng ngày.' },
+    C4: { code: 'C4', sheetCol: 'C4_CuPhap', totalCol: 'C4_CuPhap_Tong', name: 'Cú pháp câu kể', advice: 'Rèn luyện sắp xếp từ ngữ xáo trộn thành câu kể hoàn chỉnh có nghĩa.' },
+    C5: { code: 'C5', sheetCol: 'C5_DocHieu', totalCol: 'C5_DocHieu_Tong', name: 'Đọc hiểu văn bản', advice: 'Tăng cường đọc diễn cảm truyện ngụ ngôn và nắm bắt nội dung mẩu chuyện.' },
+    C6: { code: 'C6', sheetCol: 'C6_TuDuyIQ', totalCol: 'C6_TuDuyIQ_Tong', name: 'Tư duy IQ & đố vui', advice: 'Rèn kỹ năng suy luận logic, giải mã các câu đố thơ dân gian.' }
 };
 
 const GREETINGS_STUDENT = [
@@ -198,7 +213,7 @@ function normalizeTopic(t) {
 
 function shuffleArray(arr) {
     if (!arr) return [];
-    const a = arr.map(item => ({ ...item }));
+    const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [a[i], a[j]] = [a[j], a[i]];
@@ -226,20 +241,20 @@ function getQuestionsForWeek343(weekNumber) {
     config.topicIds.forEach(topicId => {
         const topicData = allTopicsDataCache.find(t => t.topic_id === topicId);
         if (topicData && topicData.questions) {
-            pool = pool.concat(topicData.questions);
+            pool = pool.concat(topicData.questions.map(q => ({ ...q, source_topic_id: topicId })));
         }
     });
     
-    if (pool.length < 20) return shuffleArray([...pool]);
+    if (pool.length < 30) return shuffleArray([...pool]);
     
     const size = pool.length;
     const basket1 = pool.slice(0, Math.floor(size * 0.35));
     const basket2 = pool.slice(Math.floor(size * 0.35), Math.floor(size * 0.75));
     const basket3 = pool.slice(Math.floor(size * 0.75));
     
-    const easy = shuffleArray([...basket1]).slice(0, 6);
-    const medium = shuffleArray([...basket2]).slice(0, 8);
-    const hard = shuffleArray([...basket3]).slice(0, 6);
+    const easy = shuffleArray([...basket1]).slice(0, 9);
+    const medium = shuffleArray([...basket2]).slice(0, 12);
+    const hard = shuffleArray([...basket3]).slice(0, 9);
     
     return shuffleArray([...easy, ...medium, ...hard]);
 }
@@ -341,7 +356,7 @@ async function renderDashboardGrid() {
                 <div class="w-8 h-8 bg-amber-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-amber-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">🏆</div>
                 <h3 class="font-extrabold text-amber-700 text-sm md:text-base leading-tight">12. Đấu trường đề thi</h3>
             </div>
-            <div class="flex justify-between items-center mt-1.5 pt-1 border-t border-amber-100 text-[11px] font-bold text-amber-600">
+            <div class="flex justify-between items-center mt-1.5 pt-1 border-t border-amber-100 text-[11px] font-bold text-gray-500">
                 <span>HK1, HK2, HSG</span>
                 <span class="bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full">${totalExamsCount} đề thi</span>
             </div>
@@ -497,9 +512,10 @@ async function renderExamHubGrid() {
 // ==========================================
 // ĐIỀU HƯỚNG VIEW & BREADCRUMB
 // ==========================================
-function updateNavTabs(level2Title, level2Icon, level3Title) {
+function updateNavTabs(level2Title, level2Icon, level3Title, level4Title) {
     const tab2 = document.getElementById('header-level2-tab');
     const tab3 = document.getElementById('header-level3-tab');
+    const tab4 = document.getElementById('header-level4-tab');
     const homeBtn = document.getElementById('btn-header-home');
 
     if (level2Title) {
@@ -521,6 +537,15 @@ function updateNavTabs(level2Title, level2Icon, level3Title) {
     } else {
         tab3.classList.add('hidden');
         tab3.classList.remove('flex');
+    }
+
+    if (level4Title && tab4) {
+        document.getElementById('header-level4-title').textContent = level4Title;
+        tab4.classList.remove('hidden');
+        tab4.classList.add('flex');
+    } else if (tab4) {
+        tab4.classList.add('hidden');
+        tab4.classList.remove('flex');
     }
 }
 
@@ -592,7 +617,12 @@ async function callAppsScript(action, payload) {
         body: JSON.stringify({ action, payload })
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return res.json();
+    const rawText = await res.text();
+    try {
+        return JSON.parse(rawText);
+    } catch (e) {
+        throw new Error('Google Apps Script trả về dữ liệu không hợp lệ (không phải JSON) — thường do link Apps Script chưa được Deploy đúng cách (cần đặt quyền truy cập là "Anyone"/"Bất kỳ ai") hoặc đã hết hạn uỷ quyền. Anh vui lòng kiểm tra lại bước Deploy > Manage deployments trên Apps Script nhé.');
+    }
 }
 
 async function doLogin() {
@@ -686,13 +716,26 @@ async function tryAutoLogin() {
     const maHS = localStorage.getItem('tv1_mahs');
     const maPin = localStorage.getItem('tv1_mapin');
     if (!maHS || !maPin) return;
+
+    // Ẩn ngay màn hình đăng nhập và hiện loading, tránh hiện "chớp" màn hình đăng nhập
+    // rồi mới chuyển sang trang chủ khi đã có sẵn thông tin đăng nhập.
+    const loginScreen = document.getElementById('screen-login');
+    if (loginScreen) loginScreen.classList.add('hidden');
+    showLoadingOverlay('Đang đăng nhập lại cho bé...');
+
     try {
         const res = await callAppsScript('login', { maHS: maHS.toUpperCase(), maPin });
-        if (res.ok) { 
-            currentUser = { ...res.student, isGuest: false }; 
-            enterDashboard(true); 
+        if (res.ok) {
+            currentUser = { ...res.student, isGuest: false };
+            enterDashboard(true);
+        } else {
+            if (loginScreen) loginScreen.classList.remove('hidden');
         }
-    } catch (e) {}
+    } catch (e) {
+        if (loginScreen) loginScreen.classList.remove('hidden');
+    } finally {
+        hideLoadingOverlay();
+    }
 }
 
 function logout() {
@@ -747,7 +790,7 @@ function updateUserInfoBox() {
                     <div class="text-pink-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen)}</div>
                     <div class="text-gray-500 font-semibold text-[10px]">ID: ${escapeHtml(currentUser.maHS)} | Lớp ${escapeHtml(currentUser.lop)}</div>
                 </div>
-                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-rose-100 hover:bg-rose-200 text-rose-500 rounded-xl border border-rose-200 pastel-btn text-xs"><i class="fa-solid fa-right-from-bracket"></i></button>
+                <button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-rose-100 hover:bg-rose-200 text-rose-500 rounded-xl border border-rose-200 text-xs transition-shadow duration-200 hover:shadow-[0_0_12px_rgba(244,63,94,0.55)]"><i class="fa-solid fa-right-from-bracket"></i></button>
             </div>`;
     } else {
         box.innerHTML = `<span class="text-amber-600 font-extrabold text-xs">Khách (Guest)</span><br><span class="text-gray-400 font-semibold text-[10px]">Chưa đăng nhập</span>`;
@@ -801,13 +844,13 @@ function openLettersSubmenu() {
 
     const subtopics = [
         { title: 'Bảng chữ cái', badge: '29 chữ', desc: 'Khám phá 29 chữ cái in hoa, in thường, chữ tập viết và 3 ví dụ trực quan.', action: () => renderAlphabetBoard(0) },
-        { title: '12 Nguyên âm', badge: 'Trò chơi', desc: 'Trò chơi nghe và nhận diện chính xác 12 nguyên âm đơn & đôi.', action: () => startAlphabetCategoryQuiz('nguyen_am_don', '12 Nguyên âm') },
-        { title: '17 Phụ âm', badge: 'Trò chơi', desc: 'Luyện tập nghe phát âm và tìm đúng 17 phụ âm đơn trong tiếng Việt.', action: () => startAlphabetCategoryQuiz('phu_am', '17 Phụ âm') },
-        { title: '11 Phụ âm ghép', badge: 'Trò chơi', desc: 'Thử thách nhận diện ch, gh, gi, kh, ng, ngh, nh, ph, qu, th, tr.', action: () => startAlphabetCategoryQuiz('phu_am_ghep', '11 Phụ âm ghép') }
+        { title: '12 Nguyên âm', badge: `${countAlphabetQuizQuestions('nguyen_am_don')} câu`, desc: 'Trò chơi nghe và nhận diện chính xác 12 nguyên âm đơn & đôi.', action: () => startAlphabetCategoryQuiz('nguyen_am_don', '12 Nguyên âm') },
+        { title: '17 Phụ âm', badge: `${countAlphabetQuizQuestions('phu_am')} câu`, desc: 'Luyện tập nghe phát âm và tìm đúng 17 phụ âm đơn trong tiếng Việt.', action: () => startAlphabetCategoryQuiz('phu_am', '17 Phụ âm') },
+        { title: '11 Phụ âm ghép', badge: `${countAlphabetQuizQuestions('phu_am_ghep')} câu`, desc: 'Thử thách nhận diện ch, gh, gi, kh, ng, ngh, nh, ph, qu, th, tr.', action: () => startAlphabetCategoryQuiz('phu_am_ghep', '11 Phụ âm ghép') }
     ];
 
     document.getElementById('lecture-title').textContent = "1. Bảng chữ cái tiếng Việt";
-    document.getElementById('lecture-content').textContent = "Bé hãy chọn một mục nhỏ bên dưới để bắt đầu học tập và luyện tập nhận diện chữ cái nhé:";
+    document.getElementById('lecture-content').textContent = "Bé làm quen với 29 chữ cái tiếng Việt, nhận diện chính xác 12 nguyên âm, 17 phụ âm và 11 phụ âm ghép qua các trò chơi nghe âm đoán chữ thật vui nhé!";
     document.getElementById('view-lecture').dataset.audioText = "Chào mừng bé đến với Bảng chữ cái tiếng Việt. Bé hãy chọn một mục bên dưới nhé!";
 
     let subHtml = '';
@@ -890,27 +933,49 @@ function renderAlphabetBoard(index = 0) {
     speakVietnamese(`${item.name}, âm đọc là ${item.sound}`);
 }
 
+const ALPHABET_QUIZ_TARGET_TOTAL = 30;
+
+function getAlphabetQuizVariantsPerLetter(groupKey) {
+    const count = ALPHABET_29_DETAILS.filter(item => item.group === groupKey).length;
+    return count ? Math.max(1, Math.ceil(ALPHABET_QUIZ_TARGET_TOTAL / count)) : 1;
+}
+
+function countAlphabetQuizQuestions(groupKey) {
+    const count = ALPHABET_29_DETAILS.filter(item => item.group === groupKey).length;
+    return count * getAlphabetQuizVariantsPerLetter(groupKey);
+}
+
 function startAlphabetCategoryQuiz(groupKey, subTitle) {
     stopSpeaking();
     const filtered = ALPHABET_29_DETAILS.filter(item => item.group === groupKey);
     if (!filtered.length) return alert('Đang cập nhật thêm câu hỏi cho phần này bé nhé!');
 
-    const questions = filtered.map(item => {
+    const variantsPerLetter = getAlphabetQuizVariantsPerLetter(groupKey);
+
+    let questions = [];
+    filtered.forEach(item => {
         const correctStr = `${item.u} ${item.l}`;
-        const wrongPool = ALPHABET_29_DETAILS.filter(x => x.u !== item.u).map(x => `${x.u} ${x.l}`);
-        const options = buildTrickyChoices(correctStr, wrongPool, wrongPool, 3);
-        return {
-            question_id: 1000 + Math.floor(Math.random() * 9000),
-            sub_topic: subTitle,
-            question_text: `🎧 👂 🌸 Bé hãy lắng nghe âm đọc của cô rồi chọn chữ cái đúng nhé!`,
-            options: options,
-            answer: correctStr,
-            audio_text: `Bé hãy tìm chữ ${item.u}, âm đọc là ${item.sound}`,
-            skill_tag: 'C1',
-            diem: 0.5,
-            explanation: `Chữ cái nào vừa phát ra âm thanh vậy bé ơi? Chữ ${item.u} (${item.l}) có âm đọc là "${item.sound}". Ví dụ: ${item.examples[0]?.w}.`
-        };
+        const wrongLetterPool = ALPHABET_29_DETAILS.filter(x => x.u !== item.u).map(x => `${x.u} ${x.l}`);
+        const exampleWord = item.examples[0]?.w || '';
+
+        for (let v = 0; v < variantsPerLetter; v++) {
+            questions.push({
+                question_id: 1000 + Math.floor(Math.random() * 9000) + v,
+                sub_topic: subTitle,
+                question_text: `Bé hãy lắng nghe âm đọc của cô Thỏ Hồng rồi chọn chữ cái đúng nhé!`,
+                options: buildTrickyChoices(correctStr, wrongLetterPool, wrongLetterPool, 3),
+                answer: correctStr,
+                audio_text: `Bé hãy tìm chữ ${item.u}, âm đọc là ${item.sound}`,
+                skill_tag: 'C1',
+                diem: 0.5,
+                render_style: 'letter_listen',
+                mascot_text: 'Chữ cái nào vừa phát ra âm thanh vậy bé ơi?',
+                explanation: `Chữ ${item.u} (${item.l}) có âm đọc là "${item.sound}". Ví dụ: ${exampleWord}.`
+            });
+        }
     });
+
+    questions = shuffleArray(questions);
 
     updateNavTabs("1. Bảng chữ cái", "🅰️", subTitle);
     startTopicQuiz(1, subTitle, questions, subTitle);
@@ -929,9 +994,9 @@ function setSubtopicGridColumns(count) {
 function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     pendingTopicQuiz = { topicNum, topicName, questions: topicObj.questions };
     
-    document.getElementById('lecture-title').textContent = topicObj.lecture_title || `Bài giảng: ${topicName}`;
-    document.getElementById('lecture-content').textContent = topicObj.lecture_content || 'Chào mừng bé yêu! Hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé.';
-    document.getElementById('view-lecture').dataset.audioText = topicObj.lecture_audio_text || topicObj.lecture_content || '';
+    document.getElementById('lecture-title').textContent = topicObj.lecture_title || topicName;
+    document.getElementById('lecture-content').textContent = topicObj.lecture_content || topicObj.description || 'Chào mừng bé yêu! Hãy chọn một mục nhỏ bên dưới để bắt đầu luyện tập nhé.';
+    document.getElementById('view-lecture').dataset.audioText = topicObj.lecture_audio_text || topicObj.lecture_content || topicObj.description || '';
 
     const groups = [], groupMap = {};
     topicObj.questions.forEach(q => {
@@ -983,11 +1048,45 @@ function selectSubtopic(idx) {
 // ==========================================
 // TIẾN TRÌNH TUẦN: BẢN ĐỒ SVG
 // ==========================================
+function handleNextExamFromReport() {
+    stopSpeaking();
+    if (activeRoadmapContext) {
+        activeRoadmapContext = null;
+        openRoadmap();
+    } else if (activeExamContext) {
+        activeExamContext = null;
+        openExamHub();
+    } else {
+        goHome();
+    }
+}
+
 function openRoadmap() {
     stopSpeaking();
     updateNavTabs("Bản đồ tiến trình tuần", "🗺️", null);
     renderRoadmapSVG();
     switchAppView('view-roadmap');
+}
+
+function wrapCaptionLines(text, maxLen = 24, maxLines = 3) {
+    const words = String(text || '').split(' ');
+    const lines = [''];
+    for (const w of words) {
+        const cur = lines[lines.length - 1];
+        const candidate = (cur + ' ' + w).trim();
+        if (candidate.length <= maxLen) {
+            lines[lines.length - 1] = candidate;
+        } else if (lines.length < maxLines) {
+            lines.push(w);
+        } else {
+            lines[lines.length - 1] = candidate;
+        }
+    }
+    while (lines.length < maxLines) lines.push('');
+    if (lines[maxLines - 1].length > maxLen) {
+        lines[maxLines - 1] = lines[maxLines - 1].slice(0, maxLen - 1) + '…';
+    }
+    return lines.slice(0, maxLines);
 }
 
 function renderRoadmapSVG() {
@@ -1018,8 +1117,17 @@ function renderRoadmapSVG() {
         const cursorCls = isLocked ? "cursor-not-allowed opacity-60" : "cursor-pointer hover:scale-105 transition-transform";
         const animCls = isCurrent ? "node-current" : "";
 
+        const [capLine1, capLine2, capLine3] = wrapCaptionLines(item.desc, 22, 3);
+        const capColor = isLocked ? '#1e293b' : '#7c3aed';
+        const captionHtml = `
+            <text x="${coord.x}" y="${coord.y - 96}" text-anchor="middle" font-size="18" font-weight="700" fill="${capColor}">${escapeHtml(capLine1)}</text>
+            <text x="${coord.x}" y="${coord.y - 76}" text-anchor="middle" font-size="18" font-weight="700" fill="${capColor}">${escapeHtml(capLine2)}</text>
+            <text x="${coord.x}" y="${coord.y - 56}" text-anchor="middle" font-size="18" font-weight="700" fill="${capColor}">${escapeHtml(capLine3)}</text>
+        `;
+
         nodesHtml += `
             <g class="${cursorCls} ${animCls}" onclick="selectRoadmapWeek(${w})" id="svg-node-week-${w}">
+                ${captionHtml}
                 <circle cx="${coord.x}" cy="${coord.y}" r="40" fill="#ffffff" stroke="${strokeColor}" stroke-width="4" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.08))"/>
                 <circle cx="${coord.x}" cy="${coord.y}" r="34" fill="${nodeColor}" opacity="${isLocked ? '0.25' : '0.15'}"/>
                 <text x="${coord.x}" y="${coord.y - 4}" text-anchor="middle" font-size="24">${item.icon || '🌸'}</text>
@@ -1055,9 +1163,10 @@ async function selectRoadmapWeek(weekNum) {
 
     activeRoadmapContext = { week: weekNum, topicId: config.topicIds[0] || 1, chuDe: config.name };
     pendingTopicQuiz = null; activeExamContext = null;
-    updateNavTabs("Tiến trình tuần", "📅", `Tuần ${weekNum}`);
+    const topicLabel = config.name.replace(/^Tuần\s*\d+:\s*/i, '');
+    updateNavTabs("Tiến trình tuần", "📅", `Tuần ${weekNum}`, topicLabel);
 
-    showLoadingOverlay(`Đang bốc 20 câu hỏi Tuần ${weekNum} (tỷ lệ 3:4:3)...`);
+    showLoadingOverlay(`Đang bốc 30 câu hỏi Tuần ${weekNum} (tỷ lệ 3:4:3)...`);
     try {
         await fetchAllTopicsData();
         hideLoadingOverlay();
@@ -1087,15 +1196,28 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
     quizAnsweredLog = []; 
     quizStartTime = Date.now();
 
-    document.getElementById('quiz-session-title').textContent = `Đang học: ${topicName}`;
-
     const topBar = document.getElementById('quiz-top-bar');
     const cardHeader = document.getElementById('quiz-card-header');
     const navPractice = document.getElementById('nav-group-practice');
     const navExam = document.getElementById('nav-group-exam');
 
+    const submitBtn = document.getElementById('btn-submit-quiz');
+    if (submitBtn) {
+        if (activeRoadmapContext) submitBtn.classList.add('hidden');
+        else submitBtn.classList.remove('hidden');
+    }
+
+    const roadmapHistoryBtn = document.getElementById('btn-roadmap-history');
+    if (roadmapHistoryBtn) {
+        if (activeRoadmapContext) { roadmapHistoryBtn.classList.remove('hidden'); roadmapHistoryBtn.classList.add('flex'); }
+        else { roadmapHistoryBtn.classList.add('hidden'); roadmapHistoryBtn.classList.remove('flex'); }
+    }
+
     if (activeRoadmapContext || activeExamContext) {
-        if (topBar) topBar.classList.remove('hidden');
+        if (topBar) {
+            if (activeExamContext) topBar.classList.remove('hidden');
+            else topBar.classList.add('hidden');
+        }
         const timerBox = document.getElementById('quiz-timer-container');
         if (activeExamContext) {
             if (timerBox) timerBox.classList.remove('hidden');
@@ -1127,25 +1249,41 @@ function loadQuestion() {
 
     if (isEvaluationMode) {
         document.getElementById('q-badge-index').textContent = `CÂU ${currentQIndex + 1} / ${activeQuestionsList.length}`;
-        const skillName = SKILL_TAXONOMY[q.skill_tag]?.name || q.sub_topic || 'Kiến thức tổng hợp';
+        const isRoadmap = !!activeRoadmapContext;
+        const skillName = isRoadmap
+            ? (q.sub_topic || 'Kiến thức tổng hợp')
+            : (SKILL_TAXONOMY[q.skill_tag]?.name || q.sub_topic || 'Kiến thức tổng hợp');
         document.getElementById('q-skill-text').textContent = skillName;
-        document.getElementById('q-badge-score').textContent = `(${q.diem ?? 0.5} điểm)`;
+
+        const scoreBadge = document.getElementById('q-badge-score');
+        if (scoreBadge) {
+            if (isRoadmap) {
+                scoreBadge.classList.add('hidden');
+            } else {
+                scoreBadge.classList.remove('hidden');
+                scoreBadge.textContent = `(${q.diem ?? 0.5} điểm)`;
+            }
+        }
     } else {
         const stepEl = document.getElementById('practice-step-text');
         if (stepEl) stepEl.textContent = `Câu ${currentQIndex + 1} / ${activeQuestionsList.length}`;
     }
 
     let mediaHtml = '';
-    if (q.image_url) {
+    if (q.image_url && !activeExamContext) {
         mediaHtml = `<img src="${q.image_url}" alt="minh họa" class="w-14 h-14 md:w-16 md:h-16 object-contain mb-1 floating" onerror="this.remove()">`;
     }
 
     const pText = q.reading_passage;
     const pTitle = q.reading_title;
+    const passageLines = pText ? pText.split('\n').map(l => l.trim()).filter(Boolean) : [];
+    const avgLineLen = passageLines.length ? passageLines.reduce((a, l) => a + l.length, 0) / passageLines.length : 0;
+    const isPoemLike = passageLines.length >= 4 && avgLineLen > 0 && avgLineLen < 35;
+    const useTwoColumns = isPoemLike;
     const passageHtml = pText ? `
         <div class="w-full max-w-3xl bg-pink-50/70 border-2 border-pink-200 rounded-2xl p-3 mb-1.5 text-left shadow-xs">
             ${pTitle ? `<p class="font-black text-pink-700 text-sm md:text-base mb-1">${escapeHtml(pTitle)}</p>` : ''}
-            <p class="text-gray-800 text-sm md:text-base font-bold whitespace-pre-line leading-relaxed">${escapeHtml(pText)}</p>
+            <p class="text-gray-800 text-sm md:text-base font-bold whitespace-pre-line leading-relaxed ${useTwoColumns ? 'md:columns-2 md:gap-6' : ''}">${escapeHtml(pText)}</p>
         </div>` : '';
 
     const practiceSpeakerBtnHtml = !isEvaluationMode ? `
@@ -1157,7 +1295,38 @@ function loadQuestion() {
         </div>
     ` : '';
 
-    let html = `
+    const isLetterListen = q.render_style === 'letter_listen';
+
+    let html;
+    if (isLetterListen) {
+        html = `
+            ${mediaHtml}
+            <div class="w-full max-w-3xl border-2 border-dashed border-pink-200 bg-pink-50/40 rounded-3xl px-4 py-4 md:py-5 flex flex-col items-center text-center mb-3">
+                <div class="text-3xl md:text-4xl mb-1.5 space-x-2">
+                    <span>🎧</span><span>👂</span><span>🌸</span>
+                </div>
+                <p class="text-sm md:text-base lg:text-lg font-black text-rose-600 leading-snug">${escapeHtml(q.question_text)}</p>
+                ${practiceSpeakerBtnHtml}
+            </div>
+
+            <div class="w-full max-w-3xl flex flex-wrap items-center justify-center gap-3 mt-1">
+        `;
+        q.options.forEach(opt => {
+            html += `
+                <button data-opt="${escapeHtml(opt)}" onclick="checkAnswer('${opt.replace(/'/g, "\\'")}')" class="option-btn min-w-[140px] px-6 py-3 bg-white hover:bg-emerald-50 border-2 border-emerald-400 rounded-full font-black text-emerald-700 text-base md:text-lg transition-all pastel-btn shadow-xs">
+                    ${escapeHtml(opt)}
+                </button>`;
+        });
+        html += `</div>`;
+        if (q.mascot_text) {
+            html += `
+                <div class="mt-4 inline-flex items-center space-x-1.5 bg-pink-50 border border-pink-200 rounded-full px-3.5 py-1.5">
+                    <span>🐰</span>
+                    <span class="text-xs md:text-sm font-extrabold text-rose-600">${escapeHtml(q.mascot_text)}</span>
+                </div>`;
+        }
+    } else {
+        html = `
         ${mediaHtml}
         ${passageHtml}
         <div class="flex flex-col items-center justify-center max-w-3xl text-center px-2 mb-0.5">
@@ -1191,7 +1360,8 @@ function loadQuestion() {
                 </button>`;
         }
     });
-    html += `</div>`;
+        html += `</div>`;
+    }
 
     document.getElementById('question-box').innerHTML = html;
 
@@ -1223,6 +1393,23 @@ function restoreQuestionState(q) {
                 b.className = "option-btn w-full p-2.5 md:p-3 bg-white hover:bg-pink-50/50 border border-pink-200 rounded-2xl font-extrabold text-gray-800 text-left transition-all flex items-center justify-between text-sm md:text-base shadow-xs";
                 if (badge) badge.className = "opt-badge w-7 h-7 rounded-xl bg-pink-100 text-pink-600 flex items-center justify-center font-black text-sm shrink-0";
                 if (iconSpan) iconSpan.innerHTML = '';
+            }
+        });
+        return;
+    }
+
+    if (!!activeRoadmapContext) {
+        if (completedAnswer === undefined) return;
+        const isCorrect = completedAnswer === q.answer;
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.disabled = true;
+            const bOpt = b.getAttribute('data-opt');
+            if (bOpt === q.answer) {
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
+                b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
+            } else if (!isCorrect && bOpt === completedAnswer) {
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
+                b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
             }
         });
         return;
@@ -1284,6 +1471,7 @@ function updateNavButtons() {
 function checkAnswer(selectedOpt) {
     const q = activeQuestionsList[currentQIndex];
     const isExam = !!activeExamContext;
+    const isRoadmap = !!activeRoadmapContext;
 
     // RIÊNG ĐỀ THI: YÊN TĨNH TUYỆT ĐỐI, SÁNG VIỀN HỒNG, KHÔNG PHÁT ÂM THANH
     if (isExam) {
@@ -1309,7 +1497,47 @@ function checkAnswer(selectedOpt) {
         return;
     }
 
-    // CHẾ ĐỘ LUYỆN TẬP
+    // RIÊNG TIẾN TRÌNH TUẦN: CHỈ ĐƯỢC CHỌN 1 LẦN DUY NHẤT ĐỂ GHI NHẬN ĐÚNG/SAI CHÍNH XÁC
+    if (isRoadmap) {
+        if (userAnswers[currentQIndex] !== undefined) return;
+
+        const isCorrect = selectedOpt === q.answer;
+        userAnswers[currentQIndex] = selectedOpt;
+
+        if (isCorrect) {
+            score += (q.diem ?? 0.5);
+            starGreenCount++;
+            document.getElementById('star-green-count').textContent = starGreenCount;
+        } else {
+            starRedCount++;
+            document.getElementById('star-red-count').textContent = starRedCount;
+        }
+
+        document.querySelectorAll('.option-btn').forEach(b => {
+            b.disabled = true;
+            const bOpt = b.getAttribute('data-opt');
+            if (bOpt === q.answer) {
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
+                b.classList.add('bg-green-100', 'border-green-400', 'text-green-800');
+            } else if (bOpt === selectedOpt) {
+                b.classList.remove('bg-pink-50/40', 'border-pink-200');
+                b.classList.add('bg-red-200', 'border-red-500', 'text-red-900');
+            }
+        });
+
+        if (isCorrect) {
+            playAudio('correct');
+            confetti({ particleCount: 30, spread: 55, origin: { y: 0.7 } });
+            setTimeout(() => speakVietnamese(`${q.answer}`), 180);
+        } else {
+            playAudio('wrong');
+        }
+
+        updateQuizPalletUI();
+        return;
+    }
+
+    // CHẾ ĐỘ LUYỆN TẬP TỰ DO
     const isCorrect = selectedOpt === q.answer;
     if (userAnswers[currentQIndex] !== undefined) return;
 
@@ -1429,6 +1657,7 @@ function showResultScreen() {
             question_id: q.question_id,
             question_text: q.question_text,
             skill_tag: q.skill_tag || 'C1',
+            source_topic_id: q.source_topic_id,
             diem: q.diem ?? 0.5,
             isCorrect,
             dap_an_chon: studentAns || '',
@@ -1440,15 +1669,33 @@ function showResultScreen() {
     const totalQ = activeQuestionsList.length;
     const percent = Math.round((correctCount / totalQ) * 100);
 
+    // Tiến trình tuần: điểm tính riêng theo công thức 10/tổng số câu (không dùng điểm từng câu để tránh lệch)
+    const displayScore = activeRoadmapContext
+        ? Math.round((correctCount * 10 / totalQ) * 10) / 10
+        : score;
+
     const examBadgeText = activeExamContext ? activeExamContext.examTitle : (activeRoadmapContext ? activeRoadmapContext.chuDe : 'Bài luyện tập chủ đề');
     document.getElementById('report-exam-badge').textContent = examBadgeText;
     document.getElementById('report-student-display').textContent = `Học sinh: ${currentUser?.hoTen || 'Khách'}`;
     const durationStr = quizStartTime ? formatDuration(Date.now() - quizStartTime) : '35 phút';
     document.getElementById('report-meta-display').textContent = `Lớp: ${currentUser?.lop || '1A'} | Mã số: ${currentUser?.maHS || 'KHACH'} | Thời gian: ${durationStr}`;
-    document.getElementById('report-total-score-val').textContent = score.toFixed(1);
+    document.getElementById('report-total-score-val').textContent = displayScore.toFixed(1);
     document.getElementById('report-correct-ratio-val').textContent = `${correctCount}/${totalQ}`;
 
     renderReportTopicsBreakdown();
+
+    const nextActionLabel = document.getElementById('report-next-action-label');
+    if (nextActionLabel) {
+        nextActionLabel.textContent = activeRoadmapContext ? '🔙 Quay lại tiến trình tuần' : '🚀 Làm đề thi tiếp theo';
+    }
+
+    const historyBtn = document.getElementById('report-history-btn');
+    if (historyBtn) {
+        const targetSheet = activeRoadmapContext
+            ? 'LichSuTienTrinhTuan'
+            : (examFileMap[activeExamContext?.categoryKey]?.sheet || 'LichSuBaiThi_HK1');
+        historyBtn.setAttribute('onclick', `openHistoryModal('${targetSheet}')`);
+    }
 
     if (percent >= 80) {
         confetti({ particleCount: 130, spread: 85, origin: { y: 0.6 } });
@@ -1457,7 +1704,7 @@ function showResultScreen() {
 
     if (currentUser && !currentUser.isGuest) {
         if (activeExamContext) saveExamResultToSheet();
-        else if (activeRoadmapContext) saveWeeklyProgressToSheet(percent, starCountFromPercent(percent));
+        else if (activeRoadmapContext) saveWeeklyProgressToSheet(percent, starCountFromPercent(percent), displayScore);
     }
 }
 
@@ -1472,6 +1719,7 @@ function renderReportTopicsBreakdown() {
     const container = document.getElementById('report-topics-list');
     if (!container) return;
 
+    const isRoadmap = !!activeRoadmapContext;
     const skillKeys = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6'];
     const skillStats = {};
     skillKeys.forEach(k => {
@@ -1479,9 +1727,14 @@ function renderReportTopicsBreakdown() {
     });
 
     activeQuestionsList.forEach((q, idx) => {
-        let rawTag = String(q.skill_tag || 'C1').toUpperCase();
-        let m = rawTag.match(/C([1-6])/);
-        let tag = m ? 'C' + m[1] : 'C1';
+        let tag;
+        if (isRoadmap) {
+            tag = TOPIC_TO_SKILL[q.source_topic_id] || 'C1';
+        } else {
+            let rawTag = String(q.skill_tag || 'C1').toUpperCase();
+            let m = rawTag.match(/C([1-6])/);
+            tag = m ? 'C' + m[1] : 'C1';
+        }
 
         if (!skillStats[tag]) skillStats[tag] = { total: 0, correct: 0, maxScore: 0, earnedScore: 0 };
         skillStats[tag].total++;
@@ -1495,11 +1748,16 @@ function renderReportTopicsBreakdown() {
     let html = '';
     skillKeys.forEach(k => {
         const data = skillStats[k];
-        const pct = data.maxScore > 0 ? Math.round((data.earnedScore / data.maxScore) * 100) : 0;
+        const pct = isRoadmap
+            ? (data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0)
+            : (data.maxScore > 0 ? Math.round((data.earnedScore / data.maxScore) * 100) : 0);
         const isPassed = pct >= 50;
         const badgeClass = isPassed ? 'bg-amber-100 text-amber-800 border border-amber-200' : 'bg-rose-50 text-rose-700 border border-rose-200';
         const badgeText = isPassed ? 'Đạt yêu cầu' : 'Cần luyện tập thêm';
         const barColor = isPassed ? 'bg-gradient-to-r from-amber-400 to-orange-400' : 'bg-gradient-to-r from-pink-400 to-rose-400';
+        const scoreLine = isRoadmap
+            ? `<span>Số câu đúng: <strong class="text-pink-600">${data.correct}/${data.total} câu</strong></span>`
+            : `<span>Điểm đạt: <strong class="text-pink-600">${data.earnedScore.toFixed(1)} / ${data.maxScore.toFixed(1)}đ</strong></span>`;
 
         html += `
             <div class="bg-pink-50/40 border border-pink-100 rounded-2xl p-3 flex flex-col justify-between space-y-2">
@@ -1508,7 +1766,7 @@ function renderReportTopicsBreakdown() {
                     <span class="px-2.5 py-0.5 rounded-full text-[11px] font-extrabold ${badgeClass}">${badgeText}</span>
                 </div>
                 <div class="flex items-center justify-between text-xs font-bold text-slate-600">
-                    <span>Điểm đạt: <strong class="text-pink-600">${data.earnedScore.toFixed(1)} / ${data.maxScore.toFixed(1)}đ</strong></span>
+                    ${scoreLine}
                     <span class="font-math font-black">${pct}%</span>
                 </div>
                 <div class="w-full bg-pink-100 rounded-full h-2 overflow-hidden">
@@ -1518,15 +1776,6 @@ function renderReportTopicsBreakdown() {
         `;
     });
     container.innerHTML = html;
-
-    const adviceBox = document.getElementById('report-pedagogy-advice');
-    if (adviceBox) {
-        let adviceHtml = '';
-        skillKeys.forEach(k => {
-            adviceHtml += `<div class="flex items-start gap-1.5"><i class="fa-solid fa-chevron-right text-amber-600 mt-1 text-[10px]"></i><span><strong>${SKILL_TAXONOMY[k].name}:</strong> ${SKILL_TAXONOMY[k].advice}</span></div>`;
-        });
-        adviceBox.innerHTML = adviceHtml;
-    }
 }
 
 function openReviewWrongModal() {
@@ -1612,11 +1861,21 @@ async function saveExamResultToSheet() {
     try { await callAppsScript('saveExamResult', payload); } catch (e) {}
 }
 
-async function saveWeeklyProgressToSheet(percent, starCount) {
+async function saveWeeklyProgressToSheet(percent, starCount, scoreVal) {
     const { week, topicId, chuDe } = activeRoadmapContext;
     const thoiGianLamBai = quizStartTime ? formatDuration(Date.now() - quizStartTime) : '';
-    const scoreThang10 = ((score / activeQuestionsList.length) * 10).toFixed(1);
+    const scoreThang10 = (scoreVal ?? ((score / activeQuestionsList.length) * 10)).toFixed(1);
 
+    // Đếm CHÍNH XÁC số câu đúng / tổng số câu của từng nhóm kỹ năng, dựa theo chủ đề
+    // nguồn thật của mỗi câu hỏi (source_topic_id) — không ước lượng chia đều.
+    const skillCorrect = { C1: 0, C2: 0, C3: 0, C4: 0, C5: 0, C6: 0 };
+    const skillTotal = { C1: 0, C2: 0, C3: 0, C4: 0, C5: 0, C6: 0 };
+    quizAnsweredLog.forEach(item => {
+        const tag = TOPIC_TO_SKILL[item.source_topic_id] || item.skill_tag || 'C1';
+        if (skillTotal[tag] === undefined) return;
+        skillTotal[tag]++;
+        if (item.isCorrect) skillCorrect[tag]++;
+    });
     const payload = {
         student_id: currentUser.maHS,
         maHS: currentUser.maHS,
@@ -1633,6 +1892,12 @@ async function saveWeeklyProgressToSheet(percent, starCount) {
         soCauDung: quizAnsweredLog.filter(x => x.isCorrect).length,
         percent,
         thoiGianLamBai,
+        C1_NguAm: skillCorrect.C1, C1_NguAm_Tong: skillTotal.C1,
+        C2_ChinhTa: skillCorrect.C2, C2_ChinhTa_Tong: skillTotal.C2,
+        C3_VonTu: skillCorrect.C3, C3_VonTu_Tong: skillTotal.C3,
+        C4_CuPhap: skillCorrect.C4, C4_CuPhap_Tong: skillTotal.C4,
+        C5_DocHieu: skillCorrect.C5, C5_DocHieu_Tong: skillTotal.C5,
+        C6_TuDuyIQ: skillCorrect.C6, C6_TuDuyIQ_Tong: skillTotal.C6,
         wrongQuestions: quizWrongAnswers
     };
 
@@ -1691,9 +1956,35 @@ function closeHistoryModal() {
 // ==========================================
 // BIỂU ĐỒ THANH NGANG & BẢNG KÈM HÀNG TRUNG BÌNH
 // ==========================================
+function getSkillCell(row, skillKey) {
+    const taxo = SKILL_TAXONOMY[skillKey];
+    const correct = Number(row[taxo.sheetCol]);
+    const total = Number(row[taxo.totalCol]);
+    if (!row[taxo.totalCol] || isNaN(total) || total <= 0) return null;
+    return { correct: isNaN(correct) ? 0 : correct, total };
+}
+
+function formatDateOnly(value) {
+    if (!value) return '--';
+    const d = new Date(value);
+    if (isNaN(d.getTime())) return String(value).split('T')[0] || String(value);
+    return d.toLocaleDateString('vi-VN');
+}
+
+function formatDateShort(value) {
+    const d = value ? new Date(value) : null;
+    if (!d || isNaN(d.getTime())) return '';
+    return `${String(d.getDate()).padStart(2, '0')}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+}
+
 function renderHistoryReport(rows, sheetName) {
-    const labels = rows.map((r, i) => r.deSo ? `Đề ${r.deSo}` : `Tuần ${r.tuan || i + 1}`);
-    const scores = rows.map(r => Number(r.score || r.tongDiem || ((r.soCauDung / (r.tongCauHoi || 20)) * 10).toFixed(1)));
+    const isWeekly = sheetName === 'LichSuTienTrinhTuan';
+    const labels = rows.map((r, i) => {
+        const dm = formatDateShort(r.Timestamp || r.ngayLam);
+        const label = isWeekly ? `Tuần ${r.tuan || i + 1}` : (r.deSo ? `Đề ${r.deSo}` : `Tuần ${r.tuan || i + 1}`);
+        return dm ? `${dm} ${label}` : label;
+    });
+    const scores = rows.map(r => Number(r.score || r.tongDiem || ((r.soCauDung / (r.tongCauHoi || 30)) * 10).toFixed(1)));
 
     const ctxLine = document.getElementById('progressChartCanvas').getContext('2d');
     if (histLineChartInstance) histLineChartInstance.destroy();
@@ -1721,17 +2012,46 @@ function renderHistoryReport(rows, sheetName) {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-                y: { min: 0, max: 10.5, ticks: { stepSize: 2 } },
-                x: { grid: { display: false } }
+                y: {
+                    min: 0, max: 10.5,
+                    ticks: { stepSize: 2, color: '#000000', font: { family: 'Quicksand', weight: 'bold' } }
+                },
+                x: {
+                    grid: { display: false },
+                    ticks: {
+                        color: '#000000',
+                        font: { family: 'Quicksand', weight: 'bold', size: 11 },
+                        maxRotation: 90,
+                        minRotation: 90
+                    }
+                }
             },
             plugins: { legend: { display: false } }
         }
     });
 
     const skillKeys = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6'];
-    const skillAverages = { C1: 85, C2: 78, C3: 92, C4: 70, C5: 80, C6: 75 };
+    const skillAverages = isWeekly
+        ? { C1: 0, C2: 0, C3: 0, C4: 0, C5: 0, C6: 0 }
+        : { C1: 85, C2: 78, C3: 92, C4: 70, C5: 80, C6: 75 };
+    const touchedSkills = [];
 
-    if (rows.length) {
+    if (rows.length && isWeekly) {
+        // Tiến trình tuần: % = tổng số câu đúng / tổng số câu đã làm THẬT của nhóm kỹ năng đó
+        skillKeys.forEach((k) => {
+            let sumCorrect = 0, sumTotal = 0;
+            rows.forEach(r => {
+                const cell = getSkillCell(r, k);
+                if (!cell) return;
+                sumCorrect += cell.correct;
+                sumTotal += cell.total;
+            });
+            if (sumTotal > 0) {
+                skillAverages[k] = Math.min(100, Math.round((sumCorrect / sumTotal) * 100));
+                touchedSkills.push(k);
+            }
+        });
+    } else if (rows.length) {
         skillKeys.forEach((k) => {
             const colName = SKILL_TAXONOMY[k].sheetCol;
             const vals = rows.map(r => {
@@ -1741,6 +2061,7 @@ function renderHistoryReport(rows, sheetName) {
             const sum = vals.reduce((a, b) => a + b, 0);
             if (vals.length > 0) {
                 skillAverages[k] = Math.min(100, Math.round((sum / (vals.length * 1.5)) * 100)) || 75;
+                touchedSkills.push(k);
             }
         });
     }
@@ -1769,55 +2090,100 @@ function renderHistoryReport(rows, sheetName) {
                 x: {
                     min: 0,
                     max: 100,
-                    ticks: { stepSize: 20, callback: (v) => v + '%' },
+                    ticks: { stepSize: 20, callback: (v) => v + '%', color: '#000000', font: { family: 'Quicksand', weight: 'bold' } },
                     grid: { color: 'rgba(251, 207, 232, 0.3)' }
                 },
                 y: {
                     grid: { display: false },
-                    ticks: { font: { family: 'Quicksand', weight: 'bold', size: 11 }, color: '#1e293b' }
+                    ticks: { font: { family: 'Quicksand', weight: 'bold', size: 14 }, color: '#000000' }
                 }
             },
             plugins: {
                 legend: { display: false },
                 tooltip: { callbacks: { label: (ctx) => ` Độ thành thạo: ${ctx.raw}%` } }
             }
-        }
+        },
+        plugins: [{
+            id: 'barValueLabels',
+            afterDatasetsDraw(chart) {
+                const { ctx } = chart;
+                chart.data.datasets[0].data.forEach((val, i) => {
+                    const meta = chart.getDatasetMeta(0).data[i];
+                    if (!meta) return;
+                    ctx.save();
+                    ctx.font = 'bold 12px Quicksand, sans-serif';
+                    ctx.fillStyle = '#1e293b';
+                    ctx.textAlign = 'left';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(`${val}%`, meta.x + 6, meta.y);
+                    ctx.restore();
+                });
+            }
+        }]
     });
 
-    renderPedagogicalEvaluation(rows, skillAverages);
-    renderHistoryTable(rows);
+    renderPedagogicalEvaluation(rows, skillAverages, touchedSkills);
+    renderHistoryTable(rows, sheetName);
 }
 
-function renderPedagogicalEvaluation(rows, skillAverages) {
+function renderPedagogicalEvaluation(rows, skillAverages, touchedSkills) {
     const box = document.getElementById('pedagogical-evaluation-box');
     if (!box) return;
 
     const studentName = getStudentFirstName();
     const count = rows.length;
-    const avgScore = count ? (rows.reduce((acc, r) => acc + Number(r.score || r.tongDiem || 0), 0) / count).toFixed(1) : "0.0";
+    const avgScore = count ? (rows.reduce((acc, r) => acc + Number(r.score || r.tongDiem || 0), 0) / count) : 0;
+    const avgScoreStr = avgScore.toFixed(1);
 
-    const sortedSkills = Object.keys(skillAverages).sort((a, b) => skillAverages[b] - skillAverages[a]);
-    const top1 = SKILL_TAXONOMY[sortedSkills[0]].name;
-    const top2 = SKILL_TAXONOMY[sortedSkills[1]].name;
-    const weak1 = sortedSkills[sortedSkills.length - 1];
-    const weakName = SKILL_TAXONOMY[weak1].name;
-    const weakAdvice = SKILL_TAXONOMY[weak1].advice;
+    // 1. Đánh giá tổng quan — phải khớp thật với điểm số, không khen chung chung bất kể kết quả
+    let overviewText;
+    if (avgScore >= 8) {
+        overviewText = `Con nắm rất vững kiến thức trọng tâm, làm bài nghiêm túc và đạt kết quả xuất sắc.`;
+    } else if (avgScore >= 6.5) {
+        overviewText = `Con nắm khá tốt kiến thức trọng tâm, tuy nhiên vẫn còn một vài chỗ cần luyện thêm để đạt kết quả cao hơn.`;
+    } else if (avgScore >= 5) {
+        overviewText = `Con đã nắm được kiến thức cơ bản nhưng chưa thật chắc, cần ôn luyện thêm để tiến bộ hơn.`;
+    } else {
+        overviewText = `Con còn gặp khó khăn với nội dung này, ba mẹ nên đồng hành ôn luyện thêm cùng con nhé.`;
+    }
+
+    // 2 & 3. Thế mạnh / điểm cần khắc phục — CHỈ lấy từ những nhóm bé đã thực sự luyện tập,
+    // tuyệt đối không nhận xét về nhóm bé chưa hề động tới (tránh nói sai với thực tế).
+    const validSkills = (touchedSkills && touchedSkills.length) ? touchedSkills : [];
+    const sortedValid = [...validSkills].sort((a, b) => skillAverages[b] - skillAverages[a]);
+
+    let strengthHtml, weaknessHtml;
+    if (sortedValid.length >= 2) {
+        const top1 = SKILL_TAXONOMY[sortedValid[0]].name;
+        const top2 = SKILL_TAXONOMY[sortedValid[1]].name;
+        strengthHtml = `Con đạt độ thành thạo tốt ở các nhóm: <strong>${escapeHtml(top1)}</strong> (${skillAverages[sortedValid[0]]}%) và <strong>${escapeHtml(top2)}</strong> (${skillAverages[sortedValid[1]]}%).`;
+
+        const weak1 = sortedValid[sortedValid.length - 1];
+        weaknessHtml = `Con cần luyện thêm ở mảng: <strong>${escapeHtml(SKILL_TAXONOMY[weak1].name)}</strong> (${skillAverages[weak1]}%). ${escapeHtml(SKILL_TAXONOMY[weak1].advice)}`;
+    } else if (sortedValid.length === 1) {
+        const only1 = sortedValid[0];
+        strengthHtml = `Con đạt ${skillAverages[only1]}% ở nhóm <strong>${escapeHtml(SKILL_TAXONOMY[only1].name)}</strong> — mảng duy nhất bé đã luyện tập tới thời điểm này.`;
+        weaknessHtml = `Bé mới luyện tập 1 nhóm kỹ năng, cô chưa đủ dữ liệu để đánh giá toàn diện. Ba mẹ khuyến khích con hoàn thành thêm các tuần khác nhé!`;
+    } else {
+        strengthHtml = `Bé chưa có đủ dữ liệu luyện tập để đánh giá thế mạnh.`;
+        weaknessHtml = `Bé chưa có đủ dữ liệu luyện tập để đánh giá điểm cần khắc phục.`;
+    }
 
     box.innerHTML = `
         <div class="bg-white/80 p-3 rounded-xl border border-amber-200">
             <span class="text-amber-700 font-extrabold block mb-0.5">🌟 1. Đánh giá tổng quan năng lực & xu hướng tiến bộ:</span>
-            <p class="text-gray-700">Học sinh <strong>${escapeHtml(currentUser.hoTen)}</strong> đã hoàn thành <strong>${count} bài kiểm tra</strong> với điểm số trung bình tích lũy đạt <strong class="text-pink-600">${avgScore}/10 điểm</strong>. Con nắm vững các kiến thức trọng tâm, có thái độ làm bài nghiêm túc và duy trì phong độ rất tốt.</p>
+            <p class="text-gray-700">Học sinh <strong>${escapeHtml(currentUser.hoTen)}</strong> đã hoàn thành <strong>${count} bài kiểm tra</strong> với điểm số trung bình tích lũy đạt <strong class="text-pink-600">${avgScoreStr}/10 điểm</strong>. ${overviewText}</p>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
             <div class="bg-emerald-50/70 p-3 rounded-xl border border-emerald-200">
                 <span class="text-emerald-700 font-extrabold block mb-0.5">✅ 2. Khen ngợi & thế mạnh nổi trội:</span>
-                <p class="text-gray-700">Con đạt độ thành thạo rất cao ở các nhóm: <strong>${escapeHtml(top1)}</strong> và <strong>${escapeHtml(top2)}</strong>. Con nhận biết nhanh, tự tin và xử lý các câu hỏi linh hoạt.</p>
+                <p class="text-gray-700">${strengthHtml}</p>
             </div>
 
             <div class="bg-rose-50/70 p-3 rounded-xl border border-rose-200">
                 <span class="text-rose-700 font-extrabold block mb-0.5">⚠️ 3. Điểm cần lưu ý & khắc phục:</span>
-                <p class="text-gray-700">Con đôi lúc còn nhầm lẫn ở mảng: <strong>${escapeHtml(weakName)}</strong>. ${escapeHtml(weakAdvice)}</p>
+                <p class="text-gray-700">${weaknessHtml}</p>
             </div>
         </div>
 
@@ -1828,7 +2194,7 @@ function renderPedagogicalEvaluation(rows, skillAverages) {
     `;
 }
 
-function renderHistoryTable(rows) {
+function renderHistoryTable(rows, sheetName) {
     const tbody = document.getElementById('hist-table-body');
     if (!tbody) return;
 
@@ -1837,6 +2203,9 @@ function renderHistoryTable(rows) {
         return;
     }
 
+    const isWeekly = sheetName === 'LichSuTienTrinhTuan';
+    const skillKeys = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6'];
+
     const getScoreVal = (r, num, colName) => {
         const val = r[`diemC${num}`] ?? r[colName] ?? r[`diem_c${num}`] ?? r[`C${num}`];
         return (val !== undefined && val !== null && val !== '') ? Number(val) : 0;
@@ -1844,58 +2213,91 @@ function renderHistoryTable(rows) {
 
     const totalRows = rows.length;
     let sumTongDiem = 0;
-    const sumC = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
-
-    rows.forEach(r => {
-        sumTongDiem += Number(r.tongDiem || r.score || 0);
-        for (let i = 1; i <= 6; i++) {
-            sumC[i] += getScoreVal(r, i, SKILL_TAXONOMY[`C${i}`].sheetCol);
-        }
-    });
-
+    rows.forEach(r => { sumTongDiem += Number(r.tongDiem || r.score || 0); });
     const avgTong = (sumTongDiem / totalRows).toFixed(1);
-    const avgC1 = (sumC[1] / totalRows).toFixed(1);
-    const avgC2 = (sumC[2] / totalRows).toFixed(1);
-    const avgC3 = (sumC[3] / totalRows).toFixed(1);
-    const avgC4 = (sumC[4] / totalRows).toFixed(1);
-    const avgC5 = (sumC[5] / totalRows).toFixed(1);
-    const avgC6 = (sumC[6] / totalRows).toFixed(1);
 
-    let html = `
+    let summaryCells = '';
+    let bodyRows = '';
+
+    if (isWeekly) {
+        // Tổng hợp: % = tổng câu đúng / tổng câu đã làm THẬT của đúng nhóm kỹ năng đó
+        const agg = {};
+        skillKeys.forEach(k => { agg[k] = { correct: 0, total: 0 }; });
+        rows.forEach(r => {
+            skillKeys.forEach(k => {
+                const cell = getSkillCell(r, k);
+                if (!cell) return;
+                agg[k].correct += cell.correct;
+                agg[k].total += cell.total;
+            });
+        });
+        skillKeys.forEach(k => {
+            const a = agg[k];
+            summaryCells += `<td class="py-2 px-1">${a.total > 0 ? Math.round((a.correct / a.total) * 100) + '%' : '--'}</td>`;
+        });
+
+        rows.forEach((r, idx) => {
+            const itemDiem = r.tongDiem || r.score || '--';
+            const dateStr = formatDateOnly(r.Timestamp || r.ngayLam);
+            const durationStr = r.thoiGianLamBai || '--';
+
+            let skillCells = '';
+            skillKeys.forEach(k => {
+                const cell = getSkillCell(r, k);
+                if (!cell) { skillCells += `<td class="py-2 px-1 text-gray-300">--</td>`; return; }
+                const pct = cell.total > 0 ? Math.round((cell.correct / cell.total) * 100) : 0;
+                skillCells += `<td class="py-2 px-1">${cell.correct}/${cell.total} <span class="text-gray-400">(${pct}%)</span></td>`;
+            });
+
+            bodyRows += `
+                <tr class="hover:bg-pink-50/30 transition-colors">
+                    <td class="py-2.5 px-2">${idx + 1}</td>
+                    <td class="py-2.5 px-2 font-black">Tuần ${r.tuan || (idx + 1)}</td>
+                    <td class="py-2.5 px-2 font-black text-rose-600">${itemDiem}</td>
+                    ${skillCells}
+                    <td class="py-2.5 px-2 text-gray-500">${dateStr}</td>
+                    <td class="py-2.5 px-2 text-gray-500">${durationStr}</td>
+                </tr>
+            `;
+        });
+    } else {
+        skillKeys.forEach((k, i) => {
+            const sum = rows.reduce((acc, r) => acc + getScoreVal(r, i + 1, SKILL_TAXONOMY[k].sheetCol), 0);
+            summaryCells += `<td class="py-2 px-1">${(sum / totalRows).toFixed(1)}</td>`;
+        });
+
+        rows.forEach((r, idx) => {
+            const itemDiem = r.tongDiem || r.score || '--';
+            const dateStr = formatDateOnly(r.Timestamp || r.ngayLam);
+            const durationStr = r.thoiGianLamBai || '--';
+
+            bodyRows += `
+                <tr class="hover:bg-pink-50/30 transition-colors">
+                    <td class="py-2.5 px-2">${idx + 1}</td>
+                    <td class="py-2.5 px-2 font-black">${r.deSo ? `Đề ${r.deSo}` : `Tuần ${r.tuan || (idx + 1)}`}</td>
+                    <td class="py-2.5 px-2 font-black text-rose-600">${itemDiem}</td>
+                    <td class="py-2 px-1">${getScoreVal(r, 1, 'C1_NguAm')}</td>
+                    <td class="py-2 px-1">${getScoreVal(r, 2, 'C2_ChinhTa')}</td>
+                    <td class="py-2 px-1">${getScoreVal(r, 3, 'C3_VonTu')}</td>
+                    <td class="py-2 px-1">${getScoreVal(r, 4, 'C4_CuPhap')}</td>
+                    <td class="py-2 px-1">${getScoreVal(r, 5, 'C5_DocHieu')}</td>
+                    <td class="py-2 px-1">${getScoreVal(r, 6, 'C6_TuDuyIQ')}</td>
+                    <td class="py-2.5 px-2 text-gray-500">${dateStr}</td>
+                    <td class="py-2.5 px-2 text-gray-500">${durationStr}</td>
+                </tr>
+            `;
+        });
+    }
+
+    const html = `
         <tr class="bg-amber-100/90 text-amber-950 font-black border-b-2 border-amber-200">
             <td class="py-2.5 px-2" colspan="2">Điểm trung bình</td>
             <td class="py-2.5 px-2 text-rose-600">${avgTong}</td>
-            <td class="py-2 px-1">${avgC1}</td>
-            <td class="py-2 px-1">${avgC2}</td>
-            <td class="py-2 px-1">${avgC3}</td>
-            <td class="py-2 px-1">${avgC4}</td>
-            <td class="py-2 px-1">${avgC5}</td>
-            <td class="py-2 px-1">${avgC6}</td>
+            ${summaryCells}
             <td class="py-2.5 px-2" colspan="2">--</td>
         </tr>
+        ${bodyRows}
     `;
-
-    rows.forEach((r, idx) => {
-        const itemDiem = r.tongDiem || r.score || '--';
-        const dateStr = r.Timestamp ? r.Timestamp.split('T')[0] : (r.ngayLam || new Date().toLocaleDateString('vi-VN'));
-        const durationStr = r.thoiGianLamBai || '--';
-
-        html += `
-            <tr class="hover:bg-pink-50/30 transition-colors">
-                <td class="py-2.5 px-2">${idx + 1}</td>
-                <td class="py-2.5 px-2 font-black">${r.deSo ? `Đề ${r.deSo}` : `Tuần ${r.tuan || (idx + 1)}`}</td>
-                <td class="py-2.5 px-2 font-black text-rose-600">${itemDiem}</td>
-                <td class="py-2 px-1">${getScoreVal(r, 1, 'C1_NguAm')}</td>
-                <td class="py-2 px-1">${getScoreVal(r, 2, 'C2_ChinhTa')}</td>
-                <td class="py-2 px-1">${getScoreVal(r, 3, 'C3_VonTu')}</td>
-                <td class="py-2 px-1">${getScoreVal(r, 4, 'C4_CuPhap')}</td>
-                <td class="py-2 px-1">${getScoreVal(r, 5, 'C5_DocHieu')}</td>
-                <td class="py-2 px-1">${getScoreVal(r, 6, 'C6_TuDuyIQ')}</td>
-                <td class="py-2.5 px-2 text-gray-500">${dateStr}</td>
-                <td class="py-2.5 px-2 text-gray-500">${durationStr}</td>
-            </tr>
-        `;
-    });
     tbody.innerHTML = html;
 }
 
@@ -2048,14 +2450,39 @@ function updateQuizPalletUI() {
     if (!container) return;
     if (!activeQuestionsList || !activeQuestionsList.length) { container.innerHTML = ''; return; }
 
+    const isRoadmap = !!activeRoadmapContext;
+    const isExam = !!activeExamContext;
+    const total = activeQuestionsList.length;
+
+    if (isExam) {
+        container.className = `grid gap-1 max-w-xl mx-2`;
+        container.style.gridTemplateColumns = `repeat(${total}, minmax(0, 1fr))`;
+    } else {
+        container.className = 'grid grid-cols-10 gap-1.5 max-w-xl mx-2';
+        container.style.gridTemplateColumns = '';
+    }
+
+    const btnSize = isExam ? 'w-6 h-6 md:w-7 md:h-7 text-[10px] md:text-xs' : 'w-8 h-8 text-xs';
+
     let html = '';
     activeQuestionsList.forEach((q, idx) => {
-        const isAnswered = userAnswers[idx] !== undefined;
+        const answer = userAnswers[idx];
+        const isAnswered = answer !== undefined;
         const isCurrent = idx === currentQIndex;
-        let cls = 'bg-white text-gray-500 border-pink-200';
-        if (isAnswered) cls = 'bg-emerald-400 text-white border-emerald-500 shadow-sm';
-        if (isCurrent) cls += ' ring-2 ring-purple-500 scale-110';
-        html += `<button onclick="jumpToQuestion(${idx})" class="w-7 h-7 shrink-0 rounded-lg border-2 text-[11px] font-black transition-all ${cls}">${idx + 1}</button>`;
+        let cls = 'bg-white text-pink-400 border-pink-200 hover:bg-pink-50';
+
+        if (isAnswered) {
+            if (isRoadmap) {
+                const isCorrect = answer === q.answer;
+                cls = isCorrect
+                    ? 'bg-emerald-400 text-white border-emerald-500 hover:bg-emerald-500'
+                    : 'bg-red-200 text-red-800 border-red-400 hover:bg-red-300';
+            } else {
+                cls = 'bg-pink-400 text-white border-pink-500 hover:bg-pink-500';
+            }
+        }
+        if (isCurrent) cls = 'bg-gradient-to-br from-pink-500 to-purple-500 text-white border-pink-500 shadow-md';
+        html += `<button onclick="jumpToQuestion(${idx})" class="${btnSize} shrink-0 rounded-xl border-2 font-black flex items-center justify-center transition-colors duration-150 ${cls}">${idx + 1}</button>`;
     });
     container.innerHTML = html;
 }

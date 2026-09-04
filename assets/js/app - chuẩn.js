@@ -166,7 +166,7 @@ function normalizeQuestion(q) {
     if (!q) return null;
     return {
         question_id: q.id ?? q.question_id ?? 0,
-        sub_topic: String(q.sub ?? q.sub_topic ?? 'Câu hỏi chung').trim(),
+        sub_topic: q.sub ?? q.sub_topic ?? 'Câu hỏi chung',
         week: q.week ?? q.w ?? null,
         question_text: q.q ?? q.question_text ?? '',
         options: Array.isArray(q.o) ? q.o : (Array.isArray(q.options) ? q.options : []),
@@ -261,21 +261,12 @@ function beautifySubtopicName(name) {
     return s;
 }
 
-const TOPICS_DATA_FILES = [
-    'assets/data/kho_hoc_tieng_viet_part1.json',
-    'assets/data/kho_hoc_tieng_viet_part2.json'
-];
-
 async function fetchAllTopicsData() {
     if (allTopicsDataCache) return allTopicsDataCache;
-
-    const results = await Promise.all(TOPICS_DATA_FILES.map(async (file) => {
-        const res = await fetch(file);
-        if (!res.ok) throw new Error(`Không thể tải file dữ liệu ${file}`);
-        return res.json();
-    }));
-
-    const rawTopics = results.flatMap(data => Array.isArray(data) ? data : (data.topics || []));
+    const res = await fetch('assets/data/kho_hoc_tieng_viet_1.json');
+    if (!res.ok) throw new Error("Không thể tải file dữ liệu kho_hoc_tieng_viet_1.json");
+    const data = await res.json();
+    const rawTopics = Array.isArray(data) ? data : (data.topics || []);
     allTopicsDataCache = rawTopics.map(normalizeTopic).filter(Boolean);
     return allTopicsDataCache;
 }
@@ -348,79 +339,6 @@ async function renderDashboardGrid() {
         </div>
     `;
     container.innerHTML = html;
-}
-
-async function startRandomExam(categoryKey) {
-    stopSpeaking();
-    const catKeywords = {
-        hocky1: ['học kỳ 1', 'hk1'],
-        hocky2: ['học kỳ 2', 'hk2'],
-        hsg: ['giỏi', 'hsg']
-    }[categoryKey] || [];
-
-    showLoadingOverlay("Đang chuẩn bị đề thi...");
-    try {
-        const examData = await loadExamDataFile('de_thi_tieng_viet_1.json');
-        hideLoadingOverlay();
-
-        const pool = (examData && Array.isArray(examData.exams)) ? examData.exams : [];
-        let candidates = pool.filter(e => catKeywords.some(k => (e.exam_category || '').toLowerCase().includes(k)));
-        if (!candidates.length) candidates = pool;
-        if (!candidates.length) return alert('Đang cập nhật thêm đề thi cho mục này, bé quay lại sau nhé!');
-
-        const exam = candidates[Math.floor(Math.random() * candidates.length)];
-        const examIndex = pool.indexOf(exam);
-        const examLabel = examFileMap[categoryKey]?.label || 'Đề thi';
-        const examTitle = exam.exam_title || exam.title || `${examLabel} - Đề số ${examIndex + 1}`;
-
-        activeExamContext = { categoryKey, examIndex, examTitle };
-        activeRoadmapContext = null;
-        pendingTopicQuiz = null;
-
-        const questions = Array.isArray(exam.questions) && exam.questions.length ? exam.questions : [];
-        if (!questions.length) return alert('Đề thi này chưa có câu hỏi, bé chọn đề khác nhé!');
-
-        updateNavTabs("12. Đấu trường đề thi", "🏆", examTitle);
-        startTopicQuiz(0, examTitle, shuffleArray(questions), null);
-    } catch (err) {
-        hideLoadingOverlay();
-        alert(`Không thể tải đề thi: ${err.message}`);
-    }
-}
-
-function startExamCountdown() {
-    quizRemainingSeconds = 40 * 60;
-    updateExamTimerDisplay();
-    clearInterval(quizTimerInterval);
-    quizTimerInterval = setInterval(() => {
-        quizRemainingSeconds--;
-        updateExamTimerDisplay();
-        if (quizRemainingSeconds <= 0) {
-            clearInterval(quizTimerInterval);
-            alert('Đã hết giờ làm bài! Bài thi sẽ được nộp lại nhé bé.');
-            showResultScreen();
-        }
-    }, 1000);
-}
-
-function updateExamTimerDisplay() {
-    const el = document.getElementById('quiz-timer-display');
-    if (!el) return;
-    const m = Math.floor(Math.max(0, quizRemainingSeconds) / 60);
-    const s = Math.max(0, quizRemainingSeconds) % 60;
-    el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-}
-
-function openExamHub() {
-    stopSpeaking();
-    activeExamContext = null;
-    activeRoadmapContext = null;
-    activeTopicId = null;
-    pendingTopicQuiz = null;
-    updateNavTabs("12. Đấu trường đề thi", "🏆", null);
-    switchAppView('view-exam-hub');
-    showLoadingOverlay("Đang tải kho đề thi...");
-    renderExamHubGrid().finally(() => hideLoadingOverlay());
 }
 
 async function renderExamHubGrid() {
@@ -800,10 +718,10 @@ function openLettersSubmenu() {
     updateNavTabs("1. Bảng chữ cái", "🅰️", null);
 
     const subtopics = [
-        { title: 'Bảng chữ cái', badge: '29 chữ', desc: 'Khám phá 29 chữ cái in hoa, in thường, chữ tập viết và 3 ví dụ trực quan.', action: () => renderAlphabetBoard(0) },
-        { title: '12 Nguyên âm', badge: 'Trò chơi', desc: 'Trò chơi nghe và nhận diện chính xác 12 nguyên âm đơn & đôi.', action: () => startAlphabetCategoryQuiz('nguyen_am_don', '12 Nguyên âm') },
-        { title: '17 Phụ âm', badge: 'Trò chơi', desc: 'Luyện tập nghe phát âm và tìm đúng 17 phụ âm đơn trong tiếng Việt.', action: () => startAlphabetCategoryQuiz('phu_am', '17 Phụ âm') },
-        { title: '11 Phụ âm ghép', badge: 'Trò chơi', desc: 'Thử thách nhận diện ch, gh, gi, kh, ng, ngh, nh, ph, qu, th, tr.', action: () => startAlphabetCategoryQuiz('phu_am_ghep', '11 Phụ âm ghép') }
+        { key: '1.1', title: '1.1 Bảng chữ cái', desc: 'Khám phá 29 chữ cái in hoa, in thường, chữ tập viết và 3 ví dụ trực quan.', action: () => renderAlphabetBoard(0) },
+        { key: '1.2', title: '1.2 12 Nguyên âm', desc: 'Trò chơi nghe và nhận diện chính xác 12 nguyên âm đơn & đôi.', action: () => startAlphabetCategoryQuiz('nguyen_am_don', '1.2 12 Nguyên âm') },
+        { key: '1.3', title: '1.3 17 Phụ âm', desc: 'Luyện tập nghe phát âm và tìm đúng 17 phụ âm đơn trong tiếng Việt.', action: () => startAlphabetCategoryQuiz('phu_am', '1.3 17 Phụ âm') },
+        { key: '1.4', title: '1.4 11 Phụ âm ghép', desc: 'Thử thách nhận diện ch, gh, gi, kh, ng, ngh, nh, ph, qu, th, tr.', action: () => startAlphabetCategoryQuiz('phu_am_ghep', '1.4 11 Phụ âm ghép') }
     ];
 
     document.getElementById('lecture-title').textContent = "1. Bảng chữ cái tiếng Việt";
@@ -815,20 +733,19 @@ function openLettersSubmenu() {
         const style = SUBTOPIC_PALETTES[idx % SUBTOPIC_PALETTES.length];
         subHtml += `
             <button onclick="window.letterSubActions[${idx}]()" class="p-3 ${style.card} border-2 rounded-xl font-bold text-left transition-all flex items-center justify-between shadow-sm pastel-btn">
-                <span class="text-sm md:text-base leading-snug"><strong class="${style.num} mr-1.5">${idx + 1}.</strong> ${sub.title}</span>
-                <span class="text-xs font-extrabold ${style.badge} px-2.5 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${sub.badge}</span>
+                <span class="text-sm md:text-base leading-snug"><strong class="${style.num} mr-1.5">${sub.key}</strong> ${sub.title}</span>
+                <span class="text-xs font-extrabold ${style.badge} px-2.5 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${sub.key === '1.1' ? '29 chữ' : 'Trò chơi'}</span>
             </button>`;
     });
 
     window.letterSubActions = subtopics.map(s => s.action);
-    setSubtopicGridColumns(subtopics.length);
     document.getElementById('lecture-subtopics-list').innerHTML = subHtml;
     switchAppView('view-lecture');
 }
 
 function renderAlphabetBoard(index = 0) {
     stopSpeaking();
-    updateNavTabs("1. Bảng chữ cái", "🅰️", "Bảng chữ cái");
+    updateNavTabs("1. Bảng chữ cái", "🅰️", "1.1 Bảng chữ cái");
     const item = ALPHABET_29_DETAILS[index];
 
     const row1 = ALPHABET_29_DETAILS.slice(0, 15);
@@ -902,28 +819,18 @@ function startAlphabetCategoryQuiz(groupKey, subTitle) {
         return {
             question_id: 1000 + Math.floor(Math.random() * 9000),
             sub_topic: subTitle,
-            question_text: `🎧 👂 🌸 Bé hãy lắng nghe âm đọc của cô rồi chọn chữ cái đúng nhé!`,
+            question_text: `Bé hãy lắng nghe âm thanh và chọn chữ cái tương ứng nhé:`,
             options: options,
             answer: correctStr,
             audio_text: `Bé hãy tìm chữ ${item.u}, âm đọc là ${item.sound}`,
             skill_tag: 'C1',
             diem: 0.5,
-            explanation: `Chữ cái nào vừa phát ra âm thanh vậy bé ơi? Chữ ${item.u} (${item.l}) có âm đọc là "${item.sound}". Ví dụ: ${item.examples[0]?.w}.`
+            explanation: `Chữ ${item.u} (${item.l}) có âm đọc là "${item.sound}". Ví dụ: ${item.examples[0]?.w}.`
         };
     });
 
     updateNavTabs("1. Bảng chữ cái", "🅰️", subTitle);
     startTopicQuiz(1, subTitle, questions, subTitle);
-}
-
-function setSubtopicGridColumns(count) {
-    const el = document.getElementById('lecture-subtopics-list');
-    if (!el) return;
-    if (count > 6) {
-        el.className = 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 w-full max-w-4xl';
-    } else {
-        el.className = 'grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-2xl';
-    }
 }
 
 function showLectureAndSubtopics(topicNum, topicName, topicObj) {
@@ -935,7 +842,7 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
 
     const groups = [], groupMap = {};
     topicObj.questions.forEach(q => {
-        const k = (q.sub_topic || 'Câu hỏi chung').trim();
+        const k = q.sub_topic || 'Câu hỏi chung';
         if (!groupMap[k]) { groupMap[k] = []; groups.push(k); }
         groupMap[k].push(q);
     });
@@ -954,7 +861,6 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
                 <span class="text-xs font-extrabold ${style.badge} px-2.5 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${count} câu</span>
             </button>`;
     });
-    setSubtopicGridColumns(groups.length);
     document.getElementById('lecture-subtopics-list').innerHTML = subHtml;
 
     updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', null);
@@ -1094,15 +1000,10 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
     const navPractice = document.getElementById('nav-group-practice');
     const navExam = document.getElementById('nav-group-exam');
 
-    if (activeRoadmapContext || activeExamContext) {
+    if (activeRoadmapContext) {
         if (topBar) topBar.classList.remove('hidden');
         const timerBox = document.getElementById('quiz-timer-container');
-        if (activeExamContext) {
-            if (timerBox) timerBox.classList.remove('hidden');
-            startExamCountdown();
-        } else {
-            if (timerBox) timerBox.classList.add('hidden');
-        }
+        if (timerBox) timerBox.classList.add('hidden');
         if (cardHeader) { cardHeader.classList.remove('hidden'); cardHeader.classList.add('flex'); }
         if (navPractice) navPractice.classList.add('hidden');
         if (navExam) { navExam.classList.remove('hidden'); navExam.classList.add('flex'); }
@@ -1284,6 +1185,7 @@ function updateNavButtons() {
 function checkAnswer(selectedOpt) {
     const q = activeQuestionsList[currentQIndex];
     const isExam = !!activeExamContext;
+    const studentName = getStudentFirstName();
 
     // RIÊNG ĐỀ THI: YÊN TĨNH TUYỆT ĐỐI, SÁNG VIỀN HỒNG, KHÔNG PHÁT ÂM THANH
     if (isExam) {
@@ -1329,7 +1231,7 @@ function checkAnswer(selectedOpt) {
 
         playAudio('correct');
         confetti({ particleCount: 30, spread: 55, origin: { y: 0.7 } });
-        setTimeout(() => speakVietnamese(`${q.answer}`), 180);
+        setTimeout(() => speakVietnamese(`${q.answer}. ${studentName} giỏi quá, cố lên con yêu!`), 180);
     } else {
         if (!wrongAttemptsByQ[currentQIndex]) wrongAttemptsByQ[currentQIndex] = [];
         if (!wrongAttemptsByQ[currentQIndex].includes(selectedOpt)) {
@@ -1347,6 +1249,7 @@ function checkAnswer(selectedOpt) {
         });
 
         playAudio('wrong');
+        setTimeout(() => speakVietnamese(`Tiếc quá, ${studentName} suy nghĩ thêm một chút nhé!`), 280);
     }
 
     updateQuizPalletUI();
@@ -2037,34 +1940,6 @@ function playAudio(type) {
             });
         }
     } catch (e) {}
-}
-
-function initQuizPallet() {
-    updateQuizPalletUI();
-}
-
-function updateQuizPalletUI() {
-    const container = document.getElementById('quiz-pallet-container');
-    if (!container) return;
-    if (!activeQuestionsList || !activeQuestionsList.length) { container.innerHTML = ''; return; }
-
-    let html = '';
-    activeQuestionsList.forEach((q, idx) => {
-        const isAnswered = userAnswers[idx] !== undefined;
-        const isCurrent = idx === currentQIndex;
-        let cls = 'bg-white text-gray-500 border-pink-200';
-        if (isAnswered) cls = 'bg-emerald-400 text-white border-emerald-500 shadow-sm';
-        if (isCurrent) cls += ' ring-2 ring-purple-500 scale-110';
-        html += `<button onclick="jumpToQuestion(${idx})" class="w-7 h-7 shrink-0 rounded-lg border-2 text-[11px] font-black transition-all ${cls}">${idx + 1}</button>`;
-    });
-    container.innerHTML = html;
-}
-
-function jumpToQuestion(idx) {
-    stopSpeaking();
-    if (idx < 0 || idx >= activeQuestionsList.length) return;
-    currentQIndex = idx;
-    loadQuestion();
 }
 
 function formatDuration(ms) {

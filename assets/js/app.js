@@ -2382,6 +2382,13 @@ function speakVietnamese(text, rate = 0.96) {
     } catch (err) {}
 }
 
+function speakPedagogicalEvaluation() {
+    const box = document.getElementById('pedagogical-evaluation-box');
+    if (!box) return;
+    const textToRead = box.innerText || box.textContent || '';
+    speakVietnamese(textToRead, 0.96);
+}
+
 function speakCurrentQuestion() {
     const q = activeQuestionsList[currentQIndex];
     if (!q) return;

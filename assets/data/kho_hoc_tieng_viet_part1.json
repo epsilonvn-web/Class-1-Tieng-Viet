@@ -1,6 +1,2296 @@
 {
   "topics": [
     {
+      "id": 1,
+      "name": "BẢNG CHỮ CÁI NGỘ NGHĨNH",
+      "desc": "Bé nhận diện mặt chữ cái, nguyên âm, phụ âm và tham gia trò chơi nghe đoán âm chuẩn xác.",
+      "l_title": "Bài học 1: Bảng chữ cái Tiếng Việt Lớp 1",
+      "l_content": "Bảng chữ cái Tiếng Việt gồm 29 chữ cái (12 nguyên âm đơn và 17 phụ âm đơn) cùng các phụ âm ghép quen thuộc.",
+      "l_audio": "assets/audio/bai1_bang_chu_cai.mp3",
+      "qs": [
+        {
+          "id": 1001,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'A' xuất hiện trong từ gợi ý sau: 'quả táo'?",
+          "o": [
+            "m",
+            "t",
+            "a",
+            "p"
+          ],
+          "a": "a",
+          "h": "Nguyên âm đơn 'a' xuất hiện rõ ràng trong tiếng 'táo' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1002,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ă' xuất hiện trong từ gợi ý sau: 'căn nhà'?",
+          "o": [
+            "ă",
+            "e",
+            "u",
+            "i"
+          ],
+          "a": "ă",
+          "h": "Nguyên âm đơn 'ă' nằm trong vần 'ăn' của tiếng 'căn' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1003,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Â' xuất hiện trong từ gợi ý sau: 'cái cân'?",
+          "o": [
+            "â",
+            "o",
+            "u",
+            "y"
+          ],
+          "a": "â",
+          "h": "Nguyên âm 'â' nằm trong vần 'ân' của tiếng 'cân' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1004,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'E' xuất hiện trong từ gợi ý sau: 'que kem'?",
+          "o": [
+            "e",
+            "o",
+            "u",
+            "i"
+          ],
+          "a": "e",
+          "h": "Nguyên âm đơn 'e' xuất hiện trong tiếng 'kem' thơm ngon!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1005,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ê' xuất hiện trong từ gợi ý sau: 'quả lê'?",
+          "o": [
+            "ê",
+            "a",
+            "u",
+            "y"
+          ],
+          "a": "ê",
+          "h": "Nguyên âm đơn 'ê' xuất hiện trong tiếng 'lê' ngọt mát!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1006,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'I' xuất hiện trong từ gợi ý sau: 'viên bi'?",
+          "o": [
+            "i",
+            "e",
+            "a",
+            "u"
+          ],
+          "a": "i",
+          "h": "Nguyên âm 'i' lấp lánh xuất hiện trong tiếng 'bi'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1007,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'O' xuất hiện trong từ gợi ý sau: 'con bò'?",
+          "o": [
+            "o",
+            "u",
+            "y",
+            "e"
+          ],
+          "a": "o",
+          "h": "Nguyên âm đơn 'o' tròn như quả trứng gà trong tiếng 'bò'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1008,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ô' xuất hiện trong từ gợi ý sau: 'ô tô'?",
+          "o": [
+            "ô",
+            "a",
+            "u",
+            "i"
+          ],
+          "a": "ô",
+          "h": "Nguyên âm 'ô' có nón đội trên đầu trong tiếng 'ô'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1009,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ơ' xuất hiện trong từ gợi ý sau: 'lá cờ'?",
+          "o": [
+            "ơ",
+            "e",
+            "u",
+            "y"
+          ],
+          "a": "ơ",
+          "h": "Nguyên âm 'ơ' có râu vươn lên trong tiếng 'cờ'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1010,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'U' xuất hiện trong từ gợi ý sau: 'con cú'?",
+          "o": [
+            "u",
+            "a",
+            "e",
+            "i"
+          ],
+          "a": "u",
+          "h": "Nguyên âm đơn 'u' xuất hiện trong tiếng 'cú'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1011,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ư' xuất hiện trong từ gợi ý sau: 'cái cưa'?",
+          "o": [
+            "ư",
+            "o",
+            "u",
+            "e"
+          ],
+          "a": "ư",
+          "h": "Nguyên âm 'ư' xuất hiện trong tiếng 'cưa'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1012,
+          "sub": "Làm quen 12 Nguyên âm đơn",
+          "q": "Bé yêu hãy tìm nguyên âm đơn 'Y' xuất hiện trong từ gợi ý sau: 'y tế'?",
+          "o": [
+            "y",
+            "a",
+            "u",
+            "e"
+          ],
+          "a": "y",
+          "h": "Nguyên âm 'y' đứng một mình trong tiếng 'y' của từ 'y tế'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1013,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'quả táo', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "m",
+            "t",
+            "a",
+            "p"
+          ],
+          "a": "a",
+          "h": "Chính xác! Trong từ 'quả táo', nguyên âm chính là chữ 'a' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1014,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'căn nhà', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "ă",
+            "e",
+            "u",
+            "i"
+          ],
+          "a": "ă",
+          "h": "Chính xác! Trong từ 'căn nhà', nguyên âm chính là chữ 'ă' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1015,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'cái cân', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "â",
+            "o",
+            "u",
+            "y"
+          ],
+          "a": "â",
+          "h": "Chính xác! Trong từ 'cái cân', nguyên âm chính là chữ 'â' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1016,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'que kem', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "e",
+            "o",
+            "u",
+            "i"
+          ],
+          "a": "e",
+          "h": "Chính xác! Trong từ 'que kem', nguyên âm chính là chữ 'e' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1017,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'quả lê', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "ê",
+            "a",
+            "u",
+            "y"
+          ],
+          "a": "ê",
+          "h": "Chính xác! Trong từ 'quả lê', nguyên âm chính là chữ 'ê' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1018,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'viên bi', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "i",
+            "e",
+            "a",
+            "u"
+          ],
+          "a": "i",
+          "h": "Chính xác! Trong từ 'viên bi', nguyên âm chính là chữ 'i' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1019,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'con bò', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "o",
+            "u",
+            "y",
+            "e"
+          ],
+          "a": "o",
+          "h": "Chính xác! Trong từ 'con bò', nguyên âm chính là chữ 'o' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1020,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'ô tô', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "ô",
+            "a",
+            "u",
+            "i"
+          ],
+          "a": "ô",
+          "h": "Chính xác! Trong từ 'ô tô', nguyên âm chính là chữ 'ô' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1021,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'lá cờ', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "ơ",
+            "e",
+            "u",
+            "y"
+          ],
+          "a": "ơ",
+          "h": "Chính xác! Trong từ 'lá cờ', nguyên âm chính là chữ 'ơ' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1022,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'con cú', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "u",
+            "a",
+            "e",
+            "i"
+          ],
+          "a": "u",
+          "h": "Chính xác! Trong từ 'con cú', nguyên âm chính là chữ 'u' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1023,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'cái cưa', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "ư",
+            "o",
+            "u",
+            "e"
+          ],
+          "a": "ư",
+          "h": "Chính xác! Trong từ 'cái cưa', nguyên âm chính là chữ 'ư' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1024,
+          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
+          "q": "Trong từ 'y tế', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "o": [
+            "y",
+            "a",
+            "u",
+            "e"
+          ],
+          "a": "y",
+          "h": "Chính xác! Trong từ 'y tế', nguyên âm chính là chữ 'y' nha bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1025,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'bàn học'?",
+          "o": [
+            "b",
+            "d",
+            "đ",
+            "h"
+          ],
+          "a": "b",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'bàn học' chính là chữ 'b' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1026,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'con cá'?",
+          "o": [
+            "c",
+            "k",
+            "t",
+            "m"
+          ],
+          "a": "c",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'con cá' chính là chữ 'c' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1027,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'dòng sông'?",
+          "o": [
+            "d",
+            "đ",
+            "r",
+            "gi"
+          ],
+          "a": "d",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'dòng sông' chính là chữ 'd' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1028,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'đèn pin'?",
+          "o": [
+            "đ",
+            "d",
+            "t",
+            "l"
+          ],
+          "a": "đ",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'đèn pin' chính là chữ 'đ' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1029,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'gà trống'?",
+          "o": [
+            "g",
+            "gh",
+            "c",
+            "k"
+          ],
+          "a": "g",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'gà trống' chính là chữ 'g' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1030,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'bông hoa'?",
+          "o": [
+            "h",
+            "k",
+            "l",
+            "m"
+          ],
+          "a": "h",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'bông hoa' chính là chữ 'h' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1031,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'cái kéo'?",
+          "o": [
+            "k",
+            "c",
+            "q",
+            "g"
+          ],
+          "a": "k",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'cái kéo' chính là chữ 'k' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1032,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'lá cây'?",
+          "o": [
+            "l",
+            "n",
+            "m",
+            "h"
+          ],
+          "a": "l",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'lá cây' chính là chữ 'l' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1033,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'quả mận'?",
+          "o": [
+            "m",
+            "n",
+            "h",
+            "b"
+          ],
+          "a": "m",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'quả mận' chính là chữ 'm' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1034,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'cái nón'?",
+          "o": [
+            "n",
+            "l",
+            "m",
+            "h"
+          ],
+          "a": "n",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'cái nón' chính là chữ 'n' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1035,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'xe xích xỉp'?",
+          "o": [
+            "p",
+            "b",
+            "m",
+            "v"
+          ],
+          "a": "p",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'xe xích xỉp' chính là chữ 'p' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1036,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'quả quất'?",
+          "o": [
+            "q",
+            "k",
+            "c",
+            "g"
+          ],
+          "a": "q",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'quả quất' chính là chữ 'q' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1037,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'con rùa'?",
+          "o": [
+            "r",
+            "d",
+            "gi",
+            "g"
+          ],
+          "a": "r",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'con rùa' chính là chữ 'r' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1038,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'ngôi sao'?",
+          "o": [
+            "s",
+            "x",
+            "c",
+            "t"
+          ],
+          "a": "s",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'ngôi sao' chính là chữ 's' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1039,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'mặt trời'?",
+          "o": [
+            "t",
+            "th",
+            "tr",
+            "c"
+          ],
+          "a": "t",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'mặt trời' chính là chữ 't' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1040,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'con vịt'?",
+          "o": [
+            "v",
+            "d",
+            "b",
+            "m"
+          ],
+          "a": "v",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'con vịt' chính là chữ 'v' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1041,
+          "sub": "Nhận diện Phụ âm đơn",
+          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'xe đạp'?",
+          "o": [
+            "x",
+            "s",
+            "c",
+            "k"
+          ],
+          "a": "x",
+          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'xe đạp' chính là chữ 'x' đấy!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1042,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'bàn học' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "b",
+            "d",
+            "đ",
+            "h"
+          ],
+          "a": "b",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'b' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1043,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'con cá' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "c",
+            "k",
+            "t",
+            "m"
+          ],
+          "a": "c",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'c' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1044,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'dòng sông' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "d",
+            "đ",
+            "r",
+            "gi"
+          ],
+          "a": "d",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'd' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1045,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'đèn pin' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "đ",
+            "d",
+            "t",
+            "l"
+          ],
+          "a": "đ",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'đ' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1046,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'gà trống' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "g",
+            "gh",
+            "c",
+            "k"
+          ],
+          "a": "g",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'g' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1047,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'bông hoa' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "h",
+            "k",
+            "l",
+            "m"
+          ],
+          "a": "h",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'h' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1048,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'cái kéo' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "k",
+            "c",
+            "q",
+            "g"
+          ],
+          "a": "k",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'k' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1049,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'lá cây' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "l",
+            "n",
+            "m",
+            "h"
+          ],
+          "a": "l",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'l' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1050,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'quả mận' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "m",
+            "n",
+            "h",
+            "b"
+          ],
+          "a": "m",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'm' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1051,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'cái nón' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "n",
+            "l",
+            "m",
+            "h"
+          ],
+          "a": "n",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'n' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1052,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'xe xích xỉp' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "p",
+            "b",
+            "m",
+            "v"
+          ],
+          "a": "p",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'p' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1053,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'quả quất' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "q",
+            "k",
+            "c",
+            "g"
+          ],
+          "a": "q",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'q' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1054,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'con rùa' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "r",
+            "d",
+            "gi",
+            "g"
+          ],
+          "a": "r",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'r' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1055,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'ngôi sao' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "s",
+            "x",
+            "c",
+            "t"
+          ],
+          "a": "s",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 's' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1056,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'mặt trời' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "t",
+            "th",
+            "tr",
+            "c"
+          ],
+          "a": "t",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 't' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1057,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'con vịt' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "v",
+            "d",
+            "b",
+            "m"
+          ],
+          "a": "v",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'v' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1058,
+          "sub": "Thử thách Phụ âm đơn",
+          "q": "Tiếng đầu tiên trong từ 'xe đạp' được bắt đầu bằng chữ cái nào dưới đây?",
+          "o": [
+            "x",
+            "s",
+            "c",
+            "k"
+          ],
+          "a": "x",
+          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'x' nhé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1059,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'chó con', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "ch",
+            "tr",
+            "kh",
+            "nh"
+          ],
+          "a": "ch",
+          "h": "Âm ghép 'ch' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'chó con' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1060,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'tre xanh', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "tr",
+            "ch",
+            "th",
+            "ph"
+          ],
+          "a": "tr",
+          "h": "Âm ghép 'tr' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'tre xanh' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1061,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'khăn mặt', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "kh",
+            "nh",
+            "th",
+            "ph"
+          ],
+          "a": "kh",
+          "h": "Âm ghép 'kh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'khăn mặt' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1062,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'ngôi nhà', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "nh",
+            "ng",
+            "ngh",
+            "kh"
+          ],
+          "a": "nh",
+          "h": "Âm ghép 'nh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'ngôi nhà' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1063,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'thỏ trắng', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "th",
+            "ph",
+            "tr",
+            "ch"
+          ],
+          "a": "th",
+          "h": "Âm ghép 'th' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'thỏ trắng' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1064,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'phố xá', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "ph",
+            "th",
+            "kh",
+            "nh"
+          ],
+          "a": "ph",
+          "h": "Âm ghép 'ph' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'phố xá' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1065,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'ghế gỗ', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "gh",
+            "g",
+            "k",
+            "c"
+          ],
+          "a": "gh",
+          "h": "Âm ghép 'gh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'ghế gỗ' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1066,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'củ nghệ', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "ngh",
+            "ng",
+            "gh",
+            "g"
+          ],
+          "a": "ngh",
+          "h": "Âm ghép 'ngh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'củ nghệ' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1067,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'giày dép', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "gi",
+            "d",
+            "r",
+            "g"
+          ],
+          "a": "gi",
+          "h": "Âm ghép 'gi' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'giày dép' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1068,
+          "sub": "Phụ âm ghép thường gặp",
+          "q": "Trong từ 'quả cam', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "o": [
+            "qu",
+            "k",
+            "c",
+            "g"
+          ],
+          "a": "qu",
+          "h": "Âm ghép 'qu' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'quả cam' đấy bé!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1069,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'chó con' nhé?",
+          "o": [
+            "ch",
+            "tr",
+            "kh",
+            "nh"
+          ],
+          "a": "ch",
+          "h": "Chính xác! Âm ghép đó chính là 'ch'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1070,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'tre xanh' nhé?",
+          "o": [
+            "tr",
+            "ch",
+            "th",
+            "ph"
+          ],
+          "a": "tr",
+          "h": "Chính xác! Âm ghép đó chính là 'tr'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1071,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'khăn mặt' nhé?",
+          "o": [
+            "kh",
+            "nh",
+            "th",
+            "ph"
+          ],
+          "a": "kh",
+          "h": "Chính xác! Âm ghép đó chính là 'kh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1072,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'ngôi nhà' nhé?",
+          "o": [
+            "nh",
+            "ng",
+            "ngh",
+            "kh"
+          ],
+          "a": "nh",
+          "h": "Chính xác! Âm ghép đó chính là 'nh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1073,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'thỏ trắng' nhé?",
+          "o": [
+            "th",
+            "ph",
+            "tr",
+            "ch"
+          ],
+          "a": "th",
+          "h": "Chính xác! Âm ghép đó chính là 'th'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1074,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'phố xá' nhé?",
+          "o": [
+            "ph",
+            "th",
+            "kh",
+            "nh"
+          ],
+          "a": "ph",
+          "h": "Chính xác! Âm ghép đó chính là 'ph'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1075,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'ghế gỗ' nhé?",
+          "o": [
+            "gh",
+            "g",
+            "k",
+            "c"
+          ],
+          "a": "gh",
+          "h": "Chính xác! Âm ghép đó chính là 'gh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1076,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'củ nghệ' nhé?",
+          "o": [
+            "ngh",
+            "ng",
+            "gh",
+            "g"
+          ],
+          "a": "ngh",
+          "h": "Chính xác! Âm ghép đó chính là 'ngh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1077,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'giày dép' nhé?",
+          "o": [
+            "gi",
+            "d",
+            "r",
+            "g"
+          ],
+          "a": "gi",
+          "h": "Chính xác! Âm ghép đó chính là 'gi'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1078,
+          "sub": "Phân biệt Phụ âm ghép",
+          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'quả cam' nhé?",
+          "o": [
+            "qu",
+            "k",
+            "c",
+            "g"
+          ],
+          "a": "qu",
+          "h": "Chính xác! Âm ghép đó chính là 'qu'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1079,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'chó con' đúng chính tả?",
+          "o": [
+            "ch",
+            "tr",
+            "kh",
+            "nh"
+          ],
+          "a": "ch",
+          "h": "Bé giỏi lắm! Từ 'chó con' viết bằng âm ghép 'ch'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1080,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'tre xanh' đúng chính tả?",
+          "o": [
+            "tr",
+            "ch",
+            "th",
+            "ph"
+          ],
+          "a": "tr",
+          "h": "Bé giỏi lắm! Từ 'tre xanh' viết bằng âm ghép 'tr'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1081,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'khăn mặt' đúng chính tả?",
+          "o": [
+            "kh",
+            "nh",
+            "th",
+            "ph"
+          ],
+          "a": "kh",
+          "h": "Bé giỏi lắm! Từ 'khăn mặt' viết bằng âm ghép 'kh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1082,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'ngôi nhà' đúng chính tả?",
+          "o": [
+            "nh",
+            "ng",
+            "ngh",
+            "kh"
+          ],
+          "a": "nh",
+          "h": "Bé giỏi lắm! Từ 'ngôi nhà' viết bằng âm ghép 'nh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1083,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'thỏ trắng' đúng chính tả?",
+          "o": [
+            "th",
+            "ph",
+            "tr",
+            "ch"
+          ],
+          "a": "th",
+          "h": "Bé giỏi lắm! Từ 'thỏ trắng' viết bằng âm ghép 'th'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1084,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'phố xá' đúng chính tả?",
+          "o": [
+            "ph",
+            "th",
+            "kh",
+            "nh"
+          ],
+          "a": "ph",
+          "h": "Bé giỏi lắm! Từ 'phố xá' viết bằng âm ghép 'ph'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1085,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'ghế gỗ' đúng chính tả?",
+          "o": [
+            "gh",
+            "g",
+            "k",
+            "c"
+          ],
+          "a": "gh",
+          "h": "Bé giỏi lắm! Từ 'ghế gỗ' viết bằng âm ghép 'gh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1086,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'củ nghệ' đúng chính tả?",
+          "o": [
+            "ngh",
+            "ng",
+            "gh",
+            "g"
+          ],
+          "a": "ngh",
+          "h": "Bé giỏi lắm! Từ 'củ nghệ' viết bằng âm ghép 'ngh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1087,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'giày dép' đúng chính tả?",
+          "o": [
+            "gi",
+            "d",
+            "r",
+            "g"
+          ],
+          "a": "gi",
+          "h": "Bé giỏi lắm! Từ 'giày dép' viết bằng âm ghép 'gi'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1088,
+          "sub": "Luyện tập Phụ âm ghép",
+          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'quả cam' đúng chính tả?",
+          "o": [
+            "qu",
+            "k",
+            "c",
+            "g"
+          ],
+          "a": "qu",
+          "h": "Bé giỏi lắm! Từ 'quả cam' viết bằng âm ghép 'qu'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1089,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'A' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "a",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "a",
+          "h": "Đúng rồi! Chữ in hoa 'A' đi cặp với chữ in thường 'a' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1090,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'B' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "b",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "b",
+          "h": "Đúng rồi! Chữ in hoa 'B' đi cặp với chữ in thường 'b' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1091,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'C' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "c",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "c",
+          "h": "Đúng rồi! Chữ in hoa 'C' đi cặp với chữ in thường 'c' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1092,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'D' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "d",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "d",
+          "h": "Đúng rồi! Chữ in hoa 'D' đi cặp với chữ in thường 'd' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1093,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'Đ' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "đ",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "đ",
+          "h": "Đúng rồi! Chữ in hoa 'Đ' đi cặp với chữ in thường 'đ' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1094,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'E' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "e",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "e",
+          "h": "Đúng rồi! Chữ in hoa 'E' đi cặp với chữ in thường 'e' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1095,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'Ê' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "ê",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "ê",
+          "h": "Đúng rồi! Chữ in hoa 'Ê' đi cặp với chữ in thường 'ê' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1096,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'G' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "g",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "g",
+          "h": "Đúng rồi! Chữ in hoa 'G' đi cặp với chữ in thường 'g' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1097,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'H' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "h",
+            "x",
+            "y",
+            "z"
+          ],
+          "a": "h",
+          "h": "Đúng rồi! Chữ in hoa 'H' đi cặp với chữ in thường 'h' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1098,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'I' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "i",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "i",
+          "h": "Đúng rồi! Chữ in hoa 'I' đi cặp với chữ in thường 'i' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1099,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'K' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "k",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "k",
+          "h": "Đúng rồi! Chữ in hoa 'K' đi cặp với chữ in thường 'k' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1100,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'L' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "l",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "l",
+          "h": "Đúng rồi! Chữ in hoa 'L' đi cặp với chữ in thường 'l' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1101,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'M' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "m",
+            "x",
+            "y",
+            "z"
+          ],
+          "a": "m",
+          "h": "Đúng rồi! Chữ in hoa 'M' đi cặp với chữ in thường 'm' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1102,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'N' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "n",
+            "x",
+            "y",
+            "z"
+          ],
+          "a": "n",
+          "h": "Đúng rồi! Chữ in hoa 'N' đi cặp với chữ in thường 'n' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1103,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'O' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "o",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "o",
+          "h": "Đúng rồi! Chữ in hoa 'O' đi cặp với chữ in thường 'o' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1104,
+          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
+          "q": "Chữ cái in hoa 'P' tương ứng với chữ cái in thường nào dưới đây hả bé?",
+          "o": [
+            "p",
+            "m",
+            "n",
+            "h"
+          ],
+          "a": "p",
+          "h": "Đúng rồi! Chữ in hoa 'P' đi cặp với chữ in thường 'p' nha bé yêu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1105,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'a' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "A",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "A",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'a' là chữ 'A'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1106,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'b' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "B",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "B",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'b' là chữ 'B'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1107,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'c' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "C",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "C",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'c' là chữ 'C'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1108,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'd' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "D",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "D",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'd' là chữ 'D'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1109,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'đ' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "Đ",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "Đ",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'đ' là chữ 'Đ'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1110,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'e' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "E",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "E",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'e' là chữ 'E'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1111,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'ê' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "Ê",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "Ê",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'ê' là chữ 'Ê'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1112,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'g' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "G",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "G",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'g' là chữ 'G'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1113,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'h' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "H",
+            "X",
+            "Y",
+            "Z"
+          ],
+          "a": "H",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'h' là chữ 'H'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1114,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'i' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "I",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "I",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'i' là chữ 'I'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1115,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'k' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "K",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "K",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'k' là chữ 'K'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1116,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'l' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "L",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "L",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'l' là chữ 'L'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1117,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'm' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "M",
+            "X",
+            "Y",
+            "Z"
+          ],
+          "a": "M",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'm' là chữ 'M'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1118,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'n' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "N",
+            "X",
+            "Y",
+            "Z"
+          ],
+          "a": "N",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'n' là chữ 'N'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1119,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'o' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "O",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "O",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'o' là chữ 'O'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        },
+        {
+          "id": 1120,
+          "sub": "Nhận diện Chữ In Hoa",
+          "q": "Chữ cái in thường 'p' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
+          "o": [
+            "P",
+            "M",
+            "N",
+            "H"
+          ],
+          "a": "P",
+          "h": "Chính xác! Chữ in hoa tương ứng của 'p' là chữ 'P'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 1,
+          "tags": [
+            "week1",
+            "bang_chu_cai"
+          ]
+        }
+      ]
+    },
+    {
       "id": 2,
       "name": "NĂM THANH ĐIỆU KÌ DIỆU",
       "desc": "Khám phá 5 thanh điệu thần kỳ của tiếng Việt giúp thay đổi âm vần cực kỳ lý thú.",
@@ -1628,1908 +3918,2004 @@
     {
       "id": 3,
       "name": "GHÉP ÂM - VẦN",
-      "desc": "Luyện kỹ năng ráp Phụ âm đầu với các Vần xuôi, Vần ngược và Vần kép để đọc trơn lưu loát.",
+      "desc": "Bé tập ghép phụ âm đơn, phụ âm kép với các vần xuôi, vần ngược và vần ghép phức tạp theo 3 cấp độ từ dễ đến nâng cao.",
       "l_title": "Bài Giảng: Sáng Tạo Ghép Vần Tiếng Việt",
       "l_content": "Ghép vần giống như bé chơi trò xếp hình lego vậy! Bé chỉ cần đặt Phụ âm đầu cứng cáp đứng trước, rồi ghép với một Vần đứng sau, cuối cùng đặt dấu Thanh phù hợp lên đầu nguyên âm chính là được một tiếng hoàn chỉnh rồi! Ví dụ: phụ âm đầu 'b' ghép với vần xuôi 'an' thành tiếng 'ban', thêm dấu thanh huyền thành 'bàn' học đấy. Hãy cùng Thỏ Hồng rèn luyện phản xạ ghép vần siêu tốc nhé bé yêu!",
       "l_audio": "Bé yêu ơi, ghép vần là trò chơi vô cùng vui nhộn. Chúng mình cùng lấy phụ âm đầu ghép với nguyên âm và dấu thanh để tạo ra tiếng mới nhé con!",
       "qs": [
         {
           "id": 3001,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'bàn' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm đơn 'b' với nguyên âm 'a' và không thêm dấu thanh, bé sẽ được tiếng nào?",
           "o": [
-            "en",
-            "an",
-            "oai",
-            "uy"
+            "ba",
+            "ca",
+            "da",
+            "mẹ"
           ],
-          "a": "an",
-          "h": "Tiếng 'bàn' có chứa vần xuôi 'an' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "ba",
+          "h": "Phụ âm 'b' ghép với nguyên âm 'a' tạo thành tiếng 'ba' ngọt ngào gọi cha đấy bé!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3002,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'cam' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm đơn 'c' với nguyên âm 'o' và thanh huyền, bé sẽ thu được từ chỉ con vật nào?",
           "o": [
-            "oai",
-            "uy",
-            "am",
-            "en"
+            "cò",
+            "cá",
+            "bò",
+            "gà"
           ],
-          "a": "am",
-          "h": "Tiếng 'cam' có chứa vần xuôi 'am' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "cò",
+          "h": "Âm 'c' + 'o' + thanh huyền tạo thành tiếng 'cò' (trong từ con cò trắng lội đồng) đó bé!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3003,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'đạp' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm 'g' với nguyên âm 'a' và thanh huyền để được tiếng gọi tên con vật gáy sáng?",
           "o": [
-            "oai",
-            "uy",
-            "ap",
-            "en"
+            "gà",
+            "cá",
+            "chó",
+            "mèo"
           ],
-          "a": "ap",
-          "h": "Tiếng 'đạp' có chứa vần xuôi 'ap' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "gà",
+          "h": "Âm 'g' + 'a' + thanh huyền tạo thành tiếng 'gà' báo thức mỗi sớm mai!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3004,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'mát' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm 'm' với nguyên âm 'e' và thanh nặng để chỉ người phụ nữ yêu thương bé nhất?",
           "o": [
-            "at",
-            "en",
-            "uy",
-            "oai"
+            "mẹ",
+            "bố",
+            "bà",
+            "cô"
           ],
-          "a": "at",
-          "h": "Tiếng 'mát' có chứa vần xuôi 'at' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "mẹ",
+          "h": "Âm 'm' + 'e' + thanh nặng tạo thành tiếng 'mẹ' ấm áp thiêng liêng nhất thế giới!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3005,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'khoác' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm 'b' với nguyên âm 'o' và thanh huyền để được tiếng chỉ con vật kéo cày chăm chỉ?",
           "o": [
-            "oai",
-            "ac",
-            "en",
-            "uy"
+            "bò",
+            "cò",
+            "dê",
+            "hổ"
           ],
-          "a": "ac",
-          "h": "Tiếng 'khoác' có chứa vần xuôi 'ac' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "bò",
+          "h": "Âm 'b' + 'o' + thanh huyền tạo thành tiếng 'bò' hiền lành giúp bác nông dân!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3006,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'hộc' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm 'c' với nguyên âm 'a' và thanh sắc để được từ chỉ con vật bơi dưới nước?",
           "o": [
-            "uy",
-            "oai",
-            "en",
-            "oc"
+            "cá",
+            "cò",
+            "chó",
+            "mèo"
           ],
-          "a": "oc",
-          "h": "Tiếng 'hộc' có chứa vần xuôi 'oc' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "cá",
+          "h": "Âm 'c' + 'a' + thanh sắc tạo thành tiếng 'cá' tung tăng bơi lội!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3007,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'cúc' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm 'd' với nguyên âm 'u' và thanh huyền để chỉ trái cây ngọt mát miền sông nước?",
           "o": [
-            "en",
-            "uy",
-            "oai",
-            "uc"
+            "dừa",
+            "cam",
+            "lê",
+            "táo"
           ],
-          "a": "uc",
-          "h": "Tiếng 'cúc' có chứa vần xuôi 'uc' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "dừa",
+          "h": "Âm 'd' + 'ưa' + thanh huyền tạo thành tiếng 'dừa' mát lành tỏa bóng mát!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3008,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'bút' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
+          "q": "Bé hãy ghép phụ âm 'l' với nguyên âm 'a' và thanh sắc để chỉ bộ phận xanh tươi trên cành cây?",
           "o": [
-            "oai",
-            "uy",
-            "en",
-            "ut"
+            "lá",
+            "hoa",
+            "cả",
+            "quả"
           ],
-          "a": "ut",
-          "h": "Tiếng 'bút' có chứa vần xuôi 'ut' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "lá",
+          "h": "Âm 'l' + 'a' + thanh sắc tạo thành tiếng 'lá' cây rung rinh trong gió!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "ghep_am_don"
           ]
         },
         {
           "id": 3009,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'giúp' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'bàn' (chiếc bàn học), bộ phận vần xuôi đứng sau phụ âm 'b' là vần gì?",
           "o": [
-            "en",
-            "up",
-            "oai",
-            "uy"
+            "an",
+            "am",
+            "ap",
+            "at"
           ],
-          "a": "up",
-          "h": "Tiếng 'giúp' có chứa vần xuôi 'up' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "an",
+          "h": "Tiếng 'bàn' gồm âm 'b' + vần 'an' + thanh huyền ghép thành đấy bé!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3010,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'non' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'cam' (quả cam ngọt), phần vần xuôi gồm hai chữ cái 'a' và 'm' ghép lại là vần gì?",
           "o": [
-            "on",
-            "uy",
-            "oai",
-            "en"
+            "am",
+            "an",
+            "ap",
+            "at"
           ],
-          "a": "on",
-          "h": "Tiếng 'non' có chứa vần xuôi 'on' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "am",
+          "h": "Vần xuôi 'am' gồm nguyên âm 'a' đứng trước, phụ âm 'm' đứng sau!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3011,
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé yêu hãy đánh vần tiếng 'mun' và cho biết tiếng này chứa vần xuôi nào dưới đây?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'mát' (kem mát lạnh), phần vần xuôi kết thúc bằng chữ 't' là vần gì?",
           "o": [
-            "en",
-            "un",
-            "uy",
-            "oai"
+            "at",
+            "ap",
+            "am",
+            "an"
           ],
-          "a": "un",
-          "h": "Tiếng 'mun' có chứa vần xuôi 'un' đứng sau phụ âm đầu đấy bé ơi!",
+          "a": "at",
+          "h": "Âm 'm' + vần 'at' + thanh sắc tạo thành tiếng 'mát' ngọt ngào!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3012,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'B' với vần xuôi 'an' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'bút' (bút chì tập viết), phần vần xuôi gồm 'u' và 't' là vần gì?",
           "o": [
-            "ga",
-            "tho",
-            "ban",
-            "meo"
+            "ut",
+            "uc",
+            "un",
+            "up"
           ],
-          "a": "ban",
-          "h": "Ráp âm đầu 'b' và vần 'an' liền nhau bé sẽ đánh vần được tiếng 'ban' cực kỳ dễ dàng!",
+          "a": "ut",
+          "h": "Vần xuôi 'ut' đứng sau phụ âm 'b' cùng thanh sắc tạo nên từ 'bút'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3013,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'C' với vần xuôi 'am' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'cúc' (bông hoa cúc vàng), bộ phận vần xuôi kết thúc bằng âm 'c' là vần gì?",
           "o": [
-            "cam",
-            "ca",
-            "cho",
-            "bo"
+            "uc",
+            "ut",
+            "un",
+            "up"
           ],
-          "a": "cam",
-          "h": "Ráp âm đầu 'c' và vần 'am' liền nhau bé sẽ đánh vần được tiếng 'cam' cực kỳ dễ dàng!",
+          "a": "uc",
+          "h": "Âm 'c' + vần 'uc' + thanh sắc tạo nên tiếng 'cúc' lộng lẫy!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3014,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'D' với vần xuôi 'ap' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy tìm vần xuôi 2 chữ cái có trong tiếng 'sen' (bông hoa sen hồng)?",
           "o": [
-            "ga",
-            "meo",
-            "tho",
-            "dap"
+            "en",
+            "et",
+            "em",
+            "ep"
           ],
-          "a": "dap",
-          "h": "Ráp âm đầu 'd' và vần 'ap' liền nhau bé sẽ đánh vần được tiếng 'dap' cực kỳ dễ dàng!",
+          "a": "en",
+          "h": "Âm 's' + vần 'en' tạo thành tiếng 'sen' ngát hương!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3015,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'Đ' với vần xuôi 'at' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy tìm vần xuôi có trong tiếng 'nến' (cây nến lung linh)?",
           "o": [
-            "đat",
-            "ca",
-            "cho",
-            "bo"
+            "ên",
+            "êt",
+            "êm",
+            "êp"
           ],
-          "a": "đat",
-          "h": "Ráp âm đầu 'đ' và vần 'at' liền nhau bé sẽ đánh vần được tiếng 'đat' cực kỳ dễ dàng!",
+          "a": "ên",
+          "h": "Âm 'n' + vần 'ên' + thanh sắc tạo thành tiếng 'nến' tỏa sáng!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3016,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'G' với vần xuôi 'ac' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong từ 'bếp lò', tiếng 'bếp' chứa vần xuôi nào dưới đây?",
           "o": [
-            "meo",
-            "tho",
-            "gac",
-            "ga"
+            "êp",
+            "êt",
+            "ên",
+            "êm"
           ],
-          "a": "gac",
-          "h": "Ráp âm đầu 'g' và vần 'ac' liền nhau bé sẽ đánh vần được tiếng 'gac' cực kỳ dễ dàng!",
+          "a": "êp",
+          "h": "Âm 'b' + vần 'êp' + thanh sắc tạo nên tiếng 'bếp' sưởi ấm gia đình!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3017,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'H' với vần xuôi 'oc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy tìm vần xuôi 2 chữ cái trong tiếng 'tin' (tin vui ngày tết)?",
           "o": [
-            "hoc",
-            "bo",
-            "cho",
-            "ca"
+            "in",
+            "it",
+            "ip",
+            "im"
           ],
-          "a": "hoc",
-          "h": "Ráp âm đầu 'h' và vần 'oc' liền nhau bé sẽ đánh vần được tiếng 'hoc' cực kỳ dễ dàng!",
+          "a": "in",
+          "h": "Âm 't' + vần 'in' tạo thành tiếng 'tin' tràn ngập niềm vui!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3018,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'L' với vần xuôi 'uc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'vịt' (con vịt bơi dưới ao), phần vần xuôi là vần gì?",
           "o": [
-            "luc",
-            "meo",
-            "ga",
-            "tho"
+            "it",
+            "in",
+            "ip",
+            "im"
           ],
-          "a": "luc",
-          "h": "Ráp âm đầu 'l' và vần 'uc' liền nhau bé sẽ đánh vần được tiếng 'luc' cực kỳ dễ dàng!",
+          "a": "it",
+          "h": "Âm 'v' + vần 'it' + thanh nặng tạo thành tiếng 'vịt' cạch cạch!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3019,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'M' với vần xuôi 'ut' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'gái' (bé gái ngoan ngoãn), phần vần xuôi có kết thúc bằng âm 'i' là vần gì?",
           "o": [
-            "mut",
-            "ca",
-            "cho",
-            "bo"
+            "ai",
+            "ay",
+            "ây",
+            "oi"
           ],
-          "a": "mut",
-          "h": "Ráp âm đầu 'm' và vần 'ut' liền nhau bé sẽ đánh vần được tiếng 'mut' cực kỳ dễ dàng!",
+          "a": "ai",
+          "h": "Âm 'g' + vần 'ai' + thanh sắc tạo nên tiếng 'gái' đáng yêu!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3020,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'N' với vần xuôi 'up' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'cây' (cây xanh che bóng mát), phần vần xuôi có 'â' đứng đầu là vần gì?",
           "o": [
-            "ga",
-            "meo",
-            "tho",
-            "nup"
+            "ây",
+            "ay",
+            "ai",
+            "oi"
           ],
-          "a": "nup",
-          "h": "Ráp âm đầu 'n' và vần 'up' liền nhau bé sẽ đánh vần được tiếng 'nup' cực kỳ dễ dàng!",
+          "a": "ây",
+          "h": "Âm 'c' + vần 'ây' tạo thành tiếng 'cây' tươi tốt!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3021,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'P' với vần xuôi 'on' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy ghép phụ âm 'b' với vần xuôi 'an' và thanh huyền để thu được từ chỉ đồ dùng học tập?",
           "o": [
-            "pon",
-            "bo",
-            "cho",
-            "ca"
+            "bàn",
+            "bún",
+            "bát",
+            "búp"
           ],
-          "a": "pon",
-          "h": "Ráp âm đầu 'p' và vần 'on' liền nhau bé sẽ đánh vần được tiếng 'pon' cực kỳ dễ dàng!",
+          "a": "bàn",
+          "h": "Âm 'b' + vần 'an' + thanh huyền = 'bàn' (bàn học xinh xắn)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3022,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'Q' với vần xuôi 'un' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy ghép phụ âm 'c' với vần xuôi 'at' và thanh sắc để thu được từ chỉ hạt nhỏ ở bãi biển?",
           "o": [
-            "qun",
-            "tho",
-            "meo",
-            "ga"
+            "cát",
+            "cáp",
+            "cán",
+            "cam"
           ],
-          "a": "qun",
-          "h": "Ráp âm đầu 'q' và vần 'un' liền nhau bé sẽ đánh vần được tiếng 'qun' cực kỳ dễ dàng!",
+          "a": "cát",
+          "h": "Âm 'c' + vần 'at' + thanh sắc = 'cát' (bãi cát vàng lấp lánh)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3023,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'R' với vần xuôi 'an' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy ghép phụ âm 'h' với vần xuôi 'at' và thanh sắc để chỉ hành động ca hát vui vẻ?",
           "o": [
-            "cho",
-            "bo",
-            "ca",
-            "ran"
+            "hát",
+            "hạt",
+            "hàn",
+            "hàm"
           ],
-          "a": "ran",
-          "h": "Ráp âm đầu 'r' và vần 'an' liền nhau bé sẽ đánh vần được tiếng 'ran' cực kỳ dễ dàng!",
+          "a": "hát",
+          "h": "Âm 'h' + vần 'at' + thanh sắc = 'hát' (bé hát véo von)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3024,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'S' với vần xuôi 'am' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy ghép phụ âm 'm' với vần xuôi 'at' và thanh nặng để chỉ bộ phận long lanh giúp bé quan sát?",
           "o": [
-            "ga",
-            "meo",
-            "sam",
-            "tho"
+            "mắt",
+            "mát",
+            "mặt",
+            "màn"
           ],
-          "a": "sam",
-          "h": "Ráp âm đầu 's' và vần 'am' liền nhau bé sẽ đánh vần được tiếng 'sam' cực kỳ dễ dàng!",
+          "a": "mắt",
+          "h": "Âm 'm' + vần 'at' (với ă) + thanh nặng = 'mắt' (đôi mắt sáng ngời)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3025,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'T' với vần xuôi 'ap' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'con' (con chó ngoan), phần vần xuôi gồm hai chữ cái nào ghép lại?",
           "o": [
-            "tap",
-            "cho",
-            "ca",
-            "bo"
+            "on",
+            "oc",
+            "ot",
+            "op"
           ],
-          "a": "tap",
-          "h": "Ráp âm đầu 't' và vần 'ap' liền nhau bé sẽ đánh vần được tiếng 'tap' cực kỳ dễ dàng!",
+          "a": "on",
+          "h": "Vần 'on' gồm nguyên âm 'o' và phụ âm 'n' ghép thành!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3026,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'V' với vần xuôi 'at' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'tốt' (bé ngoan học tốt), phần vần xuôi có 'ô' đứng đầu là vần gì?",
           "o": [
-            "meo",
-            "tho",
-            "ga",
-            "vat"
+            "ôt",
+            "oc",
+            "ôn",
+            "ôp"
           ],
-          "a": "vat",
-          "h": "Ráp âm đầu 'v' và vần 'at' liền nhau bé sẽ đánh vần được tiếng 'vat' cực kỳ dễ dàng!",
+          "a": "ôt",
+          "h": "Âm 't' + vần 'ôt' + thanh sắc = 'tốt'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3027,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'X' với vần xuôi 'ac' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'vui' (vui vẻ đến trường), phần vần xuôi ghép từ 'u' và 'i' là vần gì?",
           "o": [
-            "cho",
-            "bo",
-            "ca",
-            "xac"
+            "ui",
+            "ưi",
+            "ua",
+            "ưa"
           ],
-          "a": "xac",
-          "h": "Ráp âm đầu 'x' và vần 'ac' liền nhau bé sẽ đánh vần được tiếng 'xac' cực kỳ dễ dàng!",
+          "a": "ui",
+          "h": "Âm 'v' + vần 'ui' tạo thành tiếng 'vui' rạng rỡ!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3028,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'B' với vần xuôi 'oc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'ngửi' (ngửi mùi thơm của hoa), phần vần xuôi ghép từ 'ư' và 'i' là vần gì?",
           "o": [
-            "tho",
-            "meo",
-            "boc",
-            "ga"
+            "ưi",
+            "ui",
+            "ơi",
+            "ơi"
           ],
-          "a": "boc",
-          "h": "Ráp âm đầu 'b' và vần 'oc' liền nhau bé sẽ đánh vần được tiếng 'boc' cực kỳ dễ dàng!",
+          "a": "ưi",
+          "h": "Âm 'ng' + vần 'ưi' + thanh hỏi tạo nên tiếng 'ngửi'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3029,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'C' với vần xuôi 'uc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'bắp' (củ bắp cải), phần vần xuôi ghép từ 'ă' và 'p' là vần gì?",
           "o": [
-            "bo",
-            "cuc",
-            "ca",
-            "cho"
+            "ăp",
+            "ăt",
+            "ăn",
+            "ăm"
           ],
-          "a": "cuc",
-          "h": "Ráp âm đầu 'c' và vần 'uc' liền nhau bé sẽ đánh vần được tiếng 'cuc' cực kỳ dễ dàng!",
+          "a": "ăp",
+          "h": "Âm 'b' + vần 'ăp' + thanh sắc tạo thành tiếng 'bắp'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3030,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'D' với vần xuôi 'ut' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'cặp' (chiếc cặp sách), phần vần xuôi là vần gì?",
           "o": [
-            "ga",
-            "meo",
-            "dut",
-            "tho"
+            "ăp",
+            "ap",
+            "at",
+            "ăm"
           ],
-          "a": "dut",
-          "h": "Ráp âm đầu 'd' và vần 'ut' liền nhau bé sẽ đánh vần được tiếng 'dut' cực kỳ dễ dàng!",
+          "a": "ăp",
+          "h": "Âm 'c' + vần 'ăp' + thanh nặng tạo nên từ 'cặp' sách thân quen!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3031,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'Đ' với vần xuôi 'up' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'tập' (tập viết chữ đẹp), phần vần xuôi ghép từ 'â' và 'p' là vần gì?",
           "o": [
-            "đup",
-            "ca",
-            "cho",
-            "bo"
+            "âp",
+            "ăt",
+            "ân",
+            "âm"
           ],
-          "a": "đup",
-          "h": "Ráp âm đầu 'đ' và vần 'up' liền nhau bé sẽ đánh vần được tiếng 'đup' cực kỳ dễ dàng!",
+          "a": "âp",
+          "h": "Âm 't' + vần 'âp' + thanh nặng = 'tập' viết chăm chỉ!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3032,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'G' với vần xuôi 'on' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy tìm vần xuôi trong tiếng 'sâm' (củ nhân sâm quý)?",
           "o": [
-            "gon",
-            "tho",
-            "meo",
-            "ga"
+            "âm",
+            "ân",
+            "âp",
+            "ât"
           ],
-          "a": "gon",
-          "h": "Ráp âm đầu 'g' và vần 'on' liền nhau bé sẽ đánh vần được tiếng 'gon' cực kỳ dễ dàng!",
+          "a": "âm",
+          "h": "Âm 's' + vần 'âm' tạo thành tiếng 'sâm'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3033,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'H' với vần xuôi 'un' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy tìm vần xuôi trong tiếng 'chân' (đôi chân chạy nhanh)?",
           "o": [
-            "hun",
-            "ca",
-            "cho",
-            "bo"
+            "ân",
+            "âm",
+            "âp",
+            "ât"
           ],
-          "a": "hun",
-          "h": "Ráp âm đầu 'h' và vần 'un' liền nhau bé sẽ đánh vần được tiếng 'hun' cực kỳ dễ dàng!",
+          "a": "ân",
+          "h": "Phụ âm 'ch' + vần 'ân' tạo thành tiếng 'chân'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3034,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'L' với vần xuôi 'an' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Bé hãy tìm vần xuôi trong tiếng 'sất' (sơn sất)?",
           "o": [
-            "lan",
-            "tho",
-            "ga",
-            "meo"
+            "ât",
+            "âp",
+            "ân",
+            "âm"
           ],
-          "a": "lan",
-          "h": "Ráp âm đầu 'l' và vần 'an' liền nhau bé sẽ đánh vần được tiếng 'lan' cực kỳ dễ dàng!",
+          "a": "ât",
+          "h": "Âm 's' + vần 'ât' + thanh sắc tạo thành tiếng 'sất'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3035,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'M' với vần xuôi 'am' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
+          "q": "Trong tiếng 'bông' (bông hoa tươi), phần vần có kết thúc bằng âm 'ng' là vần gì?",
           "o": [
-            "bo",
-            "cho",
-            "ca",
-            "mam"
+            "ông",
+            "ong",
+            "ung",
+            "ưng"
           ],
-          "a": "mam",
-          "h": "Ráp âm đầu 'm' và vần 'am' liền nhau bé sẽ đánh vần được tiếng 'mam' cực kỳ dễ dàng!",
+          "a": "ông",
+          "h": "Âm 'b' + vần 'ông' tạo thành tiếng 'bông' hoa rực rỡ!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_xuoi_co_ban"
           ]
         },
         {
           "id": 3036,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'N' với vần xuôi 'ap' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm ghép 'ch' với nguyên âm 'e' và thanh hỏi để thu được từ chỉ hành động chẻ củi?",
           "o": [
-            "nap",
-            "meo",
-            "ga",
-            "tho"
+            "chẻ",
+            "trẻ",
+            "kẻ",
+            "nhẻ"
           ],
-          "a": "nap",
-          "h": "Ráp âm đầu 'n' và vần 'ap' liền nhau bé sẽ đánh vần được tiếng 'nap' cực kỳ dễ dàng!",
+          "a": "chẻ",
+          "h": "Phụ âm 'ch' + 'e' + thanh hỏi tạo thành tiếng 'chẻ'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3037,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'P' với vần xuôi 'at' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm ghép 'tr' với vần 'e' để thu được từ chỉ lũy tre xanh mát?",
           "o": [
-            "ca",
-            "pat",
-            "bo",
-            "cho"
+            "tre",
+            "che",
+            "ke",
+            "nghe"
           ],
-          "a": "pat",
-          "h": "Ráp âm đầu 'p' và vần 'at' liền nhau bé sẽ đánh vần được tiếng 'pat' cực kỳ dễ dàng!",
+          "a": "tre",
+          "h": "Phụ âm ghép 'tr' + 'e' = 'tre' (lũy tre xanh đầu làng)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3038,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'Q' với vần xuôi 'ac' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm ghép 'kh' với vần 'e' và thanh sắc để chỉ quả khế chua ngọt?",
           "o": [
-            "ga",
-            "tho",
-            "meo",
-            "qac"
+            "khế",
+            "thế",
+            "phế",
+            "ghế"
           ],
-          "a": "qac",
-          "h": "Ráp âm đầu 'q' và vần 'ac' liền nhau bé sẽ đánh vần được tiếng 'qac' cực kỳ dễ dàng!",
+          "a": "khế",
+          "h": "Phụ âm 'kh' + 'ê' + thanh sắc tạo nên tiếng 'khế'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3039,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'R' với vần xuôi 'oc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm ghép 'nh' với vần 'a' và thanh huyền để chỉ ngôi nhà ấm áp?",
           "o": [
-            "cho",
-            "bo",
-            "ca",
-            "roc"
+            "nhà",
+            "chà",
+            "thà",
+            "phà"
           ],
-          "a": "roc",
-          "h": "Ráp âm đầu 'r' và vần 'oc' liền nhau bé sẽ đánh vần được tiếng 'roc' cực kỳ dễ dàng!",
+          "a": "nhà",
+          "h": "Phụ âm 'nh' + 'a' + thanh huyền tạo nên tiếng 'nhà' thân thương!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3040,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'S' với vần xuôi 'uc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm 'th' với vần 'uoc' và thanh sắc để chỉ chiếc thước kẻ gỗ?",
           "o": [
-            "suc",
-            "ga",
-            "tho",
-            "meo"
+            "thước",
+            "chước",
+            "phước",
+            "khước"
           ],
-          "a": "suc",
-          "h": "Ráp âm đầu 's' và vần 'uc' liền nhau bé sẽ đánh vần được tiếng 'suc' cực kỳ dễ dàng!",
+          "a": "thước",
+          "h": "Phụ âm 'th' + vần 'ươc' + thanh sắc = 'thước' (thước kẻ học tập)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3041,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'T' với vần xuôi 'ut' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm ghép 'ph' với vần 'ơ' để chỉ bông hoa phơ trắng?",
           "o": [
-            "ca",
-            "cho",
-            "tut",
-            "bo"
+            "phơ",
+            "thơ",
+            "chơ",
+            "khơ"
           ],
-          "a": "tut",
-          "h": "Ráp âm đầu 't' và vần 'ut' liền nhau bé sẽ đánh vần được tiếng 'tut' cực kỳ dễ dàng!",
+          "a": "phơ",
+          "h": "Phụ âm 'ph' + 'ơ' tạo thành tiếng 'phơ'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3042,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'V' với vần xuôi 'up' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm ghép 'gh' với vần 'e' và thanh sắc để chỉ chiếc ghế ngồi học?",
           "o": [
-            "vup",
-            "tho",
-            "ga",
-            "meo"
+            "ghế",
+            "kế",
+            "thế",
+            "chế"
           ],
-          "a": "vup",
-          "h": "Ráp âm đầu 'v' và vần 'up' liền nhau bé sẽ đánh vần được tiếng 'vup' cực kỳ dễ dàng!",
+          "a": "ghế",
+          "h": "Theo quy tắc chính tả, 'gh' đi trước 'e', 'ê', 'i' để tạo nên tiếng 'ghế'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3043,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'X' với vần xuôi 'on' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm 'ngh' với vần 'i' và thanh ngã để chỉ hành động suy nghĩ chu đáo?",
           "o": [
-            "ca",
-            "xon",
-            "cho",
-            "bo"
+            "nghĩ",
+            "khi",
+            "chỉ",
+            "nghi"
           ],
-          "a": "xon",
-          "h": "Ráp âm đầu 'x' và vần 'on' liền nhau bé sẽ đánh vần được tiếng 'xon' cực kỳ dễ dàng!",
+          "a": "nghĩ",
+          "h": "Phụ âm 'ngh' đứng trước nguyên âm 'i' + thanh ngã = 'nghĩ'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3044,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'B' với vần xuôi 'un' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm 'gi' với vần 'ay' và thanh sắc để chỉ tờ giấy vẽ tranh?",
           "o": [
-            "tho",
-            "meo",
-            "bun",
-            "ga"
+            "giấy",
+            "mấy",
+            "thấy",
+            "lấy"
           ],
-          "a": "bun",
-          "h": "Ráp âm đầu 'b' và vần 'un' liền nhau bé sẽ đánh vần được tiếng 'bun' cực kỳ dễ dàng!",
+          "a": "giấy",
+          "h": "Âm 'gi' + vần 'ây' + thanh sắc tạo thành tiếng 'giấy' tập tô!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3045,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'C' với vần xuôi 'an' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.3 Phụ âm ghép đôi",
+          "q": "Bé hãy ghép phụ âm 'qu' với vần 'a' và thanh hỏi để chỉ trái quả chín mọng?",
           "o": [
-            "bo",
-            "cho",
-            "can",
-            "ca"
+            "quả",
+            "cả",
+            "thả",
+            "phả"
           ],
-          "a": "can",
-          "h": "Ráp âm đầu 'c' và vần 'an' liền nhau bé sẽ đánh vần được tiếng 'can' cực kỳ dễ dàng!",
+          "a": "quả",
+          "h": "Âm 'qu' + 'a' + thanh hỏi tạo thành tiếng 'quả' ngon ngọt!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "phu_am_ghep"
           ]
         },
         {
           "id": 3046,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'D' với vần xuôi 'am' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'làng' (làng quê thanh bình), vần có âm cuối 'ng' đứng sau 'l' là vần gì?",
           "o": [
-            "dam",
-            "meo",
-            "tho",
-            "ga"
+            "ang",
+            "anh",
+            "ach",
+            "ang"
           ],
-          "a": "dam",
-          "h": "Ráp âm đầu 'd' và vần 'am' liền nhau bé sẽ đánh vần được tiếng 'dam' cực kỳ dễ dàng!",
+          "a": "ang",
+          "h": "Âm 'l' + vần 'ang' + thanh huyền = 'làng' quê yêu dấu!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3047,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'Đ' với vần xuôi 'ap' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'xanh' (bầu trời xanh mát), phần vần kết thúc bằng âm 'nh' là vần gì?",
           "o": [
-            "đap",
-            "ca",
-            "bo",
-            "cho"
+            "anh",
+            "ach",
+            "ang",
+            "inh"
           ],
-          "a": "đap",
-          "h": "Ráp âm đầu 'đ' và vần 'ap' liền nhau bé sẽ đánh vần được tiếng 'đap' cực kỳ dễ dàng!",
+          "a": "anh",
+          "h": "Âm 'x' + vần 'anh' tạo nên màu 'xanh' tươi thắm!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3048,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'G' với vần xuôi 'at' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'sách' (quyển sách tập đọc), phần vần kết thúc bằng âm 'ch' là vần gì?",
           "o": [
-            "ga",
-            "gat",
-            "tho",
-            "meo"
+            "ach",
+            "anh",
+            "ang",
+            "ich"
           ],
-          "a": "gat",
-          "h": "Ráp âm đầu 'g' và vần 'at' liền nhau bé sẽ đánh vần được tiếng 'gat' cực kỳ dễ dàng!",
+          "a": "ach",
+          "h": "Âm 's' + vần 'ach' + thanh sắc tạo nên từ 'sách'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3049,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'H' với vần xuôi 'ac' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'xinh' (bé xinh xắn), phần vần kết thúc bằng 'nh' có nguyên âm 'i' là vần gì?",
           "o": [
-            "cho",
-            "hac",
-            "ca",
-            "bo"
+            "inh",
+            "ich",
+            "anh",
+            "ach"
           ],
-          "a": "hac",
-          "h": "Ráp âm đầu 'h' và vần 'ac' liền nhau bé sẽ đánh vần được tiếng 'hac' cực kỳ dễ dàng!",
+          "a": "inh",
+          "h": "Âm 'x' + vần 'inh' tạo thành tiếng 'xinh' xắn!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3050,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'L' với vần xuôi 'oc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'thích' (bé thích học vẽ), phần vần kết thúc bằng âm 'ch' có nguyên âm 'i' là vần gì?",
           "o": [
-            "meo",
-            "loc",
-            "ga",
-            "tho"
+            "ich",
+            "inh",
+            "ach",
+            "anh"
           ],
-          "a": "loc",
-          "h": "Ráp âm đầu 'l' và vần 'oc' liền nhau bé sẽ đánh vần được tiếng 'loc' cực kỳ dễ dàng!",
+          "a": "ich",
+          "h": "Âm 'th' + vần 'ich' + thanh sắc tạo thành từ 'thích'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3051,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'M' với vần xuôi 'uc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'bóng' (quả bóng tròn), phần vần có kết thúc bằng âm 'ng' là vần gì?",
           "o": [
-            "cho",
-            "muc",
-            "bo",
-            "ca"
+            "ong",
+            "ông",
+            "ung",
+            "ưng"
           ],
-          "a": "muc",
-          "h": "Ráp âm đầu 'm' và vần 'uc' liền nhau bé sẽ đánh vần được tiếng 'muc' cực kỳ dễ dàng!",
+          "a": "ong",
+          "h": "Âm 'b' + vần 'ong' + thanh sắc = 'bóng' bay!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3052,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'N' với vần xuôi 'ut' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'sông' (dòng sông xanh mát), phần vần có 'ô' đứng đầu kết thúc bằng 'ng' là vần gì?",
           "o": [
-            "tho",
-            "ga",
-            "nut",
-            "meo"
+            "ông",
+            "ong",
+            "ung",
+            "ưng"
           ],
-          "a": "nut",
-          "h": "Ráp âm đầu 'n' và vần 'ut' liền nhau bé sẽ đánh vần được tiếng 'nut' cực kỳ dễ dàng!",
+          "a": "ông",
+          "h": "Âm 's' + vần 'ông' tạo nên tiếng 'sông'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3053,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'P' với vần xuôi 'up' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'cùng' (cùng bạn đến trường), phần vần có 'u' đứng đầu kết thúc bằng 'ng' là vần gì?",
           "o": [
-            "cho",
-            "ca",
-            "pup",
-            "bo"
+            "ung",
+            "ưng",
+            "ong",
+            "ông"
           ],
-          "a": "pup",
-          "h": "Ráp âm đầu 'p' và vần 'up' liền nhau bé sẽ đánh vần được tiếng 'pup' cực kỳ dễ dàng!",
+          "a": "ung",
+          "h": "Âm 'c' + vần 'ung' + thanh huyền tạo thành từ 'cùng'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3054,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'Q' với vần xuôi 'on' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'mừng' (vẫy đuôi vui mừng), phần vần có 'ư' đứng đầu kết thúc bằng 'ng' là vần gì?",
           "o": [
-            "ga",
-            "qon",
-            "tho",
-            "meo"
+            "ưng",
+            "ung",
+            "ong",
+            "ông"
           ],
-          "a": "qon",
-          "h": "Ráp âm đầu 'q' và vần 'on' liền nhau bé sẽ đánh vần được tiếng 'qon' cực kỳ dễ dàng!",
+          "a": "ưng",
+          "h": "Âm 'm' + vần 'ưng' + thanh huyền tạo thành từ 'mừng'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3055,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'R' với vần xuôi 'un' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Bé hãy ghép phụ âm 'ch' với vần 'ang' và thanh sắc để chỉ người bác chữa bệnh cho em bé?",
           "o": [
-            "run",
-            "ca",
-            "cho",
-            "bo"
+            "cháng",
+            "tráng",
+            "kháng",
+            "tháng"
           ],
-          "a": "run",
-          "h": "Ráp âm đầu 'r' và vần 'un' liền nhau bé sẽ đánh vần được tiếng 'run' cực kỳ dễ dàng!",
+          "a": "cháng",
+          "h": "Phụ âm 'ch' + vần 'ang' + thanh sắc = 'cháng' (hoặc tráng)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3056,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'S' với vần xuôi 'an' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Bé hãy ghép phụ âm 'm' với vần 'ang' và thanh sắc để chỉ tên loài rau củ ngâm ngon ngọt?",
           "o": [
-            "meo",
-            "tho",
-            "san",
-            "ga"
+            "măng",
+            "máng",
+            "mãng",
+            "mạng"
           ],
-          "a": "san",
-          "h": "Ráp âm đầu 's' và vần 'an' liền nhau bé sẽ đánh vần được tiếng 'san' cực kỳ dễ dàng!",
+          "a": "măng",
+          "h": "Âm 'm' + vần 'ăng' = 'măng' (măng cá trê thơm nức)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3057,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'T' với vần xuôi 'am' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Bé hãy ghép phụ âm 'tr' với vần 'ang' và thanh sắc để chỉ màu trắng tinh khôi?",
           "o": [
-            "tam",
-            "cho",
-            "bo",
-            "ca"
+            "trắng",
+            "chắng",
+            "thắng",
+            "phắng"
           ],
-          "a": "tam",
-          "h": "Ráp âm đầu 't' và vần 'am' liền nhau bé sẽ đánh vần được tiếng 'tam' cực kỳ dễ dàng!",
+          "a": "trắng",
+          "h": "Âm 'tr' + vần 'ăng' + thanh sắc = 'trắng' tinh!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3058,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'V' với vần xuôi 'ap' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'vàng' (lúa chín vàng óng), phần vần kết thúc bằng 'ng' là vần gì?",
           "o": [
-            "tho",
-            "vap",
-            "meo",
-            "ga"
+            "ang",
+            "anh",
+            "ach",
+            "ong"
           ],
-          "a": "vap",
-          "h": "Ráp âm đầu 'v' và vần 'ap' liền nhau bé sẽ đánh vần được tiếng 'vap' cực kỳ dễ dàng!",
+          "a": "ang",
+          "h": "Âm 'v' + vần 'ang' + thanh huyền = 'vàng'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3059,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'X' với vần xuôi 'at' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Trong tiếng 'mưa' (cơn mưa rào), phần vần gồm nguyên âm 'ư' và 'a' ghép lại là vần gì?",
           "o": [
-            "cho",
-            "bo",
-            "xat",
-            "ca"
+            "ưa",
+            "ua",
+            "ia",
+            "iê"
           ],
-          "a": "xat",
-          "h": "Ráp âm đầu 'x' và vần 'at' liền nhau bé sẽ đánh vần được tiếng 'xat' cực kỳ dễ dàng!",
+          "a": "ưa",
+          "h": "Âm 'm' + vần 'ưa' tạo thành tiếng 'mưa' mát lành!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3060,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'B' với vần xuôi 'ac' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'chua' (quả chanh chua), phần vần gồm nguyên âm 'u' và 'a' ghép lại là vần gì?",
           "o": [
-            "meo",
-            "ga",
-            "bac",
-            "tho"
+            "ua",
+            "ưa",
+            "ia",
+            "iê"
           ],
-          "a": "bac",
-          "h": "Ráp âm đầu 'b' và vần 'ac' liền nhau bé sẽ đánh vần được tiếng 'bac' cực kỳ dễ dàng!",
+          "a": "ua",
+          "h": "Phụ âm 'ch' + vần 'ua' tạo nên tiếng 'chua'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3061,
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Nếu ghép phụ âm đầu 'C' với vần xuôi 'oc' và không thêm dấu thanh, bé sẽ thu được tiếng nào?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'chia' (chia quà cho bạn), phần vần gồm nguyên âm 'i' và 'a' ghép lại là vần gì?",
           "o": [
-            "coc",
-            "ca",
-            "bo",
-            "cho"
+            "ia",
+            "iê",
+            "ua",
+            "ưa"
           ],
-          "a": "coc",
-          "h": "Ráp âm đầu 'c' và vần 'oc' liền nhau bé sẽ đánh vần được tiếng 'coc' cực kỳ dễ dàng!",
+          "a": "ia",
+          "h": "Phụ âm 'ch' + vần 'ia' tạo thành tiếng 'chia' sẻ tình bạn!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3062,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'ngoại', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Bé hãy ghép phụ âm 'tr' với vần 'on' và thanh tròn để tả hình dạng chiếc đĩa tròn?",
           "o": [
-            "at",
-            "an",
-            "ap",
-            "oai"
+            "tròn",
+            "trón",
+            "trỏn",
+            "trọn"
           ],
-          "a": "oai",
-          "h": "Tiếng 'ngoại' chứa vần ghép đôi 'oai' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "tròn",
+          "h": "Âm 'tr' + vần 'on' + thanh huyền = 'tròn' (tròn xoe)!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3063,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'ngoan', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Bé hãy ghép phụ âm 'ch' với vần 'au' và thanh sắc để chỉ củ cháu ngọt?",
           "o": [
-            "ap",
-            "at",
-            "an",
-            "oan"
+            "cháu",
+            "tráu",
+            "kháu",
+            "tháu"
           ],
-          "a": "oan",
-          "h": "Tiếng 'ngoan' chứa vần ghép đôi 'oan' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "cháu",
+          "h": "Phụ âm 'ch' + vần 'au' + thanh sắc = 'cháu' ngoan của bà!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3064,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'khoác', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'ngôi' (ngôi sao lấp lánh), bộ phận vần gồm 'ô' và 'i' ghép lại là vần gì?",
           "o": [
-            "oac",
-            "at",
-            "an",
-            "ap"
+            "ôi",
+            "oi",
+            "ơi",
+            "ui"
           ],
-          "a": "oac",
-          "h": "Tiếng 'khoác' chứa vần ghép đôi 'oac' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "ôi",
+          "h": "Âm 'ng' + vần 'ôi' tạo nên tiếng 'ngôi' sao rực rỡ!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3065,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'thoát', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'chơi' (vui chơi cùng bạn), bộ phận vần gồm 'ơ' và 'i' ghép lại là vần gì?",
           "o": [
-            "at",
-            "ap",
-            "oat",
-            "an"
+            "ơi",
+            "ôi",
+            "oi",
+            "ui"
           ],
-          "a": "oat",
-          "h": "Tiếng 'thoát' chứa vần ghép đôi 'oat' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "ơi",
+          "h": "Phụ âm 'ch' + vần 'ơi' tạo nên tiếng 'chơi'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3066,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'chuối', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'mới' (quyển sách mới tinh), phần vần gồm 'ơ' và 'i' với thanh sắc là vần gì?",
           "o": [
-            "at",
-            "an",
-            "uôi",
-            "ap"
+            "ơi",
+            "ôi",
+            "oi",
+            "ui"
           ],
-          "a": "uôi",
-          "h": "Tiếng 'chuối' chứa vần ghép đôi 'uôi' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "ơi",
+          "h": "Âm 'm' + vần 'ơi' + thanh sắc = 'mới'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3067,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'kiệu', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "Bé hãy ghép phụ âm 'th' với vần 'oi' và thanh sắc để chỉ thỏi son màu hồng?",
           "o": [
-            "at",
-            "iêu",
-            "an",
-            "ap"
+            "thỏi",
+            "thói",
+            "thòi",
+            "thọi"
           ],
-          "a": "iêu",
-          "h": "Tiếng 'kiệu' chứa vần ghép đôi 'iêu' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "thỏi",
+          "h": "Phụ âm 'th' + vần 'oi' + thanh hỏi = 'thỏi'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3068,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'bướm', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'mẹ' (mẹ yêu bé), bộ phận âm đầu là phụ âm đơn nào?",
           "o": [
-            "an",
-            "ap",
-            "at",
-            "ươm"
+            "m",
+            "b",
+            "c",
+            "d"
           ],
-          "a": "ươm",
-          "h": "Tiếng 'bướm' chứa vần ghép đôi 'ươm' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "m",
+          "h": "Phụ âm đầu là 'm', phần vần là nguyên âm 'e'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3069,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'chuông', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'bạn' (bạn bè tốt), bộ phận vần gồm 'a' và 'n' ghép lại là vần gì?",
           "o": [
-            "uông",
-            "at",
+            "an",
+            "am",
             "ap",
-            "an"
+            "at"
           ],
-          "a": "uông",
-          "h": "Tiếng 'chuông' chứa vần ghép đôi 'uông' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "an",
+          "h": "Âm 'b' + vần 'an' + thanh nặng = 'bạn'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3070,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'thuyền', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.4 Vần có âm cuối dài",
+          "q": "In tiếng 'vẽ' (vẽ tranh hoa đào), bộ phận vần gồm nguyên âm nào?",
           "o": [
-            "ap",
-            "an",
-            "uyen",
-            "at"
+            "e",
+            "ê",
+            "a",
+            "o"
           ],
-          "a": "uyen",
-          "h": "Tiếng 'thuyền' chứa vần ghép đôi 'uyen' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "e",
+          "h": "Âm 'v' + nguyên âm 'e' + thanh ngã = 'vẽ'!",
           "img": "assets/images/tho_hong.png",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_van_co_ban"
+            "van_am_cuoi"
           ]
         },
         {
           "id": 3071,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'hiền', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'chuối' (quả chuối chín vàng), nguyên âm đôi nào đứng ở bộ phận vần?",
           "o": [
-            "ien",
-            "at",
-            "an",
-            "ap"
+            "uô",
+            "iê",
+            "ươ",
+            "ua"
           ],
-          "a": "ien",
-          "h": "Tiếng 'hiền' chứa vần ghép đôi 'ien' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "uô",
+          "h": "Âm 'ch' + vần 'uôi' (nguyên âm đôi 'uô' + 'i') + thanh sắc = 'chuối'!",
           "img": "assets/images/tho_hong.png",
-          "week": 2,
+          "week": 3,
           "tags": [
-            "week2",
-            "ghep_am_van_co_ban"
+            "week3",
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3072,
-          "sub": "Vần kép phức tạp",
-          "q": "Trong từ học kỳ 2 gợi ý 'siêng', bé hãy tìm vần đôi/vần ghép phức tạp xuất hiện trong tiếng này?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'kiệu' (xe củ kiệu), nguyên âm đôi nào ghép với 'u' ở phần vần?",
           "o": [
-            "ieng",
-            "an",
-            "at",
-            "ap"
+            "iê",
+            "uô",
+            "ươ",
+            "ia"
           ],
-          "a": "ieng",
-          "h": "Tiếng 'siêng' chứa vần ghép đôi 'ieng' cực kỳ đặc biệt đó nha bé ngoan!",
+          "a": "iê",
+          "h": "Âm 'k' + vần 'iêu' (nguyên âm đôi 'iê' + 'u') + thanh nặng = 'kiệu'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3073,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'táo'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'bướm' (chú bướm xinh xắn), nguyên âm đôi nào đứng trước chữ 'm' ở phần vần?",
           "o": [
-            "ao",
-            "ap",
-            "at",
-            "am"
+            "ươ",
+            "uô",
+            "iê",
+            "ưa"
           ],
-          "a": "ao",
-          "h": "Vần ngược 'ao' chính là phần đứng sau của tiếng 'táo' đấy bé ngoan!",
+          "a": "ươ",
+          "h": "Âm 'b' + vần 'ươm' (nguyên âm đôi 'ươ' + 'm') + thanh sắc = 'bướm'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3074,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'mèo'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'chuông' (tiếng chuông nhà chùa), vần 'uông' chứa nguyên âm đôi nào?",
           "o": [
-            "eo",
-            "am",
-            "ap",
-            "at"
+            "uô",
+            "ươ",
+            "iê",
+            "ua"
           ],
-          "a": "eo",
-          "h": "Vần ngược 'eo' chính là phần đứng sau của tiếng 'mèo' đấy bé ngoan!",
+          "a": "uô",
+          "h": "Âm 'ch' + vần 'uông' (nguyên âm đôi 'uô' + 'ng') = 'chuông'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3075,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'ri'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'hiền' (dì Hiền hiền dịu), vần 'iên' chứa nguyên âm đôi nào?",
           "o": [
-            "am",
-            "iu",
-            "at",
-            "ap"
+            "iê",
+            "uô",
+            "ươ",
+            "ia"
           ],
-          "a": "iu",
-          "h": "Vần ngược 'iu' chính là phần đứng sau của tiếng 'ri' đấy bé ngoan!",
+          "a": "iê",
+          "h": "Âm 'h' + vần 'iên' (nguyên âm đôi 'iê' + 'n') + thanh huyền = 'hiền'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3076,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'Lũy'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'siêng' (chăm chỉ siêng năng), vần 'iêng' chứa nguyên âm đôi nào dưới đây?",
           "o": [
-            "ap",
-            "at",
-            "am",
-            "uy"
+            "iê",
+            "uô",
+            "ươ",
+            "ia"
           ],
-          "a": "uy",
-          "h": "Vần ngược 'uy' chính là phần đứng sau của tiếng 'Lũy' đấy bé ngoan!",
+          "a": "iê",
+          "h": "Âm 's' + vần 'iêng' (nguyên âm đôi 'iê' + 'ng') = 'siêng'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3077,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'cải'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Bé hãy ghép phụ âm 'c' với vần 'uôn' (có 'uô') và thanh sắc để tả hành động cuốn chả lá lốt?",
           "o": [
-            "at",
-            "ai",
-            "ap",
-            "am"
+            "cuốn",
+            "cuồn",
+            "cuộn",
+            "cuỏn"
           ],
-          "a": "ai",
-          "h": "Vần ngược 'ai' chính là phần đứng sau của tiếng 'cải' đấy bé ngoan!",
+          "a": "cuốn",
+          "h": "Âm 'c' + vần 'uôn' + thanh sắc = 'cuốn' (cuốn chả thơm nức)!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3078,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'máy'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Bé hãy ghép phụ âm 'nh' với vần 'uôm' (có 'uô') và thanh nặng để chỉ hành động nhuộm vải?",
           "o": [
-            "at",
-            "ay",
-            "ap",
-            "am"
+            "nhuộm",
+            "nhuốm",
+            "nhuồm",
+            "nhuốm"
           ],
-          "a": "ay",
-          "h": "Vần ngược 'ay' chính là phần đứng sau của tiếng 'máy' đấy bé ngoan!",
+          "a": "nhuộm",
+          "h": "Phụ âm 'nh' + vần 'uôm' + thanh nặng = 'nhuộm'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3079,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'cây'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Bé hãy ghép phụ âm 'v' với vần 'uôt' (có 'uô') và thanh sắc để tả bộ móng vuốt của chú mèo?",
           "o": [
-            "ây",
-            "at",
-            "am",
-            "ap"
+            "vuốt",
+            "vuột",
+            "vuồn",
+            "vuốn"
           ],
-          "a": "ây",
-          "h": "Vần ngược 'ây' chính là phần đứng sau của tiếng 'cây' đấy bé ngoan!",
+          "a": "vuốt",
+          "h": "Âm 'v' + vần 'uôt' + thanh sắc = 'vuốt'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3080,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'xoài'?",
+          "sub": "3.5 Nguyên âm đôi nâng cao",
+          "q": "Trong tiếng 'thuyền' (chiếc thuyền buồm), nguyên âm đôi nào kết hợp với 'u' và 'n'?",
           "o": [
-            "ap",
-            "oi",
-            "at",
-            "am"
+            "yê",
+            "iê",
+            "uô",
+            "ươ"
           ],
-          "a": "oi",
-          "h": "Vần ngược 'oi' chính là phần đứng sau của tiếng 'xoài' đấy bé ngoan!",
+          "a": "yê",
+          "h": "Âm 'th' + vần 'uyển' (có 'uyê') + thanh huyền = 'thuyền'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "nguyen_am_doi"
           ]
         },
         {
           "id": 3081,
-          "sub": "Vần ngược thú vị",
-          "q": "Tiếng ngọt ngào sau đây chứa vần ngược nào nhỉ bé ơi: 'nổi'?",
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong tiếng 'ngoại' (bà ngoại kính yêu), vần ghép phức tạp gồm 3 chữ cái 'o', 'a', 'i' là vần gì?",
           "o": [
-            "ap",
-            "ôi",
-            "am",
-            "at"
+            "oai",
+            "oan",
+            "oac",
+            "oat"
           ],
-          "a": "ôi",
-          "h": "Vần ngược 'ôi' chính là phần đứng sau của tiếng 'nổi' đấy bé ngoan!",
+          "a": "oai",
+          "h": "Âm 'ng' + vần 'oai' + thanh nặng = 'ngoại'!",
           "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Bé hãy ghép phụ âm đầu 'tr' với vần 'on' và thanh 'sắc' để được từ chỉ hình dạng quả bóng?",
-          "o": [
-            "tròn",
-            "trọn",
-            "trơn",
-            "trốn"
-          ],
-          "a": "tròn",
-          "h": "Phụ âm 'tr' đứng trước, vần 'on' đứng sau, thêm thanh sắc thành tiếng 'tròn' trịa nha bé!",
           "id": 3082,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong tiếng 'ngoan' (bé ngoan biết vâng lời), vần ghép phức tạp gồm 'o', 'a', 'n' là vần gì?",
+          "o": [
+            "oan",
+            "oai",
+            "oac",
+            "oat"
+          ],
+          "a": "oan",
+          "h": "Âm 'ng' + vần 'oan' = 'ngoan'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép phụ âm đầu 'c' với vần đôi 'uôn' và thanh 'sắc' để được hành động dì Hiền làm chả lá lốt?",
-          "o": [
-            "cuốn",
-            "cuộn",
-            "cướp",
-            "cuồn"
-          ],
-          "a": "cuốn",
-          "h": "Âm 'c' đứng trước, vần 'uôn' đứng sau, thanh sắc trên đầu chữ 'ô' tạo thành từ 'cuốn' chả!",
           "id": 3083,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong tiếng 'khoác' (khoác áo ấm mùa đông), vần ghép phức tạp gồm 'o', 'a', 'c' là vần gì?",
+          "o": [
+            "oac",
+            "oan",
+            "oai",
+            "oat"
+          ],
+          "a": "oac",
+          "h": "Phụ âm 'kh' + vần 'oac' + thanh sắc = 'khoác'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép phụ âm đầu 'nh' với vần 'uôm' và thanh 'nặng' để được hành động tô màu sắc cho tấm vải?",
-          "o": [
-            "nhuộm",
-            "nhuốm",
-            "nhôm",
-            "nhóm"
-          ],
-          "a": "nhuộm",
-          "h": "Âm 'nh' đứng trước, vần 'uôm' đứng sau, thêm thanh nặng bên dưới ta được từ 'nhuộm' vải!",
           "id": 3084,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong tiếng 'thoát' (thoát khỏi nguy hiểm), vần ghép phức tạp gồm 'o', 'a', 't' là vần gì?",
+          "o": [
+            "oat",
+            "oac",
+            "oan",
+            "oai"
+          ],
+          "a": "oat",
+          "h": "Phụ âm 'th' + vần 'oat' + thanh sắc = 'thoát'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần ngược thú vị",
-          "q": "Bé hãy ghép phụ âm đầu 'ch' với nguyên âm 'e' và thanh 'hỏi' để có hành động bác nông dân bổ củi?",
-          "o": [
-            "chẻ",
-            "chè",
-            "chẽ",
-            "chẹt"
-          ],
-          "a": "chẻ",
-          "h": "Phụ âm 'ch' đứng trước, âm 'e' đứng sau, đặt thanh hỏi trên đầu chữ 'e' để được từ 'chẻ' củi nha!",
           "id": 3085,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Vần xuôi dễ thương",
-          "q": "Bé hãy ghép âm đầu 'b' với vần 'ang' và thanh 'huyền' để được từ chỉ tên một bác cây già nua trước cửa lớp?",
-          "o": [
-            "bàng",
-            "báng",
-            "bản",
-            "bảng"
-          ],
-          "a": "bàng",
-          "h": "Tiếng 'bàng' trong 'cây bàng' được ghép từ âm 'b', vần 'ang' và thanh huyền trên đầu chữ 'a' đấy!",
-          "id": 3086,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Bé hãy ghép âm 'v' với vần 'uôt' và thanh 'sắc' để chỉ bộ móng sắc nhọn của chú mèo con?",
-          "o": [
-            "vuốt",
-            "vuốt ve",
-            "vượt",
-            "vút"
-          ],
-          "a": "vuốt",
-          "h": "Âm 'v' đứng trước, vần 'uôt' đứng sau, thêm thanh sắc tạo thành từ 'móng vuốt' nhọn hoắt!",
-          "id": 3087,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Ghép Phụ âm đầu với Vần",
-          "q": "Bé hãy ghép âm 'gi' với vần 'ương' và thanh 'sắc' để chỉ hành động ông mở chiếc ô đen che nắng che mưa?",
-          "o": [
-            "giương",
-            "giường",
-            "gương",
-            "giăng"
-          ],
-          "a": "giương",
-          "h": "Âm 'gi' đứng trước, vần 'ương' đứng sau, không có thanh hoặc thanh sắc tùy từ, ở đây là 'giương' ô!",
-          "id": 3088,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm đầu 'kh' với vần 'uyên' và thanh 'huyền' để chỉ hành động cô giáo Thỏ Hồng khuyên bảo bé?",
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'kh' với vần phức tạp 'uyên' và thanh huyền để chỉ lời cô giáo khuyên bảo?",
           "o": [
             "khuyên",
-            "khuyến",
-            "khuất",
-            "khoanh"
+            "chuyên",
+            "thuyên",
+            "phuyên"
           ],
           "a": "khuyên",
-          "h": "Phụ âm 'kh' ghép với vần khó 'uyên' tạo thành tiếng 'khuyên' dịu dàng của cô giáo!",
-          "id": 3089,
+          "h": "Phụ âm 'kh' + vần 'uyên' + thanh huyền = 'khuyên'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép vần 'oat' với âm đầu 'h' và thanh 'nặng' để chỉ các hoạt động vui chơi nhảy dây, đá bóng?",
+          "id": 3086,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'h' với vần phức tạp 'oat' và thanh nặng để chỉ các hoạt động tập thể dục?",
           "o": [
             "hoạt",
-            "hoạt động",
-            "hoặc",
-            "hoát"
+            "hoát",
+            "hoàn",
+            "hoang"
           ],
           "a": "hoạt",
-          "h": "Âm 'h' đứng trước, vần 'oat' đứng sau, thêm thanh nặng bên dưới để được tiếng 'hoạt' trong 'hoạt động'!",
-          "id": 3090,
+          "h": "Phụ âm 'h' + vần 'oat' + thanh nặng = 'hoạt' (hoạt động vui tươi)!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'h' với vần 'uynh' và thanh 'nặng' để mô tả âm thanh bước chân chạy nhanh dồn dập chống bão?",
+          "id": 3087,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'h' với vần 'uynh' và thanh nặng để mô tả tiếng bước chân huỳnh huỵch?",
           "o": [
             "huỳnh",
-            "huỳnh huỵch",
-            "huých",
-            "huỳnh uỵch"
+            "huýnh",
+            "huỳnh",
+            "huỳnh"
           ],
           "a": "huỳnh",
-          "h": "Âm 'h' đứng trước, vần 'uynh' đứng sau, đặt thanh nặng tạo thành tiếng 'huỳnh' trong 'huỳnh huỵch'!",
-          "id": 3091,
+          "h": "Phụ âm 'h' + vần 'uynh' + thanh nặng = 'huỳnh'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'x' với vần 'oay' và thanh 'sắc' để chỉ luồng gió mạnh xoay tròn rít liên tục?",
+          "id": 3088,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'x' với vần 'oay' và thanh sắc để chỉ cơn gió xoáy tròn mạnh mẽ?",
           "o": [
             "xoáy",
             "xoay",
-            "xoăn",
-            "xoát"
+            "xoài",
+            "xoại"
           ],
           "a": "xoáy",
-          "h": "Âm 'x' đứng trước, vần 'oay' đứng sau, thêm thanh sắc tạo thành tiếng 'xoáy' trong 'cơn lốc xoáy'!",
-          "id": 3092,
+          "h": "Phụ âm 'x' + vần 'oay' + thanh sắc = 'xoáy'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 't' với vần 'uy' và thanh 'sắc' để chỉ hành động bé yêu thích mút kẹo?",
-          "o": [
-            "túy",
-            "túy lúy",
-            "tuy",
-            "túi"
-          ],
-          "a": "túy",
-          "h": "Phụ âm đầu 't' ghép với vần 'uy' và thanh sắc tạo thành tiếng 'túy' lấp lánh nha bé!",
-          "id": 3093,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'h' với vần 'uê' và thanh 'sắc' để chỉ tên một thành phố cổ kính miền Trung có sông Hương chảy qua?",
+          "id": 3089,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'h' với vần 'uê' và thanh sắc để chỉ tên cố đô Huế mộng mơ?",
           "o": [
             "Huế",
-            "huệ",
-            "huê",
-            "hút"
+            "Huề",
+            "Huệ",
+            "Huẻ"
           ],
           "a": "Huế",
-          "h": "Phụ âm 'h' kết hợp vần 'uê' và thanh sắc tạo thành danh từ riêng chỉ thành phố 'Huế' mộng mơ!",
-          "id": 3094,
+          "h": "Phụ âm 'h' + vần 'uê' + thanh sắc = 'Huế'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'x' với vần 'oăn' để chỉ mái tóc lượn sóng tự nhiên bồng bềnh của bạn Quỳnh?",
+          "id": 3090,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'x' với vần 'oăn' để chỉ mái tóc xoăn xinh xắn bồng bềnh?",
           "o": [
             "xoăn",
             "xoắn",
-            "xoán",
-            "xoan"
+            "xoằn",
+            "xoặn"
           ],
           "a": "xoăn",
-          "h": "Âm 'x' đứng trước, vần 'oăn' đứng sau tạo thành từ 'tóc xoăn' rất đáng yêu của bé!",
-          "id": 3095,
+          "h": "Phụ âm 'x' + vần 'oăn' = 'xoăn' (mái tóc xoăn ngộ nghĩnh)!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'h' với vần 'oang' và thanh 'ngã' để chỉ tên một con vật rừng nhỏ chạy nhanh như chớp?",
-          "o": [
-            "hoẵng",
-            "hoẵng con",
-            "hoang",
-            "hoảng"
-          ],
-          "a": "hoẵng",
-          "h": "Âm 'h' đứng trước, vần 'oang' đứng sau, thêm thanh ngã tạo thành từ chỉ con 'hoẵng' hoang dã!",
-          "id": 3096,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'th' với vần 'oăt' và thanh 'sắc' để mô tả hành động chạy nhảy nhanh nhẹn trốn tìm của chú sóc?",
+          "id": 3091,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'th' với vần 'oăt' và thanh sắc để tả cử chỉ thoắt ẩn thoắt hiện nhanh nhẹn?",
           "o": [
             "thoắt",
-            "thoăn thoắt",
             "thoát",
-            "thắt"
+            "thoăn",
+            "thoăn"
           ],
           "a": "thoắt",
-          "h": "Âm 'th' ghép với vần 'oăt' và thanh sắc tạo thành tiếng 'thoắt' trong cụm từ 'thoăn thoắt'!",
-          "id": 3097,
+          "h": "Phụ âm 'th' + vần 'oăt' + thanh sắc = 'thoắt'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 't' với vần 'uyêt' và thanh 'sắc' để chỉ những hạt trắng tinh khôi rơi rơi vào mùa đông lạnh buốt?",
+          "id": 3092,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 't' với vần 'uyêt' và thanh sắc để chỉ những hạt tuyết trắng rơi vào mùa đông?",
           "o": [
             "tuyết",
-            "tuyết trắng",
-            "tuyệt",
-            "tuất"
+            "tuyền",
+            "tuyện",
+            "tuyệt"
           ],
           "a": "tuyết",
-          "h": "Âm 't' đứng trước, vần 'uyêt' đứng sau, đặt thanh sắc trên đầu chữ 'ê' ta được từ 'tuyết' lạnh giá!",
-          "id": 3098,
+          "h": "Phụ âm 't' + vần 'uyêt' + thanh sắc = 'tuyết'!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'x' với vần 'uât' và thanh 'sắc' để chỉ hành động xuất hiện bất ngờ của ông mặt trời buổi sáng?",
+          "id": 3093,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'x' với vần 'uât' và thanh sắc để chỉ sự xuất hiện của ông mặt trời?",
           "o": [
             "xuất",
-            "xuất hiện",
-            "xuất sắc",
-            "xuất bản"
+            "xuân",
+            "xuân",
+            "xuống"
           ],
           "a": "xuất",
-          "h": "Phụ âm 'x' ghép với vần 'uât' và thanh sắc tạo thành tiếng 'xuất' trong từ 'xuất hiện'!",
-          "id": 3099,
+          "h": "Phụ âm 'x' + vần 'uât' + thanh sắc = 'xuất' (xuất hiện)!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
           ]
         },
         {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'h' with vần 'uych' và thanh 'nặng' để chỉ tiếng rơi mạnh phát ra tiếng kêu rầm rầm?",
-          "o": [
-            "huịch",
-            "huỵch",
-            "huých",
-            "huých vai"
-          ],
-          "a": "huịch",
-          "h": "Âm 'h' đứng trước, vần 'uych' đứng sau, thêm thanh nặng tạo thành tiếng 'huịch' trầm ấm!",
-          "id": 3100,
-          "week": 3,
-          "tags": [
-            "week3",
-            "ghep_am_van_phuc_tap"
-          ]
-        },
-        {
-          "sub": "Vần kép phức tạp",
-          "q": "Bé hãy ghép âm 'x' với vần 'uân' để chỉ mùa đầu tiên trong năm, hoa đào hoa mai nở khoe sắc rực rỡ?",
+          "id": 3094,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'x' với vần 'uân' để chỉ mùa xuân trăm hoa nở khoe sắc rực rỡ?",
           "o": [
             "xuân",
-            "mùa xuân",
-            "xuẩn",
-            "xuất"
+            "xuất",
+            "xoăn",
+            "xoáy"
           ],
           "a": "xuân",
-          "h": "Âm 'x' đứng trước kết hợp với vần 'uân' không dấu tạo thành từ 'xuân' trong 'mùa xuân' ấm áp!",
-          "id": 3101,
+          "h": "Phụ âm 'x' + vần 'uân' = 'xuân' (mùa xuân ấm áp)!",
+          "img": "assets/images/tho_hong.png",
           "week": 3,
           "tags": [
             "week3",
-            "ghep_am_van_phuc_tap"
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3095,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong từ 'chiếc choàng', tiếng 'choàng' chứa vần ghép phức tạp nào dính liền rực rỡ?",
+          "o": [
+            "oang",
+            "oanh",
+            "oach",
+            "oat"
+          ],
+          "a": "oang",
+          "h": "Phụ âm 'ch' + vần 'oang' + thanh huyền = 'choàng'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3096,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong từ 'khoang tàu', tiếng 'khoang' chứa vần ghép phức tạp nào dưới đây?",
+          "o": [
+            "oang",
+            "oanh",
+            "oach",
+            "oat"
+          ],
+          "a": "oang",
+          "h": "Phụ âm 'kh' + vần 'oang' = 'khoang' tàu!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3097,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "In tiếng 'doanh' (doanh trại quân đội), phần vần gồm 'o', 'a', 'n', 'h' ghép lại là vần gì?",
+          "o": [
+            "oanh",
+            "oang",
+            "oach",
+            "oat"
+          ],
+          "a": "oanh",
+          "h": "Phụ âm 'd' + vần 'oanh' = 'doanh'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3098,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "In tiếng 'hoạch' (kế hoạch học tập tốt), phần vần kết thúc bằng âm 'ch' là vần gì?",
+          "o": [
+            "oach",
+            "oanh",
+            "oang",
+            "oat"
+          ],
+          "a": "oach",
+          "h": "Phụ âm 'h' + vần 'oach' + thanh nặng = 'hoạch'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3099,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "In tiếng 'khuỵu' (khuỵu gối ngã), vần 'uỵu' chứa vần ghép phức tạp nào?",
+          "o": [
+            "uyu",
+            "uyen",
+            "uynh",
+            "uyet"
+          ],
+          "a": "uyu",
+          "h": "Phụ âm 'kh' + vần 'uyu' + thanh nặng = 'khuỵu'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3100,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép phụ âm 'ch' với vần 'uyêt' và thanh sắc để chỉ hành động duyệt binh nghiêm trang?",
+          "o": [
+            "duyệt",
+            "tuyết",
+            "khuyên",
+            "chuyết"
+          ],
+          "a": "duyệt",
+          "h": "Phụ âm 'd' + vần 'uyêt' + thanh nặng = 'duyệt'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3101,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong từ 'hoa huệ', tiếng 'huệ' chứa vần ghép nào dễ thương dưới đây?",
+          "o": [
+            "uê",
+            "uy",
+            "uo",
+            "ua"
+          ],
+          "a": "uê",
+          "h": "Âm 'h' + vần 'uê' + thanh nặng = 'huệ' (bông hoa huệ trắng tinh)!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3102,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Trong tiếng 'Lũy' (lũy tre xanh), vần 'uy' gồm hai nguyên âm nào ghép lại?",
+          "o": [
+            "u và y",
+            "u và e",
+            "o và a",
+            "i và e"
+          ],
+          "a": "u và y",
+          "h": "Vần 'uy' gồm nguyên âm 'u' đứng trước và 'y' đứng sau!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3103,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy ghép âm 'l' với vần 'oan' và thanh huyền để chỉ chiếc xóm nhỏ yên bình?",
+          "o": [
+            "loan",
+            "loán",
+            "loạn",
+            "loản"
+          ],
+          "a": "loan",
+          "h": "Âm 'l' + vần 'oan' = 'loan' (chim loan chim phượng)!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3104,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "In tiếng 'quay' (kim đồng hồ quay), phần vần gồm 'a' và 'y' đứng sau âm 'qu' là vần gì?",
+          "o": [
+            "ay",
+            "ai",
+            "ây",
+            "oi"
+          ],
+          "a": "ay",
+          "h": "Âm 'qu' + vần 'ay' = 'quay'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
+          ]
+        },
+        {
+          "id": 3105,
+          "sub": "3.6 Vần ghép phức tạp Lớp 1",
+          "q": "Bé hãy chọn vần thích hợp để điền vào từ chỉ trái cây thơm ngon: 'quả tr...'(ngoại)?",
+          "o": [
+            "oài",
+            "oan",
+            "oac",
+            "oat"
+          ],
+          "a": "oài",
+          "h": "Từ hoàn chỉnh: 'quả xoài' (hoặc 'trái xoài') có vần 'oai'!",
+          "img": "assets/images/tho_hong.png",
+          "week": 3,
+          "tags": [
+            "week3",
+            "van_phuc_tap"
           ]
         }
       ]

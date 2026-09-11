@@ -4,22 +4,22 @@
       "id": 1,
       "name": "BẢNG CHỮ CÁI NGỘ NGHĨNH",
       "desc": "Bé nhận diện mặt chữ cái, nguyên âm, phụ âm và tham gia trò chơi nghe đoán âm chuẩn xác.",
-      "l_title": "Bài học 1: Bảng chữ cái Tiếng Việt Lớp 1",
-      "l_content": "Bảng chữ cái Tiếng Việt gồm 29 chữ cái (12 nguyên âm đơn và 17 phụ âm đơn) cùng các phụ âm ghép quen thuộc.",
-      "l_audio": "assets/audio/bai1_bang_chu_cai.mp3",
+      "l_title": "Bài 1: Bảng Chữ Cái Tiếng Việt Lớp 1",
+      "l_content": "Chào mừng bé yêu đến với thế giới Bảng chữ cái Tiếng Việt! Bé hãy cùng Cô giáo Thỏ Hồng nhận diện 12 nguyên âm đơn, 17 phụ âm đơn và các phụ âm ghép nhé.",
+      "l_audio": "assets/audio/lesson_topic1.mp3",
       "qs": [
         {
           "id": 1001,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'A' xuất hiện trong từ gợi ý sau: 'quả táo'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'A' (viết hoa) hoặc 'a' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "m",
-            "t",
             "a",
-            "p"
+            "b",
+            "m",
+            "t"
           ],
           "a": "a",
-          "h": "Nguyên âm đơn 'a' xuất hiện rõ ràng trong tiếng 'táo' đấy bé!",
+          "h": "Nguyên âm đơn 'a' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -29,16 +29,16 @@
         },
         {
           "id": 1002,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ă' xuất hiện trong từ gợi ý sau: 'căn nhà'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'a' và chọn phát âm đúng nhất?",
           "o": [
-            "ă",
-            "e",
-            "u",
-            "i"
+            "Nguyên âm 'a'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "ă",
-          "h": "Nguyên âm đơn 'ă' nằm trong vần 'ăn' của tiếng 'căn' nha bé!",
+          "a": "Nguyên âm 'a'",
+          "h": "Đúng rồi! 'a' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -48,16 +48,16 @@
         },
         {
           "id": 1003,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Â' xuất hiện trong từ gợi ý sau: 'cái cân'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Ă' (viết hoa) hoặc 'ă' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "â",
-            "o",
-            "u",
-            "y"
+            "ă",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "â",
-          "h": "Nguyên âm 'â' nằm trong vần 'ân' của tiếng 'cân' đấy!",
+          "a": "ă",
+          "h": "Nguyên âm đơn 'ă' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -67,16 +67,16 @@
         },
         {
           "id": 1004,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'E' xuất hiện trong từ gợi ý sau: 'que kem'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'ă' và chọn phát âm đúng nhất?",
           "o": [
-            "e",
-            "o",
-            "u",
-            "i"
+            "Nguyên âm 'ă'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "e",
-          "h": "Nguyên âm đơn 'e' xuất hiện trong tiếng 'kem' thơm ngon!",
+          "a": "Nguyên âm 'ă'",
+          "h": "Đúng rồi! 'ă' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -86,16 +86,16 @@
         },
         {
           "id": 1005,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ê' xuất hiện trong từ gợi ý sau: 'quả lê'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Â' (viết hoa) hoặc 'â' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "ê",
-            "a",
-            "u",
-            "y"
+            "â",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "ê",
-          "h": "Nguyên âm đơn 'ê' xuất hiện trong tiếng 'lê' ngọt mát!",
+          "a": "â",
+          "h": "Nguyên âm đơn 'â' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -105,16 +105,16 @@
         },
         {
           "id": 1006,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'I' xuất hiện trong từ gợi ý sau: 'viên bi'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'â' và chọn phát âm đúng nhất?",
           "o": [
-            "i",
-            "e",
-            "a",
-            "u"
+            "Nguyên âm 'â'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "i",
-          "h": "Nguyên âm 'i' lấp lánh xuất hiện trong tiếng 'bi'!",
+          "a": "Nguyên âm 'â'",
+          "h": "Đúng rồi! 'â' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -124,16 +124,16 @@
         },
         {
           "id": 1007,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'O' xuất hiện trong từ gợi ý sau: 'con bò'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'E' (viết hoa) hoặc 'e' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "o",
-            "u",
-            "y",
-            "e"
+            "e",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "o",
-          "h": "Nguyên âm đơn 'o' tròn như quả trứng gà trong tiếng 'bò'!",
+          "a": "e",
+          "h": "Nguyên âm đơn 'e' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -143,16 +143,16 @@
         },
         {
           "id": 1008,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ô' xuất hiện trong từ gợi ý sau: 'ô tô'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'e' và chọn phát âm đúng nhất?",
           "o": [
-            "ô",
-            "a",
-            "u",
-            "i"
+            "Nguyên âm 'e'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "ô",
-          "h": "Nguyên âm 'ô' có nón đội trên đầu trong tiếng 'ô'!",
+          "a": "Nguyên âm 'e'",
+          "h": "Đúng rồi! 'e' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -162,16 +162,16 @@
         },
         {
           "id": 1009,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ơ' xuất hiện trong từ gợi ý sau: 'lá cờ'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Ê' (viết hoa) hoặc 'ê' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "ơ",
-            "e",
-            "u",
-            "y"
+            "ê",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "ơ",
-          "h": "Nguyên âm 'ơ' có râu vươn lên trong tiếng 'cờ'!",
+          "a": "ê",
+          "h": "Nguyên âm đơn 'ê' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -181,16 +181,16 @@
         },
         {
           "id": 1010,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'U' xuất hiện trong từ gợi ý sau: 'con cú'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'ê' và chọn phát âm đúng nhất?",
           "o": [
-            "u",
-            "a",
-            "e",
-            "i"
+            "Nguyên âm 'ê'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "u",
-          "h": "Nguyên âm đơn 'u' xuất hiện trong tiếng 'cú'!",
+          "a": "Nguyên âm 'ê'",
+          "h": "Đúng rồi! 'ê' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -200,16 +200,16 @@
         },
         {
           "id": 1011,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Ư' xuất hiện trong từ gợi ý sau: 'cái cưa'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'I' (viết hoa) hoặc 'i' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "ư",
-            "o",
-            "u",
-            "e"
+            "i",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "ư",
-          "h": "Nguyên âm 'ư' xuất hiện trong tiếng 'cưa'!",
+          "a": "i",
+          "h": "Nguyên âm đơn 'i' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -219,16 +219,16 @@
         },
         {
           "id": 1012,
-          "sub": "Làm quen 12 Nguyên âm đơn",
-          "q": "Bé yêu hãy tìm nguyên âm đơn 'Y' xuất hiện trong từ gợi ý sau: 'y tế'?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'i' và chọn phát âm đúng nhất?",
           "o": [
-            "y",
-            "a",
-            "u",
-            "e"
+            "Nguyên âm 'i'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "y",
-          "h": "Nguyên âm 'y' đứng một mình trong tiếng 'y' của từ 'y tế'!",
+          "a": "Nguyên âm 'i'",
+          "h": "Đúng rồi! 'i' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -238,16 +238,16 @@
         },
         {
           "id": 1013,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'quả táo', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'O' (viết hoa) hoặc 'o' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
+            "o",
+            "b",
             "m",
-            "t",
-            "a",
-            "p"
+            "t"
           ],
-          "a": "a",
-          "h": "Chính xác! Trong từ 'quả táo', nguyên âm chính là chữ 'a' nha bé!",
+          "a": "o",
+          "h": "Nguyên âm đơn 'o' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -257,16 +257,16 @@
         },
         {
           "id": 1014,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'căn nhà', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'o' và chọn phát âm đúng nhất?",
           "o": [
-            "ă",
-            "e",
-            "u",
-            "i"
+            "Nguyên âm 'o'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "ă",
-          "h": "Chính xác! Trong từ 'căn nhà', nguyên âm chính là chữ 'ă' nha bé!",
+          "a": "Nguyên âm 'o'",
+          "h": "Đúng rồi! 'o' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -276,16 +276,16 @@
         },
         {
           "id": 1015,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'cái cân', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Ô' (viết hoa) hoặc 'ô' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "â",
-            "o",
-            "u",
-            "y"
+            "ô",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "â",
-          "h": "Chính xác! Trong từ 'cái cân', nguyên âm chính là chữ 'â' nha bé!",
+          "a": "ô",
+          "h": "Nguyên âm đơn 'ô' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -295,16 +295,16 @@
         },
         {
           "id": 1016,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'que kem', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'ô' và chọn phát âm đúng nhất?",
           "o": [
-            "e",
-            "o",
-            "u",
-            "i"
+            "Nguyên âm 'ô'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "e",
-          "h": "Chính xác! Trong từ 'que kem', nguyên âm chính là chữ 'e' nha bé!",
+          "a": "Nguyên âm 'ô'",
+          "h": "Đúng rồi! 'ô' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -314,16 +314,16 @@
         },
         {
           "id": 1017,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'quả lê', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Ơ' (viết hoa) hoặc 'ơ' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "ê",
-            "a",
-            "u",
-            "y"
+            "ơ",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "ê",
-          "h": "Chính xác! Trong từ 'quả lê', nguyên âm chính là chữ 'ê' nha bé!",
+          "a": "ơ",
+          "h": "Nguyên âm đơn 'ơ' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -333,16 +333,16 @@
         },
         {
           "id": 1018,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'viên bi', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'ơ' và chọn phát âm đúng nhất?",
           "o": [
-            "i",
-            "e",
-            "a",
-            "u"
+            "Nguyên âm 'ơ'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "i",
-          "h": "Chính xác! Trong từ 'viên bi', nguyên âm chính là chữ 'i' nha bé!",
+          "a": "Nguyên âm 'ơ'",
+          "h": "Đúng rồi! 'ơ' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -352,16 +352,16 @@
         },
         {
           "id": 1019,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'con bò', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'U' (viết hoa) hoặc 'u' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "o",
             "u",
-            "y",
-            "e"
+            "b",
+            "m",
+            "t"
           ],
-          "a": "o",
-          "h": "Chính xác! Trong từ 'con bò', nguyên âm chính là chữ 'o' nha bé!",
+          "a": "u",
+          "h": "Nguyên âm đơn 'u' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -371,16 +371,16 @@
         },
         {
           "id": 1020,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'ô tô', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'u' và chọn phát âm đúng nhất?",
           "o": [
-            "ô",
-            "a",
-            "u",
-            "i"
+            "Nguyên âm 'u'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "ô",
-          "h": "Chính xác! Trong từ 'ô tô', nguyên âm chính là chữ 'ô' nha bé!",
+          "a": "Nguyên âm 'u'",
+          "h": "Đúng rồi! 'u' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -390,16 +390,16 @@
         },
         {
           "id": 1021,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'lá cờ', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Ư' (viết hoa) hoặc 'ư' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "ơ",
-            "e",
-            "u",
-            "y"
+            "ư",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "ơ",
-          "h": "Chính xác! Trong từ 'lá cờ', nguyên âm chính là chữ 'ơ' nha bé!",
+          "a": "ư",
+          "h": "Nguyên âm đơn 'ư' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -409,16 +409,16 @@
         },
         {
           "id": 1022,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'con cú', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'ư' và chọn phát âm đúng nhất?",
           "o": [
-            "u",
-            "a",
-            "e",
-            "i"
+            "Nguyên âm 'ư'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "u",
-          "h": "Chính xác! Trong từ 'con cú', nguyên âm chính là chữ 'u' nha bé!",
+          "a": "Nguyên âm 'ư'",
+          "h": "Đúng rồi! 'ư' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -428,16 +428,16 @@
         },
         {
           "id": 1023,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'cái cưa', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy tìm chữ cái nguyên âm đơn 'Y' (viết hoa) hoặc 'y' (viết thường) xuất hiện trong tên quả/đồ vật sau?",
           "o": [
-            "ư",
-            "o",
-            "u",
-            "e"
+            "y",
+            "b",
+            "m",
+            "t"
           ],
-          "a": "ư",
-          "h": "Chính xác! Trong từ 'cái cưa', nguyên âm chính là chữ 'ư' nha bé!",
+          "a": "y",
+          "h": "Nguyên âm đơn 'y' xuất hiện rất rõ ràng trong từ đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -447,16 +447,16 @@
         },
         {
           "id": 1024,
-          "sub": "Nhận diện Nguyên âm đơn trong tiếng",
-          "q": "Trong từ 'y tế', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "sub": "1.1 Nguyên âm đơn",
+          "q": "Bé hãy nhận diện chữ cái nguyên âm 'y' và chọn phát âm đúng nhất?",
           "o": [
-            "y",
-            "a",
-            "u",
-            "e"
+            "Nguyên âm 'y'",
+            "Phụ âm 'b'",
+            "Phụ âm 'm'",
+            "Thanh Sắc"
           ],
-          "a": "y",
-          "h": "Chính xác! Trong từ 'y tế', nguyên âm chính là chữ 'y' nha bé!",
+          "a": "Nguyên âm 'y'",
+          "h": "Đúng rồi! 'y' là nguyên âm đơn quen thuộc bé học ở Tuần 1 đấy!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -466,16 +466,16 @@
         },
         {
           "id": 1025,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'bàn học'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'B' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "b",
-            "d",
-            "đ",
-            "h"
+            "a",
+            "o",
+            "e"
           ],
           "a": "b",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'bàn học' chính là chữ 'b' đấy!",
+          "h": "Phụ âm 'b' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -485,16 +485,16 @@
         },
         {
           "id": 1026,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'con cá'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'C' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "c",
-            "k",
-            "t",
-            "m"
+            "a",
+            "o",
+            "e"
           ],
           "a": "c",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'con cá' chính là chữ 'c' đấy!",
+          "h": "Phụ âm 'c' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -504,16 +504,16 @@
         },
         {
           "id": 1027,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'dòng sông'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'D' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "d",
-            "đ",
-            "r",
-            "gi"
+            "a",
+            "o",
+            "e"
           ],
           "a": "d",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'dòng sông' chính là chữ 'd' đấy!",
+          "h": "Phụ âm 'd' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -523,16 +523,16 @@
         },
         {
           "id": 1028,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'đèn pin'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'Đ' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "đ",
-            "d",
-            "t",
-            "l"
+            "a",
+            "o",
+            "e"
           ],
           "a": "đ",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'đèn pin' chính là chữ 'đ' đấy!",
+          "h": "Phụ âm 'đ' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -542,16 +542,16 @@
         },
         {
           "id": 1029,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'gà trống'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'G' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "g",
-            "gh",
-            "c",
-            "k"
+            "a",
+            "o",
+            "e"
           ],
           "a": "g",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'gà trống' chính là chữ 'g' đấy!",
+          "h": "Phụ âm 'g' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -561,16 +561,16 @@
         },
         {
           "id": 1030,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'bông hoa'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'H' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "h",
-            "k",
-            "l",
-            "m"
+            "a",
+            "o",
+            "e"
           ],
           "a": "h",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'bông hoa' chính là chữ 'h' đấy!",
+          "h": "Phụ âm 'h' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -580,16 +580,16 @@
         },
         {
           "id": 1031,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'cái kéo'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'K' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "k",
-            "c",
-            "q",
-            "g"
+            "a",
+            "o",
+            "e"
           ],
           "a": "k",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'cái kéo' chính là chữ 'k' đấy!",
+          "h": "Phụ âm 'k' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -599,16 +599,16 @@
         },
         {
           "id": 1032,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'lá cây'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'L' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "l",
-            "n",
-            "m",
-            "h"
+            "a",
+            "o",
+            "e"
           ],
           "a": "l",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'lá cây' chính là chữ 'l' đấy!",
+          "h": "Phụ âm 'l' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -618,16 +618,16 @@
         },
         {
           "id": 1033,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'quả mận'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'M' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "m",
-            "n",
-            "h",
-            "b"
+            "a",
+            "o",
+            "e"
           ],
           "a": "m",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'quả mận' chính là chữ 'm' đấy!",
+          "h": "Phụ âm 'm' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -637,16 +637,16 @@
         },
         {
           "id": 1034,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'cái nón'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'N' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "n",
-            "l",
-            "m",
-            "h"
+            "a",
+            "o",
+            "e"
           ],
           "a": "n",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'cái nón' chính là chữ 'n' đấy!",
+          "h": "Phụ âm 'n' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -656,16 +656,16 @@
         },
         {
           "id": 1035,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'xe xích xỉp'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'P' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "p",
-            "b",
-            "m",
-            "v"
+            "a",
+            "o",
+            "e"
           ],
           "a": "p",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'xe xích xỉp' chính là chữ 'p' đấy!",
+          "h": "Phụ âm 'p' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -675,16 +675,16 @@
         },
         {
           "id": 1036,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'quả quất'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'Q' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "q",
-            "k",
-            "c",
-            "g"
+            "a",
+            "o",
+            "e"
           ],
           "a": "q",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'quả quất' chính là chữ 'q' đấy!",
+          "h": "Phụ âm 'q' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -694,16 +694,16 @@
         },
         {
           "id": 1037,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'con rùa'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'R' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "r",
-            "d",
-            "gi",
-            "g"
+            "a",
+            "o",
+            "e"
           ],
           "a": "r",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'con rùa' chính là chữ 'r' đấy!",
+          "h": "Phụ âm 'r' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -713,16 +713,16 @@
         },
         {
           "id": 1038,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'ngôi sao'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'S' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "s",
-            "x",
-            "c",
-            "t"
+            "a",
+            "o",
+            "e"
           ],
           "a": "s",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'ngôi sao' chính là chữ 's' đấy!",
+          "h": "Phụ âm 's' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -732,16 +732,16 @@
         },
         {
           "id": 1039,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'mặt trời'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'T' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "t",
-            "th",
-            "tr",
-            "c"
+            "a",
+            "o",
+            "e"
           ],
           "a": "t",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'mặt trời' chính là chữ 't' đấy!",
+          "h": "Phụ âm 't' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -751,16 +751,16 @@
         },
         {
           "id": 1040,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'con vịt'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'V' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "v",
-            "d",
-            "b",
-            "m"
+            "a",
+            "o",
+            "e"
           ],
           "a": "v",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'con vịt' chính là chữ 'v' đấy!",
+          "h": "Phụ âm 'v' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -770,16 +770,16 @@
         },
         {
           "id": 1041,
-          "sub": "Nhận diện Phụ âm đơn",
-          "q": "Bé hãy tìm phụ âm đầu đứng trước trong từ gợi ý sau: 'xe đạp'?",
+          "sub": "1.2 Phụ âm đơn",
+          "q": "Bé hãy chỉ ra phụ âm đơn 'X' đứng ở đầu từ chỉ con vật/đồ vật thân quen?",
           "o": [
             "x",
-            "s",
-            "c",
-            "k"
+            "a",
+            "o",
+            "e"
           ],
           "a": "x",
-          "h": "Đúng rồi bé ơi! Phụ âm đầu của từ 'xe đạp' chính là chữ 'x' đấy!",
+          "h": "Phụ âm 'x' đứng ở đầu tiếng rất dễ nhận biết nha bé!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -789,16 +789,16 @@
         },
         {
           "id": 1042,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'bàn học' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'ch' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
+            "ch",
             "b",
-            "d",
-            "đ",
-            "h"
+            "c",
+            "m"
           ],
-          "a": "b",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'b' nhé!",
+          "a": "ch",
+          "h": "Phụ âm ghép 'ch' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -808,16 +808,16 @@
         },
         {
           "id": 1043,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'con cá' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'tr' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
+            "tr",
+            "b",
             "c",
-            "k",
-            "t",
             "m"
           ],
-          "a": "c",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'c' nhé!",
+          "a": "tr",
+          "h": "Phụ âm ghép 'tr' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -827,16 +827,16 @@
         },
         {
           "id": 1044,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'dòng sông' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'gh' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "d",
-            "đ",
-            "r",
-            "gi"
+            "gh",
+            "b",
+            "c",
+            "m"
           ],
-          "a": "d",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'd' nhé!",
+          "a": "gh",
+          "h": "Phụ âm ghép 'gh' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -846,16 +846,16 @@
         },
         {
           "id": 1045,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'đèn pin' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'ngh' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "đ",
-            "d",
-            "t",
-            "l"
+            "ngh",
+            "b",
+            "c",
+            "m"
           ],
-          "a": "đ",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'đ' nhé!",
+          "a": "ngh",
+          "h": "Phụ âm ghép 'ngh' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -865,16 +865,16 @@
         },
         {
           "id": 1046,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'gà trống' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'ng' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "g",
-            "gh",
+            "ng",
+            "b",
             "c",
-            "k"
+            "m"
           ],
-          "a": "g",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'g' nhé!",
+          "a": "ng",
+          "h": "Phụ âm ghép 'ng' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -884,16 +884,16 @@
         },
         {
           "id": 1047,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'bông hoa' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'nh' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "h",
-            "k",
-            "l",
+            "nh",
+            "b",
+            "c",
             "m"
           ],
-          "a": "h",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'h' nhé!",
+          "a": "nh",
+          "h": "Phụ âm ghép 'nh' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -903,16 +903,16 @@
         },
         {
           "id": 1048,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'cái kéo' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'ph' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "k",
+            "ph",
+            "b",
             "c",
-            "q",
-            "g"
+            "m"
           ],
-          "a": "k",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'k' nhé!",
+          "a": "ph",
+          "h": "Phụ âm ghép 'ph' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -922,16 +922,16 @@
         },
         {
           "id": 1049,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'lá cây' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'th' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "l",
-            "n",
-            "m",
-            "h"
+            "th",
+            "b",
+            "c",
+            "m"
           ],
-          "a": "l",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'l' nhé!",
+          "a": "th",
+          "h": "Phụ âm ghép 'th' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -941,16 +941,16 @@
         },
         {
           "id": 1050,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'quả mận' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'gi' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "m",
-            "n",
-            "h",
-            "b"
+            "gi",
+            "b",
+            "c",
+            "m"
           ],
-          "a": "m",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'm' nhé!",
+          "a": "gi",
+          "h": "Phụ âm ghép 'gi' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -960,16 +960,16 @@
         },
         {
           "id": 1051,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'cái nón' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.3 Phụ âm ghép",
+          "q": "Bé hãy tìm phụ âm ghép 'qu' xuất hiện trong các từ ghép Tiếng Việt Lớp 1?",
           "o": [
-            "n",
-            "l",
-            "m",
-            "h"
+            "qu",
+            "b",
+            "c",
+            "m"
           ],
-          "a": "n",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'n' nhé!",
+          "a": "qu",
+          "h": "Phụ âm ghép 'qu' gồm 2-3 chữ cái đi liền nhau đấy bé ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -979,16 +979,16 @@
         },
         {
           "id": 1052,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'xe xích xỉp' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'bàn' là âm nào dưới đây?",
           "o": [
-            "p",
             "b",
-            "m",
-            "v"
+            "a",
+            "o",
+            "u"
           ],
-          "a": "p",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'p' nhé!",
+          "a": "b",
+          "h": "Âm đầu 'b' đứng ở đầu từ 'bàn' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -998,16 +998,16 @@
         },
         {
           "id": 1053,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'quả quất' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'cá' là âm nào dưới đây?",
           "o": [
-            "q",
-            "k",
             "c",
-            "g"
+            "a",
+            "o",
+            "u"
           ],
-          "a": "q",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'q' nhé!",
+          "a": "c",
+          "h": "Âm đầu 'c' đứng ở đầu từ 'cá' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1017,16 +1017,16 @@
         },
         {
           "id": 1054,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'con rùa' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'dế' là âm nào dưới đây?",
           "o": [
-            "r",
             "d",
-            "gi",
-            "g"
+            "a",
+            "o",
+            "u"
           ],
-          "a": "r",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'r' nhé!",
+          "a": "d",
+          "h": "Âm đầu 'd' đứng ở đầu từ 'dế' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1036,16 +1036,16 @@
         },
         {
           "id": 1055,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'ngôi sao' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'đò' là âm nào dưới đây?",
           "o": [
-            "s",
-            "x",
-            "c",
-            "t"
+            "đ",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "s",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 's' nhé!",
+          "a": "đ",
+          "h": "Âm đầu 'đ' đứng ở đầu từ 'đò' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1055,16 +1055,16 @@
         },
         {
           "id": 1056,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'mặt trời' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'gà' là âm nào dưới đây?",
           "o": [
-            "t",
-            "th",
-            "tr",
-            "c"
+            "g",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "t",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 't' nhé!",
+          "a": "g",
+          "h": "Âm đầu 'g' đứng ở đầu từ 'gà' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1074,16 +1074,16 @@
         },
         {
           "id": 1057,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'con vịt' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'hổ' là âm nào dưới đây?",
           "o": [
-            "v",
-            "d",
-            "b",
-            "m"
+            "h",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "v",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'v' nhé!",
+          "a": "h",
+          "h": "Âm đầu 'h' đứng ở đầu từ 'hổ' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1093,16 +1093,16 @@
         },
         {
           "id": 1058,
-          "sub": "Thử thách Phụ âm đơn",
-          "q": "Tiếng đầu tiên trong từ 'xe đạp' được bắt đầu bằng chữ cái nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'kéo' là âm nào dưới đây?",
           "o": [
-            "x",
-            "s",
-            "c",
-            "k"
+            "k",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "x",
-          "h": "Hoan hô bé! Chữ cái đầu tiên là chữ 'x' nhé!",
+          "a": "k",
+          "h": "Âm đầu 'k' đứng ở đầu từ 'kéo' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1112,16 +1112,16 @@
         },
         {
           "id": 1059,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'chó con', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'lá' là âm nào dưới đây?",
           "o": [
-            "ch",
-            "tr",
-            "kh",
-            "nh"
+            "l",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "ch",
-          "h": "Âm ghép 'ch' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'chó con' đấy bé!",
+          "a": "l",
+          "h": "Âm đầu 'l' đứng ở đầu từ 'lá' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1131,16 +1131,16 @@
         },
         {
           "id": 1060,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'tre xanh', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'mèo' là âm nào dưới đây?",
           "o": [
-            "tr",
-            "ch",
-            "th",
-            "ph"
+            "m",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "tr",
-          "h": "Âm ghép 'tr' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'tre xanh' đấy bé!",
+          "a": "m",
+          "h": "Âm đầu 'm' đứng ở đầu từ 'mèo' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1150,16 +1150,16 @@
         },
         {
           "id": 1061,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'khăn mặt', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'nơ' là âm nào dưới đây?",
           "o": [
-            "kh",
-            "nh",
-            "th",
-            "ph"
+            "n",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "kh",
-          "h": "Âm ghép 'kh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'khăn mặt' đấy bé!",
+          "a": "n",
+          "h": "Âm đầu 'n' đứng ở đầu từ 'nơ' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1169,16 +1169,16 @@
         },
         {
           "id": 1062,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'ngôi nhà', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'pin' là âm nào dưới đây?",
           "o": [
-            "nh",
-            "ng",
-            "ngh",
-            "kh"
+            "p",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "nh",
-          "h": "Âm ghép 'nh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'ngôi nhà' đấy bé!",
+          "a": "p",
+          "h": "Âm đầu 'p' đứng ở đầu từ 'pin' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1188,16 +1188,16 @@
         },
         {
           "id": 1063,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'thỏ trắng', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'quạt' là âm nào dưới đây?",
           "o": [
-            "th",
-            "ph",
-            "tr",
-            "ch"
+            "q",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "th",
-          "h": "Âm ghép 'th' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'thỏ trắng' đấy bé!",
+          "a": "q",
+          "h": "Âm đầu 'q' đứng ở đầu từ 'quạt' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1207,16 +1207,16 @@
         },
         {
           "id": 1064,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'phố xá', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'rùa' là âm nào dưới đây?",
           "o": [
-            "ph",
-            "th",
-            "kh",
-            "nh"
+            "r",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "ph",
-          "h": "Âm ghép 'ph' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'phố xá' đấy bé!",
+          "a": "r",
+          "h": "Âm đầu 'r' đứng ở đầu từ 'rùa' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1226,16 +1226,16 @@
         },
         {
           "id": 1065,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'ghế gỗ', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'sóc' là âm nào dưới đây?",
           "o": [
-            "gh",
-            "g",
-            "k",
-            "c"
+            "s",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "gh",
-          "h": "Âm ghép 'gh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'ghế gỗ' đấy bé!",
+          "a": "s",
+          "h": "Âm đầu 's' đứng ở đầu từ 'sóc' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1245,16 +1245,16 @@
         },
         {
           "id": 1066,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'củ nghệ', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'thỏ' là âm nào dưới đây?",
           "o": [
-            "ngh",
-            "ng",
-            "gh",
-            "g"
+            "th",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "ngh",
-          "h": "Âm ghép 'ngh' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'củ nghệ' đấy bé!",
+          "a": "th",
+          "h": "Âm đầu 'th' đứng ở đầu từ 'thỏ' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1264,16 +1264,16 @@
         },
         {
           "id": 1067,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'giày dép', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'voi' là âm nào dưới đây?",
           "o": [
-            "gi",
-            "d",
-            "r",
-            "g"
+            "v",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "gi",
-          "h": "Âm ghép 'gi' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'giày dép' đấy bé!",
+          "a": "v",
+          "h": "Âm đầu 'v' đứng ở đầu từ 'voi' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1283,16 +1283,16 @@
         },
         {
           "id": 1068,
-          "sub": "Phụ âm ghép thường gặp",
-          "q": "Trong từ 'quả cam', bộ phận phụ âm đầu là âm ghép nào dưới đây?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'xe' là âm nào dưới đây?",
           "o": [
-            "qu",
-            "k",
-            "c",
-            "g"
+            "x",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "qu",
-          "h": "Âm ghép 'qu' xuất hiện rất rõ ràng ở đầu tiếng trong từ 'quả cam' đấy bé!",
+          "a": "x",
+          "h": "Âm đầu 'x' đứng ở đầu từ 'xe' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1302,16 +1302,16 @@
         },
         {
           "id": 1069,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'chó con' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'chó' là âm nào dưới đây?",
           "o": [
             "ch",
-            "tr",
-            "kh",
-            "nh"
+            "a",
+            "o",
+            "u"
           ],
           "a": "ch",
-          "h": "Chính xác! Âm ghép đó chính là 'ch'!",
+          "h": "Âm đầu 'ch' đứng ở đầu từ 'chó' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1321,16 +1321,16 @@
         },
         {
           "id": 1070,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'tre xanh' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'trâu' là âm nào dưới đây?",
           "o": [
             "tr",
-            "ch",
-            "th",
-            "ph"
+            "a",
+            "o",
+            "u"
           ],
           "a": "tr",
-          "h": "Chính xác! Âm ghép đó chính là 'tr'!",
+          "h": "Âm đầu 'tr' đứng ở đầu từ 'trâu' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1340,16 +1340,16 @@
         },
         {
           "id": 1071,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'khăn mặt' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'ghế' là âm nào dưới đây?",
           "o": [
-            "kh",
-            "nh",
-            "th",
-            "ph"
+            "gh",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "kh",
-          "h": "Chính xác! Âm ghép đó chính là 'kh'!",
+          "a": "gh",
+          "h": "Âm đầu 'gh' đứng ở đầu từ 'ghế' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1359,16 +1359,16 @@
         },
         {
           "id": 1072,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'ngôi nhà' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'nghé' là âm nào dưới đây?",
           "o": [
-            "nh",
-            "ng",
             "ngh",
-            "kh"
+            "a",
+            "o",
+            "u"
           ],
-          "a": "nh",
-          "h": "Chính xác! Âm ghép đó chính là 'nh'!",
+          "a": "ngh",
+          "h": "Âm đầu 'ngh' đứng ở đầu từ 'nghé' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1378,16 +1378,16 @@
         },
         {
           "id": 1073,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'thỏ trắng' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'ngựa' là âm nào dưới đây?",
           "o": [
-            "th",
-            "ph",
-            "tr",
-            "ch"
+            "ng",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "th",
-          "h": "Chính xác! Âm ghép đó chính là 'th'!",
+          "a": "ng",
+          "h": "Âm đầu 'ng' đứng ở đầu từ 'ngựa' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1397,16 +1397,16 @@
         },
         {
           "id": 1074,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'phố xá' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'nhà' là âm nào dưới đây?",
           "o": [
-            "ph",
-            "th",
-            "kh",
-            "nh"
+            "nh",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "ph",
-          "h": "Chính xác! Âm ghép đó chính là 'ph'!",
+          "a": "nh",
+          "h": "Âm đầu 'nh' đứng ở đầu từ 'nhà' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1416,16 +1416,16 @@
         },
         {
           "id": 1075,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'ghế gỗ' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'phở' là âm nào dưới đây?",
           "o": [
-            "gh",
-            "g",
-            "k",
-            "c"
+            "ph",
+            "a",
+            "o",
+            "u"
           ],
-          "a": "gh",
-          "h": "Chính xác! Âm ghép đó chính là 'gh'!",
+          "a": "ph",
+          "h": "Âm đầu 'ph' đứng ở đầu từ 'phở' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [
@@ -1435,852 +1435,16 @@
         },
         {
           "id": 1076,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'củ nghệ' nhé?",
-          "o": [
-            "ngh",
-            "ng",
-            "gh",
-            "g"
-          ],
-          "a": "ngh",
-          "h": "Chính xác! Âm ghép đó chính là 'ngh'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1077,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'giày dép' nhé?",
+          "sub": "1.4 Nhận diện âm đầu trong từ",
+          "q": "Bé hãy cho biết âm đầu xuất hiện trong từ 'giường' là âm nào dưới đây?",
           "o": [
             "gi",
-            "d",
-            "r",
-            "g"
-          ],
-          "a": "gi",
-          "h": "Chính xác! Âm ghép đó chính là 'gi'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1078,
-          "sub": "Phân biệt Phụ âm ghép",
-          "q": "Bé hãy tìm âm ghép hai chữ cái đứng ở đầu từ 'quả cam' nhé?",
-          "o": [
-            "qu",
-            "k",
-            "c",
-            "g"
-          ],
-          "a": "qu",
-          "h": "Chính xác! Âm ghép đó chính là 'qu'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1079,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'chó con' đúng chính tả?",
-          "o": [
-            "ch",
-            "tr",
-            "kh",
-            "nh"
-          ],
-          "a": "ch",
-          "h": "Bé giỏi lắm! Từ 'chó con' viết bằng âm ghép 'ch'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1080,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'tre xanh' đúng chính tả?",
-          "o": [
-            "tr",
-            "ch",
-            "th",
-            "ph"
-          ],
-          "a": "tr",
-          "h": "Bé giỏi lắm! Từ 'tre xanh' viết bằng âm ghép 'tr'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1081,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'khăn mặt' đúng chính tả?",
-          "o": [
-            "kh",
-            "nh",
-            "th",
-            "ph"
-          ],
-          "a": "kh",
-          "h": "Bé giỏi lắm! Từ 'khăn mặt' viết bằng âm ghép 'kh'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1082,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'ngôi nhà' đúng chính tả?",
-          "o": [
-            "nh",
-            "ng",
-            "ngh",
-            "kh"
-          ],
-          "a": "nh",
-          "h": "Bé giỏi lắm! Từ 'ngôi nhà' viết bằng âm ghép 'nh'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1083,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'thỏ trắng' đúng chính tả?",
-          "o": [
-            "th",
-            "ph",
-            "tr",
-            "ch"
-          ],
-          "a": "th",
-          "h": "Bé giỏi lắm! Từ 'thỏ trắng' viết bằng âm ghép 'th'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1084,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'phố xá' đúng chính tả?",
-          "o": [
-            "ph",
-            "th",
-            "kh",
-            "nh"
-          ],
-          "a": "ph",
-          "h": "Bé giỏi lắm! Từ 'phố xá' viết bằng âm ghép 'ph'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1085,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'ghế gỗ' đúng chính tả?",
-          "o": [
-            "gh",
-            "g",
-            "k",
-            "c"
-          ],
-          "a": "gh",
-          "h": "Bé giỏi lắm! Từ 'ghế gỗ' viết bằng âm ghép 'gh'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1086,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'củ nghệ' đúng chính tả?",
-          "o": [
-            "ngh",
-            "ng",
-            "gh",
-            "g"
-          ],
-          "a": "ngh",
-          "h": "Bé giỏi lắm! Từ 'củ nghệ' viết bằng âm ghép 'ngh'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1087,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'giày dép' đúng chính tả?",
-          "o": [
-            "gi",
-            "d",
-            "r",
-            "g"
-          ],
-          "a": "gi",
-          "h": "Bé giỏi lắm! Từ 'giày dép' viết bằng âm ghép 'gi'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1088,
-          "sub": "Luyện tập Phụ âm ghép",
-          "q": "Âm đầu ghép nào dưới đây được dùng để viết từ 'quả cam' đúng chính tả?",
-          "o": [
-            "qu",
-            "k",
-            "c",
-            "g"
-          ],
-          "a": "qu",
-          "h": "Bé giỏi lắm! Từ 'quả cam' viết bằng âm ghép 'qu'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1089,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'A' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
             "a",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "a",
-          "h": "Đúng rồi! Chữ in hoa 'A' đi cặp với chữ in thường 'a' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1090,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'B' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "b",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "b",
-          "h": "Đúng rồi! Chữ in hoa 'B' đi cặp với chữ in thường 'b' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1091,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'C' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "c",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "c",
-          "h": "Đúng rồi! Chữ in hoa 'C' đi cặp với chữ in thường 'c' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1092,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'D' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "d",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "d",
-          "h": "Đúng rồi! Chữ in hoa 'D' đi cặp với chữ in thường 'd' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1093,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'Đ' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "đ",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "đ",
-          "h": "Đúng rồi! Chữ in hoa 'Đ' đi cặp với chữ in thường 'đ' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1094,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'E' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "e",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "e",
-          "h": "Đúng rồi! Chữ in hoa 'E' đi cặp với chữ in thường 'e' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1095,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'Ê' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "ê",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "ê",
-          "h": "Đúng rồi! Chữ in hoa 'Ê' đi cặp với chữ in thường 'ê' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1096,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'G' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "g",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "g",
-          "h": "Đúng rồi! Chữ in hoa 'G' đi cặp với chữ in thường 'g' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1097,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'H' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "h",
-            "x",
-            "y",
-            "z"
-          ],
-          "a": "h",
-          "h": "Đúng rồi! Chữ in hoa 'H' đi cặp với chữ in thường 'h' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1098,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'I' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "i",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "i",
-          "h": "Đúng rồi! Chữ in hoa 'I' đi cặp với chữ in thường 'i' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1099,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'K' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "k",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "k",
-          "h": "Đúng rồi! Chữ in hoa 'K' đi cặp với chữ in thường 'k' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1100,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'L' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "l",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "l",
-          "h": "Đúng rồi! Chữ in hoa 'L' đi cặp với chữ in thường 'l' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1101,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'M' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "m",
-            "x",
-            "y",
-            "z"
-          ],
-          "a": "m",
-          "h": "Đúng rồi! Chữ in hoa 'M' đi cặp với chữ in thường 'm' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1102,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'N' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "n",
-            "x",
-            "y",
-            "z"
-          ],
-          "a": "n",
-          "h": "Đúng rồi! Chữ in hoa 'N' đi cặp với chữ in thường 'n' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1103,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'O' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
             "o",
-            "m",
-            "n",
-            "h"
+            "u"
           ],
-          "a": "o",
-          "h": "Đúng rồi! Chữ in hoa 'O' đi cặp với chữ in thường 'o' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1104,
-          "sub": "Phân biệt Chữ Hoa - Chữ Thường",
-          "q": "Chữ cái in hoa 'P' tương ứng với chữ cái in thường nào dưới đây hả bé?",
-          "o": [
-            "p",
-            "m",
-            "n",
-            "h"
-          ],
-          "a": "p",
-          "h": "Đúng rồi! Chữ in hoa 'P' đi cặp với chữ in thường 'p' nha bé yêu!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1105,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'a' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "A",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "A",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'a' là chữ 'A'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1106,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'b' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "B",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "B",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'b' là chữ 'B'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1107,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'c' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "C",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "C",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'c' là chữ 'C'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1108,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'd' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "D",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "D",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'd' là chữ 'D'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1109,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'đ' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "Đ",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "Đ",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'đ' là chữ 'Đ'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1110,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'e' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "E",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "E",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'e' là chữ 'E'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1111,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'ê' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "Ê",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "Ê",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'ê' là chữ 'Ê'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1112,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'g' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "G",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "G",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'g' là chữ 'G'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1113,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'h' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "H",
-            "X",
-            "Y",
-            "Z"
-          ],
-          "a": "H",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'h' là chữ 'H'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1114,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'i' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "I",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "I",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'i' là chữ 'I'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1115,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'k' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "K",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "K",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'k' là chữ 'K'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1116,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'l' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "L",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "L",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'l' là chữ 'L'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1117,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'm' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "M",
-            "X",
-            "Y",
-            "Z"
-          ],
-          "a": "M",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'm' là chữ 'M'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1118,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'n' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "N",
-            "X",
-            "Y",
-            "Z"
-          ],
-          "a": "N",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'n' là chữ 'N'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1119,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'o' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "O",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "O",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'o' là chữ 'O'!",
-          "img": "assets/images/tho_hong.png",
-          "week": 1,
-          "tags": [
-            "week1",
-            "bang_chu_cai"
-          ]
-        },
-        {
-          "id": 1120,
-          "sub": "Nhận diện Chữ In Hoa",
-          "q": "Chữ cái in thường 'p' khi viết dưới dạng in hoa đầu câu sẽ viết thành chữ nào?",
-          "o": [
-            "P",
-            "M",
-            "N",
-            "H"
-          ],
-          "a": "P",
-          "h": "Chính xác! Chữ in hoa tương ứng của 'p' là chữ 'P'!",
+          "a": "gi",
+          "h": "Âm đầu 'gi' đứng ở đầu từ 'giường' đấy bé yêu ơi!",
           "img": "assets/images/tho_hong.png",
           "week": 1,
           "tags": [

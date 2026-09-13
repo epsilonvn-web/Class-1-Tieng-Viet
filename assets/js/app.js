@@ -3,7 +3,7 @@
 // ==========================================
 const TOPICS_CONFIG = [
     { id: 1, title: "1. Bảng chữ cái", desc: "Nguyên âm, phụ âm, âm ghép", icon: "🅰️", color: "pink" },
-    { id: 2, title: "2. Năm thanh điệu kì diệu", desc: "Sắc, huyền, hỏi, ngã, nặng", icon: "🎵", color: "purple" },
+    { id: 2, title: "2. Dấu thanh kì diệu", desc: "Ngang, sắc, huyền, hỏi, ngã, nặng", icon: "🎵", color: "purple" },
     { id: 3, title: "3. Ghép âm - vần", desc: "Vần xuôi & phức tạp", icon: "🧩", color: "blue" },
     { id: 4, title: "4. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", icon: "✍️", color: "amber" },
     { id: 5, title: "5. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
@@ -25,12 +25,12 @@ const SUBTOPIC_PALETTES = [
 ];
 
 const roadmapConfig = {
-    1: { name: "Tuần 1: Làm chủ 5 thanh điệu", topicIds: [1, 2], desc: "Nhận diện mặt chữ cái, nguyên âm/phụ âm và phân biệt 5 thanh điệu chính xác.", icon: "🎵" },
-    2: { name: "Tuần 2: Khởi động ghép âm - vần", topicIds: [3], desc: "Ghép phụ âm đầu với nguyên âm đơn và vần xuôi cơ bản để đánh vần trơn.", icon: "🧩" },
-    3: { name: "Tuần 3: Vần đôi - vần ghép phức tạp", topicIds: [3, 6], desc: "Chinh phục các nguyên âm đôi, vần có âm đệm và âm cuối khó lắt léo.", icon: "🌿" },
+    1: { name: "Tuần 1: Bảng chữ cái & âm cơ bản", topicIds: [1], desc: "Làm quen 29 chữ cái, nhận diện nguyên âm, phụ âm và phụ âm ghép cơ bản.", icon: "🅰️" },
+    2: { name: "Tuần 2: Dấu thanh & ghép âm cơ bản", topicIds: [2, 3], desc: "Nhận biết 6 thanh tiếng Việt, 5 dấu thanh và ghép phụ âm đầu với nguyên âm, vần xuôi cơ bản.", icon: "🎵" },
+    3: { name: "Tuần 3: Vần đôi - vần ghép phức tạp", topicIds: [3], desc: "Chinh phục các nguyên âm đôi, vần có âm đệm và âm cuối khó lắt léo.", icon: "🧩" },
     4: { name: "Tuần 4: Điền chữ cái còn thiếu", topicIds: [4], desc: "Nắm vững quy tắc chính tả c/k, g/gh, ng/ngh và phân biệt s/x, tr/ch, l/n.", icon: "✍️" },
     5: { name: "Tuần 5: Bác sĩ sửa lỗi chính tả", topicIds: [5], desc: "Tìm và sửa lỗi từ sai chính tả, quy tắc viết hoa tên riêng, địa danh.", icon: "🩺" },
-    6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6, 8], desc: "Mở rộng vốn từ qua hình ảnh trực quan con vật, vị giác, xúc giác thực tế.", icon: "👁️" },
+    6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6], desc: "Mở rộng vốn từ qua hình ảnh trực quan con vật, vị giác, xúc giác thực tế.", icon: "👁️" },
     7: { name: "Tuần 7: Gia đình ba nhóm từ loại", topicIds: [7], desc: "Phân loại từ ngữ quanh bé thành nhóm từ chỉ sự vật, hoạt động và đặc điểm.", icon: "🧸" },
     8: { name: "Tuần 8: Nhà thông thái sắp xếp câu", topicIds: [8], desc: "Sắp xếp các từ xáo trộn thành câu kể, câu tả hoàn chỉnh đúng ngữ pháp.", icon: "🧠" },
     9: { name: "Tuần 9: Điền từ vào câu & tục ngữ", topicIds: [9], desc: "Điền từ theo ngữ cảnh phù hợp, ghi nhớ ca dao tục ngữ rèn đức tính tốt.", icon: "📜" },
@@ -415,11 +415,13 @@ function normalizeQuestion(q) {
         question_id: q.id ?? q.question_id ?? 0,
         sub_topic: String(q.sub ?? q.sub_topic ?? 'Câu hỏi chung').trim(),
         week: q.week ?? q.w ?? null,
+        tags: Array.isArray(q.tags) ? q.tags.slice() : [],
         question_text: q.q ?? q.question_text ?? '',
         options: Array.isArray(q.o) ? q.o : (Array.isArray(q.options) ? q.options : []),
         answer: q.a ?? q.answer ?? '',
         hint: q.h ?? q.hint ?? '',
         image_url: q.img ?? q.image_url ?? '',
+        emoji: q.emoji ?? q.icon ?? '',
         audio_text: q.aud ?? q.audio_text ?? '',
         reading_title: q.r_title ?? q.reading_title ?? '',
         reading_passage: q.r_passage ?? q.reading_passage ?? q.passage_text ?? '',
@@ -468,26 +470,33 @@ function buildTrickyChoices(correctAnswer, sameGroupPool, allPool, count = 3) {
 function getQuestionsForWeek343(weekNumber) {
     const config = roadmapConfig[weekNumber];
     if (!config || !allTopicsDataCache) return [];
-    
+
+    const weekTag = `week${weekNumber}`;
     let pool = [];
     config.topicIds.forEach(topicId => {
         const topicData = allTopicsDataCache.find(t => t.topic_id === topicId);
-        if (topicData && topicData.questions) {
-            pool = pool.concat(topicData.questions.map(q => ({ ...q, source_topic_id: topicId })));
-        }
+        if (!topicData || !topicData.questions) return;
+
+        const matched = topicData.questions.filter(q => {
+            const byWeek = Number(q.week) === Number(weekNumber);
+            const byTag = Array.isArray(q.tags) && q.tags.includes(weekTag);
+            return byWeek || byTag;
+        });
+        pool = pool.concat(matched.map(q => ({ ...q, source_topic_id: topicId })));
     });
-    
+
     if (pool.length < 30) return shuffleArray([...pool]);
-    
+
+    // Kho hiện được sắp theo mức độ tăng dần; giữ tỷ lệ 3:4:3 = 9 dễ, 12 vừa, 9 khó.
     const size = pool.length;
     const basket1 = pool.slice(0, Math.floor(size * 0.35));
     const basket2 = pool.slice(Math.floor(size * 0.35), Math.floor(size * 0.75));
     const basket3 = pool.slice(Math.floor(size * 0.75));
-    
+
     const easy = shuffleArray([...basket1]).slice(0, 9);
     const medium = shuffleArray([...basket2]).slice(0, 12);
     const hard = shuffleArray([...basket3]).slice(0, 9);
-    
+
     return shuffleArray([...easy, ...medium, ...hard]);
 }
 
@@ -623,7 +632,7 @@ async function startRandomExam(categoryKey) {
         const exam = candidates[Math.floor(Math.random() * candidates.length)];
         const examIndex = pool.indexOf(exam);
         const examLabel = examFileMap[categoryKey]?.label || 'Đề thi';
-        const examTitle = exam.exam_title || exam.title || `${examLabel} - Đề số ${examIndex + 1}`;
+        const examTitle = exam.exam_name || exam.exam_title || exam.title || `${examLabel} - Đề số ${examIndex + 1}`;
 
         activeExamContext = { categoryKey, examIndex, examTitle };
         activeRoadmapContext = null;
@@ -1451,7 +1460,9 @@ function loadQuestion() {
     }
 
     let mediaHtml = '';
-    if (q.image_url && !activeExamContext) {
+    if (q.emoji) {
+        mediaHtml = `<div class="text-5xl md:text-6xl leading-none mb-1 floating select-none" role="img" aria-label="minh họa">${escapeHtml(q.emoji)}</div>`;
+    } else if (q.image_url) {
         mediaHtml = `<img src="${q.image_url}" alt="minh họa" class="w-14 h-14 md:w-16 md:h-16 object-contain mb-1 floating" onerror="this.remove()">`;
     }
 

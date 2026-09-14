@@ -326,8 +326,16 @@ function startAdminNotificationPolling() {
     adminNotificationTimer = null;
     if (!isAdminUser()) return;
     refreshAdminRegistrationBadge();
-    adminNotificationTimer = setInterval(refreshAdminRegistrationBadge, 60000);
+    adminNotificationTimer = setInterval(refreshAdminRegistrationBadge, 15000);
 }
+
+// Khi Admin quay lại tab/cửa sổ, kiểm tra ngay thay vì chờ chu kỳ polling.
+window.addEventListener('focus', () => {
+    if (isAdminUser()) refreshAdminRegistrationBadge();
+});
+document.addEventListener('visibilitychange', () => {
+    if (!document.hidden && isAdminUser()) refreshAdminRegistrationBadge();
+});
 
 async function markAdminRegistrationsSeen() {
     if (!isAdminUser() || adminNewRegistrationCount <= 0) return;

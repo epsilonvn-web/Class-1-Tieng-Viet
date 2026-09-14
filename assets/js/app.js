@@ -181,6 +181,8 @@ const PREMIUM_TOPIC_IDS = new Set([11]);
 let accountManagerAccounts = [];
 let accountManagerSort = { key: 'maHS', dir: 1 };
 let currentSessionPin = ''; // Chỉ giữ trong RAM của tab hiện tại, không lưu localStorage
+let adminNewRegistrationCount = 0;
+let adminNotificationTimer = null;
 
 function isAdminUser() {
     return !!currentUser && !currentUser.isGuest && String(currentUser.vaiTro || currentUser.role || '').toLowerCase() === 'admin';
@@ -299,6 +301,47 @@ function formatAccountDate(value) {
     return String(value);
 }
 
+function renderAdminRegistrationBadge() {
+    const badge = document.getElementById('admin-new-registration-badge');
+    if (!badge) return;
+    const count = Math.max(0, Number(adminNewRegistrationCount) || 0);
+    badge.textContent = count > 99 ? '99+' : String(count);
+    badge.classList.toggle('hidden', count <= 0);
+}
+
+async function refreshAdminRegistrationBadge() {
+    if (!isAdminUser()) return;
+    try {
+        const res = await callAppsScript('getNewRegistrationsCount', getAdminAuthPayload());
+        if (!res.ok) throw new Error(res.error || 'Không lấy được số đăng ký mới');
+        adminNewRegistrationCount = Number(res.count) || 0;
+        renderAdminRegistrationBadge();
+    } catch (e) {
+        // Badge là thông tin phụ, không làm gián đoạn ứng dụng nếu máy chủ tạm thời lỗi.
+    }
+}
+
+function startAdminNotificationPolling() {
+    clearInterval(adminNotificationTimer);
+    adminNotificationTimer = null;
+    if (!isAdminUser()) return;
+    refreshAdminRegistrationBadge();
+    adminNotificationTimer = setInterval(refreshAdminRegistrationBadge, 60000);
+}
+
+async function markAdminRegistrationsSeen() {
+    if (!isAdminUser() || adminNewRegistrationCount <= 0) return;
+    try {
+        const res = await callAppsScript('markRegistrationsSeen', getAdminAuthPayload());
+        if (res.ok) {
+            adminNewRegistrationCount = 0;
+            renderAdminRegistrationBadge();
+        }
+    } catch (e) {
+        // Không chặn màn quản lý nếu thao tác đánh dấu đã xem thất bại.
+    }
+}
+
 function ensureAccountManagerModal() {
     let modal = document.getElementById('modal-account-manager');
     if (modal) return modal;
@@ -343,6 +386,7 @@ async function openAccountManager() {
     if (!isAdminUser()) return;
     ensureAccountManagerModal().classList.remove('hidden');
     await loadAccountManager();
+    await markAdminRegistrationsSeen();
 }
 function closeAccountManager() { document.getElementById('modal-account-manager')?.classList.add('hidden'); }
 
@@ -952,6 +996,9 @@ async function initializeApp() {
 }
 
 async function logout() {
+    clearInterval(adminNotificationTimer);
+    adminNotificationTimer = null;
+    adminNewRegistrationCount = 0;
     const token = getSessionToken();
     if (token) callAppsScript('logoutSession', { sessionToken: token }).catch(() => {});
     clearStoredSession();
@@ -966,6 +1013,7 @@ function enterDashboard(isSilent = false) {
     document.getElementById('screen-dashboard').classList.remove('hidden');
     updateUserInfoBox();
     updatePremiumUI();
+    startAdminNotificationPolling();
     resetStars();
     renderDashboardGrid();
     if (hasPremiumAccess()) renderExamHubGrid();
@@ -980,7 +1028,7 @@ function updateUserInfoBox() {
     const box = document.getElementById('user-info-box');
     if (!box) return;
     if (currentUser && !currentUser.isGuest) {
-        const adminBtn = isAdminUser() ? `<button onclick="openAccountManager()" title="Quản lý tài khoản" class="h-9 px-3 flex items-center gap-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-xl border border-purple-200 text-[11px] font-black shadow-sm pastel-btn whitespace-nowrap"><i class="fa-solid fa-users-gear"></i><span>Quản lý</span></button>` : '';
+        const adminBtn = isAdminUser() ? `<button onclick="openAccountManager()" title="Quản lý tài khoản" class="relative h-9 px-3 flex items-center gap-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-xl border border-purple-200 text-[11px] font-black shadow-sm pastel-btn whitespace-nowrap"><i class="fa-solid fa-users-gear"></i><span>Quản lý</span><span id="admin-new-registration-badge" class="hidden absolute -top-2 -right-2 min-w-[19px] h-[19px] px-1 rounded-full bg-rose-500 text-white text-[10px] leading-[19px] text-center font-black border-2 border-white shadow-md">0</span></button>` : '';
         const tier = isAdminUser() ? 'Admin' : String(currentUser.loaiTaiKhoan || 'regular').toUpperCase();
         box.innerHTML = `<div class="flex items-center gap-1.5"><div class="text-right"><div class="text-pink-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen)}</div><div class="text-gray-500 font-semibold text-[10px]">${escapeHtml(tier)} · ID ${escapeHtml(currentUser.maHS)}</div></div>${adminBtn}<button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-rose-100 hover:bg-rose-200 text-rose-500 rounded-xl border border-rose-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button></div>`;
     } else {

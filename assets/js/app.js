@@ -2025,6 +2025,7 @@ async function saveExamResultToSheet() {
 
     const payload = {
         maHS: currentUser.maHS,
+        sessionToken: getSessionToken(), // bắt buộc để server xác nhận đúng chủ tài khoản mới cho ghi điểm
         hoTen: currentUser.hoTen,
         lop: currentUser.lop,
         examCategory: categoryKey,
@@ -2069,6 +2070,7 @@ async function saveWeeklyProgressToSheet(percent, starCount, scoreVal) {
     const payload = {
         student_id: currentUser.maHS,
         maHS: currentUser.maHS,
+        sessionToken: getSessionToken(), // bắt buộc để server xác nhận đúng chủ tài khoản mới cho ghi điểm
         hoTen: currentUser.hoTen,
         lop: currentUser.lop,
         sheetName: 'LichSuTienTrinhTuan',
@@ -2127,8 +2129,15 @@ async function openHistoryModal(sheetName = 'LichSuTienTrinhTuan') {
 
     showLoadingOverlay('Đang trích xuất dữ liệu và vẽ biểu đồ năng lực...');
     try {
-        const res = await callAppsScript('getHistory', { maHS: currentUser.maHS, sheetName });
+        const res = await callAppsScript('getHistory', { maHS: currentUser.maHS, sheetName, sessionToken: getSessionToken() });
         hideLoadingOverlay();
+        if (res && res.ok === false) {
+            // Token hết hạn/không hợp lệ hoặc không đúng chủ - đóng modal, báo rõ thay vì âm thầm
+            // hiện báo cáo trống (dễ gây hiểu lầm là bé chưa học gì).
+            closeHistoryModal();
+            alert(res.error || 'Không thể tải lịch sử - bé đăng nhập lại nhé!');
+            return;
+        }
         const rows = (res && res.history) ? res.history : [];
         renderHistoryReport(rows, sheetName);
     } catch (err) {

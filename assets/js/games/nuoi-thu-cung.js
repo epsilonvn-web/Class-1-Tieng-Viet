@@ -58,15 +58,15 @@ const PET_EXTRA_FOOD = {
 };
 
 const PET_ANIMALS = [
-  { name: 'chó', label: 'Chú chó', image: 'images/con_cho.jpg', emoji: '🐶', food: 'xương' },
-  { name: 'mèo', label: 'Mèo con', image: 'images/con_meo.jpg', emoji: '🐱', food: 'cá' },
-  { name: 'thỏ', label: 'Thỏ con', image: 'images/tho_hong.jpg', emoji: '🐰', food: 'cà rốt' },
-  { name: 'gà', label: 'Gà con', image: 'images/con_ga.jpg', emoji: '🐔', food: 'thóc' },
-  { name: 'trâu', label: 'Trâu con', image: 'images/con_trau.jpg', emoji: '🐃', food: 'cỏ' },
-  { name: 'ong', label: 'Ong nhỏ', image: 'images/con_ong.jpg', emoji: '🐝', food: 'mật hoa' },
-  { name: 'bướm', label: 'Bướm xinh', image: 'images/con_buom.jpg', emoji: '🦋', food: 'mật hoa' },
-  { name: 'cá', label: 'Cá nhỏ', image: 'images/con_ca.jpg', emoji: '🐟', food: 'rong' },
-  { name: 'vịt', label: 'Vịt con', image: 'images/con_vit.jpg', emoji: '🦆', food: 'tôm' }
+  { name: 'chó', label: 'Chú chó', image: 'images/con_cho', emoji: '🐶', food: 'xương' },
+  { name: 'mèo', label: 'Mèo con', image: 'images/con_meo', emoji: '🐱', food: 'cá' },
+  { name: 'thỏ', label: 'Thỏ con', image: 'images/tho_hong', emoji: '🐰', food: 'cà rốt' },
+  { name: 'gà', label: 'Gà con', image: 'images/con_ga', emoji: '🐔', food: 'thóc' },
+  { name: 'trâu', label: 'Trâu con', image: 'images/con_trau', emoji: '🐃', food: 'cỏ' },
+  { name: 'ong', label: 'Ong nhỏ', image: 'images/con_ong', emoji: '🐝', food: 'mật hoa' },
+  { name: 'bướm', label: 'Bướm xinh', image: 'images/con_buom', emoji: '🦋', food: 'mật hoa' },
+  { name: 'cá', label: 'Cá nhỏ', image: 'images/con_ca', emoji: '🐟', food: 'rong' },
+  { name: 'vịt', label: 'Vịt con', image: 'images/con_vit', emoji: '🦆', food: 'tôm' }
 ];
 
 function petEnsureStyles() {
@@ -163,10 +163,38 @@ function petPickRound() {
   return petShuffle([correct, ...preferred, ...fallback].slice(0, 4));
 }
 
+function petImageCandidates(base) {
+  const raw = String(base || '').trim();
+  if (!raw) return [];
+  if (/\.(?:png|jpe?g|webp|gif)$/i.test(raw)) return [raw];
+  return [raw + '.jpg', raw + '.jpeg', raw + '.png', raw + '.webp'];
+}
+
+function petTryNextImage(img) {
+  if (!img) return;
+  let list = [];
+  try { list = JSON.parse(img.dataset.candidates || '[]'); } catch (e) {}
+  const nextIndex = Number(img.dataset.candidateIndex || 0) + 1;
+  if (nextIndex < list.length) {
+    img.dataset.candidateIndex = String(nextIndex);
+    img.src = list[nextIndex];
+    return;
+  }
+  const fallback = img.dataset.fallback || '🐾';
+  const div = document.createElement('div');
+  div.id = 'pet-animal-image';
+  div.className = 'pet-animal-fallback';
+  div.textContent = fallback;
+  img.replaceWith(div);
+}
+
 function petAnimalHtml(a) {
-  const fallback = String(a.emoji || '🐾').replace(/'/g,"\\'");
+  const candidates = petImageCandidates(a.image);
+  const firstSrc = candidates[0] || '';
+  const safeCandidates = JSON.stringify(candidates).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  const safeFallback = String(a.emoji || '🐾').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
   return `<div id="pet-animal-wrap" class="pet-animal-wrap pet-round-pop">
-    <img id="pet-animal-image" src="${a.image}" alt="${a.label}" class="pet-animal-image" onerror="this.outerHTML='<div id=\'pet-animal-image\' class=\'pet-animal-fallback\'>${fallback}</div>'">
+    <img id="pet-animal-image" src="${firstSrc}" alt="${a.label}" class="pet-animal-image" data-candidates="${safeCandidates}" data-candidate-index="0" data-fallback="${safeFallback}" onerror="petTryNextImage(this)">
   </div>`;
 }
 

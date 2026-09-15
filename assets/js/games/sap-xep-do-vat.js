@@ -127,8 +127,8 @@ function sxEnsureStyles(){
     .sx-stage{position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff 0%,#fdf2f8 52%,#ecfdf5 100%)}
     .sx-scene-card{position:relative;background:white;border:3px solid #fbcfe8;border-radius:28px;overflow:hidden;box-shadow:0 16px 34px rgba(236,72,153,.14);animation:sxPop .45s ease-out}
     .sx-scene-card.sx-correct{animation:sxGlow .85s ease-out}
-    .sx-scene-img{width:100%;height:220px;object-fit:contain;display:block;background:#fff}
-    .sx-scene-fallback{height:220px;display:flex;align-items:center;justify-content:center;font-size:96px;background:linear-gradient(180deg,#fef3c7,#dbeafe)}
+    .sx-scene-img{width:100%;height:300px;object-fit:contain;display:block;background:#fff}
+    .sx-scene-fallback{height:300px;display:flex;align-items:center;justify-content:center;font-size:110px;background:linear-gradient(180deg,#fef3c7,#dbeafe)}
     .sx-option{transition:transform .14s,box-shadow .14s,background .14s;min-height:54px;user-select:none;touch-action:manipulation}
     .sx-option:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 22px rgba(15,23,42,.12)}
     .sx-wrong{animation:sxWrong .32s linear;background:#fee2e2!important;border-color:#fb7185!important;color:#be123c!important}
@@ -138,7 +138,7 @@ function sxEnsureStyles(){
     .sx-bird{font-size:30px;opacity:.7;animation:sxBird 11s linear infinite}
     .sx-leaf{top:-45px;font-size:22px;opacity:.7;animation:sxLeaf 8s linear infinite}
     .sx-combo{position:absolute;left:50%;top:44%;z-index:30;font-size:30px;font-weight:1000;color:#f43f5e;text-shadow:0 3px 0 #fff;animation:sxCombo 1s ease-out forwards;pointer-events:none}
-    @media(max-width:900px){.sx-scene-img,.sx-scene-fallback{height:180px}.sx-option{min-height:50px}.sx-stage{padding:8px!important}}@media(max-width:640px){.sx-scene-img,.sx-scene-fallback{height:160px}.sx-option{min-height:48px}}
+    @media(max-width:900px){.sx-scene-img,.sx-scene-fallback{height:250px}.sx-option{min-height:50px}.sx-stage{padding:8px!important}}@media(max-width:640px){.sx-scene-img,.sx-scene-fallback{height:220px}.sx-option{min-height:48px}}
   `;
   document.head.appendChild(style);
 }
@@ -209,11 +209,6 @@ function sxNextRound(){
       <div class="sx-scene-fallback" style="display:none">${data.scene.emoji}</div>
       <div class="absolute left-3 bottom-3 px-3 py-1.5 rounded-full bg-white/90 border border-pink-200 text-pink-700 font-black text-sm shadow-sm">${data.scene.label}</div>
     </div>
-    <div class="text-center mb-2">
-      <p class="text-sm md:text-base font-black text-slate-700">Bé hãy sắp xếp đồ vật cho <span class="text-emerald-600">“${data.scene.label}”</span> nhé!</p>
-      <p class="text-[11px] md:text-xs font-bold text-slate-400 mt-0.5">Hãy chọn đủ 3 đồ vật phù hợp. Có 1 đồ vật lạc chỗ, bé đừng chọn nhé.</p>
-    </div>
-    <div id="sx-pick-status" class="text-center text-xs font-black text-emerald-600 mb-2">Đã chọn 0/3 đồ vật đúng</div>
     <div class="grid grid-cols-2 gap-2 md:gap-2.5">
       ${data.options.map((word,idx)=>{
         const pastel=[
@@ -257,8 +252,6 @@ function sxChooseObject(btn,word){
   }
 
   const picked=sxSelectedGood.size;
-  const status=document.getElementById('sx-pick-status');
-  if(status) status.textContent=`Đã chọn ${picked}/3 đồ vật đúng`;
 
   if(picked<3){
     if(typeof confetti==='function') confetti({particleCount:18,spread:42,origin:{y:.78}});

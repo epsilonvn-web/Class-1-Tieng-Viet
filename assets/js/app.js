@@ -7,12 +7,12 @@ const TOPICS_CONFIG = [
     { id: 3, title: "3. Ghép âm - vần", desc: "Vần xuôi & phức tạp", icon: "🧩", color: "blue" },
     { id: 4, title: "4. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", icon: "✍️", color: "amber" },
     { id: 5, title: "5. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
-    { id: 6, title: "6. Từ vựng mở rộng", desc: "Giác quan, hình ảnh thực tế", icon: "🌿", color: "emerald" },
+    { id: 6, title: "6. Kho từ vựng của bé", desc: "Từ theo chủ điểm & ngữ cảnh", icon: "🌿", color: "emerald" },
     { id: 7, title: "7. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
     { id: 8, title: "8. Nhà thông thái sắp câu", desc: "Ghép câu ngắn & câu dài", icon: "🧠", color: "indigo" },
-    { id: 9, title: "9. Điền từ vào câu & tục ngữ", desc: "Tục ngữ dân gian", icon: "📜", color: "cyan" },
+    { id: 9, title: "9. Đọc hiểu - trả lời", desc: "Văn xuôi, thơ & suy luận", icon: "📖", color: "pink" },
     { id: 10, title: "10. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", icon: "🎯", color: "yellow" },
-    { id: 11, title: "11. Đọc hiểu - trả lời", desc: "Truyện ngụ ngôn & thơ nhạc", icon: "📖", color: "pink" }
+    { id: 11, title: "11. Ôn tập học kỳ", desc: "Học kỳ 1 & Học kỳ 2", icon: "📚", color: "cyan" }
 ];
 
 const SUBTOPIC_PALETTES = [
@@ -25,18 +25,30 @@ const SUBTOPIC_PALETTES = [
 ];
 
 const roadmapConfig = {
-    1: { name: "Tuần 1: Bảng chữ cái & âm cơ bản", topicIds: [1], desc: "Làm quen 29 chữ cái, nhận diện nguyên âm, phụ âm và phụ âm ghép cơ bản.", icon: "🅰️" },
-    2: { name: "Tuần 2: Ghép âm cơ bản & thêm thanh", topicIds: [3], desc: "Luyện Cấp 1 và Cấp 2: ghép âm đầu với nguyên âm, sau đó thêm thanh để tạo tiếng mới.", icon: "🧩" },
-    3: { name: "Tuần 3: Ghép vần & tạo tiếng hoàn chỉnh", topicIds: [3], desc: "Luyện Cấp 3 và Cấp 4: ghép âm đầu với vần, rồi kết hợp âm đầu + vần + thanh thành tiếng hoàn chỉnh.", icon: "🔤" },
-    4: { name: "Tuần 4: Điền chữ cái còn thiếu", topicIds: [4], desc: "Nắm vững quy tắc chính tả c/k, g/gh, ng/ngh và phân biệt s/x, tr/ch, l/n.", icon: "✍️" },
-    5: { name: "Tuần 5: Bác sĩ sửa lỗi chính tả", topicIds: [5], desc: "Tìm và sửa lỗi từ sai chính tả, quy tắc viết hoa tên riêng, địa danh.", icon: "🩺" },
-    6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6], desc: "Mở rộng vốn từ qua hình ảnh trực quan con vật, vị giác, xúc giác thực tế.", icon: "👁️" },
-    7: { name: "Tuần 7: Gia đình ba nhóm từ loại", topicIds: [7], desc: "Phân loại từ ngữ quanh bé thành nhóm từ chỉ sự vật, hoạt động và đặc điểm.", icon: "🧸" },
-    8: { name: "Tuần 8: Nhà thông thái sắp xếp câu", topicIds: [8], desc: "Sắp xếp các từ xáo trộn thành câu kể, câu tả hoàn chỉnh đúng ngữ pháp.", icon: "🧠" },
-    9: { name: "Tuần 9: Điền từ vào câu & tục ngữ", topicIds: [9], desc: "Điền từ theo ngữ cảnh phù hợp, ghi nhớ ca dao tục ngữ rèn đức tính tốt.", icon: "📜" },
-    10: { name: "Tuần 10: Trí tuệ IQ cùng đố vui bé ngoan", topicIds: [10], desc: "Giải quyết 100 câu đố lục bát dân gian hóm hỉnh mô tả thế giới xung quanh.", icon: "🎯" },
-    11: { name: "Tuần 11: Đọc hiểu cảm thụ văn học sâu", topicIds: [11], desc: "Đọc diễn cảm các văn bản ngụ ngôn, thơ ngắn và trả lời câu hỏi phân tích.", icon: "📖" },
-    12: { name: "Tuần 12: Đấu trường đề thi tổng hợp", isExam: true, topicIds: [], desc: "Thi thử tổng hợp đa năng lực bám sát ma trận đề thi học kỳ.", icon: "🏆" }
+    1: { name: "Tuần 1: Làm quen chữ cái & nguyên âm", topicIds: [1], desc: "Nhận diện nguyên âm, phụ âm đơn và nền tảng bảng chữ cái.", icon: "🅰️" },
+    2: { name: "Tuần 2: Phụ âm ghép & chữ hoa", topicIds: [1], desc: "Phân biệt phụ âm ghép, chữ in hoa và chữ thường.", icon: "🔤" },
+    3: { name: "Tuần 3: Sáu thanh điệu cơ bản", topicIds: [2], desc: "Nhận biết thanh ngang, sắc, huyền, hỏi, ngã, nặng.", icon: "🎵" },
+    4: { name: "Tuần 4: Thanh điệu trong tiếng", topicIds: [2], desc: "Phân biệt thanh điệu trong các tiếng quen thuộc và tiếng khó hơn.", icon: "🎶" },
+    5: { name: "Tuần 5: Từ thanh điệu đến ghép âm", topicIds: [2,3], desc: "Củng cố thanh điệu và bắt đầu ghép âm đầu với nguyên âm.", icon: "🧩" },
+    6: { name: "Tuần 6: Ghép tiếng & thêm thanh", topicIds: [3], desc: "Ghép tiếng cơ bản rồi thêm thanh để tạo tiếng có nghĩa.", icon: "🔡" },
+    7: { name: "Tuần 7: Ghép vần & luật c/k, g/gh", topicIds: [3,4], desc: "Ghép âm đầu với vần; làm quen c/k/q và g/gh.", icon: "✍️" },
+    8: { name: "Tuần 8: Tạo tiếng & ng/ngh, ch/tr", topicIds: [3,4], desc: "Tạo tiếng hoàn chỉnh; phân biệt ng/ngh và ch/tr.", icon: "📝" },
+    9: { name: "Tuần 9: Phân biệt s/x, l/n, ch/tr", topicIds: [4], desc: "Luyện các cặp âm đầu dễ lẫn trong chính tả.", icon: "S/X" },
+    10: { name: "Tuần 10: d/gi/r & chính tả tổng hợp", topicIds: [4], desc: "Phân biệt d/gi/r và ôn tổng hợp các luật chính tả đã học.", icon: "🩺" },
+    11: { name: "Tuần 11: Vốn từ & từ chỉ sự vật", topicIds: [6,7], desc: "Mở rộng từ về gia đình, trường học và nhận diện từ chỉ sự vật.", icon: "🌿" },
+    12: { name: "Tuần 12: Ôn tập Học kỳ 1", topicIds: [11], desc: "Ôn tổng hợp kiến thức Học kỳ 1 trước khi vào giai đoạn tiếp theo.", icon: "📘" },
+    13: { name: "Tuần 13: Vần phức & tiếng hoàn chỉnh", topicIds: [3], desc: "Củng cố vần khó, ghép âm đầu + vần + thanh ở mức cao hơn.", icon: "🔠" },
+    14: { name: "Tuần 14: Chính tả nâng cao & chữa lỗi", topicIds: [3,4,5], desc: "Ôn luật c/k, g/gh, ng/ngh, ch/tr và bắt đầu chữa từ sai.", icon: "🩹" },
+    15: { name: "Tuần 15: Viết hoa & bác sĩ chính tả", topicIds: [5], desc: "Luyện viết hoa tên riêng và phát hiện lỗi trong câu ngắn.", icon: "🩺" },
+    16: { name: "Tuần 16: Từ ngữ thiên nhiên & đặc điểm", topicIds: [6], desc: "Mở rộng vốn từ về con vật, cây cối, màu sắc, hình dáng và đặc điểm.", icon: "🌳" },
+    17: { name: "Tuần 17: Hoạt động, cảm xúc & quan hệ từ", topicIds: [6], desc: "Mở rộng từ chỉ hoạt động, cảm xúc, đồng nghĩa, trái nghĩa và ngữ cảnh.", icon: "😊" },
+    18: { name: "Tuần 18: Từ chỉ hoạt động & đặc điểm", topicIds: [7], desc: "Nhận biết và phân biệt hai nhóm từ quan trọng trong câu.", icon: "🏃" },
+    19: { name: "Tuần 19: Phân loại từ & dùng từ trong câu", topicIds: [7], desc: "Phân loại sự vật - hoạt động - đặc điểm và chọn từ đúng ngữ cảnh.", icon: "🧸" },
+    20: { name: "Tuần 20: Sắp câu 3-4 từ", topicIds: [8], desc: "Xếp các từ thành câu ngắn đúng trật tự và đúng nghĩa.", icon: "🧠" },
+    21: { name: "Tuần 21: Câu dài, câu hỏi & câu cảm", topicIds: [8], desc: "Xếp câu 5 từ trở lên, luyện câu hỏi, câu cảm và thử thách tổng hợp.", icon: "💬" },
+    22: { name: "Tuần 22: Đọc hiểu văn xuôi & thơ", topicIds: [9], desc: "Đọc văn xuôi, thơ ngắn và trả lời câu hỏi bám chi tiết văn bản.", icon: "📖" },
+    23: { name: "Tuần 23: Đọc hiểu thông tin & suy luận", topicIds: [9], desc: "Đọc văn bản thông tin, suy luận ý nghĩa và rút ra bài học phù hợp.", icon: "🔎" },
+    24: { name: "Tuần 24: Ôn tập Học kỳ 2", topicIds: [11], desc: "Ôn tổng hợp kiến thức Học kỳ 2, sẵn sàng bước vào Đấu trường đề thi.", icon: "📗" }
 };
 
 const TOPIC_TO_SKILL = {
@@ -55,9 +67,9 @@ function skillsForWeek(weekNum) {
 }
 
 const ROADMAP_COORDS = {
-    1: { x: 150, y: 130 },  2: { x: 415, y: 130 },  3: { x: 680, y: 130 },  4: { x: 950, y: 130 },
-    5: { x: 950, y: 330 },  6: { x: 680, y: 330 },  7: { x: 415, y: 330 },  8: { x: 150, y: 330 },
-    9: { x: 150, y: 530 }, 10: { x: 415, y: 530 }, 11: { x: 680, y: 530 }, 12: { x: 1050, y: 530 }
+    1: { x: 130, y: 125 },  2: { x: 390, y: 125 },  3: { x: 650, y: 125 },  4: { x: 910, y: 125 },
+    5: { x: 910, y: 315 },  6: { x: 650, y: 315 },  7: { x: 390, y: 315 },  8: { x: 130, y: 315 },
+    9: { x: 130, y: 505 }, 10: { x: 390, y: 505 }, 11: { x: 650, y: 505 }, 12: { x: 910, y: 505 }
 };
 
 const examFileMap = {
@@ -67,12 +79,12 @@ const examFileMap = {
 };
 
 const SKILL_TAXONOMY = {
-    C1: { code: 'C1', sheetCol: 'C1_NguAm', totalCol: 'C1_NguAm_Tong', name: 'Ngữ âm nền tảng', advice: 'Cần ôn lại bảng chữ cái, phân biệt nguyên âm và phụ âm ghép.' },
-    C2: { code: 'C2', sheetCol: 'C2_ChinhTa', totalCol: 'C2_ChinhTa_Tong', name: 'Quy tắc chính tả', advice: 'Rèn luyện thêm quy tắc đặt 5 dấu thanh, phân biệt c/k, g/gh, ng/ngh.' },
-    C3: { code: 'C3', sheetCol: 'C3_VonTu', totalCol: 'C3_VonTu_Tong', name: 'Vốn từ mở rộng', advice: 'Luyện đọc các vần đôi, mở rộng vốn từ miêu tả qua đời sống hàng ngày.' },
-    C4: { code: 'C4', sheetCol: 'C4_CuPhap', totalCol: 'C4_CuPhap_Tong', name: 'Cú pháp câu kể', advice: 'Rèn luyện sắp xếp từ ngữ xáo trộn thành câu kể hoàn chỉnh có nghĩa.' },
-    C5: { code: 'C5', sheetCol: 'C5_DocHieu', totalCol: 'C5_DocHieu_Tong', name: 'Đọc hiểu văn bản', advice: 'Tăng cường đọc diễn cảm truyện ngụ ngôn và nắm bắt nội dung mẩu chuyện.' },
-    C6: { code: 'C6', sheetCol: 'C6_TuDuyIQ', totalCol: 'C6_TuDuyIQ_Tong', name: 'Tư duy IQ & đố vui', advice: 'Rèn kỹ năng suy luận logic, giải mã các câu đố thơ dân gian.' }
+    C1: { code: 'C1', sheetCol: 'C1_NguAm', totalCol: 'C1_NguAm_Tong', name: 'Ngữ âm & Nhận diện', advice: 'Cần ôn lại bảng chữ cái, phân biệt nguyên âm và phụ âm ghép.' },
+    C2: { code: 'C2', sheetCol: 'C2_ChinhTa', totalCol: 'C2_ChinhTa_Tong', name: 'Luật chính tả', advice: 'Rèn luyện thêm quy tắc đặt 5 dấu thanh, phân biệt c/k, g/gh, ng/ngh.' },
+    C3: { code: 'C3', sheetCol: 'C3_VonTu', totalCol: 'C3_VonTu_Tong', name: 'Vốn từ & Ngữ nghĩa', advice: 'Luyện đọc các vần đôi, mở rộng vốn từ miêu tả qua đời sống hàng ngày.' },
+    C4: { code: 'C4', sheetCol: 'C4_CuPhap', totalCol: 'C4_CuPhap_Tong', name: 'Cú pháp & Đặt câu', advice: 'Rèn luyện sắp xếp từ ngữ xáo trộn thành câu kể hoàn chỉnh có nghĩa.' },
+    C5: { code: 'C5', sheetCol: 'C5_DocHieu', totalCol: 'C5_DocHieu_Tong', name: 'Đọc hiểu & Cảm thụ', advice: 'Tăng cường đọc diễn cảm truyện ngụ ngôn và nắm bắt nội dung mẩu chuyện.' },
+    C6: { code: 'C6', sheetCol: 'C6_TuDuyIQ', totalCol: 'C6_TuDuyIQ_Tong', name: 'Tư duy & Phản xạ IQ', advice: 'Rèn kỹ năng suy luận logic, giải mã các câu đố thơ dân gian.' }
 };
 
 const GREETINGS_STUDENT = [
@@ -472,6 +484,7 @@ function normalizeQuestion(q) {
         sub_topic: String(q.sub ?? q.sub_topic ?? 'Câu hỏi chung').trim(),
         week: q.week ?? q.w ?? null,
         tags: Array.isArray(q.tags) ? q.tags.slice() : [],
+        tokens: Array.isArray(q.tokens) ? q.tokens.slice() : [],
         question_text: q.q ?? q.question_text ?? '',
         options: Array.isArray(q.o) ? q.o : (Array.isArray(q.options) ? q.options : []),
         answer: q.a ?? q.answer ?? '',
@@ -532,7 +545,6 @@ function getQuestionsForWeek343(weekNumber) {
     config.topicIds.forEach(topicId => {
         const topicData = allTopicsDataCache.find(t => t.topic_id === topicId);
         if (!topicData || !topicData.questions) return;
-
         const matched = topicData.questions.filter(q => {
             const byWeek = Number(q.week) === Number(weekNumber);
             const byTag = Array.isArray(q.tags) && q.tags.includes(weekTag);
@@ -541,19 +553,11 @@ function getQuestionsForWeek343(weekNumber) {
         pool = pool.concat(matched.map(q => ({ ...q, source_topic_id: topicId })));
     });
 
-    if (pool.length < 30) return shuffleArray([...pool]);
-
-    // Kho hiện được sắp theo mức độ tăng dần; giữ tỷ lệ 3:4:3 = 9 dễ, 12 vừa, 9 khó.
-    const size = pool.length;
-    const basket1 = pool.slice(0, Math.floor(size * 0.35));
-    const basket2 = pool.slice(Math.floor(size * 0.35), Math.floor(size * 0.75));
-    const basket3 = pool.slice(Math.floor(size * 0.75));
-
-    const easy = shuffleArray([...basket1]).slice(0, 9);
-    const medium = shuffleArray([...basket2]).slice(0, 12);
-    const hard = shuffleArray([...basket3]).slice(0, 9);
-
-    return shuffleArray([...easy, ...medium, ...hard]);
+    // Roadmap 24 tuần: mỗi tuần có ngân hàng đúng 60 câu, mỗi lượt bốc ngẫu nhiên 30 câu.
+    if (pool.length !== 60) {
+        console.warn(`[Roadmap] Tuần ${weekNumber} có ${pool.length}/60 câu trong ngân hàng.`);
+    }
+    return shuffleArray([...pool]).slice(0, 30);
 }
 
 function capitalizeFirstLetter(val) {
@@ -707,7 +711,7 @@ async function startRandomExam(categoryKey) {
         if (!questions.length) return alert('Đề thi này chưa có câu hỏi, bé chọn đề khác nhé!');
 
         updateNavTabs("12. Đấu trường đề thi", "🏆", examTitle);
-        startTopicQuiz(0, examTitle, shuffleArray(questions), null);
+        startTopicQuiz(0, examTitle, questions, null);
     } catch (err) {
         hideLoadingOverlay();
         alert(`Không thể tải đề thi: ${err.message}`);
@@ -1085,6 +1089,11 @@ function openTopic(topicNum, topicName, icon) {
         return;
     }
 
+    if (topicNum === 11) {
+        openSemesterReviewMenu();
+        return;
+    }
+
     showLoadingOverlay(`Đang tải chủ đề "${topicName}"...`);
     fetchAllTopicsData().then(topics => {
         hideLoadingOverlay();
@@ -1094,6 +1103,27 @@ function openTopic(topicNum, topicName, icon) {
     }).catch(err => {
         hideLoadingOverlay();
         alert(`Không thể tải chủ đề: ${err.message}`);
+    });
+}
+
+
+function openSemesterReviewMenu() {
+    stopSpeaking();
+    currentTopicKey = 'semester_review_menu';
+    currentTopicName = '11. Ôn tập học kỳ';
+    updateNavTabs('11. Ôn tập học kỳ', '📚', null);
+
+    showLoadingOverlay('Đang tải kho ôn tập học kỳ...');
+    fetchAllTopicsData().then(topics => {
+        hideLoadingOverlay();
+        const topicObj = topics.find(t => Number(t.topic_id) === 11);
+        if (!topicObj || !Array.isArray(topicObj.questions) || !topicObj.questions.length) {
+            throw new Error('Chưa có dữ liệu ôn tập học kỳ');
+        }
+        showLectureAndSubtopics(11, '11. Ôn tập học kỳ', topicObj);
+    }).catch(err => {
+        hideLoadingOverlay();
+        alert(`Không thể tải ôn tập học kỳ: ${err.message}`);
     });
 }
 
@@ -1265,13 +1295,22 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
         if (!groupMap[k]) { groupMap[k] = []; groups.push(k); }
         groupMap[k].push(q);
     });
+    // Topic 10: thêm một mục ảo "Trộn ngẫu nhiên" dùng toàn bộ kho câu hỏi,
+    // không nhân đôi dữ liệu trong JSON.
+    if (Number(topicNum) === 10 && topicObj.questions.length) {
+        const randomKey = '__TOPIC10_RANDOM_ALL__';
+        groups.push(randomKey);
+        groupMap[randomKey] = topicObj.questions;
+    }
+
     pendingTopicQuiz.groups = groups; 
     pendingTopicQuiz.groupMap = groupMap;
 
     let subHtml = '';
     groups.forEach((subName, idx) => {
         const style = SUBTOPIC_PALETTES[idx % SUBTOPIC_PALETTES.length];
-        const displayTitle = beautifySubtopicName(subName);
+        const isTopic10Random = Number(topicNum) === 10 && subName === '__TOPIC10_RANDOM_ALL__';
+        const displayTitle = isTopic10Random ? '🎲 Trộn ngẫu nhiên' : beautifySubtopicName(subName);
         const count = groupMap[subName].length;
 
         subHtml += `
@@ -1297,13 +1336,15 @@ function selectSubtopic(idx) {
     const { topicNum, topicName, questions, groups, groupMap } = pendingTopicQuiz;
     const subLabel = idx !== null ? groups[idx] : null;
     const pool = idx !== null ? groupMap[subLabel] : questions;
-    const finalTitle = subLabel ? `${topicName} - ${beautifySubtopicName(subLabel)}` : topicName;
+    const isTopic10Random = Number(topicNum) === 10 && subLabel === '__TOPIC10_RANDOM_ALL__';
+    const displaySubLabel = isTopic10Random ? '🎲 Trộn ngẫu nhiên' : (subLabel ? beautifySubtopicName(subLabel) : null);
+    const finalTitle = displaySubLabel ? `${topicName} - ${displaySubLabel}` : topicName;
 
     practiceCycleRawPool = [...pool];
     const firstCycleQuestions = shuffleArray([...pool]);
 
-    updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', subLabel ? beautifySubtopicName(subLabel) : 'Tất cả các mục');
-    startTopicQuiz(topicNum, finalTitle, firstCycleQuestions, subLabel);
+    updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', displaySubLabel || 'Tất cả các mục');
+    startTopicQuiz(topicNum, finalTitle, firstCycleQuestions, displaySubLabel);
 }
 
 // ==========================================
@@ -1356,59 +1397,59 @@ function renderRoadmapSVG() {
     if (!container) return;
     const tuanHienTai = Number(currentUser?.tuanHienTai) || 1;
 
-    let nodesHtml = '';
-    for (let w = 1; w <= 12; w++) {
-        const item = roadmapConfig[w];
-        const coord = ROADMAP_COORDS[w];
-        const isDone = w < tuanHienTai;
-        const isCurrent = w === tuanHienTai;
-        const isLocked = w > tuanHienTai;
+    function buildSemesterSvg(startWeek, title, subtitle, badgeClass) {
+        let nodesHtml = '';
+        for (let local = 1; local <= 12; local++) {
+            const w = startWeek + local - 1;
+            const item = roadmapConfig[w];
+            const coord = ROADMAP_COORDS[local];
+            const isDone = w < tuanHienTai;
+            const isCurrent = w === tuanHienTai;
+            const isLocked = w > tuanHienTai;
+            const nodeColor = isDone ? '#10b981' : (isCurrent ? '#ec4899' : '#cbd5e1');
+            const strokeColor = isDone ? '#34d399' : (isCurrent ? '#f43f5e' : '#94a3b8');
+            let badgeHtml = '';
+            if (isDone) badgeHtml = `<text x="${coord.x}" y="${coord.y + 40}" text-anchor="middle" font-size="16" fill="#f59e0b">⭐⭐⭐</text>`;
+            else if (isCurrent) badgeHtml = `<text x="${coord.x}" y="${coord.y + 40}" text-anchor="middle" font-size="12" font-weight="900" fill="#ec4899">Đang học</text>`;
+            else badgeHtml = `<text x="${coord.x}" y="${coord.y + 38}" text-anchor="middle" font-size="14" fill="#94a3b8">🔒 Khóa</text>`;
 
-        let nodeColor = isDone ? "#10b981" : (isCurrent ? "#ec4899" : "#cbd5e1");
-        let strokeColor = isDone ? "#34d399" : (isCurrent ? "#f43f5e" : "#94a3b8");
-        let badgeHtml = '';
-
-        if (isDone) {
-            badgeHtml = `<text x="${coord.x}" y="${coord.y + 40}" text-anchor="middle" font-size="16" fill="#f59e0b">⭐⭐⭐</text>`;
-        } else if (isCurrent) {
-            badgeHtml = `<text x="${coord.x}" y="${coord.y + 40}" text-anchor="middle" font-size="12" font-weight="900" fill="#ec4899">Đang học</text>`;
-        } else {
-            badgeHtml = `<text x="${coord.x}" y="${coord.y + 38}" text-anchor="middle" font-size="14" fill="#94a3b8">🔒 Khóa</text>`;
+            const cursorCls = isLocked ? 'cursor-not-allowed opacity-60' : 'cursor-pointer hover:scale-105 transition-transform';
+            const animCls = isCurrent ? 'node-current' : '';
+            const [capLine1, capLine2, capLine3] = wrapCaptionLines(item.desc, 20, 3);
+            const capColor = isLocked ? '#475569' : '#7c3aed';
+            nodesHtml += `
+                <g class="${cursorCls} ${animCls}" onclick="selectRoadmapWeek(${w})" id="svg-node-week-${w}">
+                    <text x="${coord.x}" y="${coord.y - 88}" text-anchor="middle" font-size="16" font-weight="700" fill="${capColor}">${escapeHtml(capLine1)}</text>
+                    <text x="${coord.x}" y="${coord.y - 69}" text-anchor="middle" font-size="16" font-weight="700" fill="${capColor}">${escapeHtml(capLine2)}</text>
+                    <text x="${coord.x}" y="${coord.y - 50}" text-anchor="middle" font-size="16" font-weight="700" fill="${capColor}">${escapeHtml(capLine3)}</text>
+                    <circle cx="${coord.x}" cy="${coord.y}" r="40" fill="#ffffff" stroke="${strokeColor}" stroke-width="4" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.08))"/>
+                    <circle cx="${coord.x}" cy="${coord.y}" r="34" fill="${nodeColor}" opacity="${isLocked ? '0.25' : '0.15'}"/>
+                    <text x="${coord.x}" y="${coord.y - 4}" text-anchor="middle" font-size="24">${item.icon || '🌸'}</text>
+                    <text x="${coord.x}" y="${coord.y + 18}" text-anchor="middle" font-size="13" font-weight="800" fill="${isLocked ? '#64748b' : '#1e293b'}">Tuần ${w}</text>
+                    ${badgeHtml}
+                </g>`;
         }
-
-        const cursorCls = isLocked ? "cursor-not-allowed opacity-60" : "cursor-pointer hover:scale-105 transition-transform";
-        const animCls = isCurrent ? "node-current" : "";
-
-        const [capLine1, capLine2, capLine3] = wrapCaptionLines(item.desc, 22, 3);
-        const capColor = isLocked ? '#1e293b' : '#7c3aed';
-        const captionHtml = `
-            <text x="${coord.x}" y="${coord.y - 96}" text-anchor="middle" font-size="18" font-weight="700" fill="${capColor}">${escapeHtml(capLine1)}</text>
-            <text x="${coord.x}" y="${coord.y - 76}" text-anchor="middle" font-size="18" font-weight="700" fill="${capColor}">${escapeHtml(capLine2)}</text>
-            <text x="${coord.x}" y="${coord.y - 56}" text-anchor="middle" font-size="18" font-weight="700" fill="${capColor}">${escapeHtml(capLine3)}</text>
-        `;
-
-        nodesHtml += `
-            <g class="${cursorCls} ${animCls}" onclick="selectRoadmapWeek(${w})" id="svg-node-week-${w}">
-                ${captionHtml}
-                <circle cx="${coord.x}" cy="${coord.y}" r="40" fill="#ffffff" stroke="${strokeColor}" stroke-width="4" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.08))"/>
-                <circle cx="${coord.x}" cy="${coord.y}" r="34" fill="${nodeColor}" opacity="${isLocked ? '0.25' : '0.15'}"/>
-                <text x="${coord.x}" y="${coord.y - 4}" text-anchor="middle" font-size="24">${item.icon || '🌸'}</text>
-                <text x="${coord.x}" y="${coord.y + 18}" text-anchor="middle" font-size="13" font-weight="800" fill="${isLocked ? '#64748b' : '#1e293b'}">Tuần ${w}</text>
-                ${badgeHtml}
-            </g>
-        `;
+        return `
+            <div class="mb-5 rounded-3xl border-2 border-pink-100 bg-white/70 p-2 md:p-3 shadow-sm">
+                <div class="flex items-center justify-center gap-2 mb-1">
+                    <span class="px-3 py-1 rounded-full ${badgeClass} font-black text-sm">${title}</span>
+                    <span class="text-xs md:text-sm font-bold text-slate-500">${subtitle}</span>
+                </div>
+                <svg viewBox="0 0 1040 620" class="w-full select-none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 130,125 Q 520,125 910,125 C 1030,125 1030,315 910,315 Q 520,315 130,315 C 10,315 10,505 130,505 Q 520,505 910,505"
+                          fill="none" stroke="#fbcfe8" stroke-width="12" stroke-dasharray="14,14" stroke-linecap="round"/>
+                    <path d="M 130,125 Q 520,125 910,125 C 1030,125 1030,315 910,315 Q 520,315 130,315 C 10,315 10,505 130,505 Q 520,505 910,505"
+                          fill="none" stroke="#f472b6" stroke-width="4" stroke-dasharray="14,14" stroke-linecap="round"/>
+                    ${nodesHtml}
+                </svg>
+            </div>`;
     }
 
-    const svgHtml = `
-        <svg viewBox="0 0 1200 650" class="w-full max-h-[66vh] select-none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 150,130 Q 550,130 950,130 C 1120,130 1120,330 950,330 Q 550,330 150,330 C -20,330 -20,530 150,530 Q 550,530 1050,530" 
-                  fill="none" stroke="#fbcfe8" stroke-width="12" stroke-dasharray="14,14" stroke-linecap="round"/>
-            <path d="M 150,130 Q 550,130 950,130 C 1120,130 1120,330 950,330 Q 550,330 150,330 C -20,330 -20,530 150,530 Q 550,530 1050,530" 
-                  fill="none" stroke="#f472b6" stroke-width="4" stroke-dasharray="14,14" stroke-linecap="round"/>
-            ${nodesHtml}
-        </svg>
-    `;
-    container.innerHTML = svgHtml;
+    container.innerHTML = `
+        <div class="w-full max-w-6xl mx-auto">
+            ${buildSemesterSvg(1, 'HỌC KỲ 1', 'Tuần 1 - 12', 'bg-pink-50 text-pink-700 border border-pink-200')}
+            ${buildSemesterSvg(13, 'HỌC KỲ 2', 'Tuần 13 - 24', 'bg-purple-50 text-purple-700 border border-purple-200')}
+        </div>`;
 }
 
 async function selectRoadmapWeek(weekNum) {
@@ -1428,7 +1469,7 @@ async function selectRoadmapWeek(weekNum) {
     const topicLabel = config.name.replace(/^Tuần\s*\d+:\s*/i, '');
     updateNavTabs("Tiến trình tuần", "📅", `Tuần ${weekNum}`, topicLabel);
 
-    showLoadingOverlay(`Đang bốc 30 câu hỏi Tuần ${weekNum} (tỷ lệ 3:4:3)...`);
+    showLoadingOverlay(`Đang bốc ngẫu nhiên 30/60 câu hỏi Tuần ${weekNum}...`);
     try {
         await fetchAllTopicsData();
         hideLoadingOverlay();
@@ -1587,7 +1628,7 @@ function getTopic3FusionMeta(q) {
                 'hỏi':'◌̉',
                 'ngã':'◌̃',
                 'nặng':'◌̣',
-                'ngang':'—'
+                'ngang':'không dấu'
             })[tone] || '?'],
             speech:`Tiếng ${base}, thêm thanh ${tone || ''}, được tiếng gì?`
         };
@@ -1726,12 +1767,137 @@ function renderTopic3FusionQuestion(q) {
     return true;
 }
 
+
+// ==========================================
+// CHỦ ĐỀ 8: NHÀ THÔNG THÁI SẮP CÂU - GIAO DIỆN XẾP THẺ TỪ
+// ==========================================
+const topic8ArrangeState = {};
+
+function getTopic8State(q) {
+    const key = `${q.question_id}`;
+    if (!topic8ArrangeState[key]) {
+        const tokens = Array.isArray(q.tokens) && q.tokens.length ? q.tokens.slice() : String(q.answer || '').split(/\s+/).filter(Boolean);
+        topic8ArrangeState[key] = { selected: [], pool: tokens.map((text, i) => ({ id: `${key}-${i}`, text })) };
+    }
+    return topic8ArrangeState[key];
+}
+
+function topic8SentenceFromSelected(state) {
+    return state.selected.map(x => x.text).join(' ').replace(/\s+([,.!?])/g, '$1').trim();
+}
+
+function renderTopic8SentenceBuilder(q) {
+    const state = getTopic8State(q);
+    const completed = userAnswers[currentQIndex] !== undefined;
+    const selectedIds = new Set(state.selected.map(x => x.id));
+    const available = state.pool.filter(x => !selectedIds.has(x.id));
+    const built = topic8SentenceFromSelected(state);
+
+    const topHtml = state.selected.length
+        ? state.selected.map((tok, i) => `<button ${completed ? 'disabled' : ''} onclick="topic8ReturnToken(${i})" class="px-3 py-2 md:px-4 md:py-2.5 rounded-2xl border-2 ${completed ? 'bg-emerald-100 border-emerald-400 text-emerald-800' : 'bg-white border-fuchsia-300 text-fuchsia-700 hover:bg-fuchsia-50'} font-black text-sm md:text-base shadow-sm transition-all">${escapeHtml(tok.text)}</button>`).join('')
+        : `<span class="text-slate-400 font-bold text-sm md:text-base">Chọn từ bên dưới để ghép câu...</span>`;
+
+    const poolHtml = available.map(tok => `<button ${completed ? 'disabled' : ''} onclick="topic8PickToken('${tok.id.replace(/'/g, "\\'")}')" class="px-3.5 py-2.5 md:px-4 md:py-3 rounded-2xl bg-amber-50 hover:bg-amber-100 border-2 border-amber-300 text-amber-800 font-black text-sm md:text-base shadow-sm transition-all active:scale-95">${escapeHtml(tok.text)}</button>`).join('');
+
+    const statusHtml = completed
+        ? `<div class="mt-3 px-4 py-2 rounded-2xl bg-emerald-50 border border-emerald-300 text-emerald-700 font-black text-sm md:text-base">🎉 Chính xác! ${escapeHtml(q.answer)}</div>`
+        : `<div id="topic8-status" class="mt-3 min-h-[28px] text-sm md:text-base font-extrabold text-rose-500"></div>`;
+
+    document.getElementById('question-box').innerHTML = `
+        <div class="w-full max-w-4xl flex flex-col items-center px-2">
+            <div class="text-4xl md:text-5xl mb-2">🧩</div>
+            <h3 class="text-base md:text-lg font-black text-slate-900 text-center">Sắp xếp các từ thành câu hoàn chỉnh</h3>
+            <p class="text-xs md:text-sm font-bold text-slate-500 mt-1 text-center">Chạm từ bên dưới để đưa lên. Chạm từ phía trên để đưa xuống.</p>
+
+            <div class="w-full mt-4 rounded-3xl border-2 border-dashed border-fuchsia-300 bg-fuchsia-50/40 p-4 min-h-[92px] flex flex-wrap gap-2 items-center justify-center">
+                ${topHtml}
+            </div>
+
+            <div class="w-full mt-4 rounded-3xl border-2 border-amber-200 bg-white p-4 flex flex-wrap gap-2.5 items-center justify-center min-h-[96px]">
+                ${poolHtml || (completed ? '<span class="text-emerald-600 font-black">Hoàn thành rồi! 🌟</span>' : '')}
+            </div>
+
+            <div class="flex flex-wrap items-center justify-center gap-2 mt-3">
+                <button onclick="speakVietnamese('${String(q.answer || '').replace(/'/g, "\\'")}')" class="px-4 py-2 rounded-2xl bg-pink-50 border border-pink-200 text-pink-700 font-extrabold text-sm hover:bg-pink-100"><i class="fa-solid fa-volume-high mr-1.5"></i>Nghe câu đúng</button>
+                ${!completed ? '<button onclick="topic8ResetCurrent()" class="px-4 py-2 rounded-2xl bg-slate-50 border border-slate-200 text-slate-600 font-extrabold text-sm hover:bg-slate-100"><i class="fa-solid fa-rotate-left mr-1.5"></i>Làm lại</button>' : ''}
+            </div>
+            ${statusHtml}
+        </div>`;
+
+    updateNavButtons();
+    updateQuizPalletUI();
+}
+
+function topic8PickToken(tokenId) {
+    const q = activeQuestionsList[currentQIndex];
+    if (!q || userAnswers[currentQIndex] !== undefined) return;
+    const state = getTopic8State(q);
+    const tok = state.pool.find(x => x.id === tokenId);
+    if (!tok || state.selected.some(x => x.id === tokenId)) return;
+    state.selected.push(tok);
+    topic8EvaluateOrRender(q, state);
+}
+
+function topic8ReturnToken(index) {
+    const q = activeQuestionsList[currentQIndex];
+    if (!q || userAnswers[currentQIndex] !== undefined) return;
+    const state = getTopic8State(q);
+    state.selected.splice(index, 1);
+    renderTopic8SentenceBuilder(q);
+}
+
+function topic8ResetCurrent() {
+    const q = activeQuestionsList[currentQIndex];
+    if (!q || userAnswers[currentQIndex] !== undefined) return;
+    const state = getTopic8State(q);
+    state.selected = [];
+    renderTopic8SentenceBuilder(q);
+}
+
+function topic8EvaluateOrRender(q, state) {
+    const built = topic8SentenceFromSelected(state);
+    if (state.selected.length < state.pool.length) {
+        renderTopic8SentenceBuilder(q);
+        return;
+    }
+
+    if (built === String(q.answer || '').trim()) {
+        userAnswers[currentQIndex] = q.answer;
+        score += (q.diem ?? 0.5);
+        starGreenCount++;
+        const greenEl = document.getElementById('star-green-count');
+        if (greenEl) greenEl.textContent = starGreenCount;
+        playAudio('correct');
+        confetti({ particleCount: 55, spread: 70, origin: { y: 0.68 } });
+        setTimeout(() => speakVietnamese(`Chính xác! ${q.answer}`), 160);
+        renderTopic8SentenceBuilder(q);
+        updateQuizPalletUI();
+    } else {
+        starRedCount++;
+        const redEl = document.getElementById('star-red-count');
+        if (redEl) redEl.textContent = starRedCount;
+        playAudio('wrong');
+        renderTopic8SentenceBuilder(q);
+        const status = document.getElementById('topic8-status');
+        if (status) status.textContent = 'Chưa đúng rồi. Bé chạm vào từ phía trên để đổi lại thứ tự nhé!';
+    }
+}
+
 function loadQuestion() {
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
     if (!q) return;
 
     const isEvaluationMode = !!activeExamContext || !!activeRoadmapContext;
+
+    // Topic 8 ở chế độ luyện tập dùng trò chơi xếp thẻ từ riêng.
+    // Tiến trình tuần / đề thi vẫn dùng renderer chuẩn để giữ nguyên cơ chế chấm điểm.
+    if (!isEvaluationMode && Number(activeTopicId) === 8 && Array.isArray(q.tokens) && q.tokens.length) {
+        const stepEl = document.getElementById('practice-step-text');
+        if (stepEl) stepEl.textContent = `Câu ${currentQIndex + 1} / ${activeQuestionsList.length}`;
+        renderTopic8SentenceBuilder(q);
+        return;
+    }
 
     // Topic 3 ở chế độ luyện tập dùng renderer tương tác riêng.
     // Tiến trình tuần / đề thi vẫn dùng renderer chuẩn để giữ nguyên cơ chế chấm điểm.
@@ -2402,7 +2568,7 @@ async function saveWeeklyProgressToSheet(percent, starCount, scoreVal) {
         await callAppsScript('saveWeeklyProgress', payload);
         if (percent >= 80) {
             const nextWeek = week + 1;
-            if (nextWeek > (Number(currentUser.tuanHienTai) || 1) && nextWeek <= 12) {
+            if (nextWeek > (Number(currentUser.tuanHienTai) || 1) && nextWeek <= 24) {
                 currentUser.tuanHienTai = nextWeek;
                 setTimeout(() => alert(`🎉 Chúc mừng bé đạt ${percent}% điểm! Tuần ${nextWeek} đã được mở khóa trên bản đồ!`), 500);
             }
@@ -2425,7 +2591,7 @@ async function openHistoryModal(sheetName = 'LichSuTienTrinhTuan') {
     document.getElementById('hist-report-date').textContent = new Date().toLocaleDateString('vi-VN');
 
     const titleMap = {
-        LichSuTienTrinhTuan: "Báo cáo tiến trình 12 tuần học tập",
+        LichSuTienTrinhTuan: "Báo cáo tiến trình 24 tuần học tập",
         LichSuBaiThi_HK1: "Báo cáo kết quả đấu trường — Học kỳ 1",
         LichSuBaiThi_HK2: "Báo cáo kết quả đấu trường — Học kỳ 2",
         LichSuBaiThi_HSG: "Báo cáo kết quả đấu trường — Học sinh giỏi"
@@ -3098,10 +3264,10 @@ function ensureMiniGameThemeStyles() {
 const MINIGAME_LIST = [
     { id: 'spelling-knight', title: '1. Hiệp sĩ Chính tả', desc: 'Săn quái chữ - chọn đúng âm/chữ còn thiếu', icon: '⚔️', ready: true },
     { id: 'picture-word-catch', title: '2. Nhìn hình bắt chữ', desc: 'Nhìn emoji, bắt đúng từ trước khi chạm tường', icon: '👀', ready: true },
-    { id: 'pet-feeding', title: '3. Nuôi thú cưng', desc: 'Chọn đúng món ăn yêu thích cho từng con vật', icon: '🐾', ready: true },
-    { id: 'object-sorting', title: '4. Sắp xếp đồ vật', desc: 'Tìm 1 đồ vật lạc chỗ trong 4 lựa chọn', icon: '🧹', ready: true },
-    { id: 'sharp-eyes', title: '5. Ai tinh mắt hơn', desc: 'Quan sát tranh và tìm đồ vật không xuất hiện', icon: '🔎', ready: true },
-    { id: 'right-color', title: '6. Ai chọn đúng màu?', desc: 'Quan sát tranh, đọc từ và chọn màu chính xác', icon: '🎨', ready: true },
+    { id: 'pet-feeding', title: '3. Nuôi thú cưng', desc: 'Luyện vốn từ con vật và thức ăn quen thuộc', icon: '🐾', ready: true },
+    { id: 'object-sorting', title: '4. Sắp xếp đồ vật', desc: 'Chọn 3 đồ vật phù hợp với bức tranh', icon: '🧹', ready: true },
+    { id: 'sharp-eyes', title: '5. Ai tinh mắt hơn', desc: 'Đọc tên đồ vật và tìm vật không có trong tranh', icon: '🔎', ready: true },
+    { id: 'right-color', title: '6. Ai chọn đúng màu?', desc: 'Luyện từ chỉ màu sắc qua đồ vật trong tranh', icon: '🎨', ready: true },
     { id: 'vocab-fishing', title: '7. Câu cá từ vựng', desc: 'Câu đúng từ theo hình và gợi ý', icon: '🎣', ready: false },
     { id: 'reading-detective', title: '8. Thám tử đọc hiểu', desc: 'Truy tìm chi tiết trong đoạn đọc', icon: '🕵️', ready: false },
     { id: 'riddle-arena', title: '9. Đấu trường câu đố', desc: 'Giải đố dân gian và IQ ngôn ngữ', icon: '🏆', ready: false },

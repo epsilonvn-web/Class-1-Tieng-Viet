@@ -1502,12 +1502,185 @@ function startTopicQuiz(topicNum, topicName, questions, subLabel) {
     loadQuestion();
 }
 
+
+// ==========================================
+// CHỦ ĐỀ 3: XƯỞNG GHÉP TIẾNG - GIAO DIỆN RIÊNG
+// ==========================================
+function ensureTopic3FusionStyles() {
+    if (document.getElementById('topic3-fusion-style')) return;
+    const style = document.createElement('style');
+    style.id = 'topic3-fusion-style';
+    style.textContent = `
+        @keyframes t3PieceInLeft {
+            from { transform: translateX(-36px) scale(.92); opacity:.15; }
+            to { transform: translateX(0) scale(1); opacity:1; }
+        }
+        @keyframes t3PieceInRight {
+            from { transform: translateX(36px) scale(.92); opacity:.15; }
+            to { transform: translateX(0) scale(1); opacity:1; }
+        }
+        @keyframes t3ResultPop {
+            0% { transform: scale(.45); opacity:0; }
+            70% { transform: scale(1.12); opacity:1; }
+            100% { transform: scale(1); opacity:1; }
+        }
+        .t3-piece-left { animation:t3PieceInLeft .42s ease both; }
+        .t3-piece-right { animation:t3PieceInRight .42s ease both; }
+        .t3-result-pop { animation:t3ResultPop .42s ease both; }
+    `;
+    document.head.appendChild(style);
+}
+
+function getTopic3FusionMeta(q) {
+    const tags = Array.isArray(q?.tags) ? q.tags : [];
+    let level = 0;
+    if (tags.includes('cap1_ghep_am_nguyen_am')) level = 1;
+    else if (tags.includes('cap2_them_thanh')) level = 2;
+    else if (tags.includes('cap3_am_dau_van')) level = 3;
+    else if (tags.includes('cap4_tieng_hoan_chinh')) level = 4;
+    if (!level) return null;
+
+    const quoted = [...String(q.question_text || '').matchAll(/'([^']+)'/g)].map(m => m[1]);
+    const toneMatch = String(q.question_text || '').match(/thanh\s+([a-zA-ZÀ-ỹ]+)(?:[,.?]|$)/i);
+    const tone = toneMatch ? toneMatch[1].toLowerCase() : '';
+
+    if (level === 1) return {
+        level, label:'Cấp 1 · Ghép âm',
+        instruction:'Ghép âm đầu với nguyên âm',
+        pieces:[quoted[0] || '', quoted[1] || ''],
+        speech:`${quoted[0] || ''}, ghép với ${quoted[1] || ''}, được tiếng gì?`
+    };
+    if (level === 2) return {
+        level, label:'Cấp 2 · Thêm thanh',
+        instruction:'Ghép tiếng trước, rồi thêm thanh',
+        pieces:[quoted[0] || '', tone ? `thanh ${tone}` : 'thanh'],
+        speech:`Tiếng ${quoted[0] || ''}, thêm thanh ${tone || ''}, được tiếng gì?`
+    };
+    if (level === 3) return {
+        level, label:'Cấp 3 · Ghép vần',
+        instruction:'Ghép âm đầu với vần',
+        pieces:[quoted[0] || '', quoted[1] || ''],
+        speech:`${quoted[0] || ''}, ghép với vần ${quoted[1] || ''}, được tiếng gì?`
+    };
+    return {
+        level, label:'Cấp 4 · Tiếng hoàn chỉnh',
+        instruction:'Ghép âm đầu + vần + thanh',
+        pieces:[quoted[0] || '', quoted[1] || '', tone ? `thanh ${tone}` : 'thanh'],
+        speech:`${quoted[0] || ''}, ghép với vần ${quoted[1] || ''}, thêm thanh ${tone || ''}, được tiếng gì?`
+    };
+}
+
+function speakTopic3FusionQuestion() {
+    const q = activeQuestionsList[currentQIndex];
+    const meta = getTopic3FusionMeta(q);
+    if (!meta) return speakCurrentQuestion();
+    speakVietnamese(meta.speech, 0.92);
+}
+
+function checkTopic3FusionAnswer(selectedOpt) {
+    const q = activeQuestionsList[currentQIndex];
+    const isCorrect = selectedOpt === q.answer;
+
+    if (isCorrect) {
+        const result = document.getElementById('topic3-fusion-result');
+        const arrow = document.getElementById('topic3-fusion-arrow');
+        if (result) {
+            result.textContent = q.answer;
+            result.className = 't3-result-pop min-w-[92px] px-5 py-3 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white text-3xl md:text-4xl font-black shadow-lg border-2 border-emerald-300';
+        }
+        if (arrow) arrow.textContent = '→';
+    }
+
+    checkAnswer(selectedOpt);
+}
+
+function renderTopic3FusionQuestion(q) {
+    ensureTopic3FusionStyles();
+    const meta = getTopic3FusionMeta(q);
+    if (!meta) return false;
+
+    const palette = [
+        ['from-pink-100','to-rose-100','border-pink-300','text-rose-700'],
+        ['from-sky-100','to-cyan-100','border-sky-300','text-sky-700'],
+        ['from-violet-100','to-fuchsia-100','border-violet-300','text-violet-700'],
+        ['from-amber-100','to-orange-100','border-amber-300','text-amber-700']
+    ];
+
+    const piecesHtml = meta.pieces.map((piece, idx) => {
+        const p = palette[idx % palette.length];
+        const anim = idx === 0 ? 't3-piece-left' : 't3-piece-right';
+        return `
+            ${idx > 0 ? `<span class="text-3xl md:text-4xl font-black text-pink-400 select-none">+</span>` : ''}
+            <div class="${anim} min-w-[82px] md:min-w-[104px] px-5 py-3 md:py-4 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-3xl md:text-4xl font-black shadow-sm text-center">
+                ${escapeHtml(piece)}
+            </div>`;
+    }).join('');
+
+    const optionsHtml = q.options.map((opt, idx) => `
+        <button
+            data-opt="${escapeHtml(opt)}"
+            onclick="checkTopic3FusionAnswer('${String(opt).replace(/'/g, "\\'")}')"
+            class="option-btn min-h-[62px] px-4 py-2.5 bg-pink-50/40 hover:bg-pink-100/70 border-2 border-pink-200 rounded-2xl font-black text-gray-800 text-center transition-all text-xl md:text-2xl shadow-xs pastel-btn">
+            ${escapeHtml(opt)}
+        </button>
+    `).join('');
+
+    document.getElementById('question-box').innerHTML = `
+        <div class="w-full max-w-4xl flex flex-col items-center">
+            <div class="mb-2 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-700 font-black text-xs md:text-sm">
+                🧩 ${escapeHtml(meta.label)}
+            </div>
+
+            <div class="text-center mb-3">
+                <div class="text-sm md:text-base font-black text-slate-700">${escapeHtml(meta.instruction)}</div>
+                <div class="text-xs md:text-sm text-slate-400 font-bold mt-0.5">Bé đọc từng mảnh rồi ghép lại nhé!</div>
+            </div>
+
+            <div class="w-full rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-white via-pink-50/40 to-purple-50/50 p-5 md:p-7 shadow-sm">
+                <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+                    ${piecesHtml}
+                    <span id="topic3-fusion-arrow" class="text-3xl md:text-4xl font-black text-emerald-500 select-none">→</span>
+                    <div id="topic3-fusion-result" class="min-w-[92px] px-5 py-3 rounded-2xl bg-white border-2 border-dashed border-emerald-300 text-emerald-400 text-3xl md:text-4xl font-black shadow-inner text-center">?</div>
+                </div>
+
+                <div class="flex justify-center mt-4">
+                    <button onclick="speakTopic3FusionQuestion()" class="px-4 py-2 rounded-2xl bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-700 text-xs md:text-sm font-black pastel-btn shadow-sm">
+                        <i class="fa-solid fa-volume-high mr-1.5"></i> Nghe cách ghép
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-3 text-xs md:text-sm font-black text-pink-600">Bé chọn tiếng được ghép đúng:</div>
+
+            <div class="w-full max-w-3xl grid grid-cols-2 gap-2.5 mt-2">
+                ${optionsHtml}
+            </div>
+        </div>
+    `;
+
+    restoreQuestionState(q);
+    updateNavButtons();
+    updateQuizPalletUI();
+
+    if (autoSpeechEnabled) setTimeout(speakTopic3FusionQuestion, 120);
+    return true;
+}
+
 function loadQuestion() {
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
     if (!q) return;
 
     const isEvaluationMode = !!activeExamContext || !!activeRoadmapContext;
+
+    // Topic 3 ở chế độ luyện tập dùng renderer tương tác riêng.
+    // Tiến trình tuần / đề thi vẫn dùng renderer chuẩn để giữ nguyên cơ chế chấm điểm.
+    if (!isEvaluationMode && Number(activeTopicId) === 3 && getTopic3FusionMeta(q)) {
+        const stepEl = document.getElementById('practice-step-text');
+        if (stepEl) stepEl.textContent = `Câu ${currentQIndex + 1} / ${activeQuestionsList.length}`;
+        renderTopic3FusionQuestion(q);
+        return;
+    }
 
     if (isEvaluationMode) {
         document.getElementById('q-badge-index').textContent = `CÂU ${currentQIndex + 1} / ${activeQuestionsList.length}`;

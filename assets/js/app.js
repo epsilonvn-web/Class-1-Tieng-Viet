@@ -1540,33 +1540,75 @@ function getTopic3FusionMeta(q) {
     else if (tags.includes('cap4_tieng_hoan_chinh')) level = 4;
     if (!level) return null;
 
-    const quoted = [...String(q.question_text || '').matchAll(/'([^']+)'/g)].map(m => m[1]);
-    const toneMatch = String(q.question_text || '').match(/thanh\s+([a-zA-ZÀ-ỹ]+)(?:[,.?]|$)/i);
+    const text = String(q.question_text || '');
+    const quoted = [...text.matchAll(/'([^']+)'/g)].map(m => m[1]);
+    const toneMatch = text.match(/thanh\s+([a-zA-ZÀ-ỹ]+)(?:[,.?]|$)/i);
     const tone = toneMatch ? toneMatch[1].toLowerCase() : '';
 
-    if (level === 1) return {
-        level, label:'Cấp 1 · Ghép âm',
-        instruction:'Ghép âm đầu với nguyên âm',
-        pieces:[quoted[0] || '', quoted[1] || ''],
-        speech:`${quoted[0] || ''}, ghép với ${quoted[1] || ''}, được tiếng gì?`
-    };
-    if (level === 2) return {
-        level, label:'Cấp 2 · Thêm thanh',
-        instruction:'Ghép tiếng trước, rồi thêm thanh',
-        pieces:[quoted[0] || '', tone ? `thanh ${tone}` : 'thanh'],
-        speech:`Tiếng ${quoted[0] || ''}, thêm thanh ${tone || ''}, được tiếng gì?`
-    };
-    if (level === 3) return {
-        level, label:'Cấp 3 · Ghép vần',
-        instruction:'Ghép âm đầu với vần',
-        pieces:[quoted[0] || '', quoted[1] || ''],
-        speech:`${quoted[0] || ''}, ghép với vần ${quoted[1] || ''}, được tiếng gì?`
-    };
+    const onsetMatch =
+        text.match(/âm đầu\s+'([^']+)'/i) ||
+        text.match(/ghép với\s+'([^']+)'\s*thì/i) ||
+        text.match(/một âm đầu.*?ghép với\s+'([^']+)'/i);
+
+    const vowelMatch = text.match(/nguyên âm\s+'([^']+)'/i);
+    const rimeMatch = text.match(/vần\s+'([^']+)'/i);
+    const baseMatch = text.match(/tiếng\s+'([^']+)'/i);
+
+    if (level === 1) {
+        const onset = onsetMatch?.[1] || quoted[0] || '';
+        const vowel = vowelMatch?.[1] || quoted[1] || '';
+        return {
+            level, label:'Cấp 1 · Ghép âm',
+            instruction:'Ghép âm đầu với nguyên âm',
+            pieces:[onset, vowel],
+            speech:`${onset}, ghép với ${vowel}, được tiếng gì?`
+        };
+    }
+
+    if (level === 2) {
+        const base = baseMatch?.[1] || quoted[0] || '';
+        return {
+            level, label:'Cấp 2 · Thêm thanh',
+            instruction:'Ghép tiếng trước, rồi thêm thanh',
+            pieces:[base, tone ? `thanh ${tone}` : 'thanh'],
+            speech:`Tiếng ${base}, thêm thanh ${tone || ''}, được tiếng gì?`
+        };
+    }
+
+    if (level === 3) {
+        let onset = '';
+        let rime = '';
+
+        if (onsetMatch && rimeMatch) {
+            onset = onsetMatch[1];
+            rime = rimeMatch[1];
+        } else if (/Vần\s+'[^']+'.*ghép với\s+'[^']+'/i.test(text)) {
+            // Mẫu: "Vần 'ao' đang chờ một âm đầu. Ghép với 'c'..."
+            const m = text.match(/Vần\s+'([^']+)'.*ghép với\s+'([^']+)'/i);
+            rime = m?.[1] || '';
+            onset = m?.[2] || '';
+        } else {
+            // Các mẫu còn lại được sinh theo thứ tự âm đầu rồi vần.
+            onset = quoted[0] || '';
+            rime = quoted[1] || '';
+        }
+
+        return {
+            level, label:'Cấp 3 · Ghép vần',
+            instruction:'Ghép âm đầu với vần',
+            pieces:[onset, rime],
+            speech:`${onset}, ghép với vần ${rime}, được tiếng gì?`
+        };
+    }
+
+    let onset = onsetMatch?.[1] || quoted[0] || '';
+    let rime = rimeMatch?.[1] || quoted[1] || '';
+
     return {
         level, label:'Cấp 4 · Tiếng hoàn chỉnh',
         instruction:'Ghép âm đầu + vần + thanh',
-        pieces:[quoted[0] || '', quoted[1] || '', tone ? `thanh ${tone}` : 'thanh'],
-        speech:`${quoted[0] || ''}, ghép với vần ${quoted[1] || ''}, thêm thanh ${tone || ''}, được tiếng gì?`
+        pieces:[onset, rime, tone ? `thanh ${tone}` : 'thanh'],
+        speech:`${onset}, ghép với vần ${rime}, thêm thanh ${tone || ''}, được tiếng gì?`
     };
 }
 
@@ -1611,7 +1653,7 @@ function renderTopic3FusionQuestion(q) {
         const anim = idx === 0 ? 't3-piece-left' : 't3-piece-right';
         return `
             ${idx > 0 ? `<span class="text-3xl md:text-4xl font-black text-pink-400 select-none">+</span>` : ''}
-            <div class="${anim} min-w-[82px] md:min-w-[104px] px-5 py-3 md:py-4 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-3xl md:text-4xl font-black shadow-sm text-center">
+            <div class="${anim} ${meta.level === 2 && idx === 1 ? 'min-w-[150px] md:min-w-[190px] px-7 md:px-9' : 'min-w-[82px] md:min-w-[104px] px-5'} py-3 md:py-4 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-3xl md:text-4xl font-black shadow-sm text-center whitespace-nowrap">
                 ${escapeHtml(piece)}
             </div>`;
     }).join('');

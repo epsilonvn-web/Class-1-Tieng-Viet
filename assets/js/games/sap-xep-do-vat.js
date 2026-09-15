@@ -29,38 +29,38 @@ const SX_SCENES = [
   { id:'lop_hoc', label:'Lớp học', image:'assets/images/lop_hoc.jpg', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
   { id:'san_choi', label:'Sân chơi', image:'assets/images/san_choi.jpg', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
   { id:'vuon_nha', label:'Vườn nhà', image:'assets/images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] },
-{
-    id:'thu_vien', name:'Thư viện', image:'assets/images/thu_vien.jpg',
-    correct:['giá sách','bàn đọc sách','ghế ngồi'], wrong:'máy tính'
-  },
-  {
-    id:'san_truong', name:'Sân trường', image:'assets/images/san_truong.jpg',
-    correct:['cột cờ','cầu trượt','xích đu'], wrong:'ghế đá'
-  },
-  {
-    id:'goc_do_choi', name:'Góc đồ chơi', image:'assets/images/goc_do_choi.jpg',
-    correct:['gấu bông','ô tô đồ chơi','khối xếp hình'], wrong:'búp bê'
-  },
-  {
-    id:'cua_hang_tap_hoa', name:'Cửa hàng tạp hóa', image:'assets/images/cua_hang_tap_hoa.jpg',
-    correct:['chai nước','quả táo','quả chuối'], wrong:'ổ bánh mì'
-  },
-  {
-    id:'phong_y_te', name:'Phòng y tế', image:'assets/images/phong_y_te.jpg',
-    correct:['giường bệnh','hộp thuốc','ghế đẩu'], wrong:'ống nghe'
-  },
-  {
-    id:'gara_xe', name:'Ga-ra xe', image:'assets/images/gara_xe.jpg',
-    correct:['ô tô','lốp xe','dụng cụ sửa xe'], wrong:'xe máy'
-  },
-  {
-    id:'chuong_trai', name:'Chuồng trại', image:'assets/images/chuong_trai.jpg',
-    correct:['con gà','con bò','con cừu'], wrong:'con lợn'
-  },
-  {
-    id:'cong_vien', name:'Công viên', image:'assets/images/cong_vien.jpg',
-    correct:['ghế đá','bông hoa','lối đi'], wrong:'đài phun nước'
-  }
+
+  { id:'thu_vien', label:'Thư viện', image:'assets/images/thu_vien.jpg', emoji:'📚',
+    good:['giá sách','quyển sách','bàn đọc sách','ghế ngồi','đệm ngồi','cửa sổ'],
+    odd:['máy tính','đèn bàn','quả địa cầu','bếp ga'] },
+
+  { id:'san_truong', label:'Sân trường', image:'assets/images/san_truong.jpg', emoji:'🏫',
+    good:['cột cờ','cầu trượt','xích đu','cây xanh','bãi cỏ','trường học'],
+    odd:['ghế đá','quả bóng','xe đạp','bồn tắm'] },
+
+  { id:'goc_do_choi', label:'Góc đồ chơi', image:'assets/images/goc_do_choi.jpg', emoji:'🧸',
+    good:['gấu bông','ô tô đồ chơi','khối xếp hình','xe tải đồ chơi','khủng long đồ chơi','hộp đồ chơi'],
+    odd:['búp bê','máy bay đồ chơi','quả bóng','nồi cơm điện'] },
+
+  { id:'cua_hang_tap_hoa', label:'Cửa hàng tạp hóa', image:'assets/images/cua_hang_tap_hoa.jpg', emoji:'🛒',
+    good:['chai nước','quả táo','quả chuối','chùm nho','gói bánh','hộp sữa'],
+    odd:['ổ bánh mì','quả trứng','quả dưa hấu','gối ngủ'] },
+
+  { id:'phong_y_te', label:'Phòng y tế', image:'assets/images/phong_y_te.jpg', emoji:'🏥',
+    good:['giường bệnh','gối trắng','hộp thuốc','ghế đẩu','bàn nhỏ','chậu cây'],
+    odd:['ống nghe','nhiệt kế','băng gạc','chảo'] },
+
+  { id:'gara_xe', label:'Ga-ra xe', image:'assets/images/gara_xe.jpg', emoji:'🚗',
+    good:['ô tô','lốp xe','dụng cụ sửa xe','cờ lê','bánh xe','tủ dụng cụ'],
+    odd:['xe máy','mũ bảo hiểm','bơm xe đạp','giường ngủ'] },
+
+  { id:'chuong_trai', label:'Chuồng trại', image:'assets/images/chuong_trai.jpg', emoji:'🐄',
+    good:['con gà','con bò','con cừu','đống rơm','hàng rào','chuồng đỏ'],
+    odd:['con lợn','con cá','ghế sofa','tivi'] },
+
+  { id:'cong_vien', label:'Công viên', image:'assets/images/cong_vien.jpg', emoji:'🌳',
+    good:['ghế đá','bông hoa','bãi cỏ','lối đi','cây xanh','mặt trời'],
+    odd:['xích đu','cầu trượt','thùng rác','tủ lạnh'] }
 ];
 
 const SX_ITEM_EMOJI = {
@@ -94,6 +94,15 @@ const SX_ITEM_EMOJI = {
   'con lợn':'🐷',
   'con cá':'🐟',
   'thùng rác':'🗑️',
+
+  'giá sách':'📚','ghế ngồi':'🪑','đệm ngồi':'🟣','cửa sổ':'🪟','máy tính':'💻','quả địa cầu':'🌍',
+  'trường học':'🏫','bãi cỏ':'🌱','cây xanh':'🌳','xe đạp':'🚲',
+  'xe tải đồ chơi':'🚚','khủng long đồ chơi':'🦖','hộp đồ chơi':'🧺','máy bay đồ chơi':'✈️',
+  'quả táo':'🍎','quả chuối':'🍌','chùm nho':'🍇','ổ bánh mì':'🥖','quả trứng':'🥚','quả dưa hấu':'🍉',
+  'gối trắng':'🛏️','ghế đẩu':'🪑','bàn nhỏ':'🪑','chậu cây':'🪴','nhiệt kế':'🌡️','băng gạc':'🩹',
+  'cờ lê':'🔧','bánh xe':'🛞','tủ dụng cụ':'🧰','mũ bảo hiểm':'⛑️','bơm xe đạp':'🚲',
+  'con cừu':'🐑','đống rơm':'🌾','chuồng đỏ':'🏠','hàng rào':'🚧',
+  'bãi cỏ':'🌱','lối đi':'🛤️','mặt trời':'☀️',
 };
 
 function sxShuffle(arr){
@@ -150,7 +159,13 @@ function sxCorrectSound(){ sxTone(660,.12,'sine',.06,0); sxTone(880,.14,'sine',.
 function sxWrongSound(){ sxTone(180,.09,'square',.045,0); sxTone(150,.09,'square',.04,.12); }
 
 function sxPickRound(){
-  const scene=SX_SCENES[Math.floor(Math.random()*SX_SCENES.length)];
+  const validScenes = SX_SCENES.filter(scene =>
+    scene &&
+    Array.isArray(scene.good) && scene.good.length >= 3 &&
+    Array.isArray(scene.odd) && scene.odd.length >= 1
+  );
+  if(!validScenes.length) throw new Error('Không có dữ liệu cảnh hợp lệ cho game Sắp xếp đồ vật.');
+  const scene=validScenes[Math.floor(Math.random()*validScenes.length)];
   const good=sxShuffle(scene.good).slice(0,3);
   const odd=scene.odd[Math.floor(Math.random()*scene.odd.length)];
   return {scene,options:sxShuffle([...good,odd]),odd};

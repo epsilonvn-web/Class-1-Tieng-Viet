@@ -85,6 +85,10 @@ function petEnsureStyles() {
     @keyframes petPop{0%{transform:scale(.55);opacity:0}70%{transform:scale(1.1);opacity:1}100%{transform:scale(1);opacity:1}}
     @keyframes petWrong{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
     @keyframes petCombo{0%{transform:translate(-50%,-20%) scale(.4);opacity:0}35%{transform:translate(-50%,-50%) scale(1.18);opacity:1}75%{transform:translate(-50%,-70%) scale(1);opacity:1}100%{transform:translate(-50%,-95%) scale(.85);opacity:0}}
+    @keyframes petBirdFly{0%{transform:translateX(-14vw) translateY(0) scale(.9);opacity:0}8%{opacity:.75}45%{transform:translateX(42vw) translateY(-12px) scale(1)}70%{transform:translateX(70vw) translateY(8px) scale(.92)}100%{transform:translateX(112vw) translateY(-8px) scale(.86);opacity:0}}
+    @keyframes petLeafFall{0%{transform:translate3d(0,-55px,0) rotate(0deg);opacity:0}10%{opacity:.8}45%{transform:translate3d(28px,180px,0) rotate(170deg)}75%{transform:translate3d(-14px,330px,0) rotate(290deg)}100%{transform:translate3d(18px,540px,0) rotate(430deg);opacity:0}}
+    @keyframes petRunIn{0%{transform:translateX(-95px) scale(.82) rotate(-4deg);opacity:0}48%{transform:translateX(16px) scale(1.05) rotate(3deg);opacity:1}72%{transform:translateX(-7px) scale(.98) rotate(-2deg)}100%{transform:translateX(0) scale(1) rotate(0);opacity:1}}
+    @keyframes petCelebrateHop{0%{transform:translateY(0) scale(1)}30%{transform:translateY(-18px) scale(1.06) rotate(-3deg)}55%{transform:translateY(0) scale(1.02) rotate(3deg)}75%{transform:translateY(-9px) scale(1.05)}100%{transform:translateY(0) scale(1)}}
     .pet-stage{position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff 0%,#fdf2f8 48%,#ecfdf5 100%)}
     .pet-animal-wrap{position:relative;min-height:210px;display:flex;align-items:center;justify-content:center;animation:petFloat 2.4s ease-in-out infinite}
     .pet-animal-image{width:190px;height:190px;object-fit:contain;border-radius:28px;background:rgba(255,255,255,.95);padding:8px;border:3px solid #fbcfe8;box-shadow:0 16px 34px rgba(236,72,153,.16);user-select:none;pointer-events:none}
@@ -100,7 +104,10 @@ function petEnsureStyles() {
     .pet-sparkle{position:absolute;pointer-events:none;animation:petSparkle 2.1s ease-in-out infinite}
     .pet-cloud{position:absolute;opacity:.48;pointer-events:none;filter:drop-shadow(0 6px 9px rgba(148,163,184,.12))}
     .pet-cloud-a{animation:petCloudA 7s ease-in-out infinite}.pet-cloud-b{animation:petCloudB 8.2s ease-in-out infinite}
-    .pet-round-pop{animation:petPop .34s ease-out}
+    .pet-round-pop{animation:petRunIn .52s cubic-bezier(.2,.8,.2,1)}
+    .pet-celebrate-hop{animation:petCelebrateHop .72s ease-out 1!important}
+    .pet-bird{position:absolute;left:0;pointer-events:none;z-index:1;opacity:.72;animation:petBirdFly 12s linear infinite;filter:drop-shadow(0 3px 4px rgba(15,23,42,.08))}
+    .pet-leaf{position:absolute;top:-45px;pointer-events:none;z-index:1;opacity:.72;animation:petLeafFall 8s linear infinite;filter:drop-shadow(0 3px 3px rgba(15,23,42,.06))}
     @media(max-width:640px){.pet-animal-wrap{min-height:170px}.pet-animal-image{width:150px;height:150px}.pet-animal-fallback{font-size:92px}.pet-food-btn{min-height:76px!important}}
   `;
   document.head.appendChild(style);
@@ -209,6 +216,11 @@ function startPetFeedingGame() {
       <div class="pet-cloud pet-cloud-b text-4xl" style="right:8%;top:15%">☁️</div>
       <div class="pet-sparkle text-xl" style="left:18%;top:34%">✨</div>
       <div class="pet-sparkle text-lg" style="right:19%;top:31%;animation-delay:.8s">⭐</div>
+      <div class="pet-bird text-2xl" style="top:18%;animation-delay:-2s">🐦</div>
+      <div class="pet-bird text-xl" style="top:25%;animation-duration:15s;animation-delay:-9s">🕊️</div>
+      <div class="pet-leaf text-xl" style="left:10%;animation-delay:-1s">🍂</div>
+      <div class="pet-leaf text-lg" style="left:28%;animation-duration:10s;animation-delay:-6s">🍁</div>
+      <div class="pet-leaf text-xl" style="right:18%;animation-duration:9s;animation-delay:-4s">🍂</div>
       <div class="relative z-10">
         <div class="flex items-center justify-between gap-2 flex-wrap mb-2">
           <div class="flex gap-2 flex-wrap">
@@ -280,13 +292,13 @@ function petChooseFood(btn, word) {
   petCorrectSound();
   petAnimateFoodToAnimal(btn);
   const animal = document.getElementById('pet-animal-wrap');
-  setTimeout(() => { if (animal) { animal.classList.remove('pet-animal-happy'); void animal.offsetWidth; animal.classList.add('pet-animal-happy'); } }, 280);
+  setTimeout(() => { if (animal) { animal.classList.remove('pet-animal-happy'); void animal.offsetWidth; animal.classList.add('pet-animal-happy','pet-celebrate-hop'); } }, 280);
   petShowHearts();
   if (typeof confetti === 'function') confetti({ particleCount: petStreak >= 3 ? 70 : 38, spread: petStreak >= 3 ? 75 : 55, origin: { y: .52 } });
   if (petStreak >= 2) petShowCombo();
   const feedback = document.getElementById('pet-feedback');
   if (feedback) feedback.textContent = `🎉 Chính xác! ${petTarget.label} rất thích ${word}!`;
-  setTimeout(() => { petState = 'playing'; petNextRound(); }, 1050);
+  setTimeout(() => { petState = 'playing'; petNextRound(); }, 1180);
 }
 
 function petAnimateFoodToAnimal(btn) {

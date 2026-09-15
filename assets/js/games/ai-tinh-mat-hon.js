@@ -65,6 +65,38 @@ const SHARP_EYES_SCENES = [
     id:'vuon_nha', name:'Vườn nhà', image:'assets/images/vuon_nha.jpg',
     present:['cây xanh','bông hoa','hàng rào'],
     absent:'cái giường'
+  },
+{
+    id:'thu_vien', name:'Thư viện', image:'assets/images/thu_vien.jpg',
+    present:['giá sách','bàn đọc sách','ghế ngồi'], absent:'máy tính'
+  },
+  {
+    id:'san_truong', name:'Sân trường', image:'assets/images/san_truong.jpg',
+    present:['cột cờ','cầu trượt','xích đu'], absent:'ghế đá'
+  },
+  {
+    id:'goc_do_choi', name:'Góc đồ chơi', image:'assets/images/goc_do_choi.jpg',
+    present:['gấu bông','ô tô đồ chơi','khối xếp hình'], absent:'búp bê'
+  },
+  {
+    id:'cua_hang_tap_hoa', name:'Cửa hàng tạp hóa', image:'assets/images/cua_hang_tap_hoa.jpg',
+    present:['chai nước','quả táo','quả chuối'], absent:'ổ bánh mì'
+  },
+  {
+    id:'phong_y_te', name:'Phòng y tế', image:'assets/images/phong_y_te.jpg',
+    present:['giường bệnh','hộp thuốc','ghế đẩu'], absent:'ống nghe'
+  },
+  {
+    id:'gara_xe', name:'Ga-ra xe', image:'assets/images/gara_xe.jpg',
+    present:['ô tô','lốp xe','dụng cụ sửa xe'], absent:'xe máy'
+  },
+  {
+    id:'chuong_trai', name:'Chuồng trại', image:'assets/images/chuong_trai.jpg',
+    present:['con gà','con bò','con cừu'], absent:'con lợn'
+  },
+  {
+    id:'cong_vien', name:'Công viên', image:'assets/images/cong_vien.jpg',
+    present:['ghế đá','bông hoa','lối đi'], absent:'đài phun nước'
   }
 ];
 

@@ -28,7 +28,39 @@ const SX_SCENES = [
   { id:'ban_hoc', label:'Bàn học', image:'assets/images/ban_hoc.jpg', emoji:'✏️', good:['bút chì','thước kẻ','quyển vở','cục tẩy','hộp bút','đèn học'], odd:['chảo','gối','bàn chải đánh răng','nồi'] },
   { id:'lop_hoc', label:'Lớp học', image:'assets/images/lop_hoc.jpg', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
   { id:'san_choi', label:'Sân chơi', image:'assets/images/san_choi.jpg', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
-  { id:'vuon_nha', label:'Vườn nhà', image:'assets/images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] }
+  { id:'vuon_nha', label:'Vườn nhà', image:'assets/images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] },
+{
+    id:'thu_vien', name:'Thư viện', image:'assets/images/thu_vien.jpg',
+    correct:['giá sách','bàn đọc sách','ghế ngồi'], wrong:'máy tính'
+  },
+  {
+    id:'san_truong', name:'Sân trường', image:'assets/images/san_truong.jpg',
+    correct:['cột cờ','cầu trượt','xích đu'], wrong:'ghế đá'
+  },
+  {
+    id:'goc_do_choi', name:'Góc đồ chơi', image:'assets/images/goc_do_choi.jpg',
+    correct:['gấu bông','ô tô đồ chơi','khối xếp hình'], wrong:'búp bê'
+  },
+  {
+    id:'cua_hang_tap_hoa', name:'Cửa hàng tạp hóa', image:'assets/images/cua_hang_tap_hoa.jpg',
+    correct:['chai nước','quả táo','quả chuối'], wrong:'ổ bánh mì'
+  },
+  {
+    id:'phong_y_te', name:'Phòng y tế', image:'assets/images/phong_y_te.jpg',
+    correct:['giường bệnh','hộp thuốc','ghế đẩu'], wrong:'ống nghe'
+  },
+  {
+    id:'gara_xe', name:'Ga-ra xe', image:'assets/images/gara_xe.jpg',
+    correct:['ô tô','lốp xe','dụng cụ sửa xe'], wrong:'xe máy'
+  },
+  {
+    id:'chuong_trai', name:'Chuồng trại', image:'assets/images/chuong_trai.jpg',
+    correct:['con gà','con bò','con cừu'], wrong:'con lợn'
+  },
+  {
+    id:'cong_vien', name:'Công viên', image:'assets/images/cong_vien.jpg',
+    correct:['ghế đá','bông hoa','lối đi'], wrong:'đài phun nước'
+  }
 ];
 
 const SX_ITEM_EMOJI = {
@@ -40,6 +72,28 @@ const SX_ITEM_EMOJI = {
   'đĩa':'🍽️','thìa':'🥄','đũa':'🥢','cốc nước':'🥛','khăn ăn':'🧻','bút chì':'✏️','thước kẻ':'📏','cục tẩy':'🧽','đèn học':'💡',
   'bảng':'🟩','ghế':'🪑','sách':'📚','bút':'🖊️','thước':'📏','bồn tắm':'🛁','cầu trượt':'🛝','xích đu':'🎠','quả bóng':'⚽','bập bênh':'🎢','dây nhảy':'➰','xe chòi chân':'🛴',
   'cây xanh':'🌳','chậu hoa':'🪴','bình tưới':'🚿','xẻng nhỏ':'🛠️','ghế đá':'🪑','hàng rào':'🚧','tivi':'📺'
+
+  'bàn đọc sách':'📖',
+  'cột cờ':'🚩',
+  'ghế đá':'🪑',
+  'quả bóng':'⚽',
+  'búp bê':'🧸',
+  'ô tô đồ chơi':'🚗',
+  'khối xếp hình':'🧱',
+  'chai nước':'🧴',
+  'gói bánh':'🍪',
+  'hộp sữa':'🥛',
+  'giường bệnh':'🛏️',
+  'hộp thuốc':'💊',
+  'ống nghe':'🩺',
+  'ô tô':'🚗',
+  'xe máy':'🏍️',
+  'mũ bảo hiểm':'⛑️',
+  'con gà':'🐔',
+  'con bò':'🐄',
+  'con lợn':'🐷',
+  'con cá':'🐟',
+  'thùng rác':'🗑️',
 };
 
 function sxShuffle(arr){

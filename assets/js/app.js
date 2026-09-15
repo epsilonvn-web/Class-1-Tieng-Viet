@@ -2865,7 +2865,7 @@ function ensureMiniGameThemeStyles() {
 const MINIGAME_LIST = [
     { id: 'spelling-knight', title: '1. Hiệp sĩ Chính tả', desc: 'Săn quái chữ - chọn đúng âm/chữ còn thiếu', icon: '⚔️', ready: true },
     { id: 'picture-word-catch', title: '2. Nhìn hình bắt chữ', desc: 'Nhìn emoji, bắt đúng từ trước khi chạm tường', icon: '👀', ready: true },
-    { id: 'letter-race', title: '3. Đường đua chữ cái', desc: 'Nhận diện chữ và âm để tăng tốc', icon: '🏎️', ready: false },
+    { id: 'pet-feeding', title: '3. Nuôi thú cưng', desc: 'Chọn đúng món ăn yêu thích cho từng con vật', icon: '🐾', ready: true },
     { id: 'word-garden', title: '4. Khu vườn từ ngữ', desc: 'Thu hoạch đúng từ theo chủ đề', icon: '🌳', ready: false },
     { id: 'sentence-train-tv', title: '5. Đoàn tàu ghép câu', desc: 'Xếp từ thành câu hoàn chỉnh', icon: '🚂', ready: false },
     { id: 'sound-balloons', title: '6. Bóng bay thanh điệu', desc: 'Chạm đúng thanh điệu trước khi bóng bay mất', icon: '🎈', ready: false },
@@ -2908,7 +2908,8 @@ function openMiniGameHub() {
 
 const GAME_SCRIPT_MAP = {
     'spelling-knight': 'assets/js/games/hiep-si-chinh-ta.js?v=tv1mg1',
-    'picture-word-catch': 'assets/js/games/nhin-hinh-bat-chu.js?v=tv1mg2'
+    'picture-word-catch': 'assets/js/games/nhin-hinh-bat-chu.js?v=tv1mg2',
+    'pet-feeding': 'assets/js/games/nuoi-thu-cung.js?v=tv1mg3'
 };
 const loadedGameScripts = {};
 
@@ -2964,6 +2965,8 @@ async function openGamePlay(gameId) {
         startSpellingKnightGame();
     } else if (gameId === 'picture-word-catch' && typeof startPictureWordCatchGame === 'function') {
         startPictureWordCatchGame();
+    } else if (gameId === 'pet-feeding' && typeof startPetFeedingGame === 'function') {
+        startPetFeedingGame();
     }
 }
 

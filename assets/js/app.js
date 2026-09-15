@@ -2867,7 +2867,7 @@ const MINIGAME_LIST = [
     { id: 'picture-word-catch', title: '2. Nhìn hình bắt chữ', desc: 'Nhìn emoji, bắt đúng từ trước khi chạm tường', icon: '👀', ready: true },
     { id: 'pet-feeding', title: '3. Nuôi thú cưng', desc: 'Chọn đúng món ăn yêu thích cho từng con vật', icon: '🐾', ready: true },
     { id: 'object-sorting', title: '4. Sắp xếp đồ vật', desc: 'Tìm 1 đồ vật lạc chỗ trong 4 lựa chọn', icon: '🧹', ready: true },
-    { id: 'sentence-train-tv', title: '5. Đoàn tàu ghép câu', desc: 'Xếp từ thành câu hoàn chỉnh', icon: '🚂', ready: false },
+    { id: 'sharp-eyes', title: '5. Ai tinh mắt hơn', desc: 'Quan sát tranh và tìm đồ vật không xuất hiện', icon: '🔎', ready: true },
     { id: 'sound-balloons', title: '6. Bóng bay thanh điệu', desc: 'Chạm đúng thanh điệu trước khi bóng bay mất', icon: '🎈', ready: false },
     { id: 'vocab-fishing', title: '7. Câu cá từ vựng', desc: 'Câu đúng từ theo hình và gợi ý', icon: '🎣', ready: false },
     { id: 'reading-detective', title: '8. Thám tử đọc hiểu', desc: 'Truy tìm chi tiết trong đoạn đọc', icon: '🕵️', ready: false },
@@ -2910,7 +2910,8 @@ const GAME_SCRIPT_MAP = {
     'spelling-knight': 'assets/js/games/hiep-si-chinh-ta.js?v=tv1mg1',
     'picture-word-catch': 'assets/js/games/nhin-hinh-bat-chu.js?v=tv1mg2',
     'pet-feeding': 'assets/js/games/nuoi-thu-cung.js?v=tv1mg3',
-    'object-sorting': 'assets/js/games/sap-xep-do-vat.js?v=tv1mg4'
+    'object-sorting': 'assets/js/games/sap-xep-do-vat.js?v=tv1mg4',
+    'sharp-eyes': 'assets/js/games/ai-tinh-mat-hon.js?v=tv1mg5'
 };
 const loadedGameScripts = {};
 
@@ -2970,6 +2971,8 @@ async function openGamePlay(gameId) {
         startPetFeedingGame();
     } else if (gameId === 'object-sorting' && typeof startObjectSortingGame === 'function') {
         startObjectSortingGame();
+    } else if (gameId === 'sharp-eyes' && typeof startSharpEyesGame === 'function') {
+        startSharpEyesGame();
     }
 }
 

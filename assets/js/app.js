@@ -1542,7 +1542,7 @@ function getTopic3FusionMeta(q) {
 
     const text = String(q.question_text || '');
     const quoted = [...text.matchAll(/'([^']+)'/g)].map(m => m[1]);
-    const toneMatch = text.match(/thanh\s+([a-zA-ZÀ-ỹ]+)(?:[,.?]|$)/i);
+    const toneMatch = text.match(/\bthanh\s+(sắc|huyền|hỏi|ngã|nặng|ngang)\b/i);
     const tone = toneMatch ? toneMatch[1].toLowerCase() : '';
 
     const onsetMatch =

@@ -17,18 +17,18 @@ let sxCurrentOdd = '';
 let sxAudioCtx = null;
 
 const SX_SCENES = [
-  { id:'phong_khach', label:'Phòng khách', image:'images/phong_khach.jpg', emoji:'🛋️', good:['ghế sofa','tivi','bàn trà','đèn bàn','quạt điện','lọ hoa'], odd:['bàn chải đánh răng','nồi cơm điện','gối ngủ','vòi sen'] },
-  { id:'phong_ngu', label:'Phòng ngủ', image:'images/phong_ngu.jpg', emoji:'🛏️', good:['giường ngủ','gối','chăn','tủ quần áo','đèn ngủ','đồng hồ báo thức'], odd:['chảo','bồn rửa bát','tivi phòng khách','nồi cơm điện'] },
-  { id:'nha_bep', label:'Nhà bếp', image:'images/nha_bep.jpg', emoji:'🍳', good:['nồi','chảo','tủ lạnh','bếp','ấm nước','bát đĩa'], odd:['gối','bàn chải đánh răng','cặp sách','chăn'] },
-  { id:'nha_tam', label:'Nhà tắm', image:'images/nha_tam.jpg', emoji:'🚿', good:['vòi sen','khăn tắm','bàn chải đánh răng','xà phòng','chậu rửa','gương'], odd:['chảo','gối','quyển vở','tủ lạnh'] },
-  { id:'gia_sach', label:'Giá sách', image:'images/gia_sach.jpg', emoji:'📚', good:['quyển sách','truyện tranh','từ điển','hộp bút','sổ tay','đèn đọc sách'], odd:['nồi','dép đi mưa','bàn chải đánh răng','chảo'] },
-  { id:'tu_quan_ao', label:'Tủ quần áo', image:'images/tu_quan_ao.jpg', emoji:'👕', good:['áo','quần','váy','mũ','khăn','tất'], odd:['nồi','bát','bàn chải đánh răng','quyển sách'] },
-  { id:'giuong_ngu', label:'Giường ngủ', image:'images/giuong_ngu.jpg', emoji:'🛏️', good:['gối','chăn','ga giường','gấu bông','đèn ngủ','màn'], odd:['chảo','bát ăn cơm','bàn học','xẻng'] },
-  { id:'ban_an', label:'Bàn ăn', image:'images/ban_an.jpg', emoji:'🍽️', good:['bát','đĩa','thìa','đũa','cốc nước','khăn ăn'], odd:['bút chì','gối','bàn chải đánh răng','cặp sách'] },
-  { id:'ban_hoc', label:'Bàn học', image:'images/ban_hoc.jpg', emoji:'✏️', good:['bút chì','thước kẻ','quyển vở','cục tẩy','hộp bút','đèn học'], odd:['chảo','gối','bàn chải đánh răng','nồi'] },
-  { id:'lop_hoc', label:'Lớp học', image:'images/lop_hoc.jpg', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
-  { id:'san_choi', label:'Sân chơi', image:'images/san_choi.jpg', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
-  { id:'vuon_nha', label:'Vườn nhà', image:'images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] }
+  { id:'phong_khach', label:'Phòng khách', image:'assets/images/phong_khach.jpg', emoji:'🛋️', good:['ghế sofa','tivi','bàn trà','đèn bàn','quạt điện','lọ hoa'], odd:['bàn chải đánh răng','nồi cơm điện','gối ngủ','vòi sen'] },
+  { id:'phong_ngu', label:'Phòng ngủ', image:'assets/images/phong_ngu.jpg', emoji:'🛏️', good:['giường ngủ','gối','chăn','tủ quần áo','đèn ngủ','đồng hồ báo thức'], odd:['chảo','bồn rửa bát','tivi phòng khách','nồi cơm điện'] },
+  { id:'nha_bep', label:'Nhà bếp', image:'assets/images/nha_bep.jpg', emoji:'🍳', good:['nồi','chảo','tủ lạnh','bếp','ấm nước','bát đĩa'], odd:['gối','bàn chải đánh răng','cặp sách','chăn'] },
+  { id:'nha_tam', label:'Nhà tắm', image:'assets/images/nha_tam.jpg', emoji:'🚿', good:['vòi sen','khăn tắm','bàn chải đánh răng','xà phòng','chậu rửa','gương'], odd:['chảo','gối','quyển vở','tủ lạnh'] },
+  { id:'gia_sach', label:'Giá sách', image:'assets/images/gia_sach.jpg', emoji:'📚', good:['quyển sách','truyện tranh','từ điển','hộp bút','sổ tay','đèn đọc sách'], odd:['nồi','dép đi mưa','bàn chải đánh răng','chảo'] },
+  { id:'tu_quan_ao', label:'Tủ quần áo', image:'assets/images/tu_quan_ao.jpg', emoji:'👕', good:['áo','quần','váy','mũ','khăn','tất'], odd:['nồi','bát','bàn chải đánh răng','quyển sách'] },
+  { id:'giuong_ngu', label:'Giường ngủ', image:'assets/images/giuong_ngu.jpg', emoji:'🛏️', good:['gối','chăn','ga giường','gấu bông','đèn ngủ','màn'], odd:['chảo','bát ăn cơm','bàn học','xẻng'] },
+  { id:'ban_an', label:'Bàn ăn', image:'assets/images/ban_an.jpg', emoji:'🍽️', good:['bát','đĩa','thìa','đũa','cốc nước','khăn ăn'], odd:['bút chì','gối','bàn chải đánh răng','cặp sách'] },
+  { id:'ban_hoc', label:'Bàn học', image:'assets/images/ban_hoc.jpg', emoji:'✏️', good:['bút chì','thước kẻ','quyển vở','cục tẩy','hộp bút','đèn học'], odd:['chảo','gối','bàn chải đánh răng','nồi'] },
+  { id:'lop_hoc', label:'Lớp học', image:'assets/images/lop_hoc.jpg', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
+  { id:'san_choi', label:'Sân chơi', image:'assets/images/san_choi.jpg', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
+  { id:'vuon_nha', label:'Vườn nhà', image:'assets/images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] }
 ];
 
 const SX_ITEM_EMOJI = {
@@ -64,9 +64,9 @@ function sxEnsureStyles(){
     .sx-stage{position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff 0%,#fdf2f8 52%,#ecfdf5 100%)}
     .sx-scene-card{position:relative;background:white;border:3px solid #fbcfe8;border-radius:28px;overflow:hidden;box-shadow:0 16px 34px rgba(236,72,153,.14);animation:sxPop .45s ease-out}
     .sx-scene-card.sx-correct{animation:sxGlow .85s ease-out}
-    .sx-scene-img{width:100%;height:280px;object-fit:cover;display:block;background:#fff}
-    .sx-scene-fallback{height:280px;display:flex;align-items:center;justify-content:center;font-size:110px;background:linear-gradient(180deg,#fef3c7,#dbeafe)}
-    .sx-option{transition:transform .14s,box-shadow .14s,background .14s;min-height:78px;user-select:none;touch-action:manipulation}
+    .sx-scene-img{width:100%;height:253px;object-fit:contain;display:block;background:#fff}
+    .sx-scene-fallback{height:253px;display:flex;align-items:center;justify-content:center;font-size:96px;background:linear-gradient(180deg,#fef3c7,#dbeafe)}
+    .sx-option{transition:transform .14s,box-shadow .14s,background .14s;min-height:54px;user-select:none;touch-action:manipulation}
     .sx-option:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 22px rgba(15,23,42,.12)}
     .sx-wrong{animation:sxWrong .32s linear;background:#fee2e2!important;border-color:#fb7185!important;color:#be123c!important}
     .sx-good-picked{animation:sxLiftGood .45s ease-out!important;background:#dcfce7!important;border-color:#22c55e!important;color:#15803d!important;box-shadow:0 0 0 3px rgba(34,197,94,.12),0 10px 22px rgba(34,197,94,.18)!important}
@@ -75,7 +75,7 @@ function sxEnsureStyles(){
     .sx-bird{font-size:30px;opacity:.7;animation:sxBird 11s linear infinite}
     .sx-leaf{top:-45px;font-size:22px;opacity:.7;animation:sxLeaf 8s linear infinite}
     .sx-combo{position:absolute;left:50%;top:44%;z-index:30;font-size:30px;font-weight:1000;color:#f43f5e;text-shadow:0 3px 0 #fff;animation:sxCombo 1s ease-out forwards;pointer-events:none}
-    @media(max-width:640px){.sx-scene-img,.sx-scene-fallback{height:210px}.sx-option{min-height:68px}.sx-stage{padding:10px!important}}
+    @media(max-width:900px){.sx-scene-img,.sx-scene-fallback{height:207px}.sx-option{min-height:50px}.sx-stage{padding:8px!important}}@media(max-width:640px){.sx-scene-img,.sx-scene-fallback{height:184px}.sx-option{min-height:48px}}
   `;
   document.head.appendChild(style);
 }
@@ -107,7 +107,7 @@ function startObjectSortingGame(){
   sxRound=0;sxScore=0;sxStreak=0;sxBestStreak=0;sxLocked=false;sxSelectedGood=new Set();sxCurrentGood=[];sxCurrentOdd='';
   const box=document.getElementById('game-play-container'); if(!box) return;
   box.innerHTML=`
-    <div class="sx-stage rounded-[28px] border-2 border-pink-100 p-3 md:p-4 min-h-[520px]">
+    <div class="sx-stage rounded-[28px] border-2 border-pink-100 p-2.5 md:p-3 min-h-[430px]">
       <div class="sx-cloud" style="top:18px;left:-70px;animation-delay:-5s">☁️</div>
       <div class="sx-cloud" style="top:70px;left:-120px;animation-delay:-11s;font-size:30px">☁️</div>
       <div class="sx-bird" style="top:58px;left:-70px;animation-delay:-3s">🕊️</div>
@@ -135,7 +135,7 @@ function sxNextRound(){
   const area=document.getElementById('sx-round-area'); if(!area) return;
   area.dataset.odd=data.odd;
   area.innerHTML=`
-    <div id="sx-scene-card" class="sx-scene-card mb-3">
+    <div id="sx-scene-card" class="sx-scene-card mb-2">
       <img class="sx-scene-img" src="${data.scene.image}" alt="${data.scene.label}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
       <div class="sx-scene-fallback" style="display:none">${data.scene.emoji}</div>
       <div class="absolute left-3 bottom-3 px-3 py-1.5 rounded-full bg-white/90 border border-pink-200 text-pink-700 font-black text-sm shadow-sm">${data.scene.label}</div>
@@ -145,8 +145,8 @@ function sxNextRound(){
       <p class="text-[11px] md:text-xs font-bold text-slate-400 mt-0.5">Hãy chọn đủ 3 đồ vật phù hợp. Có 1 đồ vật lạc chỗ, bé đừng chọn nhé.</p>
     </div>
     <div id="sx-pick-status" class="text-center text-xs font-black text-emerald-600 mb-2">Đã chọn 0/3 đồ vật đúng</div>
-    <div class="grid grid-cols-2 gap-2.5 md:gap-3">
-      ${data.options.map(word=>`<button class="sx-option p-3 md:p-4 rounded-2xl border-2 border-pink-200 bg-white text-slate-700 font-black text-sm md:text-base flex flex-col items-center justify-center gap-1.5" onclick="sxChooseObject(this,'${word.replace(/'/g,"\\'")}')"><span class="text-3xl md:text-4xl">${SX_ITEM_EMOJI[word]||'📦'}</span><span>${word}</span></button>`).join('')}
+    <div class="grid grid-cols-2 gap-2 md:gap-2.5">
+      ${data.options.map(word=>`<button class="sx-option px-3 py-2 md:px-4 md:py-2.5 rounded-2xl border-2 border-pink-200 bg-white text-slate-700 font-black text-sm md:text-base flex items-center justify-center gap-2.5" onclick="sxChooseObject(this,'${word.replace(/'/g,"\\'")}')"><span class="text-2xl md:text-3xl shrink-0">${SX_ITEM_EMOJI[word]||'📦'}</span><span class="leading-tight">${word}</span></button>`).join('')}
     </div>`;
 
   // Đọc câu hướng dẫn theo đúng bối cảnh của từng bức tranh.

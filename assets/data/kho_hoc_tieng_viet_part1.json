@@ -4123,2110 +4123,4210 @@
     {
       "id": 3,
       "name": "GHÉP ÂM - VẦN",
-      "desc": "Bé tập ghép phụ âm đơn, phụ âm kép với các vần xuôi, vần ngược và vần ghép phức tạp theo 3 cấp độ từ dễ đến nâng cao.",
-      "l_title": "Bài Giảng: Sáng Tạo Ghép Vần Tiếng Việt",
-      "l_content": "Ghép vần giống như bé chơi trò xếp hình lego vậy! Bé chỉ cần đặt Phụ âm đầu cứng cáp đứng trước, rồi ghép với một Vần đứng sau, cuối cùng đặt dấu Thanh phù hợp lên đầu nguyên âm chính là được một tiếng hoàn chỉnh rồi! Ví dụ: phụ âm đầu 'b' ghép với vần xuôi 'an' thành tiếng 'ban', thêm dấu thanh huyền thành 'bàn' học đấy. Hãy cùng Thỏ Hồng rèn luyện phản xạ ghép vần siêu tốc nhé bé yêu!",
-      "l_audio": "Bé yêu ơi, ghép vần là trò chơi vô cùng vui nhộn. Chúng mình cùng lấy phụ âm đầu ghép với nguyên âm và dấu thanh để tạo ra tiếng mới nhé con!",
+      "desc": "Bé luyện ghép tiếng theo 4 cấp độ từ dễ đến khó: ghép âm đầu với nguyên âm, thêm thanh, ghép âm đầu với vần và ghép tiếng hoàn chỉnh.",
+      "l_title": "Xưởng ghép tiếng: Từ âm đơn đến tiếng hoàn chỉnh",
+      "l_content": "Mục 3 được chia thành 4 cấp độ. Cấp 1: ghép âm đầu với nguyên âm để tạo tiếng đơn. Cấp 2: từ tiếng đã ghép, thêm thanh để tạo tiếng mới. Cấp 3: ghép âm đầu với vần. Cấp 4: ghép âm đầu + vần + thanh để tạo tiếng hoàn chỉnh. Bé học từng bước, đọc từng phần rồi đọc liền cả tiếng.",
+      "l_audio": "Chào bé đến với Xưởng ghép tiếng. Chúng mình sẽ đi từ dễ đến khó qua bốn cấp độ: ghép âm đầu với nguyên âm, thêm thanh, ghép âm đầu với vần và cuối cùng tạo tiếng hoàn chỉnh.",
       "qs": [
         {
           "id": 3001,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm đơn 'b' với nguyên âm 'a' và không thêm dấu thanh, bé sẽ được tiếng nào?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'b' với nguyên âm 'a'. Tiếng nào được tạo thành?",
           "o": [
+            "bê",
             "ba",
-            "ca",
-            "da",
-            "mẹ"
+            "bi",
+            "be"
           ],
           "a": "ba",
-          "h": "Phụ âm 'b' ghép với nguyên âm 'a' tạo thành tiếng 'ba' ngọt ngào gọi cha đấy bé!",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'a' tạo thành tiếng 'ba'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "👨"
+          "emoji": "🔤"
         },
         {
           "id": 3002,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm đơn 'c' với nguyên âm 'o' và thanh huyền, bé sẽ thu được từ chỉ con vật nào?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'b' lại gần nguyên âm 'e' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "cò",
-            "cá",
-            "bò",
-            "gà"
+            "bi",
+            "be",
+            "bê",
+            "ba"
           ],
-          "a": "cò",
-          "h": "Âm 'c' + 'o' + thanh huyền tạo thành tiếng 'cò' (trong từ con cò trắng lội đồng) đó bé!",
+          "a": "be",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'e' tạo thành tiếng 'be'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🐦"
+          "emoji": "🔤"
         },
         {
           "id": 3003,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm 'g' với nguyên âm 'a' và thanh huyền để được tiếng gọi tên con vật gáy sáng?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'b' và 'ê'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "gà",
-            "cá",
-            "chó",
-            "mèo"
+            "bi",
+            "ba",
+            "be",
+            "bê"
           ],
-          "a": "gà",
-          "h": "Âm 'g' + 'a' + thanh huyền tạo thành tiếng 'gà' báo thức mỗi sớm mai!",
-          "img": "assets/images/con_ga.webp",
+          "a": "bê",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'ê' tạo thành tiếng 'bê'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🐔"
+          "emoji": "🔤"
         },
         {
           "id": 3004,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm 'm' với nguyên âm 'e' và thanh nặng để chỉ người phụ nữ yêu thương bé nhất?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'b' + 'i' sẽ tạo thành tiếng gì?",
           "o": [
-            "mẹ",
-            "bố",
-            "bà",
-            "cô"
+            "be",
+            "ba",
+            "bê",
+            "bi"
           ],
-          "a": "mẹ",
-          "h": "Âm 'm' + 'e' + thanh nặng tạo thành tiếng 'mẹ' ấm áp thiêng liêng nhất thế giới!",
+          "a": "bi",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'i' tạo thành tiếng 'bi'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "👩"
+          "emoji": "🔤"
         },
         {
           "id": 3005,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm 'b' với nguyên âm 'o' và thanh huyền để được tiếng chỉ con vật kéo cày chăm chỉ?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'b' và nguyên âm 'o'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "bò",
-            "cò",
-            "dê",
-            "hổ"
+            "be",
+            "bê",
+            "bo",
+            "ba"
           ],
-          "a": "bò",
-          "h": "Âm 'b' + 'o' + thanh huyền tạo thành tiếng 'bò' hiền lành giúp bác nông dân!",
+          "a": "bo",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'o' tạo thành tiếng 'bo'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🐄"
+          "emoji": "🔤"
         },
         {
           "id": 3006,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm 'c' với nguyên âm 'a' và thanh sắc để được từ chỉ con vật bơi dưới nước?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'b' với nguyên âm 'ô'. Tiếng nào được tạo thành?",
           "o": [
-            "cá",
-            "cò",
-            "chó",
-            "mèo"
+            "bê",
+            "bô",
+            "ba",
+            "be"
           ],
-          "a": "cá",
-          "h": "Âm 'c' + 'a' + thanh sắc tạo thành tiếng 'cá' tung tăng bơi lội!",
-          "img": "assets/images/con_ca.webp",
+          "a": "bô",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'ô' tạo thành tiếng 'bô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌊"
+          "emoji": "🔤"
         },
         {
           "id": 3007,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm 'd' với nguyên âm 'u' và thanh huyền để chỉ trái cây ngọt mát miền sông nước?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'b' lại gần nguyên âm 'ơ' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "dừa",
-            "cam",
-            "lê",
-            "táo"
+            "bơ",
+            "bê",
+            "be",
+            "ba"
           ],
-          "a": "dừa",
-          "h": "Âm 'd' + 'ưa' + thanh huyền tạo thành tiếng 'dừa' mát lành tỏa bóng mát!",
-          "img": "assets/images/qua_dua.webp",
+          "a": "bơ",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'ơ' tạo thành tiếng 'bơ'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🥥"
+          "emoji": "🔤"
         },
         {
           "id": 3008,
-          "sub": "3.1 Ghép Phụ âm đơn & Nguyên âm",
-          "q": "Bé hãy ghép phụ âm 'l' với nguyên âm 'a' và thanh sắc để chỉ bộ phận xanh tươi trên cành cây?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'b' và 'u'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "lá",
-            "hoa",
-            "cả",
-            "quả"
+            "be",
+            "ba",
+            "bê",
+            "bu"
           ],
-          "a": "lá",
-          "h": "Âm 'l' + 'a' + thanh sắc tạo thành tiếng 'lá' cây rung rinh trong gió!",
+          "a": "bu",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'u' tạo thành tiếng 'bu'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "ghep_am_don"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌿"
+          "emoji": "🔤"
         },
         {
           "id": 3009,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'bàn' (chiếc bàn học), bộ phận vần xuôi đứng sau phụ âm 'b' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'b' + 'ư' sẽ tạo thành tiếng gì?",
           "o": [
-            "an",
-            "am",
-            "ap",
-            "at"
+            "bê",
+            "be",
+            "ba",
+            "bư"
           ],
-          "a": "an",
-          "h": "Tiếng 'bàn' gồm âm 'b' + vần 'an' + thanh huyền ghép thành đấy bé!",
+          "a": "bư",
+          "h": "Âm đầu 'b' ghép với nguyên âm 'ư' tạo thành tiếng 'bư'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3010,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'cam' (quả cam ngọt), phần vần xuôi gồm hai chữ cái 'a' và 'm' ghép lại là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'c' và nguyên âm 'a'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "am",
-            "an",
-            "ap",
-            "at"
+            "ca",
+            "cô",
+            "co",
+            "cơ"
           ],
-          "a": "am",
-          "h": "Vần xuôi 'am' gồm nguyên âm 'a' đứng trước, phụ âm 'm' đứng sau!",
-          "img": "assets/images/qua_cam.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_xuoi_co_ban"
-          ],
-          "emoji": "🍊"
-        },
-        {
-          "id": 3011,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'mát' (kem mát lạnh), phần vần xuôi kết thúc bằng chữ 't' là vần gì?",
-          "o": [
-            "at",
-            "ap",
-            "am",
-            "an"
-          ],
-          "a": "at",
-          "h": "Âm 'm' + vần 'at' + thanh sắc tạo thành tiếng 'mát' ngọt ngào!",
+          "a": "ca",
+          "h": "Âm đầu 'c' ghép với nguyên âm 'a' tạo thành tiếng 'ca'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3011,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'c' với nguyên âm 'o'. Tiếng nào được tạo thành?",
+          "o": [
+            "co",
+            "cô",
+            "ca",
+            "cơ"
+          ],
+          "a": "co",
+          "h": "Âm đầu 'c' ghép với nguyên âm 'o' tạo thành tiếng 'co'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3012,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'bút' (bút chì tập viết), phần vần xuôi gồm 'u' và 't' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'c' lại gần nguyên âm 'ô' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "ut",
-            "uc",
-            "un",
-            "up"
+            "cô",
+            "cơ",
+            "co",
+            "ca"
           ],
-          "a": "ut",
-          "h": "Vần xuôi 'ut' đứng sau phụ âm 'b' cùng thanh sắc tạo nên từ 'bút'!",
+          "a": "cô",
+          "h": "Âm đầu 'c' ghép với nguyên âm 'ô' tạo thành tiếng 'cô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "✏️"
+          "emoji": "🔤"
         },
         {
           "id": 3013,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'cúc' (bông hoa cúc vàng), bộ phận vần xuôi kết thúc bằng âm 'c' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'c' và 'ơ'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "uc",
-            "ut",
-            "un",
-            "up"
+            "cô",
+            "ca",
+            "cơ",
+            "co"
           ],
-          "a": "uc",
-          "h": "Âm 'c' + vần 'uc' + thanh sắc tạo nên tiếng 'cúc' lộng lẫy!",
-          "img": "assets/images/bong_hoa.webp",
+          "a": "cơ",
+          "h": "Âm đầu 'c' ghép với nguyên âm 'ơ' tạo thành tiếng 'cơ'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌸"
+          "emoji": "🔤"
         },
         {
           "id": 3014,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy tìm vần xuôi 2 chữ cái có trong tiếng 'sen' (bông hoa sen hồng)?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'c' + 'u' sẽ tạo thành tiếng gì?",
           "o": [
-            "en",
-            "et",
-            "em",
-            "ep"
+            "cô",
+            "cu",
+            "ca",
+            "co"
           ],
-          "a": "en",
-          "h": "Âm 's' + vần 'en' tạo thành tiếng 'sen' ngát hương!",
-          "img": "assets/images/bong_hoa.webp",
+          "a": "cu",
+          "h": "Âm đầu 'c' ghép với nguyên âm 'u' tạo thành tiếng 'cu'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🪷"
+          "emoji": "🔤"
         },
         {
           "id": 3015,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy tìm vần xuôi có trong tiếng 'nến' (cây nến lung linh)?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'c' và nguyên âm 'ư'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "ên",
-            "êt",
-            "êm",
-            "êp"
+            "cô",
+            "co",
+            "cư",
+            "ca"
           ],
-          "a": "ên",
-          "h": "Âm 'n' + vần 'ên' + thanh sắc tạo thành tiếng 'nến' tỏa sáng!",
+          "a": "cư",
+          "h": "Âm đầu 'c' ghép với nguyên âm 'ư' tạo thành tiếng 'cư'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌿"
+          "emoji": "🔤"
         },
         {
           "id": 3016,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong từ 'bếp lò', tiếng 'bếp' chứa vần xuôi nào dưới đây?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'd' với nguyên âm 'a'. Tiếng nào được tạo thành?",
           "o": [
-            "êp",
-            "êt",
-            "ên",
-            "êm"
+            "da",
+            "de",
+            "di",
+            "dê"
           ],
-          "a": "êp",
-          "h": "Âm 'b' + vần 'êp' + thanh sắc tạo nên tiếng 'bếp' sưởi ấm gia đình!",
+          "a": "da",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'a' tạo thành tiếng 'da'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "👨‍👩‍👧‍👦"
+          "emoji": "🔤"
         },
         {
           "id": 3017,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy tìm vần xuôi 2 chữ cái trong tiếng 'tin' (tin vui ngày tết)?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'd' lại gần nguyên âm 'e' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "in",
-            "it",
-            "ip",
-            "im"
+            "de",
+            "di",
+            "da",
+            "dê"
           ],
-          "a": "in",
-          "h": "Âm 't' + vần 'in' tạo thành tiếng 'tin' tràn ngập niềm vui!",
+          "a": "de",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'e' tạo thành tiếng 'de'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3018,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'vịt' (con vịt bơi dưới ao), phần vần xuôi là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'd' và 'ê'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "it",
-            "in",
-            "ip",
-            "im"
+            "da",
+            "di",
+            "dê",
+            "de"
           ],
-          "a": "it",
-          "h": "Âm 'v' + vần 'it' + thanh nặng tạo thành tiếng 'vịt' cạch cạch!",
-          "img": "assets/images/con_vit.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_xuoi_co_ban"
-          ],
-          "emoji": "🦆"
-        },
-        {
-          "id": 3019,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'gái' (bé gái ngoan ngoãn), phần vần xuôi có kết thúc bằng âm 'i' là vần gì?",
-          "o": [
-            "ai",
-            "ay",
-            "ây",
-            "oi"
-          ],
-          "a": "ai",
-          "h": "Âm 'g' + vần 'ai' + thanh sắc tạo nên tiếng 'gái' đáng yêu!",
+          "a": "dê",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'ê' tạo thành tiếng 'dê'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3019,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'd' + 'i' sẽ tạo thành tiếng gì?",
+          "o": [
+            "da",
+            "de",
+            "di",
+            "dê"
+          ],
+          "a": "di",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'i' tạo thành tiếng 'di'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3020,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'cây' (cây xanh che bóng mát), phần vần xuôi có 'â' đứng đầu là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'd' và nguyên âm 'o'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "ây",
-            "ay",
-            "ai",
-            "oi"
+            "do",
+            "de",
+            "da",
+            "dê"
           ],
-          "a": "ây",
-          "h": "Âm 'c' + vần 'ây' tạo thành tiếng 'cây' tươi tốt!",
+          "a": "do",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'o' tạo thành tiếng 'do'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌿"
+          "emoji": "🔤"
         },
         {
           "id": 3021,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy ghép phụ âm 'b' với vần xuôi 'an' và thanh huyền để thu được từ chỉ đồ dùng học tập?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'd' với nguyên âm 'ô'. Tiếng nào được tạo thành?",
           "o": [
-            "bàn",
-            "bún",
-            "bát",
-            "búp"
+            "de",
+            "da",
+            "dê",
+            "dô"
           ],
-          "a": "bàn",
-          "h": "Âm 'b' + vần 'an' + thanh huyền = 'bàn' (bàn học xinh xắn)!",
+          "a": "dô",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'ô' tạo thành tiếng 'dô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🏫"
+          "emoji": "🔤"
         },
         {
           "id": 3022,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy ghép phụ âm 'c' với vần xuôi 'at' và thanh sắc để thu được từ chỉ hạt nhỏ ở bãi biển?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'd' lại gần nguyên âm 'u' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "cát",
-            "cáp",
-            "cán",
-            "cam"
+            "de",
+            "du",
+            "dê",
+            "da"
           ],
-          "a": "cát",
-          "h": "Âm 'c' + vần 'at' + thanh sắc = 'cát' (bãi cát vàng lấp lánh)!",
+          "a": "du",
+          "h": "Âm đầu 'd' ghép với nguyên âm 'u' tạo thành tiếng 'du'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "⭐"
+          "emoji": "🔤"
         },
         {
           "id": 3023,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy ghép phụ âm 'h' với vần xuôi 'at' và thanh sắc để chỉ hành động ca hát vui vẻ?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'đ' và 'a'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "hát",
-            "hạt",
-            "hàn",
-            "hàm"
+            "đa",
+            "đo",
+            "đe",
+            "đi"
           ],
-          "a": "hát",
-          "h": "Âm 'h' + vần 'at' + thanh sắc = 'hát' (bé hát véo von)!",
+          "a": "đa",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'a' tạo thành tiếng 'đa'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3024,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy ghép phụ âm 'm' với vần xuôi 'at' và thanh nặng để chỉ bộ phận long lanh giúp bé quan sát?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'đ' + 'e' sẽ tạo thành tiếng gì?",
           "o": [
-            "mắt",
-            "mát",
-            "mặt",
-            "màn"
+            "đi",
+            "đe",
+            "đa",
+            "đo"
           ],
-          "a": "mắt",
-          "h": "Âm 'm' + vần 'at' (với ă) + thanh nặng = 'mắt' (đôi mắt sáng ngời)!",
+          "a": "đe",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'e' tạo thành tiếng 'đe'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "👀"
+          "emoji": "🔤"
         },
         {
           "id": 3025,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'con' (con chó ngoan), phần vần xuôi gồm hai chữ cái nào ghép lại?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'đ' và nguyên âm 'i'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "on",
-            "oc",
-            "ot",
-            "op"
+            "đe",
+            "đa",
+            "đo",
+            "đi"
           ],
-          "a": "on",
-          "h": "Vần 'on' gồm nguyên âm 'o' và phụ âm 'n' ghép thành!",
-          "img": "assets/images/con_cho.webp",
+          "a": "đi",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'i' tạo thành tiếng 'đi'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🐶"
+          "emoji": "🔤"
         },
         {
           "id": 3026,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'tốt' (bé ngoan học tốt), phần vần xuôi có 'ô' đứng đầu là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'đ' với nguyên âm 'o'. Tiếng nào được tạo thành?",
           "o": [
-            "ôt",
-            "oc",
-            "ôn",
-            "ôp"
+            "đa",
+            "đe",
+            "đo",
+            "đi"
           ],
-          "a": "ôt",
-          "h": "Âm 't' + vần 'ôt' + thanh sắc = 'tốt'!",
+          "a": "đo",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'o' tạo thành tiếng 'đo'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "☂️"
+          "emoji": "🔤"
         },
         {
           "id": 3027,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'vui' (vui vẻ đến trường), phần vần xuôi ghép từ 'u' và 'i' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'đ' lại gần nguyên âm 'ô' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "ui",
-            "ưi",
-            "ua",
-            "ưa"
+            "đi",
+            "đa",
+            "đe",
+            "đô"
           ],
-          "a": "ui",
-          "h": "Âm 'v' + vần 'ui' tạo thành tiếng 'vui' rạng rỡ!",
+          "a": "đô",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'ô' tạo thành tiếng 'đô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🏫"
+          "emoji": "🔤"
         },
         {
           "id": 3028,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'ngửi' (ngửi mùi thơm của hoa), phần vần xuôi ghép từ 'ư' và 'i' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'đ' và 'u'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "ưi",
-            "ui",
-            "ơi",
-            "ôi"
+            "đi",
+            "đa",
+            "đu",
+            "đe"
           ],
-          "a": "ưi",
-          "h": "Âm 'ng' + vần 'ưi' + thanh hỏi tạo nên tiếng 'ngửi'!",
-          "img": "assets/images/bong_hoa.webp",
+          "a": "đu",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'u' tạo thành tiếng 'đu'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🍍"
+          "emoji": "🔤"
         },
         {
           "id": 3029,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'bắp' (củ bắp cải), phần vần xuôi ghép từ 'ă' và 'p' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'đ' + 'ơ' sẽ tạo thành tiếng gì?",
           "o": [
-            "ăp",
-            "ăt",
-            "ăn",
-            "ăm"
+            "đe",
+            "đơ",
+            "đa",
+            "đi"
           ],
-          "a": "ăp",
-          "h": "Âm 'b' + vần 'ăp' + thanh sắc tạo thành tiếng 'bắp'!",
+          "a": "đơ",
+          "h": "Âm đầu 'đ' ghép với nguyên âm 'ơ' tạo thành tiếng 'đơ'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌽"
+          "emoji": "🔤"
         },
         {
           "id": 3030,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'cặp' (chiếc cặp sách), phần vần xuôi là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'g' và nguyên âm 'a'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "ăp",
-            "ap",
-            "at",
-            "ăm"
+            "gu",
+            "go",
+            "ga",
+            "gô"
           ],
-          "a": "ăp",
-          "h": "Âm 'c' + vần 'ăp' + thanh nặng tạo nên từ 'cặp' sách thân quen!",
-          "img": "assets/images/cai_cap.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_xuoi_co_ban"
-          ],
-          "emoji": "📚"
-        },
-        {
-          "id": 3031,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'tập' (tập viết chữ đẹp), phần vần xuôi ghép từ 'â' và 'p' là vần gì?",
-          "o": [
-            "âp",
-            "ăt",
-            "ân",
-            "âm"
-          ],
-          "a": "âp",
-          "h": "Âm 't' + vần 'âp' + thanh nặng = 'tập' viết chăm chỉ!",
+          "a": "ga",
+          "h": "Âm đầu 'g' ghép với nguyên âm 'a' tạo thành tiếng 'ga'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3031,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'g' với nguyên âm 'o'. Tiếng nào được tạo thành?",
+          "o": [
+            "gô",
+            "gu",
+            "go",
+            "ga"
+          ],
+          "a": "go",
+          "h": "Âm đầu 'g' ghép với nguyên âm 'o' tạo thành tiếng 'go'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3032,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy tìm vần xuôi trong tiếng 'sâm' (củ nhân sâm quý)?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'g' lại gần nguyên âm 'ô' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "âm",
-            "ân",
-            "âp",
-            "ât"
+            "ga",
+            "gu",
+            "gô",
+            "go"
           ],
-          "a": "âm",
-          "h": "Âm 's' + vần 'âm' tạo thành tiếng 'sâm'!",
+          "a": "gô",
+          "h": "Âm đầu 'g' ghép với nguyên âm 'ô' tạo thành tiếng 'gô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3033,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy tìm vần xuôi trong tiếng 'chân' (đôi chân chạy nhanh)?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'g' và 'u'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "ân",
-            "âm",
-            "âp",
-            "ât"
+            "ga",
+            "go",
+            "gu",
+            "gô"
           ],
-          "a": "ân",
-          "h": "Phụ âm 'ch' + vần 'ân' tạo thành tiếng 'chân'!",
+          "a": "gu",
+          "h": "Âm đầu 'g' ghép với nguyên âm 'u' tạo thành tiếng 'gu'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🦶"
+          "emoji": "🔤"
         },
         {
           "id": 3034,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Bé hãy tìm vần xuôi trong tiếng 'sất' (sơn sất)?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'g' + 'ư' sẽ tạo thành tiếng gì?",
           "o": [
-            "ât",
-            "âp",
-            "ân",
-            "âm"
+            "gô",
+            "ga",
+            "gư",
+            "go"
           ],
-          "a": "ât",
-          "h": "Âm 's' + vần 'ât' + thanh sắc tạo thành tiếng 'sất'!",
+          "a": "gư",
+          "h": "Âm đầu 'g' ghép với nguyên âm 'ư' tạo thành tiếng 'gư'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_xuoi_co_ban"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3035,
-          "sub": "3.2 Vần xuôi 2 chữ cái cơ bản",
-          "q": "Trong tiếng 'bông' (bông hoa tươi), phần vần có kết thúc bằng âm 'ng' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'h' và nguyên âm 'a'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "ông",
-            "ong",
-            "ung",
-            "ưng"
+            "hê",
+            "ha",
+            "hi",
+            "he"
           ],
-          "a": "ông",
-          "h": "Âm 'b' + vần 'ông' tạo thành tiếng 'bông' hoa rực rỡ!",
-          "img": "assets/images/bong_hoa.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_xuoi_co_ban"
-          ],
-          "emoji": "🌸"
-        },
-        {
-          "id": 3036,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm ghép 'ch' với nguyên âm 'e' và thanh hỏi để thu được từ chỉ hành động chẻ củi?",
-          "o": [
-            "chẻ",
-            "trẻ",
-            "kẻ",
-            "nhẻ"
-          ],
-          "a": "chẻ",
-          "h": "Phụ âm 'ch' + 'e' + thanh hỏi tạo thành tiếng 'chẻ'!",
+          "a": "ha",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'a' tạo thành tiếng 'ha'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3036,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'h' với nguyên âm 'e'. Tiếng nào được tạo thành?",
+          "o": [
+            "ha",
+            "hê",
+            "he",
+            "hi"
+          ],
+          "a": "he",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'e' tạo thành tiếng 'he'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3037,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm ghép 'tr' với vần 'e' để thu được từ chỉ lũy tre xanh mát?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'h' lại gần nguyên âm 'ê' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "tre",
-            "che",
-            "ke",
-            "nghe"
+            "hi",
+            "hê",
+            "he",
+            "ha"
           ],
-          "a": "tre",
-          "h": "Phụ âm ghép 'tr' + 'e' = 'tre' (lũy tre xanh đầu làng)!",
+          "a": "hê",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'ê' tạo thành tiếng 'hê'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
-          "emoji": "🌿"
+          "emoji": "🔤"
         },
         {
           "id": 3038,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm ghép 'kh' với vần 'e' và thanh sắc để chỉ quả khế chua ngọt?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'h' và 'i'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "khế",
-            "thế",
-            "phế",
-            "ghế"
+            "hi",
+            "he",
+            "hê",
+            "ha"
           ],
-          "a": "khế",
-          "h": "Phụ âm 'kh' + 'ê' + thanh sắc tạo nên tiếng 'khế'!",
+          "a": "hi",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'i' tạo thành tiếng 'hi'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3039,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm ghép 'nh' với vần 'a' và thanh huyền để chỉ ngôi nhà ấm áp?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'h' + 'o' sẽ tạo thành tiếng gì?",
           "o": [
-            "nhà",
-            "chà",
-            "thà",
-            "phà"
+            "ho",
+            "hê",
+            "he",
+            "ha"
           ],
-          "a": "nhà",
-          "h": "Phụ âm 'nh' + 'a' + thanh huyền tạo nên tiếng 'nhà' thân thương!",
-          "img": "assets/images/ngoi_nha.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "phu_am_ghep"
-          ],
-          "emoji": "🏠"
-        },
-        {
-          "id": 3040,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm 'th' với vần 'uoc' và thanh sắc để chỉ chiếc thước kẻ gỗ?",
-          "o": [
-            "thước",
-            "chước",
-            "phước",
-            "khước"
-          ],
-          "a": "thước",
-          "h": "Phụ âm 'th' + vần 'ươc' + thanh sắc = 'thước' (thước kẻ học tập)!",
-          "img": "assets/images/cay_thuoc.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "phu_am_ghep"
-          ],
-          "emoji": "📏"
-        },
-        {
-          "id": 3041,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm ghép 'ph' với vần 'ơ' để chỉ bông hoa phơ trắng?",
-          "o": [
-            "phơ",
-            "thơ",
-            "chơ",
-            "khơ"
-          ],
-          "a": "phơ",
-          "h": "Phụ âm 'ph' + 'ơ' tạo thành tiếng 'phơ'!",
-          "img": "assets/images/bong_hoa.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "phu_am_ghep"
-          ],
-          "emoji": "🌸"
-        },
-        {
-          "id": 3042,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm ghép 'gh' với vần 'e' và thanh sắc để chỉ chiếc ghế ngồi học?",
-          "o": [
-            "ghế",
-            "kế",
-            "thế",
-            "chế"
-          ],
-          "a": "ghế",
-          "h": "Theo quy tắc chính tả, 'gh' đi trước 'e', 'ê', 'i' để tạo nên tiếng 'ghế'!",
+          "a": "ho",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'o' tạo thành tiếng 'ho'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3040,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'h' và nguyên âm 'ô'. Bé hoàn thành phép ghép nhé!",
+          "o": [
+            "ha",
+            "hô",
+            "he",
+            "hê"
+          ],
+          "a": "hô",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'ô' tạo thành tiếng 'hô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3041,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'h' với nguyên âm 'u'. Tiếng nào được tạo thành?",
+          "o": [
+            "hu",
+            "he",
+            "ha",
+            "hê"
+          ],
+          "a": "hu",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'u' tạo thành tiếng 'hu'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3042,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'h' lại gần nguyên âm 'ư' nhé. Hai âm ghép lại thành tiếng nào?",
+          "o": [
+            "he",
+            "hư",
+            "ha",
+            "hê"
+          ],
+          "a": "hư",
+          "h": "Âm đầu 'h' ghép với nguyên âm 'ư' tạo thành tiếng 'hư'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3043,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm 'ngh' với vần 'i' và thanh ngã để chỉ hành động suy nghĩ chu đáo?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'l' và 'a'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "nghĩ",
-            "khi",
-            "chỉ",
-            "nghi"
+            "li",
+            "lê",
+            "le",
+            "la"
           ],
-          "a": "nghĩ",
-          "h": "Phụ âm 'ngh' đứng trước nguyên âm 'i' + thanh ngã = 'nghĩ'!",
+          "a": "la",
+          "h": "Âm đầu 'l' ghép với nguyên âm 'a' tạo thành tiếng 'la'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3044,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm 'gi' với vần 'ay' và thanh sắc để chỉ tờ giấy vẽ tranh?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'l' + 'e' sẽ tạo thành tiếng gì?",
           "o": [
-            "giấy",
-            "mấy",
-            "thấy",
-            "lấy"
+            "li",
+            "le",
+            "lê",
+            "la"
           ],
-          "a": "giấy",
-          "h": "Âm 'gi' + vần 'ây' + thanh sắc tạo thành tiếng 'giấy' tập tô!",
+          "a": "le",
+          "h": "Âm đầu 'l' ghép với nguyên âm 'e' tạo thành tiếng 'le'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3045,
-          "sub": "3.3 Phụ âm ghép đôi",
-          "q": "Bé hãy ghép phụ âm 'qu' với vần 'a' và thanh hỏi để chỉ trái quả chín mọng?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'l' và nguyên âm 'ê'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "quả",
-            "cả",
-            "thả",
-            "phả"
+            "le",
+            "lê",
+            "li",
+            "la"
           ],
-          "a": "quả",
-          "h": "Âm 'qu' + 'a' + thanh hỏi tạo thành tiếng 'quả' ngon ngọt!",
+          "a": "lê",
+          "h": "Âm đầu 'l' ghép với nguyên âm 'ê' tạo thành tiếng 'lê'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "phu_am_ghep"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🍐"
+        },
+        {
+          "id": 3046,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Bé hãy ghép âm đầu 'l' với nguyên âm 'i'. Tiếng nào được tạo thành?",
+          "o": [
+            "le",
+            "li",
+            "la",
+            "lê"
+          ],
+          "a": "li",
+          "h": "Âm đầu 'l' ghép với nguyên âm 'i' tạo thành tiếng 'li'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
-          "id": 3046,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'làng' (làng quê thanh bình), vần có âm cuối 'ng' đứng sau 'l' là vần gì?",
-          "o": [
-            "ang",
-            "anh",
-            "ach",
-            "ong"
-          ],
-          "a": "ang",
-          "h": "Âm 'l' + vần 'ang' + thanh huyền = 'làng' quê yêu dấu!",
-          "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_am_cuoi"
-          ],
-          "emoji": "🎵"
-        },
-        {
           "id": 3047,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'xanh' (bầu trời xanh mát), phần vần kết thúc bằng âm 'nh' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Kéo âm 'l' lại gần nguyên âm 'o' nhé. Hai âm ghép lại thành tiếng nào?",
           "o": [
-            "anh",
-            "ach",
-            "ang",
-            "inh"
+            "lê",
+            "la",
+            "lo",
+            "le"
           ],
-          "a": "anh",
-          "h": "Âm 'x' + vần 'anh' tạo nên màu 'xanh' tươi thắm!",
+          "a": "lo",
+          "h": "Âm đầu 'l' ghép với nguyên âm 'o' tạo thành tiếng 'lo'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3048,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'sách' (quyển sách tập đọc), phần vần kết thúc bằng âm 'ch' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Cô có hai mảnh chữ 'l' và 'ô'. Bé chọn tiếng ghép đúng nào?",
           "o": [
-            "ach",
-            "anh",
-            "ang",
-            "ich"
+            "lê",
+            "la",
+            "le",
+            "lô"
           ],
-          "a": "ach",
-          "h": "Âm 's' + vần 'ach' + thanh sắc tạo nên từ 'sách'!",
-          "img": "assets/images/quyen_sach.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_am_cuoi"
-          ],
-          "emoji": "📚"
-        },
-        {
-          "id": 3049,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'xinh' (bé xinh xắn), phần vần kết thúc bằng 'nh' có nguyên âm 'i' là vần gì?",
-          "o": [
-            "inh",
-            "ich",
-            "anh",
-            "ach"
-          ],
-          "a": "inh",
-          "h": "Âm 'x' + vần 'inh' tạo thành tiếng 'xinh' xắn!",
+          "a": "lô",
+          "h": "Âm đầu 'l' ghép với nguyên âm 'ô' tạo thành tiếng 'lô'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3049,
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Nghe và nhìn thật kĩ: 'm' + 'a' sẽ tạo thành tiếng gì?",
+          "o": [
+            "ma",
+            "ca",
+            "me",
+            "ba"
+          ],
+          "a": "ma",
+          "h": "Âm đầu 'm' ghép với nguyên âm 'a' tạo thành tiếng 'ma'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3050,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'thích' (bé thích học vẽ), phần vần kết thúc bằng âm 'ch' có nguyên âm 'i' là vần gì?",
+          "sub": "3.1 Cấp 1 - Ghép âm đầu với nguyên âm",
+          "q": "Xưởng ghép tiếng có âm đầu 'm' và nguyên âm 'e'. Bé hoàn thành phép ghép nhé!",
           "o": [
-            "ich",
-            "inh",
-            "ach",
-            "anh"
+            "be",
+            "de",
+            "ma",
+            "me"
           ],
-          "a": "ich",
-          "h": "Âm 'th' + vần 'ich' + thanh sắc tạo thành từ 'thích'!",
+          "a": "me",
+          "h": "Âm đầu 'm' ghép với nguyên âm 'e' tạo thành tiếng 'me'. Bé đọc chậm từng âm rồi đọc liền tiếng nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap1_ghep_am_nguyen_am"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3051,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'bóng' (quả bóng tròn), phần vần có kết thúc bằng âm 'ng' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'ba', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "ong",
-            "ông",
-            "ung",
-            "ưng"
+            "bá",
+            "bà",
+            "bã",
+            "bả"
           ],
-          "a": "ong",
-          "h": "Âm 'b' + vần 'ong' + thanh sắc = 'bóng' bay!",
-          "img": "assets/images/con_ong.webp",
+          "a": "bá",
+          "h": "Tiếng gốc là 'ba'. Thêm thanh sắc ta được 'bá'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🐝"
+          "emoji": "🔤"
         },
         {
           "id": 3052,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'sông' (dòng sông xanh mát), phần vần có 'ô' đứng đầu kết thúc bằng 'ng' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'ba'. Tiếng mới là gì?",
           "o": [
-            "ông",
-            "ong",
-            "ung",
-            "ưng"
+            "bá",
+            "bà",
+            "bã",
+            "bả"
           ],
-          "a": "ông",
-          "h": "Âm 's' + vần 'ông' tạo nên tiếng 'sông'!",
+          "a": "bà",
+          "h": "Tiếng gốc là 'ba'. Thêm thanh huyền ta được 'bà'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👴"
+          "emoji": "🔤"
         },
         {
           "id": 3053,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'cùng' (cùng bạn đến trường), phần vần có 'u' đứng đầu kết thúc bằng 'ng' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'ba' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "ung",
-            "ưng",
-            "ong",
-            "ông"
+            "bã",
+            "bà",
+            "bá",
+            "bả"
           ],
-          "a": "ung",
-          "h": "Âm 'c' + vần 'ung' + thanh huyền tạo thành từ 'cùng'!",
+          "a": "bả",
+          "h": "Tiếng gốc là 'ba'. Thêm thanh hỏi ta được 'bả'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🏫"
+          "emoji": "🔤"
         },
         {
           "id": 3054,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'mừng' (vẫy đuôi vui mừng), phần vần có 'ư' đứng đầu kết thúc bằng 'ng' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'ba' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "ưng",
-            "ung",
-            "ong",
-            "ông"
+            "bá",
+            "bả",
+            "bà",
+            "bã"
           ],
-          "a": "ưng",
-          "h": "Âm 'm' + vần 'ưng' + thanh huyền tạo thành từ 'mừng'!",
+          "a": "bã",
+          "h": "Tiếng gốc là 'ba'. Thêm thanh ngã ta được 'bã'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🎵"
+          "emoji": "🔤"
         },
         {
           "id": 3055,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Bé hãy ghép phụ âm 'ch' với vần 'ang' và thanh sắc để chỉ người bác chữa bệnh cho em bé?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'ba' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "cháng",
-            "tráng",
-            "kháng",
-            "tháng"
+            "bả",
+            "bạ",
+            "bá",
+            "bà"
           ],
-          "a": "cháng",
-          "h": "Phụ âm 'ch' + vần 'ang' + thanh sắc = 'cháng' (hoặc tráng)!",
+          "a": "bạ",
+          "h": "Tiếng gốc là 'ba'. Thêm thanh nặng ta được 'bạ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👶"
+          "emoji": "🔤"
         },
         {
           "id": 3056,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Bé hãy ghép phụ âm 'm' với vần 'ang' và thanh sắc để chỉ tên loài rau củ ngâm ngon ngọt?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'be', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "măng",
-            "máng",
-            "mãng",
-            "mạng"
+            "bè",
+            "bẽ",
+            "bẻ",
+            "bé"
           ],
-          "a": "măng",
-          "h": "Âm 'm' + vần 'ăng' = 'măng' (măng cá trê thơm nức)!",
-          "img": "assets/images/con_ca.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "van_am_cuoi"
-          ],
-          "emoji": "🍍"
-        },
-        {
-          "id": 3057,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Bé hãy ghép phụ âm 'tr' với vần 'ang' và thanh sắc để chỉ màu trắng tinh khôi?",
-          "o": [
-            "trắng",
-            "chắng",
-            "thắng",
-            "phắng"
-          ],
-          "a": "trắng",
-          "h": "Âm 'tr' + vần 'ăng' + thanh sắc = 'trắng' tinh!",
+          "a": "bé",
+          "h": "Tiếng gốc là 'be'. Thêm thanh sắc ta được 'bé'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3057,
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'be'. Tiếng mới là gì?",
+          "o": [
+            "bẽ",
+            "bè",
+            "bẻ",
+            "bé"
+          ],
+          "a": "bè",
+          "h": "Tiếng gốc là 'be'. Thêm thanh huyền ta được 'bè'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3058,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'vàng' (lúa chín vàng óng), phần vần kết thúc bằng 'ng' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'be' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "ang",
-            "anh",
-            "ach",
-            "ong"
+            "bẽ",
+            "bé",
+            "bè",
+            "bẻ"
           ],
-          "a": "ang",
-          "h": "Âm 'v' + vần 'ang' + thanh huyền = 'vàng'!",
+          "a": "bẻ",
+          "h": "Tiếng gốc là 'be'. Thêm thanh hỏi ta được 'bẻ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🎵"
+          "emoji": "🔤"
         },
         {
           "id": 3059,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'mưa' (cơn mưa rào), phần vần gồm nguyên âm 'ư' và 'a' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'be' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "ưa",
-            "ua",
-            "ia",
-            "iê"
+            "bẽ",
+            "bé",
+            "bẻ",
+            "bè"
           ],
-          "a": "ưa",
-          "h": "Âm 'm' + vần 'ưa' tạo thành tiếng 'mưa' mát lành!",
+          "a": "bẽ",
+          "h": "Tiếng gốc là 'be'. Thêm thanh ngã ta được 'bẽ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🌧️"
+          "emoji": "🔤"
         },
         {
           "id": 3060,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'chua' (quả chanh chua), phần vần gồm nguyên âm 'u' và 'a' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'be' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "ua",
-            "ưa",
-            "ia",
-            "iê"
+            "bè",
+            "bé",
+            "bẹ",
+            "bẻ"
           ],
-          "a": "ua",
-          "h": "Phụ âm 'ch' + vần 'ua' tạo nên tiếng 'chua'!",
+          "a": "bẹ",
+          "h": "Tiếng gốc là 'be'. Thêm thanh nặng ta được 'bẹ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🍋"
+          "emoji": "🔤"
         },
         {
           "id": 3061,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'chia' (chia quà cho bạn), phần vần gồm nguyên âm 'i' và 'a' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'bo', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "ia",
-            "iê",
-            "ua",
-            "ưa"
+            "bõ",
+            "bó",
+            "bò",
+            "bỏ"
           ],
-          "a": "ia",
-          "h": "Phụ âm 'ch' + vần 'ia' tạo thành tiếng 'chia' sẻ tình bạn!",
+          "a": "bó",
+          "h": "Tiếng gốc là 'bo'. Thêm thanh sắc ta được 'bó'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🐦"
+          "emoji": "🔤"
         },
         {
           "id": 3062,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Bé hãy ghép phụ âm 'tr' với vần 'on' và thanh tròn để tả hình dạng chiếc đĩa tròn?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'bo'. Tiếng mới là gì?",
           "o": [
-            "tròn",
-            "trón",
-            "trỏn",
-            "trọn"
+            "bò",
+            "bõ",
+            "bó",
+            "bỏ"
           ],
-          "a": "tròn",
-          "h": "Âm 'tr' + vần 'on' + thanh huyền = 'tròn' (tròn xoe)!",
+          "a": "bò",
+          "h": "Tiếng gốc là 'bo'. Thêm thanh huyền ta được 'bò'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3063,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Bé hãy ghép phụ âm 'ch' với vần 'au' và thanh sắc để chỉ củ cháu ngọt?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'bo' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "cháu",
-            "tráu",
-            "kháu",
-            "tháu"
+            "bò",
+            "bỏ",
+            "bó",
+            "bõ"
           ],
-          "a": "cháu",
-          "h": "Phụ âm 'ch' + vần 'au' + thanh sắc = 'cháu' ngoan của bà!",
+          "a": "bỏ",
+          "h": "Tiếng gốc là 'bo'. Thêm thanh hỏi ta được 'bỏ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👵"
+          "emoji": "🔤"
         },
         {
           "id": 3064,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'ngôi' (ngôi sao lấp lánh), bộ phận vần gồm 'ô' và 'i' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'bo' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "ôi",
-            "oi",
-            "ơi",
-            "ui"
+            "bó",
+            "bò",
+            "bõ",
+            "bỏ"
           ],
-          "a": "ôi",
-          "h": "Âm 'ng' + vần 'ôi' tạo nên tiếng 'ngôi' sao rực rỡ!",
+          "a": "bõ",
+          "h": "Tiếng gốc là 'bo'. Thêm thanh ngã ta được 'bõ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "☂️"
+          "emoji": "🔤"
         },
         {
           "id": 3065,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'chơi' (vui chơi cùng bạn), bộ phận vần gồm 'ơ' và 'i' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'bo' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "ơi",
-            "ôi",
-            "oi",
-            "ui"
+            "bò",
+            "bọ",
+            "bỏ",
+            "bó"
           ],
-          "a": "ơi",
-          "h": "Phụ âm 'ch' + vần 'ơi' tạo nên tiếng 'chơi'!",
+          "a": "bọ",
+          "h": "Tiếng gốc là 'bo'. Thêm thanh nặng ta được 'bọ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3066,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'mới' (quyển sách mới tinh), phần vần gồm 'ơ' và 'i' với thanh sắc là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'ca', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "ơi",
-            "ôi",
-            "oi",
-            "ui"
+            "cả",
+            "cã",
+            "cá",
+            "cà"
           ],
-          "a": "ơi",
-          "h": "Âm 'm' + vần 'ơi' + thanh sắc = 'mới'!",
-          "img": "assets/images/quyen_sach.webp",
+          "a": "cá",
+          "h": "Tiếng gốc là 'ca'. Thêm thanh sắc ta được 'cá'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/con_ca.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "📚"
+          "emoji": "🐟"
         },
         {
           "id": 3067,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Bé hãy ghép phụ âm 'th' với vần 'oi' và thanh sắc để chỉ thỏi son màu hồng?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'ca'. Tiếng mới là gì?",
           "o": [
-            "thỏi",
-            "thói",
-            "thòi",
-            "thọi"
+            "cà",
+            "cả",
+            "cã",
+            "cá"
           ],
-          "a": "thỏi",
-          "h": "Phụ âm 'th' + vần 'oi' + thanh hỏi = 'thỏi'!",
+          "a": "cà",
+          "h": "Tiếng gốc là 'ca'. Thêm thanh huyền ta được 'cà'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3068,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'mẹ' (mẹ yêu bé), bộ phận âm đầu là phụ âm đơn nào?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'ca' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "m",
-            "b",
-            "c",
-            "d"
+            "cà",
+            "cả",
+            "cá",
+            "cã"
           ],
-          "a": "m",
-          "h": "Phụ âm đầu là 'm', phần vần là nguyên âm 'e'!",
+          "a": "cả",
+          "h": "Tiếng gốc là 'ca'. Thêm thanh hỏi ta được 'cả'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👩"
+          "emoji": "🔤"
         },
         {
           "id": 3069,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'bạn' (bạn bè tốt), bộ phận vần gồm 'a' và 'n' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'ca' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "an",
-            "am",
-            "ap",
-            "at"
+            "cá",
+            "cà",
+            "cả",
+            "cã"
           ],
-          "a": "an",
-          "h": "Âm 'b' + vần 'an' + thanh nặng = 'bạn'!",
+          "a": "cã",
+          "h": "Tiếng gốc là 'ca'. Thêm thanh ngã ta được 'cã'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🎵"
+          "emoji": "🔤"
         },
         {
           "id": 3070,
-          "sub": "3.4 Vần có âm cuối dài",
-          "q": "Trong tiếng 'vẽ' (vẽ tranh hoa đào), bộ phận vần gồm nguyên âm nào?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'ca' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "e",
-            "ê",
-            "a",
-            "o"
+            "cả",
+            "cà",
+            "cạ",
+            "cá"
           ],
-          "a": "e",
-          "h": "Âm 'v' + nguyên âm 'e' + thanh ngã = 'vẽ'!",
-          "img": "assets/images/bong_hoa.webp",
+          "a": "cạ",
+          "h": "Tiếng gốc là 'ca'. Thêm thanh nặng ta được 'cạ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "van_am_cuoi"
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🌸"
+          "emoji": "🔤"
         },
         {
           "id": 3071,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'chuối' (quả chuối chín vàng), nguyên âm đôi nào đứng ở bộ phận vần?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'co', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "uô",
-            "iê",
-            "ươ",
-            "ua"
+            "cò",
+            "có",
+            "cõ",
+            "cỏ"
           ],
-          "a": "uô",
-          "h": "Âm 'ch' + vần 'uôi' (nguyên âm đôi 'uô' + 'i') + thanh sắc = 'chuối'!",
+          "a": "có",
+          "h": "Tiếng gốc là 'co'. Thêm thanh sắc ta được 'có'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🍌"
+          "emoji": "🔤"
         },
         {
           "id": 3072,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'kiệu' (xe củ kiệu), nguyên âm đôi nào ghép với 'u' ở phần vần?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'co'. Tiếng mới là gì?",
           "o": [
-            "iê",
-            "uô",
-            "ươ",
-            "ia"
+            "có",
+            "cỏ",
+            "cò",
+            "cõ"
           ],
-          "a": "iê",
-          "h": "Âm 'k' + vần 'iêu' (nguyên âm đôi 'iê' + 'u') + thanh nặng = 'kiệu'!",
+          "a": "cò",
+          "h": "Tiếng gốc là 'co'. Thêm thanh huyền ta được 'cò'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3073,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'bướm' (chú bướm xinh xắn), nguyên âm đôi nào đứng trước chữ 'm' ở phần vần?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'co' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "ươ",
-            "uô",
-            "iê",
-            "ưa"
+            "cỏ",
+            "có",
+            "cõ",
+            "cò"
           ],
-          "a": "ươ",
-          "h": "Âm 'b' + vần 'ươm' (nguyên âm đôi 'ươ' + 'm') + thanh sắc = 'bướm'!",
-          "img": "assets/images/con_buom.webp",
-          "week": 3,
+          "a": "cỏ",
+          "h": "Tiếng gốc là 'co'. Thêm thanh hỏi ta được 'cỏ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🦋"
+          "emoji": "🔤"
         },
         {
           "id": 3074,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'chuông' (tiếng chuông nhà chùa), vần 'uông' chứa nguyên âm đôi nào?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'co' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "uô",
-            "ươ",
-            "iê",
-            "ua"
+            "có",
+            "cõ",
+            "cò",
+            "cỏ"
           ],
-          "a": "uô",
-          "h": "Âm 'ch' + vần 'uông' (nguyên âm đôi 'uô' + 'ng') = 'chuông'!",
-          "img": "assets/images/ngoi_nha.webp",
-          "week": 3,
+          "a": "cõ",
+          "h": "Tiếng gốc là 'co'. Thêm thanh ngã ta được 'cõ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🏠"
+          "emoji": "🔤"
         },
         {
           "id": 3075,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'hiền' (dì Hiền hiền dịu), vần 'iên' chứa nguyên âm đôi nào?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'co' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "iê",
-            "uô",
-            "ươ",
-            "ia"
+            "cỏ",
+            "cọ",
+            "cò",
+            "có"
           ],
-          "a": "iê",
-          "h": "Âm 'h' + vần 'iên' (nguyên âm đôi 'iê' + 'n') + thanh huyền = 'hiền'!",
+          "a": "cọ",
+          "h": "Tiếng gốc là 'co'. Thêm thanh nặng ta được 'cọ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3076,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'siêng' (chăm chỉ siêng năng), vần 'iêng' chứa nguyên âm đôi nào dưới đây?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'la', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "iê",
-            "uô",
-            "ươ",
-            "ia"
+            "lã",
+            "lả",
+            "là",
+            "lá"
           ],
-          "a": "iê",
-          "h": "Âm 's' + vần 'iêng' (nguyên âm đôi 'iê' + 'ng') = 'siêng'!",
+          "a": "lá",
+          "h": "Tiếng gốc là 'la'. Thêm thanh sắc ta được 'lá'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
+          ],
+          "emoji": "🍃"
+        },
+        {
+          "id": 3077,
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'la'. Tiếng mới là gì?",
+          "o": [
+            "lả",
+            "lã",
+            "là",
+            "lá"
+          ],
+          "a": "là",
+          "h": "Tiếng gốc là 'la'. Thêm thanh huyền ta được 'là'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
-          "id": 3077,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Bé hãy ghép phụ âm 'c' với vần 'uôn' (có 'uô') và thanh sắc để tả hành động cuốn chả lá lốt?",
-          "o": [
-            "cuốn",
-            "cuồn",
-            "cuộn",
-            "cuỏn"
-          ],
-          "a": "cuốn",
-          "h": "Âm 'c' + vần 'uôn' + thanh sắc = 'cuốn' (cuốn chả thơm nức)!",
-          "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
-          "tags": [
-            "week3",
-            "nguyen_am_doi"
-          ],
-          "emoji": "🍍"
-        },
-        {
           "id": 3078,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Bé hãy ghép phụ âm 'nh' với vần 'uôm' (có 'uô') và thanh nặng để chỉ hành động nhuộm vải?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'la' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "nhuộm",
-            "nhuốm",
-            "nhuồm",
-            "nhuôm"
+            "lã",
+            "là",
+            "lá",
+            "lả"
           ],
-          "a": "nhuộm",
-          "h": "Phụ âm 'nh' + vần 'uôm' + thanh nặng = 'nhuộm'!",
+          "a": "lả",
+          "h": "Tiếng gốc là 'la'. Thêm thanh hỏi ta được 'lả'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3079,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Bé hãy ghép phụ âm 'v' với vần 'uôt' (có 'uô') và thanh sắc để tả bộ móng vuốt của chú mèo?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'la' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "vuốt",
-            "vuột",
-            "vuồn",
-            "vuốn"
+            "lá",
+            "lả",
+            "lã",
+            "là"
           ],
-          "a": "vuốt",
-          "h": "Âm 'v' + vần 'uôt' + thanh sắc = 'vuốt'!",
-          "img": "assets/images/con_meo.webp",
-          "week": 3,
+          "a": "lã",
+          "h": "Tiếng gốc là 'la'. Thêm thanh ngã ta được 'lã'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🐱"
+          "emoji": "🔤"
         },
         {
           "id": 3080,
-          "sub": "3.5 Nguyên âm đôi nâng cao",
-          "q": "Trong tiếng 'thuyền' (chiếc thuyền buồm), nguyên âm đôi nào kết hợp với 'u' và 'n'?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'la' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "yê",
-            "iê",
-            "uô",
-            "ươ"
+            "lạ",
+            "lả",
+            "là",
+            "lá"
           ],
-          "a": "yê",
-          "h": "Âm 'th' + vần 'uyển' (có 'uyê') + thanh huyền = 'thuyền'!",
-          "img": "assets/images/chiec_thuyen.webp",
-          "week": 3,
+          "a": "lạ",
+          "h": "Tiếng gốc là 'la'. Thêm thanh nặng ta được 'lạ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
           "tags": [
-            "week3",
-            "nguyen_am_doi"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "⛵"
+          "emoji": "🔤"
         },
         {
           "id": 3081,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'ngoại' (bà ngoại kính yêu), vần ghép phức tạp gồm 3 chữ cái 'o', 'a', 'i' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'ma', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "oai",
-            "oan",
-            "oac",
-            "oat"
+            "mả",
+            "mà",
+            "mã",
+            "má"
           ],
-          "a": "oai",
-          "h": "Âm 'ng' + vần 'oai' + thanh nặng = 'ngoại'!",
+          "a": "má",
+          "h": "Tiếng gốc là 'ma'. Thêm thanh sắc ta được 'má'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👵"
+          "emoji": "🔤"
         },
         {
           "id": 3082,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'ngoan' (bé ngoan biết vâng lời), vần ghép phức tạp gồm 'o', 'a', 'n' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'ma'. Tiếng mới là gì?",
           "o": [
-            "oan",
-            "oai",
-            "oac",
-            "oat"
+            "mả",
+            "mã",
+            "má",
+            "mà"
           ],
-          "a": "oan",
-          "h": "Âm 'ng' + vần 'oan' = 'ngoan'!",
+          "a": "mà",
+          "h": "Tiếng gốc là 'ma'. Thêm thanh huyền ta được 'mà'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3083,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'khoác' (khoác áo ấm mùa đông), vần ghép phức tạp gồm 'o', 'a', 'c' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'ma' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "oac",
-            "oan",
-            "oai",
-            "oat"
+            "mã",
+            "mả",
+            "mà",
+            "má"
           ],
-          "a": "oac",
-          "h": "Phụ âm 'kh' + vần 'oac' + thanh sắc = 'khoác'!",
+          "a": "mả",
+          "h": "Tiếng gốc là 'ma'. Thêm thanh hỏi ta được 'mả'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3084,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'thoát' (thoát khỏi nguy hiểm), vần ghép phức tạp gồm 'o', 'a', 't' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'ma' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "oat",
-            "oac",
-            "oan",
-            "oai"
+            "mả",
+            "mà",
+            "mã",
+            "má"
           ],
-          "a": "oat",
-          "h": "Phụ âm 'th' + vần 'oat' + thanh sắc = 'thoát'!",
+          "a": "mã",
+          "h": "Tiếng gốc là 'ma'. Thêm thanh ngã ta được 'mã'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3085,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'kh' với vần phức tạp 'uyên' và thanh huyền để chỉ lời cô giáo khuyên bảo?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'ma' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "khuyên",
-            "chuyên",
-            "thuyên",
-            "phuyên"
+            "mả",
+            "má",
+            "mà",
+            "mạ"
           ],
-          "a": "khuyên",
-          "h": "Phụ âm 'kh' + vần 'uyên' + thanh huyền = 'khuyên'!",
+          "a": "mạ",
+          "h": "Tiếng gốc là 'ma'. Thêm thanh nặng ta được 'mạ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👩‍🏫"
+          "emoji": "🔤"
         },
         {
           "id": 3086,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'h' với vần phức tạp 'oat' và thanh nặng để chỉ các hoạt động tập thể dục?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'me', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "hoạt",
-            "hoát",
-            "hoàn",
-            "hoang"
+            "mẽ",
+            "mè",
+            "mẻ",
+            "mé"
           ],
-          "a": "hoạt",
-          "h": "Phụ âm 'h' + vần 'oat' + thanh nặng = 'hoạt' (hoạt động vui tươi)!",
+          "a": "mé",
+          "h": "Tiếng gốc là 'me'. Thêm thanh sắc ta được 'mé'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3087,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'h' với vần 'uynh' và thanh nặng để mô tả tiếng bước chân huỳnh huỵch?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'me'. Tiếng mới là gì?",
           "o": [
-            "huỳnh",
-            "huýnh",
-            "huỵch",
-            "huôn"
+            "mé",
+            "mè",
+            "mẽ",
+            "mẻ"
           ],
-          "a": "huỳnh",
-          "h": "Phụ âm 'h' + vần 'uynh' + thanh nặng = 'huỳnh'!",
+          "a": "mè",
+          "h": "Tiếng gốc là 'me'. Thêm thanh huyền ta được 'mè'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🦶"
+          "emoji": "🔤"
         },
         {
           "id": 3088,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'x' với vần 'oay' và thanh sắc để chỉ cơn gió xoáy tròn mạnh mẽ?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'me' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "xoáy",
-            "xoay",
-            "xoài",
-            "xoại"
+            "mè",
+            "mé",
+            "mẻ",
+            "mẽ"
           ],
-          "a": "xoáy",
-          "h": "Phụ âm 'x' + vần 'oay' + thanh sắc = 'xoáy'!",
+          "a": "mẻ",
+          "h": "Tiếng gốc là 'me'. Thêm thanh hỏi ta được 'mẻ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "💨"
+          "emoji": "🔤"
         },
         {
           "id": 3089,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'h' với vần 'uê' và thanh sắc để chỉ tên cố đô Huế mộng mơ?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'me' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "Huế",
-            "Huề",
-            "Huệ",
-            "Huẻ"
+            "mé",
+            "mè",
+            "mẻ",
+            "mẽ"
           ],
-          "a": "Huế",
-          "h": "Phụ âm 'h' + vần 'uê' + thanh sắc = 'Huế'!",
+          "a": "mẽ",
+          "h": "Tiếng gốc là 'me'. Thêm thanh ngã ta được 'mẽ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3090,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'x' với vần 'oăn' để chỉ mái tóc xoăn xinh xắn bồng bềnh?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'me' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "xoăn",
-            "xoắn",
-            "xoằn",
-            "xoặn"
+            "mẻ",
+            "mé",
+            "mè",
+            "mẹ"
           ],
-          "a": "xoăn",
-          "h": "Phụ âm 'x' + vần 'oăn' = 'xoăn' (mái tóc xoăn ngộ nghĩnh)!",
+          "a": "mẹ",
+          "h": "Tiếng gốc là 'me'. Thêm thanh nặng ta được 'mẹ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3091,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'th' với vần 'oăt' và thanh sắc để tả cử chỉ thoắt ẩn thoắt hiện nhanh nhẹn?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'mo', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "thoắt",
-            "thoát",
-            "thoăn",
-            "thoong"
+            "mò",
+            "mỏ",
+            "mõ",
+            "mó"
           ],
-          "a": "thoắt",
-          "h": "Phụ âm 'th' + vần 'oăt' + thanh sắc = 'thoắt'!",
+          "a": "mó",
+          "h": "Tiếng gốc là 'mo'. Thêm thanh sắc ta được 'mó'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3092,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 't' với vần 'uyêt' và thanh sắc để chỉ những hạt tuyết trắng rơi vào mùa đông?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'mo'. Tiếng mới là gì?",
           "o": [
-            "tuyết",
-            "tuyền",
-            "tuyện",
-            "tuyệt"
+            "mò",
+            "mõ",
+            "mó",
+            "mỏ"
           ],
-          "a": "tuyết",
-          "h": "Phụ âm 't' + vần 'uyêt' + thanh sắc = 'tuyết'!",
+          "a": "mò",
+          "h": "Tiếng gốc là 'mo'. Thêm thanh huyền ta được 'mò'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3093,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'x' với vần 'uât' và thanh sắc để chỉ sự xuất hiện của ông mặt trời?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'mo' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "xuất",
-            "xuân",
-            "xuôi",
-            "xuống"
+            "mó",
+            "mõ",
+            "mò",
+            "mỏ"
           ],
-          "a": "xuất",
-          "h": "Phụ âm 'x' + vần 'uât' + thanh sắc = 'xuất' (xuất hiện)!",
-          "img": "assets/images/mat_troi.webp",
-          "week": 3,
+          "a": "mỏ",
+          "h": "Tiếng gốc là 'mo'. Thêm thanh hỏi ta được 'mỏ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "👴"
+          "emoji": "🔤"
         },
         {
           "id": 3094,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'x' với vần 'uân' để chỉ mùa xuân trăm hoa nở khoe sắc rực rỡ?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'mo' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "xuân",
-            "xuất",
-            "xoăn",
-            "xoáy"
+            "mõ",
+            "mò",
+            "mó",
+            "mỏ"
           ],
-          "a": "xuân",
-          "h": "Phụ âm 'x' + vần 'uân' = 'xuân' (mùa xuân ấm áp)!",
-          "img": "assets/images/bong_hoa.webp",
-          "week": 3,
+          "a": "mõ",
+          "h": "Tiếng gốc là 'mo'. Thêm thanh ngã ta được 'mõ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🌸"
+          "emoji": "🔤"
         },
         {
           "id": 3095,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong từ 'chiếc choàng', tiếng 'choàng' chứa vần ghép phức tạp nào dính liền rực rỡ?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'mo' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "oang",
-            "oanh",
-            "oach",
-            "oat"
+            "mò",
+            "mỏ",
+            "mó",
+            "mọ"
           ],
-          "a": "oang",
-          "h": "Phụ âm 'ch' + vần 'oang' + thanh huyền = 'choàng'!",
+          "a": "mọ",
+          "h": "Tiếng gốc là 'mo'. Thêm thanh nặng ta được 'mọ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3096,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong từ 'khoang tàu', tiếng 'khoang' chứa vần ghép phức tạp nào dưới đây?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Từ tiếng 'lo', thêm thanh sắc thì bé được tiếng nào?",
           "o": [
-            "oang",
-            "oanh",
-            "oach",
-            "oat"
+            "lõ",
+            "lò",
+            "ló",
+            "lỏ"
           ],
-          "a": "oang",
-          "h": "Phụ âm 'kh' + vần 'oang' = 'khoang' tàu!",
+          "a": "ló",
+          "h": "Tiếng gốc là 'lo'. Thêm thanh sắc ta được 'ló'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3097,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'doanh' (doanh trại quân đội), phần vần gồm 'o', 'a', 'n', 'h' ghép lại là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé đặt thanh huyền vào tiếng 'lo'. Tiếng mới là gì?",
           "o": [
-            "oanh",
-            "oang",
-            "oach",
-            "oat"
+            "lõ",
+            "lò",
+            "lỏ",
+            "ló"
           ],
-          "a": "oanh",
-          "h": "Phụ âm 'd' + vần 'oanh' = 'doanh'!",
+          "a": "lò",
+          "h": "Tiếng gốc là 'lo'. Thêm thanh huyền ta được 'lò'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3098,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'hoạch' (kế hoạch học tập tốt), phần vần kết thúc bằng âm 'ch' là vần gì?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Tiếng 'lo' chưa có dấu thanh. Nếu thêm thanh hỏi, bé chọn kết quả đúng nhé!",
           "o": [
-            "oach",
-            "oanh",
-            "oang",
-            "oat"
+            "lỏ",
+            "ló",
+            "lò",
+            "lõ"
           ],
-          "a": "oach",
-          "h": "Phụ âm 'h' + vần 'oach' + thanh nặng = 'hoạch'!",
+          "a": "lỏ",
+          "h": "Tiếng gốc là 'lo'. Thêm thanh hỏi ta được 'lỏ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
-          "emoji": "🏫"
+          "emoji": "🔤"
         },
         {
           "id": 3099,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'khuỵu' (khuỵu gối ngã), vần 'uỵu' chứa vần ghép phức tạp nào?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Cô đọc yêu cầu: 'lo' + thanh ngã. Bé tìm tiếng được tạo thành.",
           "o": [
-            "uyu",
-            "uyen",
-            "uynh",
-            "uyet"
+            "ló",
+            "lò",
+            "lỏ",
+            "lõ"
           ],
-          "a": "uyu",
-          "h": "Phụ âm 'kh' + vần 'uyu' + thanh nặng = 'khuỵu'!",
+          "a": "lõ",
+          "h": "Tiếng gốc là 'lo'. Thêm thanh ngã ta được 'lõ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3100,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép phụ âm 'ch' với vần 'uyêt' và thanh sắc để chỉ hành động duyệt binh nghiêm trang?",
+          "sub": "3.2 Cấp 2 - Ghép tiếng và thêm thanh",
+          "q": "Bé biến đổi tiếng 'lo' bằng cách thêm thanh nặng. Đáp án nào đúng?",
           "o": [
-            "duyệt",
-            "tuyết",
-            "khuyên",
-            "chuyết"
+            "lọ",
+            "ló",
+            "lỏ",
+            "lò"
           ],
-          "a": "duyệt",
-          "h": "Phụ âm 'd' + vần 'uyêt' + thanh nặng = 'duyệt'!",
+          "a": "lọ",
+          "h": "Tiếng gốc là 'lo'. Thêm thanh nặng ta được 'lọ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
-          "week": 3,
+          "week": 2,
           "tags": [
-            "week3",
-            "van_phuc_tap"
+            "week2",
+            "ghep_am_van",
+            "cap2_them_thanh"
           ],
           "emoji": "🔤"
         },
         {
           "id": 3101,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong từ 'hoa huệ', tiếng 'huệ' chứa vần ghép nào dễ thương dưới đây?",
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'b' với vần 'an'. Tiếng nào được tạo thành?",
           "o": [
-            "uê",
-            "uy",
-            "uo",
-            "ua"
+            "ban",
+            "tan",
+            "lan",
+            "van"
           ],
-          "a": "uê",
-          "h": "Âm 'h' + vần 'uê' + thanh nặng = 'huệ' (bông hoa huệ trắng tinh)!",
+          "a": "ban",
+          "h": "Âm đầu 'b' đứng trước, vần 'an' đứng sau: b + an = 'ban'. Bé đọc liền tiếng 'ban' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3102,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'an' đang chờ một âm đầu. Ghép với 'l' thì được tiếng gì?",
+          "o": [
+            "tan",
+            "lan",
+            "van",
+            "ban"
+          ],
+          "a": "lan",
+          "h": "Âm đầu 'l' đứng trước, vần 'an' đứng sau: l + an = 'lan'. Bé đọc liền tiếng 'lan' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3103,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 't' và 'an' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "tan",
+            "van",
+            "lan",
+            "ban"
+          ],
+          "a": "tan",
+          "h": "Âm đầu 't' đứng trước, vần 'an' đứng sau: t + an = 'tan'. Bé đọc liền tiếng 'tan' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3104,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 'v' và vần 'an'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "ban",
+            "lan",
+            "tan",
+            "van"
+          ],
+          "a": "van",
+          "h": "Âm đầu 'v' đứng trước, vần 'an' đứng sau: v + an = 'van'. Bé đọc liền tiếng 'van' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3105,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'th' + 'an' bằng tiếng nào dưới đây?",
+          "o": [
+            "tan",
+            "lan",
+            "than",
+            "ban"
+          ],
+          "a": "than",
+          "h": "Âm đầu 'th' đứng trước, vần 'an' đứng sau: th + an = 'than'. Bé đọc liền tiếng 'than' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3106,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'c' với vần 'am'. Tiếng nào được tạo thành?",
+          "o": [
+            "nam",
+            "lam",
+            "tam",
+            "cam"
+          ],
+          "a": "cam",
+          "h": "Âm đầu 'c' đứng trước, vần 'am' đứng sau: c + am = 'cam'. Bé đọc liền tiếng 'cam' nhé!",
+          "img": "assets/images/qua_cam.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🍊"
+        },
+        {
+          "id": 3107,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'am' đang chờ một âm đầu. Ghép với 'l' thì được tiếng gì?",
+          "o": [
+            "tam",
+            "nam",
+            "lam",
+            "cam"
+          ],
+          "a": "lam",
+          "h": "Âm đầu 'l' đứng trước, vần 'am' đứng sau: l + am = 'lam'. Bé đọc liền tiếng 'lam' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3108,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'n' và 'am' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "tam",
+            "lam",
+            "nam",
+            "cam"
+          ],
+          "a": "nam",
+          "h": "Âm đầu 'n' đứng trước, vần 'am' đứng sau: n + am = 'nam'. Bé đọc liền tiếng 'nam' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3109,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 't' và vần 'am'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "lam",
+            "tam",
+            "nam",
+            "cam"
+          ],
+          "a": "tam",
+          "h": "Âm đầu 't' đứng trước, vần 'am' đứng sau: t + am = 'tam'. Bé đọc liền tiếng 'tam' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3110,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'ch' + 'am' bằng tiếng nào dưới đây?",
+          "o": [
+            "cham",
+            "lam",
+            "nam",
+            "cam"
+          ],
+          "a": "cham",
+          "h": "Âm đầu 'ch' đứng trước, vần 'am' đứng sau: ch + am = 'cham'. Bé đọc liền tiếng 'cham' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3111,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'b' với vần 'ao'. Tiếng nào được tạo thành?",
+          "o": [
+            "cao",
+            "dao",
+            "sao",
+            "bao"
+          ],
+          "a": "bao",
+          "h": "Âm đầu 'b' đứng trước, vần 'ao' đứng sau: b + ao = 'bao'. Bé đọc liền tiếng 'bao' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3112,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'ao' đang chờ một âm đầu. Ghép với 'c' thì được tiếng gì?",
+          "o": [
+            "cao",
+            "bao",
+            "dao",
+            "sao"
+          ],
+          "a": "cao",
+          "h": "Âm đầu 'c' đứng trước, vần 'ao' đứng sau: c + ao = 'cao'. Bé đọc liền tiếng 'cao' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3113,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'd' và 'ao' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "dao",
+            "sao",
+            "cao",
+            "bao"
+          ],
+          "a": "dao",
+          "h": "Âm đầu 'd' đứng trước, vần 'ao' đứng sau: d + ao = 'dao'. Bé đọc liền tiếng 'dao' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3114,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 's' và vần 'ao'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "cao",
+            "dao",
+            "sao",
+            "bao"
+          ],
+          "a": "sao",
+          "h": "Âm đầu 's' đứng trước, vần 'ao' đứng sau: s + ao = 'sao'. Bé đọc liền tiếng 'sao' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3115,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'ch' + 'ao' bằng tiếng nào dưới đây?",
+          "o": [
+            "cao",
+            "chao",
+            "bao",
+            "dao"
+          ],
+          "a": "chao",
+          "h": "Âm đầu 'ch' đứng trước, vần 'ao' đứng sau: ch + ao = 'chao'. Bé đọc liền tiếng 'chao' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3116,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'm' với vần 'ai'. Tiếng nào được tạo thành?",
+          "o": [
+            "tai",
+            "lai",
+            "mai",
+            "chai"
+          ],
+          "a": "mai",
+          "h": "Âm đầu 'm' đứng trước, vần 'ai' đứng sau: m + ai = 'mai'. Bé đọc liền tiếng 'mai' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3117,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'ai' đang chờ một âm đầu. Ghép với 't' thì được tiếng gì?",
+          "o": [
+            "chai",
+            "lai",
+            "tai",
+            "mai"
+          ],
+          "a": "tai",
+          "h": "Âm đầu 't' đứng trước, vần 'ai' đứng sau: t + ai = 'tai'. Bé đọc liền tiếng 'tai' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3118,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'l' và 'ai' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "tai",
+            "chai",
+            "mai",
+            "lai"
+          ],
+          "a": "lai",
+          "h": "Âm đầu 'l' đứng trước, vần 'ai' đứng sau: l + ai = 'lai'. Bé đọc liền tiếng 'lai' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3119,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 'ch' và vần 'ai'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "lai",
+            "chai",
+            "tai",
+            "mai"
+          ],
+          "a": "chai",
+          "h": "Âm đầu 'ch' đứng trước, vần 'ai' đứng sau: ch + ai = 'chai'. Bé đọc liền tiếng 'chai' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3120,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'ph' + 'ai' bằng tiếng nào dưới đây?",
+          "o": [
+            "lai",
+            "tai",
+            "phai",
+            "mai"
+          ],
+          "a": "phai",
+          "h": "Âm đầu 'ph' đứng trước, vần 'ai' đứng sau: ph + ai = 'phai'. Bé đọc liền tiếng 'phai' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3121,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'h' với vần 'oa'. Tiếng nào được tạo thành?",
+          "o": [
+            "khoa",
+            "hoa",
+            "xoa",
+            "toa"
+          ],
+          "a": "hoa",
+          "h": "Âm đầu 'h' đứng trước, vần 'oa' đứng sau: h + oa = 'hoa'. Bé đọc liền tiếng 'hoa' nhé!",
           "img": "assets/images/bong_hoa.webp",
           "week": 3,
           "tags": [
             "week3",
-            "van_phuc_tap"
+            "ghep_am_van",
+            "cap3_am_dau_van"
           ],
           "emoji": "🌸"
         },
         {
-          "id": 3102,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'Lũy' (lũy tre xanh), vần 'uy' gồm hai nguyên âm nào ghép lại?",
+          "id": 3122,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'oa' đang chờ một âm đầu. Ghép với 'kh' thì được tiếng gì?",
           "o": [
-            "u và y",
-            "u và e",
-            "o và a",
-            "i và e"
+            "hoa",
+            "xoa",
+            "toa",
+            "khoa"
           ],
-          "a": "u và y",
-          "h": "Vần 'uy' gồm nguyên âm 'u' đứng trước và 'y' đứng sau!",
+          "a": "khoa",
+          "h": "Âm đầu 'kh' đứng trước, vần 'oa' đứng sau: kh + oa = 'khoa'. Bé đọc liền tiếng 'khoa' nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 3,
           "tags": [
             "week3",
-            "van_phuc_tap"
+            "ghep_am_van",
+            "cap3_am_dau_van"
           ],
-          "emoji": "🌿"
+          "emoji": "🔤"
         },
         {
-          "id": 3103,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy ghép âm 'l' với vần 'oan' và thanh huyền để chỉ chiếc xóm nhỏ yên bình?",
+          "id": 3123,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 't' và 'oa' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
           "o": [
-            "loan",
-            "loán",
-            "loạn",
-            "loản"
+            "khoa",
+            "toa",
+            "hoa",
+            "xoa"
           ],
-          "a": "loan",
-          "h": "Âm 'l' + vần 'oan' = 'loan' (chim loan chim phượng)!",
+          "a": "toa",
+          "h": "Âm đầu 't' đứng trước, vần 'oa' đứng sau: t + oa = 'toa'. Bé đọc liền tiếng 'toa' nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 3,
           "tags": [
             "week3",
-            "van_phuc_tap"
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3124,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 'x' và vần 'oa'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "hoa",
+            "toa",
+            "khoa",
+            "xoa"
+          ],
+          "a": "xoa",
+          "h": "Âm đầu 'x' đứng trước, vần 'oa' đứng sau: x + oa = 'xoa'. Bé đọc liền tiếng 'xoa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3125,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'th' + 'oa' bằng tiếng nào dưới đây?",
+          "o": [
+            "hoa",
+            "thoa",
+            "toa",
+            "khoa"
+          ],
+          "a": "thoa",
+          "h": "Âm đầu 'th' đứng trước, vần 'oa' đứng sau: th + oa = 'thoa'. Bé đọc liền tiếng 'thoa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3126,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'b' với vần 'ong'. Tiếng nào được tạo thành?",
+          "o": [
+            "rong",
+            "song",
+            "cong",
+            "bong"
+          ],
+          "a": "bong",
+          "h": "Âm đầu 'b' đứng trước, vần 'ong' đứng sau: b + ong = 'bong'. Bé đọc liền tiếng 'bong' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3127,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'ong' đang chờ một âm đầu. Ghép với 'c' thì được tiếng gì?",
+          "o": [
+            "cong",
+            "song",
+            "bong",
+            "rong"
+          ],
+          "a": "cong",
+          "h": "Âm đầu 'c' đứng trước, vần 'ong' đứng sau: c + ong = 'cong'. Bé đọc liền tiếng 'cong' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3128,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 's' và 'ong' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "song",
+            "bong",
+            "rong",
+            "cong"
+          ],
+          "a": "song",
+          "h": "Âm đầu 's' đứng trước, vần 'ong' đứng sau: s + ong = 'song'. Bé đọc liền tiếng 'song' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3129,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 'r' và vần 'ong'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "song",
+            "bong",
+            "cong",
+            "rong"
+          ],
+          "a": "rong",
+          "h": "Âm đầu 'r' đứng trước, vần 'ong' đứng sau: r + ong = 'rong'. Bé đọc liền tiếng 'rong' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3130,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'l' + 'ong' bằng tiếng nào dưới đây?",
+          "o": [
+            "bong",
+            "long",
+            "song",
+            "cong"
+          ],
+          "a": "long",
+          "h": "Âm đầu 'l' đứng trước, vần 'ong' đứng sau: l + ong = 'long'. Bé đọc liền tiếng 'long' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3131,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'v' với vần 'ui'. Tiếng nào được tạo thành?",
+          "o": [
+            "vui",
+            "lui",
+            "chui",
+            "nui"
+          ],
+          "a": "vui",
+          "h": "Âm đầu 'v' đứng trước, vần 'ui' đứng sau: v + ui = 'vui'. Bé đọc liền tiếng 'vui' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3132,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'ui' đang chờ một âm đầu. Ghép với 'ch' thì được tiếng gì?",
+          "o": [
+            "vui",
+            "chui",
+            "nui",
+            "lui"
+          ],
+          "a": "chui",
+          "h": "Âm đầu 'ch' đứng trước, vần 'ui' đứng sau: ch + ui = 'chui'. Bé đọc liền tiếng 'chui' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3133,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'l' và 'ui' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "chui",
+            "lui",
+            "vui",
+            "nui"
+          ],
+          "a": "lui",
+          "h": "Âm đầu 'l' đứng trước, vần 'ui' đứng sau: l + ui = 'lui'. Bé đọc liền tiếng 'lui' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3134,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 'n' và vần 'ui'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "chui",
+            "lui",
+            "vui",
+            "nui"
+          ],
+          "a": "nui",
+          "h": "Âm đầu 'n' đứng trước, vần 'ui' đứng sau: n + ui = 'nui'. Bé đọc liền tiếng 'nui' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3135,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 't' + 'ui' bằng tiếng nào dưới đây?",
+          "o": [
+            "vui",
+            "lui",
+            "tui",
+            "chui"
+          ],
+          "a": "tui",
+          "h": "Âm đầu 't' đứng trước, vần 'ui' đứng sau: t + ui = 'tui'. Bé đọc liền tiếng 'tui' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3136,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'k' với vần 'im'. Tiếng nào được tạo thành?",
+          "o": [
+            "lim",
+            "chim",
+            "kim",
+            "tim"
+          ],
+          "a": "kim",
+          "h": "Âm đầu 'k' đứng trước, vần 'im' đứng sau: k + im = 'kim'. Bé đọc liền tiếng 'kim' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3137,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'im' đang chờ một âm đầu. Ghép với 'ch' thì được tiếng gì?",
+          "o": [
+            "chim",
+            "kim",
+            "lim",
+            "tim"
+          ],
+          "a": "chim",
+          "h": "Âm đầu 'ch' đứng trước, vần 'im' đứng sau: ch + im = 'chim'. Bé đọc liền tiếng 'chim' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
           ],
           "emoji": "🐦"
         },
         {
-          "id": 3104,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Trong tiếng 'quay' (kim đồng hồ quay), phần vần gồm 'a' và 'y' đứng sau âm 'qu' là vần gì?",
+          "id": 3138,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'l' và 'im' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
           "o": [
-            "ay",
-            "ai",
-            "ây",
-            "oi"
+            "kim",
+            "tim",
+            "lim",
+            "chim"
           ],
-          "a": "ay",
-          "h": "Âm 'qu' + vần 'ay' = 'quay'!",
+          "a": "lim",
+          "h": "Âm đầu 'l' đứng trước, vần 'im' đứng sau: l + im = 'lim'. Bé đọc liền tiếng 'lim' nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 3,
           "tags": [
             "week3",
-            "van_phuc_tap"
+            "ghep_am_van",
+            "cap3_am_dau_van"
           ],
-          "emoji": "⏰"
+          "emoji": "🔤"
         },
         {
-          "id": 3105,
-          "sub": "3.6 Vần ghép phức tạp Lớp 1",
-          "q": "Bé hãy chọn vần thích hợp để điền vào từ chỉ trái cây thơm ngon: 'quả tr...'(ngoại)?",
+          "id": 3139,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 't' và vần 'im'. Bé hoàn thành tiếng còn thiếu.",
           "o": [
-            "oài",
-            "oan",
-            "oac",
-            "oat"
+            "tim",
+            "chim",
+            "kim",
+            "lim"
           ],
-          "a": "oài",
-          "h": "Từ hoàn chỉnh: 'quả xoài' (hoặc 'trái xoài') có vần 'oai'!",
-          "img": "assets/images/qua_xoai.webp",
+          "a": "tim",
+          "h": "Âm đầu 't' đứng trước, vần 'im' đứng sau: t + im = 'tim'. Bé đọc liền tiếng 'tim' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 3,
           "tags": [
             "week3",
-            "van_phuc_tap"
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3140,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'gh' + 'im' bằng tiếng nào dưới đây?",
+          "o": [
+            "kim",
+            "ghim",
+            "lim",
+            "chim"
+          ],
+          "a": "ghim",
+          "h": "Âm đầu 'gh' đứng trước, vần 'im' đứng sau: gh + im = 'ghim'. Bé đọc liền tiếng 'ghim' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3141,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'b' với vần 'inh'. Tiếng nào được tạo thành?",
+          "o": [
+            "xinh",
+            "linh",
+            "tinh",
+            "binh"
+          ],
+          "a": "binh",
+          "h": "Âm đầu 'b' đứng trước, vần 'inh' đứng sau: b + inh = 'binh'. Bé đọc liền tiếng 'binh' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3142,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'inh' đang chờ một âm đầu. Ghép với 'x' thì được tiếng gì?",
+          "o": [
+            "binh",
+            "xinh",
+            "tinh",
+            "linh"
+          ],
+          "a": "xinh",
+          "h": "Âm đầu 'x' đứng trước, vần 'inh' đứng sau: x + inh = 'xinh'. Bé đọc liền tiếng 'xinh' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3143,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'l' và 'inh' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "tinh",
+            "linh",
+            "binh",
+            "xinh"
+          ],
+          "a": "linh",
+          "h": "Âm đầu 'l' đứng trước, vần 'inh' đứng sau: l + inh = 'linh'. Bé đọc liền tiếng 'linh' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3144,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 't' và vần 'inh'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "xinh",
+            "binh",
+            "tinh",
+            "linh"
+          ],
+          "a": "tinh",
+          "h": "Âm đầu 't' đứng trước, vần 'inh' đứng sau: t + inh = 'tinh'. Bé đọc liền tiếng 'tinh' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3145,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'ch' + 'inh' bằng tiếng nào dưới đây?",
+          "o": [
+            "chinh",
+            "xinh",
+            "binh",
+            "linh"
+          ],
+          "a": "chinh",
+          "h": "Âm đầu 'ch' đứng trước, vần 'inh' đứng sau: ch + inh = 'chinh'. Bé đọc liền tiếng 'chinh' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3146,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Bé ghép âm đầu 'm' với vần 'ưa'. Tiếng nào được tạo thành?",
+          "o": [
+            "trưa",
+            "mưa",
+            "thưa",
+            "cưa"
+          ],
+          "a": "mưa",
+          "h": "Âm đầu 'm' đứng trước, vần 'ưa' đứng sau: m + ưa = 'mưa'. Bé đọc liền tiếng 'mưa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🌧️"
+        },
+        {
+          "id": 3147,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Vần 'ưa' đang chờ một âm đầu. Ghép với 'th' thì được tiếng gì?",
+          "o": [
+            "cưa",
+            "thưa",
+            "mưa",
+            "trưa"
+          ],
+          "a": "thưa",
+          "h": "Âm đầu 'th' đứng trước, vần 'ưa' đứng sau: th + ưa = 'thưa'. Bé đọc liền tiếng 'thưa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3148,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Hai mảnh 'c' và 'ưa' ghép lại với nhau. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "cưa",
+            "thưa",
+            "trưa",
+            "mưa"
+          ],
+          "a": "cưa",
+          "h": "Âm đầu 'c' đứng trước, vần 'ưa' đứng sau: c + ưa = 'cưa'. Bé đọc liền tiếng 'cưa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3149,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Cô có âm đầu 'tr' và vần 'ưa'. Bé hoàn thành tiếng còn thiếu.",
+          "o": [
+            "mưa",
+            "cưa",
+            "trưa",
+            "thưa"
+          ],
+          "a": "trưa",
+          "h": "Âm đầu 'tr' đứng trước, vần 'ưa' đứng sau: tr + ưa = 'trưa'. Bé đọc liền tiếng 'trưa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3150,
+          "sub": "3.3 Cấp 3 - Ghép âm đầu với vần",
+          "q": "Thử tài ghép vần: 'd' + 'ưa' bằng tiếng nào dưới đây?",
+          "o": [
+            "mưa",
+            "thưa",
+            "cưa",
+            "dưa"
+          ],
+          "a": "dưa",
+          "h": "Âm đầu 'd' đứng trước, vần 'ưa' đứng sau: d + ưa = 'dưa'. Bé đọc liền tiếng 'dưa' nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap3_am_dau_van"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3151,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'th' với vần 'o', rồi thêm thanh hỏi. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "thỏ",
+            "chó",
+            "gió",
+            "thước"
+          ],
+          "a": "thỏ",
+          "h": "Ta ghép âm đầu 'th' với vần 'o', sau đó thêm thanh hỏi để được tiếng 'thỏ'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_ngang.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐰"
+        },
+        {
+          "id": 3152,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'b' + 'anh' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "bàn",
+            "bánh",
+            "bướm",
+            "bút"
+          ],
+          "a": "bánh",
+          "h": "Ta ghép âm đầu 'b' với vần 'anh', sau đó thêm thanh sắc để được tiếng 'bánh'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3153,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'tr', vần 'ương', thanh huyền. Kết quả nào chính xác?",
+          "o": [
+            "trường",
+            "trâu",
+            "giường",
+            "chào"
+          ],
+          "a": "trường",
+          "h": "Ta ghép âm đầu 'tr' với vần 'ương', sau đó thêm thanh huyền để được tiếng 'trường'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3154,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'ch' và 'ao', sau đó đặt thanh huyền.",
+          "o": [
+            "chim",
+            "chào",
+            "chó",
+            "táo"
+          ],
+          "a": "chào",
+          "h": "Ta ghép âm đầu 'ch' với vần 'ao', sau đó thêm thanh huyền để được tiếng 'chào'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3155,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 's' - 'ach' - thanh sắc. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "lớp",
+            "bánh",
+            "bút",
+            "sách"
+          ],
+          "a": "sách",
+          "h": "Ta ghép âm đầu 's' với vần 'ach', sau đó thêm thanh sắc để được tiếng 'sách'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/quyen_sach.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "📚"
+        },
+        {
+          "id": 3156,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'b' với vần 'an', rồi thêm thanh huyền. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "bướm",
+            "bánh",
+            "bút",
+            "bàn"
+          ],
+          "a": "bàn",
+          "h": "Ta ghép âm đầu 'b' với vần 'an', sau đó thêm thanh huyền để được tiếng 'bàn'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🪑"
+        },
+        {
+          "id": 3157,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'l' + 'ơp' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "lớp",
+            "bánh",
+            "lá",
+            "lê"
+          ],
+          "a": "lớp",
+          "h": "Ta ghép âm đầu 'l' với vần 'ơp', sau đó thêm thanh sắc để được tiếng 'lớp'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🏫"
+        },
+        {
+          "id": 3158,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'h', vần 'oc', thanh nặng. Kết quả nào chính xác?",
+          "o": [
+            "học",
+            "mực",
+            "hòa",
+            "hoa"
+          ],
+          "a": "học",
+          "h": "Ta ghép âm đầu 'h' với vần 'oc', sau đó thêm thanh nặng để được tiếng 'học'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3159,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'v' và 'ơ', sau đó đặt thanh hỏi.",
+          "o": [
+            "nghỉ",
+            "vịt",
+            "vở",
+            "thỏ"
+          ],
+          "a": "vở",
+          "h": "Ta ghép âm đầu 'v' với vần 'ơ', sau đó thêm thanh hỏi để được tiếng 'vở'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "📒"
+        },
+        {
+          "id": 3160,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'b' - 'ut' - thanh sắc. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "bàn",
+            "bánh",
+            "bướm",
+            "bút"
+          ],
+          "a": "bút",
+          "h": "Ta ghép âm đầu 'b' với vần 'ut', sau đó thêm thanh sắc để được tiếng 'bút'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "✏️"
+        },
+        {
+          "id": 3161,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'm' với vần 'ưc', rồi thêm thanh nặng. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "mực",
+            "mèo",
+            "mưa",
+            "mây"
+          ],
+          "a": "mực",
+          "h": "Ta ghép âm đầu 'm' với vần 'ưc', sau đó thêm thanh nặng để được tiếng 'mực'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🖋️"
+        },
+        {
+          "id": 3162,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'th' + 'ươc' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "thước",
+            "bánh",
+            "thỏ",
+            "sách"
+          ],
+          "a": "thước",
+          "h": "Ta ghép âm đầu 'th' với vần 'ươc', sau đó thêm thanh sắc để được tiếng 'thước'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/cay_thuoc.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "📏"
+        },
+        {
+          "id": 3163,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'gh', vần 'ê', thanh sắc. Kết quả nào chính xác?",
+          "o": [
+            "bánh",
+            "nghề",
+            "lê",
+            "ghế"
+          ],
+          "a": "ghế",
+          "h": "Ta ghép âm đầu 'gh' với vần 'ê', sau đó thêm thanh sắc để được tiếng 'ghế'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🪑"
+        },
+        {
+          "id": 3164,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'ngh' và 'i', sau đó đặt thanh hỏi.",
+          "o": [
+            "nghỉ",
+            "thỏ",
+            "vở",
+            "nghề"
+          ],
+          "a": "nghỉ",
+          "h": "Ta ghép âm đầu 'ngh' với vần 'i', sau đó thêm thanh hỏi để được tiếng 'nghỉ'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3165,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'ngh' - 'ê' - thanh huyền. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "nghỉ",
+            "lê",
+            "nghề",
+            "ghế"
+          ],
+          "a": "nghề",
+          "h": "Ta ghép âm đầu 'ngh' với vần 'ê', sau đó thêm thanh huyền để được tiếng 'nghề'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3166,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'c' với vần 'a', rồi thêm thanh sắc. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "quả",
+            "lá",
+            "gà",
+            "cá"
+          ],
+          "a": "cá",
+          "h": "Ta ghép âm đầu 'c' với vần 'a', sau đó thêm thanh sắc để được tiếng 'cá'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_ca.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐟"
+        },
+        {
+          "id": 3167,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'g' + 'a' + thanh huyền. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "lá",
+            "cá",
+            "gà",
+            "quả"
+          ],
+          "a": "gà",
+          "h": "Ta ghép âm đầu 'g' với vần 'a', sau đó thêm thanh huyền để được tiếng 'gà'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_ga.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐔"
+        },
+        {
+          "id": 3168,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'ch', vần 'o', thanh sắc. Kết quả nào chính xác?",
+          "o": [
+            "gió",
+            "chó",
+            "chào",
+            "thỏ"
+          ],
+          "a": "chó",
+          "h": "Ta ghép âm đầu 'ch' với vần 'o', sau đó thêm thanh sắc để được tiếng 'chó'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_cho.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐶"
+        },
+        {
+          "id": 3169,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'm' và 'eo', sau đó đặt thanh huyền.",
+          "o": [
+            "mèo",
+            "mực",
+            "mây",
+            "mưa"
+          ],
+          "a": "mèo",
+          "h": "Ta ghép âm đầu 'm' với vần 'eo', sau đó thêm thanh huyền để được tiếng 'mèo'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_meo.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐱"
+        },
+        {
+          "id": 3170,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'v' - 'it' - thanh nặng. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "mực",
+            "vở",
+            "vịt",
+            "học"
+          ],
+          "a": "vịt",
+          "h": "Ta ghép âm đầu 'v' với vần 'it', sau đó thêm thanh nặng để được tiếng 'vịt'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_vit.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🦆"
+        },
+        {
+          "id": 3171,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'tr' với vần 'âu', rồi thêm thanh ngang. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "cua",
+            "trường",
+            "trâu",
+            "tôm"
+          ],
+          "a": "trâu",
+          "h": "Ta ghép âm đầu 'tr' với vần 'âu', sau đó thêm thanh ngang để được tiếng 'trâu'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_trau.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐃"
+        },
+        {
+          "id": 3172,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'c' + 'ua' + thanh ngang. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "cua",
+            "cam",
+            "cá",
+            "cây"
+          ],
+          "a": "cua",
+          "h": "Ta ghép âm đầu 'c' với vần 'ua', sau đó thêm thanh ngang để được tiếng 'cua'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/con_cua.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🦀"
+        },
+        {
+          "id": 3173,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 't', vần 'ôm', thanh ngang. Kết quả nào chính xác?",
+          "o": [
+            "táo",
+            "trâu",
+            "tôm",
+            "cua"
+          ],
+          "a": "tôm",
+          "h": "Ta ghép âm đầu 't' với vần 'ôm', sau đó thêm thanh ngang để được tiếng 'tôm'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🦐"
+        },
+        {
+          "id": 3174,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'b' và 'ươm', sau đó đặt thanh sắc.",
+          "o": [
+            "bướm",
+            "bàn",
+            "bánh",
+            "bút"
+          ],
+          "a": "bướm",
+          "h": "Ta ghép âm đầu 'b' với vần 'ươm', sau đó thêm thanh sắc để được tiếng 'bướm'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🦋"
+        },
+        {
+          "id": 3175,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'ch' - 'im' - thanh ngang. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "chào",
+            "chó",
+            "chuối",
+            "chim"
+          ],
+          "a": "chim",
+          "h": "Ta ghép âm đầu 'ch' với vần 'im', sau đó thêm thanh ngang để được tiếng 'chim'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🐦"
+        },
+        {
+          "id": 3176,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'h' với vần 'oa', rồi thêm thanh huyền. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "trường",
+            "học",
+            "hoa",
+            "hòa"
+          ],
+          "a": "hòa",
+          "h": "Ta ghép âm đầu 'h' với vần 'oa', sau đó thêm thanh huyền để được tiếng 'hòa'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3177,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'm' + 'ưa' + thanh ngang. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "cửa",
+            "dứa",
+            "mưa",
+            "mực"
+          ],
+          "a": "mưa",
+          "h": "Ta ghép âm đầu 'm' với vần 'ưa', sau đó thêm thanh ngang để được tiếng 'mưa'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🌧️"
+        },
+        {
+          "id": 3178,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'n', vần 'ăng', thanh sắc. Kết quả nào chính xác?",
+          "o": [
+            "lớp",
+            "sách",
+            "bánh",
+            "nắng"
+          ],
+          "a": "nắng",
+          "h": "Ta ghép âm đầu 'n' với vần 'ăng', sau đó thêm thanh sắc để được tiếng 'nắng'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3179,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'gi' và 'o', sau đó đặt thanh sắc.",
+          "o": [
+            "gió",
+            "chó",
+            "thỏ",
+            "giường"
+          ],
+          "a": "gió",
+          "h": "Ta ghép âm đầu 'gi' với vần 'o', sau đó thêm thanh sắc để được tiếng 'gió'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🌬️"
+        },
+        {
+          "id": 3180,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'm' - 'ây' - thanh ngang. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "cây",
+            "mây",
+            "mực",
+            "mèo"
+          ],
+          "a": "mây",
+          "h": "Ta ghép âm đầu 'm' với vần 'ây', sau đó thêm thanh ngang để được tiếng 'mây'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "☁️"
+        },
+        {
+          "id": 3181,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'c' với vần 'ây', rồi thêm thanh ngang. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "cua",
+            "cây",
+            "mây",
+            "cá"
+          ],
+          "a": "cây",
+          "h": "Ta ghép âm đầu 'c' với vần 'ây', sau đó thêm thanh ngang để được tiếng 'cây'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🌳"
+        },
+        {
+          "id": 3182,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'l' + 'a' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "gà",
+            "lá",
+            "cá",
+            "quả"
+          ],
+          "a": "lá",
+          "h": "Ta ghép âm đầu 'l' với vần 'a', sau đó thêm thanh sắc để được tiếng 'lá'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🍃"
+        },
+        {
+          "id": 3183,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'h', vần 'oa', thanh ngang. Kết quả nào chính xác?",
+          "o": [
+            "trâu",
+            "hoa",
+            "học",
+            "hòa"
+          ],
+          "a": "hoa",
+          "h": "Ta ghép âm đầu 'h' với vần 'oa', sau đó thêm thanh ngang để được tiếng 'hoa'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/bong_hoa.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🌸"
+        },
+        {
+          "id": 3184,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'qu' và 'a', sau đó đặt thanh hỏi.",
+          "o": [
+            "gà",
+            "cá",
+            "lá",
+            "quả"
+          ],
+          "a": "quả",
+          "h": "Ta ghép âm đầu 'qu' với vần 'a', sau đó thêm thanh hỏi để được tiếng 'quả'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3185,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 't' - 'ao' - thanh sắc. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "tôm",
+            "táo",
+            "bánh",
+            "chào"
+          ],
+          "a": "táo",
+          "h": "Ta ghép âm đầu 't' với vần 'ao', sau đó thêm thanh sắc để được tiếng 'táo'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/qua_tao.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🍎"
+        },
+        {
+          "id": 3186,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'c' với vần 'am', rồi thêm thanh ngang. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "cây",
+            "cua",
+            "cam",
+            "cá"
+          ],
+          "a": "cam",
+          "h": "Ta ghép âm đầu 'c' với vần 'am', sau đó thêm thanh ngang để được tiếng 'cam'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/qua_cam.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🍊"
+        },
+        {
+          "id": 3187,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'ch' + 'uôi' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "chó",
+            "chào",
+            "chuối",
+            "chim"
+          ],
+          "a": "chuối",
+          "h": "Ta ghép âm đầu 'ch' với vần 'uôi', sau đó thêm thanh sắc để được tiếng 'chuối'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🍌"
+        },
+        {
+          "id": 3188,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'x', vần 'oai', thanh huyền. Kết quả nào chính xác?",
+          "o": [
+            "chào",
+            "trường",
+            "xe",
+            "xoài"
+          ],
+          "a": "xoài",
+          "h": "Ta ghép âm đầu 'x' với vần 'oai', sau đó thêm thanh huyền để được tiếng 'xoài'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
           ],
           "emoji": "🥭"
+        },
+        {
+          "id": 3189,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'd' và 'ưa', sau đó đặt thanh sắc.",
+          "o": [
+            "bánh",
+            "mưa",
+            "dứa",
+            "cửa"
+          ],
+          "a": "dứa",
+          "h": "Ta ghép âm đầu 'd' với vần 'ưa', sau đó thêm thanh sắc để được tiếng 'dứa'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3190,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'l' - 'ê' - thanh ngang. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "ghế",
+            "nghề",
+            "lớp",
+            "lê"
+          ],
+          "a": "lê",
+          "h": "Ta ghép âm đầu 'l' với vần 'ê', sau đó thêm thanh ngang để được tiếng 'lê'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🍐"
+        },
+        {
+          "id": 3191,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'nh' với vần 'a', rồi thêm thanh huyền. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "cá",
+            "gà",
+            "lá",
+            "nhà"
+          ],
+          "a": "nhà",
+          "h": "Ta ghép âm đầu 'nh' với vần 'a', sau đó thêm thanh huyền để được tiếng 'nhà'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/ngoi_nha.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🏠"
+        },
+        {
+          "id": 3192,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'c' + 'ưa' + thanh hỏi. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "cửa",
+            "cá",
+            "mưa",
+            "dứa"
+          ],
+          "a": "cửa",
+          "h": "Ta ghép âm đầu 'c' với vần 'ưa', sau đó thêm thanh hỏi để được tiếng 'cửa'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🚪"
+        },
+        {
+          "id": 3193,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'b', vần 'êp', thanh sắc. Kết quả nào chính xác?",
+          "o": [
+            "bàn",
+            "bánh",
+            "bút",
+            "bếp"
+          ],
+          "a": "bếp",
+          "h": "Ta ghép âm đầu 'b' với vần 'êp', sau đó thêm thanh sắc để được tiếng 'bếp'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🍳"
+        },
+        {
+          "id": 3194,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'gi' và 'ương', sau đó đặt thanh huyền.",
+          "o": [
+            "giường",
+            "gió",
+            "trường",
+            "giày"
+          ],
+          "a": "giường",
+          "h": "Ta ghép âm đầu 'gi' với vần 'ương', sau đó thêm thanh huyền để được tiếng 'giường'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🛏️"
+        },
+        {
+          "id": 3195,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'đ' - 'en' - thanh huyền. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "đạp",
+            "trường",
+            "đèn",
+            "chào"
+          ],
+          "a": "đèn",
+          "h": "Ta ghép âm đầu 'đ' với vần 'en', sau đó thêm thanh huyền để được tiếng 'đèn'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "💡"
+        },
+        {
+          "id": 3196,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé ghép âm đầu 'qu' với vần 'at', rồi thêm thanh nặng. Tiếng hoàn chỉnh là gì?",
+          "o": [
+            "mực",
+            "học",
+            "quạt",
+            "quả"
+          ],
+          "a": "quạt",
+          "h": "Ta ghép âm đầu 'qu' với vần 'at', sau đó thêm thanh nặng để được tiếng 'quạt'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🌀"
+        },
+        {
+          "id": 3197,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Ba mảnh ghép là 'x' + 'e' + thanh ngang. Bé chọn tiếng đúng nhé!",
+          "o": [
+            "trâu",
+            "xoài",
+            "xe",
+            "cua"
+          ],
+          "a": "xe",
+          "h": "Ta ghép âm đầu 'x' với vần 'e', sau đó thêm thanh ngang để được tiếng 'xe'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/chiec_xe_dap.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🚲"
+        },
+        {
+          "id": 3198,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Xưởng ghép tiếng nâng cao: âm đầu 'đ', vần 'ap', thanh nặng. Kết quả nào chính xác?",
+          "o": [
+            "đạp",
+            "mực",
+            "học",
+            "đèn"
+          ],
+          "a": "đạp",
+          "h": "Ta ghép âm đầu 'đ' với vần 'ap', sau đó thêm thanh nặng để được tiếng 'đạp'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🔤"
+        },
+        {
+          "id": 3199,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Bé hãy tạo một tiếng hoàn chỉnh từ 'm' và 'u', sau đó đặt thanh ngã.",
+          "o": [
+            "mũ",
+            "mưa",
+            "mực",
+            "mèo"
+          ],
+          "a": "mũ",
+          "h": "Ta ghép âm đầu 'm' với vần 'u', sau đó thêm thanh ngã để được tiếng 'mũ'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "🧢"
+        },
+        {
+          "id": 3200,
+          "sub": "3.4 Cấp 4 - Ghép âm đầu + vần + thanh",
+          "q": "Cô đọc từng phần: 'gi' - 'ay' - thanh huyền. Bé tìm tiếng được ghép đúng.",
+          "o": [
+            "giày",
+            "giường",
+            "gió",
+            "trường"
+          ],
+          "a": "giày",
+          "h": "Ta ghép âm đầu 'gi' với vần 'ay', sau đó thêm thanh huyền để được tiếng 'giày'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 3,
+          "tags": [
+            "week3",
+            "ghep_am_van",
+            "cap4_tieng_hoan_chinh"
+          ],
+          "emoji": "👟"
         }
       ]
     },

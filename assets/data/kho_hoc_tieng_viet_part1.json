@@ -2412,1709 +2412,3159 @@
     },
     {
       "id": 2,
-      "name": "NĂM DẤU THANH KÌ DIỆU",
-      "desc": "Khám phá 5 dấu thanh sắc, huyền, hỏi, ngã, nặng và làm quen thanh ngang trong tiếng Việt.",
-      "l_title": "Bài Giảng: Khám Phá Dấu Thanh Tiếng Việt",
-      "l_content": "Bé yêu ơi! Tiếng Việt có 6 thanh: ngang, sắc, huyền, hỏi, ngã, nặng. Trong đó có 5 dấu thanh được viết bằng dấu: sắc (/), huyền (\\), hỏi (?), ngã (~), nặng (.). Thanh ngang không mang dấu. Cùng Cô Giáo Thỏ Hồng rèn luyện đôi tai để nhận biết thật chính xác nhé!",
-      "l_audio": "Chào mừng bé yêu đến với bài học dấu thanh tiếng Việt. Tiếng Việt có sáu thanh: ngang, sắc, huyền, hỏi, ngã, nặng. Trong đó năm thanh sắc, huyền, hỏi, ngã, nặng có dấu viết, còn thanh ngang không có dấu nhé con!",
+      "name": "DẤU THANH KÌ DIỆU",
+      "desc": "Bé nhận biết 6 thanh tiếng Việt qua 3 cấp độ từ dễ đến khó, với các dấu thanh được xáo trộn trong từng cấp.",
+      "l_title": "Bài học 2: Nhận biết 6 thanh tiếng Việt",
+      "l_content": "Tiếng Việt có 6 thanh: ngang, sắc, huyền, hỏi, ngã, nặng. Mục 2 được chia thành 3 cấp độ. Cấp 1 dùng các tiếng rất quen thuộc và dễ đọc. Cấp 2 tăng dần độ dài và cấu tạo tiếng. Cấp 3 dùng các tiếng phức tạp hơn nhưng vẫn quen thuộc với học sinh lớp 1. Trong mỗi cấp, các loại thanh được trộn lẫn để bé thực sự nhận biết dấu thanh thay vì đoán theo tên chuyên mục.",
+      "l_audio": "Chào bé đến với bài học Dấu thanh kì diệu. Chúng mình sẽ luyện nhận biết sáu thanh: ngang, sắc, huyền, hỏi, ngã và nặng qua ba cấp độ từ dễ đến khó.",
       "qs": [
         {
           "id": 2001,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'chó' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"vịt\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh ngang"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'chó' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/con_cho.webp",
+          "a": "Thanh nặng",
+          "h": "Từ \"vịt\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐶"
+          "emoji": "🎵"
         },
         {
           "id": 2002,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'táo' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bò\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Huyền"
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh huyền"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'táo' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/qua_tao.webp",
+          "a": "Thanh huyền",
+          "h": "Từ \"bò\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🍎"
+          "emoji": "🎵"
         },
         {
           "id": 2003,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'lá' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"quả\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Ngã"
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh ngang",
+            "Thanh nặng"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'lá' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"quả\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🌿"
+          "emoji": "🎵"
         },
         {
           "id": 2004,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'bóng' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"trà\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh ngang"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'bóng' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"trà\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⚽"
+          "emoji": "🎵"
         },
         {
           "id": 2005,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'sắc' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bà\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Ngã"
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh sắc"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'sắc' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"bà\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2006,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'khế' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"đũa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh ngã"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'khế' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"đũa\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2007,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'bút' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"tủ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Sắc"
+            "Thanh ngang",
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh nặng"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'bút' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"tủ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🖊️"
+          "emoji": "🎵"
         },
         {
           "id": 2008,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'sức' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"giữa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền"
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'sức' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"giữa\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2009,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'khoác' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"lá\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã"
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh ngã"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'khoác' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"lá\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2010,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'thoát' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"cỏ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền"
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh nặng"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'thoát' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"cỏ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2011,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'gấc' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"ngã\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Ngã"
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'gấc' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"ngã\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2012,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'giấy' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"gà\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Huyền"
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh ngang"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'giấy' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"gà\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2013,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'thước' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bạn\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'thước' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/cay_thuoc.webp",
+          "a": "Thanh nặng",
+          "h": "Từ \"bạn\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "📏"
+          "emoji": "🎵"
         },
         {
           "id": 2014,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'đáp' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"xe\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngang"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'đáp' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"xe\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2015,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'bắp' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"sữa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'bắp' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"sữa\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🌽"
+          "emoji": "🎵"
         },
         {
           "id": 2016,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'mắt' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"vở\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi"
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh sắc"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'mắt' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"vở\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "👀"
+          "emoji": "🎵"
         },
         {
           "id": 2017,
-          "sub": "Thanh Sắc lấp lánh",
-          "q": "Bé hãy phát âm thật to tiếng 'nghĩ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"hộp\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Hỏi"
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'nghĩ' mang dấu thanh Sắc gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"hộp\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "⭐"
+          "emoji": "🎵"
         },
         {
           "id": 2018,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'mèo' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"mặt\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Ngã"
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'mèo' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/con_meo.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "thanh_dieu"
-          ],
-          "emoji": "🐱"
-        },
-        {
-          "id": 2019,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'nhà' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
-          "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền"
-          ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'nhà' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/ngoi_nha.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "thanh_dieu"
-          ],
-          "emoji": "🏠"
-        },
-        {
-          "id": 2020,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'đào' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
-          "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã"
-          ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'đào' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"mặt\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2019,
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"mũ\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh huyền"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"mũ\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap1_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2020,
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"cặp\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh nặng"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"cặp\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2021,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'tàu' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"võ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền"
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh ngã"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'tàu' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"võ\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2022,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'tòa' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"đạp\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh ngã"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'tòa' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"đạp\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2023,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'chòe' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"hoa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Sắc"
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh sắc"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'chòe' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"hoa\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2024,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'xoài' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"hổ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'xoài' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/qua_xoai.webp",
+          "a": "Thanh hỏi",
+          "h": "Từ \"hổ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🥭"
+          "emoji": "🎵"
         },
         {
           "id": 2025,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'cò' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bí\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi"
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh huyền"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'cò' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"bí\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐦"
+          "emoji": "🎵"
         },
         {
           "id": 2026,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'bò' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"đá\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Hỏi"
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh ngang"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'bò' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"đá\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐄"
+          "emoji": "🎵"
         },
         {
           "id": 2027,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'đập' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"dừa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Nặng"
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh huyền"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'đập' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"dừa\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2028,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'bếp' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"đỏ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Huyền"
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'bếp' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"đỏ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🏠"
+          "emoji": "🎵"
         },
         {
           "id": 2029,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'dừa' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"ba\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh nặng"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'dừa' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/qua_dua.webp",
+          "a": "Thanh ngang",
+          "h": "Từ \"ba\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🥥"
+          "emoji": "🎵"
         },
         {
           "id": 2030,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'gà' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"nhà\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'gà' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/con_ga.webp",
+          "a": "Thanh huyền",
+          "h": "Từ \"nhà\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐔"
+          "emoji": "🎵"
         },
         {
           "id": 2031,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'vườn' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"mã\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh huyền"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'vườn' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"mã\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🌿"
+          "emoji": "🎵"
         },
         {
           "id": 2032,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'trời' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"chó\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh sắc"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'trời' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"chó\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2033,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'ngồng' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"má\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã"
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh sắc"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'ngồng' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"má\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2034,
-          "sub": "Thanh Huyền trầm ấm",
-          "q": "Bé hãy phát âm thật to tiếng 'trầm' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"nai\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền"
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh huyền"
           ],
-          "a": "Thanh Huyền",
-          "h": "Đúng rồi bé ơi! Tiếng 'trầm' mang dấu thanh Huyền gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"nai\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2035,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'thỏ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bi\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh huyền"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'thỏ' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/tho_ngang.webp",
+          "a": "Thanh ngang",
+          "h": "Từ \"bi\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐰"
+          "emoji": "🎵"
         },
         {
           "id": 2036,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'khỉ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bê\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã"
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh ngã"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'khỉ' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"bê\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐒"
+          "emoji": "🎵"
         },
         {
           "id": 2037,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'cải' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"cá\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã"
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh nặng"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'cải' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"cá\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2038,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'quả' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"cửa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Huyền"
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'quả' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"cửa\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2039,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'hỏi' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"vẽ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'hỏi' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"vẽ\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2040,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'hổ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"bé\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền"
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh huyền"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'hổ' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"bé\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
-          "emoji": "🐯"
+          "emoji": "🎵"
         },
         {
           "id": 2041,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'phở' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"mèo\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh huyền"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'phở' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"mèo\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2042,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'vẻ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"thỏ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh ngã"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'vẻ' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"thỏ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2043,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'mở' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"cô\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Huyền"
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'mở' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"cô\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2044,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'giỏi' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"đèn\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh nặng"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'giỏi' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"đèn\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2045,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'bổi' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"hạt\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh ngã"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'bổi' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"hạt\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2046,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'chổi' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"cú\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Ngã"
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngang"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'chổi' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"cú\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2047,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'nổi' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"loa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Hỏi"
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh ngang"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'nổi' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"loa\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2048,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'hỏa' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"mực\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'hỏa' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"mực\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2049,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'cẩu' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"gỗ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền"
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh nặng"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'cẩu' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"gỗ\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2050,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'giếng' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.1 Cấp 1 - Nhận biết dấu thanh cơ bản",
+          "q": "Bé cho biết từ \"mẹ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi"
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'giếng' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"mẹ\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap1_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2051,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'tẩy' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bỗng\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Huyền"
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'tẩy' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"bỗng\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
-          "emoji": "🧽"
+          "emoji": "🎵"
         },
         {
           "id": 2052,
-          "sub": "Thanh Hỏi ngộ nghĩnh",
-          "q": "Bé hãy phát âm thật to tiếng 'bể' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"quyển\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Ngã",
-            "Thanh Hỏi"
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh sắc"
           ],
-          "a": "Thanh Hỏi",
-          "h": "Đúng rồi bé ơi! Tiếng 'bể' mang dấu thanh Hỏi gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"quyển\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2053,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'vẽ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bánh\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã"
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh sắc"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'vẽ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"bánh\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2054,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'gõ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"lưỡi\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi"
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'gõ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"lưỡi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2055,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'mũ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"chậu\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh huyền"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'mũ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"chậu\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2056,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'chữ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"nước\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh sắc"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'chữ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"nước\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2057,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'sữa' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"mật\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền"
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh huyền"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'sữa' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"mật\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2058,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'ngã' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bãi\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền"
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh ngã"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'ngã' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"bãi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2059,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'quẫy' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"mãi\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Ngã"
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh huyền"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'quẫy' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"mãi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2060,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'đỗ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"kem\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh ngang"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'đỗ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"kem\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2061,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'đẽ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"thước\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã"
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh huyền"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'đẽ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"thước\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2062,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'mỗi' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"võng\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Ngã"
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh huyền"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'mỗi' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"võng\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2063,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'nến' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"học\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh ngang",
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh huyền"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'nến' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"học\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2064,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'lưới' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"mỗi\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Ngã"
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh huyền"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'lưới' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"mỗi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2065,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'vũng' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"rừng\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi"
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh huyền"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'vũng' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"rừng\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2066,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'hễ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"nắng\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Ngã",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh sắc"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'hễ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"nắng\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2067,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'tạ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"nghỉ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Nặng"
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'tạ' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"nghỉ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2068,
-          "sub": "Thanh Ngã lắt léo",
-          "q": "Bé hãy phát âm thật to tiếng 'đĩa' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bệnh\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Ngã"
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh ngang"
           ],
-          "a": "Thanh Ngã",
-          "h": "Đúng rồi bé ơi! Tiếng 'đĩa' mang dấu thanh Ngã gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"bệnh\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2069,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'vịt' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"sổ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Nặng",
-            "Thanh Huyền",
-            "Thanh Hỏi"
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'vịt' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/con_vit.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "thanh_dieu"
-          ],
-          "emoji": "🦆"
-        },
-        {
-          "id": 2070,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'nghệ' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
-          "o": [
-            "Thanh Sắc",
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Huyền"
-          ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'nghệ' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"sổ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2070,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"cơm\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh sắc"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"cơm\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2071,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'bọc' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"chuồng\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh ngã"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'bọc' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"chuồng\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2072,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'chạy' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"nghĩ\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh ngã"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'chạy' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"nghĩ\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2073,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'học' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bút\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc"
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'học' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"bút\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2074,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'toạc' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"giữa\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Nặng"
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'toạc' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngã",
+          "h": "Từ \"giữa\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2075,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'hoạt' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"sạch\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền"
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'hoạt' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"sạch\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2076,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'quạt' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"rụng\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Nặng",
-            "Thanh Hỏi"
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'quạt' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
-          "img": "assets/images/cai_quat.webp",
-          "week": 2,
-          "tags": [
-            "week2",
-            "thanh_dieu"
-          ],
-          "emoji": "🌬️"
-        },
-        {
-          "id": 2077,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'ngoại' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
-          "o": [
-            "Thanh Sắc",
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Huyền"
-          ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'ngoại' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"rụng\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2077,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"lạnh\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"lạnh\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2078,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'lại' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"biển\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Nặng",
-            "Thanh Huyền"
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'lại' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh hỏi",
+          "h": "Từ \"biển\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2079,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'đất' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"thuyền\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Huyền",
-            "Thanh Sắc",
-            "Thanh Nặng"
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh huyền"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'đất' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"thuyền\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2080,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'đốt' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"lớp\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Huyền"
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh ngã"
           ],
-          "a": "Thanh Sắc",
-          "h": "Đúng rồi bé ơi! Tiếng 'đốt' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh sắc",
+          "h": "Từ \"lớp\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2081,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'ngọt' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"chiều\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Huyền",
-            "Thanh Nặng",
-            "Thanh Hỏi",
-            "Thanh Sắc"
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh ngang"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'ngọt' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"chiều\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2082,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'mật' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"mạnh\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Nặng"
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh ngã"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'mật' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"mạnh\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2083,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'đẹp' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"ong\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Hỏi",
-            "Thanh Sắc",
-            "Thanh Nặng",
-            "Thanh Huyền"
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'đẹp' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh ngang",
+          "h": "Từ \"ong\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2084,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'gặp' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"thịt\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Nặng",
-            "Thanh Sắc",
-            "Thanh Hỏi",
-            "Thanh Huyền"
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'gặp' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh nặng",
+          "h": "Từ \"thịt\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
           ],
           "emoji": "🎵"
         },
         {
           "id": 2085,
-          "sub": "Thanh Nặng vững vàng",
-          "q": "Bé hãy phát âm thật to tiếng 'rạp' và cho biết tiếng này mang dấu thanh (thanh điệu) nào dưới đây?",
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bàn\" mang dấu thanh nào dưới đây?",
           "o": [
-            "Thanh Sắc",
-            "Thanh Huyền",
-            "Thanh Hỏi",
-            "Thanh Nặng"
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh hỏi"
           ],
-          "a": "Thanh Nặng",
-          "h": "Đúng rồi bé ơi! Tiếng 'rạp' mang dấu thanh Nặng gõ nhịp lôi cuốn đấy!",
+          "a": "Thanh huyền",
+          "h": "Từ \"bàn\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "week": 2,
           "tags": [
             "week2",
-            "thanh_dieu"
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2086,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"tranh\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh ngang"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"tranh\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2087,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"sách\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh huyền",
+            "Thanh sắc"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"sách\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2088,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"đường\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"đường\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2089,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"xanh\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"xanh\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2090,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"cam\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh ngang"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"cam\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2091,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"chim\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh huyền"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"chim\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2092,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"vườn\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"vườn\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2093,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"ngủ\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"ngủ\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2094,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"sen\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"sen\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2095,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"tiếng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngã"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"tiếng\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2096,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"bưởi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh nặng"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"bưởi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2097,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"cành\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh ngang"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"cành\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2098,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"ổi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh ngang"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"ổi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2099,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"muỗi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"muỗi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2100,
+          "sub": "2.2 Cấp 2 - Phân biệt dấu thanh trong tiếng quen thuộc",
+          "q": "Bé cho biết từ \"chổi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh ngã"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"chổi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap2_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2101,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"nghĩ\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"nghĩ\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2102,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"chiếc\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh sắc"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"chiếc\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2103,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"mượn\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"mượn\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2104,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"biết\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh huyền"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"biết\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2105,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"võng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh huyền"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"võng\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2106,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"ngoan\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"ngoan\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2107,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"phanh\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh ngang"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"phanh\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2108,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"chuỗi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh nặng"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"chuỗi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2109,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"những\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh ngang"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"những\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2110,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"tưởng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh nặng"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"tưởng\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2111,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"lưỡi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"lưỡi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2112,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"chuyện\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh sắc"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"chuyện\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2113,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"ruộng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh huyền"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"ruộng\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2114,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"chuyển\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh ngang"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"chuyển\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2115,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"phượng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh sắc"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"phượng\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2116,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"hiền\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh nặng"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"hiền\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2117,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"quanh\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh ngang",
+            "Thanh sắc"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"quanh\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2118,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"phố\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh ngang"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"phố\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2119,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"ướt\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh ngã"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"ướt\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2120,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"thưởng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh huyền"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"thưởng\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2121,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"luyện\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh nặng"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"luyện\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2122,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"thuộc\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh nặng"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"thuộc\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2123,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"mãi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"mãi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2124,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"quýt\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"quýt\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2125,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"nghịch\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh ngã"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"nghịch\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2126,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"khuya\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh nặng",
+            "Thanh ngã",
+            "Thanh sắc"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"khuya\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2127,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"nguồn\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh ngã"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"nguồn\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2128,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"ngoài\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh nặng"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"ngoài\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2129,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"thương\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh huyền"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"thương\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2130,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"ngưỡng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"ngưỡng\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2131,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"bỗng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh nặng",
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"bỗng\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2132,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"khoảng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh huyền"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"khoảng\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2133,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"tuổi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh ngang"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"tuổi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2134,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"nghề\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh nặng"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"nghề\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2135,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"được\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh huyền"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"được\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2136,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"giữa\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh nặng"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"giữa\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2137,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"buổi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh nặng"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"buổi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2138,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"buồn\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh ngang",
+            "Thanh huyền"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"buồn\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2139,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"cuộc\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh nặng"
+          ],
+          "a": "Thanh nặng",
+          "h": "Từ \"cuộc\" mang thanh nặng. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2140,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"chuông\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh nặng"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"chuông\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2141,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"phường\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh hỏi",
+            "Thanh sắc",
+            "Thanh ngã"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"phường\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2142,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"phép\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"phép\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2143,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"chuyền\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh huyền"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"chuyền\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2144,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"bãi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngã",
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh ngã",
+          "h": "Từ \"bãi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2145,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"khế\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh sắc",
+            "Thanh ngã",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"khế\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2146,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"người\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh ngã"
+          ],
+          "a": "Thanh huyền",
+          "h": "Từ \"người\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2147,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"tiếc\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh sắc",
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh hỏi"
+          ],
+          "a": "Thanh sắc",
+          "h": "Từ \"tiếc\" mang thanh sắc. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2148,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"trăng\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh ngang",
+            "Thanh huyền",
+            "Thanh nặng",
+            "Thanh ngã"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"trăng\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2149,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"gương\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh ngang",
+            "Thanh nặng"
+          ],
+          "a": "Thanh ngang",
+          "h": "Từ \"gương\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
+          ],
+          "emoji": "🎵"
+        },
+        {
+          "id": 2150,
+          "sub": "2.3 Cấp 3 - Nhận biết dấu thanh trong tiếng phức tạp",
+          "q": "Bé cho biết từ \"ngửi\" mang dấu thanh nào dưới đây?",
+          "o": [
+            "Thanh huyền",
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh sắc"
+          ],
+          "a": "Thanh hỏi",
+          "h": "Từ \"ngửi\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "img": "assets/images/tho_hong_giao_vien.webp",
+          "week": 2,
+          "tags": [
+            "week2",
+            "dau_thanh",
+            "cap3_dau_thanh"
           ],
           "emoji": "🎵"
         }

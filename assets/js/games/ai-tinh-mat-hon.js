@@ -140,9 +140,10 @@ function seEnsureStyles(){
     .se-pop{animation:sePop .42s ease both}
     .se-shake{animation:seShake .28s ease}
     .se-correct{animation:seGlow .65s ease}
-    #se-picture{width:100%;height:245px;object-fit:contain}
-    @media(max-width:900px){#se-picture{height:220px}}
-    @media(max-width:640px){#se-picture{height:185px}}
+    #se-picture{width:100%;height:320px;object-fit:contain}
+    .se-picture-fallback{height:320px}
+    @media(max-width:900px){#se-picture,.se-picture-fallback{height:270px}}
+    @media(max-width:640px){#se-picture,.se-picture-fallback{height:230px}}
   `;
   document.head.appendChild(style);
 }
@@ -169,34 +170,26 @@ function seRenderScene(){
   box.innerHTML=`
     <div class="relative overflow-hidden rounded-[28px] border-2 border-pink-200 bg-gradient-to-b from-sky-50 via-pink-50/60 to-emerald-50/60 p-3 md:p-4">
       <div class="flex items-center justify-between gap-2 mb-2">
-        <div class="px-3 py-1.5 rounded-full bg-white/90 border border-pink-200 text-pink-600 font-black text-xs md:text-sm">🔎 Lượt ${seRound}</div>
-        <div class="flex gap-2">
+        <div class="px-3 py-1.5 rounded-full bg-white/90 border border-pink-200 text-pink-600 font-black text-xs md:text-sm shrink-0">🔎 Lượt ${seRound}</div>
+        <div class="flex-1 text-center text-sm md:text-lg font-black text-teal-700 leading-tight px-1">Đồ vật nào <span class="text-rose-500">KHÔNG CÓ</span> trong bức tranh?</div>
+        <div class="flex gap-2 shrink-0">
           <div class="px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-black text-xs md:text-sm">⭐ ${seScore}</div>
           <div class="px-3 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-600 font-black text-xs md:text-sm">🔥 x${seStreak}</div>
           <div class="px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-600 font-black text-xs md:text-sm">🏆 ${seBest}</div>
         </div>
       </div>
 
-      <div class="text-center mb-2">
-        <div class="text-[11px] md:text-xs tracking-wide font-black text-slate-500 uppercase">Bé quan sát thật kỹ nhé!</div>
-        <div class="text-base md:text-lg font-black text-teal-700 mt-1">Đồ vật nào <span class="text-rose-500">KHÔNG CÓ</span> trong bức tranh?</div>
-      </div>
-
       <div id="se-picture-wrap" class="se-pop relative bg-white rounded-3xl border-2 border-pink-200 overflow-hidden shadow-sm">
         <img id="se-picture" src="${seCurrent.image}" alt="${seCurrent.name}"
           onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
-        <div class="hidden h-[245px] flex items-center justify-center text-6xl">🖼️</div>
-        <div class="absolute left-3 bottom-3 px-3 py-1 rounded-full bg-white/95 border border-pink-200 text-pink-600 text-xs font-black shadow-sm">${seCurrent.name}</div>
-      </div>
-
-      <div class="text-center mt-2 mb-2 text-sm md:text-base font-black text-slate-700">
-        Ai tinh mắt hơn? Chọn đồ vật không xuất hiện trong tranh!
+        <div class="hidden se-picture-fallback flex items-center justify-center text-6xl">🖼️</div>
+        <div class="absolute left-3 bottom-3 px-4 py-1.5 rounded-full bg-white/95 border border-pink-200 text-pink-600 text-sm md:text-base font-black shadow-sm">${seCurrent.name}</div>
       </div>
 
       <div id="se-options" class="grid grid-cols-2 gap-2.5">
         ${opts.map((o,i)=>`
           <button onclick="seChoose(this,${o.absent})"
-            class="se-option min-h-[58px] px-4 py-2 rounded-2xl border-2 ${[
+            class="se-option px-3 py-1.5 rounded-2xl border-2 ${[
               'bg-pink-50 border-pink-200 hover:bg-pink-100',
               'bg-sky-50 border-sky-200 hover:bg-sky-100',
               'bg-amber-50 border-amber-200 hover:bg-amber-100',

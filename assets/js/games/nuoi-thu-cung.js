@@ -13,6 +13,7 @@ let petState = 'idle';
 let petTarget = null;
 let petAudioCtx = null;
 let petRoundToken = 0;
+let petAnimalDeck = [];
 
 const PET_FOOD_POOL = [
   { word: 'xương', emoji: '🦴' },
@@ -34,7 +35,11 @@ const PET_FOOD_POOL = [
   { word: 'gạo', emoji: '🍚' },
   { word: 'bánh mì', emoji: '🍞' },
   { word: 'đậu', emoji: '🫘' },
-  { word: 'trái cây', emoji: '🍊' }
+  { word: 'trái cây', emoji: '🍊' },
+  { word: 'tre', emoji: '🎋' },
+  { word: 'mía', emoji: '🎋' },
+  { word: 'lá cây', emoji: '🍃' },
+  { word: 'sâu', emoji: '🐛' }
 ];
 
 // Mỗi con vật có một nhóm phương án nhiễu riêng.
@@ -49,7 +54,16 @@ const PET_DISTRACTOR_MAP = {
   'ong': ['trái cây', 'đường', 'mật ong', 'nước ngọt', 'hạt'],
   'bướm': ['trái cây', 'đường', 'mật ong', 'nước ngọt', 'rau'],
   'cá': ['tôm', 'hạt', 'rau', 'thóc', 'rong biển'],
-  'vịt': ['cá', 'thóc', 'ngô', 'rong', 'hạt']
+  'vịt': ['cá', 'thóc', 'ngô', 'rong', 'hạt'],
+  'khỉ': ['táo', 'trái cây', 'ngô', 'hạt', 'cà rốt'],
+  'sóc': ['ngô', 'đậu', 'trái cây', 'táo', 'bánh mì'],
+  'bò': ['rau', 'ngô', 'thóc', 'cà rốt', 'bắp cải'],
+  'dê': ['cỏ', 'rau', 'bắp cải', 'cà rốt', 'ngô'],
+  'ngựa': ['cà rốt', 'ngô', 'rau', 'thóc', 'táo'],
+  'gấu trúc': ['cà rốt', 'rau', 'táo', 'cỏ', 'trái cây'],
+  'chim': ['hạt', 'ngô', 'thóc', 'trái cây', 'sâu'],
+  'voi': ['trái cây', 'chuối', 'ngô', 'cà rốt', 'rau'],
+  'lợn': ['gạo', 'rau', 'đậu', 'cà rốt', 'trái cây']
 };
 
 const PET_EXTRA_FOOD = {
@@ -58,15 +72,24 @@ const PET_EXTRA_FOOD = {
 };
 
 const PET_ANIMALS = [
-  { name: 'chó', label: 'Chú chó', image: 'images/con_cho', emoji: '🐶', food: 'xương' },
-  { name: 'mèo', label: 'Mèo con', image: 'images/con_meo', emoji: '🐱', food: 'cá' },
-  { name: 'thỏ', label: 'Thỏ con', image: 'images/tho_hong', emoji: '🐰', food: 'cà rốt' },
-  { name: 'gà', label: 'Gà con', image: 'images/con_ga', emoji: '🐔', food: 'thóc' },
-  { name: 'trâu', label: 'Trâu con', image: 'images/con_trau', emoji: '🐃', food: 'cỏ' },
-  { name: 'ong', label: 'Ong nhỏ', image: 'images/con_ong', emoji: '🐝', food: 'mật hoa' },
-  { name: 'bướm', label: 'Bướm xinh', image: 'images/con_buom', emoji: '🦋', food: 'mật hoa' },
-  { name: 'cá', label: 'Cá nhỏ', image: 'images/con_ca', emoji: '🐟', food: 'rong' },
-  { name: 'vịt', label: 'Vịt con', image: 'images/con_vit', emoji: '🦆', food: 'tôm' }
+  { name: 'chó', label: 'Chú chó', image: '', emoji: '🐶', food: 'xương' },
+  { name: 'mèo', label: 'Mèo con', image: '', emoji: '🐱', food: 'cá' },
+  { name: 'thỏ', label: 'Thỏ con', image: '', emoji: '🐰', food: 'cà rốt' },
+  { name: 'gà', label: 'Gà con', image: '', emoji: '🐔', food: 'thóc' },
+  { name: 'trâu', label: 'Trâu con', image: '', emoji: '🐃', food: 'cỏ' },
+  { name: 'ong', label: 'Ong nhỏ', image: '', emoji: '🐝', food: 'mật hoa' },
+  { name: 'bướm', label: 'Bướm xinh', image: '', emoji: '🦋', food: 'mật hoa' },
+  { name: 'cá', label: 'Cá nhỏ', image: '', emoji: '🐟', food: 'rong' },
+  { name: 'vịt', label: 'Vịt con', image: '', emoji: '🦆', food: 'tôm' },
+  { name: 'khỉ', label: 'Khỉ con', image: '', emoji: '🐵', food: 'chuối' },
+  { name: 'sóc', label: 'Sóc nâu', image: '', emoji: '🐿️', food: 'hạt' },
+  { name: 'bò', label: 'Bò con', image: '', emoji: '🐄', food: 'cỏ' },
+  { name: 'dê', label: 'Dê con', image: '', emoji: '🐐', food: 'lá cây' },
+  { name: 'ngựa', label: 'Ngựa con', image: '', emoji: '🐴', food: 'cỏ' },
+  { name: 'gấu trúc', label: 'Gấu trúc', image: '', emoji: '🐼', food: 'tre' },
+  { name: 'chim', label: 'Chim nhỏ', image: '', emoji: '🐦', food: 'sâu' },
+  { name: 'voi', label: 'Voi con', image: '', emoji: '🐘', food: 'mía' },
+  { name: 'lợn', label: 'Lợn con', image: '', emoji: '🐷', food: 'ngô' }
 ];
 
 function petEnsureStyles() {
@@ -151,9 +174,20 @@ function petFoodInfo(word) {
   return PET_FOOD_POOL.find(x => x.word === word) || { word, emoji: PET_EXTRA_FOOD[word] || '🍽️' };
 }
 
+function petRefillAnimalDeck() {
+  let nextDeck = petShuffle(PET_ANIMALS);
+  // Khi bắt đầu vòng mới, tránh để con cuối vòng trước lặp lại ngay lập tức.
+  if (petTarget && nextDeck.length > 1 && nextDeck[0].name === petTarget.name) {
+    [nextDeck[0], nextDeck[1]] = [nextDeck[1], nextDeck[0]];
+  }
+  petAnimalDeck = nextDeck;
+}
+
 function petPickRound() {
-  const choices = PET_ANIMALS.filter(x => !petTarget || x.name !== petTarget.name);
-  petTarget = choices[Math.floor(Math.random() * choices.length)] || PET_ANIMALS[0];
+  // Dùng cơ chế "xáo bộ bài": mỗi con vật xuất hiện đúng 1 lần trong một vòng.
+  // Chỉ khi đã đi hết toàn bộ ngân hàng mới xáo lại vòng tiếp theo.
+  if (!petAnimalDeck.length) petRefillAnimalDeck();
+  petTarget = petAnimalDeck.shift() || PET_ANIMALS[0];
   const correct = petFoodInfo(petTarget.food);
 
   // Chọn 3 đáp án nhiễu từ nhóm thực phẩm hợp ngữ cảnh của từng con vật.
@@ -196,6 +230,9 @@ function petTryNextImage(img) {
 }
 
 function petAnimalHtml(a) {
+  if (!a.image) {
+    return `<div id="pet-animal-wrap" class="pet-animal-wrap pet-round-pop"><div id="pet-animal-image" class="pet-animal-fallback">${a.emoji || '🐾'}</div></div>`;
+  }
   const candidates = petImageCandidates(a.image);
   const firstSrc = candidates[0] || '';
   const safeCandidates = JSON.stringify(candidates).replace(/&/g, '&amp;').replace(/"/g, '&quot;');
@@ -207,7 +244,7 @@ function petAnimalHtml(a) {
 
 function startPetFeedingGame() {
   petEnsureStyles();
-  petRound = 0; petScore = 0; petStreak = 0; petBestStreak = 0; petState = 'playing'; petTarget = null; petRoundToken += 1;
+  petRound = 0; petScore = 0; petStreak = 0; petBestStreak = 0; petState = 'playing'; petTarget = null; petAnimalDeck = []; petRoundToken += 1;
   const box = document.getElementById('game-play-container');
   if (!box) return;
   box.innerHTML = `

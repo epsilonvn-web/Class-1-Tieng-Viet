@@ -44,7 +44,22 @@ const PWC_POOL = [
     { word: 'quả dưa hấu', image: 'images/qua_dua_hau.jpg', emoji: '🍉' },
     { word: 'quả táo', image: 'images/qua_tao.jpg', emoji: '🍎' },
     { word: 'quả xoài', image: 'images/qua_xoai.jpg', emoji: '🥭' },
-    { word: 'quyển sách', image: 'images/quyen_sach.jpg', emoji: '📚' }
+    { word: 'quyển sách', image: 'images/quyen_sach.jpg', emoji: '📚' },
+    { word: 'chuồn chuồn', image: '', emoji: '🪰' },
+    { word: 'khóm khoai', image: '', emoji: '🌿' },
+    { word: 'lũy tre', image: '', emoji: '🎋' },
+    { word: 'hoa phượng', image: '', emoji: '🌺' },
+    { word: 'bắp ngô', image: '', emoji: '🌽' },
+    { word: 'cục tẩy', image: '', emoji: '🧽' },
+    { word: 'viên phấn', image: '', emoji: '🖍️' },
+    { word: 'cái kéo', image: '', emoji: '✂️' },
+    { word: 'cái ghế', image: '', emoji: '🪑' },
+    { word: 'cái nón', image: '', emoji: '👒' },
+    { word: 'đôi dép', image: '', emoji: '🩴' },
+    { word: 'đèn giao thông', image: '', emoji: '🚦' },
+    { word: 'máy bay', image: '', emoji: '✈️' },
+    { word: 'xe ô tô', image: '', emoji: '🚗' },
+    { word: 'cái gương', image: '', emoji: '🪞' }
 ];
 
 function pwcEnsureStyles() {

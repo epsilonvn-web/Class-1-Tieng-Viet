@@ -1,7 +1,7 @@
 // ==========================================
 // MINI GAME TV1: HIEP SI CHINH TA - SAN QUAI CHU
 // Arcade gameplay: quai chu roi xuong, be cham dung quai de hiep si lao toi chem.
-// Du lieu lay truc tiep tu kho hoc lieu TV1, uu tien Chu de 4: Dien chu cai con thieu.
+// Du lieu lay truc tiep tu Chu de 4: Dien chu cai con thieu, bam sat cac nhom chinh ta lop 1.
 // ==========================================
 let skPool = [];
 let skIndex = 0;
@@ -10,10 +10,7 @@ let skLives = 3;
 let skStreak = 0;
 let skBestStreak = 0;
 let skAnswered = false;
-let skRoundSize = 999;
-let skModeSource = [];
-let skCycle = 1;
-let skTotalRounds = 0;
+let skRoundSize = 12;
 let skMode = 'mixed';
 let skTick = null;
 let skStartTs = 0;
@@ -39,34 +36,6 @@ const SK_GATE_MAP = [
     { test: /r\s*\/\s*d\s*\/\s*gi/i, gates: ['r', 'd', 'gi'] },
     { test: /c\s*\/\s*k|g\s*\/\s*gh|ng\s*\/\s*ngh/i, gates: ['c', 'k', 'g', 'gh', 'ng', 'ngh'] }
 ];
-
-// Ngân hàng từ bổ sung cho Tiếng Việt 1: đủ lớn để chơi lâu và không lặp trong một vòng.
-const SK_BUILTIN_WORDS = [
-  ['chim',['ch','tr']],['chó',['ch','tr']],['chanh',['ch','tr']],['chè',['ch','tr']],['chân',['ch','tr']],['chăn',['ch','tr']],
-  ['trâu',['ch','tr']],['tre',['ch','tr']],['trăng',['ch','tr']],['trường',['ch','tr']],['trời',['ch','tr']],['trứng',['ch','tr']],
-  ['sao',['s','x']],['sen',['s','x']],['sâu',['s','x']],['sữa',['s','x']],['sách',['s','x']],['sóc',['s','x']],
-  ['xe',['s','x']],['xôi',['s','x']],['xoài',['s','x']],['xẻng',['s','x']],['xanh',['s','x']],['xuân',['s','x']],
-  ['lá',['l','n']],['lê',['l','n']],['lúa',['l','n']],['lợn',['l','n']],['lọ',['l','n']],['lưới',['l','n']],
-  ['nơ',['l','n']],['na',['l','n']],['nấm',['l','n']],['nón',['l','n']],['nước',['l','n']],['nai',['l','n']],['nắng',['l','n']],['nem',['l','n']],
-  ['rau',['r','d','gi']],['rổ',['r','d','gi']],['rùa',['r','d','gi']],['rừng',['r','d','gi']],
-  ['dưa',['r','d','gi']],['dê',['r','d','gi']],['dâu',['r','d','gi']],['diều',['r','d','gi']],
-  ['giỏ',['r','d','gi']],['giường',['r','d','gi']],['giày',['r','d','gi']],['giếng',['r','d','gi']],
-  ['cá',['c','k']],['cam',['c','k']],['cò',['c','k']],['cua',['c','k']],['cờ',['c','k']],['cốc',['c','k']],
-  ['kéo',['c','k']],['kính',['c','k']],['kem',['c','k']],['kẹo',['c','k']],['kê',['c','k']],['kì',['c','k']],
-  ['gà',['g','gh']],['gạo',['g','gh']],['gấu',['g','gh']],['gió',['g','gh']],['gối',['g','gh']],['gấc',['g','gh']],
-  ['ghế',['g','gh']],['ghi',['g','gh']],['ghẹ',['g','gh']],['ghim',['g','gh']],
-  ['ngô',['ng','ngh']],['ngựa',['ng','ngh']],['ngủ',['ng','ngh']],['ngà',['ng','ngh']],['ngõ',['ng','ngh']],['nghe',['ng','ngh']],
-  ['nghé',['ng','ngh']],['nghỉ',['ng','ngh']],['nghề',['ng','ngh']],['nghĩ',['ng','ngh']]
-];
-
-function skGetBuiltInChallenges() {
-  return SK_BUILTIN_WORDS.map(([answer,gates],i)=>{
-    const lower=String(answer).toLocaleLowerCase('vi');
-    const correct=gates.slice().sort((a,b)=>b.length-a.length).find(g=>lower.startsWith(g));
-    if(!correct) return null;
-    return {q:{question_id:`builtin_${i+1}`,sub_topic:'Ngân hàng chính tả lớp 1',answer},answer,correct,gates:gates.slice(),blank:answer.slice(correct.length)};
-  }).filter(Boolean);
-}
 
 function skEnsureStyles() {
     if (document.getElementById('sk-arcade-styles')) return;
@@ -111,7 +80,7 @@ async function startSpellingKnightGame() {
         skSourceQuestions = [];
         (Array.isArray(topics) ? topics : []).forEach(topic => {
             const topicId = Number(topic.topic_id);
-            if (![4,5].includes(topicId)) return;
+            if (topicId !== 4) return;
             (topic.questions || []).forEach(q => {
                 skSourceQuestions.push({ ...q, source_topic_id: topicId });
             });
@@ -164,14 +133,9 @@ function skBuildChallenge(q) {
 
 function skGetAllSourceQuestions() {
     const flat = Array.isArray(skSourceQuestions) ? skSourceQuestions : [];
-    const merged = [...flat.map(skBuildChallenge).filter(Boolean), ...skGetBuiltInChallenges()];
-    const seen = new Set();
-    return merged.filter(c => {
-        const key = `${String(c.answer).toLocaleLowerCase('vi')}|${c.correct}`;
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-    });
+    const topic4 = flat.filter(q => Number(q.source_topic_id) === 4).map(skBuildChallenge).filter(Boolean);
+    if (topic4.length) return topic4;
+    return flat.map(skBuildChallenge).filter(Boolean);
 }
 
 function skRenderModeMenu() {
@@ -210,24 +174,14 @@ function skStartMode(modeId) {
         if (box) box.innerHTML = '<div class="py-10 text-center text-amber-600 font-black">📚 Nhóm này chưa có đủ học liệu phù hợp. Bé chọn Đại chiến tổng hợp nhé!</div>';
         return;
     }
-    skModeSource = source.slice();
-    skPool = shuffleArray(skModeSource.slice());
+    skPool = source.slice(0, Math.min(skRoundSize, source.length));
     skIndex = 0; skScore = 0; skLives = 3; skStreak = 0; skBestStreak = 0; skKnightLane = 1;
-    skCycle = 1; skTotalRounds = 0;
     skRenderRound();
 }
 
 function skRenderRound() {
     skStopTick();
-    if (skLives <= 0) return skFinish();
-    if (skIndex >= skPool.length) {
-        const lastAnswer = skPool.length ? skPool[skPool.length - 1].answer : '';
-        skPool = shuffleArray(skModeSource.slice());
-        if (skPool.length > 1 && skPool[0].answer === lastAnswer) [skPool[0],skPool[1]]=[skPool[1],skPool[0]];
-        skIndex = 0; skCycle++;
-        playAudio('win');
-        confetti({particleCount:55,spread:70,origin:{y:.62}});
-    }
+    if (skIndex >= skPool.length || skLives <= 0) return skFinish();
     skCurrentChallenge = skPool[skIndex];
     skAnswered = false;
     const c = skCurrentChallenge;
@@ -235,7 +189,7 @@ function skRenderRound() {
     skEnemyOrder = gates;
     const laneCount = gates.length;
     const laneXs = laneCount === 2 ? [32,68] : [20,50,80];
-    skRoundMs = Math.max(4300, 7600 - Math.min(skTotalRounds,18)*120 - Math.min(skStreak,4)*180);
+    skRoundMs = Math.max(4700, 7600 - skIndex*180 - Math.min(skStreak,4)*180);
     const modeLabel = SK_MODES.find(m=>m.id===skMode)?.label || 'Đại chiến tổng hợp';
     const progress = Math.round((skIndex/skPool.length)*100);
     const box = document.getElementById('game-play-container');
@@ -250,7 +204,7 @@ function skRenderRound() {
           <div class="mt-2 h-2 bg-white/75 rounded-full overflow-hidden"><div class="h-full bg-gradient-to-r from-teal-400 to-emerald-500" style="width:${progress}%"></div></div>
         </div>
         <div class="absolute z-30 top-[78px] left-1/2 -translate-x-1/2 w-[92%] max-w-xl bg-amber-50/95 border-2 border-amber-300 rounded-2xl px-3 py-2 shadow-md text-center">
-          <div class="text-[10px] md:text-xs uppercase tracking-wide font-black text-amber-700">📜 Lượt ${skTotalRounds+1} · Vòng ${skCycle} · Chữ nào cứu được từ này?</div>
+          <div class="text-[10px] md:text-xs uppercase tracking-wide font-black text-amber-700">📜 Lượt ${skIndex+1}/${skPool.length} · Chữ nào cứu được từ này?</div>
           <div class="mt-0.5"><span class="text-3xl md:text-4xl font-black text-rose-500">_</span><span class="text-2xl md:text-3xl font-black text-slate-800">${escapeHtml(c.blank)}</span></div>
         </div>
         <div class="absolute z-30 left-3 top-[148px] text-xs font-black bg-white/90 border border-sky-200 text-sky-700 rounded-full px-2.5 py-1">⏱️ <span id="sk-time">${(skRoundMs/1000).toFixed(1)}</span>s</div>
@@ -355,7 +309,7 @@ function skResolve(ok, chosen, lane, timeout) {
     }
     const score = document.getElementById('sk-score'), streak = document.getElementById('sk-streak'), lives = document.getElementById('sk-lives');
     if (score) score.textContent = `⭐ ${skScore}`; if (streak) streak.textContent = `🔥 ${skStreak}`; if (lives) lives.textContent = `${'🛡️'.repeat(skLives)}${'▫️'.repeat(Math.max(0,3-skLives))}`;
-    setTimeout(()=>{ skIndex++; skTotalRounds++; skRenderRound(); }, 1250);
+    setTimeout(()=>{ skIndex++; skRenderRound(); }, 1250);
 }
 
 function skSpawnFx(lane, text, cls) {
@@ -367,9 +321,11 @@ function skSpawnFx(lane, text, cls) {
 function skFinish() {
     skStopTick();
     const box = document.getElementById('game-play-container');
-    const done = skTotalRounds;
-    const medal = skScore >= 500 ? '👑' : skScore >= 250 ? '🥇' : skScore >= 100 ? '🥈' : '💔';
-    box.innerHTML = `<div class="rounded-[28px] border-2 border-rose-300 bg-gradient-to-b from-amber-50 via-white to-emerald-50 p-6 text-center relative overflow-hidden"><div class="absolute left-2 bottom-0 text-9xl opacity-10">🏰</div><div class="absolute right-2 bottom-0 text-9xl opacity-10">🐉</div><div class="relative z-10"><div class="text-7xl">${medal}</div><h3 class="text-2xl font-black text-rose-600 mt-2">Thành bị xuyên thủng!</h3><p class="mt-2 text-sm md:text-base font-bold text-slate-600">Bé đã chiến đấu <strong>${done} lượt</strong> qua <strong>${skCycle} vòng</strong> · <strong>${skScore} điểm</strong> · combo tốt nhất <strong>${skBestStreak}</strong>.</p><div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto mt-5"><button id="sk-again" class="pastel-btn py-3 rounded-2xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black text-sm">⚔️ Chơi lại</button><button id="sk-menu" class="pastel-btn py-3 rounded-2xl bg-purple-50 border-2 border-purple-200 text-purple-700 font-black text-sm">🗺️ Chọn màn</button></div></div></div>`;
+    const cleared = skIndex >= skPool.length && skLives > 0;
+    if (cleared) { playAudio('win'); confetti({particleCount:120,spread:85,origin:{y:.6}}); }
+    const done = Math.min(skIndex,skPool.length);
+    const medal = cleared ? (skLives===3?'👑':skLives===2?'🥇':'🥈') : '💔';
+    box.innerHTML = `<div class="rounded-[28px] border-2 ${cleared?'border-emerald-300':'border-rose-300'} bg-gradient-to-b from-amber-50 via-white to-emerald-50 p-6 text-center relative overflow-hidden"><div class="absolute left-2 bottom-0 text-9xl opacity-10">🏰</div><div class="absolute right-2 bottom-0 text-9xl opacity-10">🐉</div><div class="relative z-10"><div class="text-7xl">${medal}</div><h3 class="text-2xl font-black ${cleared?'text-emerald-600':'text-rose-600'} mt-2">${cleared?'Quét sạch quái chữ!':'Thành bị xuyên thủng!'}</h3><p class="mt-2 text-sm md:text-base font-bold text-slate-600">Hạ <strong>${done}/${skPool.length}</strong> đợt quái · <strong>${skScore} điểm</strong> · combo tốt nhất <strong>${skBestStreak}</strong>.</p><div class="grid grid-cols-2 gap-2.5 max-w-md mx-auto mt-5"><button id="sk-again" class="pastel-btn py-3 rounded-2xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black text-sm">⚔️ Chơi lại</button><button id="sk-menu" class="pastel-btn py-3 rounded-2xl bg-purple-50 border-2 border-purple-200 text-purple-700 font-black text-sm">🗺️ Chọn màn</button></div></div></div>`;
     document.getElementById('sk-again')?.addEventListener('click',()=>skStartMode(skMode));
     document.getElementById('sk-menu')?.addEventListener('click',skRenderModeMenu);
 }

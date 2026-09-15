@@ -71,7 +71,7 @@ const SX_ITEM_EMOJI = {
   'dép đi mưa':'🩴','áo':'👕','quần':'👖','váy':'👗','mũ':'🧢','khăn':'🧣','tất':'🧦','bát':'🥣','ga giường':'🛏️','gấu bông':'🧸','màn':'🦟','bát ăn cơm':'🥣','bàn học':'🪑','xẻng':'🛠️',
   'đĩa':'🍽️','thìa':'🥄','đũa':'🥢','cốc nước':'🥛','khăn ăn':'🧻','bút chì':'✏️','thước kẻ':'📏','cục tẩy':'🧽','đèn học':'💡',
   'bảng':'🟩','ghế':'🪑','sách':'📚','bút':'🖊️','thước':'📏','bồn tắm':'🛁','cầu trượt':'🛝','xích đu':'🎠','quả bóng':'⚽','bập bênh':'🎢','dây nhảy':'➰','xe chòi chân':'🛴',
-  'cây xanh':'🌳','chậu hoa':'🪴','bình tưới':'🚿','xẻng nhỏ':'🛠️','ghế đá':'🪑','hàng rào':'🚧','tivi':'📺'
+  'cây xanh':'🌳','chậu hoa':'🪴','bình tưới':'🚿','xẻng nhỏ':'🛠️','ghế đá':'🪑','hàng rào':'🚧','tivi':'📺',
 
   'bàn đọc sách':'📖',
   'cột cờ':'🚩',

@@ -26,8 +26,8 @@ const SUBTOPIC_PALETTES = [
 
 const roadmapConfig = {
     1: { name: "Tuần 1: Bảng chữ cái & âm cơ bản", topicIds: [1], desc: "Làm quen 29 chữ cái, nhận diện nguyên âm, phụ âm và phụ âm ghép cơ bản.", icon: "🅰️" },
-    2: { name: "Tuần 2: Dấu thanh & ghép âm cơ bản", topicIds: [2, 3], desc: "Nhận biết 6 thanh tiếng Việt, 5 dấu thanh và ghép phụ âm đầu với nguyên âm, vần xuôi cơ bản.", icon: "🎵" },
-    3: { name: "Tuần 3: Vần đôi - vần ghép phức tạp", topicIds: [3], desc: "Chinh phục các nguyên âm đôi, vần có âm đệm và âm cuối khó lắt léo.", icon: "🧩" },
+    2: { name: "Tuần 2: Ghép âm cơ bản & thêm thanh", topicIds: [3], desc: "Luyện Cấp 1 và Cấp 2: ghép âm đầu với nguyên âm, sau đó thêm thanh để tạo tiếng mới.", icon: "🧩" },
+    3: { name: "Tuần 3: Ghép vần & tạo tiếng hoàn chỉnh", topicIds: [3], desc: "Luyện Cấp 3 và Cấp 4: ghép âm đầu với vần, rồi kết hợp âm đầu + vần + thanh thành tiếng hoàn chỉnh.", icon: "🔤" },
     4: { name: "Tuần 4: Điền chữ cái còn thiếu", topicIds: [4], desc: "Nắm vững quy tắc chính tả c/k, g/gh, ng/ngh và phân biệt s/x, tr/ch, l/n.", icon: "✍️" },
     5: { name: "Tuần 5: Bác sĩ sửa lỗi chính tả", topicIds: [5], desc: "Tìm và sửa lỗi từ sai chính tả, quy tắc viết hoa tên riêng, địa danh.", icon: "🩺" },
     6: { name: "Tuần 6: Nhìn hình đoán từ đa giác quan", topicIds: [6], desc: "Mở rộng vốn từ qua hình ảnh trực quan con vật, vị giác, xúc giác thực tế.", icon: "👁️" },

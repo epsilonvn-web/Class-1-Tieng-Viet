@@ -17,18 +17,18 @@ let sxCurrentOdd = '';
 let sxAudioCtx = null;
 
 const SX_SCENES = [
-  { id:'phong_khach', label:'Phòng khách', image:'images/phong_khach.png', emoji:'🛋️', good:['ghế sofa','tivi','bàn trà','đèn bàn','quạt điện','lọ hoa'], odd:['bàn chải đánh răng','nồi cơm điện','gối ngủ','vòi sen'] },
-  { id:'phong_ngu', label:'Phòng ngủ', image:'images/phong_ngu.png', emoji:'🛏️', good:['giường ngủ','gối','chăn','tủ quần áo','đèn ngủ','đồng hồ báo thức'], odd:['chảo','bồn rửa bát','tivi phòng khách','nồi cơm điện'] },
-  { id:'nha_bep', label:'Nhà bếp', image:'images/nha_bep.png', emoji:'🍳', good:['nồi','chảo','tủ lạnh','bếp','ấm nước','bát đĩa'], odd:['gối','bàn chải đánh răng','cặp sách','chăn'] },
-  { id:'nha_tam', label:'Nhà tắm', image:'images/nha_tam.png', emoji:'🚿', good:['vòi sen','khăn tắm','bàn chải đánh răng','xà phòng','chậu rửa','gương'], odd:['chảo','gối','quyển vở','tủ lạnh'] },
-  { id:'gia_sach', label:'Giá sách', image:'images/gia_sach.png', emoji:'📚', good:['quyển sách','truyện tranh','từ điển','hộp bút','sổ tay','đèn đọc sách'], odd:['nồi','dép đi mưa','bàn chải đánh răng','chảo'] },
-  { id:'tu_quan_ao', label:'Tủ quần áo', image:'images/tu_quan_ao.png', emoji:'👕', good:['áo','quần','váy','mũ','khăn','tất'], odd:['nồi','bát','bàn chải đánh răng','quyển sách'] },
-  { id:'giuong_ngu', label:'Giường ngủ', image:'images/giuong_ngu.png', emoji:'🛏️', good:['gối','chăn','ga giường','gấu bông','đèn ngủ','màn'], odd:['chảo','bát ăn cơm','bàn học','xẻng'] },
-  { id:'ban_an', label:'Bàn ăn', image:'images/ban_an.png', emoji:'🍽️', good:['bát','đĩa','thìa','đũa','cốc nước','khăn ăn'], odd:['bút chì','gối','bàn chải đánh răng','cặp sách'] },
-  { id:'ban_hoc', label:'Bàn học', image:'images/ban_hoc.png', emoji:'✏️', good:['bút chì','thước kẻ','quyển vở','cục tẩy','hộp bút','đèn học'], odd:['chảo','gối','bàn chải đánh răng','nồi'] },
-  { id:'lop_hoc', label:'Lớp học', image:'images/lop_hoc.png', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
-  { id:'san_choi', label:'Sân chơi', image:'images/san_choi.png', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
-  { id:'vuon_nha', label:'Vườn nhà', image:'images/vuon_nha.png', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] }
+  { id:'phong_khach', label:'Phòng khách', image:'images/phong_khach.jpg', emoji:'🛋️', good:['ghế sofa','tivi','bàn trà','đèn bàn','quạt điện','lọ hoa'], odd:['bàn chải đánh răng','nồi cơm điện','gối ngủ','vòi sen'] },
+  { id:'phong_ngu', label:'Phòng ngủ', image:'images/phong_ngu.jpg', emoji:'🛏️', good:['giường ngủ','gối','chăn','tủ quần áo','đèn ngủ','đồng hồ báo thức'], odd:['chảo','bồn rửa bát','tivi phòng khách','nồi cơm điện'] },
+  { id:'nha_bep', label:'Nhà bếp', image:'images/nha_bep.jpg', emoji:'🍳', good:['nồi','chảo','tủ lạnh','bếp','ấm nước','bát đĩa'], odd:['gối','bàn chải đánh răng','cặp sách','chăn'] },
+  { id:'nha_tam', label:'Nhà tắm', image:'images/nha_tam.jpg', emoji:'🚿', good:['vòi sen','khăn tắm','bàn chải đánh răng','xà phòng','chậu rửa','gương'], odd:['chảo','gối','quyển vở','tủ lạnh'] },
+  { id:'gia_sach', label:'Giá sách', image:'images/gia_sach.jpg', emoji:'📚', good:['quyển sách','truyện tranh','từ điển','hộp bút','sổ tay','đèn đọc sách'], odd:['nồi','dép đi mưa','bàn chải đánh răng','chảo'] },
+  { id:'tu_quan_ao', label:'Tủ quần áo', image:'images/tu_quan_ao.jpg', emoji:'👕', good:['áo','quần','váy','mũ','khăn','tất'], odd:['nồi','bát','bàn chải đánh răng','quyển sách'] },
+  { id:'giuong_ngu', label:'Giường ngủ', image:'images/giuong_ngu.jpg', emoji:'🛏️', good:['gối','chăn','ga giường','gấu bông','đèn ngủ','màn'], odd:['chảo','bát ăn cơm','bàn học','xẻng'] },
+  { id:'ban_an', label:'Bàn ăn', image:'images/ban_an.jpg', emoji:'🍽️', good:['bát','đĩa','thìa','đũa','cốc nước','khăn ăn'], odd:['bút chì','gối','bàn chải đánh răng','cặp sách'] },
+  { id:'ban_hoc', label:'Bàn học', image:'images/ban_hoc.jpg', emoji:'✏️', good:['bút chì','thước kẻ','quyển vở','cục tẩy','hộp bút','đèn học'], odd:['chảo','gối','bàn chải đánh răng','nồi'] },
+  { id:'lop_hoc', label:'Lớp học', image:'images/lop_hoc.jpg', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
+  { id:'san_choi', label:'Sân chơi', image:'images/san_choi.jpg', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
+  { id:'vuon_nha', label:'Vườn nhà', image:'images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] }
 ];
 
 const SX_ITEM_EMOJI = {

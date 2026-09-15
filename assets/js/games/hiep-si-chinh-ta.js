@@ -1,7 +1,7 @@
 // ==========================================
-// MINI GAME TV2: HIEP SI CHINH TA - SAN QUAI CHU
+// MINI GAME TV1: HIEP SI CHINH TA - SAN QUAI CHU
 // Arcade gameplay: quai chu roi xuong, be cham dung quai de hiep si lao toi chem.
-// Du lieu lay tu kho hoc lieu TV2 (Chuyen de 2 & 3), khong tao database rieng.
+// Du lieu lay truc tiep tu kho hoc lieu TV1, uu tien Chu de 4: Dien chu cai con thieu.
 // ==========================================
 let skPool = [];
 let skIndex = 0;
@@ -18,6 +18,7 @@ let skRoundMs = 7000;
 let skCurrentChallenge = null;
 let skEnemyOrder = [];
 let skKnightLane = 1;
+let skSourceQuestions = [];
 
 const SK_MODES = [
     { id: 'mixed', label: 'Dai chien tong hop', icon: '⚔️', subs: null },
@@ -72,7 +73,18 @@ async function startSpellingKnightGame() {
     const box = document.getElementById('game-play-container');
     if (box) box.innerHTML = '<div class="py-12 text-center text-teal-600 font-black"><i class="fa-solid fa-spinner fa-spin mr-2"></i>Đang triệu hồi quái chữ...</div>';
     try {
-        await fetchAllQuestionsFlat();
+        if (typeof fetchAllTopicsData !== 'function') {
+            throw new Error('Không tìm thấy bộ nạp học liệu TV1.');
+        }
+        const topics = await fetchAllTopicsData();
+        skSourceQuestions = [];
+        (Array.isArray(topics) ? topics : []).forEach(topic => {
+            const topicId = Number(topic.topic_id);
+            if (![4,5].includes(topicId)) return;
+            (topic.questions || []).forEach(q => {
+                skSourceQuestions.push({ ...q, source_topic_id: topicId });
+            });
+        });
         skRenderModeMenu();
     } catch (e) {
         if (box) box.innerHTML = `<div class="py-10 text-center text-rose-500 font-black">😿 Không tải được học liệu: ${escapeHtml(e.message || String(e))}</div>`;
@@ -80,8 +92,19 @@ async function startSpellingKnightGame() {
 }
 
 function skDetectGates(q) {
-    const sub = String(q.sub_topic || '');
-    for (const rule of SK_GATE_MAP) if (rule.test.test(sub)) return rule.gates.slice();
+    const haystack = [
+        q?.sub_topic, q?.question_text, q?.hint, q?.explanation, q?.audio_text
+    ].map(v => String(v || '')).join(' ');
+    for (const rule of SK_GATE_MAP) if (rule.test.test(haystack)) return rule.gates.slice();
+
+    const answer = String(q?.answer || '').trim().toLocaleLowerCase('vi');
+    const groups = [
+        ['ng','ngh'], ['g','gh'], ['c','k'], ['ch','tr'], ['s','x'], ['l','n'], ['r','d','gi']
+    ];
+    for (const gates of groups) {
+        const sorted = gates.slice().sort((a,b)=>b.length-a.length);
+        if (sorted.some(g => answer.startsWith(g))) return gates;
+    }
     return null;
 }
 
@@ -109,15 +132,23 @@ function skBuildChallenge(q) {
 }
 
 function skGetAllSourceQuestions() {
-    const flat = Array.isArray(allQuestionsFlatCache) ? allQuestionsFlatCache : [];
-    return flat.filter(q => [2,3].includes(Number(q.source_topic_id))).map(skBuildChallenge).filter(Boolean);
+    const flat = Array.isArray(skSourceQuestions) ? skSourceQuestions : [];
+    const topic4 = flat.filter(q => Number(q.source_topic_id) === 4).map(skBuildChallenge).filter(Boolean);
+    if (topic4.length) return topic4;
+    return flat.map(skBuildChallenge).filter(Boolean);
 }
 
 function skRenderModeMenu() {
     skStopTick();
     const box = document.getElementById('game-play-container');
     const all = skGetAllSourceQuestions();
-    const countFor = mode => !mode.subs ? all.length : all.filter(c => mode.subs.includes(String(c.q.sub_topic))).length;
+    const modeGates = mode => ({
+      chtr:['ch','tr'], sx:['s','x'], ln:['l','n'], rdgi:['r','d','gi'], rules:['c','k','g','gh','ng','ngh']
+    }[mode.id] || null);
+    const countFor = mode => {
+      const mg = modeGates(mode);
+      return !mg ? all.length : all.filter(c => c.gates.some(g => mg.includes(g))).length;
+    };
     box.innerHTML = `
       <div class="rounded-[28px] border-2 border-teal-200 bg-gradient-to-b from-sky-50 via-white to-emerald-50 p-4 md:p-5 shadow-sm relative overflow-hidden">
         <div class="absolute -left-6 bottom-0 text-9xl opacity-10">🏰</div><div class="absolute -right-5 top-0 text-8xl opacity-10">🐉</div>
@@ -134,11 +165,13 @@ function skStartMode(modeId) {
     const mode = SK_MODES.find(m=>m.id===modeId) || SK_MODES[0];
     skMode = mode.id;
     let source = skGetAllSourceQuestions();
-    if (mode.subs) source = source.filter(c => mode.subs.includes(String(c.q.sub_topic)));
+    const mg = ({chtr:['ch','tr'], sx:['s','x'], ln:['l','n'], rdgi:['r','d','gi'], rules:['c','k','g','gh','ng','ngh']})[mode.id];
+    if (mg) source = source.filter(c => c.gates.some(g => mg.includes(g)));
     const seen = new Set();
     source = shuffleArray(source).filter(c => { const k = `${c.answer}|${c.correct}`; if (seen.has(k)) return false; seen.add(k); return true; });
     if (!source.length) {
-        showAccessGate({title:'Chưa đủ học liệu',icon:'📚',showAuth:false,message:'Nhóm này chưa có câu phù hợp để tạo gameplay Săn Quái Chữ.',note:'Con chọn Đại chiến tổng hợp để chơi ngay nhé!'});
+        const box = document.getElementById('game-play-container');
+        if (box) box.innerHTML = '<div class="py-10 text-center text-amber-600 font-black">📚 Nhóm này chưa có đủ học liệu phù hợp. Bé chọn Đại chiến tổng hợp nhé!</div>';
         return;
     }
     skPool = source.slice(0, Math.min(skRoundSize, source.length));

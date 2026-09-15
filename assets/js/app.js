@@ -2864,7 +2864,7 @@ function ensureMiniGameThemeStyles() {
 
 const MINIGAME_LIST = [
     { id: 'spelling-knight', title: '1. Hiệp sĩ Chính tả', desc: 'Săn quái chữ - chọn đúng âm/chữ còn thiếu', icon: '⚔️', ready: true },
-    { id: 'rhyme-treasure', title: '2. Kho báu âm vần', desc: 'Ghép âm đầu, vần và thanh thật nhanh', icon: '💎', ready: false },
+    { id: 'picture-word-catch', title: '2. Nhìn hình bắt chữ', desc: 'Nhìn emoji, bắt đúng từ trước khi chạm tường', icon: '👀', ready: true },
     { id: 'letter-race', title: '3. Đường đua chữ cái', desc: 'Nhận diện chữ và âm để tăng tốc', icon: '🏎️', ready: false },
     { id: 'word-garden', title: '4. Khu vườn từ ngữ', desc: 'Thu hoạch đúng từ theo chủ đề', icon: '🌳', ready: false },
     { id: 'sentence-train-tv', title: '5. Đoàn tàu ghép câu', desc: 'Xếp từ thành câu hoàn chỉnh', icon: '🚂', ready: false },
@@ -2907,7 +2907,8 @@ function openMiniGameHub() {
 }
 
 const GAME_SCRIPT_MAP = {
-    'spelling-knight': 'assets/js/games/hiep-si-chinh-ta.js?v=tv1mg1'
+    'spelling-knight': 'assets/js/games/hiep-si-chinh-ta.js?v=tv1mg1',
+    'picture-word-catch': 'assets/js/games/nhin-hinh-bat-chu.js?v=tv1mg2'
 };
 const loadedGameScripts = {};
 
@@ -2961,6 +2962,8 @@ async function openGamePlay(gameId) {
 
     if (gameId === 'spelling-knight' && typeof startSpellingKnightGame === 'function') {
         startSpellingKnightGame();
+    } else if (gameId === 'picture-word-catch' && typeof startPictureWordCatchGame === 'function') {
+        startPictureWordCatchGame();
     }
 }
 

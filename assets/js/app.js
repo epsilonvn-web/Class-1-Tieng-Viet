@@ -1571,11 +1571,11 @@ function getTopic3FusionMeta(q) {
             level, label:'Cấp 2 · Thêm thanh',
             instruction:'Ghép tiếng trước, rồi thêm thanh',
             pieces:[base, ({
-                'sắc':'´',
-                'huyền':'`',
-                'hỏi':'̉',
-                'ngã':'~',
-                'nặng':'.',
+                'sắc':'◌́',
+                'huyền':'◌̀',
+                'hỏi':'◌̉',
+                'ngã':'◌̃',
+                'nặng':'◌̣',
                 'ngang':'—'
             })[tone] || '—'],
             speech:`Tiếng ${base}, thêm thanh ${tone || ''}, được tiếng gì?`

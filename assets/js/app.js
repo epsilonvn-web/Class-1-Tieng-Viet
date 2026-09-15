@@ -140,6 +140,7 @@ const ALPHABET_29_DETAILS = [
 // ==========================================
 const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxgPIbG8HsEph5Etfu9sNQExNtb3K3mjAtyVXIfj_5IRwCfAqFIEBVrDaLlT2kql9qvUQ/exec";
 let allTopicsDataCache = null;
+let allQuestionsFlatCache = null;
 // Bật/tắt đọc câu hỏi TỰ ĐỘNG khi vào câu mới — nút "Nghe câu hỏi" thủ công vẫn luôn hoạt động
 // dù tắt tính năng này (đây chỉ tắt phần tự động phát, không tắt hẳn tính năng nghe).
 let autoSpeechEnabled = localStorage.getItem('autoSpeechEnabled') !== 'false';
@@ -163,6 +164,7 @@ let quizAnsweredLog = [];
 let quizStartTime = null;
 let quizTimerInterval = null;
 let quizRemainingSeconds = 40 * 60;
+let inMiniGameFlow = false;
 
 let audioCtx = null;
 const banMaiAudio = new Audio();
@@ -256,6 +258,8 @@ function requirePremiumAccess(featureName) {
 function updatePremiumUI() {
     const lock = document.getElementById('btn-progress-lock');
     if (lock) lock.classList.toggle('hidden', hasPremiumAccess());
+    const miniLock = document.getElementById('minigame-lock-icon');
+    if (miniLock) miniLock.classList.toggle('hidden', hasPremiumAccess());
 }
 
 function openAuthScreen(tab = 'login') {
@@ -585,7 +589,16 @@ async function fetchAllTopicsData() {
 
     const rawTopics = results.flatMap(data => Array.isArray(data) ? data : (data.topics || []));
     allTopicsDataCache = rawTopics.map(normalizeTopic).filter(Boolean);
+    allQuestionsFlatCache = allTopicsDataCache.flatMap(t =>
+        (t.questions || []).map(q => ({ ...q, source_topic_id: t.topic_id }))
+    );
     return allTopicsDataCache;
+}
+
+async function fetchAllQuestionsFlat() {
+    if (allQuestionsFlatCache) return allQuestionsFlatCache;
+    await fetchAllTopicsData();
+    return allQuestionsFlatCache || [];
 }
 
 async function loadExamDataFile(file) {
@@ -855,6 +868,8 @@ function returnToTopicLecture() {
         openExamHub();
     } else if (activeRoadmapContext) {
         openRoadmap();
+    } else if (inMiniGameFlow) {
+        openMiniGameHub();
     } else if (activeTopicId === 1) {
         openLettersSubmenu();
     } else if (pendingTopicQuiz) {
@@ -865,7 +880,7 @@ function returnToTopicLecture() {
 
 function switchAppView(viewId) {
     stopSpeaking();
-    ['view-dashboard-grid', 'view-lecture', 'view-quiz', 'view-roadmap', 'view-exam-hub', 'view-result'].forEach(id => {
+    ['view-dashboard-grid', 'view-lecture', 'view-quiz', 'view-roadmap', 'view-minigame-hub', 'view-game-play', 'view-exam-hub', 'view-result'].forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
         if (id === viewId) el.classList.remove('hidden');
@@ -874,6 +889,7 @@ function switchAppView(viewId) {
 }
 
 function goHome() {
+    inMiniGameFlow = false;
     stopSpeaking();
     clearInterval(quizTimerInterval);
     updateNavTabs(null, null, null);
@@ -2800,6 +2816,151 @@ function updateAutoSpeechButtonUI() {
         btn.title = 'Đang TẮT tự động đọc câu hỏi — bấm để bật';
         btn.classList.remove('bg-pink-50', 'text-pink-600', 'border-pink-200');
         btn.classList.add('bg-gray-100', 'text-gray-400', 'border-gray-200');
+    }
+}
+
+
+// ==========================================
+// MINI GAME HUB - TIẾNG VIỆT 1
+// 12 game; game 1 hoạt động, 11 game ở trạng thái sắp ra mắt.
+// ==========================================
+const MINIGAME_TOPIC_PALETTES = SUBTOPIC_PALETTES;
+
+function miniGameHash(text) {
+    let h = 2166136261 >>> 0;
+    for (let i = 0; i < String(text).length; i++) {
+        h ^= String(text).charCodeAt(i);
+        h = Math.imul(h, 16777619) >>> 0;
+    }
+    return h >>> 0;
+}
+
+function getMiniGamePaletteOrder(seed = 'tv1-minigame') {
+    const order = MINIGAME_TOPIC_PALETTES.map((_, i) => i);
+    let state = miniGameHash(seed) || 1;
+    for (let i = order.length - 1; i > 0; i--) {
+        state = (state * 1664525 + 1013904223) >>> 0;
+        const j = state % (i + 1);
+        [order[i], order[j]] = [order[j], order[i]];
+    }
+    return order.map(i => MINIGAME_TOPIC_PALETTES[i]);
+}
+
+function ensureMiniGameThemeStyles() {
+    if (document.getElementById('tv1-minigame-theme-v1')) return;
+    const style = document.createElement('style');
+    style.id = 'tv1-minigame-theme-v1';
+    style.textContent = `
+        #view-game-play > div { max-width: 56rem !important; }
+        #game-play-title { font-size: 1.2rem !important; }
+        #game-play-container { font-size: 16px; }
+        @media (max-width: 640px) {
+            #view-game-play > div { max-width: 100% !important; }
+            #game-play-title { font-size: 1.05rem !important; }
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+const MINIGAME_LIST = [
+    { id: 'spelling-knight', title: '1. Hiệp sĩ Chính tả', desc: 'Săn quái chữ - chọn đúng âm/chữ còn thiếu', icon: '⚔️', ready: true },
+    { id: 'rhyme-treasure', title: '2. Kho báu âm vần', desc: 'Ghép âm đầu, vần và thanh thật nhanh', icon: '💎', ready: false },
+    { id: 'letter-race', title: '3. Đường đua chữ cái', desc: 'Nhận diện chữ và âm để tăng tốc', icon: '🏎️', ready: false },
+    { id: 'word-garden', title: '4. Khu vườn từ ngữ', desc: 'Thu hoạch đúng từ theo chủ đề', icon: '🌳', ready: false },
+    { id: 'sentence-train-tv', title: '5. Đoàn tàu ghép câu', desc: 'Xếp từ thành câu hoàn chỉnh', icon: '🚂', ready: false },
+    { id: 'sound-balloons', title: '6. Bóng bay thanh điệu', desc: 'Chạm đúng thanh điệu trước khi bóng bay mất', icon: '🎈', ready: false },
+    { id: 'vocab-fishing', title: '7. Câu cá từ vựng', desc: 'Câu đúng từ theo hình và gợi ý', icon: '🎣', ready: false },
+    { id: 'reading-detective', title: '8. Thám tử đọc hiểu', desc: 'Truy tìm chi tiết trong đoạn đọc', icon: '🕵️', ready: false },
+    { id: 'riddle-arena', title: '9. Đấu trường câu đố', desc: 'Giải đố dân gian và IQ ngôn ngữ', icon: '🏆', ready: false },
+    { id: 'word-maze', title: '10. Mê cung từ ngữ', desc: 'Tìm đường qua các từ đúng', icon: '🌀', ready: false },
+    { id: 'memory-cards', title: '11. Lật thẻ ghi nhớ', desc: 'Ghép chữ - từ - hình theo cặp', icon: '🃏', ready: false },
+    { id: 'rabbit-says', title: '12. Cô Thỏ ra lệnh', desc: 'Phản xạ nghe - đọc - chọn thật nhanh', icon: '🐰', ready: false }
+];
+
+function openMiniGameHub() {
+    stopSpeaking();
+    if (!requirePremiumAccess('Mini Game')) return;
+    inMiniGameFlow = true;
+    activeExamContext = null;
+    activeRoadmapContext = null;
+    activeTopicId = null;
+    pendingTopicQuiz = null;
+    updateNavTabs('Mini Game', '🎮', null);
+    ensureMiniGameThemeStyles();
+
+    const grid = document.getElementById('minigame-grid');
+    if (!grid) return;
+    const palettes = getMiniGamePaletteOrder('tv1-hub');
+    grid.innerHTML = MINIGAME_LIST.map((g, idx) => {
+        const style = palettes[idx % palettes.length];
+        return `
+        <div onclick="openGamePlay('${g.id}')" class="p-3.5 md:p-4 flex flex-col items-center text-center cursor-pointer transition-all group ${style.card} border-2 rounded-[26px] min-h-[132px] justify-between relative shadow-sm pastel-btn">
+            ${!g.ready ? `<span class="absolute top-2 right-2 bg-amber-100 text-amber-700 text-[10px] font-black px-2 py-0.5 rounded-full border border-amber-200">Sắp ra mắt</span>` : ''}
+            <div class="text-4xl group-hover:scale-110 transition-transform mt-1">${g.icon}</div>
+            <div class="w-full">
+                <h3 class="font-extrabold ${style.num} text-base leading-tight">${g.title}</h3>
+                <p class="text-sm text-gray-700 font-bold mt-1 w-full leading-snug">${g.desc}</p>
+            </div>
+        </div>`;
+    }).join('');
+    switchAppView('view-minigame-hub');
+}
+
+const GAME_SCRIPT_MAP = {
+    'spelling-knight': 'assets/js/games/hiep-si-chinh-ta.js?v=tv1mg1'
+};
+const loadedGameScripts = {};
+
+function loadGameScript(src) {
+    if (loadedGameScripts[src]) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = src;
+        script.onload = () => { loadedGameScripts[src] = true; resolve(); };
+        script.onerror = () => reject(new Error(`Không tải được file game: ${src}`));
+        document.body.appendChild(script);
+    });
+}
+
+async function openGamePlay(gameId) {
+    stopSpeaking();
+    if (!requirePremiumAccess('Mini Game')) return;
+    ensureMiniGameThemeStyles();
+    inMiniGameFlow = true;
+    const game = MINIGAME_LIST.find(g => g.id === gameId);
+    if (!game) return;
+
+    if (!game.ready) {
+        const modal = ensurePremiumAccessModal();
+        const title = document.getElementById('premium-popup-title');
+        const message = document.getElementById('premium-popup-message');
+        const actions = document.getElementById('premium-popup-actions');
+        title.textContent = 'Sắp ra mắt ' + game.icon;
+        message.textContent = `${game.title} đang được cô Thỏ Hồng chuẩn bị.\nCon quay lại sau nhé!`;
+        actions.innerHTML = `<button onclick="closePremiumAccessPopup()" class="w-full py-3 rounded-2xl bg-gradient-to-r from-teal-500 to-emerald-500 text-white font-black text-sm pastel-btn">Đã hiểu</button>`;
+        modal.classList.remove('hidden');
+        return;
+    }
+
+    const title = document.getElementById('game-play-title');
+    if (title) title.innerHTML = `<span>${game.icon}</span><span>${game.title}</span>`;
+    updateNavTabs('Mini Game', '🎮', game.title);
+    switchAppView('view-game-play');
+
+    const scriptSrc = GAME_SCRIPT_MAP[gameId];
+    if (scriptSrc) {
+        const box = document.getElementById('game-play-container');
+        if (box) box.innerHTML = '<p class="text-center text-gray-400 font-bold py-8">Đang mở cổng thành...</p>';
+        try {
+            await loadGameScript(scriptSrc);
+        } catch (e) {
+            if (box) box.innerHTML = '<p class="text-center text-rose-500 font-bold py-8">Không tải được game. Bé thử lại nhé!</p>';
+            return;
+        }
+    }
+
+    if (gameId === 'spelling-knight' && typeof startSpellingKnightGame === 'function') {
+        startSpellingKnightGame();
     }
 }
 

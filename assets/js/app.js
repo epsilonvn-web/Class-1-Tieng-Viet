@@ -1543,7 +1543,18 @@ function getTopic3FusionMeta(q) {
     const text = String(q.question_text || '');
     const quoted = [...text.matchAll(/'([^']+)'/g)].map(m => m[1]);
     const toneMatch = text.match(/\bthanh\s+(sắc|huyền|hỏi|ngã|nặng|ngang)\b/i);
-    const tone = toneMatch ? toneMatch[1].toLowerCase() : '';
+    let tone = toneMatch ? toneMatch[1].toLowerCase() : '';
+    // Fallback an toàn cho Level 2: suy ra thanh từ đáp án đúng nếu câu chữ thay đổi.
+    // Không dùng dấu ngang làm mặc định vì sẽ làm sai nghĩa bài học.
+    if (!tone && level === 2 && q?.answer) {
+        const ans = String(q.answer).normalize('NFD');
+        if (/\u0301/.test(ans)) tone = 'sắc';
+        else if (/\u0300/.test(ans)) tone = 'huyền';
+        else if (/\u0309/.test(ans)) tone = 'hỏi';
+        else if (/\u0303/.test(ans)) tone = 'ngã';
+        else if (/\u0323/.test(ans)) tone = 'nặng';
+        else tone = 'ngang';
+    }
 
     const onsetMatch =
         text.match(/âm đầu\s+'([^']+)'/i) ||
@@ -1577,7 +1588,7 @@ function getTopic3FusionMeta(q) {
                 'ngã':'◌̃',
                 'nặng':'◌̣',
                 'ngang':'—'
-            })[tone] || '—'],
+            })[tone] || '?'],
             speech:`Tiếng ${base}, thêm thanh ${tone || ''}, được tiếng gì?`
         };
     }

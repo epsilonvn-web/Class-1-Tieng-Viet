@@ -6,98 +6,36 @@
 // ============================================================
 
 const SHARP_EYES_SCENES = [
-  {
-    id:'phong_khach', name:'Phòng khách', image:'assets/images/phong_khach.jpg',
-    present:['ghế sofa','tivi','bàn trà'],
-    absent:'tủ lạnh'
-  },
-  {
-    id:'phong_ngu', name:'Phòng ngủ', image:'assets/images/phong_ngu.jpg',
-    present:['giường ngủ','gối','chăn'],
-    absent:'bàn ăn'
-  },
-  {
-    id:'nha_bep', name:'Nhà bếp', image:'assets/images/nha_bep.jpg',
-    present:['nồi','chảo','tủ lạnh'],
-    absent:'gối ngủ'
-  },
-  {
-    id:'nha_tam', name:'Nhà tắm', image:'assets/images/nha_tam.jpg',
-    present:['bồn rửa mặt','khăn tắm','vòi sen'],
-    absent:'bếp ga'
-  },
-  {
-    id:'gia_sach', name:'Giá sách', image:'assets/images/gia_sach.jpg',
-    present:['quyển sách','gấu bông','đồ chơi'],
-    absent:'cái chảo'
-  },
-  {
-    id:'tu_quan_ao', name:'Tủ quần áo', image:'assets/images/tu_quan_ao.jpg',
-    present:['áo','quần','mũ'],
-    absent:'cái bát'
-  },
-  {
-    id:'giuong_ngu', name:'Giường ngủ', image:'assets/images/giuong_ngu.jpg',
-    present:['gối','chăn','nệm'],
-    absent:'ghế sofa'
-  },
-  {
-    id:'ban_an', name:'Bàn ăn', image:'assets/images/ban_an.jpg',
-    present:['cái đĩa','cái cốc','cái thìa'],
-    absent:'bút chì'
-  },
-  {
-    id:'ban_hoc', name:'Bàn học', image:'assets/images/ban_hoc.jpg',
-    present:['bút chì','quyển vở','đèn học'],
-    absent:'cái nồi'
-  },
-  {
-    id:'lop_hoc', name:'Lớp học', image:'assets/images/lop_hoc.jpg',
-    present:['bảng lớp','bàn học','ghế ngồi'],
-    absent:'bồn tắm'
-  },
-  {
-    id:'san_choi', name:'Sân chơi', image:'assets/images/san_choi.jpg',
-    present:['cầu trượt','xích đu','bập bênh'],
-    absent:'tủ quần áo'
-  },
-  {
-    id:'vuon_nha', name:'Vườn nhà', image:'assets/images/vuon_nha.jpg',
-    present:['cây xanh','bông hoa','hàng rào'],
-    absent:'cái giường'
-  },
-{
-    id:'thu_vien', name:'Thư viện', image:'assets/images/thu_vien.jpg',
-    present:['giá sách','bàn đọc sách','ghế ngồi'], absent:'máy tính'
-  },
-  {
-    id:'san_truong', name:'Sân trường', image:'assets/images/san_truong.jpg',
-    present:['cột cờ','cầu trượt','xích đu'], absent:'ghế đá'
-  },
-  {
-    id:'goc_do_choi', name:'Góc đồ chơi', image:'assets/images/goc_do_choi.jpg',
-    present:['gấu bông','ô tô đồ chơi','khối xếp hình'], absent:'búp bê'
-  },
-  {
-    id:'cua_hang_tap_hoa', name:'Cửa hàng tạp hóa', image:'assets/images/cua_hang_tap_hoa.jpg',
-    present:['chai nước','quả táo','quả chuối'], absent:'ổ bánh mì'
-  },
-  {
-    id:'phong_y_te', name:'Phòng y tế', image:'assets/images/phong_y_te.jpg',
-    present:['giường bệnh','hộp thuốc','ghế đẩu'], absent:'ống nghe'
-  },
-  {
-    id:'gara_xe', name:'Ga-ra xe', image:'assets/images/gara_xe.jpg',
-    present:['ô tô','lốp xe','dụng cụ sửa xe'], absent:'xe máy'
-  },
-  {
-    id:'chuong_trai', name:'Chuồng trại', image:'assets/images/chuong_trai.jpg',
-    present:['con gà','con bò','con cừu'], absent:'con lợn'
-  },
-  {
-    id:'cong_vien', name:'Công viên', image:'assets/images/cong_vien.jpg',
-    present:['ghế đá','bông hoa','lối đi'], absent:'đài phun nước'
-  }
+  {id:'bai_bien',name:'Bãi biển',image:'assets/images/bai_bien.jpg',present:['ô che nắng','xô cát','xẻng đồ chơi'],absent:'quả bóng biển'},
+  {id:'ban_an',name:'Bàn ăn',image:'assets/images/ban_an.jpg',present:['cái đĩa','cái cốc','quả chuối'],absent:'ấm trà'},
+  {id:'ban_hoc',name:'Bàn học',image:'assets/images/ban_hoc.jpg',present:['đèn học','quyển sách','bút chì'],absent:'cặp sách'},
+  {id:'be_boi',name:'Bể bơi',image:'assets/images/be_boi.jpg',present:['phao vịt','phao tròn','ô che nắng'],absent:'ván nhảy'},
+  {id:'chuong_trai',name:'Chuồng trại',image:'assets/images/chuong_trai.jpg',present:['con bò','con cừu','con gà'],absent:'con lợn'},
+  {id:'cong_vien',name:'Công viên',image:'assets/images/cong_vien.jpg',present:['ghế công viên','bồn hoa','lối đi'],absent:'đài phun nước'},
+  {id:'cua_hang_tap_hoa',name:'Cửa hàng tạp hóa',image:'assets/images/cua_hang_tap_hoa.jpg',present:['quả táo','quả chuối','chùm nho'],absent:'hộp trứng'},
+  {id:'gara_xe',name:'Ga-ra xe',image:'assets/images/gara_xe.jpg',present:['ô tô','lốp xe','cờ lê'],absent:'xe máy'},
+  {id:'gia_sach',name:'Giá sách',image:'assets/images/gia_sach.jpg',present:['gấu bông','vịt đồ chơi','khủng long đồ chơi'],absent:'ô tô đồ chơi'},
+  {id:'giuong_ngu',name:'Giường ngủ',image:'assets/images/giuong_ngu.jpg',present:['gối','chăn','giường ngủ'],absent:'đèn ngủ'},
+  {id:'goc_do_choi',name:'Góc đồ chơi',image:'assets/images/goc_do_choi.jpg',present:['gấu bông','ô tô đồ chơi','khối xếp hình'],absent:'búp bê'},
+  {id:'lop_hoc',name:'Lớp học',image:'assets/images/lop_hoc.jpg',present:['bảng lớp','bàn học','quả địa cầu'],absent:'máy chiếu'},
+  {id:'nha_bep',name:'Nhà bếp',image:'assets/images/nha_bep.jpg',present:['tủ lạnh','bếp nấu','cái nồi'],absent:'lò vi sóng'},
+  {id:'nha_ga',name:'Nhà ga',image:'assets/images/nha_ga.jpg',present:['đoàn tàu','quầy vé','đồng hồ'],absent:'vali'},
+  {id:'nha_tam',name:'Nhà tắm',image:'assets/images/nha_tam.jpg',present:['bồn tắm','gương','khăn tắm'],absent:'vòi sen'},
+  {id:'phong_am_nhac',name:'Phòng âm nhạc',image:'assets/images/phong_am_nhac.jpg',present:['đàn piano','đàn ghi-ta','bộ trống'],absent:'đàn vĩ cầm'},
+  {id:'phong_khach',name:'Phòng khách',image:'assets/images/phong_khach.jpg',present:['ghế sofa','bàn trà','quả địa cầu'],absent:'tivi'},
+  {id:'phong_my_thuat',name:'Phòng mỹ thuật',image:'assets/images/phong_my_thuat.jpg',present:['giá vẽ','cọ vẽ','ghế đẩu'],absent:'kéo'},
+  {id:'phong_ngu',name:'Phòng ngủ',image:'assets/images/phong_ngu.jpg',present:['giường ngủ','đèn ngủ','gấu bông'],absent:'tủ quần áo'},
+  {id:'phong_the_duc',name:'Phòng thể dục',image:'assets/images/phong_the_duc.jpg',present:['thảm tập','quả bóng rổ','dây nhảy'],absent:'vợt cầu lông'},
+  {id:'phong_y_te',name:'Phòng y tế',image:'assets/images/phong_y_te.jpg',present:['giường bệnh','tủ thuốc','thước đo chiều cao'],absent:'ống nghe'},
+  {id:'san_choi',name:'Sân chơi',image:'assets/images/san_choi.jpg',present:['cầu trượt','xích đu','bập bênh'],absent:'đu quay'},
+  {id:'san_truong',name:'Sân trường',image:'assets/images/san_truong.jpg',present:['trường học','cột cờ','cầu trượt'],absent:'bập bênh'},
+  {id:'san_van_dong',name:'Sân vận động',image:'assets/images/san_van_dong.jpg',present:['quả bóng','khung thành','bảng tỉ số'],absent:'cúp'},
+  {id:'sieu_thi',name:'Siêu thị',image:'assets/images/sieu_thi.jpg',present:['quả táo','quả chuối','xe đẩy'],absent:'quả dưa hấu'},
+  {id:'thu_vien',name:'Thư viện',image:'assets/images/thu_vien.jpg',present:['giá sách','quyển sách','bàn đọc sách'],absent:'máy tính'},
+  {id:'tiem_banh',name:'Tiệm bánh',image:'assets/images/tiem_banh.jpg',present:['bánh kem','bánh cupcake','máy tính tiền'],absent:'bánh donut'},
+  {id:'tram_xe_buyt',name:'Trạm xe buýt',image:'assets/images/tram_xe_buyt.jpg',present:['xe buýt','ghế băng','biển chỉ đường'],absent:'thùng rác'},
+  {id:'tu_quan_ao',name:'Tủ quần áo',image:'assets/images/tu_quan_ao.jpg',present:['áo','váy','quần yếm'],absent:'mũ'},
+  {id:'vuon_nha',name:'Vườn nhà',image:'assets/images/vuon_nha.jpg',present:['hàng rào','hoa hướng dương','hoa tulip'],absent:'bình tưới cây'},
 ];
 
 let seDeck = [];

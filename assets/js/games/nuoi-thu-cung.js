@@ -16,30 +16,17 @@ let petRoundToken = 0;
 let petAnimalDeck = [];
 
 const PET_FOOD_POOL = [
-  { word: 'xương', emoji: '🦴' },
-  { word: 'cá', emoji: '🐟' },
-  { word: 'cà rốt', emoji: '🥕' },
-  { word: 'thóc', emoji: '🌾' },
-  { word: 'cỏ', emoji: '🌿' },
-  { word: 'mật hoa', emoji: '🌼' },
-  { word: 'rong', emoji: '🌱' },
-  { word: 'chuối', emoji: '🍌' },
-  { word: 'hạt', emoji: '🌰' },
-  { word: 'tôm', emoji: '🦐' },
-  { word: 'rau', emoji: '🥬' },
-  { word: 'ngô', emoji: '🌽' },
-  { word: 'thịt', emoji: '🍖' },
-  { word: 'sữa', emoji: '🥛' },
-  { word: 'táo', emoji: '🍎' },
-  { word: 'bắp cải', emoji: '🥬' },
-  { word: 'gạo', emoji: '🍚' },
-  { word: 'bánh mì', emoji: '🍞' },
-  { word: 'đậu', emoji: '🫘' },
-  { word: 'trái cây', emoji: '🍊' },
-  { word: 'tre', emoji: '🎋' },
-  { word: 'mía', emoji: '🎋' },
-  { word: 'lá cây', emoji: '🍃' },
-  { word: 'sâu', emoji: '🐛' }
+  { word: 'xương', emoji: '🦴' }, { word: 'cá', emoji: '🐟' }, { word: 'cà rốt', emoji: '🥕' },
+  { word: 'thóc', emoji: '🌾' }, { word: 'cỏ', emoji: '🌿' }, { word: 'mật hoa', emoji: '🌼' },
+  { word: 'rong', emoji: '🌱' }, { word: 'chuối', emoji: '🍌' }, { word: 'hạt', emoji: '🌰' },
+  { word: 'tôm', emoji: '🦐' }, { word: 'rau', emoji: '🥬' }, { word: 'ngô', emoji: '🌽' },
+  { word: 'thịt', emoji: '🍖' }, { word: 'sữa', emoji: '🥛' }, { word: 'táo', emoji: '🍎' },
+  { word: 'bắp cải', emoji: '🥬' }, { word: 'gạo', emoji: '🍚' }, { word: 'bánh mì', emoji: '🍞' },
+  { word: 'đậu', emoji: '🫘' }, { word: 'trái cây', emoji: '🍊' }, { word: 'tre', emoji: '🎋' },
+  { word: 'lá cây', emoji: '🍃' }, { word: 'côn trùng', emoji: '🐛' }, { word: 'rệp cây', emoji: '🪲' },
+  { word: 'đường', emoji: '🍬' }, { word: 'lá mục', emoji: '🍂' }, { word: 'nhựa cây', emoji: '🌳' },
+  { word: 'hải sản', emoji: '🦐' }, { word: 'cá nhỏ', emoji: '🐟' }, { word: 'tảo', emoji: '🌿' },
+  { word: 'sinh vật phù du', emoji: '🫧' }, { word: 'mật ong', emoji: '🍯' }
 ];
 
 // Mỗi con vật có một nhóm phương án nhiễu riêng.
@@ -66,31 +53,75 @@ const PET_DISTRACTOR_MAP = {
   'lợn': ['gạo', 'rau', 'đậu', 'cà rốt', 'trái cây']
 };
 
+
+Object.assign(PET_DISTRACTOR_MAP, {
+  'rùa':['cá','hạt','cỏ','tôm','trái cây'], 'chim yến phụng':['thóc','ngô','trái cây','sâu','rau'], 'chuột hamster':['ngô','thóc','trái cây','rau','bánh mì'],
+  'ngỗng':['thóc','ngô','hạt','rau','cá'], 'gà tây':['ngô','gạo','hạt','rau','đậu'], 'cừu':['rau','ngô','cà rốt','thóc','bắp cải'],
+  'lừa':['cà rốt','ngô','rau','thóc','táo'], 'chim công':['ngô','thóc','trái cây','sâu','rau'], 'chim cánh cụt':['tôm','hải sản','thịt','sinh vật phù du','rong'],
+  'gấu Bắc Cực':['thịt','hải sản','tôm','trái cây','rong'], 'hươu cao cổ':['cỏ','trái cây','cà rốt','rau','tre'], 'sư tử':['cá','xương','tôm','trái cây','hạt'],
+  'ngựa vằn':['cà rốt','ngô','rau','thóc','táo'], 'tê giác':['rau','ngô','cà rốt','thóc','bắp cải'], 'hà mã':['rau','ngô','cà rốt','thóc','trái cây'],
+  'nhím':['trái cây','hạt','rau','cà rốt','thóc']
+});
 const PET_EXTRA_FOOD = {
   'cơm': '🍚', 'trứng': '🥚', 'đường': '🍬', 'mật ong': '🍯',
   'nước ngọt': '🥤', 'rong biển': '🌿'
 };
 
-const PET_ANIMALS = [
-  { name: 'chó', label: 'Chú chó', image: '', emoji: '🐶', food: 'xương' },
-  { name: 'mèo', label: 'Mèo con', image: '', emoji: '🐱', food: 'cá' },
-  { name: 'thỏ', label: 'Thỏ con', image: '', emoji: '🐰', food: 'cà rốt' },
-  { name: 'gà', label: 'Gà con', image: '', emoji: '🐔', food: 'thóc' },
-  { name: 'trâu', label: 'Trâu con', image: '', emoji: '🐃', food: 'cỏ' },
-  { name: 'ong', label: 'Ong nhỏ', image: '', emoji: '🐝', food: 'mật hoa' },
-  { name: 'bướm', label: 'Bướm xinh', image: '', emoji: '🦋', food: 'mật hoa' },
-  { name: 'cá', label: 'Cá nhỏ', image: '', emoji: '🐟', food: 'rong' },
-  { name: 'vịt', label: 'Vịt con', image: '', emoji: '🦆', food: 'tôm' },
-  { name: 'khỉ', label: 'Khỉ con', image: '', emoji: '🐵', food: 'chuối' },
-  { name: 'sóc', label: 'Sóc nâu', image: '', emoji: '🐿️', food: 'hạt' },
-  { name: 'bò', label: 'Bò con', image: '', emoji: '🐄', food: 'cỏ' },
-  { name: 'dê', label: 'Dê con', image: '', emoji: '🐐', food: 'lá cây' },
-  { name: 'ngựa', label: 'Ngựa con', image: '', emoji: '🐴', food: 'cỏ' },
-  { name: 'gấu trúc', label: 'Gấu trúc', image: '', emoji: '🐼', food: 'tre' },
-  { name: 'chim', label: 'Chim nhỏ', image: '', emoji: '🐦', food: 'sâu' },
-  { name: 'voi', label: 'Voi con', image: '', emoji: '🐘', food: 'mía' },
-  { name: 'lợn', label: 'Lợn con', image: '', emoji: '🐷', food: 'ngô' }
+// Ngân hàng đúng 30 tranh đã được đối chiếu trực tiếp từ ảnh nguồn. Mỗi tranh có thể sinh nhiều câu hỏi,
+// mỗi câu vẫn giữ NGUYÊN luật chơi: chọn món ăn phù hợp cho con vật được hỏi.
+// Vì vậy một tranh có 4-5 con vật có thể được dùng lại 4-5 lần với các con vật khác nhau.
+const PET_SCENES = [
+  { image:'assets/images/gia_suc_nong_trai_1.jpg', scene:'Gia súc nông trại', animals:[['bò','cỏ','🐄'],['trâu','cỏ','🐃'],['lợn','ngô','🐷'],['cừu','cỏ','🐑'],['dê','cỏ','🐐'],['ngựa','cỏ','🐴']] },
+  { image:'assets/images/gia_suc_nong_trai_2.jpg', scene:'Vật nuôi nông trại', animals:[['lừa','cỏ','🫏'],['thỏ','cà rốt','🐰'],['vịt','thóc','🦆'],['gà','thóc','🐔'],['ngỗng','cỏ','🪿']] },
+  { image:'assets/images/thu_cung_trong_nha_1.jpg', scene:'Thú cưng trong nhà', animals:[['chó','xương','🐶'],['mèo','cá','🐱'],['chim yến phụng','hạt','🐦'],['chuột hamster','hạt','🐹'],['rùa','rau','🐢']] },
+  { image:'assets/images/thu_cung_trong_nha_2.jpg', scene:'Thú cưng trong nhà', animals:[['mèo','cá','🐱'],['chó','xương','🐶'],['thỏ','cà rốt','🐰'],['cá vàng','rong','🐟'],['nhím','côn trùng','🦔']] },
+  { image:'assets/images/hoang_da_dong_co_1.jpg', scene:'Động vật đồng cỏ', animals:[['sư tử','thịt','🦁'],['hươu cao cổ','lá cây','🦒'],['ngựa vằn','cỏ','🦓'],['voi','trái cây','🐘'],['tê giác','cỏ','🦏']] },
+  { image:'assets/images/hoang_da_dong_co_2.jpg', scene:'Động vật đồng cỏ', animals:[['linh dương','cỏ','🦌'],['đà điểu','hạt','🐦'],['hà mã','cỏ','🦛'],['linh cẩu','thịt','🐕'],['thỏ rừng','cỏ','🐇']] },
+  { image:'assets/images/hoang_da_rung_xanh_1.jpg', scene:'Động vật rừng xanh', animals:[['hổ','thịt','🐯'],['báo hoa mai','thịt','🐆'],['khỉ','trái cây','🐒'],['gấu','mật ong','🐻'],['sóc','hạt','🐿️']] },
+  { image:'assets/images/hoang_da_rung_xanh_2.jpg', scene:'Động vật rừng xanh', animals:[['cáo đỏ','thịt','🦊'],['nai','cỏ','🦌'],['gấu trúc','tre','🐼'],['gấu mèo','trái cây','🦝'],['nhím','côn trùng','🦔']] },
+  { image:'assets/images/dong_vat_rung_nhiet_doi.jpg', scene:'Rừng mưa nhiệt đới', animals:[['tắc kè hoa','côn trùng','🦎'],['con lười','lá cây','🦥'],['chim toucan','trái cây','🐦'],['ếch cây','côn trùng','🐸'],['báo đốm','thịt','🐆']] },
+  { image:'assets/images/dong_vat_vung_cuc.jpg', scene:'Động vật vùng cực', animals:[['cáo Bắc Cực','thịt','🦊'],['thỏ Bắc Cực','cỏ','🐇'],['cú tuyết','thịt','🦉'],['gấu Bắc Cực','cá','🐻‍❄️'],['tuần lộc','cỏ','🦌']] },
+  { image:'assets/images/dai_duong_san_ho_1.jpg', scene:'Rạn san hô', animals:[['cá heo','cá','🐬'],['rùa biển','rong','🐢'],['cá hề','sinh vật phù du','🐠'],['sao biển','hải sản','⭐'],['bạch tuộc','tôm','🐙']] },
+  { image:'assets/images/dai_duong_san_ho_2.jpg', scene:'Rạn san hô', animals:[['cá mập','cá','🦈'],['cá đuối','hải sản','🐟'],['cua biển','tảo','🦀'],['tôm hùm','cá nhỏ','🦞'],['cá ngừ','cá nhỏ','🐟']] },
+  { image:'assets/images/dai_duong_day_bien.jpg', scene:'Đáy biển', animals:[['mực','cá nhỏ','🦑'],['sứa biển','sinh vật phù du','🪼'],['cá ngựa','sinh vật phù du','🐠'],['ốc biển','tảo','🐌'],['cá voi','sinh vật phù du','🐋']] },
+  { image:'assets/images/sinh_vat_bien_xinh_dep.jpg', scene:'Bạn bè biển cả', animals:[['cá thần tiên','sinh vật phù du','🐠'],['cá nóc','hải sản','🐡'],['sò biển','sinh vật phù du','🐚'],['hải sâm','tảo','🌊'],['cá bống','tôm','🐟']] },
+  { image:'assets/images/dai_duong_cuc_nam.jpg', scene:'Bạn bè vùng cực', animals:[['chim cánh cụt','cá','🐧'],['hải cẩu','cá','🦭'],['cá voi sát thủ','cá','🐋'],['gấu Bắc Cực','cá','🐻‍❄️'],['hải mã','hải sản','🦭']] },
+  { image:'assets/images/cac_loai_chim_khu_vuon.jpg', scene:'Chim khu vườn', animals:[['chim sẻ','hạt','🐦'],['chim bồ câu','hạt','🕊️'],['chim họa mi','côn trùng','🐦'],['chim gõ kiến','côn trùng','🐦'],['chim hút mật','mật hoa','🐦']] },
+  { image:'assets/images/cac_loai_chim_nhiet_doi.jpg', scene:'Chim nhiệt đới', animals:[['chim vẹt','trái cây','🦜'],['chim hồng hạc','tôm','🦩'],['chim toucan','trái cây','🐦'],['chim công','hạt','🦚'],['chim bói cá','cá','🐦']] },
+  { image:'assets/images/cac_loai_chim_san_moi.jpg', scene:'Chim săn mồi', animals:[['đại bàng','thịt','🦅'],['chim cú mèo','thịt','🦉'],['chim diều hâu','thịt','🦅'],['chim cò','cá','🪶'],['chim ưng','thịt','🦅']] },
+  { image:'assets/images/gia_cam_nong_trai.jpg', scene:'Gia cầm nông trại', animals:[['gà trống','thóc','🐓'],['gà mái','thóc','🐔'],['gà con','thóc','🐤'],['vịt xiêm','thóc','🦆'],['ngỗng','cỏ','🪿'],['gà tây','thóc','🦃']] },
+  { image:'assets/images/chim_nuoc_dam_lay.jpg', scene:'Chim nước đầm lầy', animals:[['thiên nga','rong','🦢'],['cò trắng','cá','🪶'],['chim bồ nông','cá','🐦'],['chim bói cá','cá','🐦'],['vịt trời','thóc','🦆']] },
+  { image:'assets/images/khung_long_rung_xanh_1.jpg', scene:'Khủng long rừng xanh', animals:[['khủng long bạo chúa','thịt','🦖'],['khủng long cổ dài','lá cây','🦕'],['khủng long ba sừng','lá cây','🦕'],['khủng long bay','cá','🦖'],['khủng long giáp','lá cây','🦕']] },
+  { image:'assets/images/khung_long_rung_xanh_2.jpg', scene:'Những người bạn khủng long', animals:[['khủng long gai','thịt','🦖'],['khủng long phiến sừng','lá cây','🦕'],['khủng long săn mồi','thịt','🦖'],['khủng long mỏ vịt','lá cây','🦕'],['khủng long con','lá cây','🦕']] },
+  { image:'assets/images/khung_long_dam_lay.jpg', scene:'Khủng long đầm lầy', animals:[['khủng long cổ dài dưới nước','cá','🦕'],['khủng long cổ dài','lá cây','🦕'],['khủng long bay','cá','🦖'],['khủng long mào','lá cây','🦕'],['khủng long nhỏ','côn trùng','🦖']] },
+  { image:'assets/images/sinh_vat_tien_su.jpg', scene:'Sinh vật thời tiền sử', animals:[['voi ma mút','cỏ','🦣'],['hổ răng kiếm','thịt','🐯'],['chim dodo','trái cây','🐦'],['tê tê cổ đại','côn trùng','🦔'],['hươu thời băng hà','cỏ','🦌']] },
+  { image:'assets/images/the_gioi_khung_long_con.jpg', scene:'Thế giới khủng long con', animals:[['khủng long bạo chúa con','thịt','🦖'],['khủng long cổ dài con','lá cây','🦕'],['khủng long bay con','cá','🦖'],['khủng long ba sừng con','lá cây','🦕'],['khủng long phiến sừng con','lá cây','🦕']] },
+  { image:'assets/images/con_trung_khu_vuon_1.jpg', scene:'Côn trùng khu vườn', animals:[['bướm','mật hoa','🦋'],['ong mật','mật hoa','🐝'],['chuồn chuồn','côn trùng','🪰'],['bọ rùa','rệp cây','🐞'],['kiến','đường','🐜']] },
+  { image:'assets/images/con_trung_khu_vuon_2.jpg', scene:'Côn trùng khu vườn', animals:[['châu chấu','lá cây','🦗'],['bọ ngựa','côn trùng','🦗'],['dế mèn','lá cây','🦗'],['đom đóm','côn trùng','✨'],['bọ cánh cứng','lá cây','🪲']] },
+  { image:'assets/images/sinh_vat_ao_ho.jpg', scene:'Sinh vật ao hồ', animals:[['ếch xanh','côn trùng','🐸'],['nòng nọc','tảo','🐟'],['cua đồng','tảo','🦀'],['ốc nhồi','lá cây','🐌'],['cá rô','côn trùng','🐟']] },
+  { image:'assets/images/con_trung_sao_sang.jpg', scene:'Khu vườn ban đêm', animals:[['bọ rùa','rệp cây','🐞'],['sâu đo','lá cây','🐛'],['thạch sùng','côn trùng','🦎'],['cuốn chiếu','lá mục','🐛'],['ve sầu','nhựa cây','🪰']] },
+  { image:'assets/images/khu_vuon_con_trung.jpg', scene:'Khu vườn côn trùng', animals:[['bướm','mật hoa','🦋'],['ong mật','mật hoa','🐝'],['bọ rùa','rệp cây','🐞'],['ốc sên','lá cây','🐌'],['châu chấu','lá cây','🦗']] }
 ];
+
+function petBuildQuestionBank(){
+  const bank=[];
+  PET_SCENES.forEach(scene=>{
+    scene.animals.forEach((a,idx)=>{
+      bank.push({
+        name:a[0],
+        label:a[0],
+        food:a[1],
+        emoji:a[2] || '🐾',
+        image:scene.image,
+        scene:scene.scene,
+        sceneAnimalIndex:idx
+      });
+    });
+  });
+  return bank;
+}
+
+const PET_ANIMALS = petBuildQuestionBank();
 
 function petEnsureStyles() {
   if (document.getElementById('pet-game-styles')) return;
@@ -113,15 +144,16 @@ function petEnsureStyles() {
     @keyframes petRunIn{0%{transform:translateX(-95px) scale(.82) rotate(-4deg);opacity:0}48%{transform:translateX(16px) scale(1.05) rotate(3deg);opacity:1}72%{transform:translateX(-7px) scale(.98) rotate(-2deg)}100%{transform:translateX(0) scale(1) rotate(0);opacity:1}}
     @keyframes petCelebrateHop{0%{transform:translateY(0) scale(1)}30%{transform:translateY(-18px) scale(1.06) rotate(-3deg)}55%{transform:translateY(0) scale(1.02) rotate(3deg)}75%{transform:translateY(-9px) scale(1.05)}100%{transform:translateY(0) scale(1)}}
     .pet-stage{position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff 0%,#fdf2f8 48%,#ecfdf5 100%)}
-    .pet-main-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:14px;align-items:stretch}
+    .pet-main-layout{display:grid;grid-template-columns:410px minmax(0,1fr);gap:12px;align-items:stretch}
     .pet-visual-panel{display:flex;flex-direction:column;justify-content:center;min-width:0}
     .pet-answer-panel{display:flex;flex-direction:column;justify-content:center;min-width:0}
-    .pet-animal-wrap{position:relative;min-height:330px;display:flex;align-items:center;justify-content:center;animation:petFloat 2.4s ease-in-out infinite}
-    .pet-animal-image{width:270px;height:270px;object-fit:contain;border-radius:32px;background:rgba(255,255,255,.95);padding:8px;border:3px solid #fbcfe8;box-shadow:0 16px 34px rgba(236,72,153,.16);user-select:none;pointer-events:none}
-    .pet-animal-fallback{font-size:168px;line-height:1;filter:drop-shadow(0 12px 9px rgba(15,23,42,.13))}
+    .pet-animal-wrap{position:relative;width:100%;aspect-ratio:1/1;display:block;animation:petFloat 2.4s ease-in-out infinite;overflow:hidden}
+    .pet-animal-image{display:block;width:100%;height:100%;aspect-ratio:1/1;object-fit:cover;border:0;border-radius:0;background:transparent;padding:0;box-shadow:none;user-select:none;pointer-events:none}
+    .pet-animal-fallback{width:100%;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;font-size:168px;line-height:1;filter:drop-shadow(0 12px 9px rgba(15,23,42,.13))}
+    .pet-scene-label{position:absolute;left:12px;bottom:12px;z-index:5;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.95);border:1px solid #fbcfe8;color:#db2777;font-weight:900;font-size:16px;box-shadow:0 4px 12px rgba(15,23,42,.08)}
     #pet-food-grid{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
-    .pet-food-btn{min-height:68px!important;display:flex;align-items:center;justify-content:flex-start;gap:14px;text-align:left}
-    .pet-food-btn .pet-food-emoji{font-size:34px;line-height:1;flex:0 0 auto}
+    .pet-food-btn{min-height:58px!important;display:flex;align-items:center;justify-content:flex-start;gap:14px;text-align:left}
+    .pet-food-btn .pet-food-emoji{font-size:32px;line-height:1;flex:0 0 auto}
     .pet-food-btn .pet-food-word{font-size:16px;line-height:1.2}
     .pet-animal-happy{animation:petHappy .62s ease-out 1!important}
     .pet-animal-sad{animation:petSad .35s linear 1!important}
@@ -138,8 +170,8 @@ function petEnsureStyles() {
     .pet-celebrate-hop{animation:petCelebrateHop .72s ease-out 1!important}
     .pet-bird{position:absolute;left:0;pointer-events:none;z-index:1;opacity:.72;animation:petBirdFly 12s linear infinite;filter:drop-shadow(0 3px 4px rgba(15,23,42,.08))}
     .pet-leaf{position:absolute;top:-45px;pointer-events:none;z-index:1;opacity:.72;animation:petLeafFall 8s linear infinite;filter:drop-shadow(0 3px 3px rgba(15,23,42,.06))}
-    @media(max-width:900px){.pet-main-layout{grid-template-columns:285px minmax(0,1fr);gap:10px}.pet-animal-wrap{min-height:285px}.pet-animal-image{width:230px;height:230px}.pet-animal-fallback{font-size:145px}.pet-food-btn{min-height:60px!important}}
-    @media(max-width:700px){.pet-main-layout{grid-template-columns:1fr}.pet-animal-wrap{min-height:185px}.pet-animal-image{width:165px;height:165px}.pet-animal-fallback{font-size:100px}#pet-food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.pet-food-btn{min-height:66px!important;justify-content:center;text-align:center;gap:8px}.pet-food-btn .pet-food-emoji{font-size:28px}.pet-food-btn .pet-food-word{font-size:14px}}
+    @media(max-width:900px){.pet-main-layout{grid-template-columns:350px minmax(0,1fr);gap:10px}.pet-animal-fallback{font-size:145px}.pet-food-btn{min-height:52px!important}}
+    @media(max-width:700px){.pet-main-layout{grid-template-columns:1fr}.pet-animal-wrap{max-width:420px;width:100%;justify-self:start}.pet-animal-fallback{font-size:100px}#pet-food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.pet-food-btn{min-height:48px!important;justify-content:center;text-align:center;gap:8px}.pet-food-btn .pet-food-emoji{font-size:28px}.pet-food-btn .pet-food-word{font-size:14px}.pet-scene-label{font-size:14px;padding:6px 11px}}
   `;
   document.head.appendChild(style);
 }
@@ -192,23 +224,14 @@ function petRefillAnimalDeck() {
 }
 
 function petPickRound() {
-  // Dùng cơ chế "xáo bộ bài": mỗi con vật xuất hiện đúng 1 lần trong một vòng.
-  // Chỉ khi đã đi hết toàn bộ ngân hàng mới xáo lại vòng tiếp theo.
   if (!petAnimalDeck.length) petRefillAnimalDeck();
   petTarget = petAnimalDeck.shift() || PET_ANIMALS[0];
+
   const correct = petFoodInfo(petTarget.food);
-
-  // Chọn 3 đáp án nhiễu từ nhóm thực phẩm hợp ngữ cảnh của từng con vật.
-  // Tránh các phương án quá vô lý hoặc không phải thức ăn.
-  const preferredWords = (PET_DISTRACTOR_MAP[petTarget.name] || [])
-    .filter(word => word !== correct.word);
+  const preferredWords = (PET_DISTRACTOR_MAP[petTarget.name] || []).filter(word => word !== correct.word);
   const preferred = petShuffle(preferredWords).slice(0, 3).map(petFoodInfo);
-
-  // Fallback an toàn nếu sau này thêm con vật mới mà chưa khai báo đủ nhóm nhiễu.
   const used = new Set([correct.word, ...preferred.map(x => x.word)]);
-  const fallback = petShuffle(PET_FOOD_POOL.filter(x => !used.has(x.word)))
-    .slice(0, Math.max(0, 3 - preferred.length));
-
+  const fallback = petShuffle(PET_FOOD_POOL.filter(x => !used.has(x.word))).slice(0, Math.max(0, 3 - preferred.length));
   return petShuffle([correct, ...preferred, ...fallback].slice(0, 4));
 }
 
@@ -239,7 +262,7 @@ function petTryNextImage(img) {
 
 function petAnimalHtml(a) {
   if (!a.image) {
-    return `<div id="pet-animal-wrap" class="pet-animal-wrap pet-round-pop"><div id="pet-animal-image" class="pet-animal-fallback">${a.emoji || '🐾'}</div></div>`;
+    return `<div id="pet-animal-wrap" class="pet-animal-wrap pet-round-pop"><div id="pet-animal-image" class="pet-animal-fallback">${a.emoji || '🐾'}</div><div class="pet-scene-label">${a.scene || ''}</div></div>`;
   }
   const candidates = petImageCandidates(a.image);
   const firstSrc = candidates[0] || '';
@@ -247,6 +270,7 @@ function petAnimalHtml(a) {
   const safeFallback = String(a.emoji || '🐾').replace(/&/g, '&amp;').replace(/"/g, '&quot;');
   return `<div id="pet-animal-wrap" class="pet-animal-wrap pet-round-pop">
     <img id="pet-animal-image" src="${firstSrc}" alt="${a.label}" class="pet-animal-image" data-candidates="${safeCandidates}" data-candidate-index="0" data-fallback="${safeFallback}" onerror="petTryNextImage(this)">
+    <div class="pet-scene-label">${a.scene || ''}</div>
   </div>`;
 }
 
@@ -256,38 +280,26 @@ function startPetFeedingGame() {
   const box = document.getElementById('game-play-container');
   if (!box) return;
   box.innerHTML = `
-    <div class="pet-stage rounded-[30px] border-2 border-pink-200 shadow-sm p-3 md:p-5 min-h-[510px]">
+    <div class="pet-stage rounded-[28px] border-2 border-pink-200 shadow-sm p-3 md:p-4">
       <div class="pet-cloud pet-cloud-a text-5xl" style="left:7%;top:9%">☁️</div>
       <div class="pet-cloud pet-cloud-b text-4xl" style="right:8%;top:15%">☁️</div>
       <div class="pet-sparkle text-xl" style="left:18%;top:34%">✨</div>
       <div class="pet-sparkle text-lg" style="right:19%;top:31%;animation-delay:.8s">⭐</div>
-      <div class="pet-bird text-2xl" style="top:18%;animation-delay:-2s">🐦</div>
-      <div class="pet-bird text-xl" style="top:25%;animation-duration:15s;animation-delay:-9s">🕊️</div>
-      <div class="pet-leaf text-xl" style="left:10%;animation-delay:-1s">🍂</div>
-      <div class="pet-leaf text-lg" style="left:28%;animation-duration:10s;animation-delay:-6s">🍁</div>
-      <div class="pet-leaf text-xl" style="right:18%;animation-duration:9s;animation-delay:-4s">🍂</div>
       <div class="relative z-10">
-        <div class="flex items-center justify-between gap-2 flex-wrap mb-2">
-          <div class="flex gap-2 flex-wrap">
-            <span class="px-3 py-1.5 bg-white/90 border border-pink-200 rounded-full text-xs font-black text-pink-600">🐾 Lượt <span id="pet-round">1</span></span>
-            <span class="px-3 py-1.5 bg-white/90 border border-amber-200 rounded-full text-xs font-black text-amber-600">🔥 <span id="pet-streak">0</span></span>
+        <div class="flex items-center justify-between gap-2 mb-2">
+          <div class="px-3 py-1.5 bg-white/90 border border-pink-200 rounded-full text-xs md:text-sm font-black text-pink-600 shrink-0">🐾 Lượt <span id="pet-round">1</span></div>
+          <div id="pet-question" class="flex-1 text-center text-sm md:text-lg font-black text-pink-600 leading-tight px-1"></div>
+          <div class="flex gap-2 shrink-0">
+            <span class="px-3 py-1.5 bg-white/90 border border-amber-200 rounded-full text-xs md:text-sm font-black text-amber-600">🔥 <span id="pet-streak">0</span></span>
+            <span class="px-3 py-1.5 bg-white/90 border border-emerald-200 rounded-full text-xs md:text-sm font-black text-emerald-600">⭐ <span id="pet-score">0</span></span>
+            <span class="px-3 py-1.5 bg-white/90 border border-purple-200 rounded-full text-xs md:text-sm font-black text-purple-600">🏆 <span id="pet-best">0</span></span>
           </div>
-          <div class="flex gap-2">
-            <span class="px-3 py-1.5 bg-white/90 border border-emerald-200 rounded-full text-xs font-black text-emerald-600">⭐ <span id="pet-score">0</span></span>
-            <span class="px-3 py-1.5 bg-white/90 border border-purple-200 rounded-full text-xs font-black text-purple-600">🏆 <span id="pet-best">0</span></span>
-          </div>
-        </div>
-        <div class="text-center mb-1">
-          <div class="text-xs md:text-sm font-black text-slate-500 tracking-wide">BÉ HÃY CHO THÚ CƯNG ĂN MÓN YÊU THÍCH</div>
         </div>
         <div class="pet-main-layout">
-          <div class="pet-visual-panel">
-            <div id="pet-animal-zone"></div>
-            <div id="pet-question" class="text-center text-base md:text-lg font-black text-pink-600 mt-1"></div>
-          </div>
+          <div class="pet-visual-panel"><div id="pet-animal-zone"></div></div>
           <div class="pet-answer-panel">
             <div id="pet-food-grid"></div>
-            <div id="pet-feedback" class="text-center mt-3 min-h-[28px] text-sm md:text-base font-black text-slate-600">Chọn món ăn phù hợp nhé!</div>
+            <div id="pet-feedback" class="text-center mt-3 min-h-[28px] text-xs md:text-sm font-black text-slate-500">🍽️ Bé chọn món ăn phù hợp nhé!</div>
           </div>
         </div>
       </div>
@@ -307,20 +319,26 @@ function petNextRound() {
   const zone = document.getElementById('pet-animal-zone');
   if (zone) zone.innerHTML = petAnimalHtml(petTarget);
   const q = document.getElementById('pet-question');
-  if (q) q.textContent = `${petTarget.label} thích ăn gì nhất?`;
+  if (q) q.textContent = `${petTarget.label} trong tranh thích ăn gì?`;
   const grid = document.getElementById('pet-food-grid');
   if (grid) grid.innerHTML = options.map((f, idx) => `
-    <button class="pet-food-btn min-h-[92px] rounded-[22px] border-2 bg-white ${['border-pink-200','border-sky-200','border-amber-200','border-emerald-200'][idx]} shadow-sm p-3 font-black text-slate-700" data-food="${f.word}" onclick="petChooseFood(this,'${f.word.replace(/'/g,"\\'")}')">
-      <div class="text-4xl mb-1">${f.emoji}</div><div class="text-sm md:text-base">${f.word}</div>
+    <button class="pet-food-btn rounded-[20px] border-2 bg-white ${['border-pink-200','border-sky-200','border-amber-200','border-emerald-200'][idx]} shadow-sm px-4 py-2 font-black text-slate-700" data-food="${f.word}" onclick="petChooseFood(this,'${f.word.replace(/'/g,"\'")}')">
+      <span class="pet-food-emoji">${f.emoji}</span><span class="pet-food-word">${f.word}</span>
     </button>`).join('');
   const feedback = document.getElementById('pet-feedback');
-  if (feedback) feedback.textContent = '🍽️ Bé chọn món ăn cho bạn nhỏ nhé!';
+  if (feedback) feedback.textContent = '🍽️ Bé chọn món ăn phù hợp cho con vật được hỏi nhé!';
+  if (typeof speakVietnamese === 'function') {
+    setTimeout(() => {
+      if (token === petRoundToken && petState === 'playing') speakVietnamese(`${petTarget.label} trong tranh thích ăn gì?`, .96);
+    }, 160);
+  }
   setTimeout(() => { if (token === petRoundToken && petState === 'playing') document.getElementById('pet-animal-wrap')?.classList.remove('pet-round-pop'); }, 380);
 }
 
 function petChooseFood(btn, word) {
   if (petState !== 'playing' || !petTarget) return;
-  if (word !== petTarget.food) {
+  const correctWord = petTarget.food;
+  if (word !== correctWord) {
     petStreak = 0;
     document.getElementById('pet-streak').textContent = petStreak;
     btn.classList.remove('pet-food-wrong'); void btn.offsetWidth; btn.classList.add('pet-food-wrong');

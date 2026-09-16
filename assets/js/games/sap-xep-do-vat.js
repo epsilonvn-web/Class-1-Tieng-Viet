@@ -17,50 +17,36 @@ let sxCurrentOdd = '';
 let sxAudioCtx = null;
 
 const SX_SCENES = [
-  { id:'phong_khach', label:'Phòng khách', image:'assets/images/phong_khach.jpg', emoji:'🛋️', good:['ghế sofa','tivi','bàn trà','đèn bàn','quạt điện','lọ hoa'], odd:['bàn chải đánh răng','nồi cơm điện','gối ngủ','vòi sen'] },
-  { id:'phong_ngu', label:'Phòng ngủ', image:'assets/images/phong_ngu.jpg', emoji:'🛏️', good:['giường ngủ','gối','chăn','tủ quần áo','đèn ngủ','đồng hồ báo thức'], odd:['chảo','bồn rửa bát','tivi phòng khách','nồi cơm điện'] },
-  { id:'nha_bep', label:'Nhà bếp', image:'assets/images/nha_bep.jpg', emoji:'🍳', good:['nồi','chảo','tủ lạnh','bếp','ấm nước','bát đĩa'], odd:['gối','bàn chải đánh răng','cặp sách','chăn'] },
-  { id:'nha_tam', label:'Nhà tắm', image:'assets/images/nha_tam.jpg', emoji:'🚿', good:['vòi sen','khăn tắm','bàn chải đánh răng','xà phòng','chậu rửa','gương'], odd:['chảo','gối','quyển vở','tủ lạnh'] },
-  { id:'gia_sach', label:'Giá sách', image:'assets/images/gia_sach.jpg', emoji:'📚', good:['quyển sách','truyện tranh','từ điển','hộp bút','sổ tay','đèn đọc sách'], odd:['nồi','dép đi mưa','bàn chải đánh răng','chảo'] },
-  { id:'tu_quan_ao', label:'Tủ quần áo', image:'assets/images/tu_quan_ao.jpg', emoji:'👕', good:['áo','quần','váy','mũ','khăn','tất'], odd:['nồi','bát','bàn chải đánh răng','quyển sách'] },
-  { id:'giuong_ngu', label:'Giường ngủ', image:'assets/images/giuong_ngu.jpg', emoji:'🛏️', good:['gối','chăn','ga giường','gấu bông','đèn ngủ','màn'], odd:['chảo','bát ăn cơm','bàn học','xẻng'] },
-  { id:'ban_an', label:'Bàn ăn', image:'assets/images/ban_an.jpg', emoji:'🍽️', good:['bát','đĩa','thìa','đũa','cốc nước','khăn ăn'], odd:['bút chì','gối','bàn chải đánh răng','cặp sách'] },
-  { id:'ban_hoc', label:'Bàn học', image:'assets/images/ban_hoc.jpg', emoji:'✏️', good:['bút chì','thước kẻ','quyển vở','cục tẩy','hộp bút','đèn học'], odd:['chảo','gối','bàn chải đánh răng','nồi'] },
-  { id:'lop_hoc', label:'Lớp học', image:'assets/images/lop_hoc.jpg', emoji:'🏫', good:['bảng','bàn học','ghế','sách','bút','thước'], odd:['bồn tắm','chảo','gối ngủ','tủ lạnh'] },
-  { id:'san_choi', label:'Sân chơi', image:'assets/images/san_choi.jpg', emoji:'🛝', good:['cầu trượt','xích đu','quả bóng','bập bênh','dây nhảy','xe chòi chân'], odd:['nồi cơm điện','gối','bàn chải đánh răng','tủ lạnh'] },
-  { id:'vuon_nha', label:'Vườn nhà', image:'assets/images/vuon_nha.jpg', emoji:'🌳', good:['cây xanh','chậu hoa','bình tưới','xẻng nhỏ','ghế đá','hàng rào'], odd:['gối ngủ','chảo','bàn chải đánh răng','tivi'] },
-
-  { id:'thu_vien', label:'Thư viện', image:'assets/images/thu_vien.jpg', emoji:'📚',
-    good:['giá sách','quyển sách','bàn đọc sách','ghế ngồi','đệm ngồi','cửa sổ'],
-    odd:['máy tính','đèn bàn','quả địa cầu','bếp ga'] },
-
-  { id:'san_truong', label:'Sân trường', image:'assets/images/san_truong.jpg', emoji:'🏫',
-    good:['cột cờ','cầu trượt','xích đu','cây xanh','bãi cỏ','trường học'],
-    odd:['ghế đá','quả bóng','xe đạp','bồn tắm'] },
-
-  { id:'goc_do_choi', label:'Góc đồ chơi', image:'assets/images/goc_do_choi.jpg', emoji:'🧸',
-    good:['gấu bông','ô tô đồ chơi','khối xếp hình','xe tải đồ chơi','khủng long đồ chơi','hộp đồ chơi'],
-    odd:['búp bê','máy bay đồ chơi','quả bóng','nồi cơm điện'] },
-
-  { id:'cua_hang_tap_hoa', label:'Cửa hàng tạp hóa', image:'assets/images/cua_hang_tap_hoa.jpg', emoji:'🛒',
-    good:['chai nước','quả táo','quả chuối','chùm nho','gói bánh','hộp sữa'],
-    odd:['ổ bánh mì','quả trứng','quả dưa hấu','gối ngủ'] },
-
-  { id:'phong_y_te', label:'Phòng y tế', image:'assets/images/phong_y_te.jpg', emoji:'🏥',
-    good:['giường bệnh','gối trắng','hộp thuốc','ghế đẩu','bàn nhỏ','chậu cây'],
-    odd:['ống nghe','nhiệt kế','băng gạc','chảo'] },
-
-  { id:'gara_xe', label:'Ga-ra xe', image:'assets/images/gara_xe.jpg', emoji:'🚗',
-    good:['ô tô','lốp xe','dụng cụ sửa xe','cờ lê','bánh xe','tủ dụng cụ'],
-    odd:['xe máy','mũ bảo hiểm','bơm xe đạp','giường ngủ'] },
-
-  { id:'chuong_trai', label:'Chuồng trại', image:'assets/images/chuong_trai.jpg', emoji:'🐄',
-    good:['con gà','con bò','con cừu','đống rơm','hàng rào','chuồng đỏ'],
-    odd:['con lợn','con cá','ghế sofa','tivi'] },
-
-  { id:'cong_vien', label:'Công viên', image:'assets/images/cong_vien.jpg', emoji:'🌳',
-    good:['ghế đá','bông hoa','bãi cỏ','lối đi','cây xanh','mặt trời'],
-    odd:['xích đu','cầu trượt','thùng rác','tủ lạnh'] }
+  {id:'bai_bien',label:'Bãi biển',image:'assets/images/bai_bien.jpg',emoji:'🖼️',good:['ô che nắng','xô cát','xẻng đồ chơi','cây dừa','mặt trời','bãi cát'],odd:['quả bóng biển','khăn tắm','ván lướt sóng','kính bơi']},
+  {id:'ban_an',label:'Bàn ăn',image:'assets/images/ban_an.jpg',emoji:'🖼️',good:['bàn ăn','ghế','cái đĩa','cái cốc','trái cây','quả chuối'],odd:['ấm trà','khăn ăn','bát canh','lọ hoa']},
+  {id:'ban_hoc',label:'Bàn học',image:'assets/images/ban_hoc.jpg',emoji:'🖼️',good:['bàn học','ghế','đèn học','quyển sách','bút chì','hộp bút'],odd:['cặp sách','thước kẻ','máy tính','quả địa cầu']},
+  {id:'be_boi',label:'Bể bơi',image:'assets/images/be_boi.jpg',emoji:'🖼️',good:['bể bơi','phao vịt','phao tròn','ô che nắng','ghế nằm','mặt trời'],odd:['kính bơi','ván nhảy','quả bóng','thang bể bơi']},
+  {id:'chuong_trai',label:'Chuồng trại',image:'assets/images/chuong_trai.jpg',emoji:'🖼️',good:['chuồng đỏ','tháp chứa thức ăn','đống rơm','con bò','con cừu','con gà'],odd:['con lợn','con ngựa','máy kéo','máng ăn']},
+  {id:'cong_vien',label:'Công viên',image:'assets/images/cong_vien.jpg',emoji:'🖼️',good:['ghế công viên','bồn hoa','lối đi','bãi cỏ','cây xanh','mặt trời'],odd:['xích đu','cầu trượt','đài phun nước','thùng rác']},
+  {id:'cua_hang_tap_hoa',label:'Cửa hàng tạp hóa',image:'assets/images/cua_hang_tap_hoa.jpg',emoji:'🖼️',good:['giá hàng','chai nước','quả táo','quả chuối','chùm nho','máy tính tiền'],odd:['ổ bánh mì','hộp trứng','quả dưa hấu','xe đẩy hàng']},
+  {id:'gara_xe',label:'Ga-ra xe',image:'assets/images/gara_xe.jpg',emoji:'🖼️',good:['ô tô','lốp xe','cờ lê','tua vít','búa','bảng dụng cụ'],odd:['xe máy','mũ bảo hiểm','bơm xe','can xăng']},
+  {id:'gia_sach',label:'Giá sách',image:'assets/images/gia_sach.jpg',emoji:'🖼️',good:['giá sách','quyển sách','gấu bông','tên lửa đồ chơi','vịt đồ chơi','khủng long đồ chơi'],odd:['búp bê','ô tô đồ chơi','quả bóng','máy bay đồ chơi']},
+  {id:'giuong_ngu',label:'Giường ngủ',image:'assets/images/giuong_ngu.jpg',emoji:'🖼️',good:['giường ngủ','gối','chăn','ga giường','khung giường','ổ cắm điện'],odd:['đèn ngủ','tủ đầu giường','đồng hồ báo thức','tủ quần áo']},
+  {id:'goc_do_choi',label:'Góc đồ chơi',image:'assets/images/goc_do_choi.jpg',emoji:'🖼️',good:['gấu bông','ô tô đồ chơi','khối xếp hình','xe tải đồ chơi','khủng long đồ chơi','hộp đồ chơi'],odd:['búp bê','máy bay đồ chơi','quả bóng','tàu hỏa đồ chơi']},
+  {id:'lop_hoc',label:'Lớp học',image:'assets/images/lop_hoc.jpg',emoji:'🖼️',good:['bảng lớp','bàn học','ghế','cô giáo','quả địa cầu','quyển sách'],odd:['máy tính','máy chiếu','cặp sách','quạt trần']},
+  {id:'nha_bep',label:'Nhà bếp',image:'assets/images/nha_bep.jpg',emoji:'🖼️',good:['bếp nấu','tủ lạnh','cái nồi','tủ bếp','cửa sổ','chậu cây'],odd:['chảo','ấm nước','bồn rửa bát','lò vi sóng']},
+  {id:'nha_ga',label:'Nhà ga',image:'assets/images/nha_ga.jpg',emoji:'🖼️',good:['đoàn tàu','quầy vé','ghế băng','đồng hồ','đường ray','hành khách'],odd:['vali','loa thông báo','máy bán vé','cột biển sân ga']},
+  {id:'nha_tam',label:'Nhà tắm',image:'assets/images/nha_tam.jpg',emoji:'🖼️',good:['bồn tắm','bồn rửa mặt','gương','khăn tắm','ghế nhỏ','vịt đồ chơi'],odd:['vòi sen','bàn chải đánh răng','xà phòng','bồn cầu']},
+  {id:'phong_am_nhac',label:'Phòng âm nhạc',image:'assets/images/phong_am_nhac.jpg',emoji:'🖼️',good:['đàn piano','đàn ghi-ta','bộ trống','giá nhạc','chú mèo','ghế lười'],odd:['đàn vĩ cầm','sáo','kèn trumpet','micro']},
+  {id:'phong_khach',label:'Phòng khách',image:'assets/images/phong_khach.jpg',emoji:'🖼️',good:['ghế sofa','bàn trà','quyển sách','quả địa cầu','gấu bông','khối xếp hình'],odd:['tivi','quạt điện','đèn bàn','lọ hoa']},
+  {id:'phong_my_thuat',label:'Phòng mỹ thuật',image:'assets/images/phong_my_thuat.jpg',emoji:'🖼️',good:['giá vẽ','bức tranh','cọ vẽ','bảng pha màu','ghế đẩu','xô đựng màu'],odd:['kéo','hồ dán','đất nặn','giấy màu']},
+  {id:'phong_ngu',label:'Phòng ngủ',image:'assets/images/phong_ngu.jpg',emoji:'🖼️',good:['giường ngủ','gối','chăn','đèn ngủ','rèm cửa','gấu bông'],odd:['tủ quần áo','đồng hồ báo thức','bàn học','quạt điện']},
+  {id:'phong_the_duc',label:'Phòng thể dục',image:'assets/images/phong_the_duc.jpg',emoji:'🖼️',good:['thảm tập','quả bóng rổ','dây nhảy','thang thể dục','cửa sổ','hình ngôi sao'],odd:['vợt cầu lông','quả bóng đá','cọc tiêu','vòng thể dục']},
+  {id:'phong_y_te',label:'Phòng y tế',image:'assets/images/phong_y_te.jpg',emoji:'🖼️',good:['giường bệnh','gối','tủ thuốc','ghế đẩu','cây xanh','thước đo chiều cao'],odd:['ống nghe','nhiệt kế','băng cá nhân','xe lăn']},
+  {id:'san_choi',label:'Sân chơi',image:'assets/images/san_choi.jpg',emoji:'🖼️',good:['cầu trượt','xích đu','bập bênh','hộp cát','xẻng đồ chơi','cây xanh'],odd:['cầu leo','đu quay','quả bóng','xe chòi chân']},
+  {id:'san_truong',label:'Sân trường',image:'assets/images/san_truong.jpg',emoji:'🖼️',good:['trường học','cột cờ','cầu trượt','cây xanh','bãi cỏ','đồng hồ'],odd:['bập bênh','sân bóng rổ','ghế đá','xe đạp']},
+  {id:'san_van_dong',label:'Sân vận động',image:'assets/images/san_van_dong.jpg',emoji:'🖼️',good:['quả bóng','khung thành','bảng tỉ số','ghế dự bị','sân cỏ','lá cờ'],odd:['còi trọng tài','cúp','áo cầu thủ','bóng rổ']},
+  {id:'sieu_thi',label:'Siêu thị',image:'assets/images/sieu_thi.jpg',emoji:'🖼️',good:['quả táo','quả chuối','chùm nho','quả cam','giỏ hàng','xe đẩy'],odd:['quả dưa hấu','hộp sữa','ổ bánh mì','chai dầu ăn']},
+  {id:'thu_vien',label:'Thư viện',image:'assets/images/thu_vien.jpg',emoji:'🖼️',good:['giá sách','quyển sách','bàn đọc sách','ghế đẩu','đệm ngồi','cửa sổ'],odd:['máy tính','đèn bàn','quả địa cầu','máy in']},
+  {id:'tiem_banh',label:'Tiệm bánh',image:'assets/images/tiem_banh.jpg',emoji:'🖼️',good:['quầy bánh','bánh kem','bánh cupcake','máy tính tiền','ghế','chú gấu'],odd:['ổ bánh mì','bánh donut','khay bánh','tủ lạnh']},
+  {id:'tram_xe_buyt',label:'Trạm xe buýt',image:'assets/images/tram_xe_buyt.jpg',emoji:'🖼️',good:['xe buýt','trạm chờ','ghế băng','biển chỉ đường','cây xanh','chú thỏ'],odd:['thùng rác','bảng giờ xe','xe đạp','đèn đường']},
+  {id:'tu_quan_ao',label:'Tủ quần áo',image:'assets/images/tu_quan_ao.jpg',emoji:'🖼️',good:['tủ quần áo','áo','váy','quần yếm','áo khoác','quần áo gấp'],odd:['mũ','giày','khăn quàng','tất']},
+  {id:'vuon_nha',label:'Vườn nhà',image:'assets/images/vuon_nha.jpg',emoji:'🖼️',good:['ngôi nhà','hàng rào','cây xanh','hoa tulip','hoa cúc','hoa hướng dương'],odd:['bình tưới cây','xẻng làm vườn','ghế đá','xích đu']},
 ];
 
 const SX_ITEM_EMOJI = {
@@ -104,6 +90,17 @@ const SX_ITEM_EMOJI = {
   'con cừu':'🐑','đống rơm':'🌾','chuồng đỏ':'🏠','hàng rào':'🚧',
   'bãi cỏ':'🌱','lối đi':'🛤️','mặt trời':'☀️',
 };
+
+
+Object.assign(SX_ITEM_EMOJI, {
+  'bàn ăn':'🍽️','trái cây':'🍎','khung giường':'🛏️','ổ cắm điện':'🔌','áo khoác':'🧥','ngăn kéo':'🗄️','tủ gỗ':'🗄️',
+  'tên lửa đồ chơi':'🚀','vịt đồ chơi':'🦆','cái quạt':'🪭','chú gấu':'🧸','tấm thẻ':'🃏','bong bóng thoại':'💬','cặp sách':'🎒','chữ cái':'🔤','bút màu':'🖍️',
+  'trang sách':'📄','bìa sách':'📕','hình vẽ':'🖼️','ghế sofa':'🛋️','bàn trà':'🪵','quả địa cầu':'🌍','đàn piano':'🎹','đàn ghi-ta':'🎸','trống':'🥁','giá nhạc':'🎼','chú mèo':'🐱','ghế lười':'🪑',
+  'giá vẽ':'🎨','bức tranh':'🖼️','cọ vẽ':'🖌️','hộp màu':'🎨','xô đựng màu':'🪣','thảm tập':'🤸','quả bóng rổ':'🏀','thang thể dục':'🪜','hình ngôi sao':'⭐',
+  'tủ thuốc':'🩹','thước đo chiều cao':'📏','bếp nấu':'🍳','tủ bếp':'🗄️','bồn rửa mặt':'🚰','ghế nhỏ':'🪑','giá hàng':'🛒','máy tính tiền':'🧾','chùm nho':'🍇','giỏ hàng':'🧺','xe đẩy':'🛒',
+  'quầy bánh':'🧁','bánh kem':'🎂','bánh cupcake':'🧁','xe buýt':'🚌','trạm chờ':'🚏','ghế băng':'🪑','biển chỉ đường':'🪧','đoàn tàu':'🚂','quầy vé':'🎫','đường ray':'🛤️','hành khách':'🧍',
+  'khung thành':'🥅','bảng tỉ số':'🔢','ghế dự bị':'🪑','sân cỏ':'🌱','lá cờ':'🚩','cô giáo':'👩‍🏫','bể bơi':'🏊','phao vịt':'🦆','ô che nắng':'☂️','ghế nằm':'🪑','phao tròn':'⭕','bảng dụng cụ':'🧰','cửa ga-ra':'🚪','hộp cát':'🏖️'
+});
 
 function sxShuffle(arr){
   const a = arr.slice();

@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ==========================================
 // MINI GAME TV1: SAP XEP DO VAT
 // Luat: 1 buc tranh + 4 do vat. Co 3 do vat dung ngu canh, 1 do vat lac cho.
@@ -15,6 +16,7 @@ let sxSelectedGood = new Set();
 let sxCurrentGood = [];
 let sxCurrentOdd = '';
 let sxAudioCtx = null;
+let sxSceneDeck = [];
 
 const SX_SCENES = [
   {id:'bai_bien',label:'Bãi biển',image:'assets/images/bai_bien.jpg',emoji:'🖼️',good:['ô che nắng','xô cát','xẻng đồ chơi','cây dừa','mặt trời','bãi cát'],odd:['quả bóng biển','khăn tắm','ván lướt sóng','kính bơi']},
@@ -158,14 +160,18 @@ function sxTone(freq,dur=.12,type='sine',gain=.055,delay=0){
 function sxCorrectSound(){ sxTone(660,.12,'sine',.06,0); sxTone(880,.14,'sine',.055,.11); sxTone(1100,.18,'triangle',.05,.22); }
 function sxWrongSound(){ sxTone(180,.09,'square',.045,0); sxTone(150,.09,'square',.04,.12); }
 
-function sxPickRound(){
+function sxBuildSceneDeck(){
   const validScenes = SX_SCENES.filter(scene =>
     scene &&
     Array.isArray(scene.good) && scene.good.length >= 3 &&
     Array.isArray(scene.odd) && scene.odd.length >= 1
   );
   if(!validScenes.length) throw new Error('Không có dữ liệu cảnh hợp lệ cho game Sắp xếp đồ vật.');
-  const scene=validScenes[Math.floor(Math.random()*validScenes.length)];
+  sxSceneDeck = sxShuffle(validScenes);
+}
+function sxPickRound(){
+  if(!sxSceneDeck.length) sxBuildSceneDeck();
+  const scene=sxSceneDeck.shift();
   const good=sxShuffle(scene.good).slice(0,3);
   const odd=scene.odd[Math.floor(Math.random()*scene.odd.length)];
   return {scene,options:sxShuffle([...good,odd]),odd};
@@ -173,7 +179,7 @@ function sxPickRound(){
 
 function startObjectSortingGame(){
   sxEnsureStyles();
-  sxRound=0;sxScore=0;sxStreak=0;sxBestStreak=0;sxLocked=false;sxSelectedGood=new Set();sxCurrentGood=[];sxCurrentOdd='';
+  sxRound=0;sxScore=0;sxStreak=0;sxBestStreak=0;sxLocked=false;sxSelectedGood=new Set();sxCurrentGood=[];sxCurrentOdd='';sxSceneDeck=[];
   const box=document.getElementById('game-play-container'); if(!box) return;
   box.innerHTML=`
     <div class="sx-stage rounded-[28px] border-2 border-pink-100 p-2.5 md:p-3 min-h-[430px]">

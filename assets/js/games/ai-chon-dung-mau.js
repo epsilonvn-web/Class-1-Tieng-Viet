@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // MINI GAME TV1 - AI CHON DUNG MAU?
 // 1 dung = do vat co trong tranh + mau dung. Dap an chi co chu, khong icon.
 
@@ -38,7 +39,7 @@ const RC_SCENES=[
 let rcDeck=[],rcRound=0,rcScore=0,rcStreak=0,rcBest=0,rcLocked=false,rcCurrent=null,rcQuestion=null;
 function rcShuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function rcWrongColor(c){return rcShuffle(RC_COLORS.filter(x=>x!==c))[0];}
-function rcBuildDeck(){rcDeck=rcShuffle(RC_SCENES);}
+function rcBuildDeck(){rcDeck=rcShuffle(RC_SCENES);if(rcCurrent&&rcDeck.length>1&&rcDeck[0].id===rcCurrent.id){[rcDeck[0],rcDeck[1]]=[rcDeck[1],rcDeck[0]];}}
 function rcMakeQuestion(s){
  const target=rcShuffle(s.objects)[0], other=rcShuffle(s.objects.filter(o=>o!==target))[0], absent=rcShuffle(s.absent)[0];
  return {options:rcShuffle([

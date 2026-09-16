@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ============================================================
 // MINI GAME TV1 - AI TINH MAT HON
 // Dung chung bo tranh cua game "Sap xep do vat"
@@ -57,6 +58,7 @@ function seShuffle(arr){
 
 function seBuildDeck(){
   seDeck = seShuffle(SHARP_EYES_SCENES);
+  if(seCurrent && seDeck.length>1 && seDeck[0].id===seCurrent.id){[seDeck[0],seDeck[1]]=[seDeck[1],seDeck[0]];}
 }
 
 function seNextScene(){

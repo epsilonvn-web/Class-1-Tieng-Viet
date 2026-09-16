@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ============================================================
 // MINI GAME TV1 - 8. TRUY TIM DONG VAT
 // 30 tranh. Moi luot: 3 con co trong tranh + 1 con KHONG co.
@@ -46,7 +47,7 @@ const MA_SCENES = [
 
 let maDeck=[],maRound=0,maScore=0,maStreak=0,maBest=0,maLocked=false,maCurrent=null,maQuestion=null;
 function maShuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function maBuildDeck(){maDeck=maShuffle(MA_SCENES);}
+function maBuildDeck(){maDeck=maShuffle(MA_SCENES);if(maCurrent&&maDeck.length>1&&maDeck[0].id===maCurrent.id){[maDeck[0],maDeck[1]]=[maDeck[1],maDeck[0]];}}
 function maBuildQuestion(scene){
   const present=maShuffle(scene.animals).slice(0,3);
   const absentCandidates=scene.distractors.filter(a=>!scene.animals.includes(a));

@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ============================================================
 // MINI GAME TV1 - GIA DINH DANG LAM GI?
 // Nguon: 30 tranh gia dinh Notebook da doi chieu truc tiep.
@@ -131,8 +132,8 @@ const FA_SCENES = [
 
 let faDeck=[],faRound=0,faScore=0,faStreak=0,faBest=0,faLocked=false,faCurrent=null;
 function faShuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function faBuildDeck(){const all=[];FA_SCENES.forEach(scene=>scene.qs.forEach(q=>all.push({scene,q})));faDeck=faShuffle(all);}
-function faNext(){if(!faDeck.length)faBuildDeck();faCurrent=faDeck.shift();faRound++;faLocked=false;faRender();}
+function faBuildDeck(){faDeck=faShuffle(FA_SCENES);if(faCurrent&&faDeck.length>1&&faDeck[0].id===faCurrent.scene.id){[faDeck[0],faDeck[1]]=[faDeck[1],faDeck[0]];}}
+function faNext(){if(!faDeck.length)faBuildDeck();const scene=faDeck.shift();const q=faShuffle(scene.qs)[0];faCurrent={scene,q};faRound++;faLocked=false;faRender();}
 function faEnsureStyles(){if(document.getElementById('family-action-style'))return;const s=document.createElement('style');s.id='family-action-style';s.textContent=`
 @keyframes faShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}@keyframes faGlow{0%,100%{box-shadow:none}50%{box-shadow:0 0 28px rgba(16,185,129,.3)}}.fa-shake{animation:faShake .3s ease}.fa-correct{animation:faGlow .65s ease}.fa-main-layout{display:grid;grid-template-columns:minmax(300px,410px) minmax(0,1fr);gap:14px;align-items:stretch}.fa-picture-wrap{position:relative;aspect-ratio:1/1;width:100%;overflow:hidden}.fa-picture{width:100%;height:100%;object-fit:cover;display:block}.fa-options{display:grid;grid-template-columns:1fr;gap:10px;align-content:center}.fa-option{min-height:58px}@media(max-width:900px){.fa-main-layout{grid-template-columns:minmax(260px,350px) minmax(0,1fr);gap:10px}.fa-option{min-height:54px}}@media(max-width:700px){.fa-main-layout{grid-template-columns:1fr}.fa-picture-wrap{max-width:430px;margin:0 auto}.fa-options{grid-template-columns:1fr 1fr}.fa-option{min-height:50px}}@media(max-width:460px){.fa-options{grid-template-columns:1fr}}
 `;document.head.appendChild(s);}

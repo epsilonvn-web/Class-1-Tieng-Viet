@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ============================================================
 // MINI GAME TV1 - AI MAC GI?
 // Nguon: 30 tranh gia dinh Notebook da doi chieu truc tiep.
@@ -131,8 +132,8 @@ const FW_SCENES = [
 
 let fwDeck=[],fwRound=0,fwScore=0,fwStreak=0,fwBest=0,fwLocked=false,fwCurrent=null;
 function fwShuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function fwBuildDeck(){const all=[];FW_SCENES.forEach(scene=>scene.qs.forEach(q=>all.push({scene,q})));fwDeck=fwShuffle(all);}
-function fwNext(){if(!fwDeck.length)fwBuildDeck();fwCurrent=fwDeck.shift();fwRound++;fwLocked=false;fwRender();}
+function fwBuildDeck(){fwDeck=fwShuffle(FW_SCENES);if(fwCurrent&&fwDeck.length>1&&fwDeck[0].id===fwCurrent.scene.id){[fwDeck[0],fwDeck[1]]=[fwDeck[1],fwDeck[0]];}}
+function fwNext(){if(!fwDeck.length)fwBuildDeck();const scene=fwDeck.shift();const q=fwShuffle(scene.qs)[0];fwCurrent={scene,q};fwRound++;fwLocked=false;fwRender();}
 function fwEnsureStyles(){if(document.getElementById('family-wear-style'))return;const s=document.createElement('style');s.id='family-wear-style';s.textContent=`
 @keyframes fwShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}
 @keyframes fwGlow{0%,100%{box-shadow:none}50%{box-shadow:0 0 28px rgba(16,185,129,.3)}}

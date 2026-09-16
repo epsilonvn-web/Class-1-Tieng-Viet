@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ==========================================
 // MINI GAME TV1: NUOI THU CUNG
 // Nhin con vat, chon dung mon an yeu thich trong 4 dap an.
@@ -13,7 +14,7 @@ let petState = 'idle';
 let petTarget = null;
 let petAudioCtx = null;
 let petRoundToken = 0;
-let petAnimalDeck = [];
+let petSceneDeck = [];
 
 const PET_FOOD_POOL = [
   { word: 'xương', emoji: '🦴' }, { word: 'cá', emoji: '🐟' }, { word: 'cà rốt', emoji: '🥕' },
@@ -214,18 +215,23 @@ function petFoodInfo(word) {
   return PET_FOOD_POOL.find(x => x.word === word) || { word, emoji: PET_EXTRA_FOOD[word] || '🍽️' };
 }
 
-function petRefillAnimalDeck() {
-  let nextDeck = petShuffle(PET_ANIMALS);
-  // Khi bắt đầu vòng mới, tránh để con cuối vòng trước lặp lại ngay lập tức.
-  if (petTarget && nextDeck.length > 1 && nextDeck[0].name === petTarget.name) {
+function petRefillSceneDeck() {
+  let nextDeck = petShuffle(PET_SCENES);
+  const lastImage = petTarget && petTarget.image;
+  if (lastImage && nextDeck.length > 1 && nextDeck[0].image === lastImage) {
     [nextDeck[0], nextDeck[1]] = [nextDeck[1], nextDeck[0]];
   }
-  petAnimalDeck = nextDeck;
+  petSceneDeck = nextDeck;
 }
 
 function petPickRound() {
-  if (!petAnimalDeck.length) petRefillAnimalDeck();
-  petTarget = petAnimalDeck.shift() || PET_ANIMALS[0];
+  if (!petSceneDeck.length) petRefillSceneDeck();
+  const scene = petSceneDeck.shift() || PET_SCENES[0];
+  const animal = petShuffle(scene.animals)[0];
+  petTarget = {
+    name: animal[0], food: animal[1], emoji: animal[2], label: animal[0],
+    scene: scene.scene, image: scene.image
+  };
 
   const correct = petFoodInfo(petTarget.food);
   const preferredWords = (PET_DISTRACTOR_MAP[petTarget.name] || []).filter(word => word !== correct.word);
@@ -276,7 +282,7 @@ function petAnimalHtml(a) {
 
 function startPetFeedingGame() {
   petEnsureStyles();
-  petRound = 0; petScore = 0; petStreak = 0; petBestStreak = 0; petState = 'playing'; petTarget = null; petAnimalDeck = []; petRoundToken += 1;
+  petRound = 0; petScore = 0; petStreak = 0; petBestStreak = 0; petState = 'playing'; petTarget = null; petSceneDeck = []; petRoundToken += 1;
   const box = document.getElementById('game-play-container');
   if (!box) return;
   box.innerHTML = `

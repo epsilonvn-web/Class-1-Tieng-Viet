@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ============================================================
 // MINI GAME TV1 - 7. PHAN NHOM DONG VAT
 // 30 tranh dong vat. Dap an dung dung ten nhom/tranh Notebook da dat.
@@ -50,7 +51,7 @@ function agShuffle(arr){
   for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
   return a;
 }
-function agBuildDeck(){agDeck=agShuffle(AG_SCENES);}
+function agBuildDeck(){agDeck=agShuffle(AG_SCENES);if(agCurrent&&agDeck.length>1&&agDeck[0].id===agCurrent.id){[agDeck[0],agDeck[1]]=[agDeck[1],agDeck[0]];}}
 function agNext(){
   if(!agDeck.length) agBuildDeck();
   agCurrent=agDeck.shift(); agRound++; agLocked=false; agRender();

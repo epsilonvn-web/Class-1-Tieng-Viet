@@ -1,3 +1,4 @@
+// QUY TAC VONG ANH: moi chu ky phai di het 30 anh, khong lap anh trong cung chu ky; het 30 anh moi tron lai cho chu ky moi.
 // ============================================================
 // MINI GAME TV1 - DONG VAT DANG LAM GI?
 // Nguon: 30 tranh nhom dong vat da doi chieu truc tiep tu anh nguon.
@@ -132,8 +133,8 @@ const AA_SCENES = [
 let aaDeck=[],aaRound=0,aaScore=0,aaStreak=0,aaBest=0,aaLocked=false,aaCurrent=null;
 
 function aaShuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function aaBuildDeck(){const all=[];AA_SCENES.forEach(scene=>scene.qs.forEach(q=>all.push({scene,q})));aaDeck=aaShuffle(all);}
-function aaNext(){if(!aaDeck.length) aaBuildDeck();aaCurrent=aaDeck.shift();aaRound++;aaLocked=false;aaRender();}
+function aaBuildDeck(){aaDeck=aaShuffle(AA_SCENES);if(aaCurrent&&aaDeck.length>1&&aaDeck[0].id===aaCurrent.scene.id){[aaDeck[0],aaDeck[1]]=[aaDeck[1],aaDeck[0]];}}
+function aaNext(){if(!aaDeck.length) aaBuildDeck();const scene=aaDeck.shift();const q=aaShuffle(scene.qs)[0];aaCurrent={scene,q};aaRound++;aaLocked=false;aaRender();}
 function aaEnsureStyles(){
   if(document.getElementById('animal-action-style')) return;
   const s=document.createElement('style');s.id='animal-action-style';s.textContent=`

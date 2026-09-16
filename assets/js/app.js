@@ -3264,16 +3264,16 @@ function ensureMiniGameThemeStyles() {
 const MINIGAME_LIST = [
     { id: 'spelling-knight', title: '1. Hiệp sĩ Chính tả', desc: 'Săn quái chữ - chọn đúng âm/chữ còn thiếu', icon: '⚔️', ready: true },
     { id: 'picture-word-catch', title: '2. Nhìn hình bắt chữ', desc: 'Nhìn emoji, bắt đúng từ trước khi chạm tường', icon: '👀', ready: true },
-    { id: 'pet-feeding', title: '3. Nuôi thú cưng', desc: 'Luyện vốn từ con vật và thức ăn quen thuộc', icon: '🐾', ready: true },
-    { id: 'object-sorting', title: '4. Sắp xếp đồ vật', desc: 'Chọn 3 đồ vật phù hợp với bức tranh', icon: '🧹', ready: true },
-    { id: 'sharp-eyes', title: '5. Ai tinh mắt hơn', desc: 'Đọc tên đồ vật và tìm vật không có trong tranh', icon: '🔎', ready: true },
-    { id: 'right-color', title: '6. Ai chọn đúng màu?', desc: 'Luyện từ chỉ màu sắc qua đồ vật trong tranh', icon: '🎨', ready: true },
-    { id: 'vocab-fishing', title: '7. Câu cá từ vựng', desc: 'Câu đúng từ theo hình và gợi ý', icon: '🎣', ready: false },
-    { id: 'reading-detective', title: '8. Thám tử đọc hiểu', desc: 'Truy tìm chi tiết trong đoạn đọc', icon: '🕵️', ready: false },
-    { id: 'riddle-arena', title: '9. Đấu trường câu đố', desc: 'Giải đố dân gian và IQ ngôn ngữ', icon: '🏆', ready: false },
-    { id: 'word-maze', title: '10. Mê cung từ ngữ', desc: 'Tìm đường qua các từ đúng', icon: '🌀', ready: false },
-    { id: 'memory-cards', title: '11. Lật thẻ ghi nhớ', desc: 'Ghép chữ - từ - hình theo cặp', icon: '🃏', ready: false },
-    { id: 'rabbit-says', title: '12. Cô Thỏ ra lệnh', desc: 'Phản xạ nghe - đọc - chọn thật nhanh', icon: '🐰', ready: false }
+    { id: 'object-sorting', title: '3. Sắp xếp đồ vật', desc: 'Chọn 3 đồ vật phù hợp với bức tranh', icon: '🧹', ready: true },
+    { id: 'sharp-eyes', title: '4. Ai tinh mắt hơn', desc: 'Đọc tên đồ vật và tìm vật không có trong tranh', icon: '🔎', ready: true },
+    { id: 'right-color', title: '5. Ai chọn đúng màu?', desc: 'Luyện từ chỉ màu sắc qua đồ vật trong tranh', icon: '🎨', ready: true },
+    { id: 'pet-feeding', title: '6. Nuôi thú cưng', desc: 'Luyện vốn từ con vật và thức ăn quen thuộc', icon: '🐾', ready: true },
+    { id: 'animal-groups', title: '7. Phân nhóm động vật', desc: 'Quan sát tranh và chọn đúng nhóm động vật', icon: '🦁', ready: true },
+    { id: 'missing-animal', title: '8. Truy tìm động vật', desc: 'Tìm con vật không có trong bức hình', icon: '🔍', ready: true },
+    { id: 'animal-position', title: '9. Động vật ở đâu?', desc: 'Quan sát tranh và xác định vị trí các con vật', icon: '📍', ready: true },
+    { id: 'animal-action', title: '10. Động vật làm gì?', desc: 'Quan sát tranh và chọn đúng hành động của con vật', icon: '🏃', ready: true },
+    { id: 'family-clothes', title: '11. Ai mặc gì?', desc: 'Quan sát tranh và nhận biết trang phục, màu sắc', icon: '👕', ready: true },
+    { id: 'family-action', title: '12. Gia đình làm gì?', desc: 'Đọc câu đầy đủ và nhận biết hoạt động gia đình', icon: '🏡', ready: true }
 ];
 
 function openMiniGameHub() {
@@ -3311,7 +3311,13 @@ const GAME_SCRIPT_MAP = {
     'pet-feeding': 'assets/js/games/nuoi-thu-cung.js?v=tv1mg3',
     'object-sorting': 'assets/js/games/sap-xep-do-vat.js?v=tv1mg4',
     'sharp-eyes': 'assets/js/games/ai-tinh-mat-hon.js?v=tv1mg5',
-    'right-color': 'assets/js/games/ai-chon-dung-mau.js?v=tv1mg6'
+    'right-color': 'assets/js/games/ai-chon-dung-mau.js?v=tv1mg6',
+    'animal-groups': 'assets/js/games/nhom-dong-vat.js?v=tv1mg7',
+    'missing-animal': 'assets/js/games/con-vat-khong-co.js?v=tv1mg8',
+    'animal-position': 'assets/js/games/vi-tri-dong-vat.js?v=tv1mg9',
+    'animal-action': 'assets/js/games/hanh-dong-dong-vat.js?v=tv1mg10',
+    'family-clothes': 'assets/js/games/ai-mac-gi.js?v=tv1mg11',
+    'family-action': 'assets/js/games/gia-dinh-lam-gi.js?v=tv1mg12'
 };
 const loadedGameScripts = {};
 
@@ -3375,6 +3381,18 @@ async function openGamePlay(gameId) {
         startSharpEyesGame();
     } else if (gameId === 'right-color' && typeof startRightColorGame === 'function') {
         startRightColorGame();
+    } else if (gameId === 'animal-groups' && typeof startAnimalGroupGame === 'function') {
+        startAnimalGroupGame();
+    } else if (gameId === 'missing-animal' && typeof startMissingAnimalGame === 'function') {
+        startMissingAnimalGame();
+    } else if (gameId === 'animal-position' && typeof startAnimalPositionGame === 'function') {
+        startAnimalPositionGame();
+    } else if (gameId === 'animal-action' && typeof startAnimalActionGame === 'function') {
+        startAnimalActionGame();
+    } else if (gameId === 'family-clothes' && typeof startFamilyClothesGame === 'function') {
+        startFamilyClothesGame();
+    } else if (gameId === 'family-action' && typeof startFamilyActionGame === 'function') {
+        startFamilyActionGame();
     }
 }
 

@@ -140,10 +140,15 @@ function seEnsureStyles(){
     .se-pop{animation:sePop .42s ease both}
     .se-shake{animation:seShake .28s ease}
     .se-correct{animation:seGlow .65s ease}
-    #se-picture{width:100%;height:320px;object-fit:contain}
-    .se-picture-fallback{height:320px}
-    @media(max-width:900px){#se-picture,.se-picture-fallback{height:270px}}
-    @media(max-width:640px){#se-picture,.se-picture-fallback{height:230px}}
+    .se-main-layout{display:grid;grid-template-columns:410px minmax(0,1fr);gap:12px;align-items:stretch}
+    #se-picture{display:block;width:100%;aspect-ratio:1/1;height:auto;object-fit:cover}
+    #se-picture-wrap{background:transparent;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden}
+    .se-picture-fallback{width:100%;aspect-ratio:1/1;height:auto}
+    .se-side{display:flex;flex-direction:column;justify-content:center;min-width:0}
+    #se-options{display:grid;grid-template-columns:1fr;gap:10px}
+    .se-option{min-height:58px}
+    @media(max-width:900px){.se-main-layout{grid-template-columns:350px minmax(0,1fr);gap:10px}.se-option{min-height:52px}}
+    @media(max-width:700px){.se-main-layout{grid-template-columns:1fr}#se-picture-wrap{max-width:420px;width:100%;justify-self:start}#se-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.se-option{min-height:44px}}
   `;
   document.head.appendChild(style);
 }
@@ -179,28 +184,30 @@ function seRenderScene(){
         </div>
       </div>
 
-      <div id="se-picture-wrap" class="se-pop relative bg-white rounded-3xl border-2 border-pink-200 overflow-hidden shadow-sm">
-        <img id="se-picture" src="${seCurrent.image}" alt="${seCurrent.name}"
-          onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
-        <div class="hidden se-picture-fallback flex items-center justify-center text-6xl">🖼️</div>
-        <div class="absolute left-3 bottom-3 px-4 py-1.5 rounded-full bg-white/95 border border-pink-200 text-pink-600 text-sm md:text-base font-black shadow-sm">${seCurrent.name}</div>
-      </div>
-
-      <div id="se-options" class="grid grid-cols-2 gap-2.5">
-        ${opts.map((o,i)=>`
-          <button onclick="seChoose(this,${o.absent})"
-            class="se-option px-3 py-1.5 rounded-2xl border-2 ${[
-              'bg-pink-50 border-pink-200 hover:bg-pink-100',
-              'bg-sky-50 border-sky-200 hover:bg-sky-100',
-              'bg-amber-50 border-amber-200 hover:bg-amber-100',
-              'bg-emerald-50 border-emerald-200 hover:bg-emerald-100'
-            ][i]} text-slate-700 font-black text-sm md:text-base shadow-sm transition-all">
-            ${o.text}
-          </button>`).join('')}
-      </div>
-
-      <div id="se-feedback" class="h-7 mt-2 text-center text-xs md:text-sm font-black text-slate-500">
-        👀 4 đáp án đều cùng chủ đề, bé nhìn thật kỹ nhé!
+      <div class="se-main-layout">
+        <div id="se-picture-wrap" class="se-pop relative overflow-hidden">
+          <img id="se-picture" src="${seCurrent.image}" alt="${seCurrent.name}"
+            onerror="this.style.display='none';this.nextElementSibling.classList.remove('hidden')">
+          <div class="hidden se-picture-fallback flex items-center justify-center text-6xl">🖼️</div>
+          <div class="absolute left-3 bottom-3 px-4 py-2 rounded-full bg-white/95 border border-pink-200 text-pink-600 text-base md:text-lg font-black shadow-sm">${seCurrent.name}</div>
+        </div>
+        <div class="se-side">
+          <div id="se-options">
+            ${opts.map((o,i)=>`
+              <button onclick="seChoose(this,${o.absent})"
+                class="se-option px-3 py-2 rounded-2xl border-2 ${[
+                  'bg-pink-50 border-pink-200 hover:bg-pink-100',
+                  'bg-sky-50 border-sky-200 hover:bg-sky-100',
+                  'bg-amber-50 border-amber-200 hover:bg-amber-100',
+                  'bg-emerald-50 border-emerald-200 hover:bg-emerald-100'
+                ][i]} text-slate-700 font-black text-sm md:text-base shadow-sm transition-all">
+                ${o.text}
+              </button>`).join('')}
+          </div>
+          <div id="se-feedback" class="min-h-[28px] mt-3 text-center text-xs md:text-sm font-black text-slate-500">
+            👀 4 đáp án đều cùng chủ đề, bé nhìn thật kỹ nhé!
+          </div>
+        </div>
       </div>
     </div>`;
 

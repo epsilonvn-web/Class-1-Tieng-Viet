@@ -113,9 +113,16 @@ function petEnsureStyles() {
     @keyframes petRunIn{0%{transform:translateX(-95px) scale(.82) rotate(-4deg);opacity:0}48%{transform:translateX(16px) scale(1.05) rotate(3deg);opacity:1}72%{transform:translateX(-7px) scale(.98) rotate(-2deg)}100%{transform:translateX(0) scale(1) rotate(0);opacity:1}}
     @keyframes petCelebrateHop{0%{transform:translateY(0) scale(1)}30%{transform:translateY(-18px) scale(1.06) rotate(-3deg)}55%{transform:translateY(0) scale(1.02) rotate(3deg)}75%{transform:translateY(-9px) scale(1.05)}100%{transform:translateY(0) scale(1)}}
     .pet-stage{position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff 0%,#fdf2f8 48%,#ecfdf5 100%)}
-    .pet-animal-wrap{position:relative;min-height:210px;display:flex;align-items:center;justify-content:center;animation:petFloat 2.4s ease-in-out infinite}
-    .pet-animal-image{width:190px;height:190px;object-fit:contain;border-radius:28px;background:rgba(255,255,255,.95);padding:8px;border:3px solid #fbcfe8;box-shadow:0 16px 34px rgba(236,72,153,.16);user-select:none;pointer-events:none}
-    .pet-animal-fallback{font-size:118px;line-height:1;filter:drop-shadow(0 12px 9px rgba(15,23,42,.13))}
+    .pet-main-layout{display:grid;grid-template-columns:330px minmax(0,1fr);gap:14px;align-items:stretch}
+    .pet-visual-panel{display:flex;flex-direction:column;justify-content:center;min-width:0}
+    .pet-answer-panel{display:flex;flex-direction:column;justify-content:center;min-width:0}
+    .pet-animal-wrap{position:relative;min-height:330px;display:flex;align-items:center;justify-content:center;animation:petFloat 2.4s ease-in-out infinite}
+    .pet-animal-image{width:270px;height:270px;object-fit:contain;border-radius:32px;background:rgba(255,255,255,.95);padding:8px;border:3px solid #fbcfe8;box-shadow:0 16px 34px rgba(236,72,153,.16);user-select:none;pointer-events:none}
+    .pet-animal-fallback{font-size:168px;line-height:1;filter:drop-shadow(0 12px 9px rgba(15,23,42,.13))}
+    #pet-food-grid{display:grid;grid-template-columns:1fr;gap:10px;width:100%}
+    .pet-food-btn{min-height:68px!important;display:flex;align-items:center;justify-content:flex-start;gap:14px;text-align:left}
+    .pet-food-btn .pet-food-emoji{font-size:34px;line-height:1;flex:0 0 auto}
+    .pet-food-btn .pet-food-word{font-size:16px;line-height:1.2}
     .pet-animal-happy{animation:petHappy .62s ease-out 1!important}
     .pet-animal-sad{animation:petSad .35s linear 1!important}
     .pet-food-btn{transition:transform .14s,box-shadow .14s,filter .14s;touch-action:manipulation;user-select:none}
@@ -131,7 +138,8 @@ function petEnsureStyles() {
     .pet-celebrate-hop{animation:petCelebrateHop .72s ease-out 1!important}
     .pet-bird{position:absolute;left:0;pointer-events:none;z-index:1;opacity:.72;animation:petBirdFly 12s linear infinite;filter:drop-shadow(0 3px 4px rgba(15,23,42,.08))}
     .pet-leaf{position:absolute;top:-45px;pointer-events:none;z-index:1;opacity:.72;animation:petLeafFall 8s linear infinite;filter:drop-shadow(0 3px 3px rgba(15,23,42,.06))}
-    @media(max-width:640px){.pet-animal-wrap{min-height:170px}.pet-animal-image{width:150px;height:150px}.pet-animal-fallback{font-size:92px}.pet-food-btn{min-height:76px!important}}
+    @media(max-width:900px){.pet-main-layout{grid-template-columns:285px minmax(0,1fr);gap:10px}.pet-animal-wrap{min-height:285px}.pet-animal-image{width:230px;height:230px}.pet-animal-fallback{font-size:145px}.pet-food-btn{min-height:60px!important}}
+    @media(max-width:700px){.pet-main-layout{grid-template-columns:1fr}.pet-animal-wrap{min-height:185px}.pet-animal-image{width:165px;height:165px}.pet-animal-fallback{font-size:100px}#pet-food-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.pet-food-btn{min-height:66px!important;justify-content:center;text-align:center;gap:8px}.pet-food-btn .pet-food-emoji{font-size:28px}.pet-food-btn .pet-food-word{font-size:14px}}
   `;
   document.head.appendChild(style);
 }
@@ -272,10 +280,16 @@ function startPetFeedingGame() {
         <div class="text-center mb-1">
           <div class="text-xs md:text-sm font-black text-slate-500 tracking-wide">BÉ HÃY CHO THÚ CƯNG ĂN MÓN YÊU THÍCH</div>
         </div>
-        <div id="pet-animal-zone"></div>
-        <div id="pet-question" class="text-center text-base md:text-lg font-black text-pink-600 mb-3"></div>
-        <div id="pet-food-grid" class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto"></div>
-        <div id="pet-feedback" class="text-center mt-4 min-h-[28px] text-sm md:text-base font-black text-slate-600">Chọn món ăn phù hợp nhé!</div>
+        <div class="pet-main-layout">
+          <div class="pet-visual-panel">
+            <div id="pet-animal-zone"></div>
+            <div id="pet-question" class="text-center text-base md:text-lg font-black text-pink-600 mt-1"></div>
+          </div>
+          <div class="pet-answer-panel">
+            <div id="pet-food-grid"></div>
+            <div id="pet-feedback" class="text-center mt-3 min-h-[28px] text-sm md:text-base font-black text-slate-600">Chọn món ăn phù hợp nhé!</div>
+          </div>
+        </div>
       </div>
     </div>`;
   petNextRound();

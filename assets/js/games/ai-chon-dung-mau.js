@@ -34,7 +34,7 @@ function rcMakeQuestion(s){
 function rcEnsureStyles(){
  if(document.getElementById('right-color-style'))return;
  const s=document.createElement('style');s.id='right-color-style';
- s.textContent=`@keyframes rcShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}.rc-shake{animation:rcShake .3s ease}#rc-picture{width:100%;height:350px;object-fit:contain}@media(max-width:900px){#rc-picture{height:300px}}@media(max-width:640px){#rc-picture{height:255px}}`;
+ s.textContent=`@keyframes rcShake{0%,100%{transform:translateX(0)}25%{transform:translateX(-7px)}50%{transform:translateX(7px)}75%{transform:translateX(-4px)}}.rc-shake{animation:rcShake .3s ease}.rc-main-layout{display:grid;grid-template-columns:410px minmax(0,1fr);gap:12px;align-items:stretch}#rc-picture{display:block;width:100%;aspect-ratio:1/1;height:auto;object-fit:cover}.rc-picture-wrap{background:transparent;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:hidden}.rc-side{display:flex;flex-direction:column;justify-content:center;min-width:0}.rc-options{display:grid;grid-template-columns:1fr;gap:10px}.rc-option{min-height:58px}@media(max-width:900px){.rc-main-layout{grid-template-columns:350px minmax(0,1fr);gap:10px}#rc-picture{height:auto}.rc-option{min-height:52px}}@media(max-width:700px){.rc-main-layout{grid-template-columns:1fr}#rc-picture{height:auto}.rc-options{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.rc-option{min-height:44px}}`;
  document.head.appendChild(s);
 }
 function startRightColorGame(){rcEnsureStyles();rcDeck=[];rcRound=rcScore=rcStreak=rcBest=0;rcNext();}
@@ -44,9 +44,13 @@ function rcRender(){
  const p=['bg-pink-50 border-pink-200 hover:bg-pink-100','bg-sky-50 border-sky-200 hover:bg-sky-100','bg-amber-50 border-amber-200 hover:bg-amber-100','bg-emerald-50 border-emerald-200 hover:bg-emerald-100'];
  box.innerHTML=`<div class="rounded-[28px] border-2 border-pink-200 bg-gradient-to-b from-sky-50 via-pink-50/60 to-emerald-50/60 p-3 md:p-4">
  <div class="flex items-center justify-between gap-2 mb-2"><span class="px-3 py-1.5 rounded-full bg-white border border-pink-200 text-pink-600 font-black text-xs md:text-sm">🎨 Lượt ${rcRound}</span><div class="flex-1 text-center text-sm md:text-base font-black text-slate-700">Bé chọn <span class="text-fuchsia-600">đồ vật + màu sắc</span> khớp với tranh nhé!</div><div class="flex gap-2"><span class="px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-700 font-black text-xs md:text-sm">⭐ ${rcScore}</span><span class="px-3 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-600 font-black text-xs md:text-sm">🔥 x${rcStreak}</span><span class="px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-600 font-black text-xs md:text-sm">🏆 ${rcBest}</span></div></div>
- <div class="relative bg-white rounded-3xl border-2 border-pink-200 overflow-hidden shadow-sm"><img id="rc-picture" src="${rcCurrent.image}" alt="${rcCurrent.name}"><div class="absolute left-3 bottom-3 px-3 py-1 rounded-full bg-white/95 border border-pink-200 text-pink-600 text-sm md:text-base font-black">${rcCurrent.name}</div></div>
- <div class="grid grid-cols-2 gap-2.5">${rcQuestion.options.map((o,i)=>`<button onclick="rcChoose(this,${o.correct})" class="min-h-[42px] px-3 py-1.5 rounded-2xl border-2 ${p[i]} text-slate-700 font-black text-sm md:text-base shadow-sm">${o.text}</button>`).join('')}</div>
- <div id="rc-feedback" class="h-7 mt-2 text-center text-xs md:text-sm font-black text-slate-500">👀 Có đáp án dùng đúng đồ vật nhưng cố tình đổi sai màu đấy nhé!</div></div>`;
+ <div class="rc-main-layout">
+ <div class="rc-picture-wrap relative"><img id="rc-picture" src="${rcCurrent.image}" alt="${rcCurrent.name}"><div class="absolute left-3 bottom-3 px-4 py-2 rounded-full bg-white/95 border border-pink-200 text-pink-600 text-base md:text-lg font-black">${rcCurrent.name}</div></div>
+ <div class="rc-side">
+ <div class="rc-options">${rcQuestion.options.map((o,i)=>`<button onclick="rcChoose(this,${o.correct})" class="rc-option px-3 py-2 rounded-2xl border-2 ${p[i]} text-slate-700 font-black text-sm md:text-base shadow-sm">${o.text}</button>`).join('')}</div>
+ <div id="rc-feedback" class="min-h-[28px] mt-3 text-center text-xs md:text-sm font-black text-slate-500">👀 Có đáp án dùng đúng đồ vật nhưng cố tình đổi sai màu đấy nhé!</div>
+ </div>
+ </div></div>`;
  if(typeof speakVietnamese==='function')setTimeout(()=>speakVietnamese(`Bé hãy quan sát bức tranh ${rcCurrent.name}. Đồ vật nào có màu đúng như trong tranh?`,.96),180);
 }
 function rcChoose(btn,ok){

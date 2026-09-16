@@ -125,11 +125,13 @@ function sxEnsureStyles(){
     @keyframes sxGlow{0%{box-shadow:0 0 0 rgba(34,197,94,0)}50%{box-shadow:0 0 38px rgba(34,197,94,.45)}100%{box-shadow:0 0 0 rgba(34,197,94,0)}}
     @keyframes sxCombo{0%{transform:translate(-50%,-20%) scale(.5);opacity:0}40%{transform:translate(-50%,-55%) scale(1.2);opacity:1}100%{transform:translate(-50%,-95%) scale(.9);opacity:0}}
     .sx-stage{position:relative;overflow:hidden;background:linear-gradient(180deg,#eff6ff 0%,#fdf2f8 52%,#ecfdf5 100%)}
-    .sx-scene-card{position:relative;background:white;border:3px solid #fbcfe8;border-radius:28px;overflow:hidden;box-shadow:0 16px 34px rgba(236,72,153,.14);animation:sxPop .45s ease-out}
+    .sx-scene-card{position:relative;background:transparent;border:0;border-radius:0;overflow:hidden;box-shadow:none;animation:sxPop .45s ease-out}
     .sx-scene-card.sx-correct{animation:sxGlow .85s ease-out}
-    .sx-scene-img{width:100%;height:300px;object-fit:contain;display:block;background:#fff}
-    .sx-scene-fallback{height:300px;display:flex;align-items:center;justify-content:center;font-size:110px;background:linear-gradient(180deg,#fef3c7,#dbeafe)}
-    .sx-option{transition:transform .14s,box-shadow .14s,background .14s;min-height:54px;user-select:none;touch-action:manipulation}
+    .sx-round-layout{display:grid;grid-template-columns:400px minmax(0,1fr);gap:12px;align-items:stretch}
+    .sx-scene-img{display:block;width:100%;aspect-ratio:1/1;height:auto;object-fit:cover;background:transparent}
+    .sx-scene-fallback{width:100%;aspect-ratio:1/1;height:auto;display:flex;align-items:center;justify-content:center;font-size:128px;background:linear-gradient(180deg,#fef3c7,#dbeafe)}
+    .sx-options-column{display:grid;grid-template-columns:1fr;gap:10px;align-content:center}
+    .sx-option{transition:transform .14s,box-shadow .14s,background .14s;min-height:66px;user-select:none;touch-action:manipulation}
     .sx-option:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 10px 22px rgba(15,23,42,.12)}
     .sx-wrong{animation:sxWrong .32s linear;background:#fee2e2!important;border-color:#fb7185!important;color:#be123c!important}
     .sx-good-picked{animation:sxLiftGood .45s ease-out!important;background:#dcfce7!important;border-color:#22c55e!important;color:#15803d!important;box-shadow:0 0 0 3px rgba(34,197,94,.12),0 10px 22px rgba(34,197,94,.18)!important}
@@ -138,7 +140,8 @@ function sxEnsureStyles(){
     .sx-bird{font-size:30px;opacity:.7;animation:sxBird 11s linear infinite}
     .sx-leaf{top:-45px;font-size:22px;opacity:.7;animation:sxLeaf 8s linear infinite}
     .sx-combo{position:absolute;left:50%;top:44%;z-index:30;font-size:30px;font-weight:1000;color:#f43f5e;text-shadow:0 3px 0 #fff;animation:sxCombo 1s ease-out forwards;pointer-events:none}
-    @media(max-width:900px){.sx-scene-img,.sx-scene-fallback{height:250px}.sx-option{min-height:50px}.sx-stage{padding:8px!important}}@media(max-width:640px){.sx-scene-img,.sx-scene-fallback{height:220px}.sx-option{min-height:48px}}
+    @media(max-width:900px){.sx-round-layout{grid-template-columns:340px minmax(0,1fr);gap:10px}.sx-scene-img,.sx-scene-fallback{height:auto}.sx-option{min-height:58px}.sx-stage{padding:8px!important}}
+    @media(max-width:700px){.sx-round-layout{grid-template-columns:1fr}.sx-scene-img,.sx-scene-fallback{height:auto}.sx-options-column{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.sx-option{min-height:50px}}
   `;
   document.head.appendChild(style);
 }
@@ -204,21 +207,23 @@ function sxNextRound(){
   const area=document.getElementById('sx-round-area'); if(!area) return;
   area.dataset.odd=data.odd;
   area.innerHTML=`
-    <div id="sx-scene-card" class="sx-scene-card mb-2">
-      <img class="sx-scene-img" src="${data.scene.image}" alt="${data.scene.label}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-      <div class="sx-scene-fallback" style="display:none">${data.scene.emoji}</div>
-      <div class="absolute left-3 bottom-3 px-3 py-1.5 rounded-full bg-white/90 border border-pink-200 text-pink-700 font-black text-sm shadow-sm">${data.scene.label}</div>
-    </div>
-    <div class="grid grid-cols-2 gap-2 md:gap-2.5">
-      ${data.options.map((word,idx)=>{
-        const pastel=[
-          'bg-pink-50/80 border-pink-200 hover:bg-pink-100',
-          'bg-sky-50/80 border-sky-200 hover:bg-sky-100',
-          'bg-amber-50/80 border-amber-200 hover:bg-amber-100',
-          'bg-emerald-50/80 border-emerald-200 hover:bg-emerald-100'
-        ][idx%4];
-        return `<button class="sx-option px-3 py-2 md:px-4 md:py-2.5 rounded-2xl border-2 ${pastel} text-slate-700 font-black text-sm md:text-base flex items-center justify-center gap-2.5 shadow-sm" onclick="sxChooseObject(this,'${word.replace(/'/g,"\\'")}')"><span class="text-2xl md:text-3xl shrink-0">${SX_ITEM_EMOJI[word]||'📦'}</span><span class="leading-tight">${word}</span></button>`;
-      }).join('')}
+    <div class="sx-round-layout">
+      <div id="sx-scene-card" class="sx-scene-card">
+        <img class="sx-scene-img" src="${data.scene.image}" alt="${data.scene.label}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="sx-scene-fallback" style="display:none">${data.scene.emoji}</div>
+        <div class="absolute left-3 bottom-3 px-4 py-2 rounded-full bg-white/95 border border-pink-200 text-pink-700 font-black text-base md:text-lg shadow-sm">${data.scene.label}</div>
+      </div>
+      <div class="sx-options-column">
+        ${data.options.map((word,idx)=>{
+          const pastel=[
+            'bg-pink-50/80 border-pink-200 hover:bg-pink-100',
+            'bg-sky-50/80 border-sky-200 hover:bg-sky-100',
+            'bg-amber-50/80 border-amber-200 hover:bg-amber-100',
+            'bg-emerald-50/80 border-emerald-200 hover:bg-emerald-100'
+          ][idx%4];
+          return `<button class="sx-option px-3 py-2 md:px-4 md:py-2.5 rounded-2xl border-2 ${pastel} text-slate-700 font-black text-sm md:text-base flex items-center justify-center gap-2.5 shadow-sm" onclick="sxChooseObject(this,'${word.replace(/'/g,"\'")}')"><span class="text-2xl md:text-3xl shrink-0">${SX_ITEM_EMOJI[word]||'📦'}</span><span class="leading-tight">${word}</span></button>`;
+        }).join('')}
+      </div>
     </div>`;
 
   // Đọc câu hướng dẫn theo đúng bối cảnh của từng bức tranh.

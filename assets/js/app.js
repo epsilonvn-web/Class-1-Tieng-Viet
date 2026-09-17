@@ -194,7 +194,6 @@ let histBarChartInstance = null;
 const PREMIUM_TOPIC_IDS = new Set([11]);
 let accountManagerAccounts = [];
 let accountManagerSort = { key: 'maHS', dir: 1 };
-let currentSessionPin = ''; // Chỉ giữ trong RAM của tab hiện tại, không lưu localStorage
 let adminNewRegistrationCount = 0;
 let adminNotificationTimer = null;
 
@@ -205,6 +204,7 @@ function isAdminUser() {
 function getAccountType() {
     if (!currentUser || currentUser.isGuest) return 'guest';
     if (isAdminUser()) return 'admin';
+    if (currentUser.sessionPending) return 'pending';
     const type = String(currentUser.loaiTaiKhoan || 'regular').toLowerCase();
     return ['regular', 'trial', 'vip'].includes(type) ? type : 'regular';
 }
@@ -295,19 +295,19 @@ function getSessionToken() {
     return localStorage.getItem('tv1_session_token') || '';
 }
 
+function storeSessionToken(token) {
+    if (token) localStorage.setItem('tv1_session_token', String(token));
+}
+
 function clearStoredSession() {
     localStorage.removeItem('tv1_session_token');
+    // Dọn dữ liệu đăng nhập kiểu cũ nếu người dùng từng chạy bản trước.
     localStorage.removeItem('tv1_mahs');
-    localStorage.removeItem('tv1_mapin'); // cleanup legacy plaintext PIN if present
+    localStorage.removeItem('tv1_mapin');
 }
 
 function getAdminAuthPayload() {
-    const payload = { sessionToken: getSessionToken() };
-    if (isAdminUser() && currentUser?.maHS && currentSessionPin) {
-        payload.adminMaHS = String(currentUser.maHS).trim().toUpperCase();
-        payload.adminPin = currentSessionPin;
-    }
-    return payload;
+    return { sessionToken: getSessionToken() };
 }
 
 function formatAccountDate(value) {
@@ -967,11 +967,10 @@ async function doLogin() {
     try {
         const result = await callAppsScript('login', { maHS, maPin });
         if (!result.ok) { showAuthError(result.error || 'ID hoặc PIN không đúng!'); return; }
-        currentUser = { ...result.student, isGuest: false };
-        currentSessionPin = maPin;
+        if (!result.sessionToken) throw new Error('Máy chủ không trả về session token.');
+        currentUser = { ...result.student, isGuest: false, sessionPending: false };
         clearStoredSession();
-        localStorage.setItem('tv1_mahs', String(result.student.maHS || maHS));
-        if (result.sessionToken) localStorage.setItem('tv1_session_token', result.sessionToken);
+        storeSessionToken(result.sessionToken);
         document.getElementById('login-mapin').value = '';
         closeAuthScreen();
         enterDashboard();
@@ -1005,22 +1004,63 @@ async function doRegister() {
     finally { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay'; }
 }
 
+function makeGuestUser() {
+    return { name: 'Khách (Guest)', isGuest: true, tuanHienTai: 1, hoTen: 'Bé Khách', lop: '', maHS: 'KHACH', role: 'guest', vaiTro: 'guest', loaiTaiKhoan: 'guest', sessionPending: false };
+}
+
+function makePendingSessionUser() {
+    return { name: 'Đang khôi phục phiên', isGuest: false, tuanHienTai: 1, hoTen: 'Đang khôi phục phiên', lop: '', maHS: '', role: 'pending', vaiTro: 'pending', loaiTaiKhoan: 'pending', sessionPending: true };
+}
+
 async function tryAutoLogin() {
     const token = getSessionToken();
-    if (!token) return false;
+    if (!token) return 'none';
     try {
-        const res = await callAppsScript('sessionLogin', { sessionToken: token });
-        if (res.ok) { currentUser = { ...res.student, isGuest: false }; currentSessionPin = ''; return true; }
-    } catch (e) {}
-    clearStoredSession();
-    return false;
+        const res = await callAppsScript('restoreSession', { sessionToken: token });
+        if (res.ok && res.student) {
+            currentUser = { ...res.student, isGuest: false, sessionPending: false };
+            return 'restored';
+        }
+        // Chỉ xóa token khi chính backend xác nhận token không còn hợp lệ.
+        clearStoredSession();
+        return 'invalid';
+    } catch (e) {
+        // Lỗi mạng / Apps Script tạm thời không được phép làm mất phiên.
+        return 'network-error';
+    }
+}
+
+async function retryPendingSessionRestore() {
+    if (!getSessionToken() || !currentUser?.sessionPending) return;
+    const status = await tryAutoLogin();
+    if (status === 'restored') enterDashboard(true);
+    else if (status === 'invalid') { currentUser = makeGuestUser(); enterDashboard(true); }
 }
 
 async function initializeApp() {
-    currentUser = { name: 'Khách (Guest)', isGuest: true, tuanHienTai: 1, hoTen: 'Bé Khách', lop: '', maHS: 'KHACH', role: 'guest', vaiTro: 'guest', loaiTaiKhoan: 'guest' };
-    const restored = await tryAutoLogin();
+    if (!getSessionToken()) {
+        currentUser = makeGuestUser();
+        enterDashboard(true);
+        closeAuthScreen();
+        return;
+    }
+
+    // Có token nghĩa là đã có phiên đăng nhập. Trong lúc chưa liên lạc được backend,
+    // giữ trạng thái "đang khôi phục" thay vì tự hạ xuống Khách.
+    currentUser = makePendingSessionUser();
     enterDashboard(true);
-    if (!restored) closeAuthScreen();
+
+    const status = await tryAutoLogin();
+    if (status === 'restored') {
+        enterDashboard(true);
+    } else if (status === 'invalid') {
+        currentUser = makeGuestUser();
+        enterDashboard(true);
+    } else if (status === 'network-error') {
+        currentUser = makePendingSessionUser();
+        enterDashboard(true);
+    }
+    closeAuthScreen();
 }
 
 async function logout() {
@@ -1028,10 +1068,12 @@ async function logout() {
     adminNotificationTimer = null;
     adminNewRegistrationCount = 0;
     const token = getSessionToken();
-    if (token) callAppsScript('logoutSession', { sessionToken: token }).catch(() => {});
+    if (token) {
+        try { await callAppsScript('logout', { sessionToken: token }); } catch (e) {}
+    }
+    // Người dùng đã chủ động bấm Đăng xuất nên xóa token cục bộ dù mạng có lỗi.
     clearStoredSession();
-    currentSessionPin = '';
-    currentUser = { name: 'Khách (Guest)', isGuest: true, tuanHienTai: 1, hoTen: 'Bé Khách', lop: '', maHS: 'KHACH', role: 'guest', vaiTro: 'guest', loaiTaiKhoan: 'guest' };
+    currentUser = makeGuestUser();
     enterDashboard(true);
 }
 
@@ -1055,7 +1097,9 @@ function enterDashboard(isSilent = false) {
 function updateUserInfoBox() {
     const box = document.getElementById('user-info-box');
     if (!box) return;
-    if (currentUser && !currentUser.isGuest) {
+    if (currentUser?.sessionPending) {
+        box.innerHTML = `<div class="flex items-center gap-1.5 text-[11px] font-black text-indigo-600"><i class="fa-solid fa-cloud-arrow-down fa-beat-fade"></i><span>Đang khôi phục phiên...</span></div>`;
+    } else if (currentUser && !currentUser.isGuest) {
         const adminBtn = isAdminUser() ? `<button onclick="openAccountManager()" title="Quản lý tài khoản" class="relative h-9 px-3 flex items-center gap-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-xl border border-purple-200 text-[11px] font-black shadow-sm pastel-btn whitespace-nowrap"><i class="fa-solid fa-users-gear"></i><span>Quản lý</span><span id="admin-new-registration-badge" class="hidden absolute -top-2 -right-2 min-w-[19px] h-[19px] px-1 rounded-full bg-rose-500 text-white text-[10px] leading-[19px] text-center font-black border-2 border-white shadow-md">0</span></button>` : '';
         const tier = isAdminUser() ? 'Admin' : String(currentUser.loaiTaiKhoan || 'regular').toUpperCase();
         box.innerHTML = `<div class="flex items-center gap-1.5"><div class="text-right"><div class="text-pink-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen)}</div><div class="text-gray-500 font-semibold text-[10px]">${escapeHtml(tier)} · ID ${escapeHtml(currentUser.maHS)}</div></div>${adminBtn}<button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-rose-100 hover:bg-rose-200 text-rose-500 rounded-xl border border-rose-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button></div>`;
@@ -3403,6 +3447,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('login-mahs')?.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') doLogin();
     });
+
+    window.addEventListener('online', retryPendingSessionRestore);
 
     window.addEventListener('click', () => {
         const AudioContext = window.AudioContext || window.webkitAudioContext;

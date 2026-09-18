@@ -1627,11 +1627,11 @@ function getTopic3FusionMeta(q) {
 
     const text = String(q.question_text || '');
     const quoted = [...text.matchAll(/'([^']+)'/g)].map(m => m[1]);
-    const toneMatch = text.match(/\bthanh\s+(sắc|huyền|hỏi|ngã|nặng|ngang)\b/i);
+    const toneMatch = text.match(/(?:thanh|dấu)\s+(sắc|huyền|hỏi|ngã|nặng|ngang)/i);
     let tone = toneMatch ? toneMatch[1].toLowerCase() : '';
     // Fallback an toàn cho Level 2: suy ra thanh từ đáp án đúng nếu câu chữ thay đổi.
     // Không dùng dấu ngang làm mặc định vì sẽ làm sai nghĩa bài học.
-    if (!tone && level === 2 && q?.answer) {
+    if (!tone && (level === 2 || level === 4) && q?.answer) {
         const ans = String(q.answer).normalize('NFD');
         if (/\u0301/.test(ans)) tone = 'sắc';
         else if (/\u0300/.test(ans)) tone = 'huyền';
@@ -1755,8 +1755,8 @@ function renderTopic3FusionQuestion(q) {
         const p = palette[idx % palette.length];
         const anim = idx === 0 ? 't3-piece-left' : 't3-piece-right';
         return `
-            ${idx > 0 ? `<span class="text-3xl md:text-4xl font-black text-pink-400 select-none">+</span>` : ''}
-            <div class="${anim} ${meta.level === 2 && idx === 1 ? 'min-w-[150px] md:min-w-[190px] px-7 md:px-9' : 'min-w-[82px] md:min-w-[104px] px-5'} py-3 md:py-4 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-3xl md:text-4xl font-black shadow-sm text-center whitespace-nowrap">
+            ${idx > 0 ? `<span class="text-2xl md:text-3xl font-black text-pink-400 select-none">+</span>` : ''}
+            <div class="${anim} ${meta.level === 2 && idx === 1 ? 'min-w-[150px] md:min-w-[190px] px-7 md:px-9' : 'min-w-[82px] md:min-w-[104px] px-5'} py-3 md:py-4 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-2xl md:text-3xl font-black shadow-sm text-center whitespace-nowrap">
                 ${escapeHtml(piece)}
             </div>`;
     }).join('');
@@ -1765,7 +1765,7 @@ function renderTopic3FusionQuestion(q) {
         <button
             data-opt="${escapeHtml(opt)}"
             onclick="checkTopic3FusionAnswer('${String(opt).replace(/'/g, "\\'")}')"
-            class="option-btn min-h-[62px] px-4 py-2.5 bg-pink-50/40 hover:bg-pink-100/70 border-2 border-pink-200 rounded-2xl font-black text-gray-800 text-center transition-all text-xl md:text-2xl shadow-xs pastel-btn">
+            class="option-btn min-h-[54px] px-4 py-2 bg-pink-50/40 hover:bg-pink-100/70 border-2 border-pink-200 rounded-2xl font-black text-gray-800 text-center transition-all text-lg md:text-xl shadow-xs pastel-btn">
             ${escapeHtml(opt)}
         </button>
     `).join('');
@@ -1784,8 +1784,8 @@ function renderTopic3FusionQuestion(q) {
             <div class="w-full rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-white via-pink-50/40 to-purple-50/50 p-5 md:p-7 shadow-sm">
                 <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
                     ${piecesHtml}
-                    <span id="topic3-fusion-arrow" class="text-3xl md:text-4xl font-black text-emerald-500 select-none">→</span>
-                    <div id="topic3-fusion-result" class="min-w-[92px] px-5 py-3 rounded-2xl bg-white border-2 border-dashed border-emerald-300 text-emerald-400 text-3xl md:text-4xl font-black shadow-inner text-center">?</div>
+                    <span id="topic3-fusion-arrow" class="text-2xl md:text-3xl font-black text-emerald-500 select-none">→</span>
+                    <div id="topic3-fusion-result" class="min-w-[92px] px-5 py-3 rounded-2xl bg-white border-2 border-dashed border-emerald-300 text-emerald-400 text-2xl md:text-3xl font-black shadow-inner text-center">?</div>
                 </div>
 
                 <div class="flex justify-center mt-4">
@@ -1802,6 +1802,20 @@ function renderTopic3FusionQuestion(q) {
             </div>
         </div>
     `;
+
+    const practiceNav = document.getElementById('nav-group-practice');
+    const bottomNav = document.getElementById('quiz-bottom-nav');
+    const prevBtn = document.getElementById('btn-prev-q-prac');
+    const nextBtn = document.getElementById('btn-next-q-prac');
+    if (bottomNav) bottomNav.style.paddingTop = '14px';
+    if (practiceNav) practiceNav.style.gap = '1rem';
+    [prevBtn, nextBtn].forEach(btn => {
+        if (!btn) return;
+        btn.style.transform = 'scale(1.10)';
+        btn.style.transformOrigin = 'center';
+        btn.style.marginLeft = '6px';
+        btn.style.marginRight = '6px';
+    });
 
     restoreQuestionState(q);
     updateNavButtons();
@@ -1928,6 +1942,13 @@ function topic8EvaluateOrRender(q, state) {
 }
 
 function loadQuestion() {
+    const _t3BottomNav = document.getElementById('quiz-bottom-nav');
+    const _t3PracticeNav = document.getElementById('nav-group-practice');
+    const _t3Prev = document.getElementById('btn-prev-q-prac');
+    const _t3Next = document.getElementById('btn-next-q-prac');
+    if (_t3BottomNav) _t3BottomNav.style.paddingTop = '';
+    if (_t3PracticeNav) _t3PracticeNav.style.gap = '';
+    [_t3Prev, _t3Next].forEach(btn => { if (btn) { btn.style.transform=''; btn.style.transformOrigin=''; btn.style.marginLeft=''; btn.style.marginRight=''; } });
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
     if (!q) return;

@@ -6,14 +6,15 @@ const TOPICS_CONFIG = [
     { id: 2, title: "2. Dấu thanh kì diệu", desc: "Ngang, sắc, huyền, hỏi, ngã, nặng", icon: "🎵", color: "purple" },
     { id: 3, title: "3. Ghép âm - vần", desc: "Vần xuôi & phức tạp", icon: "🧩", color: "blue" },
     { id: 4, title: "4. Tập đọc", desc: "Đọc trơn từ 1 từ đến câu dài", icon: "📚", color: "fuchsia" },
-    { id: 5, title: "5. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", icon: "✍️", color: "amber" },
-    { id: 6, title: "6. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
-    { id: 7, title: "7. Kho từ vựng của bé", desc: "Từ theo chủ điểm & ngữ cảnh", icon: "🌿", color: "emerald" },
-    { id: 8, title: "8. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
-    { id: 9, title: "9. Nhà thông thái sắp câu", desc: "Ghép câu ngắn & câu dài", icon: "🧠", color: "indigo" },
-    { id: 10, title: "10. Đọc hiểu - trả lời", desc: "Văn xuôi, thơ & suy luận", icon: "📖", color: "pink" },
+    { id: 7, title: "5. Kho từ vựng của bé", desc: "Nhìn tranh, chọn từ và mở rộng vốn từ", icon: "🌿", color: "emerald" },
+    { id: 9, title: "6. Nhà thông thái sắp câu", desc: "4 cấp độ từ câu ngắn đến câu dài", icon: "🧠", color: "indigo" },
+    { id: 10, title: "7. Đọc hiểu - trả lời", desc: "4 cấp độ từ đọc ngắn đến suy luận", icon: "📖", color: "pink" },
+    { id: 5, title: "8. Điền từ / chữ còn thiếu", desc: "Điền phần còn thiếu để hoàn chỉnh từ, tiếng", icon: "✍️", color: "amber" },
+    { id: 6, title: "9. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
+    { id: 8, title: "10. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
     { id: 11, title: "11. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", icon: "🎯", color: "yellow" },
-    { id: 12, title: "12. Ôn tập học kỳ", desc: "Học kỳ 1 & Học kỳ 2", icon: "📚", color: "cyan" }
+    { id: 12, title: "12. Vườn thơ và nhạc", desc: "20 bài thơ + 20 bài hát do Cô Thỏ Hồng sáng tác", icon: "🎶", color: "fuchsia" },
+    { id: 13, title: "13. Ôn tập học kỳ", desc: "Học kỳ 1 & Học kỳ 2", icon: "📚", color: "cyan" }
 ];
 
 const SUBTOPIC_PALETTES = [
@@ -37,7 +38,7 @@ const roadmapConfig = {
     9: { name: "Tuần 9: Phân biệt s/x, l/n, ch/tr", topicIds: [5], desc: "Luyện các cặp âm đầu dễ lẫn trong chính tả.", icon: "S/X" },
     10: { name: "Tuần 10: d/gi/r & chính tả tổng hợp", topicIds: [5], desc: "Phân biệt d/gi/r và ôn tổng hợp các luật chính tả đã học.", icon: "🩺" },
     11: { name: "Tuần 11: Vốn từ & từ chỉ sự vật", topicIds: [7,8], desc: "Mở rộng từ về gia đình, trường học và nhận diện từ chỉ sự vật.", icon: "🌿" },
-    12: { name: "Tuần 12: Ôn tập Học kỳ 1", topicIds: [12], desc: "Ôn tổng hợp kiến thức Học kỳ 1 trước khi vào giai đoạn tiếp theo.", icon: "📘" },
+    12: { name: "Tuần 12: Ôn tập Học kỳ 1", topicIds: [13], desc: "Ôn tổng hợp kiến thức Học kỳ 1 trước khi vào giai đoạn tiếp theo.", icon: "📘" },
     13: { name: "Tuần 13: Vần phức & tiếng hoàn chỉnh", topicIds: [3], desc: "Củng cố vần khó, ghép âm đầu + vần + thanh ở mức cao hơn.", icon: "🔠" },
     14: { name: "Tuần 14: Chính tả nâng cao & chữa lỗi", topicIds: [3,5,6], desc: "Ôn luật c/k, g/gh, ng/ngh, ch/tr và bắt đầu chữa từ sai.", icon: "🩹" },
     15: { name: "Tuần 15: Viết hoa & bác sĩ chính tả", topicIds: [6], desc: "Luyện viết hoa tên riêng và phát hiện lỗi trong câu ngắn.", icon: "🩺" },
@@ -49,7 +50,7 @@ const roadmapConfig = {
     21: { name: "Tuần 21: Câu dài, câu hỏi & câu cảm", topicIds: [9], desc: "Xếp câu 5 từ trở lên, luyện câu hỏi, câu cảm và thử thách tổng hợp.", icon: "💬" },
     22: { name: "Tuần 22: Đọc hiểu văn xuôi & thơ", topicIds: [10], desc: "Đọc văn xuôi, thơ ngắn và trả lời câu hỏi bám chi tiết văn bản.", icon: "📖" },
     23: { name: "Tuần 23: Đọc hiểu thông tin & suy luận", topicIds: [10], desc: "Đọc văn bản thông tin, suy luận ý nghĩa và rút ra bài học phù hợp.", icon: "🔎" },
-    24: { name: "Tuần 24: Ôn tập Học kỳ 2", topicIds: [12], desc: "Ôn tổng hợp kiến thức Học kỳ 2, sẵn sàng bước vào Đấu trường đề thi.", icon: "📗" }
+    24: { name: "Tuần 24: Ôn tập Học kỳ 2", topicIds: [13], desc: "Ôn tổng hợp kiến thức Học kỳ 2, sẵn sàng bước vào Đấu trường đề thi.", icon: "📗" }
 };
 
 const TOPIC_TO_SKILL = {
@@ -58,8 +59,8 @@ const TOPIC_TO_SKILL = {
     5: 'C2', 6: 'C2',
     7: 'C3',
     8: 'C4', 9: 'C4',
-    10: 'C5', 12: 'C5',
-    11: 'C6'
+    10: 'C5', 11: 'C6',
+    12: 'C5', 13: 'C5'
 };
 
 function skillsForWeek(weekNum) {
@@ -180,6 +181,24 @@ let quizTimerInterval = null;
 let quizRemainingSeconds = 40 * 60;
 let inMiniGameFlow = false;
 let inBaiHocFlow = false;
+
+// ==========================================
+// ADAPTIVE LEARNING ENGINE (nhẹ, chạy ngầm)
+// - Không đổi giao diện học của bé.
+// - Hồ sơ năng lực được đồng bộ theo session token lên Google Sheets.
+// - Frontend chỉ giữ trạng thái tạm trong RAM; quyền tài khoản vẫn do backend xác thực.
+// ==========================================
+const ADAPTIVE_RECENT_LIMIT = 80;
+const ADAPTIVE_BATCH_SIZE = 5;
+const adaptiveLearningState = {
+    loaded: false,
+    loading: false,
+    profile: { v: 1, skills: {}, recent: [] },
+    pending: [],
+    flushTimer: null
+};
+const topic4ReadingSupportState_ = {};
+
 
 // Chỉ riêng Chuyên đề 2 và 3 ở chế độ Khám phá: trả lời đúng sẽ tự chuyển câu tiếp theo.
 let topic23AutoAdvanceTimer = null;
@@ -350,7 +369,7 @@ function showAppToast(message, type = 'info', duration = 1900) {
 // VaiTro: admin | student
 // LoaiTaiKhoan: regular | trial | vip
 // ==========================================
-const PREMIUM_TOPIC_IDS = new Set([12]);
+const PREMIUM_TOPIC_IDS = new Set([13]);
 let accountManagerAccounts = [];
 let accountManagerSort = { key: 'maHS', dir: 1 };
 let adminNewRegistrationCount = 0;
@@ -671,7 +690,10 @@ function normalizeTopic(t) {
         lecture_title: t.l_title ?? t.lecture_title ?? '',
         lecture_content: t.l_content ?? t.lecture_content ?? '',
         lecture_audio_text: t.l_audio ?? t.lecture_audio_text ?? '',
-        questions: rawQuestions.map(normalizeQuestion).filter(Boolean)
+        questions: rawQuestions.map(normalizeQuestion).filter(Boolean),
+        poems: Array.isArray(t.poems) ? t.poems : [],
+        songs: Array.isArray(t.songs) ? t.songs : [],
+        copyright_note: t.copyright_note ?? ''
     };
 }
 
@@ -791,10 +813,13 @@ async function renderDashboardGrid() {
     try { topicsData = await fetchAllTopicsData(); } catch (e) {}
 
     let html = '';
-    TOPICS_CONFIG.filter(t => Number(t.id) <= 11).forEach(t => {
+    TOPICS_CONFIG.filter(t => Number(t.id) <= 12).forEach(t => {
         const topicObj = topicsData.find(item => Number(item.topic_id) === Number(t.id));
         const totalCount = topicObj && topicObj.questions ? topicObj.questions.length : (t.id === 1 ? 29 : 0);
-        const countLabel = totalCount > 0 ? `${totalCount} câu` : t.desc;
+        const mediaCount = Number(t.id) === 12 ? ((topicObj?.poems?.length || 0) + (topicObj?.songs?.length || 0)) : 0;
+        const countLabel = Number(t.id) === 12
+            ? (mediaCount > 0 ? `${mediaCount} bài` : 'Thơ & nhạc')
+            : (totalCount > 0 ? `${totalCount} câu` : t.desc);
         const iconHtml = t.isCustomTextIcon
             ? `<div class="w-8 h-8 bg-rose-100 rounded-xl flex items-center justify-center text-[11px] font-black text-rose-600 shadow-inner group-hover:scale-110 transition-transform shrink-0 tracking-tight">S/X</div>`
             : `<div class="w-8 h-8 bg-${t.color}-100 rounded-xl flex items-center justify-center text-sm font-extrabold text-${t.color}-600 shadow-inner group-hover:scale-110 transition-transform shrink-0">${t.icon}</div>`;
@@ -812,7 +837,8 @@ async function renderDashboardGrid() {
                 </div>
             </div>`;
     });
-    container.innerHTML = html;
+    container.classList.add('nature-ambient-host');
+    container.innerHTML = `${renderNatureAmbientLayer_(true)}${html}`;
 }
 
 async function startRandomExam(categoryKey) {
@@ -986,7 +1012,41 @@ function updateNavTabs(level2Title, level2Icon, level3Title, level4Title) {
         document.getElementById('header-level3-title').textContent = level3Title;
         tab3.classList.remove('hidden');
         tab3.classList.add('flex');
+
+        // Trong cây Khám phá: Khám phá → Chuyên mục → Mục nhỏ.
+        // Chuyên mục (level 3, ví dụ "4. Tập đọc") phải bấm được để
+        // quay lại màn giới thiệu / danh sách cấp độ của chính chuyên mục đó.
+        const level3Box = tab3.querySelector('div');
+        if (level3Box && currentMainTab === 'discover' && activeTopicId) {
+            level3Box.setAttribute('role', 'button');
+            level3Box.setAttribute('tabindex', '0');
+            level3Box.setAttribute('title', 'Quay lại chuyên mục');
+            level3Box.classList.add('cursor-pointer', 'hover:bg-purple-100', 'transition-colors');
+            level3Box.onclick = returnToCurrentDiscoverTopic_;
+            level3Box.onkeydown = (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    returnToCurrentDiscoverTopic_();
+                }
+            };
+        } else if (level3Box) {
+            level3Box.removeAttribute('role');
+            level3Box.removeAttribute('tabindex');
+            level3Box.removeAttribute('title');
+            level3Box.classList.remove('cursor-pointer', 'hover:bg-purple-100', 'transition-colors');
+            level3Box.onclick = null;
+            level3Box.onkeydown = null;
+        }
     } else {
+        const level3Box = tab3.querySelector('div');
+        if (level3Box) {
+            level3Box.removeAttribute('role');
+            level3Box.removeAttribute('tabindex');
+            level3Box.removeAttribute('title');
+            level3Box.classList.remove('cursor-pointer', 'hover:bg-purple-100', 'transition-colors');
+            level3Box.onclick = null;
+            level3Box.onkeydown = null;
+        }
         tab3.classList.add('hidden');
         tab3.classList.remove('flex');
     }
@@ -1001,9 +1061,49 @@ function updateNavTabs(level2Title, level2Icon, level3Title, level4Title) {
     }
 }
 
+function updateDiscoverBreadcrumb_(topicTitle = null, topicIcon = '🌸', subTitle = null) {
+    // Cây thư mục của tab Khám phá: Khám phá → Chuyên mục → Mục nhỏ.
+    // Nút Khám phá ở breadcrumb luôn quay về trang Khám phá.
+    updateNavTabs('Khám phá', '🧭', topicTitle || null, subTitle || null);
+}
+
+function returnToCurrentDiscoverTopic_() {
+    stopSpeaking();
+    clearInterval(quizTimerInterval);
+
+    const topicId = Number(activeTopicId || pendingTopicQuiz?.topicNum || 0);
+    if (!topicId) {
+        goHome();
+        return;
+    }
+
+    // Chủ đề 1, Thơ & nhạc và Ôn tập có màn chuyên biệt riêng.
+    if (topicId === 1) {
+        openLettersSubmenu();
+        return;
+    }
+    if (topicId === 12) {
+        openThoNhacMenu();
+        return;
+    }
+    if (topicId === 13) {
+        openSemesterReviewMenu();
+        return;
+    }
+
+    const cfg = TOPICS_CONFIG.find(t => Number(t.id) === topicId);
+    const topicName = pendingTopicQuiz?.topicName || cfg?.title || `Chủ đề ${topicId}`;
+    const icon = cfg?.icon || '🌸';
+    openTopic(topicId, topicName, icon);
+}
+
 function returnToTopicLecture() {
     stopSpeaking();
     clearInterval(quizTimerInterval);
+    if (currentMainTab === 'discover') {
+        goHome();
+        return;
+    }
     if (inBaiHocFlow) {
         openBaiHocHub();
     } else if (activeExamContext) {
@@ -1015,7 +1115,7 @@ function returnToTopicLecture() {
     } else if (activeTopicId === 1) {
         openLettersSubmenu();
     } else if (pendingTopicQuiz) {
-        updateNavTabs(pendingTopicQuiz.topicName, TOPICS_CONFIG.find(t => t.id === pendingTopicQuiz.topicNum)?.icon, null);
+        updateDiscoverBreadcrumb_(pendingTopicQuiz.topicName, TOPICS_CONFIG.find(t => t.id === pendingTopicQuiz.topicNum)?.icon || '🌸', null);
         switchAppView('view-lecture');
     }
 }
@@ -1035,7 +1135,7 @@ function goHome() {
     inBaiHocFlow = false;
     stopSpeaking();
     clearInterval(quizTimerInterval);
-    updateNavTabs(null, null, null);
+    updateNavTabs('Khám phá', '🧭', null);
     switchAppView('view-dashboard-grid');
 }
 
@@ -1096,6 +1196,236 @@ async function callAppsScript(action, payload) {
     }
 }
 
+
+function resetAdaptiveLearningState_() {
+    if (adaptiveLearningState.flushTimer) clearTimeout(adaptiveLearningState.flushTimer);
+    adaptiveLearningState.loaded = false;
+    adaptiveLearningState.loading = false;
+    adaptiveLearningState.profile = { v: 1, skills: {}, recent: [] };
+    adaptiveLearningState.pending = [];
+    adaptiveLearningState.flushTimer = null;
+    Object.keys(topic4ReadingSupportState_).forEach(k => delete topic4ReadingSupportState_[k]);
+}
+
+function adaptiveQuestionId_(q, topicId = null) {
+    const rawId = q?.question_id ?? q?.id;
+    if (rawId !== undefined && rawId !== null && String(rawId) !== '' && Number(rawId) !== 0) return String(rawId);
+    const t = Number(q?.source_topic_id || topicId || activeTopicId || 0);
+    const text = String(q?.question_text || q?.answer || '').trim();
+    let h = 2166136261;
+    for (let i = 0; i < text.length; i++) { h ^= text.charCodeAt(i); h = Math.imul(h, 16777619); }
+    return `${t}-${(h >>> 0).toString(36)}`;
+}
+
+function adaptiveLevel_(q) {
+    const tags = Array.isArray(q?.tags) ? q.tags.map(x => String(x).toLowerCase()) : [];
+    for (let n = 1; n <= 4; n++) {
+        if (tags.includes(`level${n}`) || tags.includes(`tap_doc_cap${n}`) || tags.includes(`cap${n}_tap_doc`)) return n;
+    }
+    const m = String(q?.sub_topic || '').match(/cấp\s*(\d+)/i);
+    return m ? Math.max(1, Math.min(4, Number(m[1]) || 1)) : 0;
+}
+
+function adaptiveSkillKey_(q, topicId = null) {
+    const t = Number(q?.source_topic_id || topicId || activeTopicId || 0);
+    const lv = adaptiveLevel_(q);
+    const suffix = lv ? `.level${lv}` : '';
+    const map = {
+        1: 'alphabet', 2: 'tone', 3: 'phonics', 4: 'reading',
+        5: 'fill_missing', 6: 'spelling', 7: 'vocabulary', 8: 'word_class',
+        9: 'sentence_order', 10: 'reading_comprehension', 11: 'logic', 12: 'language_enjoyment', 13: 'review'
+    };
+    if (!t) {
+        const skillMap = { C1:'phonics', C2:'spelling', C3:'vocabulary', C4:'sentence_order', C5:'reading_comprehension', C6:'logic' };
+        const raw = String(q?.skill_tag || '').toUpperCase();
+        const m = raw.match(/C[1-6]/);
+        if (m && skillMap[m[0]]) return skillMap[m[0]];
+    }
+    return `${map[t] || `topic${t}`}${suffix}`;
+}
+
+function adaptiveErrorType_(q, selectedOpt, topicId = null) {
+    const t = Number(q?.source_topic_id || topicId || activeTopicId || 0);
+    const lv = adaptiveLevel_(q);
+    if (t === 1) return 'letter_recognition';
+    if (t === 2) return 'tone_error';
+    if (t === 3) return 'phonics_error';
+    if (t === 5) return 'missing_part_error';
+    if (t === 6) return 'spelling_error';
+    if (t === 7) return 'word_meaning_error';
+    if (t === 8) return 'word_class_error';
+    if (t === 9) return 'word_order_error';
+    if (t === 10) return lv >= 4 ? 'inference_error' : (lv === 3 ? 'main_idea_error' : 'detail_error');
+    if (t === 11) return 'logic_error';
+    return 'general_error';
+}
+
+function adaptivePracticeSupportKey_(q, topicId = null) {
+    return `${adaptiveSkillKey_(q, topicId)}::${adaptiveQuestionId_(q, topicId)}`;
+}
+
+function adaptiveDefaultSkill_() {
+    return { a:0, c:0, w:0, m:50, st:0, p:0, ind:0, indm:50, last:0, due:0 };
+}
+
+function adaptiveApplyLocalEvent_(evt) {
+    const profile = adaptiveLearningState.profile || (adaptiveLearningState.profile = { v:1, skills:{}, recent:[] });
+    if (!profile.skills) profile.skills = {};
+    if (!Array.isArray(profile.recent)) profile.recent = [];
+    const key = evt.s;
+    const sk = { ...adaptiveDefaultSkill_(), ...(profile.skills[key] || {}) };
+    const now = Number(evt.t) || Date.now();
+    const support = Math.max(0, Number(evt.u) || 0);
+    if (evt.o === 'c' || evt.o === 'w') {
+        sk.a += 1;
+        if (evt.o === 'c') {
+            sk.c += 1;
+            sk.st = Math.max(0, Number(sk.st) || 0) + 1;
+            const gain = support > 0 ? 3 : 6;
+            sk.m = Math.min(100, Math.max(0, Math.round((Number(sk.m) || 50) + gain)));
+            const days = sk.st >= 4 ? 14 : (sk.st === 3 ? 7 : (sk.st === 2 ? 3 : 1));
+            sk.due = now + days * 86400000;
+        } else {
+            sk.w += 1;
+            sk.st = 0;
+            sk.m = Math.min(100, Math.max(0, Math.round((Number(sk.m) || 50) - 10)));
+            sk.due = now + 4 * 3600000;
+        }
+    } else if (evt.o === 'p') {
+        sk.p += 1;
+        if (support === 0) sk.ind += 1;
+        sk.indm = Math.round(((sk.ind + 1) / (sk.p + 2)) * 100);
+        sk.due = now + (support > 0 ? 1 : 3) * 86400000;
+    }
+    sk.last = now;
+    profile.skills[key] = sk;
+    profile.recent.push(evt);
+    if (profile.recent.length > ADAPTIVE_RECENT_LIMIT) profile.recent = profile.recent.slice(-ADAPTIVE_RECENT_LIMIT);
+}
+
+async function loadLearningProfile_() {
+    if (!currentUser || currentUser.isGuest || currentUser.sessionPending || !getSessionToken()) return;
+    if (adaptiveLearningState.loading) return;
+    adaptiveLearningState.loading = true;
+    try {
+        const res = await callAppsScript('getLearningProfile', { maHS: currentUser.maHS, sessionToken: getSessionToken() });
+        if (res?.ok) {
+            const p = res.profile && typeof res.profile === 'object' ? res.profile : { v:1, skills:{}, recent:[] };
+            if (!p.skills || typeof p.skills !== 'object') p.skills = {};
+            if (!Array.isArray(p.recent)) p.recent = [];
+            adaptiveLearningState.profile = p;
+            adaptiveLearningState.loaded = true;
+        }
+    } catch (e) {
+        // Hồ sơ học tập là lớp bổ sung. Mạng lỗi không được làm gián đoạn việc học hoặc đăng xuất.
+    } finally {
+        adaptiveLearningState.loading = false;
+    }
+}
+
+function queueLearningEvent_(q, outcome, options = {}) {
+    if (!q || !currentUser || currentUser.isGuest || currentUser.sessionPending || !getSessionToken()) return;
+    const topicId = Number(q.source_topic_id || options.topicId || activeTopicId || 0);
+    const evt = {
+        t: Date.now(),
+        q: adaptiveQuestionId_(q, topicId),
+        s: adaptiveSkillKey_(q, topicId),
+        o: outcome === 'wrong' ? 'w' : (outcome === 'practice' ? 'p' : 'c'),
+        e: String(options.errorType || ''),
+        u: Math.max(0, Math.min(3, Number(options.supportUsed) || 0)),
+        l: adaptiveLevel_(q),
+        tp: topicId
+    };
+    adaptiveApplyLocalEvent_(evt);
+    adaptiveLearningState.pending.push(evt);
+    if (adaptiveLearningState.pending.length > 30) adaptiveLearningState.pending = adaptiveLearningState.pending.slice(-30);
+    if (adaptiveLearningState.pending.length >= ADAPTIVE_BATCH_SIZE) {
+        flushLearningEvents_();
+    } else {
+        if (adaptiveLearningState.flushTimer) clearTimeout(adaptiveLearningState.flushTimer);
+        adaptiveLearningState.flushTimer = setTimeout(() => flushLearningEvents_(), 6500);
+    }
+}
+
+async function flushLearningEvents_(force = false) {
+    if (adaptiveLearningState.flushTimer) { clearTimeout(adaptiveLearningState.flushTimer); adaptiveLearningState.flushTimer = null; }
+    if (!currentUser || currentUser.isGuest || currentUser.sessionPending || !getSessionToken()) return;
+    if (!adaptiveLearningState.pending.length) return;
+    const count = force ? adaptiveLearningState.pending.length : Math.min(12, adaptiveLearningState.pending.length);
+    const batch = adaptiveLearningState.pending.slice(0, count);
+    try {
+        const res = await callAppsScript('saveLearningBatch', {
+            maHS: currentUser.maHS,
+            sessionToken: getSessionToken(),
+            events: batch
+        });
+        if (res?.ok) adaptiveLearningState.pending.splice(0, batch.length);
+    } catch (e) {
+        // Giữ lại batch trong RAM để thử lại ở tương tác sau; không làm gián đoạn bài học.
+    }
+    if (adaptiveLearningState.pending.length && !force) {
+        adaptiveLearningState.flushTimer = setTimeout(() => flushLearningEvents_(), 9000);
+    }
+}
+
+function adaptiveLatestByQuestion_() {
+    const map = new Map();
+    const recent = adaptiveLearningState.profile?.recent || [];
+    recent.forEach(evt => { if (evt?.q) map.set(String(evt.q), evt); });
+    return map;
+}
+
+function buildAdaptiveQuestionOrder_(pool, topicNum) {
+    const source = Array.isArray(pool) ? pool.slice() : [];
+    if (source.length < 3 || !currentUser || currentUser.isGuest || currentUser.sessionPending || !adaptiveLearningState.loaded) return shuffleArray(source);
+    const latest = adaptiveLatestByQuestion_();
+    const skills = adaptiveLearningState.profile?.skills || {};
+    const now = Date.now();
+    const buckets = { retry:[], fresh:[], review:[], easy:[] };
+    source.forEach(q => {
+        const qid = adaptiveQuestionId_(q, topicNum);
+        const evt = latest.get(qid);
+        const skill = skills[adaptiveSkillKey_(q, topicNum)] || adaptiveDefaultSkill_();
+        const row = { q, mastery:Number(skill.m) || 50, r:Math.random() };
+        if (evt && (evt.o === 'w' || (evt.o === 'p' && Number(evt.u) > 0))) buckets.retry.push(row);
+        else if (!evt) buckets.fresh.push(row);
+        else if (Number(skill.due) > 0 && Number(skill.due) <= now) buckets.review.push(row);
+        else buckets.easy.push(row);
+    });
+    Object.values(buckets).forEach(arr => arr.sort((a,b) => (a.mastery - b.mastery) || (a.r - b.r)));
+    const pattern = ['fresh','fresh','retry','fresh','review','fresh','easy','retry','review','fresh'];
+    const out = [];
+    while (out.length < source.length) {
+        let moved = false;
+        for (const key of pattern) {
+            const item = buckets[key].shift();
+            if (item) { out.push(item.q); moved = true; }
+            if (out.length >= source.length) break;
+        }
+        if (!moved) {
+            for (const key of ['retry','review','fresh','easy']) {
+                while (buckets[key].length) out.push(buckets[key].shift().q);
+            }
+        }
+    }
+    return out;
+}
+
+function recordEvaluationToAdaptive_() {
+    if (!currentUser || currentUser.isGuest || (!activeExamContext && !activeRoadmapContext)) return;
+    activeQuestionsList.forEach((q, idx) => {
+        const selected = userAnswers[idx];
+        const ok = selected === q.answer;
+        queueLearningEvent_(q, ok ? 'correct' : 'wrong', {
+            topicId: q.source_topic_id || activeTopicId,
+            errorType: ok ? '' : adaptiveErrorType_(q, selected, q.source_topic_id || activeTopicId)
+        });
+    });
+    flushLearningEvents_();
+}
+
+window.addEventListener('pagehide', () => { if (adaptiveLearningState.pending.length) flushLearningEvents_(true); });
+
 async function doLogin() {
     hideAuthError();
     const maHS = (document.getElementById('login-mahs')?.value || '').trim().toUpperCase();
@@ -1110,6 +1440,8 @@ async function doLogin() {
         currentUser = { ...result.student, isGuest: false, sessionPending: false };
         clearStoredSession();
         storeSessionToken(result.sessionToken);
+        resetAdaptiveLearningState_();
+        loadLearningProfile_();
         document.getElementById('login-mapin').value = '';
         closeAuthScreen();
         enterDashboard();
@@ -1158,6 +1490,8 @@ async function tryAutoLogin() {
         const res = await callAppsScript('restoreSession', { sessionToken: token });
         if (res.ok && res.student) {
             currentUser = { ...res.student, isGuest: false, sessionPending: false };
+            resetAdaptiveLearningState_();
+            loadLearningProfile_();
             return 'restored';
         }
         // Chỉ xóa token khi chính backend xác nhận token không còn hợp lệ.
@@ -1203,6 +1537,7 @@ async function initializeApp() {
 }
 
 async function logout() {
+    try { await flushLearningEvents_(true); } catch (e) {}
     clearInterval(adminNotificationTimer);
     adminNotificationTimer = null;
     adminNewRegistrationCount = 0;
@@ -1212,6 +1547,7 @@ async function logout() {
     }
     // Người dùng đã chủ động bấm Đăng xuất nên xóa token cục bộ dù mạng có lỗi.
     clearStoredSession();
+    resetAdaptiveLearningState_();
     currentUser = makeGuestUser();
     enterDashboard(true);
 }
@@ -1265,7 +1601,7 @@ function openTopic(topicNum, topicName, icon) {
     if (PREMIUM_TOPIC_IDS.has(Number(topicNum)) && !requirePremiumAccess(topicName)) return;
     stopSpeaking();
     activeTopicId = topicNum; activeExamContext = null; activeRoadmapContext = null;
-    updateNavTabs(topicName, icon || '🌸', null);
+    updateDiscoverBreadcrumb_(topicName, icon || '🌸', null);
 
     if (topicNum === 1) {
         openLettersSubmenu();
@@ -1273,6 +1609,11 @@ function openTopic(topicNum, topicName, icon) {
     }
 
     if (topicNum === 12) {
+        openThoNhacMenu();
+        return;
+    }
+
+    if (topicNum === 13) {
         openSemesterReviewMenu();
         return;
     }
@@ -1293,17 +1634,17 @@ function openTopic(topicNum, topicName, icon) {
 function openSemesterReviewMenu() {
     stopSpeaking();
     currentTopicKey = 'semester_review_menu';
-    currentTopicName = '12. Ôn tập học kỳ';
-    updateNavTabs('12. Ôn tập học kỳ', '📚', null);
+    currentTopicName = '13. Ôn tập học kỳ';
+    updateNavTabs('Ôn tập', '🧠', '13. Ôn tập học kỳ', null);
 
     showLoadingOverlay('Đang tải kho ôn tập học kỳ...');
     fetchAllTopicsData().then(topics => {
         hideLoadingOverlay();
-        const topicObj = topics.find(t => Number(t.topic_id) === 12);
+        const topicObj = topics.find(t => Number(t.topic_id) === 13);
         if (!topicObj || !Array.isArray(topicObj.questions) || !topicObj.questions.length) {
             throw new Error('Chưa có dữ liệu ôn tập học kỳ');
         }
-        showLectureAndSubtopics(12, '12. Ôn tập học kỳ', topicObj);
+        showLectureAndSubtopics(13, '13. Ôn tập học kỳ', topicObj);
     }).catch(err => {
         hideLoadingOverlay();
         showAppDialog(`Không thể tải ôn tập học kỳ: ${err.message}`, { type:'error' });
@@ -1314,7 +1655,7 @@ function openLettersSubmenu() {
     stopSpeaking();
     currentTopicKey = 'letters_menu';
     currentTopicName = '1. Bảng chữ cái';
-    updateNavTabs("1. Bảng chữ cái", "🅰️", null);
+    updateDiscoverBreadcrumb_("1. Bảng chữ cái", "🅰️", null);
 
     const subtopics = [
         { title: 'Bảng chữ cái', badge: '29 chữ', desc: 'Khám phá 29 chữ cái in hoa, in thường, chữ tập viết và 3 ví dụ trực quan.', action: () => renderAlphabetBoard(0) },
@@ -1345,7 +1686,7 @@ function openLettersSubmenu() {
 
 function renderAlphabetBoard(index = 0) {
     stopSpeaking();
-    updateNavTabs("1. Bảng chữ cái", "🅰️", "Bảng chữ cái");
+    updateDiscoverBreadcrumb_("1. Bảng chữ cái", "🅰️", "Bảng chữ cái");
     const item = ALPHABET_29_DETAILS[index];
 
     const row1 = ALPHABET_29_DETAILS.slice(0, 15);
@@ -1427,14 +1768,14 @@ function startAlphabetCategoryQuiz(groupKey, subTitle) {
     const variantsPerLetter = getAlphabetQuizVariantsPerLetter(groupKey);
 
     let questions = [];
-    filtered.forEach(item => {
+    filtered.forEach((item, itemIdx) => {
         const correctStr = `${item.u} ${item.l}`;
         const wrongLetterPool = ALPHABET_29_DETAILS.filter(x => x.u !== item.u).map(x => `${x.u} ${x.l}`);
         const exampleWord = item.examples[0]?.w || '';
 
         for (let v = 0; v < variantsPerLetter; v++) {
             questions.push({
-                question_id: 1000 + Math.floor(Math.random() * 9000) + v,
+                question_id: 110000 + (groupKey === 'nguyen_am_don' ? 0 : (groupKey === 'phu_am' ? 10000 : 20000)) + itemIdx * 10 + v,
                 sub_topic: subTitle,
                 question_text: `Bé hãy lắng nghe âm đọc của cô Thỏ Hồng rồi chọn chữ cái đúng nhé!`,
                 options: buildTrickyChoices(correctStr, wrongLetterPool, wrongLetterPool, 3),
@@ -1451,7 +1792,7 @@ function startAlphabetCategoryQuiz(groupKey, subTitle) {
 
     questions = shuffleArray(questions);
 
-    updateNavTabs("1. Bảng chữ cái", "🅰️", subTitle);
+    updateDiscoverBreadcrumb_("1. Bảng chữ cái", "🅰️", subTitle);
     startTopicQuiz(1, subTitle, questions, subTitle);
 }
 
@@ -1465,7 +1806,178 @@ function setSubtopicGridColumns(count) {
     }
 }
 
+
+// ==========================================
+// CHỦ ĐỀ 12: VƯỜN THƠ VÀ NHẠC
+// - 20 bài thơ + 20 lời bài hát: nội dung gốc do Cô Thỏ Hồng sáng tác riêng cho chương trình.
+// - Bài hát hiện lời đầy đủ, nhịp/phong cách gợi ý; TTS đọc lời để bé luyện đọc.
+// ==========================================
+let activeThoNhacTopic_ = null;
+let activeThoNhacSection_ = null;
+
+function setLectureUtilityVisibility_(showSpeak = true, showMix = true) {
+    const view = document.getElementById('view-lecture');
+    if (!view) return;
+    const speakBtn = view.querySelector('button[onclick="speakLecture()"]');
+    if (speakBtn) speakBtn.classList.toggle('hidden', !showSpeak);
+    const bottomWrap = view.querySelector(':scope > div:last-child');
+    if (bottomWrap) bottomWrap.classList.toggle('hidden', !showMix);
+}
+
+async function openThoNhacMenu() {
+    stopSpeaking();
+    activeTopicId = 12;
+    activeExamContext = null;
+    activeRoadmapContext = null;
+    pendingTopicQuiz = null;
+    activeThoNhacSection_ = null;
+    updateDiscoverBreadcrumb_('12. Vườn thơ và nhạc', '🎶', null);
+    showLoadingOverlay('Đang mở Vườn thơ và nhạc...');
+    try {
+        const topics = await fetchAllTopicsData();
+        const topicObj = topics.find(t => Number(t.topic_id) === 12);
+        if (!topicObj) throw new Error('Không tìm thấy dữ liệu Vườn thơ và nhạc');
+        activeThoNhacTopic_ = topicObj;
+        renderThoNhacHome_(topicObj);
+        switchAppView('view-lecture');
+    } catch (err) {
+        showAppDialog(`Không thể mở Vườn thơ và nhạc: ${err.message}`, { type:'error' });
+    } finally {
+        hideLoadingOverlay();
+    }
+}
+
+function renderThoNhacHome_(topicObj) {
+    setLectureUtilityVisibility_(true, false);
+    const poems = topicObj?.poems || [];
+    const songs = topicObj?.songs || [];
+    const titleEl = document.getElementById('lecture-title');
+    const contentEl = document.getElementById('lecture-content');
+    const listEl = document.getElementById('lecture-subtopics-list');
+    if (titleEl) titleEl.textContent = '12. Vườn thơ và nhạc';
+    if (contentEl) {
+        contentEl.innerHTML = `
+            <span class="block text-3xl mb-2">🌷🎶</span>
+            <span class="font-black text-purple-700">Một khu vườn nhỏ của Cô Thỏ Hồng dành riêng cho bé!</span><br>
+            <span class="text-sm md:text-base text-slate-600 font-semibold">20 bài thơ để đọc · 20 bài hát có lời để đọc theo nhịp.</span>`;
+    }
+    const lectureView = document.getElementById('view-lecture');
+    if (lectureView) lectureView.dataset.audioText = 'Chào bé đến với Vườn thơ và nhạc của Cô Thỏ Hồng. Bé hãy chọn Vườn thơ hoặc Vườn nhạc nhé!';
+    if (!listEl) return;
+    listEl.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-2xl';
+    listEl.innerHTML = `
+        <button onclick="openThoNhacSection_('poems')" class="p-4 bg-gradient-to-br from-pink-50 to-purple-50 border-2 border-pink-200 rounded-2xl text-left pastel-btn shadow-sm hover:border-purple-300">
+            <div class="text-3xl mb-2">🌷📖</div>
+            <div class="font-black text-pink-700 text-base md:text-lg">Vườn thơ Cô Thỏ Hồng</div>
+            <div class="text-xs md:text-sm text-slate-500 font-bold mt-1">${poems.length} bài thơ ngắn · Cô Thỏ Hồng xuất hiện trong từng bài</div>
+        </button>
+        <button onclick="openThoNhacSection_('songs')" class="p-4 bg-gradient-to-br from-sky-50 to-fuchsia-50 border-2 border-fuchsia-200 rounded-2xl text-left pastel-btn shadow-sm hover:border-fuchsia-300">
+            <div class="text-3xl mb-2">🎵✨</div>
+            <div class="font-black text-fuchsia-700 text-base md:text-lg">Vườn nhạc Cô Thỏ Hồng</div>
+            <div class="text-xs md:text-sm text-slate-500 font-bold mt-1">${songs.length} bài hát nguyên bản · có lời và nhịp gợi ý</div>
+        </button>`;
+}
+
+function openThoNhacSection_(kind) {
+    stopSpeaking();
+    if (!activeThoNhacTopic_) return openThoNhacMenu();
+    activeThoNhacSection_ = kind;
+    const isPoems = kind === 'poems';
+    const items = isPoems ? (activeThoNhacTopic_.poems || []) : (activeThoNhacTopic_.songs || []);
+    updateDiscoverBreadcrumb_('12. Vườn thơ và nhạc', '🎶', isPoems ? 'Vườn thơ' : 'Vườn nhạc');
+    setLectureUtilityVisibility_(false, false);
+
+    const titleEl = document.getElementById('lecture-title');
+    const contentEl = document.getElementById('lecture-content');
+    const listEl = document.getElementById('lecture-subtopics-list');
+    if (titleEl) titleEl.textContent = isPoems ? 'Vườn thơ Cô Thỏ Hồng' : 'Vườn nhạc Cô Thỏ Hồng';
+    if (contentEl) {
+        contentEl.innerHTML = isPoems
+            ? '<span class="font-black text-pink-700">🌷 Chọn một bài thơ. Bé tự đọc trước, rồi bấm Cô đọc để nghe mẫu nhé!</span>'
+            : '<span class="font-black text-fuchsia-700">🎵 Chọn một bài hát. Đây là lời và nhịp gợi ý nguyên bản; nút Cô đọc giúp bé nghe lời rõ trước khi hát theo giai điệu riêng.</span>';
+    }
+    const lectureView = document.getElementById('view-lecture');
+    if (lectureView) lectureView.dataset.audioText = '';
+    if (!listEl) return;
+    listEl.className = 'grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-3xl';
+    listEl.innerHTML = items.map((item, idx) => {
+        if (isPoems) {
+            return `<button onclick="openThoNhacPoem_(${idx})" class="p-3.5 bg-white border-2 border-pink-200 hover:border-purple-300 rounded-2xl text-left pastel-btn shadow-sm">
+                <div class="flex items-start gap-3"><span class="text-2xl">${escapeHtml(item.icon || '🌷')}</span><div class="min-w-0"><div class="font-black text-purple-700">${escapeHtml(item.title || `Bài thơ ${idx+1}`)}</div><div class="text-xs text-slate-500 font-bold mt-1">${escapeHtml(item.theme || 'Thơ vui cùng Cô Thỏ Hồng')}</div></div></div>
+            </button>`;
+        }
+        return `<button onclick="openThoNhacSong_(${idx})" class="p-3.5 bg-white border-2 border-fuchsia-200 hover:border-sky-300 rounded-2xl text-left pastel-btn shadow-sm">
+            <div class="flex items-start gap-3"><span class="text-2xl">${escapeHtml(item.icon || '🎵')}</span><div class="min-w-0"><div class="font-black text-fuchsia-700">${escapeHtml(item.title || `Bài hát ${idx+1}`)}</div><div class="text-xs text-slate-500 font-bold mt-1">${escapeHtml(item.theme || 'Bài hát của Cô Thỏ Hồng')}${item.tempo ? ` · ${escapeHtml(item.tempo)}` : ''}</div></div></div>
+        </button>`;
+    }).join('') + `
+        <button onclick="openThoNhacMenu()" class="sm:col-span-2 py-2.5 bg-slate-50 border border-slate-200 text-slate-600 rounded-xl text-xs font-black pastel-btn">← Quay lại Vườn thơ và nhạc</button>`;
+}
+
+function openThoNhacPoem_(index) {
+    stopSpeaking();
+    const poem = activeThoNhacTopic_?.poems?.[Number(index)];
+    if (!poem) return;
+    updateDiscoverBreadcrumb_('12. Vườn thơ và nhạc', '🎶', poem.title || 'Bài thơ');
+    setLectureUtilityVisibility_(true, false);
+    const titleEl = document.getElementById('lecture-title');
+    const contentEl = document.getElementById('lecture-content');
+    const listEl = document.getElementById('lecture-subtopics-list');
+    if (titleEl) titleEl.textContent = poem.title || 'Bài thơ';
+    const lines = Array.isArray(poem.lines) ? poem.lines : [];
+    if (contentEl) {
+        contentEl.innerHTML = `<div class="max-w-xl mx-auto rounded-3xl bg-gradient-to-br from-amber-50 via-pink-50 to-purple-50 border-2 border-pink-200 px-5 py-4 shadow-sm">
+            <div class="text-3xl mb-2">${escapeHtml(poem.icon || '🌷')}</div>
+            <div class="font-black text-xl md:text-2xl text-purple-800 mb-1">${escapeHtml(poem.title || '')}</div>
+            <div class="text-xs text-pink-500 font-black mb-3">✍️ Cô Thỏ Hồng sáng tác</div>
+            <div class="space-y-1.5 text-[17px] md:text-[19px] leading-8 text-slate-800 font-bold">${lines.map(line => line ? `<div>${escapeHtml(line)}</div>` : '<div class="h-2"></div>').join('')}</div>
+            ${poem.message ? `<div class="mt-4 pt-3 border-t border-pink-200 text-sm text-pink-700 font-black">🌟 ${escapeHtml(poem.message)}</div>` : ''}
+        </div>`;
+    }
+    const lectureView = document.getElementById('view-lecture');
+    if (lectureView) lectureView.dataset.audioText = `${poem.title || ''}. ${lines.filter(Boolean).join(' ')}`;
+    if (listEl) {
+        listEl.className = 'grid grid-cols-2 gap-2 w-full max-w-xl';
+        listEl.innerHTML = `<button onclick="openThoNhacSection_('poems')" class="py-2.5 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-xs font-black pastel-btn">← Vườn thơ</button>
+            <button onclick="openThoNhacPoem_(${(Number(index)+1) % Math.max(1,(activeThoNhacTopic_.poems||[]).length)})" class="py-2.5 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-xl text-xs font-black pastel-btn">Bài tiếp →</button>`;
+    }
+}
+
+function openThoNhacSong_(index) {
+    stopSpeaking();
+    const song = activeThoNhacTopic_?.songs?.[Number(index)];
+    if (!song) return;
+    updateDiscoverBreadcrumb_('12. Vườn thơ và nhạc', '🎶', song.title || 'Bài hát');
+    setLectureUtilityVisibility_(true, false);
+    const titleEl = document.getElementById('lecture-title');
+    const contentEl = document.getElementById('lecture-content');
+    const listEl = document.getElementById('lecture-subtopics-list');
+    if (titleEl) titleEl.textContent = song.title || 'Bài hát';
+    const lines = Array.isArray(song.lines) ? song.lines : [];
+    if (contentEl) {
+        contentEl.innerHTML = `<div class="max-w-xl mx-auto rounded-3xl bg-gradient-to-br from-sky-50 via-white to-fuchsia-50 border-2 border-fuchsia-200 px-5 py-5 shadow-sm">
+            <div class="text-4xl mb-2">${escapeHtml(song.icon || '🎵')}</div>
+            <div class="font-black text-xl md:text-2xl text-fuchsia-800">${escapeHtml(song.title || '')}</div>
+            <div class="text-xs text-fuchsia-500 font-black mt-1">✍️ Cô Thỏ Hồng sáng tác</div>
+            <div class="flex flex-wrap justify-center gap-2 mt-3">
+                ${song.style ? `<span class="px-3 py-1.5 rounded-full bg-white border border-fuchsia-200 text-fuchsia-700 text-xs font-black">🎼 ${escapeHtml(song.style)}</span>` : ''}
+                ${song.tempo ? `<span class="px-3 py-1.5 rounded-full bg-white border border-sky-200 text-sky-700 text-xs font-black">🥁 ${escapeHtml(song.tempo)}</span>` : ''}
+            </div>
+            <div class="mt-4 space-y-1.5 text-[17px] md:text-[19px] leading-8 text-slate-800 font-bold">${lines.map(line => line ? `<div>${escapeHtml(line)}</div>` : '<div class="h-2"></div>').join('')}</div>
+            ${song.message ? `<div class="mt-4 pt-3 border-t border-fuchsia-200 text-sm text-fuchsia-700 font-black">✨ ${escapeHtml(song.message)}</div>` : ''}
+            <div class="mt-3 text-xs text-slate-500 font-bold">🔊 Nút “Cô đọc” đọc rõ phần lời; giai điệu là phần gia đình có thể hát theo nhịp gợi ý.</div>
+        </div>`;
+    }
+    const lectureView = document.getElementById('view-lecture');
+    if (lectureView) lectureView.dataset.audioText = `${song.title || ''}. ${lines.filter(Boolean).join(' ')}`;
+    if (listEl) {
+        listEl.className = 'grid grid-cols-2 gap-2 w-full max-w-xl';
+        listEl.innerHTML = `<button onclick="openThoNhacSection_('songs')" class="py-2.5 bg-fuchsia-50 border border-fuchsia-200 text-fuchsia-700 rounded-xl text-xs font-black pastel-btn">← Vườn nhạc</button>
+            <button onclick="openThoNhacSong_(${(Number(index)+1) % Math.max(1,(activeThoNhacTopic_.songs||[]).length)})" class="py-2.5 bg-gradient-to-r from-fuchsia-500 to-sky-500 text-white rounded-xl text-xs font-black pastel-btn">Bài tiếp →</button>`;
+    }
+}
+
 function showLectureAndSubtopics(topicNum, topicName, topicObj) {
+    setLectureUtilityVisibility_(true, true);
     pendingTopicQuiz = { topicNum, topicName, questions: topicObj.questions };
     
     document.getElementById('lecture-title').textContent = topicObj.lecture_title || topicName;
@@ -1478,7 +1990,7 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
         if (!groupMap[k]) { groupMap[k] = []; groups.push(k); }
         groupMap[k].push(q);
     });
-    // Topic 10: thêm một mục ảo "Trộn ngẫu nhiên" dùng toàn bộ kho câu hỏi,
+    // Đố vui (ID nội bộ 11): thêm một mục ảo "Trộn ngẫu nhiên" dùng toàn bộ kho câu hỏi,
     // không nhân đôi dữ liệu trong JSON.
     if (Number(topicNum) === 11 && topicObj.questions.length) {
         const randomKey = '__TOPIC10_RANDOM_ALL__';
@@ -1505,7 +2017,7 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     setSubtopicGridColumns(groups.length);
     document.getElementById('lecture-subtopics-list').innerHTML = subHtml;
 
-    updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', null);
+    updateDiscoverBreadcrumb_(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', null);
     switchAppView('view-lecture');
 }
 
@@ -1524,9 +2036,9 @@ function selectSubtopic(idx) {
     const finalTitle = displaySubLabel ? `${topicName} - ${displaySubLabel}` : topicName;
 
     practiceCycleRawPool = [...pool];
-    const firstCycleQuestions = shuffleArray([...pool]);
+    const firstCycleQuestions = buildAdaptiveQuestionOrder_(pool, topicNum);
 
-    updateNavTabs(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', displaySubLabel || 'Tất cả các mục');
+    updateDiscoverBreadcrumb_(topicName, TOPICS_CONFIG.find(t => t.id === topicNum)?.icon || '🌸', displaySubLabel || 'Tất cả các mục');
     startTopicQuiz(topicNum, finalTitle, firstCycleQuestions, displaySubLabel);
 }
 
@@ -1971,7 +2483,7 @@ function getTopic8State(q) {
     const key = `${q.question_id}`;
     if (!topic8ArrangeState[key]) {
         const tokens = Array.isArray(q.tokens) && q.tokens.length ? q.tokens.slice() : String(q.answer || '').split(/\s+/).filter(Boolean);
-        topic8ArrangeState[key] = { selected: [], pool: tokens.map((text, i) => ({ id: `${key}-${i}`, text })) };
+        topic8ArrangeState[key] = { selected: [], pool: tokens.map((text, i) => ({ id: `${key}-${i}`, text })), wrongCount: 0, wrongLogged: false };
     }
     return topic8ArrangeState[key];
 }
@@ -2064,9 +2576,15 @@ function topic8EvaluateOrRender(q, state) {
         playAudio('correct');
         confetti({ particleCount: 55, spread: 70, origin: { y: 0.68 } });
         setTimeout(() => speakVietnamese(`Chính xác! ${q.answer}`), 160);
+        queueLearningEvent_(q, 'correct', { topicId: 9, supportUsed: state.wrongCount > 0 ? 1 : 0 });
         renderTopic8SentenceBuilder(q);
         updateQuizPalletUI();
     } else {
+        state.wrongCount = (Number(state.wrongCount) || 0) + 1;
+        if (!state.wrongLogged) {
+            state.wrongLogged = true;
+            queueLearningEvent_(q, 'wrong', { topicId: 9, errorType: 'word_order_error' });
+        }
         starRedCount++;
         const redEl = document.getElementById('star-red-count');
         if (redEl) redEl.textContent = starRedCount;
@@ -2104,19 +2622,39 @@ function renderNatureAmbientLayer_(dense = false) {
     return `<div class="nature-ambient-layer" aria-hidden="true">
         <span class="nature-cloud nature-cloud-1">☁️</span>
         <span class="nature-cloud nature-cloud-2">☁️</span>
+        ${dense ? '<span class="nature-cloud nature-cloud-3">☁️</span>' : ''}
         <span class="nature-bird nature-bird-1">🐦</span>
         <span class="nature-bird nature-bird-2">🐦</span>
-        <span class="nature-leaf nature-leaf-1">🍂</span>
-        <span class="nature-leaf nature-leaf-2">🍁</span>
-        <span class="nature-leaf nature-leaf-3">🍂</span>
-        ${dense ? '<span class="nature-leaf nature-leaf-4">🍁</span><span class="nature-leaf nature-leaf-5">🍂</span>' : ''}
+        ${dense ? '<span class="nature-bird nature-bird-3">🐦</span>' : ''}
+        <span class="nature-leaf nature-leaf-1 nature-leaf-red">🍁</span>
+        <span class="nature-leaf nature-leaf-2 nature-leaf-yellow">🍂</span>
+        <span class="nature-leaf nature-leaf-3 nature-leaf-red">🍁</span>
+        <span class="nature-leaf nature-leaf-4 nature-leaf-yellow">🍂</span>
+        <span class="nature-leaf nature-leaf-5 nature-leaf-red">🍁</span>
+        <span class="nature-leaf nature-leaf-6 nature-leaf-yellow">🍂</span>
+        ${dense ? '<span class="nature-leaf nature-leaf-7 nature-leaf-yellow">🍂</span><span class="nature-leaf nature-leaf-8 nature-leaf-red">🍁</span>' : ''}
+        <span class="nature-wind nature-wind-1"></span>
+        <span class="nature-wind nature-wind-2"></span>
+        ${dense ? '<span class="nature-wind nature-wind-3"></span>' : ''}
     </div>`;
+}
+
+function ensureNatureAmbientForView_(viewId, dense = true) {
+    const view = typeof viewId === 'string' ? document.getElementById(viewId) : viewId;
+    if (!view) return;
+    view.classList.add('nature-ambient-host');
+    if (!view.querySelector(':scope > .nature-ambient-layer')) {
+        view.insertAdjacentHTML('afterbegin', renderNatureAmbientLayer_(dense));
+    }
 }
 
 function speakTopic4Reading_() {
     const q = activeQuestionsList[currentQIndex];
     const meta = getTopic4ReadingMeta(q);
     if (!meta) return;
+    const supportKey = adaptivePracticeSupportKey_(q, 4);
+    const st = topic4ReadingSupportState_[supportKey] || (topic4ReadingSupportState_[supportKey] = { hint:false, audio:false });
+    st.audio = true;
     speakVietnamese(meta.speech, meta.level >= 4 ? 0.88 : 0.92);
     const status = document.getElementById('topic4-reading-status');
     if (status) status.textContent = 'Cô đọc mẫu xong, con tự đọc lại một lần nữa nhé!';
@@ -2130,6 +2668,10 @@ function topic4ReadingDone_() {
         // Tập đọc là luyện kỹ năng, không có chấm đúng/sai.
         // Chỉ đánh dấu đã hoàn thành lượt để cho phép chuyển tiếp.
         userAnswers[currentQIndex] = q?.answer || q?.question_text || 'Đã đọc';
+        const supportKey = adaptivePracticeSupportKey_(q, 4);
+        const st = topic4ReadingSupportState_[supportKey] || { hint:false, audio:false };
+        queueLearningEvent_(q, 'practice', { topicId: 4, supportUsed: (st.hint ? 1 : 0) + (st.audio ? 1 : 0) });
+        delete topic4ReadingSupportState_[supportKey];
         playAudio('correct');
     }
     setTimeout(() => nextQuestion(), 450);
@@ -2142,6 +2684,9 @@ function topic4ReadingHint_() {
     const target = document.getElementById('topic4-reading-target');
     const hint = document.getElementById('topic4-reading-hint');
     if (!target || !hint) return;
+    const supportKey = adaptivePracticeSupportKey_(q, 4);
+    const st = topic4ReadingSupportState_[supportKey] || (topic4ReadingSupportState_[supportKey] = { hint:false, audio:false });
+    st.hint = true;
     if (meta.level === 1) {
         hint.textContent = 'Con nhìn cả từ, đọc chậm một lần rồi đọc liền lại nhé.';
     } else if (meta.level === 2) {
@@ -2238,7 +2783,6 @@ function renderTopic4ReadingQuestion(q) {
             : escapeHtml(meta.text);
     box.innerHTML = `
       <div class="topic4-reading-stage relative w-full max-w-5xl overflow-hidden rounded-[30px] border-2 border-pink-200 bg-gradient-to-b from-sky-50/80 via-white to-amber-50/55 px-4 md:px-8 py-5 md:py-7 text-center shadow-sm">
-        ${renderNatureAmbientLayer_(true)}
         <div class="relative z-10">
           <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 border border-purple-200 text-purple-700 font-black text-xs md:text-sm shadow-sm">
             <span>${meta.icon}</span><span>${escapeHtml(meta.label)}</span>
@@ -2296,7 +2840,7 @@ function loadQuestion() {
         quizBottomNav.style.marginTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : (isTopic4Reading ? '0.3rem' : ''));
     }
 
-    // Topic 8 ở chế độ luyện tập dùng trò chơi xếp thẻ từ riêng.
+    // Sắp câu (ID nội bộ 9) ở chế độ luyện tập dùng trò chơi xếp thẻ từ riêng.
     // Tiến trình tuần / đề thi vẫn dùng renderer chuẩn để giữ nguyên cơ chế chấm điểm.
     if (!isEvaluationMode && Number(activeTopicId) === 9 && Array.isArray(q.tokens) && q.tokens.length) {
         const stepEl = document.getElementById('practice-step-text');
@@ -2634,11 +3178,21 @@ function checkAnswer(selectedOpt) {
         playAudio('correct');
         confetti({ particleCount: 30, spread: 55, origin: { y: 0.7 } });
         setTimeout(() => speakVietnamese(`${q.answer}`), 180);
+        queueLearningEvent_(q, 'correct', {
+            topicId: activeTopicId,
+            supportUsed: (wrongAttemptsByQ[currentQIndex]?.length || 0) > 0 ? 1 : 0
+        });
         scheduleTopic23AutoAdvance_();
     } else {
         if (!wrongAttemptsByQ[currentQIndex]) wrongAttemptsByQ[currentQIndex] = [];
         if (!wrongAttemptsByQ[currentQIndex].includes(selectedOpt)) {
             wrongAttemptsByQ[currentQIndex].push(selectedOpt);
+            if (wrongAttemptsByQ[currentQIndex].length === 1) {
+                queueLearningEvent_(q, 'wrong', {
+                    topicId: activeTopicId,
+                    errorType: adaptiveErrorType_(q, selectedOpt, activeTopicId)
+                });
+            }
             starRedCount++;
             document.getElementById('star-red-count').textContent = starRedCount;
         }
@@ -2688,7 +3242,7 @@ async function nextQuestion() {
             await showAppDialog(`Bé đã hoàn thành trọn vẹn 1 vòng luyện tập (${activeQuestionsList.length} câu)!\nCô sẽ xáo trộn câu hỏi để bé bước vào vòng tiếp theo nhé!`, { type:'success', title:'Hoàn thành một vòng!', okText:'Luyện tiếp' });
 
             const basePool = practiceCycleRawPool.length ? practiceCycleRawPool : activeQuestionsList;
-            activeQuestionsList = shuffleArray([...basePool]);
+            activeQuestionsList = buildAdaptiveQuestionOrder_(basePool, activeTopicId);
             currentQIndex = 0;
             userAnswers = {};
             wrongAttemptsByQ = {};
@@ -2788,6 +3342,7 @@ function showResultScreen() {
     if (currentUser && !currentUser.isGuest) {
         if (activeExamContext) saveExamResultToSheet();
         else if (activeRoadmapContext) saveWeeklyProgressToSheet(percent, starCountFromPercent(percent), displayScore);
+        if (activeExamContext || activeRoadmapContext) recordEvaluationToAdaptive_();
     }
 }
 
@@ -3857,7 +4412,7 @@ function refreshMainTabLocks_() { updatePremiumUI(); }
 function openReviewTab() {
     if (!requirePremiumAccess('Ôn tập')) return;
     setMainTabActive_('review');
-    openTopic(12, '12. Ôn tập học kỳ', '🧠');
+    openTopic(13, '13. Ôn tập học kỳ', '🧠');
 }
 function openMainTab(tabName) {
     stopSpeaking();
@@ -3881,7 +4436,7 @@ function goHome() {
     activeRoadmapContext = null;
     activeTopicId = null;
     pendingTopicQuiz = null;
-    updateNavTabs(null, null, null);
+    updateNavTabs('Khám phá', '🧭', null);
     setMainTabActive_('discover');
     switchAppView('view-dashboard-grid');
 }
@@ -3942,8 +4497,12 @@ function switchAppView(viewId) {
     ].forEach(id => {
         const el = document.getElementById(id);
         if (!el) return;
-        if (id === viewId) el.classList.remove('hidden');
-        else el.classList.add('hidden');
+        if (id === viewId) {
+            ensureNatureAmbientForView_(el, true);
+            el.classList.remove('hidden');
+        } else {
+            el.classList.add('hidden');
+        }
     });
 }
 
@@ -4032,11 +4591,6 @@ async function openBaiHocByNumberTV1_(bai, pageNo = 1) {
 }
 
 function renderBaiHocLessonTV1_(lesson, pageNo) {
-    const lessonView = document.getElementById('view-bai-hoc-lesson');
-    if (lessonView && !lessonView.querySelector('.nature-ambient-layer.lesson-ambient')) {
-        lessonView.insertAdjacentHTML('afterbegin', renderNatureAmbientLayer_(false).replace('nature-ambient-layer','nature-ambient-layer lesson-ambient'));
-    }
-
     const meta = document.getElementById('bai-hoc-lesson-meta');
     const title = document.getElementById('bai-hoc-lesson-title');
     const sections = document.getElementById('bai-hoc-sections');
@@ -4351,6 +4905,10 @@ function handleNextExamFromReport() {
 function returnToTopicLecture() {
     stopSpeaking();
     clearInterval(quizTimerInterval);
+    if (currentMainTab === 'discover') {
+        goHome();
+        return;
+    }
     if (inBaiHocFlow) {
         openBaiHocHub(activeBaiHocContext?.semester || 1);
     } else if (activeExamContext) {
@@ -4362,7 +4920,7 @@ function returnToTopicLecture() {
     } else if (activeTopicId === 1) {
         openLettersSubmenu();
     } else if (pendingTopicQuiz) {
-        updateNavTabs(pendingTopicQuiz.topicName, TOPICS_CONFIG.find(t => t.id === pendingTopicQuiz.topicNum)?.icon, null);
+        updateDiscoverBreadcrumb_(pendingTopicQuiz.topicName, TOPICS_CONFIG.find(t => t.id === pendingTopicQuiz.topicNum)?.icon || '🌸', null);
         switchAppView('view-lecture');
     }
 }

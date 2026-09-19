@@ -5,14 +5,15 @@ const TOPICS_CONFIG = [
     { id: 1, title: "1. Bảng chữ cái", desc: "Nguyên âm, phụ âm, âm ghép", icon: "🅰️", color: "pink" },
     { id: 2, title: "2. Dấu thanh kì diệu", desc: "Ngang, sắc, huyền, hỏi, ngã, nặng", icon: "🎵", color: "purple" },
     { id: 3, title: "3. Ghép âm - vần", desc: "Vần xuôi & phức tạp", icon: "🧩", color: "blue" },
-    { id: 4, title: "4. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", icon: "✍️", color: "amber" },
-    { id: 5, title: "5. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
-    { id: 6, title: "6. Kho từ vựng của bé", desc: "Từ theo chủ điểm & ngữ cảnh", icon: "🌿", color: "emerald" },
-    { id: 7, title: "7. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
-    { id: 8, title: "8. Nhà thông thái sắp câu", desc: "Ghép câu ngắn & câu dài", icon: "🧠", color: "indigo" },
-    { id: 9, title: "9. Đọc hiểu - trả lời", desc: "Văn xuôi, thơ & suy luận", icon: "📖", color: "pink" },
-    { id: 10, title: "10. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", icon: "🎯", color: "yellow" },
-    { id: 11, title: "11. Ôn tập học kỳ", desc: "Học kỳ 1 & Học kỳ 2", icon: "📚", color: "cyan" }
+    { id: 4, title: "4. Tập đọc", desc: "Đọc trơn từ 1 từ đến câu dài", icon: "📚", color: "fuchsia" },
+    { id: 5, title: "5. Điền chữ cái còn thiếu", desc: "Luật c/k, g/gh, ng/ngh, s/x", icon: "✍️", color: "amber" },
+    { id: 6, title: "6. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
+    { id: 7, title: "7. Kho từ vựng của bé", desc: "Từ theo chủ điểm & ngữ cảnh", icon: "🌿", color: "emerald" },
+    { id: 8, title: "8. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
+    { id: 9, title: "9. Nhà thông thái sắp câu", desc: "Ghép câu ngắn & câu dài", icon: "🧠", color: "indigo" },
+    { id: 10, title: "10. Đọc hiểu - trả lời", desc: "Văn xuôi, thơ & suy luận", icon: "📖", color: "pink" },
+    { id: 11, title: "11. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", icon: "🎯", color: "yellow" },
+    { id: 12, title: "12. Ôn tập học kỳ", desc: "Học kỳ 1 & Học kỳ 2", icon: "📚", color: "cyan" }
 ];
 
 const SUBTOPIC_PALETTES = [
@@ -31,33 +32,34 @@ const roadmapConfig = {
     4: { name: "Tuần 4: Thanh điệu trong tiếng", topicIds: [2], desc: "Phân biệt thanh điệu trong các tiếng quen thuộc và tiếng khó hơn.", icon: "🎶" },
     5: { name: "Tuần 5: Từ thanh điệu đến ghép âm", topicIds: [2,3], desc: "Củng cố thanh điệu và bắt đầu ghép âm đầu với nguyên âm.", icon: "🧩" },
     6: { name: "Tuần 6: Ghép tiếng & thêm thanh", topicIds: [3], desc: "Ghép tiếng cơ bản rồi thêm thanh để tạo tiếng có nghĩa.", icon: "🔡" },
-    7: { name: "Tuần 7: Ghép vần & luật c/k, g/gh", topicIds: [3,4], desc: "Ghép âm đầu với vần; làm quen c/k/q và g/gh.", icon: "✍️" },
-    8: { name: "Tuần 8: Tạo tiếng & ng/ngh, ch/tr", topicIds: [3,4], desc: "Tạo tiếng hoàn chỉnh; phân biệt ng/ngh và ch/tr.", icon: "📝" },
-    9: { name: "Tuần 9: Phân biệt s/x, l/n, ch/tr", topicIds: [4], desc: "Luyện các cặp âm đầu dễ lẫn trong chính tả.", icon: "S/X" },
-    10: { name: "Tuần 10: d/gi/r & chính tả tổng hợp", topicIds: [4], desc: "Phân biệt d/gi/r và ôn tổng hợp các luật chính tả đã học.", icon: "🩺" },
-    11: { name: "Tuần 11: Vốn từ & từ chỉ sự vật", topicIds: [6,7], desc: "Mở rộng từ về gia đình, trường học và nhận diện từ chỉ sự vật.", icon: "🌿" },
-    12: { name: "Tuần 12: Ôn tập Học kỳ 1", topicIds: [11], desc: "Ôn tổng hợp kiến thức Học kỳ 1 trước khi vào giai đoạn tiếp theo.", icon: "📘" },
+    7: { name: "Tuần 7: Ghép vần & luật c/k, g/gh", topicIds: [3,5], desc: "Ghép âm đầu với vần; làm quen c/k/q và g/gh.", icon: "✍️" },
+    8: { name: "Tuần 8: Tạo tiếng & ng/ngh, ch/tr", topicIds: [3,5], desc: "Tạo tiếng hoàn chỉnh; phân biệt ng/ngh và ch/tr.", icon: "📝" },
+    9: { name: "Tuần 9: Phân biệt s/x, l/n, ch/tr", topicIds: [5], desc: "Luyện các cặp âm đầu dễ lẫn trong chính tả.", icon: "S/X" },
+    10: { name: "Tuần 10: d/gi/r & chính tả tổng hợp", topicIds: [5], desc: "Phân biệt d/gi/r và ôn tổng hợp các luật chính tả đã học.", icon: "🩺" },
+    11: { name: "Tuần 11: Vốn từ & từ chỉ sự vật", topicIds: [7,8], desc: "Mở rộng từ về gia đình, trường học và nhận diện từ chỉ sự vật.", icon: "🌿" },
+    12: { name: "Tuần 12: Ôn tập Học kỳ 1", topicIds: [12], desc: "Ôn tổng hợp kiến thức Học kỳ 1 trước khi vào giai đoạn tiếp theo.", icon: "📘" },
     13: { name: "Tuần 13: Vần phức & tiếng hoàn chỉnh", topicIds: [3], desc: "Củng cố vần khó, ghép âm đầu + vần + thanh ở mức cao hơn.", icon: "🔠" },
-    14: { name: "Tuần 14: Chính tả nâng cao & chữa lỗi", topicIds: [3,4,5], desc: "Ôn luật c/k, g/gh, ng/ngh, ch/tr và bắt đầu chữa từ sai.", icon: "🩹" },
-    15: { name: "Tuần 15: Viết hoa & bác sĩ chính tả", topicIds: [5], desc: "Luyện viết hoa tên riêng và phát hiện lỗi trong câu ngắn.", icon: "🩺" },
-    16: { name: "Tuần 16: Từ ngữ thiên nhiên & đặc điểm", topicIds: [6], desc: "Mở rộng vốn từ về con vật, cây cối, màu sắc, hình dáng và đặc điểm.", icon: "🌳" },
-    17: { name: "Tuần 17: Hoạt động, cảm xúc & quan hệ từ", topicIds: [6], desc: "Mở rộng từ chỉ hoạt động, cảm xúc, đồng nghĩa, trái nghĩa và ngữ cảnh.", icon: "😊" },
-    18: { name: "Tuần 18: Từ chỉ hoạt động & đặc điểm", topicIds: [7], desc: "Nhận biết và phân biệt hai nhóm từ quan trọng trong câu.", icon: "🏃" },
-    19: { name: "Tuần 19: Phân loại từ & dùng từ trong câu", topicIds: [7], desc: "Phân loại sự vật - hoạt động - đặc điểm và chọn từ đúng ngữ cảnh.", icon: "🧸" },
-    20: { name: "Tuần 20: Sắp câu 3-4 từ", topicIds: [8], desc: "Xếp các từ thành câu ngắn đúng trật tự và đúng nghĩa.", icon: "🧠" },
-    21: { name: "Tuần 21: Câu dài, câu hỏi & câu cảm", topicIds: [8], desc: "Xếp câu 5 từ trở lên, luyện câu hỏi, câu cảm và thử thách tổng hợp.", icon: "💬" },
-    22: { name: "Tuần 22: Đọc hiểu văn xuôi & thơ", topicIds: [9], desc: "Đọc văn xuôi, thơ ngắn và trả lời câu hỏi bám chi tiết văn bản.", icon: "📖" },
-    23: { name: "Tuần 23: Đọc hiểu thông tin & suy luận", topicIds: [9], desc: "Đọc văn bản thông tin, suy luận ý nghĩa và rút ra bài học phù hợp.", icon: "🔎" },
-    24: { name: "Tuần 24: Ôn tập Học kỳ 2", topicIds: [11], desc: "Ôn tổng hợp kiến thức Học kỳ 2, sẵn sàng bước vào Đấu trường đề thi.", icon: "📗" }
+    14: { name: "Tuần 14: Chính tả nâng cao & chữa lỗi", topicIds: [3,5,6], desc: "Ôn luật c/k, g/gh, ng/ngh, ch/tr và bắt đầu chữa từ sai.", icon: "🩹" },
+    15: { name: "Tuần 15: Viết hoa & bác sĩ chính tả", topicIds: [6], desc: "Luyện viết hoa tên riêng và phát hiện lỗi trong câu ngắn.", icon: "🩺" },
+    16: { name: "Tuần 16: Từ ngữ thiên nhiên & đặc điểm", topicIds: [7], desc: "Mở rộng vốn từ về con vật, cây cối, màu sắc, hình dáng và đặc điểm.", icon: "🌳" },
+    17: { name: "Tuần 17: Hoạt động, cảm xúc & quan hệ từ", topicIds: [7], desc: "Mở rộng từ chỉ hoạt động, cảm xúc, đồng nghĩa, trái nghĩa và ngữ cảnh.", icon: "😊" },
+    18: { name: "Tuần 18: Từ chỉ hoạt động & đặc điểm", topicIds: [8], desc: "Nhận biết và phân biệt hai nhóm từ quan trọng trong câu.", icon: "🏃" },
+    19: { name: "Tuần 19: Phân loại từ & dùng từ trong câu", topicIds: [8], desc: "Phân loại sự vật - hoạt động - đặc điểm và chọn từ đúng ngữ cảnh.", icon: "🧸" },
+    20: { name: "Tuần 20: Sắp câu 3-4 từ", topicIds: [9], desc: "Xếp các từ thành câu ngắn đúng trật tự và đúng nghĩa.", icon: "🧠" },
+    21: { name: "Tuần 21: Câu dài, câu hỏi & câu cảm", topicIds: [9], desc: "Xếp câu 5 từ trở lên, luyện câu hỏi, câu cảm và thử thách tổng hợp.", icon: "💬" },
+    22: { name: "Tuần 22: Đọc hiểu văn xuôi & thơ", topicIds: [10], desc: "Đọc văn xuôi, thơ ngắn và trả lời câu hỏi bám chi tiết văn bản.", icon: "📖" },
+    23: { name: "Tuần 23: Đọc hiểu thông tin & suy luận", topicIds: [10], desc: "Đọc văn bản thông tin, suy luận ý nghĩa và rút ra bài học phù hợp.", icon: "🔎" },
+    24: { name: "Tuần 24: Ôn tập Học kỳ 2", topicIds: [12], desc: "Ôn tổng hợp kiến thức Học kỳ 2, sẵn sàng bước vào Đấu trường đề thi.", icon: "📗" }
 };
 
 const TOPIC_TO_SKILL = {
     1: 'C1', 2: 'C1', 3: 'C1',
-    4: 'C2', 5: 'C2',
-    6: 'C3',
-    7: 'C4', 8: 'C4',
-    9: 'C5', 11: 'C5',
-    10: 'C6'
+    4: 'C5',
+    5: 'C2', 6: 'C2',
+    7: 'C3',
+    8: 'C4', 9: 'C4',
+    10: 'C5', 12: 'C5',
+    11: 'C6'
 };
 
 function skillsForWeek(weekNum) {
@@ -348,7 +350,7 @@ function showAppToast(message, type = 'info', duration = 1900) {
 // VaiTro: admin | student
 // LoaiTaiKhoan: regular | trial | vip
 // ==========================================
-const PREMIUM_TOPIC_IDS = new Set([11]);
+const PREMIUM_TOPIC_IDS = new Set([12]);
 let accountManagerAccounts = [];
 let accountManagerSort = { key: 'maHS', dir: 1 };
 let adminNewRegistrationCount = 0;
@@ -789,7 +791,7 @@ async function renderDashboardGrid() {
     try { topicsData = await fetchAllTopicsData(); } catch (e) {}
 
     let html = '';
-    TOPICS_CONFIG.filter(t => Number(t.id) <= 10).forEach(t => {
+    TOPICS_CONFIG.filter(t => Number(t.id) <= 11).forEach(t => {
         const topicObj = topicsData.find(item => Number(item.topic_id) === Number(t.id));
         const totalCount = topicObj && topicObj.questions ? topicObj.questions.length : (t.id === 1 ? 29 : 0);
         const countLabel = totalCount > 0 ? `${totalCount} câu` : t.desc;
@@ -1270,7 +1272,7 @@ function openTopic(topicNum, topicName, icon) {
         return;
     }
 
-    if (topicNum === 11) {
+    if (topicNum === 12) {
         openSemesterReviewMenu();
         return;
     }
@@ -1291,17 +1293,17 @@ function openTopic(topicNum, topicName, icon) {
 function openSemesterReviewMenu() {
     stopSpeaking();
     currentTopicKey = 'semester_review_menu';
-    currentTopicName = '11. Ôn tập học kỳ';
-    updateNavTabs('11. Ôn tập học kỳ', '📚', null);
+    currentTopicName = '12. Ôn tập học kỳ';
+    updateNavTabs('12. Ôn tập học kỳ', '📚', null);
 
     showLoadingOverlay('Đang tải kho ôn tập học kỳ...');
     fetchAllTopicsData().then(topics => {
         hideLoadingOverlay();
-        const topicObj = topics.find(t => Number(t.topic_id) === 11);
+        const topicObj = topics.find(t => Number(t.topic_id) === 12);
         if (!topicObj || !Array.isArray(topicObj.questions) || !topicObj.questions.length) {
             throw new Error('Chưa có dữ liệu ôn tập học kỳ');
         }
-        showLectureAndSubtopics(11, '11. Ôn tập học kỳ', topicObj);
+        showLectureAndSubtopics(12, '12. Ôn tập học kỳ', topicObj);
     }).catch(err => {
         hideLoadingOverlay();
         showAppDialog(`Không thể tải ôn tập học kỳ: ${err.message}`, { type:'error' });
@@ -1478,7 +1480,7 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     });
     // Topic 10: thêm một mục ảo "Trộn ngẫu nhiên" dùng toàn bộ kho câu hỏi,
     // không nhân đôi dữ liệu trong JSON.
-    if (Number(topicNum) === 10 && topicObj.questions.length) {
+    if (Number(topicNum) === 11 && topicObj.questions.length) {
         const randomKey = '__TOPIC10_RANDOM_ALL__';
         groups.push(randomKey);
         groupMap[randomKey] = topicObj.questions;
@@ -1490,14 +1492,14 @@ function showLectureAndSubtopics(topicNum, topicName, topicObj) {
     let subHtml = '';
     groups.forEach((subName, idx) => {
         const style = SUBTOPIC_PALETTES[idx % SUBTOPIC_PALETTES.length];
-        const isTopic10Random = Number(topicNum) === 10 && subName === '__TOPIC10_RANDOM_ALL__';
+        const isTopic10Random = Number(topicNum) === 11 && subName === '__TOPIC10_RANDOM_ALL__';
         const displayTitle = isTopic10Random ? '🎲 Trộn ngẫu nhiên' : beautifySubtopicName(subName);
         const count = groupMap[subName].length;
 
         subHtml += `
             <button onclick="selectSubtopic(${idx})" class="p-3 ${style.card} border-2 rounded-xl font-bold text-left transition-all flex items-center justify-between shadow-sm pastel-btn">
                 <span class="text-sm md:text-base leading-snug"><strong class="${style.num} mr-1.5">${idx + 1}.</strong> ${escapeHtml(displayTitle)}</span>
-                <span class="text-xs font-extrabold ${style.badge} px-2.5 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${count} câu</span>
+                <span class="text-xs font-extrabold ${style.badge} px-2.5 py-0.5 rounded-full border shrink-0 ml-1.5 shadow-inner">${count} ${Number(topicNum) === 4 ? 'lượt' : 'câu'}</span>
             </button>`;
     });
     setSubtopicGridColumns(groups.length);
@@ -1517,7 +1519,7 @@ function selectSubtopic(idx) {
     const { topicNum, topicName, questions, groups, groupMap } = pendingTopicQuiz;
     const subLabel = idx !== null ? groups[idx] : null;
     const pool = idx !== null ? groupMap[subLabel] : questions;
-    const isTopic10Random = Number(topicNum) === 10 && subLabel === '__TOPIC10_RANDOM_ALL__';
+    const isTopic10Random = Number(topicNum) === 11 && subLabel === '__TOPIC10_RANDOM_ALL__';
     const displaySubLabel = isTopic10Random ? '🎲 Trộn ngẫu nhiên' : (subLabel ? beautifySubtopicName(subLabel) : null);
     const finalTitle = displaySubLabel ? `${topicName} - ${displaySubLabel}` : topicName;
 
@@ -2075,6 +2077,193 @@ function topic8EvaluateOrRender(q, state) {
     }
 }
 
+
+// ==========================================
+// CHỦ ĐỀ 4: TẬP ĐỌC - TỪ 1 TỪ ĐẾN CÂU DÀI
+// Mục tiêu: luyện đọc trơn. Không chấm đúng/sai; bé tự đọc trước,
+// chỉ nghe cô đọc khi cần, sau đó đọc lại và chuyển lượt.
+// ==========================================
+function getTopic4ReadingMeta(q) {
+    const tags = Array.isArray(q?.tags) ? q.tags : [];
+    let level = 0;
+    if (tags.includes('tap_doc_cap1')) level = 1;
+    else if (tags.includes('tap_doc_cap2')) level = 2;
+    else if (tags.includes('tap_doc_cap3')) level = 3;
+    else if (tags.includes('tap_doc_cap4')) level = 4;
+    if (!level) return null;
+    const cfg = {
+        1: { label:'Cấp 1 · Mầm chữ bật tiếng', note:'Một từ · nhìn nhanh, đọc trơn', icon:'🌱' },
+        2: { label:'Cấp 2 · Đôi bạn thành lời', note:'Hai từ · đọc liền thành một cụm nghĩa', icon:'🫶' },
+        3: { label:'Cấp 3 · Bốn từ liền mạch', note:'Bốn từ · giữ nhịp đều, không đọc rời', icon:'🚂' },
+        4: { label:'Cấp 4 · Siêu sao đọc câu', note:'Câu dài · đọc rõ, biết ngắt hơi tự nhiên', icon:'⭐' }
+    }[level];
+    return { level, ...cfg, text:String(q?.question_text || '').trim(), speech:String(q?.audio_text || q?.question_text || '').trim() };
+}
+
+function renderNatureAmbientLayer_(dense = false) {
+    return `<div class="nature-ambient-layer" aria-hidden="true">
+        <span class="nature-cloud nature-cloud-1">☁️</span>
+        <span class="nature-cloud nature-cloud-2">☁️</span>
+        <span class="nature-bird nature-bird-1">🐦</span>
+        <span class="nature-bird nature-bird-2">🐦</span>
+        <span class="nature-leaf nature-leaf-1">🍂</span>
+        <span class="nature-leaf nature-leaf-2">🍁</span>
+        <span class="nature-leaf nature-leaf-3">🍂</span>
+        ${dense ? '<span class="nature-leaf nature-leaf-4">🍁</span><span class="nature-leaf nature-leaf-5">🍂</span>' : ''}
+    </div>`;
+}
+
+function speakTopic4Reading_() {
+    const q = activeQuestionsList[currentQIndex];
+    const meta = getTopic4ReadingMeta(q);
+    if (!meta) return;
+    speakVietnamese(meta.speech, meta.level >= 4 ? 0.88 : 0.92);
+    const status = document.getElementById('topic4-reading-status');
+    if (status) status.textContent = 'Cô đọc mẫu xong, con tự đọc lại một lần nữa nhé!';
+}
+
+function topic4ReadingDone_() {
+    const q = activeQuestionsList[currentQIndex];
+    const status = document.getElementById('topic4-reading-status');
+    if (status) status.textContent = 'Giỏi lắm! Mình sang lượt tiếp theo nhé.';
+    if (userAnswers[currentQIndex] === undefined) {
+        // Tập đọc là luyện kỹ năng, không có chấm đúng/sai.
+        // Chỉ đánh dấu đã hoàn thành lượt để cho phép chuyển tiếp.
+        userAnswers[currentQIndex] = q?.answer || q?.question_text || 'Đã đọc';
+        playAudio('correct');
+    }
+    setTimeout(() => nextQuestion(), 450);
+}
+
+function topic4ReadingHint_() {
+    const q = activeQuestionsList[currentQIndex];
+    const meta = getTopic4ReadingMeta(q);
+    if (!meta) return;
+    const target = document.getElementById('topic4-reading-target');
+    const hint = document.getElementById('topic4-reading-hint');
+    if (!target || !hint) return;
+    if (meta.level === 1) {
+        hint.textContent = 'Con nhìn cả từ, đọc chậm một lần rồi đọc liền lại nhé.';
+    } else if (meta.level === 2) {
+        hint.textContent = meta.text.split(/\s+/).join('  •  ');
+    } else if (meta.level === 3) {
+        const a = meta.text.split(/\s+/);
+        hint.textContent = `${a.slice(0,2).join(' ')}  │  ${a.slice(2).join(' ')}`;
+    } else {
+        const t = meta.text;
+        const comma = t.indexOf(',');
+        hint.textContent = comma > 0 ? `${t.slice(0,comma+1)}  │  ${t.slice(comma+1).trim()}` : t;
+    }
+    hint.classList.remove('hidden');
+}
+
+function getTopic4Level1Parts_(text) {
+    const raw = String(text || '').trim();
+    if (!raw) return { onset:'', rhyme:'', tone:'', full:'' };
+
+    // Bỏ riêng DẤU THANH nhưng giữ dấu cấu tạo nguyên âm (ă, â, ê, ô, ơ, ư).
+    const toneMap = {
+        '\u0301': { key:'sac', symbol:'◌́', name:'sắc' },
+        '\u0300': { key:'huyen', symbol:'◌̀', name:'huyền' },
+        '\u0309': { key:'hoi', symbol:'◌̉', name:'hỏi' },
+        '\u0303': { key:'nga', symbol:'◌̃', name:'ngã' },
+        '\u0323': { key:'nang', symbol:'●', name:'nặng' }
+    };
+    let tone = null;
+    let strippedNfd = '';
+    for (const ch of raw.normalize('NFD')) {
+        if (toneMap[ch]) {
+            if (!tone) tone = toneMap[ch];
+            continue;
+        }
+        strippedNfd += ch;
+    }
+    const base = strippedNfd.normalize('NFC');
+
+    // Ghép âm đầu theo cụm chữ dài trước, đúng cách bé lớp 1 nhìn mặt chữ.
+    const initials = ['ngh','ch','gh','gi','kh','ng','nh','ph','qu','th','tr','b','c','d','đ','g','h','k','l','m','n','p','q','r','s','t','v','x'];
+    const lower = base.toLocaleLowerCase('vi-VN');
+    const onset = initials.find(x => lower.startsWith(x)) || '';
+    const rhyme = onset ? base.slice(onset.length) : base;
+    return { onset, rhyme, tone, full:raw };
+}
+
+function renderTopic4Level1Target_(text) {
+    const p = getTopic4Level1Parts_(text);
+    // Cấp 1 Tập đọc: vẫn đọc MỘT TỪ hoàn chỉnh, nhưng dùng 3 ô màu để bé nhìn nhanh
+    // cấu tạo của tiếng: âm đầu | vần | dấu thanh. Không dùng dấu + để tránh quay lại kiểu ghép vần.
+    const onsetText = p.onset || '—';
+    const toneText = p.tone ? p.tone.name : 'ngang';
+    return `<div class="flex flex-wrap items-center justify-center gap-3 md:gap-4 leading-none select-none">
+        <div class="min-w-[104px] md:min-w-[126px] rounded-2xl border-2 border-pink-200 bg-pink-50/95 px-4 py-3 md:py-4 shadow-sm">
+            <div class="text-[10px] md:text-xs font-black uppercase tracking-wide text-pink-400 mb-2">Âm đầu</div>
+            <div class="text-[2.15rem] md:text-[2.75rem] font-black text-pink-500">${escapeHtml(onsetText)}</div>
+        </div>
+        <div class="min-w-[104px] md:min-w-[126px] rounded-2xl border-2 border-violet-200 bg-violet-50/95 px-4 py-3 md:py-4 shadow-sm">
+            <div class="text-[10px] md:text-xs font-black uppercase tracking-wide text-violet-400 mb-2">Vần</div>
+            <div class="text-[2.15rem] md:text-[2.75rem] font-black text-violet-600">${escapeHtml(p.rhyme)}</div>
+        </div>
+        <div class="min-w-[104px] md:min-w-[126px] rounded-2xl border-2 border-rose-200 bg-rose-50/95 px-4 py-3 md:py-4 shadow-sm">
+            <div class="text-[10px] md:text-xs font-black uppercase tracking-wide text-rose-400 mb-2">Dấu</div>
+            <div class="text-xl md:text-2xl font-black text-rose-600 capitalize">${escapeHtml(toneText)}</div>
+        </div>
+        <span class="mx-1 md:mx-2 text-[2rem] md:text-[2.6rem] text-emerald-500 font-black">→</span>
+        <span class="text-[2.8rem] md:text-[3.65rem] font-black text-blue-600 whitespace-nowrap">${escapeHtml(p.full)}</span>
+    </div>`;
+}
+
+
+function renderTopic4Level2Target_(text) {
+    const words = String(text || '').trim().split(/\s+/).filter(Boolean);
+    if (!words.length) return '';
+    return `<div class="flex flex-wrap items-center justify-center gap-x-4 md:gap-x-6 gap-y-2 leading-none select-none">${words.map((word, idx) => {
+        const color = idx % 2 === 0 ? 'text-violet-600' : 'text-pink-500';
+        return `<span class="${color}">${escapeHtml(word)}</span>`;
+    }).join('')}</div>`;
+}
+
+function renderTopic4ReadingQuestion(q) {
+    const meta = getTopic4ReadingMeta(q);
+    if (!meta) return false;
+    const box = document.getElementById('question-box');
+    if (!box) return false;
+    const sizeCls = meta.level === 1 ? 'text-[2.7rem] md:text-[3.65rem]'
+        : meta.level === 2 ? 'text-[2.6rem] md:text-[3.5rem]'
+        : meta.level === 3 ? 'text-[2.05rem] md:text-[2.75rem]'
+        : 'text-[1.65rem] md:text-[2.15rem]';
+    const targetHtml = meta.level === 1
+        ? renderTopic4Level1Target_(meta.text)
+        : meta.level === 2
+            ? renderTopic4Level2Target_(meta.text)
+            : escapeHtml(meta.text);
+    box.innerHTML = `
+      <div class="topic4-reading-stage relative w-full max-w-5xl overflow-hidden rounded-[30px] border-2 border-pink-200 bg-gradient-to-b from-sky-50/80 via-white to-amber-50/55 px-4 md:px-8 py-5 md:py-7 text-center shadow-sm">
+        ${renderNatureAmbientLayer_(true)}
+        <div class="relative z-10">
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/90 border border-purple-200 text-purple-700 font-black text-xs md:text-sm shadow-sm">
+            <span>${meta.icon}</span><span>${escapeHtml(meta.label)}</span>
+          </div>
+          <p class="mt-2 text-xs md:text-sm font-bold text-slate-500">${escapeHtml(meta.note)}</p>
+          <div class="mt-5 md:mt-6 rounded-[26px] bg-white/90 border-2 border-pink-100 px-4 md:px-8 py-7 md:py-9 shadow-sm min-h-[150px] flex items-center justify-center">
+            <div id="topic4-reading-target" class="${sizeCls} leading-[1.35] font-black text-slate-800 tracking-wide select-none">${targetHtml}</div>
+          </div>
+          <div id="topic4-reading-hint" class="hidden mt-3 text-base md:text-xl font-black text-indigo-600 bg-indigo-50/85 border border-indigo-100 rounded-2xl px-4 py-2.5"></div>
+          <p id="topic4-reading-status" class="mt-3 text-xs md:text-sm font-extrabold text-pink-600">Con tự đọc trước nhé. Chưa chắc thì mới nghe cô đọc mẫu.</p>
+          <div class="mt-4 flex flex-wrap items-center justify-center gap-2.5 md:gap-3">
+            <button onclick="topic4ReadingHint_()" class="px-4 py-2.5 rounded-2xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-amber-700 font-black text-xs md:text-sm shadow-sm">💡 Gợi ý nhịp đọc</button>
+            <button onclick="speakTopic4Reading_()" class="px-4 py-2.5 rounded-2xl bg-purple-50 hover:bg-purple-100 border border-purple-200 text-purple-700 font-black text-xs md:text-sm shadow-sm">🔊 Cô đọc mẫu</button>
+            <button onclick="topic4ReadingDone_()" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white font-black text-xs md:text-sm shadow-md">✅ Con đọc xong</button>
+          </div>
+        </div>
+      </div>`;
+    updateNavButtons();
+    const prevLabel = document.querySelector('#btn-prev-q-prac span');
+    const nextLabel = document.getElementById('btn-next-text-prac');
+    if (prevLabel) prevLabel.textContent = 'Lượt trước';
+    if (nextLabel && currentQIndex < activeQuestionsList.length - 1) nextLabel.textContent = 'Lượt tiếp theo';
+    return true;
+}
+
 function loadQuestion() {
     stopSpeaking();
     const q = activeQuestionsList[currentQIndex];
@@ -2086,13 +2275,14 @@ function loadQuestion() {
     // Chỉ áp dụng ở chế độ Khám phá/luyện tập, không ảnh hưởng Bài tập hoặc Đề thi.
     const isTopic2Compact = !isEvaluationMode && Number(activeTopicId) === 2;
     const isTopic3Compact = !isEvaluationMode && Number(activeTopicId) === 3;
-    const isCompactPractice = isTopic2Compact || isTopic3Compact;
+    const isTopic4Reading = !isEvaluationMode && Number(activeTopicId) === 4;
+    const isCompactPractice = isTopic2Compact || isTopic3Compact || isTopic4Reading;
     const questionBox = document.getElementById('question-box');
     const quizCard = questionBox ? questionBox.closest('.pastel-card') : null;
     const quizBottomNav = document.getElementById('quiz-bottom-nav');
     if (questionBox) {
         questionBox.style.justifyContent = isCompactPractice ? 'flex-start' : 'center';
-        questionBox.style.paddingTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : '');
+        questionBox.style.paddingTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : (isTopic4Reading ? '0.25rem' : ''));
         questionBox.style.paddingBottom = isCompactPractice ? '0.2rem' : '';
         questionBox.style.flex = isCompactPractice ? '0 0 auto' : '';
     }
@@ -2103,15 +2293,24 @@ function loadQuestion() {
         quizCard.style.justifyContent = isCompactPractice ? 'flex-start' : '';
     }
     if (quizBottomNav) {
-        quizBottomNav.style.marginTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : '');
+        quizBottomNav.style.marginTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : (isTopic4Reading ? '0.3rem' : ''));
     }
 
     // Topic 8 ở chế độ luyện tập dùng trò chơi xếp thẻ từ riêng.
     // Tiến trình tuần / đề thi vẫn dùng renderer chuẩn để giữ nguyên cơ chế chấm điểm.
-    if (!isEvaluationMode && Number(activeTopicId) === 8 && Array.isArray(q.tokens) && q.tokens.length) {
+    if (!isEvaluationMode && Number(activeTopicId) === 9 && Array.isArray(q.tokens) && q.tokens.length) {
         const stepEl = document.getElementById('practice-step-text');
         if (stepEl) stepEl.textContent = `Câu ${currentQIndex + 1} / ${activeQuestionsList.length}`;
         renderTopic8SentenceBuilder(q);
+        return;
+    }
+
+    // Topic 4 - Tập đọc dùng renderer riêng: tự đọc -> gợi ý/nghe mẫu -> đọc lại.
+    // Đây là luyện đọc, không phải bài trắc nghiệm nên không chấm đúng/sai.
+    if (!isEvaluationMode && Number(activeTopicId) === 4 && getTopic4ReadingMeta(q)) {
+        const stepEl = document.getElementById('practice-step-text');
+        if (stepEl) stepEl.textContent = `Lượt ${currentQIndex + 1} / ${activeQuestionsList.length}`;
+        renderTopic4ReadingQuestion(q);
         return;
     }
 
@@ -3658,7 +3857,7 @@ function refreshMainTabLocks_() { updatePremiumUI(); }
 function openReviewTab() {
     if (!requirePremiumAccess('Ôn tập')) return;
     setMainTabActive_('review');
-    openTopic(11, '11. Ôn tập học kỳ', '🧠');
+    openTopic(12, '12. Ôn tập học kỳ', '🧠');
 }
 function openMainTab(tabName) {
     stopSpeaking();
@@ -3833,6 +4032,11 @@ async function openBaiHocByNumberTV1_(bai, pageNo = 1) {
 }
 
 function renderBaiHocLessonTV1_(lesson, pageNo) {
+    const lessonView = document.getElementById('view-bai-hoc-lesson');
+    if (lessonView && !lessonView.querySelector('.nature-ambient-layer.lesson-ambient')) {
+        lessonView.insertAdjacentHTML('afterbegin', renderNatureAmbientLayer_(false).replace('nature-ambient-layer','nature-ambient-layer lesson-ambient'));
+    }
+
     const meta = document.getElementById('bai-hoc-lesson-meta');
     const title = document.getElementById('bai-hoc-lesson-title');
     const sections = document.getElementById('bai-hoc-sections');

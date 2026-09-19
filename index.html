@@ -242,7 +242,7 @@
         @media (max-width:767px){
             .app-main-header{display:flex !important;flex-direction:column !important;align-items:stretch !important;gap:.35rem !important;padding:.35rem .45rem !important;}
             #header-nav-zone{display:flex !important;width:100% !important;min-width:0;justify-content:flex-start !important;overflow:hidden !important;}
-            #btn-header-home{width:52px !important;height:52px !important;min-width:52px !important;}
+            #btn-header-home{width:72px !important;height:48px !important;min-width:72px !important;}
             #header-learning-tabs{flex:1;min-width:0;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;}
             #header-learning-tabs::-webkit-scrollbar{display:none;}
             #header-info-zone{display:flex !important;width:100% !important;justify-content:flex-end !important;gap:.35rem !important;min-width:0;}
@@ -309,6 +309,35 @@
         .app-toast-text { font-size: 13px; line-height: 1.45; font-weight: 900; }
         @keyframes appDialogPop { from { opacity:0; transform:translateY(10px) scale(.96); } to { opacity:1; transform:none; } }
 
+
+
+        /* TV1 - hiệu ứng thiên nhiên nhẹ dùng chung cho toàn bộ màn học tập */
+        .topic4-reading-stage,
+        .nature-ambient-host { position:relative; isolation:isolate; }
+        .nature-ambient-host > :not(.nature-ambient-layer) { position:relative; z-index:1; }
+        .nature-ambient-layer { position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0; border-radius:inherit; opacity:.66; }
+        #view-dashboard-grid.nature-ambient-host { overflow:hidden; border-radius:28px; }
+        #view-dashboard-grid.nature-ambient-host > .nature-ambient-layer { opacity:.48; }
+        #view-game-play.nature-ambient-host > .nature-ambient-layer { opacity:.58; }
+        .nature-cloud { position:absolute; opacity:.30; filter:drop-shadow(0 3px 3px rgba(100,116,139,.10)); animation:natureCloudDrift linear infinite; }
+        .nature-cloud-1 { top:7%; left:-12%; font-size:3.4rem; animation-duration:26s; }
+        .nature-cloud-2 { top:18%; left:-18%; font-size:2.5rem; animation-duration:34s; animation-delay:-13s; opacity:.22; }
+        .nature-bird { position:absolute; left:-8%; opacity:.55; animation:natureBirdFly linear infinite; }
+        .nature-bird-1 { top:22%; font-size:1.35rem; animation-duration:18s; }
+        .nature-bird-2 { top:34%; font-size:1rem; animation-duration:24s; animation-delay:-10s; opacity:.42; }
+        .nature-leaf { position:absolute; top:-12%; opacity:.55; animation:natureLeafFall linear infinite; }
+        .nature-leaf-1 { left:12%; font-size:1.15rem; animation-duration:11s; }
+        .nature-leaf-2 { left:38%; font-size:.95rem; animation-duration:14s; animation-delay:-5s; }
+        .nature-leaf-3 { left:72%; font-size:1.1rem; animation-duration:12s; animation-delay:-8s; }
+        .nature-leaf-4 { left:88%; font-size:.9rem; animation-duration:15s; animation-delay:-2s; }
+        .nature-leaf-5 { left:54%; font-size:1rem; animation-duration:13s; animation-delay:-9s; }
+        @keyframes natureCloudDrift { from { transform:translateX(0); } to { transform:translateX(1350px); } }
+        @keyframes natureBirdFly { 0% { transform:translateX(0) translateY(0) rotate(-3deg); } 45% { transform:translateX(620px) translateY(-18px) rotate(3deg); } 100% { transform:translateX(1320px) translateY(8px) rotate(-2deg); } }
+        @keyframes natureLeafFall { 0% { transform:translate3d(0,-20px,0) rotate(0deg); } 45% { transform:translate3d(26px,260px,0) rotate(180deg); } 100% { transform:translate3d(-18px,620px,0) rotate(420deg); } }
+        @media (prefers-reduced-motion: reduce) {
+            .nature-cloud,.nature-bird,.nature-leaf { animation:none !important; opacity:.14 !important; }
+        }
+        @media print { .nature-ambient-layer { display:none !important; } }
 </style>
 </head>
 <body class="p-1 md:p-2 w-full" style="padding-top:max(0.25rem,env(safe-area-inset-top));padding-bottom:max(0.25rem,env(safe-area-inset-bottom));padding-left:max(0.25rem,env(safe-area-inset-left));padding-right:max(0.25rem,env(safe-area-inset-right));">
@@ -391,8 +420,8 @@
             
             <header class="app-main-header w-full bg-white/95 backdrop-blur-md px-2 py-1 rounded-2xl shadow-sm border-2 border-pink-200 flex flex-col md:flex-row justify-between items-center gap-2">
                 <div id="header-nav-zone" class="flex items-center space-x-2 w-full md:w-auto justify-between md:justify-start overflow-x-auto">
-                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="w-[62px] h-[62px] flex items-center justify-center bg-white rounded-xl border border-pink-300 shadow-sm shrink-0 overflow-hidden p-0 transition-shadow duration-200 hover:border-pink-400 hover:shadow-[0_0_18px_rgba(244,114,182,0.65)]">
-                        <img src="icon-192.png" alt="Trang chủ Tiếng Việt 1" class="w-full h-full object-cover">
+                    <button id="btn-header-home" onclick="goHome()" title="Về trang chủ" class="w-[84px] h-[56px] flex items-center justify-center bg-white rounded-xl border border-pink-300 shadow-sm shrink-0 overflow-hidden p-0 transition-shadow duration-200 hover:border-pink-400 hover:shadow-[0_0_18px_rgba(244,114,182,0.65)]">
+                        <img src="Logo - Tho hong - TV1 - Chu nhat - Co vien.png" alt="Trang chủ Tiếng Việt 1" class="w-full h-full object-cover">
                     </button>
 
                     <div id="header-learning-tabs" class="flex items-center space-x-1 min-w-0">
@@ -883,7 +912,7 @@
     </footer>
 
     <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
-    <script src="assets/js/app.js?v=9.1-tv1-dialogs"></script>
+    <script src="assets/js/app.js?v=10.1-tv1-tapdoc"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

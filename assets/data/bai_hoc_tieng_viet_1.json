@@ -1,6 +1,6 @@
 {
   "schema_version": "TV1_BH_BT_V1_SGK_ALIGNED",
-  "data_version": "2026-09-19",
+  "data_version": "2026-09-19_TOPIC4_TAPDOC",
   "subject": "Tiếng Việt",
   "grade": 1,
   "curriculum": "Kết nối tri thức với cuộc sống",
@@ -13411,8 +13411,8 @@
       "title": "Luyện tập chính tả",
       "theme": "Làm quen âm, chữ và thanh",
       "topic_ids": [
-        4,
-        5
+        5,
+        6
       ],
       "sub_names": [
         "C/K/Q - Chọn âm đầu đúng",
@@ -14472,9 +14472,9 @@
       "title": "Tôi là học sinh lớp 1",
       "theme": "Tôi và các bạn",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14501,9 +14501,9 @@
       "title": "Đôi tai xấu xí",
       "theme": "Tôi và các bạn",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14530,9 +14530,9 @@
       "title": "Bạn của gió",
       "theme": "Tôi và các bạn",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -14558,9 +14558,9 @@
       "title": "Giải thưởng tình bạn",
       "theme": "Tôi và các bạn",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14587,9 +14587,9 @@
       "title": "Sinh nhật của voi con",
       "theme": "Tôi và các bạn",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14616,9 +14616,9 @@
       "title": "Nụ hôn trên bàn tay",
       "theme": "Mái ấm gia đình",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14645,9 +14645,9 @@
       "title": "Làm anh",
       "theme": "Mái ấm gia đình",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -14673,9 +14673,9 @@
       "title": "Cả nhà đi chơi núi",
       "theme": "Mái ấm gia đình",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14702,9 +14702,9 @@
       "title": "Quạt cho bà ngủ",
       "theme": "Mái ấm gia đình",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -14730,9 +14730,9 @@
       "title": "Bữa cơm gia đình",
       "theme": "Mái ấm gia đình",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14759,9 +14759,9 @@
       "title": "Ngôi nhà",
       "theme": "Mái ấm gia đình",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -14787,9 +14787,9 @@
       "title": "Tôi đi học",
       "theme": "Mái trường mến yêu",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14816,9 +14816,9 @@
       "title": "Đi học",
       "theme": "Mái trường mến yêu",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -14844,9 +14844,9 @@
       "title": "Hoa yêu thương",
       "theme": "Mái trường mến yêu",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14873,9 +14873,9 @@
       "title": "Cây bàng và lớp học",
       "theme": "Mái trường mến yêu",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14902,9 +14902,9 @@
       "title": "Bác trống trường",
       "theme": "Mái trường mến yêu",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -14931,9 +14931,9 @@
       "title": "Giờ ra chơi",
       "theme": "Mái trường mến yêu",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -14959,9 +14959,9 @@
       "title": "Rửa tay trước khi ăn",
       "theme": "Điều em cần biết",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -14988,9 +14988,9 @@
       "title": "Lời chào",
       "theme": "Điều em cần biết",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15016,9 +15016,9 @@
       "title": "Khi mẹ vắng nhà",
       "theme": "Điều em cần biết",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15044,9 +15044,9 @@
       "title": "Nếu không may bị lạc",
       "theme": "Điều em cần biết",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -15073,9 +15073,9 @@
       "title": "Đèn giao thông",
       "theme": "Điều em cần biết",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -15102,9 +15102,9 @@
       "title": "Kiến và chim bồ câu",
       "theme": "Bài học từ cuộc sống",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15131,9 +15131,9 @@
       "title": "Câu chuyện của rễ",
       "theme": "Bài học từ cuộc sống",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15160,9 +15160,9 @@
       "title": "Câu hỏi của sói",
       "theme": "Bài học từ cuộc sống",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15189,9 +15189,9 @@
       "title": "Chú bé chăn cừu",
       "theme": "Bài học từ cuộc sống",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15218,9 +15218,9 @@
       "title": "Tiếng vọng của núi",
       "theme": "Bài học từ cuộc sống",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15247,9 +15247,9 @@
       "title": "Loài chim của biển cả",
       "theme": "Thiên nhiên kì thú",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -15276,9 +15276,9 @@
       "title": "Bầy sắc cầu vồng",
       "theme": "Thiên nhiên kì thú",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15305,9 +15305,9 @@
       "title": "Chúa tể rừng xanh",
       "theme": "Thiên nhiên kì thú",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -15334,9 +15334,9 @@
       "title": "Cuộc thi tài năng rừng xanh",
       "theme": "Thiên nhiên kì thú",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15363,9 +15363,9 @@
       "title": "Cây liễu dẻo dai",
       "theme": "Thiên nhiên kì thú",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15392,9 +15392,9 @@
       "title": "Tia nắng đi đâu?",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15420,9 +15420,9 @@
       "title": "Trong giấc mơ buổi sáng",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15448,9 +15448,9 @@
       "title": "Ngày mới bắt đầu",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15476,9 +15476,9 @@
       "title": "Hỏi mẹ",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15504,9 +15504,9 @@
       "title": "Những cánh cò",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15532,9 +15532,9 @@
       "title": "Buổi trưa hè",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15560,9 +15560,9 @@
       "title": "Hoa phượng",
       "theme": "Thế giới trong mắt em",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15588,9 +15588,9 @@
       "title": "Cậu bé thông minh",
       "theme": "Đất nước và con người",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Văn xuôi gần gũi",
@@ -15617,9 +15617,9 @@
       "title": "Lính cứu hoả",
       "theme": "Đất nước và con người",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -15646,9 +15646,9 @@
       "title": "Lớn lên bạn làm gì?",
       "theme": "Đất nước và con người",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15674,9 +15674,9 @@
       "title": "Ruộng bậc thang ở Sa Pa",
       "theme": "Đất nước và con người",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",
@@ -15703,9 +15703,9 @@
       "title": "Nhớ ơn",
       "theme": "Đất nước và con người",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Thơ ngắn",
@@ -15731,9 +15731,9 @@
       "title": "Du lịch biển Việt Nam",
       "theme": "Đất nước và con người",
       "topic_ids": [
-        9,
-        6,
-        8
+        10,
+        7,
+        9
       ],
       "sub_names": [
         "Đọc hiểu thông tin",

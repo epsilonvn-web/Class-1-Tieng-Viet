@@ -212,6 +212,136 @@ banMaiAudio.referrerPolicy = 'no-referrer';
 let histLineChartInstance = null;
 let histBarChartInstance = null;
 
+// ==========================================
+// HỆ THỐNG THÔNG BÁO TRONG APP
+// Thay toàn bộ alert()/confirm() mặc định của trình duyệt bằng dialog/toast đồng bộ giao diện.
+// ==========================================
+let appDialogResolver_ = null;
+let appDialogKeyHandler_ = null;
+
+function ensureAppFeedbackUI_() {
+    if (!document.getElementById('app-dialog-modal')) {
+        const modal = document.createElement('div');
+        modal.id = 'app-dialog-modal';
+        modal.className = 'hidden app-dialog-backdrop';
+        modal.innerHTML = `
+            <div class="app-dialog-card" role="dialog" aria-modal="true" aria-labelledby="app-dialog-title">
+                <div class="app-dialog-body">
+                    <div id="app-dialog-icon-wrap" class="app-dialog-icon-wrap"><span id="app-dialog-icon">🐰</span></div>
+                    <h3 id="app-dialog-title" class="app-dialog-title">Thông báo</h3>
+                    <p id="app-dialog-message" class="app-dialog-message"></p>
+                </div>
+                <div class="app-dialog-actions">
+                    <button id="app-dialog-cancel" type="button" class="app-dialog-btn app-dialog-btn-cancel">Đóng</button>
+                    <button id="app-dialog-ok" type="button" class="app-dialog-btn app-dialog-btn-ok">OK</button>
+                </div>
+            </div>`;
+        document.body.appendChild(modal);
+    }
+    if (!document.getElementById('app-toast-container')) {
+        const host = document.createElement('div');
+        host.id = 'app-toast-container';
+        host.className = 'app-toast-container';
+        document.body.appendChild(host);
+    }
+}
+
+function getAppFeedbackTheme_(type = 'info') {
+    const themes = {
+        success: { icon:'🌟', title:'Tuyệt vời!', accent:'#10b981', soft:'#ecfdf5', border:'#a7f3d0' },
+        warning: { icon:'💡', title:'Bé chú ý nhé', accent:'#f59e0b', soft:'#fffbeb', border:'#fde68a' },
+        error:   { icon:'🌧️', title:'Có chút trục trặc', accent:'#f43f5e', soft:'#fff1f2', border:'#fecdd3' },
+        confirm: { icon:'🐰', title:'Cô hỏi bé một chút', accent:'#8b5cf6', soft:'#f5f3ff', border:'#ddd6fe' },
+        info:    { icon:'🐰', title:'Cô Thỏ Hồng nhắn bé', accent:'#ec4899', soft:'#fdf2f8', border:'#fbcfe8' }
+    };
+    return themes[type] || themes.info;
+}
+
+function closeAppDialog_(result = true) {
+    const modal = document.getElementById('app-dialog-modal');
+    if (modal) modal.classList.add('hidden');
+    if (appDialogKeyHandler_) {
+        document.removeEventListener('keydown', appDialogKeyHandler_);
+        appDialogKeyHandler_ = null;
+    }
+    const resolve = appDialogResolver_;
+    appDialogResolver_ = null;
+    if (resolve) resolve(result);
+}
+
+function showAppDialog(message, options = {}) {
+    ensureAppFeedbackUI_();
+    if (appDialogResolver_) closeAppDialog_(false);
+
+    const type = options.type || 'info';
+    const theme = getAppFeedbackTheme_(type);
+    const modal = document.getElementById('app-dialog-modal');
+    const card = modal?.querySelector('.app-dialog-card');
+    const iconWrap = document.getElementById('app-dialog-icon-wrap');
+    const icon = document.getElementById('app-dialog-icon');
+    const title = document.getElementById('app-dialog-title');
+    const msg = document.getElementById('app-dialog-message');
+    const ok = document.getElementById('app-dialog-ok');
+    const cancel = document.getElementById('app-dialog-cancel');
+    if (!modal || !card || !iconWrap || !icon || !title || !msg || !ok || !cancel) return Promise.resolve(true);
+
+    icon.textContent = options.icon || theme.icon;
+    title.textContent = options.title || theme.title;
+    msg.textContent = String(message || '');
+    iconWrap.style.background = theme.soft;
+    iconWrap.style.borderColor = theme.border;
+    title.style.color = theme.accent;
+    card.style.borderColor = theme.border;
+    ok.style.background = `linear-gradient(135deg, ${theme.accent}, #a855f7)`;
+    ok.textContent = options.okText || 'OK';
+    cancel.textContent = options.cancelText || 'Đóng';
+    cancel.classList.toggle('hidden', !options.confirm);
+
+    modal.classList.remove('hidden');
+    requestAnimationFrame(() => ok.focus());
+
+    return new Promise(resolve => {
+        appDialogResolver_ = resolve;
+        ok.onclick = () => closeAppDialog_(true);
+        cancel.onclick = () => closeAppDialog_(false);
+        appDialogKeyHandler_ = (e) => {
+            if (e.key === 'Escape') closeAppDialog_(options.confirm ? false : true);
+            if (e.key === 'Enter' && !e.shiftKey) closeAppDialog_(true);
+        };
+        document.addEventListener('keydown', appDialogKeyHandler_);
+    });
+}
+
+function showAppConfirm(message, options = {}) {
+    return showAppDialog(message, {
+        ...options,
+        type: 'confirm',
+        confirm: true,
+        okText: options.okText || 'Đồng ý',
+        cancelText: options.cancelText || 'Chưa nhé'
+    });
+}
+
+function showAppToast(message, type = 'info', duration = 1900) {
+    ensureAppFeedbackUI_();
+    const host = document.getElementById('app-toast-container');
+    if (!host) return;
+    const theme = getAppFeedbackTheme_(type);
+    const toast = document.createElement('div');
+    toast.className = 'app-toast-item';
+    toast.style.borderColor = theme.border;
+    toast.style.background = theme.soft;
+    toast.innerHTML = `<span class="app-toast-icon">${theme.icon}</span><span class="app-toast-text"></span>`;
+    toast.querySelector('.app-toast-text').textContent = String(message || '');
+    host.appendChild(toast);
+    requestAnimationFrame(() => toast.classList.add('is-visible'));
+    window.setTimeout(() => {
+        toast.classList.remove('is-visible');
+        window.setTimeout(() => toast.remove(), 220);
+    }, Math.max(900, Number(duration) || 1900));
+}
+
+
 
 // ==========================================
 // ACCOUNT / PREMIUM ENGINE v2
@@ -493,7 +623,7 @@ async function changeAccountType(maHS, type) {
         const res = await callAppsScript('updateAccountType', { ...getAdminAuthPayload(), targetMaHS: maHS, accountType: type });
         if (!res.ok) throw new Error(res.error || 'Không cập nhật được');
         await loadAccountManager();
-    } catch(e) { alert(e.message); await loadAccountManager(); }
+    } catch(e) { await showAppDialog(e.message, { type:'error', title:'Không thể cập nhật tài khoản' }); await loadAccountManager(); }
 }
 
 
@@ -700,7 +830,7 @@ async function startRandomExam(categoryKey) {
         const pool = (examData && Array.isArray(examData.exams)) ? examData.exams : [];
         let candidates = pool.filter(e => catKeywords.some(k => (e.exam_category || '').toLowerCase().includes(k)));
         if (!candidates.length) candidates = pool;
-        if (!candidates.length) return alert('Đang cập nhật thêm đề thi cho mục này, bé quay lại sau nhé!');
+        if (!candidates.length) return showAppDialog('Đang cập nhật thêm đề thi cho mục này, bé quay lại sau nhé!', { type:'info', title:'Đề thi đang được cập nhật' });
 
         const exam = candidates[Math.floor(Math.random() * candidates.length)];
         const examIndex = pool.indexOf(exam);
@@ -712,13 +842,13 @@ async function startRandomExam(categoryKey) {
         pendingTopicQuiz = null;
 
         const questions = Array.isArray(exam.questions) && exam.questions.length ? exam.questions : [];
-        if (!questions.length) return alert('Đề thi này chưa có câu hỏi, bé chọn đề khác nhé!');
+        if (!questions.length) return showAppDialog('Đề thi này chưa có câu hỏi, bé chọn đề khác nhé!', { type:'warning' });
 
         updateNavTabs("12. Đấu trường đề thi", "🏆", examTitle);
         startTopicQuiz(0, examTitle, questions, null);
     } catch (err) {
         hideLoadingOverlay();
-        alert(`Không thể tải đề thi: ${err.message}`);
+        await showAppDialog(`Không thể tải đề thi: ${err.message}`, { type:'error' });
     }
 }
 
@@ -731,8 +861,7 @@ function startExamCountdown() {
         updateExamTimerDisplay();
         if (quizRemainingSeconds <= 0) {
             clearInterval(quizTimerInterval);
-            alert('Đã hết giờ làm bài! Bài thi sẽ được nộp lại nhé bé.');
-            showResultScreen();
+            showAppDialog('Đã hết giờ làm bài! Bài thi sẽ được nộp lại nhé bé.', { type:'warning', title:'Hết giờ làm bài', okText:'Xem kết quả' }).then(() => showResultScreen());
         }
     }, 1000);
 }
@@ -1007,7 +1136,7 @@ async function doRegister() {
         document.getElementById('login-mapin').value = '';
         document.getElementById('reg-mapin').value = '';
         switchAuthTab('login');
-        alert(`Đăng ký thành công! Mã ID thực tế của con là: ${actualId}. Tài khoản mới là Regular và có thể học nội dung miễn phí ngay.`);
+        await showAppDialog(`Đăng ký thành công!\nMã ID của con: ${actualId}\nTài khoản mới là Regular và có thể học nội dung miễn phí ngay.`, { type:'success', title:'Đăng ký thành công', okText:'Đăng nhập ngay' });
     } catch (err) { showAuthError('Lỗi kết nối: ' + err.message); }
     finally { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-user-plus mr-1"></i> Đăng ký ngay'; }
 }
@@ -1154,7 +1283,7 @@ function openTopic(topicNum, topicName, icon) {
         showLectureAndSubtopics(topicNum, topicName, topicObj);
     }).catch(err => {
         hideLoadingOverlay();
-        alert(`Không thể tải chủ đề: ${err.message}`);
+        showAppDialog(`Không thể tải chủ đề: ${err.message}`, { type:'error' });
     });
 }
 
@@ -1175,7 +1304,7 @@ function openSemesterReviewMenu() {
         showLectureAndSubtopics(11, '11. Ôn tập học kỳ', topicObj);
     }).catch(err => {
         hideLoadingOverlay();
-        alert(`Không thể tải ôn tập học kỳ: ${err.message}`);
+        showAppDialog(`Không thể tải ôn tập học kỳ: ${err.message}`, { type:'error' });
     });
 }
 
@@ -1291,7 +1420,7 @@ function countAlphabetQuizQuestions(groupKey) {
 function startAlphabetCategoryQuiz(groupKey, subTitle) {
     stopSpeaking();
     const filtered = ALPHABET_29_DETAILS.filter(item => item.group === groupKey);
-    if (!filtered.length) return alert('Đang cập nhật thêm câu hỏi cho phần này bé nhé!');
+    if (!filtered.length) { showAppToast('Đang cập nhật thêm câu hỏi cho phần này bé nhé!', 'info', 2200); return; }
 
     const variantsPerLetter = getAlphabetQuizVariantsPerLetter(groupKey);
 
@@ -1530,7 +1659,7 @@ async function selectRoadmapWeek(weekNum) {
     
     const tuanHienTai = Number(currentUser?.tuanHienTai) || 1;
     if (weekNum > tuanHienTai) {
-        return alert(`Tuần ${weekNum} đang bị khóa. Bé hãy hoàn thành Tuần ${tuanHienTai} đạt từ 80% trở lên để mở khóa nhé!`);
+        return showAppDialog(`Tuần ${weekNum} đang bị khóa. Bé hãy hoàn thành Tuần ${tuanHienTai} đạt từ 80% trở lên để mở khóa nhé!`, { type:'warning', title:'Chưa mở khóa' });
     }
 
     if (config.isExam) return openExamHub();
@@ -1546,12 +1675,12 @@ async function selectRoadmapWeek(weekNum) {
         hideLoadingOverlay();
 
         const weekQuestions = getQuestionsForWeek343(weekNum);
-        if (!weekQuestions.length) return alert('Tuần này đang chuẩn bị thêm câu hỏi, bé quay lại sau nhé!');
+        if (!weekQuestions.length) return showAppDialog('Tuần này đang chuẩn bị thêm câu hỏi, bé quay lại sau nhé!', { type:'info' });
 
         startTopicQuiz(config.topicIds[0] || 1, config.name, weekQuestions, null);
     } catch (err) {
         hideLoadingOverlay();
-        alert(`Lỗi tải dữ liệu tuần: ${err.message}`);
+        await showAppDialog(`Lỗi tải dữ liệu tuần: ${err.message}`, { type:'error' });
     }
 }
 
@@ -1758,7 +1887,7 @@ function checkTopic3FusionAnswer(selectedOpt) {
         const arrow = document.getElementById('topic3-fusion-arrow');
         if (result) {
             result.textContent = q.answer;
-            result.className = 't3-result-pop min-w-[92px] px-5 py-3 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white text-3xl md:text-4xl font-black shadow-lg border-2 border-emerald-300';
+            result.className = 't3-result-pop min-w-[92px] px-5 py-3 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 text-white text-[1.69rem] md:text-[2.03rem] font-black shadow-lg border-2 border-emerald-300';
         }
         if (arrow) arrow.textContent = '→';
     }
@@ -1782,8 +1911,8 @@ function renderTopic3FusionQuestion(q) {
         const p = palette[idx % palette.length];
         const anim = idx === 0 ? 't3-piece-left' : 't3-piece-right';
         return `
-            ${idx > 0 ? `<span class="text-3xl md:text-4xl font-black text-pink-400 select-none">+</span>` : ''}
-            <div class="${anim} ${meta.level === 2 && idx === 1 ? 'min-w-[150px] md:min-w-[190px] px-7 md:px-9' : 'min-w-[82px] md:min-w-[104px] px-5'} py-3 md:py-4 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-3xl md:text-4xl font-black shadow-sm text-center whitespace-nowrap">
+            ${idx > 0 ? `<span class="text-[1.69rem] md:text-[2.03rem] font-black text-pink-400 select-none">+</span>` : ''}
+            <div class="${anim} ${meta.level === 2 && idx === 1 ? 'min-w-[150px] md:min-w-[190px] px-7 md:px-9' : 'min-w-[82px] md:min-w-[104px] px-5'} py-2.5 md:py-3 rounded-2xl bg-gradient-to-br ${p[0]} ${p[1]} border-2 ${p[2]} ${p[3]} text-[1.69rem] md:text-[2.03rem] font-black shadow-sm text-center whitespace-nowrap">
                 ${escapeHtml(piece)}
             </div>`;
     }).join('');
@@ -1792,39 +1921,31 @@ function renderTopic3FusionQuestion(q) {
         <button
             data-opt="${escapeHtml(opt)}"
             onclick="checkTopic3FusionAnswer('${String(opt).replace(/'/g, "\\'")}')"
-            class="option-btn min-h-[62px] px-4 py-2.5 bg-pink-50/40 hover:bg-pink-100/70 border-2 border-pink-200 rounded-2xl font-black text-gray-800 text-center transition-all text-xl md:text-2xl shadow-xs pastel-btn">
+            class="option-btn min-h-[54px] px-4 py-2 bg-pink-50/40 hover:bg-pink-100/70 border-2 border-pink-200 rounded-2xl font-black text-gray-800 text-center transition-all text-[1.125rem] md:text-[1.35rem] shadow-xs pastel-btn">
             ${escapeHtml(opt)}
         </button>
     `).join('');
 
     document.getElementById('question-box').innerHTML = `
         <div class="w-full max-w-4xl flex flex-col items-center">
-            <div class="mb-2 px-3 py-1.5 rounded-full bg-purple-50 border border-purple-200 text-purple-700 font-black text-xs md:text-sm">
-                🧩 ${escapeHtml(meta.label)}
-            </div>
-
-            <div class="text-center mb-3">
-                <div class="text-sm md:text-base font-black text-slate-700">${escapeHtml(meta.instruction)}</div>
-                <div class="text-xs md:text-sm text-slate-400 font-bold mt-0.5">Bé đọc từng mảnh rồi ghép lại nhé!</div>
-            </div>
-
-            <div class="w-full rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-white via-pink-50/40 to-purple-50/50 p-5 md:p-7 shadow-sm">
+            <!-- Breadcrumb phía trên đã hiển thị cấp độ, nên không lặp lại badge/tiêu đề ở đây. -->
+            <div class="w-full rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-white via-pink-50/40 to-purple-50/50 p-3 md:p-4 shadow-sm">
                 <div class="flex flex-wrap items-center justify-center gap-3 md:gap-4">
                     ${piecesHtml}
-                    <span id="topic3-fusion-arrow" class="text-3xl md:text-4xl font-black text-emerald-500 select-none">→</span>
-                    <div id="topic3-fusion-result" class="min-w-[92px] px-5 py-3 rounded-2xl bg-white border-2 border-dashed border-emerald-300 text-emerald-400 text-3xl md:text-4xl font-black shadow-inner text-center">?</div>
+                    <span id="topic3-fusion-arrow" class="text-[1.69rem] md:text-[2.03rem] font-black text-emerald-500 select-none">→</span>
+                    <div id="topic3-fusion-result" class="min-w-[92px] px-5 py-3 rounded-2xl bg-white border-2 border-dashed border-emerald-300 text-emerald-400 text-[1.69rem] md:text-[2.03rem] font-black shadow-inner text-center">?</div>
                 </div>
 
-                <div class="flex justify-center mt-4">
+                <div class="flex justify-center mt-2.5">
                     <button onclick="speakTopic3FusionQuestion()" class="px-4 py-2 rounded-2xl bg-amber-50 hover:bg-amber-100 border border-amber-300 text-amber-700 text-xs md:text-sm font-black pastel-btn shadow-sm">
                         <i class="fa-solid fa-volume-high mr-1.5"></i> Nghe cách ghép
                     </button>
                 </div>
             </div>
 
-            <div class="mt-3 text-xs md:text-sm font-black text-pink-600">Bé chọn tiếng được ghép đúng:</div>
+            <div class="mt-2 text-xs md:text-sm font-black text-pink-600">Bé chọn tiếng được ghép đúng:</div>
 
-            <div class="w-full max-w-3xl grid grid-cols-2 gap-2.5 mt-2">
+            <div class="w-full max-w-3xl grid grid-cols-2 gap-2 mt-1.5">
                 ${optionsHtml}
             </div>
         </div>
@@ -1961,6 +2082,30 @@ function loadQuestion() {
 
     const isEvaluationMode = !!activeExamContext || !!activeRoadmapContext;
 
+    // Topic 2: bỏ minh họa emoji và dồn nội dung lên trên để giảm khoảng trắng.
+    // Chỉ áp dụng ở chế độ Khám phá/luyện tập, không ảnh hưởng Bài tập hoặc Đề thi.
+    const isTopic2Compact = !isEvaluationMode && Number(activeTopicId) === 2;
+    const isTopic3Compact = !isEvaluationMode && Number(activeTopicId) === 3;
+    const isCompactPractice = isTopic2Compact || isTopic3Compact;
+    const questionBox = document.getElementById('question-box');
+    const quizCard = questionBox ? questionBox.closest('.pastel-card') : null;
+    const quizBottomNav = document.getElementById('quiz-bottom-nav');
+    if (questionBox) {
+        questionBox.style.justifyContent = isCompactPractice ? 'flex-start' : 'center';
+        questionBox.style.paddingTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : '');
+        questionBox.style.paddingBottom = isCompactPractice ? '0.2rem' : '';
+        questionBox.style.flex = isCompactPractice ? '0 0 auto' : '';
+    }
+    if (quizCard) {
+        // Mục 2 và 3: card co theo nội dung để toàn bộ câu hỏi + đáp án + điều hướng
+        // nằm gọn trong một khung nhìn, không kéo xuống theo min-height mặc định.
+        quizCard.style.minHeight = isCompactPractice ? '0' : '';
+        quizCard.style.justifyContent = isCompactPractice ? 'flex-start' : '';
+    }
+    if (quizBottomNav) {
+        quizBottomNav.style.marginTop = isTopic2Compact ? '0.75rem' : (isTopic3Compact ? '0.35rem' : '');
+    }
+
     // Topic 8 ở chế độ luyện tập dùng trò chơi xếp thẻ từ riêng.
     // Tiến trình tuần / đề thi vẫn dùng renderer chuẩn để giữ nguyên cơ chế chấm điểm.
     if (!isEvaluationMode && Number(activeTopicId) === 8 && Array.isArray(q.tokens) && q.tokens.length) {
@@ -2002,9 +2147,9 @@ function loadQuestion() {
     }
 
     let mediaHtml = '';
-    if (q.emoji) {
+    if (!isTopic2Compact && q.emoji) {
         mediaHtml = `<div class="text-5xl md:text-6xl leading-none mb-1 floating select-none" role="img" aria-label="minh họa">${escapeHtml(q.emoji)}</div>`;
-    } else if (q.image_url) {
+    } else if (!isTopic2Compact && q.image_url) {
         mediaHtml = `<img src="${q.image_url}" alt="minh họa" class="w-14 h-14 md:w-16 md:h-16 object-contain mb-1 floating" onerror="this.remove()">`;
     }
 
@@ -2322,13 +2467,13 @@ function prevQuestion() {
     }
 }
 
-function nextQuestion() {
+async function nextQuestion() {
     clearTopic23AutoAdvance_();
     stopSpeaking();
     const isEvaluationMode = !!activeExamContext || !!activeRoadmapContext;
 
     if (!isEvaluationMode && userAnswers[currentQIndex] === undefined) {
-        alert('Bé hãy tìm đáp án đúng để hoàn thành câu này nhé!');
+        showAppToast('Bé hãy tìm đáp án đúng để hoàn thành câu này nhé!', 'warning', 1700);
         return;
     }
 
@@ -2341,7 +2486,7 @@ function nextQuestion() {
         } else {
             confetti({ particleCount: 75, spread: 75, origin: { y: 0.6 } });
             playAudio('win');
-            alert(`🎉 Chúc mừng bé đã hoàn thành trọn vẹn 1 vòng luyện tập (${activeQuestionsList.length} câu)!\nBây giờ cô giáo Thỏ Hồng sẽ xáo trộn ngẫu nhiên để bé bước vào vòng luyện tập tiếp theo nhé!`);
+            await showAppDialog(`Bé đã hoàn thành trọn vẹn 1 vòng luyện tập (${activeQuestionsList.length} câu)!\nCô sẽ xáo trộn câu hỏi để bé bước vào vòng tiếp theo nhé!`, { type:'success', title:'Hoàn thành một vòng!', okText:'Luyện tiếp' });
 
             const basePool = practiceCycleRawPool.length ? practiceCycleRawPool : activeQuestionsList;
             activeQuestionsList = shuffleArray([...basePool]);
@@ -2353,12 +2498,16 @@ function nextQuestion() {
     }
 }
 
-function triggerSubmitQuizPrompt() {
+async function triggerSubmitQuizPrompt() {
     const answeredCount = Object.keys(userAnswers).length;
     const total = activeQuestionsList.length;
-    if (confirm(`Bé đã làm ${answeredCount}/${total} câu. Bé có chắc chắn muốn nộp bài thi ngay không?`)) {
-        showResultScreen();
-    }
+    const ok = await showAppConfirm(`Bé đã làm ${answeredCount}/${total} câu. Bé có chắc chắn muốn nộp bài thi ngay không?`, {
+        title: 'Nộp bài thi?',
+        icon: '📝',
+        okText: 'Nộp bài',
+        cancelText: 'Làm tiếp'
+    });
+    if (ok) showResultScreen();
 }
 
 function showResultScreen() {
@@ -2644,7 +2793,7 @@ async function saveWeeklyProgressToSheet(percent, starCount, scoreVal) {
             const nextWeek = week + 1;
             if (nextWeek > (Number(currentUser.tuanHienTai) || 1) && nextWeek <= 24) {
                 currentUser.tuanHienTai = nextWeek;
-                setTimeout(() => alert(`🎉 Chúc mừng bé đạt ${percent}% điểm! Tuần ${nextWeek} đã được mở khóa trên bản đồ!`), 500);
+                setTimeout(() => showAppToast(`Bé đạt ${percent}%! Tuần ${nextWeek} đã được mở khóa.`, 'success', 2600), 500);
             }
         }
     } catch (e) {}
@@ -2680,14 +2829,14 @@ async function openHistoryModal(sheetName = 'LichSuTienTrinhTuan') {
             // Token hết hạn/không hợp lệ hoặc không đúng chủ - đóng modal, báo rõ thay vì âm thầm
             // hiện báo cáo trống (dễ gây hiểu lầm là bé chưa học gì).
             closeHistoryModal();
-            alert(res.error || 'Không thể tải lịch sử - bé đăng nhập lại nhé!');
+            await showAppDialog(res.error || 'Không thể tải lịch sử - bé đăng nhập lại nhé!', { type:'error' });
             return;
         }
         const rows = (res && res.history) ? res.history : [];
         renderHistoryReport(rows, sheetName);
     } catch (err) {
         hideLoadingOverlay();
-        alert('Không thể tải lịch sử: ' + err.message);
+        await showAppDialog('Không thể tải lịch sử: ' + err.message, { type:'error' });
     }
 }
 
@@ -3675,7 +3824,7 @@ async function openBaiHocByNumberTV1_(bai, pageNo = 1) {
     inBaiHocFlow = true;
     const data = await loadBaiHocDataTV1_();
     const lesson = (data?.bai_hoc || []).find(x => Number(x.bai) === Number(bai));
-    if (!lesson) return alert('Không tìm thấy bài học');
+    if (!lesson) return showAppDialog('Không tìm thấy bài học', { type:'error' });
     const safePage = Math.max(1, Math.min(3, Number(pageNo) || 1));
     activeBaiHocContext = { semester: Number(lesson.semester), bai: Number(bai), lessonId: lesson.lesson_id, pageNo: safePage };
     updateNavTabs('Bài học', '📖', `Bài ${bai}`, lesson.source_title || '');
@@ -3833,7 +3982,7 @@ async function openRoadmap(semesterNumber = 1) {
         const data = await loadBaiHocDataTV1_();
         renderBaiTapGridTV1_(data, semesterNumber);
     } catch (err) {
-        alert(`Không thể mở Bài tập: ${err.message}`);
+        await showAppDialog(`Không thể mở Bài tập: ${err.message}`, { type:'error' });
     } finally { hideLoadingOverlay(); }
 }
 
@@ -3861,7 +4010,7 @@ function renderBaiTapGridTV1_(data, semesterNumber) {
 }
 
 function showLockedBaiTapTV1_(bai) {
-    alert(`🔒 Bài tập ${bai} chưa mở. Bé cần đạt từ 80% ở Bài tập trước để mở khóa nhé!`);
+    showAppDialog(`Bài tập ${bai} chưa mở. Bé cần đạt từ 80% ở Bài tập trước để mở khóa nhé!`, { type:'warning', title:'Bài tập đang khóa', icon:'🔒' });
 }
 
 function questionMatchesFocusTV1_(q, tokens) {
@@ -3939,7 +4088,7 @@ async function selectBaiTapTV1_(bai) {
         updateNavTabs('Bài tập', '✏️', `Bài ${bai}`, bt.title || '');
         startTopicQuiz((bt.topic_ids || [1])[0], activeRoadmapContext.chuDe, qs, null);
     } catch (err) {
-        alert(`Không thể mở Bài tập: ${err.message}`);
+        await showAppDialog(`Không thể mở Bài tập: ${err.message}`, { type:'error' });
     } finally { hideLoadingOverlay(); }
 }
 
@@ -3960,7 +4109,7 @@ async function saveWeeklyProgressToSheet(percent, starCount, scoreVal) {
         const next = Math.min(TOTAL_BAI_TAP_TV1, Number(week) + 1);
         if (next > getUnlockedBaiTapTV1_()) {
             saveUnlockedBaiTapTV1_(next);
-            setTimeout(() => alert(`🎉 Bé đạt ${percent}%! Bài tập ${next} đã được mở khóa.`), 350);
+            setTimeout(() => showAppToast(`Bé đạt ${percent}%! Bài tập ${next} đã được mở khóa.`, 'success', 2600), 350);
         }
     }
     if (!currentUser || currentUser.isGuest) return;

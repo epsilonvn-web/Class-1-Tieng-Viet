@@ -2275,8 +2275,13 @@ function splitStoryParagraphs_(content) {
 
 async function openThoNhacStory_(storyId) {
     stopSpeaking();
-    if (!activeFairyLibraryKey_) return openThoNhacMenu();
-    const data = await loadFairyLibrary_(activeFairyLibraryKey_);
+    // Ghi lại epoch ngay sau khi dừng audio cũ. Nếu người dùng chuyển tab/view
+    // trong lúc JSON đang tải, stopSpeaking() ở nơi mới sẽ làm epoch thay đổi.
+    const storyOpenEpoch = speechStopEpoch_;
+    const requestedLibraryKey = activeFairyLibraryKey_;
+    if (!requestedLibraryKey) return openThoNhacMenu();
+    const data = await loadFairyLibrary_(requestedLibraryKey);
+    if (storyOpenEpoch !== speechStopEpoch_ || requestedLibraryKey !== activeFairyLibraryKey_) return;
     const story = fairyStoryById_(data, storyId);
     if (!story) return;
 
@@ -2346,15 +2351,33 @@ async function openThoNhacStory_(storyId) {
     }
 
     // Mở truyện là mascot của app kể ngay; đổi Trước/Sau cũng tự đọc truyện mới.
-    // openThoNhacStory_ đã stopSpeaking() ở đầu nên không bị chồng giọng.
-    speakVietnamese(`${story.title || ''}. ${story.content || ''}`, 0.94);
+    // Chỉ tự đọc nếu người dùng vẫn đang ở đúng trang truyện. Nếu đã chuyển tab/view,
+    // epoch đã thay đổi và tuyệt đối không được bật audio trở lại.
+    const storyLectureView = document.getElementById('view-lecture');
+    const stillOnThisStory = storyOpenEpoch === speechStopEpoch_
+        && requestedLibraryKey === activeFairyLibraryKey_
+        && String(activeStoryId_ || '') === String(story.id)
+        && currentMainTab === 'discover'
+        && storyLectureView && !storyLectureView.classList.contains('hidden');
+    if (stillOnThisStory) speakVietnamese(`${story.title || ''}. ${story.content || ''}`, 0.94);
 }
 
 async function speakActiveFairyStory_() {
     if (!activeFairyLibraryKey_ || !activeStoryId_) return;
-    const data = await loadFairyLibrary_(activeFairyLibraryKey_);
-    const story = fairyStoryById_(data, activeStoryId_);
+    // Dừng audio hiện tại trước, đồng thời tạo một mốc yêu cầu đọc mới.
+    stopSpeaking();
+    const storySpeakEpoch = speechStopEpoch_;
+    const requestedLibraryKey = activeFairyLibraryKey_;
+    const requestedStoryId = String(activeStoryId_);
+    const data = await loadFairyLibrary_(requestedLibraryKey);
+    if (storySpeakEpoch !== speechStopEpoch_) return;
+    const story = fairyStoryById_(data, requestedStoryId);
     if (!story) return;
+    const lectureView = document.getElementById('view-lecture');
+    if (requestedLibraryKey !== activeFairyLibraryKey_
+        || requestedStoryId !== String(activeStoryId_ || '')
+        || currentMainTab !== 'discover'
+        || !lectureView || lectureView.classList.contains('hidden')) return;
     speakVietnamese(`${story.title || ''}. ${story.content || ''}`, 0.94);
 }
 
@@ -4230,7 +4253,12 @@ function exportReportToPDF() {
 // ==========================================
 // ĐỘNG CƠ ÂM THANH: GOOGLE TTS CHỊ BAN MAI
 // ==========================================
+let speechStopEpoch_ = 0;
+
 function stopSpeaking() {
+    // Mỗi lần rời view/tab hoặc chủ động dừng đọc, tăng epoch để vô hiệu hóa
+    // mọi tác vụ TTS bất đồng bộ đang chờ (đặc biệt auto-read của kho truyện).
+    speechStopEpoch_++;
     try {
         if (banMaiAudio) {
             banMaiAudio.pause();

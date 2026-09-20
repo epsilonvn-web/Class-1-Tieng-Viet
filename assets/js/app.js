@@ -963,8 +963,8 @@ function ensureCompactHeaderBreadcrumbTabs_() {
            tên dài tự cắt bằng dấu … để cả 4 tab vẫn nằm cùng hàng trên desktop. */
         #header-learning-tabs {
             min-width: 0 !important;
-            max-width: 840px !important;
-            flex: 0 1 840px !important;
+            max-width: 648px !important;
+            flex: 0 1 648px !important;
             overflow: hidden !important;
         }
 
@@ -972,10 +972,10 @@ function ensureCompactHeaderBreadcrumbTabs_() {
         #header-level3-tab,
         #header-level4-tab,
         #header-level5-tab {
-            width: 205px !important;
-            min-width: 205px !important;
-            max-width: 205px !important;
-            flex: 0 0 205px !important;
+            width: 158px !important;
+            min-width: 158px !important;
+            max-width: 158px !important;
+            flex: 0 0 158px !important;
             overflow: hidden !important;
         }
 
@@ -1016,17 +1016,17 @@ function ensureCompactHeaderBreadcrumbTabs_() {
 
         @media (max-width: 1050px) {
             #header-learning-tabs {
-                max-width: 708px !important;
-                flex-basis: 708px !important;
+                max-width: 544px !important;
+                flex-basis: 544px !important;
             }
             #header-level2-tab,
             #header-level3-tab,
             #header-level4-tab,
             #header-level5-tab {
-                width: 172px !important;
-                min-width: 172px !important;
-                max-width: 172px !important;
-                flex-basis: 172px !important;
+                width: 132px !important;
+                min-width: 132px !important;
+                max-width: 132px !important;
+                flex-basis: 132px !important;
             }
         }
 
@@ -1041,10 +1041,10 @@ function ensureCompactHeaderBreadcrumbTabs_() {
             #header-level3-tab,
             #header-level4-tab,
             #header-level5-tab {
-                width: 146px !important;
-                min-width: 146px !important;
-                max-width: 146px !important;
-                flex-basis: 146px !important;
+                width: 112px !important;
+                min-width: 112px !important;
+                max-width: 112px !important;
+                flex-basis: 112px !important;
             }
         }
     `;
@@ -2868,6 +2868,7 @@ function renderTopic8SentenceBuilder(q) {
 
     document.getElementById('question-box').innerHTML = `
         <div class="w-full max-w-4xl flex flex-col items-center px-2">
+            <div class="text-4xl md:text-5xl mb-2">🧩</div>
             <h3 class="text-base md:text-lg font-black text-slate-900 text-center">Sắp xếp các từ thành câu hoàn chỉnh</h3>
             <p class="text-xs md:text-sm font-bold text-slate-500 mt-1 text-center">Chạm từ bên dưới để đưa lên. Chạm từ phía trên để đưa xuống.</p>
 
@@ -4277,115 +4278,160 @@ function exportReportToPDF() {
 // ĐỘNG CƠ ÂM THANH: GOOGLE TTS CHỊ BAN MAI
 // ==========================================
 let speechStopEpoch_ = 0;
+let speechChunkTimer_ = null;
 
 function stopSpeaking() {
     // Mỗi lần rời view/tab hoặc chủ động dừng đọc, tăng epoch để vô hiệu hóa
-    // mọi tác vụ TTS bất đồng bộ đang chờ (đặc biệt auto-read của kho truyện).
+    // toàn bộ chuỗi TTS đang chạy/chờ (đặc biệt truyện dài nhiều đoạn).
     speechStopEpoch_++;
+    if (speechChunkTimer_) {
+        clearTimeout(speechChunkTimer_);
+        speechChunkTimer_ = null;
+    }
     try {
         if (banMaiAudio) {
             banMaiAudio.pause();
             banMaiAudio.currentTime = 0;
             banMaiAudio.onended = null;
+            banMaiAudio.onerror = null;
         }
     } catch (e) {}
 }
 
-function splitTtsChunks_(text, maxLen = 155) {
+function splitVietnameseTtsChunks_(text, maxLen = 120) {
     const src = String(text || '').replace(/\s+/g, ' ').trim();
     if (!src) return [];
 
-    const sentenceParts = src.match(/[^.!?;:]+[.!?;:]*/g) || [src];
-    const chunks = [];
+    // Tách ưu tiên theo câu. Sau đó nếu một câu vẫn dài thì tách tiếp theo dấu phẩy,
+    // chấm phẩy, hai chấm và cuối cùng mới cắt theo khoảng trắng.
+    const sentences = src.match(/[^.!?…]+[.!?…]*/g) || [src];
+    const out = [];
 
-    const pushByWords = (part) => {
-        const words = String(part || '').trim().split(/\s+/).filter(Boolean);
-        let buf = '';
-        for (const word of words) {
-            const next = buf ? `${buf} ${word}` : word;
-            if (next.length <= maxLen) {
-                buf = next;
-            } else {
-                if (buf) chunks.push(buf);
-                // Trường hợp hiếm có một token quá dài: cắt cứng để không làm hỏng cả chuỗi đọc.
-                if (word.length > maxLen) {
-                    for (let i = 0; i < word.length; i += maxLen) chunks.push(word.slice(i, i + maxLen));
-                    buf = '';
-                } else {
-                    buf = word;
-                }
+    const pushPiece = (piece) => {
+        let rest = String(piece || '').trim();
+        if (!rest) return;
+        while (rest.length > maxLen) {
+            let cut = -1;
+            const window = rest.slice(0, maxLen + 1);
+            for (const mark of [',', ';', ':', '–', '—']) {
+                const pos = window.lastIndexOf(mark);
+                if (pos >= Math.floor(maxLen * 0.55)) cut = Math.max(cut, pos + 1);
             }
+            if (cut < Math.floor(maxLen * 0.55)) {
+                const pos = window.lastIndexOf(' ');
+                cut = pos >= Math.floor(maxLen * 0.55) ? pos : maxLen;
+            }
+            out.push(rest.slice(0, cut).trim());
+            rest = rest.slice(cut).trim();
         }
-        if (buf) chunks.push(buf);
+        if (rest) out.push(rest);
     };
 
-    let merged = '';
-    for (const rawPart of sentenceParts) {
-        const part = rawPart.trim();
-        if (!part) continue;
-        const next = merged ? `${merged} ${part}` : part;
-        if (next.length <= maxLen) {
-            merged = next;
-        } else {
-            if (merged) chunks.push(merged);
-            merged = '';
-            if (part.length <= maxLen) merged = part;
-            else pushByWords(part);
-        }
-    }
-    if (merged) chunks.push(merged);
-    return chunks.filter(Boolean);
+    sentences.forEach(pushPiece);
+    return out.filter(Boolean);
 }
 
 function speakVietnamese(text, rate = 0.96) {
     if (!text) return;
-    try {
-        stopSpeaking();
-        const speechEpoch = speechStopEpoch_;
 
-        const cleanText = String(text)
-            .replace(/<[^>]*>/g, '')
-            .replace(/b-a/g, 'bờ a ba')
-            .replace(/c\/k/g, 'cờ hoặc ca')
-            .replace(/g\/gh/g, 'gờ đơn hoặc gờ kép')
-            .replace(/ng\/ngh/g, 'ngờ đơn hoặc ngờ kép')
-            .replace(/\s+/g, ' ')
-            .trim();
+    stopSpeaking();
+    const myEpoch = speechStopEpoch_;
 
-        if (!cleanText) return;
+    let cleanText = String(text)
+        .replace(/<[^>]*>/g, '')
+        .replace(/b-a/g, 'bờ a ba')
+        .replace(/c\/k/g, 'cờ hoặc ca')
+        .replace(/g\/gh/g, 'gờ đơn hoặc gờ kép')
+        .replace(/ng\/ngh/g, 'ngờ đơn hoặc ngờ kép')
+        .replace(/\s+/g, ' ')
+        .trim();
 
-        // Google Translate TTS không ổn định với đoạn dài. Luôn chia thành các đoạn ngắn
-        // <=155 ký tự rồi phát nối tiếp. Cách này đặc biệt quan trọng với truyện cổ tích.
-        const chunks = splitTtsChunks_(cleanText, 155);
-        let chunkIndex = 0;
+    if (!cleanText) return;
 
-        const playNextChunk = () => {
-            if (speechEpoch !== speechStopEpoch_) return;
-            if (chunkIndex >= chunks.length) {
-                banMaiAudio.onended = null;
-                banMaiAudio.onerror = null;
-                return;
-            }
+    // Google Translate TTS không ổn định với câu dài. Luôn chia thành đoạn ngắn,
+    // kể cả khi nội dung chỉ có ít dấu câu (truyện cổ tích thường có đoạn rất dài).
+    const chunks = splitVietnameseTtsChunks_(cleanText, 120);
+    if (!chunks.length) return;
 
-            const chunk = chunks[chunkIndex++];
-            const encoded = encodeURIComponent(chunk);
-            banMaiAudio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=${encoded}`;
-            banMaiAudio.playbackRate = rate;
-            banMaiAudio.onended = playNextChunk;
-            banMaiAudio.onerror = () => {
-                if (speechEpoch === speechStopEpoch_) window.setTimeout(playNextChunk, 80);
-            };
+    let index = 0;
+    let retry = 0;
 
-            const playPromise = banMaiAudio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {
-                    if (speechEpoch === speechStopEpoch_) window.setTimeout(playNextChunk, 80);
-                });
+    const playNext = () => {
+        if (myEpoch !== speechStopEpoch_) return;
+        if (index >= chunks.length) {
+            banMaiAudio.onended = null;
+            banMaiAudio.onerror = null;
+            return;
+        }
+
+        const chunk = chunks[index];
+        const encoded = encodeURIComponent(chunk);
+        const src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=${encoded}`;
+
+        // Watchdog: nếu trình duyệt/network treo một đoạn mà không phát onended/onerror,
+        // thử chuyển tiếp để chuỗi truyện không bị đứng vĩnh viễn.
+        if (speechChunkTimer_) clearTimeout(speechChunkTimer_);
+        speechChunkTimer_ = setTimeout(() => {
+            if (myEpoch !== speechStopEpoch_) return;
+            try { banMaiAudio.pause(); } catch (e) {}
+            index++;
+            retry = 0;
+            playNext();
+        }, 30000);
+
+        banMaiAudio.onended = () => {
+            if (speechChunkTimer_) { clearTimeout(speechChunkTimer_); speechChunkTimer_ = null; }
+            if (myEpoch !== speechStopEpoch_) return;
+            index++;
+            retry = 0;
+            playNext();
+        };
+
+        banMaiAudio.onerror = () => {
+            if (speechChunkTimer_) { clearTimeout(speechChunkTimer_); speechChunkTimer_ = null; }
+            if (myEpoch !== speechStopEpoch_) return;
+            // Retry đúng 1 lần cho mỗi đoạn vì Google TTS đôi lúc lỗi tải tạm thời.
+            if (retry < 1) {
+                retry++;
+                speechChunkTimer_ = setTimeout(playNext, 180);
+            } else {
+                index++;
+                retry = 0;
+                speechChunkTimer_ = setTimeout(playNext, 80);
             }
         };
 
-        playNextChunk();
-    } catch (err) {}
+        try {
+            banMaiAudio.pause();
+            banMaiAudio.src = src;
+            banMaiAudio.currentTime = 0;
+            banMaiAudio.playbackRate = rate;
+            banMaiAudio.load();
+            const playPromise = banMaiAudio.play();
+            if (playPromise && typeof playPromise.catch === 'function') {
+                playPromise.catch(() => {
+                    // Một số trình duyệt không phát event error khi play() reject.
+                    if (myEpoch !== speechStopEpoch_) return;
+                    if (speechChunkTimer_) { clearTimeout(speechChunkTimer_); speechChunkTimer_ = null; }
+                    if (retry < 1) {
+                        retry++;
+                        speechChunkTimer_ = setTimeout(playNext, 180);
+                    } else {
+                        index++;
+                        retry = 0;
+                        speechChunkTimer_ = setTimeout(playNext, 80);
+                    }
+                });
+            }
+        } catch (e) {
+            if (speechChunkTimer_) { clearTimeout(speechChunkTimer_); speechChunkTimer_ = null; }
+            index++;
+            retry = 0;
+            speechChunkTimer_ = setTimeout(playNext, 80);
+        }
+    };
+
+    playNext();
 }
 
 function speakPedagogicalEvaluation() {

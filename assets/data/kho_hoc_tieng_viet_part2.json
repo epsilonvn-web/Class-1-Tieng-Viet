@@ -18187,15 +18187,21 @@
     },
     {
       "id": 12,
-      "name": "Truyện cổ tích",
-      "desc": "Kho 80 truyện: 50 truyện cổ tích Việt Nam và 30 truyện cổ tích thế giới. Cô Thỏ Hồng kể chuyện và mỗi truyện có 3 câu nghe hiểu.",
-      "l_title": "12. Truyện cổ tích",
-      "l_content": "Bé chọn Truyện cổ tích Việt Nam hoặc Truyện cổ tích thế giới, nghe Cô Thỏ Hồng kể rồi trả lời 3 câu nghe hiểu.",
-      "l_audio": "Bé cùng Cô Thỏ Hồng bước vào thế giới cổ tích nhé! Hãy nghe thật kĩ rồi trả lời ba câu hỏi sau mỗi câu chuyện.",
-      "data_file": "truyen_co_tich_tieng_viet_1.json",
-      "story_count": 80,
-      "vietnam_count": 50,
-      "world_count": 30
+      "name": "Truyện dân gian & cổ tích",
+      "desc": "Thư viện 240 truyện: 120 truyện Việt Nam và 120 truyện thế giới, chia theo chủ đề/series. Cô Thỏ Hồng kể chuyện và mỗi truyện có 3 câu nghe hiểu TV1.",
+      "l_title": "12. Truyện dân gian & cổ tích",
+      "l_content": "Bé chọn kho Việt Nam hoặc Thế giới, chọn tiếp chủ đề hoặc series, nghe Cô Thỏ Hồng kể rồi trả lời 3 câu nghe hiểu.",
+      "l_audio": "Bé cùng Cô Thỏ Hồng bước vào thư viện truyện dân gian và cổ tích nhé! Hãy chọn một kho truyện rồi chọn chủ đề bé thích.",
+      "data_files": {
+        "vietnam": "truyen_dan_gian_co_tich_viet_nam_120.json",
+        "world": "truyen_dan_gian_co_tich_the_gioi_120.json"
+      },
+      "vietnam_data_file": "truyen_dan_gian_co_tich_viet_nam_120.json",
+      "world_data_file": "truyen_dan_gian_co_tich_the_gioi_120.json",
+      "story_count": 240,
+      "vietnam_count": 120,
+      "world_count": 120,
+      "copyright_note": "Nội dung truyện được biên soạn lại độc lập từ cốt truyện dân gian, truyền thuyết và tác phẩm cổ điển phù hợp; không sao chép nguyên văn bản dịch hay ấn bản hiện đại."
     },
     {
       "id": 13,

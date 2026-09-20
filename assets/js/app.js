@@ -1924,8 +1924,10 @@ function setSubtopicGridColumns(count) {
 // - 12.2 Thế giới: 120 truyện, ưu tiên series Grimm, Andersen, A Phàm Đề,
 //   Nghìn lẻ một đêm; phần còn lại là ngụ ngôn và các truyện nổi tiếng.
 // - Dữ liệu truyện nằm ngoài kho_hoc_tieng_viet_part2.json để module nhẹ và tái sử dụng TV1-TV3.
-// - Cô Thỏ Hồng đọc TTS; mỗi truyện có 3 câu nghe hiểu TV1.
+// - 2 JSON là lõi dùng chung TV1-TV3: nội dung + bộ câu hỏi dùng nguyên bản cho cả 3 app.
+// - Tên mascot/TTS do app.js của từng chương trình quyết định.
 // ==========================================
+const STORY_NARRATOR_NAME = 'Cô Thỏ Hồng';
 let activeThoNhacTopic_ = null; // giữ tên biến cũ để tương thích các lời gọi hiện có
 let activeFairyConfig_ = null;
 const activeFairyLibraries_ = { vietnam: null, world: null };
@@ -2134,7 +2136,7 @@ function renderFairyHome_(cfg = {}) {
     if (contentEl) {
         contentEl.innerHTML = `
             <div class="max-w-4xl mx-auto text-center leading-tight py-0">
-                <div class="font-black text-purple-700 text-xl md:text-2xl">Thư viện kể chuyện của Cô Thỏ Hồng</div>
+                <div class="font-black text-purple-700 text-xl md:text-2xl">Thư viện kể chuyện của ${STORY_NARRATOR_NAME}</div>
                 <div class="text-sm md:text-[15px] text-slate-600 font-extrabold mt-0.5">${vnCount + worldCount} truyện · nghe kể · hiểu chuyện · trả lời 3 câu hỏi</div>
             </div>`;
     }
@@ -2319,7 +2321,7 @@ async function openThoNhacStory_(storyId) {
                         </div>
                     </div>
                     <button onclick="speakActiveFairyStory_()" class="shrink-0 px-3 py-2 rounded-xl bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm md:text-base font-black shadow-sm pastel-btn flex items-center justify-center gap-1.5">
-                        <i class="fa-solid fa-volume-high text-base md:text-lg"></i><span class="hidden sm:inline">Nghe Cô Thỏ Hồng kể</span><span class="sm:hidden">Nghe kể</span>
+                        <i class="fa-solid fa-volume-high text-base md:text-lg"></i><span class="hidden sm:inline">Nghe ${STORY_NARRATOR_NAME} kể</span><span class="sm:hidden">Nghe kể</span>
                     </button>
                 </div>
                 <div class="max-h-[56vh] overflow-y-auto pr-1 story-reader-scroll">
@@ -2343,7 +2345,7 @@ async function openThoNhacStory_(storyId) {
             <button onclick="openThoNhacStory_('${String(nextStory.id).replace(/'/g, "\\'")}')" class="h-[44px] px-3 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl text-sm md:text-base font-black pastel-btn shadow-md flex items-center justify-center gap-2 whitespace-nowrap"><span>Truyện sau</span><span class="text-lg md:text-xl leading-none">→</span></button>`;
     }
 
-    // Mở truyện là Cô Thỏ Hồng kể ngay; đổi Trước/Sau cũng tự đọc truyện mới.
+    // Mở truyện là mascot của app kể ngay; đổi Trước/Sau cũng tự đọc truyện mới.
     // openThoNhacStory_ đã stopSpeaking() ở đầu nên không bị chồng giọng.
     speakVietnamese(`${story.title || ''}. ${story.content || ''}`, 0.94);
 }
@@ -2356,8 +2358,15 @@ async function speakActiveFairyStory_() {
     speakVietnamese(`${story.title || ''}. ${story.content || ''}`, 0.94);
 }
 
+function getStoryQuestions_(story) {
+    // Chuẩn dùng chung TV1-TV2-TV3: mỗi truyện chỉ có một bộ questions.
+    if (Array.isArray(story?.questions)) return story.questions;
+    // Fallback tạm để app vẫn mở được JSON cũ nếu cache chưa cập nhật.
+    return Array.isArray(story?.questions_tv1) ? story.questions_tv1 : [];
+}
+
 function renderStoryQuestions_(story) {
-    const qs = Array.isArray(story?.questions) ? story.questions : [];
+    const qs = getStoryQuestions_(story);
     if (!qs.length) return '';
     return `
         <div class="pt-2 border-t border-purple-100">
@@ -2377,7 +2386,7 @@ async function answerStoryQuestion_(qi, oi) {
     if (!activeFairyLibraryKey_ || !activeStoryId_) return;
     const data = await loadFairyLibrary_(activeFairyLibraryKey_);
     const story = fairyStoryById_(data, activeStoryId_);
-    const q = story?.questions?.[Number(qi)];
+    const q = getStoryQuestions_(story)?.[Number(qi)];
     if (!q || activeStoryAnswers_[qi]) return;
 
     const opts = Array.isArray(q.o) ? q.o : [];

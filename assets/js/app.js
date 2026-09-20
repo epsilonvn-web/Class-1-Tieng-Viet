@@ -119,7 +119,7 @@ let allTopicsDataCache = null;
 let allQuestionsFlatCache = null;
 // Bật/tắt đọc câu hỏi TỰ ĐỘNG khi vào câu mới — nút "Nghe câu hỏi" thủ công vẫn luôn hoạt động
 // dù tắt tính năng này (đây chỉ tắt phần tự động phát, không tắt hẳn tính năng nghe).
-let autoSpeechEnabled = localStorage.getItem('autoSpeechEnabled') !== 'false';
+let autoSpeechEnabled = true; // UI mới bỏ nút loa tổng; TTS nội dung vẫn hoạt động bình thường.
 const examsCache = {};
 
 let currentUser = null;
@@ -787,6 +787,7 @@ async function renderDashboardGrid() {
 
 async function startRandomExam(categoryKey) {
     if (!requirePremiumAccess('Đấu trường đề thi')) return;
+    setAppShellRootMode_(false);
     stopSpeaking();
     const catKeywords = {
         hocky1: ['học kỳ 1', 'hk1'],
@@ -848,6 +849,7 @@ function updateExamTimerDisplay() {
 
 function openExamHub() {
     if (!requirePremiumAccess('Đấu trường đề thi')) return;
+    setAppShellRootMode_(true);
     setMainTabActive_('exams');
     stopSpeaking();
     activeExamContext = null;
@@ -961,8 +963,8 @@ function ensureCompactHeaderBreadcrumbTabs_() {
            tên dài tự cắt bằng dấu … để cả 4 tab vẫn nằm cùng hàng trên desktop. */
         #header-learning-tabs {
             min-width: 0 !important;
-            max-width: 648px !important;
-            flex: 0 1 648px !important;
+            max-width: 840px !important;
+            flex: 0 1 840px !important;
             overflow: hidden !important;
         }
 
@@ -970,10 +972,10 @@ function ensureCompactHeaderBreadcrumbTabs_() {
         #header-level3-tab,
         #header-level4-tab,
         #header-level5-tab {
-            width: 158px !important;
-            min-width: 158px !important;
-            max-width: 158px !important;
-            flex: 0 0 158px !important;
+            width: 205px !important;
+            min-width: 205px !important;
+            max-width: 205px !important;
+            flex: 0 0 205px !important;
             overflow: hidden !important;
         }
 
@@ -1014,17 +1016,17 @@ function ensureCompactHeaderBreadcrumbTabs_() {
 
         @media (max-width: 1050px) {
             #header-learning-tabs {
-                max-width: 544px !important;
-                flex-basis: 544px !important;
+                max-width: 708px !important;
+                flex-basis: 708px !important;
             }
             #header-level2-tab,
             #header-level3-tab,
             #header-level4-tab,
             #header-level5-tab {
-                width: 132px !important;
-                min-width: 132px !important;
-                max-width: 132px !important;
-                flex-basis: 132px !important;
+                width: 172px !important;
+                min-width: 172px !important;
+                max-width: 172px !important;
+                flex-basis: 172px !important;
             }
         }
 
@@ -1039,10 +1041,10 @@ function ensureCompactHeaderBreadcrumbTabs_() {
             #header-level3-tab,
             #header-level4-tab,
             #header-level5-tab {
-                width: 112px !important;
-                min-width: 112px !important;
-                max-width: 112px !important;
-                flex-basis: 112px !important;
+                width: 146px !important;
+                min-width: 146px !important;
+                max-width: 146px !important;
+                flex-basis: 146px !important;
             }
         }
     `;
@@ -1161,9 +1163,11 @@ function updateNavTabs(level2Title, level2Icon, level3Title, level4Title, level5
 }
 
 function updateDiscoverBreadcrumb_(topicTitle = null, topicIcon = '🌸', subTitle = null, leafTitle = null, deepTitle = null) {
-    // Home/logo không tính. Hàng 6 tab bên dưới đã thể hiện "Khám phá",
-    // vì vậy sau Home dành tối đa 4 ô cho cây nội dung thật:
-    // Chuyên mục → Mục con → Mục sâu → Lá hiện tại.
+    // Breadcrumb nam tren banner phu. Tab chinh da hien o header nen khong lap lai.
+    if (currentMainTab === 'review') {
+        updateNavTabs('Ôn tập', '🧠', topicTitle || null, subTitle || null, leafTitle || null, deepTitle || null);
+        return;
+    }
     updateNavTabs('Khám phá', '🧭', topicTitle || null, subTitle || null, leafTitle || null, deepTitle || null);
 }
 
@@ -1674,6 +1678,7 @@ async function logout() {
 function handleGuestMode() { closeAuthScreen(); }
 
 function enterDashboard(isSilent = false) {
+    setAppShellRootMode_(true);
     document.getElementById('screen-dashboard').classList.remove('hidden');
     updateUserInfoBox();
     updatePremiumUI();
@@ -1694,7 +1699,7 @@ function updateUserInfoBox() {
     if (currentUser?.sessionPending) {
         box.innerHTML = `<div class="flex items-center gap-1.5 text-[11px] font-black text-indigo-600"><i class="fa-solid fa-cloud-arrow-down fa-beat-fade"></i><span>Đang khôi phục phiên...</span></div>`;
     } else if (currentUser && !currentUser.isGuest) {
-        const adminBtn = isAdminUser() ? `<button onclick="openAccountManager()" title="Quản lý tài khoản" class="relative h-9 px-3 flex items-center gap-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-xl border border-purple-200 text-[11px] font-black shadow-sm pastel-btn whitespace-nowrap"><i class="fa-solid fa-users-gear"></i><span>Quản lý</span><span id="admin-new-registration-badge" class="hidden absolute -top-2 -right-2 min-w-[19px] h-[19px] px-1 rounded-full bg-rose-500 text-white text-[10px] leading-[19px] text-center font-black border-2 border-white shadow-md">0</span></button>` : '';
+        const adminBtn = isAdminUser() ? `<button onclick="openAccountManager()" title="Quản lý tài khoản" class="relative h-9 px-3 flex items-center gap-1.5 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-xl border border-purple-200 text-[11px] font-black shadow-sm pastel-btn whitespace-nowrap"><i class="fa-solid fa-users-gear"></i><span class="admin-manage-label">Quản lý</span><span id="admin-new-registration-badge" class="hidden absolute -top-2 -right-2 min-w-[19px] h-[19px] px-1 rounded-full bg-rose-500 text-white text-[10px] leading-[19px] text-center font-black border-2 border-white shadow-md">0</span></button>` : '';
         const tier = isAdminUser() ? 'Admin' : String(currentUser.loaiTaiKhoan || 'regular').toUpperCase();
         box.innerHTML = `<div class="flex items-center gap-1.5"><div class="text-right"><div class="text-pink-600 font-extrabold text-xs md:text-sm leading-tight">${escapeHtml(currentUser.hoTen)}</div><div class="text-gray-500 font-semibold text-[10px]">${escapeHtml(tier)} · ID ${escapeHtml(currentUser.maHS)}</div></div>${adminBtn}<button onclick="logout()" title="Đăng xuất" class="w-8 h-8 flex items-center justify-center bg-rose-100 hover:bg-rose-200 text-rose-500 rounded-xl border border-rose-200 text-xs"><i class="fa-solid fa-right-from-bracket"></i></button></div>`;
     } else {
@@ -1717,6 +1722,7 @@ function clickProgressOrExam(type) {
 // CHỦ ĐỀ 1: BẢNG CHỮ CÁI TƯƠNG TÁC (1.1 ĐẾN 1.4)
 // ==========================================
 function openTopic(topicNum, topicName, icon) {
+    setAppShellRootMode_(false);
     if (PREMIUM_TOPIC_IDS.has(Number(topicNum)) && !requirePremiumAccess(topicName)) return;
     stopSpeaking();
     activeTopicId = topicNum; activeExamContext = null; activeRoadmapContext = null;
@@ -1777,6 +1783,7 @@ function openSemesterReviewMenu() {
 }
 
 function openLettersSubmenu() {
+    setAppShellRootMode_(false);
     stopSpeaking();
     currentTopicKey = 'letters_menu';
     currentTopicName = '1. Bảng chữ cái';
@@ -2181,6 +2188,7 @@ function renderFairyHome_(cfg = {}) {
 }
 
 async function openFairyLibrary_(libraryKey) {
+    setAppShellRootMode_(false);
     stopSpeaking();
     const meta = FAIRY_LIBRARY_META_[libraryKey];
     if (!meta) return;
@@ -2238,6 +2246,7 @@ function renderFairyCategories_(libraryKey, data) {
 }
 
 async function openFairyCategory_(categoryId) {
+    setAppShellRootMode_(false);
     stopSpeaking();
     if (!activeFairyLibraryKey_) return openThoNhacMenu();
     const data = await loadFairyLibrary_(activeFairyLibraryKey_);
@@ -2288,6 +2297,7 @@ function splitStoryParagraphs_(content) {
 }
 
 async function openThoNhacStory_(storyId) {
+    setAppShellRootMode_(false);
     stopSpeaking();
     // Ghi lại epoch ngay sau khi dừng audio cũ. Nếu người dùng chuyển tab/view
     // trong lúc JSON đang tải, stopSpeaking() ở nơi mới sẽ làm epoch thay đổi.
@@ -2858,7 +2868,6 @@ function renderTopic8SentenceBuilder(q) {
 
     document.getElementById('question-box').innerHTML = `
         <div class="w-full max-w-4xl flex flex-col items-center px-2">
-            <div class="text-4xl md:text-5xl mb-2">🧩</div>
             <h3 class="text-base md:text-lg font-black text-slate-900 text-center">Sắp xếp các từ thành câu hoàn chỉnh</h3>
             <p class="text-xs md:text-sm font-bold text-slate-500 mt-1 text-center">Chạm từ bên dưới để đưa lên. Chạm từ phía trên để đưa xuống.</p>
 
@@ -4282,48 +4291,100 @@ function stopSpeaking() {
     } catch (e) {}
 }
 
+function splitTtsChunks_(text, maxLen = 155) {
+    const src = String(text || '').replace(/\s+/g, ' ').trim();
+    if (!src) return [];
+
+    const sentenceParts = src.match(/[^.!?;:]+[.!?;:]*/g) || [src];
+    const chunks = [];
+
+    const pushByWords = (part) => {
+        const words = String(part || '').trim().split(/\s+/).filter(Boolean);
+        let buf = '';
+        for (const word of words) {
+            const next = buf ? `${buf} ${word}` : word;
+            if (next.length <= maxLen) {
+                buf = next;
+            } else {
+                if (buf) chunks.push(buf);
+                // Trường hợp hiếm có một token quá dài: cắt cứng để không làm hỏng cả chuỗi đọc.
+                if (word.length > maxLen) {
+                    for (let i = 0; i < word.length; i += maxLen) chunks.push(word.slice(i, i + maxLen));
+                    buf = '';
+                } else {
+                    buf = word;
+                }
+            }
+        }
+        if (buf) chunks.push(buf);
+    };
+
+    let merged = '';
+    for (const rawPart of sentenceParts) {
+        const part = rawPart.trim();
+        if (!part) continue;
+        const next = merged ? `${merged} ${part}` : part;
+        if (next.length <= maxLen) {
+            merged = next;
+        } else {
+            if (merged) chunks.push(merged);
+            merged = '';
+            if (part.length <= maxLen) merged = part;
+            else pushByWords(part);
+        }
+    }
+    if (merged) chunks.push(merged);
+    return chunks.filter(Boolean);
+}
+
 function speakVietnamese(text, rate = 0.96) {
     if (!text) return;
     try {
         stopSpeaking();
+        const speechEpoch = speechStopEpoch_;
 
-        let cleanText = String(text)
+        const cleanText = String(text)
             .replace(/<[^>]*>/g, '')
             .replace(/b-a/g, 'bờ a ba')
             .replace(/c\/k/g, 'cờ hoặc ca')
             .replace(/g\/gh/g, 'gờ đơn hoặc gờ kép')
             .replace(/ng\/ngh/g, 'ngờ đơn hoặc ngờ kép')
+            .replace(/\s+/g, ' ')
             .trim();
 
         if (!cleanText) return;
 
-        if (cleanText.length <= 180) {
-            const encoded = encodeURIComponent(cleanText);
-            banMaiAudio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=${encoded}`;
-            banMaiAudio.playbackRate = rate;
-            const playPromise = banMaiAudio.play();
-            if (playPromise !== undefined) {
-                playPromise.catch(() => {});
-            }
-            return;
-        }
+        // Google Translate TTS không ổn định với đoạn dài. Luôn chia thành các đoạn ngắn
+        // <=155 ký tự rồi phát nối tiếp. Cách này đặc biệt quan trọng với truyện cổ tích.
+        const chunks = splitTtsChunks_(cleanText, 155);
+        let chunkIndex = 0;
 
-        const sentences = cleanText.match(/[^.!?\n]+[.!?\n]*/g) || [cleanText];
-        let sIdx = 0;
-        function playSentence() {
-            if (sIdx >= sentences.length) return;
-            const s = sentences[sIdx++].trim();
-            if (!s) { playSentence(); return; }
-            const encoded = encodeURIComponent(s);
+        const playNextChunk = () => {
+            if (speechEpoch !== speechStopEpoch_) return;
+            if (chunkIndex >= chunks.length) {
+                banMaiAudio.onended = null;
+                banMaiAudio.onerror = null;
+                return;
+            }
+
+            const chunk = chunks[chunkIndex++];
+            const encoded = encodeURIComponent(chunk);
             banMaiAudio.src = `https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q=${encoded}`;
             banMaiAudio.playbackRate = rate;
-            banMaiAudio.onended = playSentence;
+            banMaiAudio.onended = playNextChunk;
+            banMaiAudio.onerror = () => {
+                if (speechEpoch === speechStopEpoch_) window.setTimeout(playNextChunk, 80);
+            };
+
             const playPromise = banMaiAudio.play();
             if (playPromise !== undefined) {
-                playPromise.catch(() => {});
+                playPromise.catch(() => {
+                    if (speechEpoch === speechStopEpoch_) window.setTimeout(playNextChunk, 80);
+                });
             }
-        }
-        playSentence();
+        };
+
+        playNextChunk();
     } catch (err) {}
 }
 
@@ -4553,6 +4614,7 @@ const MINIGAME_LIST = [
 ];
 
 function openMiniGameHub() {
+    setAppShellRootMode_(true);
     setMainTabActive_('games');
     inBaiHocFlow = false;
     stopSpeaking();
@@ -4611,6 +4673,7 @@ function loadGameScript(src) {
 }
 
 async function openGamePlay(gameId) {
+    setAppShellRootMode_(false);
     stopSpeaking();
     if (!requirePremiumAccess('Mini Game')) return;
     ensureMiniGameThemeStyles();
@@ -4695,6 +4758,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // ============================================================
+// TV1 APP SHELL 2026: banner chinh o root tab, banner phu + breadcrumb khi vao noi dung.
+// Chi dieu khien presentation, khong thay doi nghiep vu/du lieu.
+// ============================================================
+let appShellRootMode_ = true;
+function setAppShellRootMode_(isRoot) {
+    appShellRootMode_ = !!isRoot;
+    const mainBanner = document.getElementById('app-main-banner');
+    const contextBanner = document.getElementById('app-context-banner');
+    if (mainBanner) mainBanner.classList.toggle('hidden', !appShellRootMode_);
+    if (contextBanner) contextBanner.classList.toggle('hidden', appShellRootMode_);
+}
+
+// ============================================================
 // TV1 UI V11 - 6 TAB CHINH CO DINH
 // Kham pha la Home logic; cac module hien truc tiep ben duoi tab.
 // ============================================================
@@ -4712,6 +4788,7 @@ function openReviewTab() {
     if (!requirePremiumAccess('Ôn tập')) return;
     setMainTabActive_('review');
     openTopic(13, '13. Ôn tập học kỳ', '🧠');
+    setAppShellRootMode_(true);
 }
 function openMainTab(tabName) {
     stopSpeaking();
@@ -4727,6 +4804,7 @@ function openMainTab(tabName) {
     }
 }
 function goHome() {
+    setAppShellRootMode_(true);
     inMiniGameFlow = false;
     inBaiHocFlow = false;
     stopSpeaking();
@@ -4821,6 +4899,7 @@ function saveBaiHocCompletedSetTV1_(setObj) {
 
 async function openBaiHocHub(semesterNumber = 1) {
     if (!requirePremiumAccess('Bài học')) return;
+    setAppShellRootMode_(true);
     setMainTabActive_('lessons');
     stopSpeaking();
     clearInterval(quizTimerInterval);
@@ -4877,6 +4956,7 @@ function renderBaiHocHubTV1_(data, semesterNumber) {
 }
 
 async function openBaiHocByNumberTV1_(bai, pageNo = 1) {
+    setAppShellRootMode_(false);
     stopSpeaking();
     inBaiHocFlow = true;
     const data = await loadBaiHocDataTV1_();
@@ -5028,6 +5108,7 @@ function saveRecentBaiTapIdsTV1_(bai, ids) {
 
 async function openRoadmap(semesterNumber = 1) {
     if (!requirePremiumAccess('Bài tập')) return;
+    setAppShellRootMode_(true);
     setMainTabActive_('exercises');
     inBaiHocFlow = false;
     inMiniGameFlow = false;
@@ -5129,6 +5210,7 @@ function getQuestionsForBaiTapTV1_(bt) {
 }
 
 async function selectBaiTapTV1_(bai) {
+    setAppShellRootMode_(false);
     stopSpeaking();
     showLoadingOverlay(`Đang chuẩn bị Bài tập ${bai}...`);
     try {

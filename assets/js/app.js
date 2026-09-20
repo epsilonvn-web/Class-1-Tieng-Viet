@@ -1078,6 +1078,14 @@ function updateNavTabs(level2Title, level2Icon, level3Title, level4Title, level5
     const tab5 = document.getElementById('header-level5-tab');
     const homeBtn = document.getElementById('btn-header-home');
 
+    // Mỗi lần dựng breadcrumb mới phải xóa handler của màn trước.
+    // Đặc biệt sau khi rời Mục 12, level 2 từng được gán openThoNhacMenu();
+    // nếu không reset thì nhãn đã đổi nhưng cú click vẫn quay về kho truyện.
+    setBreadcrumbAction_(2, () => returnToTopicLecture(), 'Quay lại mục hiện tại');
+    setBreadcrumbAction_(3, null);
+    setBreadcrumbAction_(4, null);
+    setBreadcrumbAction_(5, null);
+
     if (level2Title) {
         document.getElementById('header-level2-title').textContent = level2Title;
         document.getElementById('header-level2-icon').textContent = level2Icon || '🌸';
@@ -1712,6 +1720,12 @@ function openTopic(topicNum, topicName, icon) {
     if (PREMIUM_TOPIC_IDS.has(Number(topicNum)) && !requirePremiumAccess(topicName)) return;
     stopSpeaking();
     activeTopicId = topicNum; activeExamContext = null; activeRoadmapContext = null;
+    if (Number(topicNum) !== 12) {
+        activeFairyLibraryKey_ = null;
+        activeFairyCategoryId_ = null;
+        activeStoryId_ = null;
+        activeStoryAnswers_ = {};
+    }
     updateDiscoverBreadcrumb_(topicName, icon || '🌸', null);
 
     if (topicNum === 1) {

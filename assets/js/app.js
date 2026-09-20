@@ -13,7 +13,7 @@ const TOPICS_CONFIG = [
     { id: 6, title: "9. Bác sĩ bắt bệnh chính tả", desc: "Sửa lỗi từ & viết hoa", icon: "S/X", color: "rose", isCustomTextIcon: true },
     { id: 8, title: "10. Gia đình từ loại", desc: "Sự vật, hoạt động, đặc điểm", icon: "🧸", color: "teal" },
     { id: 11, title: "11. Đố vui bé ngoan (IQ)", desc: "Câu đố con vật, đồ dùng", icon: "🎯", color: "yellow" },
-    { id: 12, title: "12. Thơ và truyện cổ tích", desc: "20 bài thơ + 20 bài hát do Cô Thỏ Hồng sáng tác", icon: "🎶", color: "fuchsia" },
+    { id: 12, title: "12. Truyện cổ tích", desc: "20 bài thơ + 20 bài hát do Cô Thỏ Hồng sáng tác", icon: "🎶", color: "fuchsia" },
     { id: 13, title: "13. Ôn tập học kỳ", desc: "Học kỳ 1 & Học kỳ 2", icon: "📚", color: "cyan" }
 ];
 
@@ -654,7 +654,11 @@ function normalizeTopic(t) {
         questions: rawQuestions.map(normalizeQuestion).filter(Boolean),
         poems: Array.isArray(t.poems) ? t.poems : [],
         stories: Array.isArray(t.stories) ? t.stories : [],
-        copyright_note: t.copyright_note ?? ''
+        copyright_note: t.copyright_note ?? '',
+        data_file: t.data_file ?? '',
+        story_count: Number(t.story_count ?? 0),
+        vietnam_count: Number(t.vietnam_count ?? 0),
+        world_count: Number(t.world_count ?? 0)
     };
 }
 
@@ -753,9 +757,9 @@ async function renderDashboardGrid() {
     TOPICS_CONFIG.filter(t => Number(t.id) <= 12).forEach(t => {
         const topicObj = topicsData.find(item => Number(item.topic_id) === Number(t.id));
         const totalCount = topicObj && topicObj.questions ? topicObj.questions.length : (t.id === 1 ? 29 : 0);
-        const mediaCount = Number(t.id) === 12 ? ((topicObj?.poems?.length || 0) + (topicObj?.stories?.length || 0)) : 0;
+        const mediaCount = Number(t.id) === 12 ? Number(topicObj?.story_count || 80) : 0;
         const countLabel = Number(t.id) === 12
-            ? (mediaCount > 0 ? `${mediaCount} bài` : 'Thơ & nhạc')
+            ? (mediaCount > 0 ? `${mediaCount} truyện` : 'Truyện cổ tích')
             : (totalCount > 0 ? `${totalCount} câu` : t.desc);
         const iconHtml = t.isCustomTextIcon
             ? `<div class="w-8 h-8 bg-rose-100 rounded-xl flex items-center justify-center text-[11px] font-black text-rose-600 shadow-inner group-hover:scale-110 transition-transform shrink-0 tracking-tight">S/X</div>`
@@ -1703,13 +1707,13 @@ function setSubtopicGridColumns(count) {
 
 
 // ==========================================
-// CHỦ ĐỀ 12: THƠ VÀ TRUYỆN CỔ TÍCH
-// - 20 bài thơ + 50 truyện cổ tích.
-// - Truyện được Cô Thỏ Hồng đọc bằng TTS.
-// - Mỗi truyện có 3 câu nghe hiểu, trả lời trực tiếp sau khi nghe.
+// CHỦ ĐỀ 12: TRUYỆN CỔ TÍCH - JSON RIÊNG
+// 50 truyện Việt Nam + 30 truyện thế giới.
+// Cô Thỏ Hồng kể bằng TTS, mỗi truyện có 3 câu nghe hiểu.
 // ==========================================
-let activeThoNhacTopic_ = null;
-let activeThoNhacSection_ = null;
+let activeThoNhacTopic_ = null; // giữ tên biến cũ để tương thích code ngoài module
+let activeFairyData_ = null;
+let activeFairyGroup_ = null;
 let activeStoryIndex_ = null;
 let activeStoryAnswers_ = {};
 
@@ -1722,217 +1726,119 @@ function setLectureUtilityVisibility_(showSpeak = true, showMix = true) {
     if (bottomWrap) bottomWrap.classList.toggle('hidden', !showMix);
 }
 
+async function loadFairyTalesData_() {
+    if (activeFairyData_) return activeFairyData_;
+    const res = await fetch('assets/data/truyen_co_tich_tieng_viet_1.json');
+    if (!res.ok) throw new Error('Không thể tải kho truyện cổ tích');
+    const data = await res.json();
+    if (!data || !Array.isArray(data.stories)) throw new Error('Dữ liệu truyện cổ tích không hợp lệ');
+    activeFairyData_ = data;
+    return data;
+}
+
 async function openThoNhacMenu() {
     stopSpeaking();
     activeTopicId = 12;
     activeExamContext = null;
     activeRoadmapContext = null;
     pendingTopicQuiz = null;
-    activeThoNhacSection_ = null;
+    activeFairyGroup_ = null;
     activeStoryIndex_ = null;
-    updateDiscoverBreadcrumb_('12. Thơ và truyện cổ tích', '📚', null);
-    showLoadingOverlay('Đang mở Thơ và truyện cổ tích...');
+    updateDiscoverBreadcrumb_('12. Truyện cổ tích', '📚', null);
+    showLoadingOverlay('Đang mở kho truyện cổ tích...');
     try {
-        const topics = await fetchAllTopicsData();
-        const topicObj = topics.find(t => Number(t.topic_id) === 12);
-        if (!topicObj) throw new Error('Không tìm thấy dữ liệu Thơ và truyện cổ tích');
-        activeThoNhacTopic_ = topicObj;
-        renderThoNhacHome_(topicObj);
+        const data = await loadFairyTalesData_();
+        renderFairyHome_(data);
         switchAppView('view-lecture');
     } catch (err) {
-        showAppDialog(`Không thể mở Thơ và truyện cổ tích: ${err.message}`, { type:'error' });
-    } finally {
-        hideLoadingOverlay();
-    }
+        showAppDialog(`Không thể mở Truyện cổ tích: ${err.message}`, { type:'error' });
+    } finally { hideLoadingOverlay(); }
 }
 
-function renderThoNhacHome_(topicObj) {
-    setLectureUtilityVisibility_(true, false);
-    const poems = topicObj?.poems || [];
-    const stories = topicObj?.stories || [];
-    const vnCount = stories.filter(s => s.group === 'Truyện cổ tích Việt Nam').length;
-    const qtCount = stories.length - vnCount;
-    const titleEl = document.getElementById('lecture-title');
-    const contentEl = document.getElementById('lecture-content');
-    const listEl = document.getElementById('lecture-subtopics-list');
-    if (titleEl) titleEl.textContent = '12. Thơ và truyện cổ tích';
-    if (contentEl) {
-        contentEl.innerHTML = `
-            <span class="block text-3xl mb-2">🌷📚</span>
-            <span class="font-black text-purple-700">Đọc thơ và nghe Cô Thỏ Hồng kể chuyện nhé!</span><br>
-            <span class="text-sm md:text-base text-slate-600 font-semibold">${poems.length} bài thơ · ${stories.length} truyện cổ tích (${vnCount} Việt Nam · ${qtCount} nước ngoài).</span>`;
-    }
-    const lectureView = document.getElementById('view-lecture');
-    if (lectureView) lectureView.dataset.audioText = 'Chào bé đến với Thơ và truyện cổ tích. Bé hãy chọn Vườn thơ hoặc Kho truyện cổ tích nhé!';
-    if (!listEl) return;
-    listEl.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-2xl';
-    listEl.innerHTML = `
-        <button onclick="openThoNhacSection_('poems')" class="p-4 bg-gradient-to-br from-pink-50 to-purple-50 border-2 border-pink-200 rounded-2xl text-left pastel-btn shadow-sm hover:border-purple-300">
-            <div class="text-3xl mb-2">🌷📖</div>
-            <div class="font-black text-pink-700 text-base md:text-lg">Vườn thơ Cô Thỏ Hồng</div>
-            <div class="text-xs md:text-sm text-slate-500 font-bold mt-1">${poems.length} bài thơ ngắn · bé đọc và nghe cô đọc</div>
-        </button>
-        <button onclick="openThoNhacSection_('stories')" class="p-4 bg-gradient-to-br from-amber-50 to-purple-50 border-2 border-purple-200 rounded-2xl text-left pastel-btn shadow-sm hover:border-purple-400">
-            <div class="text-3xl mb-2">🏰📚</div>
-            <div class="font-black text-purple-700 text-base md:text-lg">Kho truyện cổ tích</div>
-            <div class="text-xs md:text-sm text-slate-500 font-bold mt-1">${stories.length} truyện · Cô Thỏ Hồng kể · mỗi truyện có 3 câu nghe hiểu</div>
-        </button>`;
-}
-
-function openThoNhacSection_(kind) {
-    stopSpeaking();
-    if (!activeThoNhacTopic_) return openThoNhacMenu();
-    activeThoNhacSection_ = kind;
-    const isPoems = kind === 'poems';
-    const items = isPoems ? (activeThoNhacTopic_.poems || []) : (activeThoNhacTopic_.stories || []);
-    updateDiscoverBreadcrumb_('12. Thơ và truyện cổ tích', '📚', isPoems ? 'Vườn thơ' : 'Truyện cổ tích');
+function renderFairyHome_(data) {
     setLectureUtilityVisibility_(false, false);
-
     const titleEl = document.getElementById('lecture-title');
     const contentEl = document.getElementById('lecture-content');
     const listEl = document.getElementById('lecture-subtopics-list');
-    if (titleEl) titleEl.textContent = isPoems ? 'Vườn thơ Cô Thỏ Hồng' : 'Kho truyện cổ tích';
-    if (contentEl) {
-        contentEl.innerHTML = isPoems
-            ? '<span class="font-black text-pink-700">🌷 Chọn một bài thơ. Bé tự đọc trước, rồi bấm Cô đọc để nghe mẫu nhé!</span>'
-            : '<span class="font-black text-purple-700">🏰 Chọn một câu chuyện. Bé nghe Cô Thỏ Hồng kể thật kĩ, sau đó trả lời 3 câu nghe hiểu nhé!</span>';
-    }
+    if (titleEl) titleEl.textContent = '12. Truyện cổ tích';
+    if (contentEl) contentEl.innerHTML = `<span class="block text-4xl mb-2">🏰📚</span><span class="font-black text-purple-700 text-lg">Kho truyện cổ tích của Cô Thỏ Hồng</span><br><span class="text-sm md:text-base text-slate-600 font-semibold">80 câu chuyện · nghe kể · hiểu chuyện · trả lời 3 câu hỏi</span>`;
     const lectureView = document.getElementById('view-lecture');
     if (lectureView) lectureView.dataset.audioText = '';
     if (!listEl) return;
-    listEl.className = 'grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-4xl';
-    listEl.innerHTML = items.map((item, idx) => {
-        if (isPoems) {
-            return `<button onclick="openThoNhacPoem_(${idx})" class="p-3.5 bg-white border-2 border-pink-200 hover:border-purple-300 rounded-2xl text-left pastel-btn shadow-sm">
-                <div class="flex items-start gap-3"><span class="text-2xl">${escapeHtml(item.icon || '🌷')}</span><div class="min-w-0"><div class="font-black text-purple-700">${escapeHtml(item.title || `Bài thơ ${idx+1}`)}</div><div class="text-xs text-slate-500 font-bold mt-1">${escapeHtml(item.theme || 'Thơ vui cùng Cô Thỏ Hồng')}</div></div></div>
-            </button>`;
-        }
-        return `<button onclick="openThoNhacStory_(${idx})" class="p-3.5 bg-white border-2 border-purple-200 hover:border-amber-300 rounded-2xl text-left pastel-btn shadow-sm">
-            <div class="flex items-start gap-3"><span class="text-2xl">${escapeHtml(item.icon || '📖')}</span><div class="min-w-0">
-                <div class="font-black text-purple-700">${escapeHtml(item.title || `Truyện ${idx+1}`)}</div>
-                <div class="text-xs text-slate-500 font-bold mt-1">${escapeHtml(item.country || '')} · ${escapeHtml(item.theme || 'Truyện cổ tích')}</div>
-            </div></div>
-        </button>`;
-    }).join('') + `
-        <button onclick="openThoNhacMenu()" class="sm:col-span-2 py-2.5 bg-slate-50 border border-slate-200 text-slate-600 rounded-xl text-xs font-black pastel-btn">← Quay lại Thơ và truyện cổ tích</button>`;
+    listEl.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3 w-full max-w-3xl';
+    listEl.innerHTML = `
+      <button onclick="openFairyGroup_('Truyện cổ tích Việt Nam')" class="p-5 bg-gradient-to-br from-red-50 via-amber-50 to-white border-2 border-red-200 rounded-3xl text-left pastel-btn shadow-sm hover:border-red-300">
+        <div class="text-4xl mb-2">🇻🇳</div><div class="font-black text-red-700 text-lg">Truyện cổ tích Việt Nam</div><div class="text-sm text-slate-500 font-bold mt-1">50 truyện dân gian, cổ tích và truyền thuyết Việt Nam</div>
+      </button>
+      <button onclick="openFairyGroup_('Truyện cổ tích thế giới')" class="p-5 bg-gradient-to-br from-sky-50 via-purple-50 to-white border-2 border-purple-200 rounded-3xl text-left pastel-btn shadow-sm hover:border-purple-400">
+        <div class="text-4xl mb-2">🌍</div><div class="font-black text-purple-700 text-lg">Truyện cổ tích thế giới</div><div class="text-sm text-slate-500 font-bold mt-1">30 truyện cổ điển và dân gian nổi tiếng thế giới</div>
+      </button>`;
 }
 
-function openThoNhacPoem_(index) {
+async function openFairyGroup_(groupName) {
     stopSpeaking();
-    const poem = activeThoNhacTopic_?.poems?.[Number(index)];
-    if (!poem) return;
-    updateDiscoverBreadcrumb_('12. Thơ và truyện cổ tích', '📚', poem.title || 'Bài thơ');
-    setLectureUtilityVisibility_(true, false);
-    const titleEl = document.getElementById('lecture-title');
-    const contentEl = document.getElementById('lecture-content');
-    const listEl = document.getElementById('lecture-subtopics-list');
-    if (titleEl) titleEl.textContent = poem.title || 'Bài thơ';
-    const lines = Array.isArray(poem.lines) ? poem.lines : [];
-    if (contentEl) {
-        contentEl.innerHTML = `<div class="max-w-xl mx-auto rounded-3xl bg-gradient-to-br from-amber-50 via-pink-50 to-purple-50 border-2 border-pink-200 px-5 py-4 shadow-sm">
-            <div class="text-3xl mb-2">${escapeHtml(poem.icon || '🌷')}</div>
-            <div class="font-black text-xl md:text-2xl text-purple-800 mb-1">${escapeHtml(poem.title || '')}</div>
-            <div class="text-xs text-pink-500 font-black mb-3">✍️ Cô Thỏ Hồng sáng tác</div>
-            <div class="space-y-1.5 text-[17px] md:text-[19px] leading-8 text-slate-800 font-bold">${lines.map(line => line ? `<div>${escapeHtml(line)}</div>` : '<div class="h-2"></div>').join('')}</div>
-            ${poem.message ? `<div class="mt-4 pt-3 border-t border-pink-200 text-sm text-pink-700 font-black">🌟 ${escapeHtml(poem.message)}</div>` : ''}
-        </div>`;
-    }
-    const lectureView = document.getElementById('view-lecture');
-    if (lectureView) lectureView.dataset.audioText = `${poem.title || ''}. ${lines.filter(Boolean).join(' ')}`;
-    if (listEl) {
-        listEl.className = 'grid grid-cols-2 gap-2 w-full max-w-xl';
-        listEl.innerHTML = `<button onclick="openThoNhacSection_('poems')" class="py-2.5 bg-pink-50 border border-pink-200 text-pink-700 rounded-xl text-xs font-black pastel-btn">← Vườn thơ</button>
-            <button onclick="openThoNhacPoem_(${(Number(index)+1) % Math.max(1,(activeThoNhacTopic_.poems||[]).length)})" class="py-2.5 bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-xl text-xs font-black pastel-btn">Bài tiếp →</button>`;
-    }
+    const data = await loadFairyTalesData_();
+    activeFairyGroup_ = groupName;
+    const items = data.stories.filter(s => s.group === groupName);
+    updateDiscoverBreadcrumb_('12. Truyện cổ tích','📚',groupName);
+    setLectureUtilityVisibility_(false,false);
+    const titleEl=document.getElementById('lecture-title');
+    const contentEl=document.getElementById('lecture-content');
+    const listEl=document.getElementById('lecture-subtopics-list');
+    if(titleEl) titleEl.textContent=groupName;
+    if(contentEl) contentEl.innerHTML=`<span class="font-black text-purple-700">${groupName==='Truyện cổ tích Việt Nam'?'🇻🇳':'🌍'} Chọn một câu chuyện để nghe Cô Thỏ Hồng kể nhé!</span>`;
+    if(!listEl) return;
+    listEl.className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 w-full max-w-5xl';
+    listEl.innerHTML=items.map(s=>{
+      const absoluteIndex=data.stories.indexOf(s);
+      return `<button onclick="openThoNhacStory_(${absoluteIndex})" class="p-3.5 bg-white border-2 border-purple-100 hover:border-pink-300 rounded-2xl text-left pastel-btn shadow-sm"><div class="flex items-start gap-3"><span class="text-2xl">${escapeHtml(s.icon||'📖')}</span><div class="min-w-0"><div class="font-black text-purple-700">${escapeHtml(s.title||'Truyện cổ tích')}</div><div class="text-[11px] text-slate-500 font-bold mt-1">${escapeHtml(s.theme||'')} · 3 câu nghe hiểu</div></div></div></button>`;
+    }).join('')+`<button onclick="openThoNhacMenu()" class="sm:col-span-2 lg:col-span-3 py-2.5 bg-slate-50 border border-slate-200 text-slate-600 rounded-xl text-xs font-black pastel-btn">← Hai kho truyện</button>`;
 }
 
-function openThoNhacStory_(index) {
+function openThoNhacSection_(kind) { return openThoNhacMenu(); }
+function openThoNhacPoem_(index) { return openThoNhacMenu(); }
+
+async function openThoNhacStory_(index) {
     stopSpeaking();
-    activeStoryIndex_ = Number(index);
-    activeStoryAnswers_ = {};
-    const story = activeThoNhacTopic_?.stories?.[activeStoryIndex_];
-    if (!story) return;
-
-    updateDiscoverBreadcrumb_('12. Thơ và truyện cổ tích', '📚', story.title || 'Truyện cổ tích');
-    setLectureUtilityVisibility_(true, false);
-
-    const titleEl = document.getElementById('lecture-title');
-    const contentEl = document.getElementById('lecture-content');
-    const listEl = document.getElementById('lecture-subtopics-list');
-    if (titleEl) titleEl.textContent = story.title || 'Truyện cổ tích';
-
-    if (contentEl) {
-        contentEl.innerHTML = `<div class="max-w-3xl mx-auto rounded-3xl bg-gradient-to-br from-amber-50 via-white to-purple-50 border-2 border-purple-200 px-5 py-5 shadow-sm text-left">
-            <div class="text-center">
-                <div class="text-4xl mb-2">${escapeHtml(story.icon || '📖')}</div>
-                <div class="font-black text-xl md:text-2xl text-purple-800">${escapeHtml(story.title || '')}</div>
-                <div class="mt-2 flex flex-wrap justify-center gap-2">
-                    <span class="px-3 py-1 rounded-full bg-white border border-purple-200 text-purple-700 text-xs font-black">${escapeHtml(story.country || '')}</span>
-                    <span class="px-3 py-1 rounded-full bg-white border border-amber-200 text-amber-700 text-xs font-black">${escapeHtml(story.theme || '')}</span>
-                </div>
-            </div>
-            <div class="mt-4 text-[17px] md:text-[18px] leading-8 text-slate-800 font-semibold">${escapeHtml(story.content || '')}</div>
-            <div class="mt-4 p-3 rounded-2xl bg-pink-50 border border-pink-200 text-center text-sm text-pink-700 font-black">🔊 Bấm “Nghe cô đọc” để Cô Thỏ Hồng kể chuyện. Nghe xong bé trả lời 3 câu bên dưới nhé!</div>
-            <div id="story-comprehension-box" class="mt-4 space-y-3">${renderStoryQuestions_(story)}</div>
-        </div>`;
-    }
-
-    const lectureView = document.getElementById('view-lecture');
-    if (lectureView) lectureView.dataset.audioText = `${story.title || ''}. ${story.content || ''}`;
-
-    if (listEl) {
-        listEl.className = 'grid grid-cols-2 gap-2 w-full max-w-xl';
-        listEl.innerHTML = `<button onclick="openThoNhacSection_('stories')" class="py-2.5 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-xs font-black pastel-btn">← Kho truyện</button>
-            <button onclick="openThoNhacStory_(${(activeStoryIndex_+1) % Math.max(1,(activeThoNhacTopic_.stories||[]).length)})" class="py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl text-xs font-black pastel-btn">Truyện tiếp →</button>`;
+    const data=await loadFairyTalesData_();
+    activeStoryIndex_=Number(index);
+    activeStoryAnswers_={};
+    const story=data.stories[activeStoryIndex_];
+    if(!story) return;
+    activeFairyGroup_=story.group;
+    updateDiscoverBreadcrumb_('12. Truyện cổ tích','📚',story.title||'Truyện cổ tích');
+    setLectureUtilityVisibility_(true,false);
+    const titleEl=document.getElementById('lecture-title');
+    const contentEl=document.getElementById('lecture-content');
+    const listEl=document.getElementById('lecture-subtopics-list');
+    if(titleEl) titleEl.textContent=story.title||'Truyện cổ tích';
+    if(contentEl) contentEl.innerHTML=`<div class="max-w-4xl mx-auto rounded-3xl bg-gradient-to-br from-amber-50 via-white to-purple-50 border-2 border-purple-200 px-5 md:px-7 py-5 shadow-sm text-left"><div class="text-center"><div class="text-4xl mb-2">${escapeHtml(story.icon||'📖')}</div><div class="font-black text-xl md:text-2xl text-purple-800">${escapeHtml(story.title||'')}</div><div class="mt-2 flex flex-wrap justify-center gap-2"><span class="px-3 py-1 rounded-full bg-white border border-purple-200 text-purple-700 text-xs font-black">${escapeHtml(story.group||'')}</span><span class="px-3 py-1 rounded-full bg-white border border-amber-200 text-amber-700 text-xs font-black">${escapeHtml(story.theme||'')}</span></div></div><div class="mt-5 whitespace-pre-line text-[17px] md:text-[18px] leading-8 text-slate-800 font-semibold select-text">${escapeHtml(story.content||'')}</div><div class="mt-4 p-3 rounded-2xl bg-pink-50 border border-pink-200 text-center text-sm text-pink-700 font-black">🔊 Bấm “Nghe cô đọc” để Cô Thỏ Hồng kể toàn bộ câu chuyện. Nghe xong bé trả lời 3 câu bên dưới nhé!</div><div id="story-comprehension-box" class="mt-4 space-y-3">${renderStoryQuestions_(story)}</div></div>`;
+    const lectureView=document.getElementById('view-lecture');
+    if(lectureView) lectureView.dataset.audioText=`${story.title||''}. ${story.content||''}`;
+    if(listEl){
+      const groupItems=data.stories.map((s,i)=>({s,i})).filter(x=>x.s.group===story.group);
+      const pos=groupItems.findIndex(x=>x.i===activeStoryIndex_);
+      const next=groupItems[(pos+1)%groupItems.length]?.i ?? activeStoryIndex_;
+      listEl.className='grid grid-cols-2 gap-2 w-full max-w-xl';
+      listEl.innerHTML=`<button onclick="openFairyGroup_('${story.group.replace(/'/g,"\\'")}')" class="py-2.5 bg-purple-50 border border-purple-200 text-purple-700 rounded-xl text-xs font-black pastel-btn">← Danh sách truyện</button><button onclick="openThoNhacStory_(${next})" class="py-2.5 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl text-xs font-black pastel-btn">Truyện tiếp →</button>`;
     }
 }
 
 function renderStoryQuestions_(story) {
-    const qs = Array.isArray(story?.questions) ? story.questions : [];
-    if (!qs.length) return '';
-    return `<div class="pt-2 border-t border-purple-100">
-        <div class="text-center font-black text-purple-700 text-base mb-3">🧠 Bé nghe hiểu</div>
-        ${qs.map((q, qi) => `<div class="mb-3 p-3 rounded-2xl bg-white border border-purple-100 shadow-sm">
-            <div class="font-black text-slate-700 text-sm mb-2">Câu ${qi+1}. ${escapeHtml(q.q || '')}</div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                ${(q.o || []).map((opt, oi) => `<button id="story-q-${qi}-o-${oi}" onclick="answerStoryQuestion_(${qi}, ${oi})" class="story-answer-btn p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-purple-50 text-slate-700 text-xs md:text-sm font-bold text-left">${escapeHtml(opt)}</button>`).join('')}
-            </div>
-            <div id="story-q-feedback-${qi}" class="hidden mt-2 text-xs font-black"></div>
-        </div>`).join('')}
-    </div>`;
+    const qs=Array.isArray(story?.questions)?story.questions:[];
+    if(!qs.length) return '';
+    return `<div class="pt-2 border-t border-purple-100"><div class="text-center font-black text-purple-700 text-base mb-3">🧠 Bé nghe hiểu</div>${qs.map((q,qi)=>`<div class="mb-3 p-3 rounded-2xl bg-white border border-purple-100 shadow-sm"><div class="font-black text-slate-700 text-sm mb-2">Câu ${qi+1}. ${escapeHtml(q.q||'')}</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${(q.o||[]).map((opt,oi)=>`<button id="story-q-${qi}-o-${oi}" onclick="answerStoryQuestion_(${qi},${oi})" class="story-answer-btn p-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-purple-50 text-slate-700 text-xs md:text-sm font-bold text-left">${escapeHtml(opt)}</button>`).join('')}</div><div id="story-q-feedback-${qi}" class="hidden mt-2 text-xs font-black"></div></div>`).join('')}</div>`;
 }
 
-function answerStoryQuestion_(qi, oi) {
-    const story = activeThoNhacTopic_?.stories?.[activeStoryIndex_];
-    const q = story?.questions?.[Number(qi)];
-    if (!q || activeStoryAnswers_[qi]) return;
-    const opts = Array.isArray(q.o) ? q.o : [];
-    const selected = opts[Number(oi)];
-    const correct = String(selected) === String(q.a);
-    activeStoryAnswers_[qi] = true;
-
-    opts.forEach((opt, idx) => {
-        const btn = document.getElementById(`story-q-${qi}-o-${idx}`);
-        if (!btn) return;
-        btn.disabled = true;
-        if (String(opt) === String(q.a)) {
-            btn.className = 'story-answer-btn p-2.5 rounded-xl border-2 border-emerald-300 bg-emerald-50 text-emerald-700 text-xs md:text-sm font-black text-left';
-        } else if (idx === Number(oi) && !correct) {
-            btn.className = 'story-answer-btn p-2.5 rounded-xl border-2 border-rose-300 bg-rose-50 text-rose-700 text-xs md:text-sm font-black text-left';
-        } else {
-            btn.classList.add('opacity-60');
-        }
-    });
-
-    const fb = document.getElementById(`story-q-feedback-${qi}`);
-    if (fb) {
-        fb.classList.remove('hidden');
-        fb.className = `mt-2 text-xs font-black ${correct ? 'text-emerald-600' : 'text-rose-600'}`;
-        fb.textContent = correct ? `⭐ ${q.h || 'Đúng rồi!'}` : `💡 Chưa đúng. Đáp án đúng là: ${q.a}`;
-    }
-
-    const speech = correct ? `Đúng rồi! ${q.h || ''}` : `Chưa đúng. Đáp án đúng là ${q.a}.`;
-    if (typeof speakText === 'function') speakText(speech);
+async function answerStoryQuestion_(qi,oi){
+    const data=await loadFairyTalesData_();
+    const story=data.stories?.[activeStoryIndex_];
+    const q=story?.questions?.[Number(qi)];
+    if(!q||activeStoryAnswers_[qi]) return;
+    const opts=Array.isArray(q.o)?q.o:[]; const selected=opts[Number(oi)]; const correct=String(selected)===String(q.a); activeStoryAnswers_[qi]=true;
+    opts.forEach((opt,idx)=>{const btn=document.getElementById(`story-q-${qi}-o-${idx}`);if(!btn)return;btn.disabled=true;if(String(opt)===String(q.a)){btn.className='story-answer-btn p-2.5 rounded-xl border-2 border-emerald-300 bg-emerald-50 text-emerald-700 text-xs md:text-sm font-black text-left';}else if(idx===Number(oi)&&!correct){btn.className='story-answer-btn p-2.5 rounded-xl border-2 border-rose-300 bg-rose-50 text-rose-700 text-xs md:text-sm font-black text-left';}else btn.classList.add('opacity-60');});
+    const fb=document.getElementById(`story-q-feedback-${qi}`); if(fb){fb.classList.remove('hidden');fb.className=`mt-2 text-xs font-black ${correct?'text-emerald-600':'text-rose-600'}`;fb.textContent=correct?`⭐ ${q.h||'Đúng rồi!'}`:`💡 Chưa đúng. Đáp án đúng là: ${q.a}`;}
+    if(typeof speakText==='function') speakText(correct?`Đúng rồi! ${q.h||''}`:`Chưa đúng. Đáp án đúng là ${q.a}.`);
 }
 
 function showLectureAndSubtopics(topicNum, topicName, topicObj) {

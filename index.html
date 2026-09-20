@@ -311,31 +311,96 @@
 
 
 
-        /* TV1 - hiệu ứng thiên nhiên nhẹ dùng chung cho toàn bộ màn học tập */
+        /* TV1 - bầu trời thiên nhiên dùng chung trên TOÀN BỘ các màn học tập */
         .topic4-reading-stage,
         .nature-ambient-host { position:relative; isolation:isolate; }
         .nature-ambient-host > :not(.nature-ambient-layer) { position:relative; z-index:1; }
-        .nature-ambient-layer { position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0; border-radius:inherit; opacity:.66; }
+        .nature-ambient-layer {
+            position:absolute; inset:0; overflow:hidden; pointer-events:none; z-index:0;
+            border-radius:inherit; opacity:.72;
+        }
         #view-dashboard-grid.nature-ambient-host { overflow:hidden; border-radius:28px; }
-        #view-dashboard-grid.nature-ambient-host > .nature-ambient-layer { opacity:.48; }
-        #view-game-play.nature-ambient-host > .nature-ambient-layer { opacity:.58; }
-        .nature-cloud { position:absolute; opacity:.30; filter:drop-shadow(0 3px 3px rgba(100,116,139,.10)); animation:natureCloudDrift linear infinite; }
-        .nature-cloud-1 { top:7%; left:-12%; font-size:3.4rem; animation-duration:26s; }
-        .nature-cloud-2 { top:18%; left:-18%; font-size:2.5rem; animation-duration:34s; animation-delay:-13s; opacity:.22; }
-        .nature-bird { position:absolute; left:-8%; opacity:.55; animation:natureBirdFly linear infinite; }
-        .nature-bird-1 { top:22%; font-size:1.35rem; animation-duration:18s; }
-        .nature-bird-2 { top:34%; font-size:1rem; animation-duration:24s; animation-delay:-10s; opacity:.42; }
-        .nature-leaf { position:absolute; top:-12%; opacity:.55; animation:natureLeafFall linear infinite; }
-        .nature-leaf-1 { left:12%; font-size:1.15rem; animation-duration:11s; }
-        .nature-leaf-2 { left:38%; font-size:.95rem; animation-duration:14s; animation-delay:-5s; }
-        .nature-leaf-3 { left:72%; font-size:1.1rem; animation-duration:12s; animation-delay:-8s; }
-        .nature-leaf-4 { left:88%; font-size:.9rem; animation-duration:15s; animation-delay:-2s; }
-        .nature-leaf-5 { left:54%; font-size:1rem; animation-duration:13s; animation-delay:-9s; }
-        @keyframes natureCloudDrift { from { transform:translateX(0); } to { transform:translateX(1350px); } }
-        @keyframes natureBirdFly { 0% { transform:translateX(0) translateY(0) rotate(-3deg); } 45% { transform:translateX(620px) translateY(-18px) rotate(3deg); } 100% { transform:translateX(1320px) translateY(8px) rotate(-2deg); } }
-        @keyframes natureLeafFall { 0% { transform:translate3d(0,-20px,0) rotate(0deg); } 45% { transform:translate3d(26px,260px,0) rotate(180deg); } 100% { transform:translate3d(-18px,620px,0) rotate(420deg); } }
+        #view-dashboard-grid.nature-ambient-host > .nature-ambient-layer { opacity:.58; }
+        #view-quiz.nature-ambient-host > .nature-ambient-layer,
+        #view-result.nature-ambient-host > .nature-ambient-layer { opacity:.62; }
+        #view-game-play.nature-ambient-host > .nature-ambient-layer { opacity:.68; }
+
+        /* Mây trôi */
+        .nature-cloud {
+            position:absolute; opacity:.30;
+            filter:drop-shadow(0 3px 3px rgba(100,116,139,.10));
+            animation:natureCloudDrift linear infinite; will-change:transform;
+        }
+        .nature-cloud-1 { top:6%; left:-14%; font-size:3.5rem; animation-duration:28s; }
+        .nature-cloud-2 { top:17%; left:-20%; font-size:2.55rem; animation-duration:37s; animation-delay:-14s; opacity:.23; }
+        .nature-cloud-3 { top:48%; left:-18%; font-size:2rem; animation-duration:42s; animation-delay:-24s; opacity:.16; }
+
+        /* Chim bay */
+        .nature-bird { position:absolute; left:-8%; opacity:.55; animation:natureBirdFly linear infinite; will-change:transform; }
+        .nature-bird-1 { top:21%; font-size:1.35rem; animation-duration:19s; }
+        .nature-bird-2 { top:36%; font-size:1rem; animation-duration:25s; animation-delay:-10s; opacity:.43; }
+        .nature-bird-3 { top:58%; font-size:.9rem; animation-duration:29s; animation-delay:-18s; opacity:.32; }
+
+        /* Lá thu đỏ - vàng. Gió làm lá lượn sang hai bên thay vì rơi thẳng. */
+        .nature-leaf { position:absolute; top:-14%; opacity:.70; animation:natureLeafFall linear infinite; will-change:transform; }
+        .nature-leaf-red { filter:saturate(1.28) drop-shadow(0 2px 2px rgba(190,24,93,.12)); }
+        .nature-leaf-yellow { filter:saturate(1.18) brightness(1.08) drop-shadow(0 2px 2px rgba(217,119,6,.12)); }
+        .nature-leaf-1 { left:8%;  font-size:1.10rem; animation-duration:11s; animation-delay:-1s; }
+        .nature-leaf-2 { left:24%; font-size:.92rem; animation-duration:14s; animation-delay:-6s; }
+        .nature-leaf-3 { left:41%; font-size:1.15rem; animation-duration:12s; animation-delay:-9s; }
+        .nature-leaf-4 { left:58%; font-size:.95rem; animation-duration:15s; animation-delay:-3s; }
+        .nature-leaf-5 { left:73%; font-size:1.05rem; animation-duration:13s; animation-delay:-10s; }
+        .nature-leaf-6 { left:87%; font-size:.88rem; animation-duration:16s; animation-delay:-7s; }
+        .nature-leaf-7 { left:49%; font-size:.82rem; animation-duration:17s; animation-delay:-13s; opacity:.55; }
+        .nature-leaf-8 { left:94%; font-size:.78rem; animation-duration:18s; animation-delay:-4s; opacity:.50; }
+
+        /* Luồng gió mảnh, xanh nhạt, lướt ngang màn hình */
+        .nature-wind {
+            position:absolute; left:-220px; width:145px; height:30px; opacity:.34;
+            border-top:3px solid rgba(125,211,252,.55); border-radius:60% 70% 0 0;
+            animation:natureWindGust linear infinite; will-change:transform;
+        }
+        .nature-wind::before,
+        .nature-wind::after {
+            content:''; position:absolute; left:22px; border-top:2px solid rgba(167,243,208,.52); border-radius:60%;
+        }
+        .nature-wind::before { top:9px; width:105px; height:20px; }
+        .nature-wind::after { top:18px; left:54px; width:72px; height:14px; border-top-color:rgba(196,181,253,.46); }
+        .nature-wind-1 { top:31%; animation-duration:13s; animation-delay:-2s; }
+        .nature-wind-2 { top:54%; width:180px; animation-duration:17s; animation-delay:-10s; opacity:.27; }
+        .nature-wind-3 { top:76%; width:120px; animation-duration:15s; animation-delay:-7s; opacity:.24; }
+
+        @keyframes natureCloudDrift {
+            from { transform:translateX(0); }
+            to { transform:translateX(1550px); }
+        }
+        @keyframes natureBirdFly {
+            0% { transform:translateX(0) translateY(0) rotate(-4deg); }
+            35% { transform:translateX(470px) translateY(-18px) rotate(2deg); }
+            68% { transform:translateX(920px) translateY(10px) rotate(-1deg); }
+            100% { transform:translateX(1480px) translateY(-8px) rotate(2deg); }
+        }
+        @keyframes natureLeafFall {
+            0%   { transform:translate3d(0,-30px,0) rotate(0deg); }
+            20%  { transform:translate3d(34px,145px,0) rotate(95deg); }
+            43%  { transform:translate3d(-20px,300px,0) rotate(205deg); }
+            66%  { transform:translate3d(44px,455px,0) rotate(315deg); }
+            82%  { transform:translate3d(8px,565px,0) rotate(390deg); }
+            100% { transform:translate3d(62px,760px,0) rotate(520deg); }
+        }
+        @keyframes natureWindGust {
+            0%   { transform:translate3d(0,0,0) scaleX(.85); opacity:0; }
+            8%   { opacity:.34; }
+            48%  { transform:translate3d(760px,-8px,0) scaleX(1.08); opacity:.36; }
+            92%  { opacity:.20; }
+            100% { transform:translate3d(1650px,5px,0) scaleX(.95); opacity:0; }
+        }
+        @media (max-width:640px) {
+            .nature-cloud-3,.nature-bird-3,.nature-leaf-7,.nature-leaf-8,.nature-wind-3 { display:none; }
+            .nature-ambient-layer { opacity:.60; }
+        }
         @media (prefers-reduced-motion: reduce) {
-            .nature-cloud,.nature-bird,.nature-leaf { animation:none !important; opacity:.14 !important; }
+            .nature-cloud,.nature-bird,.nature-leaf,.nature-wind { animation:none !important; opacity:.12 !important; }
         }
         @media print { .nature-ambient-layer { display:none !important; } }
 </style>
@@ -912,7 +977,7 @@
     </footer>
 
     <!-- NẠP ENGINE JAVASCRIPT ĐỒNG BỘ -->
-    <script src="assets/js/app.js?v=10.1-tv1-tapdoc"></script>
+    <script src="assets/js/app.js?v=10.2-tv1-nature-all"></script>
     <script>
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {

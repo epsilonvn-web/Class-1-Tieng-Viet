@@ -958,43 +958,44 @@ function ensureCompactHeaderBreadcrumbTabs_() {
     const style = document.createElement('style');
     style.id = 'tv1-compact-header-breadcrumb-style';
     style.textContent = `
-        /* TV1: nút Home/logo KHÔNG tính vào breadcrumb.
-           Sau Home hiển thị tối đa 4 tab. Mỗi tab bị khóa bề rộng tối đa,
-           tên dài tự cắt bằng dấu … để cả 4 tab vẫn nằm cùng hàng trên desktop. */
+        /* TV1: breadcrumb tren banner phu.
+           Desktop uu tien hien thi DAY DU ten tab theo noi dung thuc te.
+           Moi tab tu co gian theo text, gioi han toi da 440px; neu tong qua dai
+           thi ca hang breadcrumb cuon ngang thay vi ep moi tab ve 132/158px. */
         #header-learning-tabs {
+            width: 100% !important;
             min-width: 0 !important;
-            max-width: 648px !important;
-            flex: 0 1 648px !important;
-            overflow: hidden !important;
+            max-width: none !important;
+            flex: 1 1 auto !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            scrollbar-width: none !important;
         }
+        #header-learning-tabs::-webkit-scrollbar { display: none !important; }
 
         #header-level2-tab,
         #header-level3-tab,
         #header-level4-tab,
         #header-level5-tab {
-            width: 158px !important;
-            min-width: 158px !important;
-            max-width: 158px !important;
-            flex: 0 0 158px !important;
-            overflow: hidden !important;
-        }
-
-        #header-level2-tab > button {
-            width: 100% !important;
-            min-width: 0 !important;
-            max-width: 100% !important;
-            justify-content: flex-start !important;
-            overflow: hidden !important;
-        }
-
-        #header-level3-tab > div,
-        #header-level4-tab > div,
-        #header-level5-tab > div {
-            flex: 1 1 auto !important;
             width: auto !important;
             min-width: 0 !important;
             max-width: none !important;
-            overflow: hidden !important;
+            flex: 0 0 auto !important;
+            overflow: visible !important;
+        }
+
+        #header-level2-tab > button,
+        #header-level3-tab > div,
+        #header-level4-tab > div,
+        #header-level5-tab > div {
+            width: auto !important;
+            min-width: 0 !important;
+            max-width: 440px !important;
+            flex: 0 0 auto !important;
+            justify-content: flex-start !important;
+            overflow: visible !important;
+            padding-left: 18px !important;
+            padding-right: 18px !important;
         }
 
         #header-level2-title,
@@ -1002,10 +1003,13 @@ function ensureCompactHeaderBreadcrumbTabs_() {
         #header-level4-title,
         #header-level5-title {
             display: block !important;
+            width: auto !important;
             min-width: 0 !important;
+            max-width: 400px !important;
             overflow: hidden !important;
             text-overflow: ellipsis !important;
             white-space: nowrap !important;
+            font-size: 14px !important;
         }
 
         #header-level3-tab > span,
@@ -1014,22 +1018,7 @@ function ensureCompactHeaderBreadcrumbTabs_() {
             flex: 0 0 auto !important;
         }
 
-        @media (max-width: 1050px) {
-            #header-learning-tabs {
-                max-width: 544px !important;
-                flex-basis: 544px !important;
-            }
-            #header-level2-tab,
-            #header-level3-tab,
-            #header-level4-tab,
-            #header-level5-tab {
-                width: 132px !important;
-                min-width: 132px !important;
-                max-width: 132px !important;
-                flex-basis: 132px !important;
-            }
-        }
-
+        /* Mobile van gioi han tab de khong chiem het chieu ngang. */
         @media (max-width: 767px) {
             #header-learning-tabs {
                 max-width: 100% !important;
@@ -1044,7 +1033,28 @@ function ensureCompactHeaderBreadcrumbTabs_() {
                 width: 112px !important;
                 min-width: 112px !important;
                 max-width: 112px !important;
-                flex-basis: 112px !important;
+                flex: 0 0 112px !important;
+                overflow: hidden !important;
+            }
+            #header-level2-tab > button,
+            #header-level3-tab > div,
+            #header-level4-tab > div,
+            #header-level5-tab > div {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 9px !important;
+                padding-right: 9px !important;
+                overflow: hidden !important;
+            }
+            #header-level2-title,
+            #header-level3-title,
+            #header-level4-title,
+            #header-level5-title {
+                max-width: 100% !important;
+                font-size: 11px !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+                white-space: nowrap !important;
             }
         }
     `;

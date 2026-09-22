@@ -798,6 +798,7 @@
         #view-dashboard-grid .pastel-card,
         #view-dashboard-grid .pastel-card:hover {
             box-shadow: none !important;
+            border-width: 1px !important;
         }
 
         /* Card Khám phá vẫn giữ nền pastel rất nhẹ theo màu của từng mục.
@@ -869,6 +870,51 @@
         @media (max-width: 767px) {
             .main-module-tab { font-size: 14px !important; }
         }
+
+
+        /* TV1 2026-09-22 - Bang chu cai +20%, chu den; hop sao can chieu cao tab */
+        @media (min-width: 768px) {
+            #header-star-box {
+                height: 62px !important;
+                min-height: 62px !important;
+                padding: 5px 8px !important;
+                justify-content: center !important;
+                gap: 3px !important;
+            }
+            #header-star-box > div {
+                min-height: 22px !important;
+            }
+            #header-star-box > div > span:first-child {
+                font-size: 12px !important;
+                min-width: 48px !important;
+                padding: 3px 6px !important;
+            }
+            #header-star-box .fa-star { font-size: 12px !important; }
+            #star-green-count,
+            #star-red-count {
+                font-size: 15px !important;
+                line-height: 1 !important;
+                min-width: 14px !important;
+                text-align: center !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            #header-star-box {
+                height: 52px !important;
+                min-height: 52px !important;
+                padding: 4px 6px !important;
+                justify-content: center !important;
+                gap: 2px !important;
+            }
+            #header-star-box > div > span:first-child {
+                font-size: 11px !important;
+                padding: 2px 5px !important;
+            }
+            #star-green-count,
+            #star-red-count { font-size: 13px !important; }
+        }
+
 </style>
 </head>
 <body class="p-1 md:p-2 w-full" style="padding-top:0;padding-bottom:max(0.25rem,env(safe-area-inset-bottom));padding-left:max(0.25rem,env(safe-area-inset-left));padding-right:max(0.25rem,env(safe-area-inset-right));">

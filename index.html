@@ -830,9 +830,9 @@
         }
 
 
-        /* TV1 - Tang nhe co chu khu vuc header desktop */
+        /* TV1 - Co chu tab chinh tren header: desktop 16px, mobile 14px */
         @media (min-width: 768px) {
-            .main-module-tab { font-size: 14px !important; }
+            .main-module-tab { font-size: 16px !important; }
             #header-star-box > div > span:first-child { font-size: 11px !important; }
             #star-green-count,
             #star-red-count { font-size: 13px !important; }
@@ -864,6 +864,10 @@
                 text-overflow: ellipsis !important;
                 white-space: nowrap !important;
             }
+        }
+
+        @media (max-width: 767px) {
+            .main-module-tab { font-size: 14px !important; }
         }
 </style>
 </head>

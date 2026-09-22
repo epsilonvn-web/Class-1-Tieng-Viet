@@ -915,8 +915,12 @@
             #star-red-count { font-size: 13px !important; }
         }
 
-        /* TV1 FOOTER 8:1 - dong bo cach hien thi voi TV2 */
+        /* TV1 FOOTER 8:1 - dong bo cach hien thi voi TV2.
+           Footer nam ngoai #screen-dashboard, nen bu tru padding cua dashboard
+           de be rong artwork bang chinh xac banner. */
         #app-footer {
+            width: calc(100% - 1rem) !important;
+            max-width: calc(72rem - 1rem) !important;
             aspect-ratio: 8 / 1 !important;
             min-height: 0 !important;
             height: auto !important;
@@ -927,6 +931,8 @@
         }
         @media (max-width: 767px) {
             #app-footer {
+                width: calc(100% - 0.5rem) !important;
+                max-width: calc(72rem - 0.5rem) !important;
                 aspect-ratio: 8 / 1 !important;
                 min-height: 0 !important;
                 height: auto !important;

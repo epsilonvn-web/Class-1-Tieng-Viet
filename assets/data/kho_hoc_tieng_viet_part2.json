@@ -12479,7 +12479,7 @@
       "id": 11,
       "name": "ĐỐ VUI BÉ NGOAN (IQ)",
       "desc": "Kho câu đố dân gian và đố vui về trường học, con vật, cơ thể, đồ vật, giao thông, cây cối và ngày Tết; dùng để rèn đọc hiểu và suy luận.",
-      "l_title": "Bài học 10: Kho câu đố vui IQ",
+      "l_title": "11. Đố vui bé ngoan (IQ)",
       "l_content": "Bé chọn một chủ đề để chơi câu đố: trường học, con vật, cơ thể người, đồ vật gia đình, giao thông, cây cối hoa quả, ngày Tết; hoặc chọn Trộn ngẫu nhiên để lấy câu hỏi từ toàn bộ kho 285 câu.",
       "l_audio": "Chào bé đến với kho câu đố vui. Bé có thể chọn từng chủ đề hoặc chọn Trộn ngẫu nhiên để thử sức với toàn bộ câu đố nhé!",
       "qs": [
@@ -22274,7 +22274,7 @@
             "Quét nhà bé mẹ giúp."
           ],
           "a": "Bé giúp mẹ quét nhà.",
-          "h": "Đáp án đúng là “Bé giúp mẹ quét nhà.”.",
+          "h": "Đáp án đúng là “Bé giúp mẹ quét nhà.”",
           "emoji": "🧹",
           "week": null,
           "tags": [
@@ -22295,7 +22295,7 @@
             "Nắng hôm nay trời."
           ],
           "a": "Hôm nay trời nắng.",
-          "h": "Đáp án đúng là “Hôm nay trời nắng.”.",
+          "h": "Đáp án đúng là “Hôm nay trời nắng.”",
           "emoji": "☀️",
           "week": null,
           "tags": [
@@ -22316,7 +22316,7 @@
             "Bé ơi, đọc sách nhé!"
           ],
           "a": "Bé đang đọc sách.",
-          "h": "Đáp án đúng là “Bé đang đọc sách.”.",
+          "h": "Đáp án đúng là “Bé đang đọc sách.”",
           "emoji": "📖",
           "week": null,
           "tags": [
@@ -22337,7 +22337,7 @@
             "Bạn đi học chưa?"
           ],
           "a": "Bạn đi học chưa?",
-          "h": "Đáp án đúng là “Bạn đi học chưa?”.",
+          "h": "Đáp án đúng là “Bạn đi học chưa?”",
           "emoji": "❓",
           "week": null,
           "tags": [
@@ -22702,7 +22702,7 @@
             "Em xếp sách vở gọn gàng."
           ],
           "a": "Em xếp sách vở gọn gàng.",
-          "h": "Đáp án đúng là “Em xếp sách vở gọn gàng.”.",
+          "h": "Đáp án đúng là “Em xếp sách vở gọn gàng.”",
           "emoji": "📚",
           "week": null,
           "tags": [
@@ -22723,7 +22723,7 @@
             "Em bỏ bút vào túi."
           ],
           "a": "Em nhặt được bút và đưa cô giáo.",
-          "h": "Đáp án đúng là “Em nhặt được bút và đưa cô giáo.”.",
+          "h": "Đáp án đúng là “Em nhặt được bút và đưa cô giáo.”",
           "emoji": "🖊️",
           "week": null,
           "tags": [
@@ -22744,7 +22744,7 @@
             "Em chia bánh cho bạn."
           ],
           "a": "Em chia bánh cho bạn.",
-          "h": "Đáp án đúng là “Em chia bánh cho bạn.”.",
+          "h": "Đáp án đúng là “Em chia bánh cho bạn.”",
           "emoji": "🍰",
           "week": null,
           "tags": [
@@ -22765,7 +22765,7 @@
             "Bé đã ăn cơm chưa."
           ],
           "a": "Bé đã ăn cơm chưa?",
-          "h": "Đáp án đúng là “Bé đã ăn cơm chưa?”.",
+          "h": "Đáp án đúng là “Bé đã ăn cơm chưa?”",
           "emoji": "❓",
           "week": null,
           "tags": [

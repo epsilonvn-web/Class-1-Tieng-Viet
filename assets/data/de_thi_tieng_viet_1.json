@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Đấu trường đề thi Tiếng Việt 1 - Cô giáo Thỏ Hồng",
-    "version": "2026-09-15",
+    "title": "Đấu trường đề thi Tiếng Việt 1 - Cô Thỏ Hồng",
+    "version": "2026-09-22",
     "matrix": "13 câu / 10 điểm / 40 phút",
     "counts": {
       "Học kỳ 1": 30,
@@ -112,7 +112,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🧮 🧮 Dùng để học tính có thể là gì?",
+          "question_text": "🧮 Dùng để học tính có thể là gì?",
           "options": [
             "bút màu",
             "cục tẩy",
@@ -262,7 +262,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'con cú', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'cú' của cụm 'con cú', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "i",
             "u",
@@ -270,7 +270,7 @@
             "a"
           ],
           "answer": "u",
-          "hint": "Chính xác! Trong từ 'con cú', nguyên âm chính là chữ 'u' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'cú', nguyên âm chính là chữ 'u'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120014,
@@ -347,7 +347,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🪟 🪟 Cho ánh sáng vào lớp là gì?",
+          "question_text": "🪟 Cho ánh sáng vào lớp là gì?",
           "options": [
             "hộp bút",
             "cái ghế",
@@ -497,7 +497,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'viên bi', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'bi' của cụm 'viên bi', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "e",
             "u",
@@ -505,7 +505,7 @@
             "a"
           ],
           "answer": "i",
-          "hint": "Chính xác! Trong từ 'viên bi', nguyên âm chính là chữ 'i' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'bi', nguyên âm chính là chữ 'i'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120027,
@@ -732,7 +732,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'quả lê', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'lê' của cụm 'quả lê', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "a",
             "u",
@@ -740,7 +740,7 @@
             "y"
           ],
           "answer": "ê",
-          "hint": "Chính xác! Trong từ 'quả lê', nguyên âm chính là chữ 'ê' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'lê', nguyên âm chính là chữ 'ê'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120040,
@@ -766,15 +766,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Cô đọc yêu cầu: 'ca' + thanh ngã. Bé tìm tiếng được tạo thành.",
+          "question_text": "Tiếng 'ma' thêm thanh ngã sẽ thành tiếng nào?",
           "options": [
-            "cã",
-            "cá",
-            "cà",
-            "cả"
+            "mã",
+            "má",
+            "mà",
+            "mả"
           ],
-          "answer": "cã",
-          "hint": "Tiếng gốc là 'ca'. Thêm thanh ngã ta được 'cã'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "answer": "mã",
+          "hint": "Đúng rồi! 'ma' thêm thanh ngã thành 'mã'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120042,
@@ -817,7 +817,7 @@
           "question_number": 5
         },
         {
-          "question_text": "📌 📌 Dùng để ghim giấy là gì?",
+          "question_text": "📌 Dùng để ghim giấy là gì?",
           "options": [
             "cục tẩy",
             "phấn",
@@ -1052,7 +1052,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏫 🏫 Phòng bé ngồi học gọi là gì?",
+          "question_text": "🏫 Phòng bé ngồi học gọi là gì?",
           "options": [
             "phòng bếp",
             "phòng ngủ",
@@ -1145,7 +1145,7 @@
             "hoa hồng nở rất đẹp."
           ],
           "answer": "Hoa hồng nở rất đẹp.",
-          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”.",
+          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120063,
@@ -1287,7 +1287,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏫 🏫 Nơi bé đến học gọi là gì?",
+          "question_text": "🏫 Nơi bé đến học gọi là gì?",
           "options": [
             "trường học",
             "siêu thị",
@@ -1522,7 +1522,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🪑 🪑 Bé ngồi học trên gì?",
+          "question_text": "🪑 Bé ngồi học trên gì?",
           "options": [
             "cái ghế",
             "cái bàn",
@@ -1581,7 +1581,7 @@
             "dây"
           ],
           "answer": "dây",
-          "hint": "Từ đúng là tiếng 'dây' tạo thành câu 'Ăn khoai nhớ kẻ cho dây' dạy bé hiếu kính với cội nguồn nguồn gốc!",
+          "hint": "Từ đúng là tiếng 'dây' tạo thành câu 'Ăn khoai nhớ kẻ cho dây' dạy bé hiếu kính với cội nguồn!",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120087,
@@ -1992,7 +1992,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🧮 🧮 Dùng để học tính có thể là gì?",
+          "question_text": "🧮 Dùng để học tính có thể là gì?",
           "options": [
             "que tính",
             "cục tẩy",
@@ -2227,7 +2227,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏫 🏫 Nơi bé đến học gọi là gì?",
+          "question_text": "🏫 Nơi bé đến học gọi là gì?",
           "options": [
             "siêu thị",
             "công viên",
@@ -2462,7 +2462,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🔔 🔔 Báo hiệu vào học thường là gì?",
+          "question_text": "🔔 Báo hiệu vào học thường là gì?",
           "options": [
             "tiếng trống",
             "tiếng sóng",
@@ -2697,7 +2697,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏫 🏫 Phòng bé ngồi học gọi là gì?",
+          "question_text": "🏫 Phòng bé ngồi học gọi là gì?",
           "options": [
             "lớp học",
             "nhà tắm",
@@ -3116,15 +3116,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Cô đọc yêu cầu: 'me' + thanh ngã. Bé tìm tiếng được tạo thành.",
+          "question_text": "Tiếng 've' thêm thanh ngã sẽ thành tiếng nào?",
           "options": [
-            "mẻ",
-            "mé",
-            "mẽ",
-            "mè"
+            "vẽ",
+            "vé",
+            "vè",
+            "vẻ"
           ],
-          "answer": "mẽ",
-          "hint": "Tiếng gốc là 'me'. Thêm thanh ngã ta được 'mẽ'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "answer": "vẽ",
+          "hint": "Đúng rồi! 've' thêm thanh ngã thành 'vẽ'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120172,
@@ -3167,7 +3167,7 @@
           "question_number": 5
         },
         {
-          "question_text": "📝 📝 Bài cô giao về nhà gọi là gì?",
+          "question_text": "📝 Bài cô giao về nhà gọi là gì?",
           "options": [
             "bài hát",
             "bức tranh",
@@ -3317,7 +3317,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'căn nhà', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'căn' của cụm 'căn nhà', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "ă",
             "i",
@@ -3325,7 +3325,7 @@
             "u"
           ],
           "answer": "ă",
-          "hint": "Chính xác! Trong từ 'căn nhà', nguyên âm chính là chữ 'ă' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'căn', nguyên âm chính là chữ 'ă'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120183,
@@ -3552,7 +3552,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'cái cân', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'cân' của cụm 'cái cân', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "y",
             "u",
@@ -3560,7 +3560,7 @@
             "â"
           ],
           "answer": "â",
-          "hint": "Chính xác! Trong từ 'cái cân', nguyên âm chính là chữ 'â' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'cân', nguyên âm chính là chữ 'â'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120196,
@@ -3872,7 +3872,7 @@
           "question_number": 5
         },
         {
-          "question_text": "📖 📖 Bé đọc chữ trong gì?",
+          "question_text": "📖 Bé đọc chữ trong gì?",
           "options": [
             "cái cốc",
             "quyển sách",
@@ -4056,15 +4056,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Cô đọc yêu cầu: 'ca' + thanh ngã. Bé tìm tiếng được tạo thành.",
+          "question_text": "Tiếng 'vơ' thêm thanh ngã sẽ thành tiếng nào?",
           "options": [
-            "cã",
-            "cá",
-            "cả",
-            "cà"
+            "vỡ",
+            "vớ",
+            "vờ",
+            "vở"
           ],
-          "answer": "cã",
-          "hint": "Tiếng gốc là 'ca'. Thêm thanh ngã ta được 'cã'. Bé nhớ ghép tiếng trước rồi mới đặt dấu thanh nhé!",
+          "answer": "vỡ",
+          "hint": "Đúng rồi! 'vơ' thêm thanh ngã thành 'vỡ'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120224,
@@ -4342,7 +4342,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🪟 🪟 Cho ánh sáng vào lớp là gì?",
+          "question_text": "🪟 Cho ánh sáng vào lớp là gì?",
           "options": [
             "cái ghế",
             "bảng lớp",
@@ -4435,7 +4435,7 @@
             "Bé nhìn hoa đỏ."
           ],
           "answer": "Bé chạy thoắt vào nhà.",
-          "hint": "Đáp án đúng là “Bé chạy thoắt vào nhà.”.",
+          "hint": "Đáp án đúng là “Bé chạy thoắt vào nhà.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120245,
@@ -4577,7 +4577,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🚪 🚪 Dùng để ra vào lớp là gì?",
+          "question_text": "🚪 Dùng để ra vào lớp là gì?",
           "options": [
             "cửa sổ",
             "cửa ra vào",
@@ -5375,7 +5375,7 @@
             "hoa hồng nở rất đẹp"
           ],
           "answer": "Hoa hồng nở rất đẹp.",
-          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”.",
+          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120297,
@@ -5517,7 +5517,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🧻 🧻 Dùng để lau bảng là gì?",
+          "question_text": "🧻 Dùng để lau bảng là gì?",
           "options": [
             "cục tẩy",
             "khăn lau",
@@ -5987,7 +5987,7 @@
           "question_number": 5
         },
         {
-          "question_text": "📚 📚 Sách thường được xếp ở đâu?",
+          "question_text": "📚 Sách thường được xếp ở đâu?",
           "options": [
             "cửa ra vào",
             "cái ghế",
@@ -6137,7 +6137,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'quả lê', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'lê' của cụm 'quả lê', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "ê",
             "y",
@@ -6145,7 +6145,7 @@
             "a"
           ],
           "answer": "ê",
-          "hint": "Chính xác! Trong từ 'quả lê', nguyên âm chính là chữ 'ê' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'lê', nguyên âm chính là chữ 'ê'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120339,
@@ -6222,7 +6222,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🎒 🎒 Dùng để đựng sách vở là gì?",
+          "question_text": "🎒 Dùng để đựng sách vở là gì?",
           "options": [
             "bảng con",
             "hộp bút",
@@ -6372,7 +6372,7 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Trong từ 'lá cờ', chữ cái đứng ở vị trí nguyên âm chính là chữ nào dưới đây nhỉ?",
+          "question_text": "Trong tiếng 'cờ' của cụm 'lá cờ', nguyên âm chính là chữ nào dưới đây?",
           "options": [
             "u",
             "y",
@@ -6380,7 +6380,7 @@
             "e"
           ],
           "answer": "ơ",
-          "hint": "Chính xác! Trong từ 'lá cờ', nguyên âm chính là chữ 'ơ' nha bé!",
+          "hint": "Chính xác! Trong tiếng 'cờ', nguyên âm chính là chữ 'ơ'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120352,
@@ -6550,7 +6550,7 @@
             "hoa hồng nở rất đẹp"
           ],
           "answer": "Hoa hồng nở rất đẹp.",
-          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”.",
+          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120362,
@@ -7397,7 +7397,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🎨 🎨 Bé dùng màu tạo tranh gọi là gì?",
+          "question_text": "🎨 Bé dùng màu tạo tranh gọi là gì?",
           "options": [
             "rửa tay",
             "đọc sách",
@@ -7490,7 +7490,7 @@
             "Chim bay trên trời."
           ],
           "answer": "Bé chăm học và rất ngoan.",
-          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”.",
+          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120414,
@@ -7632,7 +7632,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🥜 🥜 Lạc rang có thể có vị gì?",
+          "question_text": "🥜 Lạc rang có thể có vị gì?",
           "options": [
             "cay",
             "chua",
@@ -7867,7 +7867,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏃 🏃 Bé di chuyển thật nhanh gọi là gì?",
+          "question_text": "🏃 Bé di chuyển thật nhanh gọi là gì?",
           "options": [
             "chạy",
             "ngủ",
@@ -8102,7 +8102,7 @@
           "question_number": 5
         },
         {
-          "question_text": "⚽ ⚽ Quả bóng tròn có dạng gì?",
+          "question_text": "⚽ Quả bóng tròn có dạng gì?",
           "options": [
             "nhọn",
             "vuông",
@@ -8337,7 +8337,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🤩 🤩 Trước chuyến đi chơi, bé có thể thấy gì?",
+          "question_text": "🤩 Trước chuyến đi chơi, bé có thể thấy gì?",
           "options": [
             "sợ",
             "buồn",
@@ -8572,7 +8572,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🐰 🐰 Lông thỏ thường thế nào?",
+          "question_text": "🐰 Lông thỏ thường thế nào?",
           "options": [
             "mềm mại",
             "cứng ngắc",
@@ -8807,7 +8807,7 @@
           "question_number": 5
         },
         {
-          "question_text": "✍️ ✍️ Bé dùng bút ghi chữ gọi là gì?",
+          "question_text": "✍️ Bé dùng bút ghi chữ gọi là gì?",
           "options": [
             "nhảy dây",
             "viết bài",
@@ -8894,13 +8894,13 @@
         {
           "question_text": "Câu nào có 5 tiếng?",
           "options": [
-            "Mẹ nấu cơm rất ngon.",
-            "Bé đọc sách.",
-            "Con mèo nằm ngủ.",
-            "Lan tưới hoa mỗi sáng."
+            "Bé chăm học mỗi ngày.",
+            "Em yêu trường.",
+            "Mẹ nấu cơm tối.",
+            "Trời xanh."
           ],
-          "answer": "Lan tưới hoa mỗi sáng.",
-          "hint": "Đáp án đúng là “Lan tưới hoa mỗi sáng.”.",
+          "answer": "Bé chăm học mỗi ngày.",
+          "hint": "'Bé / chăm / học / mỗi / ngày' có 5 tiếng.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120492,
@@ -9042,7 +9042,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🧼 🧼 Làm sạch tay bằng nước gọi là gì?",
+          "question_text": "🧼 Làm sạch tay bằng nước gọi là gì?",
           "options": [
             "quét nhà",
             "rửa tay",
@@ -9364,13 +9364,13 @@
         {
           "question_text": "Câu nào có 5 tiếng?",
           "options": [
-            "Mẹ nấu cơm rất ngon.",
-            "Bé đọc sách.",
-            "Con mèo nằm ngủ.",
-            "Lan tưới hoa mỗi sáng."
+            "Bé chăm học mỗi ngày.",
+            "Em yêu trường.",
+            "Mẹ nấu cơm tối.",
+            "Trời xanh."
           ],
-          "answer": "Lan tưới hoa mỗi sáng.",
-          "hint": "Đáp án đúng là “Lan tưới hoa mỗi sáng.”.",
+          "answer": "Bé chăm học mỗi ngày.",
+          "hint": "'Bé / chăm / học / mỗi / ngày' có 5 tiếng.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120518,
@@ -9512,7 +9512,7 @@
           "question_number": 5
         },
         {
-          "question_text": "💪 💪 Sau khi tập thể dục, cơ thể có thể thấy gì?",
+          "question_text": "💪 Sau khi tập thể dục, cơ thể có thể thấy gì?",
           "options": [
             "khỏe",
             "ốm",
@@ -9747,7 +9747,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🍯 🍯 Mật ong có vị gì?",
+          "question_text": "🍯 Mật ong có vị gì?",
           "options": [
             "đắng",
             "mặn",
@@ -9840,7 +9840,7 @@
             "Cháu chào bà ạ."
           ],
           "answer": "Cháu chào bà ạ.",
-          "hint": "Đáp án đúng là “Cháu chào bà ạ.”.",
+          "hint": "Đáp án đúng là “Cháu chào bà ạ.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120544,
@@ -9982,7 +9982,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🍋 🍋 Chanh có vị gì?",
+          "question_text": "🍋 Chanh có vị gì?",
           "options": [
             "bùi",
             "ngọt",
@@ -10217,7 +10217,7 @@
           "question_number": 5
         },
         {
-          "question_text": "📘 📘 Quyển sách thường có dạng gì?",
+          "question_text": "📘 Quyển sách thường có dạng gì?",
           "options": [
             "hình tam giác",
             "hình chữ nhật",
@@ -10452,7 +10452,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🌿 🌿 Lá non thường có màu gì?",
+          "question_text": "🌿 Lá non thường có màu gì?",
           "options": [
             "đỏ",
             "xanh lá",
@@ -10922,7 +10922,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🍌 🍌 Quả chuối chín thường có màu gì?",
+          "question_text": "🍌 Quả chuối chín thường có màu gì?",
           "options": [
             "đen",
             "đỏ",
@@ -11015,7 +11015,7 @@
             "Cá vàng bay trên trời."
           ],
           "answer": "Chim én bay trên trời.",
-          "hint": "Đáp án đúng là “Chim én bay trên trời.”.",
+          "hint": "Đáp án đúng là “Chim én bay trên trời.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120609,
@@ -11157,7 +11157,7 @@
           "question_number": 5
         },
         {
-          "question_text": "😢 😢 Khi làm mất đồ chơi, bé có thể thấy gì?",
+          "question_text": "😢 Khi làm mất đồ chơi, bé có thể thấy gì?",
           "options": [
             "háo hức",
             "buồn",
@@ -11627,7 +11627,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🌸 🌸 Hoa đào thường có màu gì?",
+          "question_text": "🌸 Hoa đào thường có màu gì?",
           "options": [
             "hồng",
             "nâu",
@@ -11862,7 +11862,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🍚 🍚 Bé đưa thức ăn vào miệng gọi là gì?",
+          "question_text": "🍚 Bé đưa thức ăn vào miệng gọi là gì?",
           "options": [
             "đi",
             "đọc",
@@ -11955,7 +11955,7 @@
             "Hoa hồng nở rất đẹp."
           ],
           "answer": "Hoa hồng nở rất đẹp.",
-          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”.",
+          "hint": "Đáp án đúng là “Hoa hồng nở rất đẹp.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120661,
@@ -12097,7 +12097,7 @@
           "question_number": 5
         },
         {
-          "question_text": "☁️ ☁️ Mây thường có màu gì?",
+          "question_text": "☁️ Mây thường có màu gì?",
           "options": [
             "đỏ",
             "trắng",
@@ -12332,7 +12332,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🍚 🍚 Bé đưa thức ăn vào miệng gọi là gì?",
+          "question_text": "🍚 Bé đưa thức ăn vào miệng gọi là gì?",
           "options": [
             "ngủ",
             "đọc",
@@ -12567,7 +12567,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🪢 🪢 Chơi với dây bằng cách bật qua gọi là gì?",
+          "question_text": "🪢 Chơi với dây bằng cách bật qua gọi là gì?",
           "options": [
             "đá bóng",
             "ngủ",
@@ -12660,7 +12660,7 @@
             "Bé giành phần to nhất."
           ],
           "answer": "Bé chia bánh cho em.",
-          "hint": "Đáp án đúng là “Bé chia bánh cho em.”.",
+          "hint": "Đáp án đúng là “Bé chia bánh cho em.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120700,
@@ -12802,7 +12802,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🐘 🐘 Con voi có thân hình thế nào?",
+          "question_text": "🐘 Con voi có thân hình thế nào?",
           "options": [
             "to lớn",
             "nhỏ bé",
@@ -12895,7 +12895,7 @@
             "Bé học bài."
           ],
           "answer": "Bé chăm học và rất ngoan.",
-          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”.",
+          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120713,
@@ -13037,7 +13037,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🌸 🌸 “Bông hoa rất ...” Điền từ nào?",
+          "question_text": "🌸 “Bông hoa rất ...” Điền từ nào?",
           "options": [
             "đẹp",
             "ngủ",
@@ -13272,7 +13272,7 @@
           "question_number": 5
         },
         {
-          "question_text": "✍️ ✍️ Bé dùng bút ghi chữ gọi là gì?",
+          "question_text": "✍️ Bé dùng bút ghi chữ gọi là gì?",
           "options": [
             "quét nhà",
             "đọc sách",
@@ -13507,7 +13507,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏊 🏊 Di chuyển trong nước gọi là gì?",
+          "question_text": "🏊 Di chuyển trong nước gọi là gì?",
           "options": [
             "bơi",
             "ngồi",
@@ -13600,7 +13600,7 @@
             "Bé nhìn hoa đỏ."
           ],
           "answer": "Bé chạy thoắt vào nhà.",
-          "hint": "Đáp án đúng là “Bé chạy thoắt vào nhà.”.",
+          "hint": "Đáp án đúng là “Bé chạy thoắt vào nhà.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120752,
@@ -13725,7 +13725,7 @@
           "question_number": 4
         },
         {
-          "question_text": "🏘️ Con đường ở fố nhỏ. Từ nào viết sai?",
+          "question_text": "🏘️ Con đường ở phố nhỏ. Từ nào viết sai?",
           "options": [
             "fố",
             "Con",
@@ -13742,7 +13742,7 @@
           "question_number": 5
         },
         {
-          "question_text": "⚽ ⚽ Dùng chân đá bóng gọi là gì?",
+          "question_text": "⚽ Dùng chân đá bóng gọi là gì?",
           "options": [
             "bơi",
             "đá bóng",
@@ -13977,7 +13977,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🥜 🥜 Lạc rang có thể có vị gì?",
+          "question_text": "🥜 Lạc rang có thể có vị gì?",
           "options": [
             "cay",
             "bùi",
@@ -14070,7 +14070,7 @@
             "Mẹ nấu cơm ngon."
           ],
           "answer": "Bé chăm học và rất ngoan.",
-          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”.",
+          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120778,
@@ -14144,15 +14144,15 @@
           "question_number": 1
         },
         {
-          "question_text": "🍚 Điền âm đầu đúng: \"...ồi cơm\"",
+          "question_text": "Bé cho biết tiếng 'bưởi' mang thanh nào?",
           "options": [
-            "nh",
-            "n",
-            "qu",
-            "s"
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh nặng"
           ],
-          "answer": "n",
-          "hint": "Đúng rồi! \"nồi cơm\" viết với âm đầu \"n\".",
+          "answer": "Thanh hỏi",
+          "hint": "Tiếng 'bưởi' mang thanh hỏi.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120782,
@@ -14212,15 +14212,15 @@
           "question_number": 5
         },
         {
-          "question_text": "☁️ ☁️ Mây thường có màu gì?",
+          "question_text": "Từ nào trái nghĩa với 'cao'?",
           "options": [
-            "cam",
-            "tím",
-            "trắng",
-            "đỏ"
+            "thấp",
+            "dài",
+            "rộng",
+            "nhanh"
           ],
-          "answer": "trắng",
-          "hint": "Đúng rồi! Đáp án là \"trắng\".",
+          "answer": "thấp",
+          "hint": "'Thấp' trái nghĩa với 'cao'.",
           "skill_tag": "C3",
           "diem": 0.5,
           "question_id": 120786,
@@ -14229,15 +14229,15 @@
           "question_number": 6
         },
         {
-          "question_text": "🍚 “Cả nhà cùng ... cơm.”",
+          "question_text": "Từ nào trái nghĩa với 'gần'?",
           "options": [
-            "ăn",
-            "ngon",
-            "ấm",
-            "bát cơm"
+            "xa",
+            "nhỏ",
+            "sớm",
+            "mới"
           ],
-          "answer": "ăn",
-          "hint": "Đúng rồi! Đáp án là \"ăn\".",
+          "answer": "xa",
+          "hint": "'Xa' trái nghĩa với 'gần'.",
           "skill_tag": "C3",
           "diem": 1.0,
           "question_id": 120787,
@@ -14263,15 +14263,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Kính lão đắc ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "lộc",
-            "đức",
-            "thọ",
-            "phúc"
+            "Lan chăm chỉ học bài.",
+            "Chăm chỉ Lan học bài.",
+            "Học bài Lan chăm chỉ.",
+            "Lan học chăm chỉ bài."
           ],
-          "answer": "thọ",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Kính lão đắc thọ' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Lan chăm chỉ học bài.",
+          "hint": "Câu đúng là 'Lan chăm chỉ học bài.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120789,
@@ -14297,15 +14297,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Câu nào có 6 tiếng?",
+          "question_text": "Câu nào có đúng 4 tiếng?",
           "options": [
-            "Mẹ nấu cơm ngon.",
-            "Bé chăm học và rất ngoan.",
-            "Chim bay trên trời.",
-            "Bé học bài."
+            "Em chăm đọc sách.",
+            "Bé học.",
+            "Mẹ đang nấu cơm tối.",
+            "Trời hôm nay xanh trong."
           ],
-          "answer": "Bé chăm học và rất ngoan.",
-          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”.",
+          "answer": "Em chăm đọc sách.",
+          "hint": "'Em / chăm / đọc / sách' có 4 tiếng.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120791,
@@ -14314,42 +14314,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Nắng đậu ở đâu?",
+          "question_text": "Vì sao Minh rủ Nam đi chung áo mưa?",
           "options": [
-            "trên vai em",
-            "trên mái nhà",
-            "dưới chân",
-            "trong cặp"
+            "Vì Nam không có áo mưa",
+            "Vì Minh quên đường",
+            "Vì trời đã nắng",
+            "Vì Nam muốn chạy nhanh"
           ],
-          "answer": "trên vai em",
-          "hint": "Đáp án đúng: trên vai em.",
+          "answer": "Vì Nam không có áo mưa",
+          "hint": "Minh muốn giúp bạn không bị ướt.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120792,
-          "emoji": "🏫",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Bé đến trường",
-          "reading_passage": "Sáng em đến lớp\nNắng đậu vai em\nBạn cười ríu rít\nCô đón dịu hiền."
+          "reading_title": "Chiếc áo mưa",
+          "reading_passage": "Tan học, trời đổ mưa. Minh mở chiếc áo mưa mẹ để sẵn trong cặp. Thấy Nam không có áo mưa, Minh rủ bạn đi chung dưới chiếc áo rộng."
         },
         {
-          "question_text": "Câu chuyện nhắc bé điều gì?",
+          "question_text": "Việc làm của Minh cho thấy bạn ấy thế nào?",
           "options": [
-            "trêu chọc bạn",
-            "biết giúp đỡ người khác",
-            "chỉ lo cho mình",
-            "không cần cảm ơn"
+            "biết quan tâm bạn",
+            "hay quên đồ",
+            "sợ mưa",
+            "thích đi một mình"
           ],
-          "answer": "biết giúp đỡ người khác",
-          "hint": "Đáp án đúng: biết giúp đỡ người khác.",
+          "answer": "biết quan tâm bạn",
+          "hint": "Minh biết chia sẻ và quan tâm đến bạn.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120793,
-          "emoji": "🐦",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Chim sẻ và giọt nước",
-          "reading_passage": "Trưa hè nóng, chim sẻ thấy một chú kiến mắc kẹt bên vũng nước. Sẻ thả chiếc lá xuống. Kiến bám vào lá rồi bò lên bờ. Kiến ríu rít cảm ơn."
+          "reading_title": "Chiếc áo mưa",
+          "reading_passage": "Tan học, trời đổ mưa. Minh mở chiếc áo mưa mẹ để sẵn trong cặp. Thấy Nam không có áo mưa, Minh rủ bạn đi chung dưới chiếc áo rộng."
         }
       ]
     },
@@ -14396,15 +14396,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Ba mảnh ghép là 'b' + 'anh' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "question_text": "Bé cho biết tiếng 'nghĩ' mang thanh nào?",
           "options": [
-            "bút",
-            "bàn",
-            "bướm",
-            "bánh"
+            "Thanh ngã",
+            "Thanh hỏi",
+            "Thanh huyền",
+            "Thanh nặng"
           ],
-          "answer": "bánh",
-          "hint": "Ta ghép âm đầu 'b' với vần 'anh', sau đó thêm thanh sắc để được tiếng 'bánh'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "Thanh ngã",
+          "hint": "Tiếng 'nghĩ' mang thanh ngã.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120796,
@@ -14413,15 +14413,15 @@
           "question_number": 3
         },
         {
-          "question_text": "🏘️ Con đường ở fố nhỏ. Từ nào viết sai?",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "đường",
-            "fố",
-            "Con",
-            "ở"
+            "ngỉ hè",
+            "nghỉ hè",
+            "nghĩ hè",
+            "nghỷ hè"
           ],
-          "answer": "fố",
-          "hint": "Đúng rồi! \"fố\" cần sửa thành \"phố\".",
+          "answer": "nghỉ hè",
+          "hint": "'Nghỉ hè' viết với 'ngh' và thanh hỏi.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120797,
@@ -14447,7 +14447,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🌶️ 🌶️ Ớt có vị gì?",
+          "question_text": "🌶️ Ớt có vị gì?",
           "options": [
             "mặn",
             "cay",
@@ -14549,23 +14549,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Cánh hoa làm gì?",
+          "question_text": "Điều gì giúp hạt đậu nảy mầm trong câu chuyện?",
           "options": [
-            "khép kín",
-            "bay xa",
-            "rơi hết",
-            "rung nhẹ"
+            "được tưới nước và có ánh sáng",
+            "được cất trong tủ",
+            "được phủ bằng sách",
+            "được mang ra đường"
           ],
-          "answer": "rung nhẹ",
-          "hint": "Đáp án đúng: rung nhẹ.",
+          "answer": "được tưới nước và có ánh sáng",
+          "hint": "Lan chăm tưới nước và đặt chậu gần cửa sổ.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120805,
-          "emoji": "🌼",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Hoa nắng",
-          "reading_passage": "Nắng vàng trước ngõ\nGọi hoa thức dậy\nCánh hoa rung nhẹ\nĐón ngày mới sang."
+          "reading_title": "Chậu cây nhỏ",
+          "reading_passage": "Lan gieo ba hạt đậu vào chậu đất. Mỗi sáng, em tưới một ít nước và đặt chậu gần cửa sổ. Vài ngày sau, những mầm xanh nhú lên."
         },
         {
           "question_text": "Chú kiến thoát lên bờ bằng cách nào?",
@@ -14614,15 +14614,15 @@
           "question_number": 1
         },
         {
-          "question_text": "🏘️ Điền âm đầu đúng: \"...ố nhỏ\"",
+          "question_text": "Bé cho biết tiếng 'cặp' mang thanh nào?",
           "options": [
-            "tr",
-            "gi",
-            "ph",
-            "r"
+            "Thanh sắc",
+            "Thanh nặng",
+            "Thanh hỏi",
+            "Thanh ngang"
           ],
-          "answer": "ph",
-          "hint": "Đúng rồi! \"phố nhỏ\" viết với âm đầu \"ph\".",
+          "answer": "Thanh nặng",
+          "hint": "Tiếng 'cặp' mang thanh nặng.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120808,
@@ -14682,15 +14682,15 @@
           "question_number": 5
         },
         {
-          "question_text": "🌸 🌸 “Bông hoa rất ...” Điền từ nào?",
+          "question_text": "Từ nào gần nghĩa nhất với 'nhanh'?",
           "options": [
-            "đẹp",
-            "chạy",
-            "ngủ",
-            "ăn"
+            "mau",
+            "chậm",
+            "nặng",
+            "yên"
           ],
-          "answer": "đẹp",
-          "hint": "Đúng rồi! Đáp án là \"đẹp\".",
+          "answer": "mau",
+          "hint": "'Mau' gần nghĩa với 'nhanh'.",
           "skill_tag": "C3",
           "diem": 0.5,
           "question_id": 120812,
@@ -14733,15 +14733,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Cá không ăn muối cá ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "héo",
-            "ươn",
-            "thối",
-            "chết"
+            "Buổi sáng em tưới cây.",
+            "Em buổi sáng cây tưới.",
+            "Tưới em cây buổi sáng.",
+            "Cây tưới em buổi sáng."
           ],
-          "answer": "ươn",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Cá không ăn muối cá ươn' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Buổi sáng em tưới cây.",
+          "hint": "Câu đúng là 'Buổi sáng em tưới cây.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120815,
@@ -14767,15 +14767,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Câu nào thể hiện lễ phép?",
+          "question_text": "Tiếng nào có âm đầu 'ngh' và vần 'i'?",
           "options": [
-            "Đưa cháu cái này.",
-            "Cháu không cần chào.",
-            "Cháu chào bà ạ.",
-            "Bà tránh ra."
+            "nghỉ",
+            "ngày",
+            "ghế",
+            "nhỉ"
           ],
-          "answer": "Cháu chào bà ạ.",
-          "hint": "Đáp án đúng là “Cháu chào bà ạ.”.",
+          "answer": "nghỉ",
+          "hint": "'Nghỉ' bắt đầu bằng 'ngh'.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120817,
@@ -14784,23 +14784,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Sau mưa, lá thế nào?",
+          "question_text": "Lan đã làm việc gì đều đặn mỗi sáng?",
           "options": [
-            "xanh hơn",
-            "rụng hết",
-            "đen đi",
-            "khô hơn"
+            "tưới cây",
+            "đọc truyện",
+            "quét sân",
+            "cho cá ăn"
           ],
-          "answer": "xanh hơn",
-          "hint": "Đáp án đúng: xanh hơn.",
+          "answer": "tưới cây",
+          "hint": "Mỗi sáng Lan tưới một ít nước cho chậu đậu.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120818,
-          "emoji": "🌧️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Mưa xuân",
-          "reading_passage": "Mưa rơi lất phất\nLá biếc xanh hơn\nChồi non hé mở\nVườn thơm dịu dàng."
+          "reading_title": "Chậu cây nhỏ",
+          "reading_passage": "Lan gieo ba hạt đậu vào chậu đất. Mỗi sáng, em tưới một ít nước và đặt chậu gần cửa sổ. Vài ngày sau, những mầm xanh nhú lên."
         },
         {
           "question_text": "Ai bị mắc kẹt bên vũng nước?",
@@ -14900,15 +14900,15 @@
           "question_number": 4
         },
         {
-          "question_text": "⛰️ Cách viết nào đúng?",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "Núi ba vì",
-            "núi Ba Vì",
-            "núi ba vì",
-            "NÚI BA VÌ"
+            "gế gỗ",
+            "ghế gỗ",
+            "ghế gổ",
+            "ghe gỗ"
           ],
-          "answer": "núi Ba Vì",
-          "hint": "Đúng rồi! Viết đúng là \"núi Ba Vì\".",
+          "answer": "ghế gỗ",
+          "hint": "'Ghế gỗ' là cách viết đúng.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120824,
@@ -14917,7 +14917,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🔥 🔥 Lửa thế nào?",
+          "question_text": "🔥 Lửa thế nào?",
           "options": [
             "ngọt",
             "nóng",
@@ -15002,15 +15002,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Tiếng nào chứa vần “ươu”?",
+          "question_text": "Tiếng nào có vần 'ươi'?",
           "options": [
-            "hiêu",
-            "hêu",
-            "hưu",
-            "hươu"
+            "bưởi",
+            "buổi",
+            "bơi",
+            "bưởm"
           ],
-          "answer": "hươu",
-          "hint": "Đáp án đúng là “hươu”.",
+          "answer": "bưởi",
+          "hint": "'Bưởi' có vần 'ươi'.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120830,
@@ -15019,42 +15019,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Bài thơ tả thời điểm nào?",
+          "question_text": "Vì sao Hà đến nói chuyện với Mai?",
           "options": [
-            "đêm khuya",
-            "giữa trưa",
-            "ngày mới",
-            "nửa đêm"
+            "vì muốn làm quen và giúp bạn bớt lẻ loi",
+            "vì muốn mượn thước",
+            "vì cô giáo gọi",
+            "vì Mai có đồ chơi mới"
           ],
-          "answer": "ngày mới",
-          "hint": "Đáp án đúng: ngày mới.",
+          "answer": "vì muốn làm quen và giúp bạn bớt lẻ loi",
+          "hint": "Hà chủ động làm quen với bạn mới.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120831,
-          "emoji": "🌼",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Hoa nắng",
-          "reading_passage": "Nắng vàng trước ngõ\nGọi hoa thức dậy\nCánh hoa rung nhẹ\nĐón ngày mới sang."
+          "reading_title": "Bạn mới",
+          "reading_passage": "Lớp có bạn Mai mới chuyển đến. Giờ ra chơi, Mai đứng một mình bên cửa sổ. Hà bước đến làm quen rồi rủ Mai cùng chơi nhảy dây."
         },
         {
-          "question_text": "Sóc rủ Thỏ làm gì?",
+          "question_text": "Hành động nào của Hà thể hiện sự thân thiện?",
           "options": [
-            "hái hoa",
-            "dừng lại đá bóng",
-            "về nhà",
-            "đi ngủ"
+            "rủ Mai cùng chơi",
+            "đứng xa Mai",
+            "giấu dây nhảy",
+            "ra về sớm"
           ],
-          "answer": "dừng lại đá bóng",
-          "hint": "Đáp án đúng: dừng lại đá bóng.",
+          "answer": "rủ Mai cùng chơi",
+          "hint": "Rủ bạn mới cùng chơi là hành động thân thiện.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120832,
-          "emoji": "🐰",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Bạn thỏ đi học",
-          "reading_passage": "Trên đường đến lớp, Sóc rủ Thỏ dừng lại đá bóng. Thỏ nói: “Chúng mình đi học trước nhé. Tan học rồi chơi ở sân sẽ an toàn hơn.” Sóc gật đầu và cùng Thỏ đến trường."
+          "reading_title": "Bạn mới",
+          "reading_passage": "Lớp có bạn Mai mới chuyển đến. Giờ ra chơi, Mai đứng một mình bên cửa sổ. Hà bước đến làm quen rồi rủ Mai cùng chơi nhảy dây."
         }
       ]
     },
@@ -15118,15 +15118,15 @@
           "question_number": 3
         },
         {
-          "question_text": "🏫 Điền âm đầu đúng: \"...ỉ học\"",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "l",
-            "x",
-            "gh",
-            "ngh"
+            "kể chuyện",
+            "cể chuyện",
+            "kễ chuyện",
+            "qể chuyện"
           ],
-          "answer": "ngh",
-          "hint": "Đúng rồi! \"nghỉ học\" viết với âm đầu \"ngh\".",
+          "answer": "kể chuyện",
+          "hint": "'Kể chuyện' viết với chữ 'k'.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120836,
@@ -15135,15 +15135,15 @@
           "question_number": 4
         },
         {
-          "question_text": "👦 Cách viết nào đúng?",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "hÙNG",
-            "Hùng",
-            "hùng",
-            "HÙNG"
+            "con nge",
+            "con nghe",
+            "con nghé",
+            "con ngé"
           ],
-          "answer": "Hùng",
-          "hint": "Đúng rồi! Viết đúng là \"Hùng\".",
+          "answer": "con nghé",
+          "hint": "'Con nghé' viết với 'ngh'.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120837,
@@ -15152,7 +15152,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🌧️ 🌧️ “Trời mưa, đường rất ...” Điền từ nào?",
+          "question_text": "🌧️ “Trời mưa, đường rất ...” Điền từ nào?",
           "options": [
             "cao",
             "ướt",
@@ -15203,15 +15203,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Con hơn cha là nhà có ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "đức",
-            "phúc",
-            "tiền",
-            "lộc"
+            "Mẹ nấu bữa cơm ngon.",
+            "Nấu mẹ ngon bữa cơm.",
+            "Bữa cơm mẹ ngon nấu.",
+            "Ngon mẹ nấu cơm bữa."
           ],
-          "answer": "phúc",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Con hơn cha là nhà có phúc' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Mẹ nấu bữa cơm ngon.",
+          "hint": "Câu đúng là 'Mẹ nấu bữa cơm ngon.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120841,
@@ -15237,15 +15237,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Chọn tiếng có cấu tạo âm đầu + vần “oai” + thanh nặng.",
+          "question_text": "Từ nào có hai tiếng đều bắt đầu bằng phụ âm?",
           "options": [
-            "ngoải",
-            "ngoại",
-            "ngoài",
-            "ngoái"
+            "bàn ghế",
+            "ô tô",
+            "áo ấm",
+            "y tế"
           ],
-          "answer": "ngoại",
-          "hint": "Đáp án đúng là “ngoại”.",
+          "answer": "bàn ghế",
+          "hint": "'Bàn' và 'ghế' đều có phụ âm đầu.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120843,
@@ -15273,23 +15273,23 @@
           "reading_passage": "Đèn giao thông có ba màu quen thuộc. Đèn đỏ báo dừng lại. Đèn xanh cho phép đi. Khi đèn vàng bật sáng, mọi người cần chú ý và chuẩn bị dừng."
         },
         {
-          "question_text": "Khi nào Thỏ đề nghị chơi bóng?",
+          "question_text": "An làm gì ngay trước khi đi học?",
           "options": [
-            "sau khi tan học",
-            "lúc đang ăn",
-            "giữa đường đi học",
-            "trong giờ học"
+            "kiểm tra sách vở",
+            "đi ngủ",
+            "tắm mưa",
+            "xem ti vi"
           ],
-          "answer": "sau khi tan học",
-          "hint": "Đáp án đúng: sau khi tan học.",
+          "answer": "kiểm tra sách vở",
+          "hint": "An kiểm tra lại sách vở trước khi đi học.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120845,
-          "emoji": "🐰",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Bạn thỏ đi học",
-          "reading_passage": "Trên đường đến lớp, Sóc rủ Thỏ dừng lại đá bóng. Thỏ nói: “Chúng mình đi học trước nhé. Tan học rồi chơi ở sân sẽ an toàn hơn.” Sóc gật đầu và cùng Thỏ đến trường."
+          "reading_title": "Buổi sáng của An",
+          "reading_passage": "An thức dậy khi chuông báo reo. Em gấp chăn, đánh răng rồi ăn sáng. Trước khi đi học, An kiểm tra lại sách vở trong cặp."
         }
       ]
     },
@@ -15302,15 +15302,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"mãi\" mang dấu thanh nào dưới đây?",
+          "question_text": "Bé cho biết tiếng 'trường' mang thanh nào?",
           "options": [
-            "Thanh ngã",
-            "Thanh ngang",
+            "Thanh huyền",
             "Thanh sắc",
-            "Thanh nặng"
+            "Thanh hỏi",
+            "Thanh ngã"
           ],
-          "answer": "Thanh ngã",
-          "hint": "Từ \"mãi\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "Thanh huyền",
+          "hint": "Tiếng 'trường' mang thanh huyền.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120846,
@@ -15387,15 +15387,15 @@
           "question_number": 5
         },
         {
-          "question_text": "🔁 Từ gần nghĩa với “nhanh” là gì?",
+          "question_text": "Từ nào chỉ đặc điểm của người chăm học?",
           "options": [
-            "chậm",
-            "mau",
-            "thấp",
-            "dài"
+            "chăm chỉ",
+            "quyển vở",
+            "học bài",
+            "cô giáo"
           ],
-          "answer": "mau",
-          "hint": "Đúng rồi! Đáp án là \"mau\".",
+          "answer": "chăm chỉ",
+          "hint": "'Chăm chỉ' là từ chỉ đặc điểm.",
           "skill_tag": "C3",
           "diem": 0.5,
           "question_id": 120851,
@@ -15472,15 +15472,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Chọn tiếng có cấu tạo âm đầu “tr” + vần “ăng” + thanh ngang.",
+          "question_text": "Câu nào thể hiện lời cảm ơn?",
           "options": [
-            "trăng",
-            "trắng",
-            "chăng",
-            "trằng"
+            "Mình cảm ơn bạn nhé!",
+            "Bạn đi đâu?",
+            "Đưa mình cây bút!",
+            "Mình đang đọc sách."
           ],
-          "answer": "trăng",
-          "hint": "Đáp án đúng là “trăng”.",
+          "answer": "Mình cảm ơn bạn nhé!",
+          "hint": "Đây là câu nói lời cảm ơn.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120856,
@@ -15489,42 +15489,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Nắng gọi ai thức dậy?",
+          "question_text": "Chi tiết nào cho thấy An biết tự chuẩn bị?",
           "options": [
-            "gió",
-            "hoa",
-            "mây",
-            "mưa"
+            "tự kiểm tra sách vở trong cặp",
+            "đợi mẹ làm mọi việc",
+            "bỏ quên cặp ở nhà",
+            "không ăn sáng"
           ],
-          "answer": "hoa",
-          "hint": "Đáp án đúng: hoa.",
+          "answer": "tự kiểm tra sách vở trong cặp",
+          "hint": "An chủ động kiểm tra đồ dùng học tập.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120857,
-          "emoji": "🌼",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Hoa nắng",
-          "reading_passage": "Nắng vàng trước ngõ\nGọi hoa thức dậy\nCánh hoa rung nhẹ\nĐón ngày mới sang."
+          "reading_title": "Buổi sáng của An",
+          "reading_passage": "An thức dậy khi chuông báo reo. Em gấp chăn, đánh răng rồi ăn sáng. Trước khi đi học, An kiểm tra lại sách vở trong cặp."
         },
         {
-          "question_text": "Mai đưa chiếc bút cho ai?",
+          "question_text": "Na đặt khăn khô cho mèo để làm gì?",
           "options": [
-            "bố",
-            "cô giáo",
-            "bà",
-            "bạn Lan"
+            "để mèo có chỗ khô ráo",
+            "để che sách",
+            "để lau bàn",
+            "để gói quà"
           ],
-          "answer": "cô giáo",
-          "hint": "Đáp án đúng: cô giáo.",
+          "answer": "để mèo có chỗ khô ráo",
+          "hint": "Na muốn chú mèo có chỗ khô ráo khi trời mưa.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120858,
-          "emoji": "🖊️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Cây bút nhặt được",
-          "reading_passage": "Giờ ra chơi, Mai thấy một chiếc bút đẹp dưới sân. Em không mang về mà đưa cho cô giáo. Cuối buổi, bạn Nam nhận lại được chiếc bút và cảm ơn Mai."
+          "reading_title": "Con mèo bên hiên",
+          "reading_passage": "Một chú mèo con trú dưới hiên vì trời mưa. Bé Na đặt một chiếc khăn khô gần đó và để bát nước bên cạnh. Mưa tạnh, mèo con chạy về nhà hàng xóm."
         }
       ]
     },
@@ -15537,15 +15537,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"giữa\" mang dấu thanh nào dưới đây?",
+          "question_text": "Bé cho biết tiếng 'mấy' mang thanh nào?",
           "options": [
+            "Thanh sắc",
+            "Thanh hỏi",
             "Thanh ngã",
-            "Thanh nặng",
-            "Thanh ngang",
-            "Thanh huyền"
+            "Thanh nặng"
           ],
-          "answer": "Thanh ngã",
-          "hint": "Từ \"giữa\" mang thanh ngã. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "Thanh sắc",
+          "hint": "Tiếng 'mấy' mang thanh sắc.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120859,
@@ -15622,15 +15622,15 @@
           "question_number": 5
         },
         {
-          "question_text": "↔️ Từ trái nghĩa với “sáng” là gì?",
+          "question_text": "Từ nào thuộc nhóm đồ dùng học tập?",
           "options": [
-            "trắng",
-            "tối",
-            "vàng",
-            "đen"
+            "bút chì",
+            "quả cam",
+            "con mèo",
+            "cây chuối"
           ],
-          "answer": "tối",
-          "hint": "Đúng rồi! Đáp án là \"tối\".",
+          "answer": "bút chì",
+          "hint": "Bút chì là đồ dùng học tập.",
           "skill_tag": "C3",
           "diem": 0.5,
           "question_id": 120864,
@@ -15673,15 +15673,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ thích hợp hoàn thành câu ca dao thân thiết mộc mạc trò chuyện cùng con vật thân thương: 'Trâu ơi ta bảo trâu ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "con",
-            "này",
-            "đồng",
-            "kia"
+            "Chim sẻ hót trên cành.",
+            "Hót chim cành trên sẻ.",
+            "Trên chim sẻ cành hót.",
+            "Cành trên hót chim sẻ."
           ],
-          "answer": "này",
-          "hint": "Chữ 'này' đứng sau mở đầu bài ca dao mộc mạc quen thuộc: 'Trâu ơi ta bảo trâu này, Ra ngoài ruộng cấy trâu cày với ta'!",
+          "answer": "Chim sẻ hót trên cành.",
+          "hint": "Câu đúng là 'Chim sẻ hót trên cành.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120867,
@@ -15707,15 +15707,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Tiếng nào chứa vần “oang”?",
+          "question_text": "Câu nào thể hiện lời xin lỗi?",
           "options": [
-            "loan",
-            "loang",
-            "lang",
-            "long"
+            "Mình xin lỗi vì làm rơi bút của bạn.",
+            "Bạn có bút không?",
+            "Mình thích cây bút này.",
+            "Cho mình mượn bút."
           ],
-          "answer": "loang",
-          "hint": "Đáp án đúng là “loang”.",
+          "answer": "Mình xin lỗi vì làm rơi bút của bạn.",
+          "hint": "Đây là lời xin lỗi rõ ràng và lịch sự.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120869,
@@ -15743,23 +15743,23 @@
           "reading_passage": "Bàn tay thường chạm vào nhiều đồ vật. Trước khi ăn và sau khi đi vệ sinh, bé nên rửa tay bằng xà phòng. Rửa tay sạch giúp hạn chế bụi bẩn và vi khuẩn."
         },
         {
-          "question_text": "Khi nào Thỏ đề nghị chơi bóng?",
+          "question_text": "Qua câu chuyện, Na là bạn nhỏ thế nào?",
           "options": [
-            "giữa đường đi học",
-            "lúc đang ăn",
-            "sau khi tan học",
-            "trong giờ học"
+            "biết yêu thương con vật",
+            "hay trêu con vật",
+            "sợ mèo",
+            "không để ý xung quanh"
           ],
-          "answer": "sau khi tan học",
-          "hint": "Đáp án đúng: sau khi tan học.",
+          "answer": "biết yêu thương con vật",
+          "hint": "Na biết chăm sóc chú mèo đang trú mưa.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120871,
-          "emoji": "🐰",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Bạn thỏ đi học",
-          "reading_passage": "Trên đường đến lớp, Sóc rủ Thỏ dừng lại đá bóng. Thỏ nói: “Chúng mình đi học trước nhé. Tan học rồi chơi ở sân sẽ an toàn hơn.” Sóc gật đầu và cùng Thỏ đến trường."
+          "reading_title": "Con mèo bên hiên",
+          "reading_passage": "Một chú mèo con trú dưới hiên vì trời mưa. Bé Na đặt một chiếc khăn khô gần đó và để bát nước bên cạnh. Mưa tạnh, mèo con chạy về nhà hàng xóm."
         }
       ]
     },
@@ -15772,15 +15772,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"phường\" mang dấu thanh nào dưới đây?",
+          "question_text": "Bé cho biết tiếng 'vở' mang thanh nào?",
           "options": [
-            "Thanh huyền",
             "Thanh hỏi",
-            "Thanh sắc",
-            "Thanh ngã"
+            "Thanh ngã",
+            "Thanh huyền",
+            "Thanh nặng"
           ],
-          "answer": "Thanh huyền",
-          "hint": "Từ \"phường\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "Thanh hỏi",
+          "hint": "Tiếng 'vở' mang thanh hỏi.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120872,
@@ -15806,15 +15806,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Bé hãy tạo một tiếng hoàn chỉnh từ 'b' và 'ươm', sau đó đặt thanh sắc.",
+          "question_text": "Bé cho biết tiếng 'sữa' mang thanh nào?",
           "options": [
-            "bánh",
-            "bút",
-            "bàn",
-            "bướm"
+            "Thanh hỏi",
+            "Thanh ngã",
+            "Thanh sắc",
+            "Thanh nặng"
           ],
-          "answer": "bướm",
-          "hint": "Ta ghép âm đầu 'b' với vần 'ươm', sau đó thêm thanh sắc để được tiếng 'bướm'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "Thanh ngã",
+          "hint": "Tiếng 'sữa' mang thanh ngã.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120874,
@@ -15840,15 +15840,15 @@
           "question_number": 4
         },
         {
-          "question_text": "👦 Cách viết nào đúng?",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "hùng",
-            "Hùng",
-            "HÙNG",
-            "hÙNG"
+            "chiếc chổi",
+            "chiếc trổi",
+            "triếc chổi",
+            "chiết chổi"
           ],
-          "answer": "Hùng",
-          "hint": "Đúng rồi! Viết đúng là \"Hùng\".",
+          "answer": "chiếc chổi",
+          "hint": "'Chiếc chổi' viết đúng với 'ch'.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120876,
@@ -15857,7 +15857,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🦅 🦅 “Con chim ... trên trời.” Điền từ nào?",
+          "question_text": "🦅 “Con chim ... trên trời.” Điền từ nào?",
           "options": [
             "bơi",
             "bay",
@@ -15874,15 +15874,15 @@
           "question_number": 6
         },
         {
-          "question_text": "🏃 Từ nào khác nhóm?",
+          "question_text": "Từ nào thuộc nhóm người thân trong gia đình?",
           "options": [
-            "chạy",
             "bà ngoại",
             "cô giáo",
+            "bạn Lan",
             "bác sĩ"
           ],
-          "answer": "chạy",
-          "hint": "Đúng rồi! \"chạy\" khác nhóm với ba từ còn lại.",
+          "answer": "bà ngoại",
+          "hint": "Bà ngoại là người thân trong gia đình.",
           "skill_tag": "C3",
           "diem": 1.0,
           "question_id": 120878,
@@ -15891,15 +15891,15 @@
           "question_number": 7
         },
         {
-          "question_text": "✏️ Sắp xếp các từ thành câu đúng.",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "là gì? tên Bạn",
-            "là tên gì? Bạn",
-            "Bạn tên là gì?",
-            "gì? là Bạn tên"
+            "Bé cất sách vào cặp.",
+            "Cất bé cặp vào sách.",
+            "Sách bé vào cặp cất.",
+            "Vào cặp sách bé cất."
           ],
-          "answer": "Bạn tên là gì?",
-          "hint": "Câu đúng là: “Bạn tên là gì?”",
+          "answer": "Bé cất sách vào cặp.",
+          "hint": "Câu đúng là 'Bé cất sách vào cặp.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120879,
@@ -15942,15 +15942,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Câu nào thể hiện sự nhường nhịn?",
+          "question_text": "Từ nào không cùng nhóm?",
           "options": [
-            "Bé chia bánh cho em.",
-            "Bé giành phần to nhất.",
-            "Bé bỏ mặc bạn.",
-            "Bé giấu hết đồ chơi."
+            "cam",
+            "bưởi",
+            "xoài",
+            "bút"
           ],
-          "answer": "Bé chia bánh cho em.",
-          "hint": "Đáp án đúng là “Bé chia bánh cho em.”.",
+          "answer": "bút",
+          "hint": "Ba từ đầu là tên quả, 'bút' là đồ dùng học tập.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120882,
@@ -15959,42 +15959,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Khi đèn vàng sáng, cần làm gì?",
+          "question_text": "Vì sao Tuấn nhắc Bình nói nhỏ?",
           "options": [
-            "chạy thật nhanh",
-            "quay xe",
-            "nhắm mắt",
-            "chú ý và chuẩn bị dừng"
+            "để không làm phiền người đang đọc",
+            "để cô giáo không thấy",
+            "vì Tuấn buồn ngủ",
+            "vì Bình nói sai"
           ],
-          "answer": "chú ý và chuẩn bị dừng",
-          "hint": "Đáp án đúng: chú ý và chuẩn bị dừng.",
+          "answer": "để không làm phiền người đang đọc",
+          "hint": "Thư viện cần yên tĩnh để mọi người đọc sách.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120883,
-          "emoji": "🚦",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Đèn giao thông",
-          "reading_passage": "Đèn giao thông có ba màu quen thuộc. Đèn đỏ báo dừng lại. Đèn xanh cho phép đi. Khi đèn vàng bật sáng, mọi người cần chú ý và chuẩn bị dừng."
+          "reading_title": "Giữ thư viện yên tĩnh",
+          "reading_passage": "Trong thư viện, Tuấn và Bình nói chuyện khá to. Thấy các bạn khác đang đọc sách, Tuấn khẽ nhắc Bình nói nhỏ hơn. Hai bạn sau đó cùng ngồi đọc truyện."
         },
         {
-          "question_text": "Ai nhận lại chiếc bút?",
+          "question_text": "Sau khi được nhắc, Bình làm gì?",
           "options": [
-            "cô giáo",
-            "bạn Nam",
-            "Mai",
-            "bác bảo vệ"
+            "cùng Tuấn đọc truyện",
+            "chạy ra sân",
+            "nói to hơn",
+            "đóng cửa thư viện"
           ],
-          "answer": "bạn Nam",
-          "hint": "Đáp án đúng: bạn Nam.",
+          "answer": "cùng Tuấn đọc truyện",
+          "hint": "Hai bạn sau đó cùng ngồi đọc truyện.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120884,
-          "emoji": "🖊️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Cây bút nhặt được",
-          "reading_passage": "Giờ ra chơi, Mai thấy một chiếc bút đẹp dưới sân. Em không mang về mà đưa cho cô giáo. Cuối buổi, bạn Nam nhận lại được chiếc bút và cảm ơn Mai."
+          "reading_title": "Giữ thư viện yên tĩnh",
+          "reading_passage": "Trong thư viện, Tuấn và Bình nói chuyện khá to. Thấy các bạn khác đang đọc sách, Tuấn khẽ nhắc Bình nói nhỏ hơn. Hai bạn sau đó cùng ngồi đọc truyện."
         }
       ]
     },
@@ -16041,15 +16041,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Bé ghép âm đầu 'c' với vần 'am', rồi thêm thanh ngang. Tiếng hoàn chỉnh là gì?",
+          "question_text": "Bé cho biết tiếng 'mặt' mang thanh nào?",
           "options": [
-            "cây",
-            "cá",
-            "cam",
-            "cua"
+            "Thanh nặng",
+            "Thanh sắc",
+            "Thanh hỏi",
+            "Thanh huyền"
           ],
-          "answer": "cam",
-          "hint": "Ta ghép âm đầu 'c' với vần 'am', sau đó thêm thanh ngang để được tiếng 'cam'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "Thanh nặng",
+          "hint": "Tiếng 'mặt' mang thanh nặng.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120887,
@@ -16075,15 +16075,15 @@
           "question_number": 4
         },
         {
-          "question_text": "🏫 Cách viết nào đúng?",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "trường tiểu học hòa bình",
-            "TRƯỜNG TIỂU HỌC HÒA BÌNH",
-            "trường Tiểu học Hòa Bình",
-            "Trường Tiểu học Hòa Bình"
+            "sạch sẽ",
+            "xạch sẽ",
+            "sạch xẽ",
+            "xạch xẽ"
           ],
-          "answer": "Trường Tiểu học Hòa Bình",
-          "hint": "Đúng rồi! Viết đúng là \"Trường Tiểu học Hòa Bình\".",
+          "answer": "sạch sẽ",
+          "hint": "'Sạch sẽ' là cách viết đúng.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120889,
@@ -16092,7 +16092,7 @@
           "question_number": 5
         },
         {
-          "question_text": "☕ ☕ Cà phê có thể có vị gì?",
+          "question_text": "☕ Cà phê có thể có vị gì?",
           "options": [
             "ngọt",
             "đắng",
@@ -16126,15 +16126,15 @@
           "question_number": 7
         },
         {
-          "question_text": "✏️ Sắp xếp các từ thành câu đúng.",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "các Nam bạn ngoài sân. bóng đá cùng",
-            "Nam cùng các bạn đá bóng ngoài sân.",
-            "Nam ngoài cùng sân. đá bạn bóng các",
-            "đá Nam cùng bóng bạn ngoài sân. các"
+            "Ông kể chuyện cho em.",
+            "Kể ông em cho chuyện.",
+            "Em chuyện cho ông kể.",
+            "Cho em ông chuyện kể."
           ],
-          "answer": "Nam cùng các bạn đá bóng ngoài sân.",
-          "hint": "Câu đúng là: “Nam cùng các bạn đá bóng ngoài sân.”",
+          "answer": "Ông kể chuyện cho em.",
+          "hint": "Câu đúng là 'Ông kể chuyện cho em.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120892,
@@ -16143,15 +16143,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu vào câu tục ngữ nhắc nhở lòng hiếu ơn đối với người cho ta ăn củ ngọt bùi: 'Ăn khoai nhớ kẻ cho ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "củ",
-            "cam",
-            "dây",
-            "đất"
+            "Các bạn xếp hàng ngay ngắn.",
+            "Xếp các bạn ngay ngắn hàng.",
+            "Ngay ngắn hàng các bạn xếp.",
+            "Hàng các bạn xếp ngay ngắn."
           ],
-          "answer": "dây",
-          "hint": "Từ đúng là tiếng 'dây' tạo thành câu 'Ăn khoai nhớ kẻ cho dây' dạy bé hiếu kính với cội nguồn nguồn gốc!",
+          "answer": "Các bạn xếp hàng ngay ngắn.",
+          "hint": "Câu đúng là 'Các bạn xếp hàng ngay ngắn.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120893,
@@ -16177,15 +16177,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Trong câu “Bông hoa đỏ rực nở trước sân.”, từ nào chỉ sự vật?",
+          "question_text": "Từ nào không cùng nhóm?",
           "options": [
-            "bông hoa",
-            "nở",
-            "đỏ rực",
-            "trước"
+            "chạy",
+            "nhảy",
+            "bơi",
+            "xanh"
           ],
-          "answer": "bông hoa",
-          "hint": "Đáp án đúng là “bông hoa”.",
+          "answer": "xanh",
+          "hint": "Ba từ đầu chỉ hoạt động, 'xanh' chỉ đặc điểm.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120895,
@@ -16194,23 +16194,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Các bạn làm gì?",
+          "question_text": "Hương biết hộp bút của ai bằng cách nào?",
           "options": [
-            "ngủ say",
-            "chạy về",
-            "cười ríu rít",
-            "khóc to"
+            "xem tên trên nhãn",
+            "đoán màu hộp",
+            "hỏi người ngoài cổng",
+            "mang về nhà"
           ],
-          "answer": "cười ríu rít",
-          "hint": "Đáp án đúng: cười ríu rít.",
+          "answer": "xem tên trên nhãn",
+          "hint": "Tên trên nhãn giúp Hương biết chủ của hộp bút.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120896,
-          "emoji": "🏫",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Bé đến trường",
-          "reading_passage": "Sáng em đến lớp\nNắng đậu vai em\nBạn cười ríu rít\nCô đón dịu hiền."
+          "reading_title": "Chiếc hộp bút",
+          "reading_passage": "Hương nhặt được một hộp bút dưới gầm bàn. Em xem tên ghi trên nhãn rồi mang đến trả cho bạn Phúc. Phúc vui vẻ cảm ơn Hương."
         },
         {
           "question_text": "Ai bị mắc kẹt bên vũng nước?",
@@ -16242,15 +16242,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"khuya\" mang dấu thanh nào dưới đây?",
+          "question_text": "Âm đầu của tiếng 'nghỉ' là cụm chữ nào?",
           "options": [
-            "Thanh ngang",
-            "Thanh sắc",
-            "Thanh ngã",
-            "Thanh nặng"
+            "ng",
+            "ngh",
+            "gh",
+            "nh"
           ],
-          "answer": "Thanh ngang",
-          "hint": "Từ \"khuya\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "ngh",
+          "hint": "Tiếng 'nghỉ' có âm đầu 'ngh'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120898,
@@ -16276,15 +16276,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Bé ghép âm đầu 'c' với vần 'ây', rồi thêm thanh ngang. Tiếng hoàn chỉnh là gì?",
+          "question_text": "Âm đầu của tiếng 'ghế' là cụm chữ nào?",
           "options": [
-            "cua",
-            "cây",
-            "mây",
-            "cá"
+            "g",
+            "gh",
+            "ngh",
+            "ch"
           ],
-          "answer": "cây",
-          "hint": "Ta ghép âm đầu 'c' với vần 'ây', sau đó thêm thanh ngang để được tiếng 'cây'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "gh",
+          "hint": "Tiếng 'ghế' có âm đầu 'gh'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120900,
@@ -16293,15 +16293,15 @@
           "question_number": 3
         },
         {
-          "question_text": "🍚 Điền âm đầu đúng: \"...ồi cơm\"",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "s",
-            "nh",
-            "qu",
-            "n"
+            "dữ gìn",
+            "giữ gìn",
+            "rữ gìn",
+            "giử gìn"
           ],
-          "answer": "n",
-          "hint": "Đúng rồi! \"nồi cơm\" viết với âm đầu \"n\".",
+          "answer": "giữ gìn",
+          "hint": "'Giữ gìn' là cách viết đúng.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120901,
@@ -16378,15 +16378,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Yêu nước thương ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "nhà",
-            "em",
-            "bạn",
-            "dân"
+            "Mưa xuân rơi nhẹ ngoài sân.",
+            "Ngoài sân nhẹ mưa xuân rơi.",
+            "Rơi mưa xuân sân ngoài nhẹ.",
+            "Nhẹ ngoài sân mưa xuân rơi."
           ],
-          "answer": "dân",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Yêu nước thương dân' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Mưa xuân rơi nhẹ ngoài sân.",
+          "hint": "Câu đúng là 'Mưa xuân rơi nhẹ ngoài sân.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120906,
@@ -16412,15 +16412,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Từ nào viết đúng quy tắc ng/ngh?",
+          "question_text": "Nếu hôm nay là thứ Hai, ngày mai là thứ mấy?",
           "options": [
-            "nghệ sĩ",
-            "ngệ sĩ",
-            "nghệ xĩ",
-            "nghệ sỹ"
+            "thứ Ba",
+            "thứ Tư",
+            "Chủ nhật",
+            "thứ Hai"
           ],
-          "answer": "nghệ sĩ",
-          "hint": "Đáp án đúng là “nghệ sĩ”.",
+          "answer": "thứ Ba",
+          "hint": "Sau thứ Hai là thứ Ba.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120908,
@@ -16429,42 +16429,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Các bạn làm gì?",
+          "question_text": "Việc làm của Hương thể hiện điều gì?",
           "options": [
-            "khóc to",
-            "cười ríu rít",
-            "chạy về",
-            "ngủ say"
+            "trung thực",
+            "vội vàng",
+            "tò mò",
+            "ích kỉ"
           ],
-          "answer": "cười ríu rít",
-          "hint": "Đáp án đúng: cười ríu rít.",
+          "answer": "trung thực",
+          "hint": "Hương nhặt được đồ và trả lại cho bạn.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120909,
-          "emoji": "🏫",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Bé đến trường",
-          "reading_passage": "Sáng em đến lớp\nNắng đậu vai em\nBạn cười ríu rít\nCô đón dịu hiền."
+          "reading_title": "Chiếc hộp bút",
+          "reading_passage": "Hương nhặt được một hộp bút dưới gầm bàn. Em xem tên ghi trên nhãn rồi mang đến trả cho bạn Phúc. Phúc vui vẻ cảm ơn Hương."
         },
         {
-          "question_text": "Mai đưa chiếc bút cho ai?",
+          "question_text": "Hai bố con sang đường khi nào?",
           "options": [
-            "bạn Lan",
-            "cô giáo",
-            "bố",
-            "bà"
+            "khi đèn người đi bộ chuyển xanh",
+            "ngay khi đến đường",
+            "khi xe chạy nhanh",
+            "khi đèn đỏ"
           ],
-          "answer": "cô giáo",
-          "hint": "Đáp án đúng: cô giáo.",
+          "answer": "khi đèn người đi bộ chuyển xanh",
+          "hint": "Hai bố con chờ đúng tín hiệu rồi mới sang đường.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120910,
-          "emoji": "🖊️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Cây bút nhặt được",
-          "reading_passage": "Giờ ra chơi, Mai thấy một chiếc bút đẹp dưới sân. Em không mang về mà đưa cho cô giáo. Cuối buổi, bạn Nam nhận lại được chiếc bút và cảm ơn Mai."
+          "reading_title": "Qua đường",
+          "reading_passage": "Đến vạch qua đường, bố và bé dừng lại khi đèn đỏ. Khi đèn dành cho người đi bộ chuyển xanh, hai bố con mới sang đường."
         }
       ]
     },
@@ -16545,15 +16545,15 @@
           "question_number": 4
         },
         {
-          "question_text": "👨 Cách viết nào đúng?",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "bác Nam",
-            "BÁC NAM",
-            "bác nam",
-            "Bác nam"
+            "lên lớp",
+            "nên lớp",
+            "lên nớp",
+            "nên nớp"
           ],
-          "answer": "bác Nam",
-          "hint": "Đúng rồi! Viết đúng là \"bác Nam\".",
+          "answer": "lên lớp",
+          "hint": "'Lên lớp' là cách viết đúng.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120915,
@@ -16647,15 +16647,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Trong câu “Bông hoa đỏ rực nở trước sân.”, từ nào chỉ sự vật?",
+          "question_text": "Bé có 3 quyển vở, mẹ cho thêm 2 quyển. Bé có tất cả bao nhiêu quyển vở?",
           "options": [
-            "bông hoa",
-            "trước",
-            "nở",
-            "đỏ rực"
+            "5 quyển",
+            "4 quyển",
+            "6 quyển",
+            "3 quyển"
           ],
-          "answer": "bông hoa",
-          "hint": "Đáp án đúng là “bông hoa”.",
+          "answer": "5 quyển",
+          "hint": "3 + 2 = 5.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120921,
@@ -16664,42 +16664,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Khi đèn vàng sáng, cần làm gì?",
+          "question_text": "Câu chuyện nhắc bé điều gì?",
           "options": [
-            "chú ý và chuẩn bị dừng",
-            "nhắm mắt",
-            "quay xe",
-            "chạy thật nhanh"
+            "tuân theo tín hiệu giao thông",
+            "chạy thật nhanh qua đường",
+            "đi giữa lòng đường",
+            "không cần nhìn đèn"
           ],
-          "answer": "chú ý và chuẩn bị dừng",
-          "hint": "Đáp án đúng: chú ý và chuẩn bị dừng.",
+          "answer": "tuân theo tín hiệu giao thông",
+          "hint": "Bé cần tuân theo tín hiệu khi qua đường.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120922,
-          "emoji": "🚦",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Đèn giao thông",
-          "reading_passage": "Đèn giao thông có ba màu quen thuộc. Đèn đỏ báo dừng lại. Đèn xanh cho phép đi. Khi đèn vàng bật sáng, mọi người cần chú ý và chuẩn bị dừng."
+          "reading_title": "Qua đường",
+          "reading_passage": "Đến vạch qua đường, bố và bé dừng lại khi đèn đỏ. Khi đèn dành cho người đi bộ chuyển xanh, hai bố con mới sang đường."
         },
         {
-          "question_text": "Mai đưa chiếc bút cho ai?",
+          "question_text": "Vy đã giúp mẹ việc gì trước bữa cơm?",
           "options": [
-            "bà",
-            "bố",
-            "bạn Lan",
-            "cô giáo"
+            "đặt bát và thìa lên bàn",
+            "rửa xe",
+            "tưới cây",
+            "gấp quần áo"
           ],
-          "answer": "cô giáo",
-          "hint": "Đáp án đúng: cô giáo.",
+          "answer": "đặt bát và thìa lên bàn",
+          "hint": "Vy giúp chuẩn bị bàn ăn.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120923,
-          "emoji": "🖊️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Cây bút nhặt được",
-          "reading_passage": "Giờ ra chơi, Mai thấy một chiếc bút đẹp dưới sân. Em không mang về mà đưa cho cô giáo. Cuối buổi, bạn Nam nhận lại được chiếc bút và cảm ơn Mai."
+          "reading_title": "Bữa cơm gia đình",
+          "reading_passage": "Trước bữa cơm, Vy giúp mẹ đặt bát và thìa lên bàn. Ăn xong, em mang bát của mình vào bếp. Mẹ mỉm cười khen Vy biết giúp việc nhà."
         }
       ]
     },
@@ -16797,7 +16797,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🏫 🏫 “Bé ... ở trường.” Điền từ nào?",
+          "question_text": "🏫 “Bé ... ở trường.” Điền từ nào?",
           "options": [
             "xanh",
             "tròn",
@@ -16814,15 +16814,15 @@
           "question_number": 6
         },
         {
-          "question_text": "🌸 Từ nào khác nhóm?",
+          "question_text": "Từ nào chỉ hoạt động giữ vệ sinh?",
           "options": [
-            "đẹp",
-            "nhảy",
-            "chạy",
-            "bơi"
+            "rửa tay",
+            "xanh tươi",
+            "cái khăn",
+            "sạch sẽ"
           ],
-          "answer": "đẹp",
-          "hint": "Đúng rồi! \"đẹp\" khác nhóm với ba từ còn lại.",
+          "answer": "rửa tay",
+          "hint": "'Rửa tay' là hoạt động giữ vệ sinh.",
           "skill_tag": "C3",
           "diem": 1.0,
           "question_id": 120930,
@@ -16848,15 +16848,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Uống nước nhớ kẻ trồng ...'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "lúa",
-            "cam",
-            "me",
-            "cây"
+            "Bố sửa chiếc xe đạp.",
+            "Chiếc bố sửa xe đạp.",
+            "Sửa bố xe đạp chiếc.",
+            "Xe đạp bố chiếc sửa."
           ],
-          "answer": "cây",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Uống nước nhớ kẻ trồng cây' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Bố sửa chiếc xe đạp.",
+          "hint": "Câu đúng là 'Bố sửa chiếc xe đạp.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120932,
@@ -16882,15 +16882,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Từ nào có tiếng đầu bắt đầu bằng “tr” và tiếng sau bắt đầu bằng “ch”?",
+          "question_text": "Một bàn có 4 chân. Hai chiếc bàn như vậy có tất cả bao nhiêu chân?",
           "options": [
-            "chăm chỉ",
-            "chú thỏ",
-            "trăng sáng",
-            "trò chuyện"
+            "8 chân",
+            "6 chân",
+            "4 chân",
+            "10 chân"
           ],
-          "answer": "trò chuyện",
-          "hint": "Đáp án đúng là “trò chuyện”.",
+          "answer": "8 chân",
+          "hint": "4 + 4 = 8.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120934,
@@ -16899,42 +16899,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Thuyền trôi theo gì?",
+          "question_text": "Vì sao mẹ khen Vy?",
           "options": [
-            "con đường",
-            "cánh đồng",
-            "bầu trời",
-            "dòng nước nhỏ"
+            "vì Vy biết giúp việc nhà",
+            "vì Vy ăn rất nhanh",
+            "vì Vy mua đồ chơi",
+            "vì Vy ngủ sớm"
           ],
-          "answer": "dòng nước nhỏ",
-          "hint": "Đáp án đúng: dòng nước nhỏ.",
+          "answer": "vì Vy biết giúp việc nhà",
+          "hint": "Vy chủ động giúp mẹ trước và sau bữa ăn.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120935,
-          "emoji": "⛵",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Con thuyền giấy",
-          "reading_passage": "Thuyền giấy bé xinh\nTheo dòng nước nhỏ\nLững lờ trôi mãi\nQua khóm cỏ xanh."
+          "reading_title": "Bữa cơm gia đình",
+          "reading_passage": "Trước bữa cơm, Vy giúp mẹ đặt bát và thìa lên bàn. Ăn xong, em mang bát của mình vào bếp. Mẹ mỉm cười khen Vy biết giúp việc nhà."
         },
         {
-          "question_text": "Trên đĩa còn mấy chiếc bánh?",
+          "question_text": "Ai nhặt chiếc mũ cho Nam?",
           "options": [
-            "bốn chiếc",
-            "hai chiếc",
-            "ba chiếc",
-            "một chiếc"
+            "Linh",
+            "Nam",
+            "cô giáo",
+            "bố Nam"
           ],
-          "answer": "một chiếc",
-          "hint": "Đáp án đúng: một chiếc.",
+          "answer": "Linh",
+          "hint": "Linh chạy nhặt chiếc mũ rồi đưa cho Nam.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120936,
-          "emoji": "🍰",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Chiếc bánh cuối cùng",
-          "reading_passage": "Trên đĩa chỉ còn một chiếc bánh. An rất thích nhưng em nhìn thấy em bé bên cạnh cũng đang thèm. An bẻ chiếc bánh làm đôi rồi chia cho em. Hai bạn cùng cười."
+          "reading_title": "Cơn gió",
+          "reading_passage": "Gió thổi làm chiếc mũ của Nam bay xuống sân. Linh nhìn thấy, chạy nhặt chiếc mũ rồi đưa cho Nam. Nam nói lời cảm ơn bạn."
         }
       ]
     },
@@ -16964,15 +16964,15 @@
           "question_number": 1
         },
         {
-          "question_text": "🐢 Điền âm đầu đúng: \"...con rùa\"",
+          "question_text": "Âm đầu của tiếng 'quạt' là cụm chữ nào?",
           "options": [
-            "k",
-            "r",
-            "gh",
-            "l"
+            "c",
+            "q",
+            "qu",
+            "k"
           ],
-          "answer": "r",
-          "hint": "Đúng rồi! \"con rùa\" viết với âm đầu \"r\".",
+          "answer": "qu",
+          "hint": "Tiếng 'quạt' được viết với âm đầu 'qu'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120938,
@@ -16981,15 +16981,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Xưởng ghép tiếng nâng cao: âm đầu 'h', vần 'oc', thanh nặng. Kết quả nào chính xác?",
+          "question_text": "Âm đầu của tiếng 'trăng' là cụm chữ nào?",
           "options": [
-            "học",
-            "mực",
-            "hòa",
-            "hoa"
+            "ch",
+            "tr",
+            "th",
+            "t"
           ],
-          "answer": "học",
-          "hint": "Ta ghép âm đầu 'h' với vần 'oc', sau đó thêm thanh nặng để được tiếng 'học'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "tr",
+          "hint": "Tiếng 'trăng' có âm đầu 'tr'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120939,
@@ -17032,7 +17032,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🪨 🪨 Mặt đá có thể thế nào?",
+          "question_text": "🪨 Mặt đá có thể thế nào?",
           "options": [
             "mềm mại",
             "gồ ghề",
@@ -17083,15 +17083,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Cao như ... Thái Sơn'?",
+          "question_text": "Câu nào sắp xếp đúng?",
           "options": [
-            "mây",
-            "đồi",
-            "trời",
-            "núi"
+            "Em lễ phép chào cô giáo.",
+            "Lễ phép em cô giáo chào.",
+            "Cô giáo em lễ phép chào.",
+            "Chào em lễ phép cô giáo."
           ],
-          "answer": "núi",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Cao như núi Thái Sơn' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Em lễ phép chào cô giáo.",
+          "hint": "Câu đúng là 'Em lễ phép chào cô giáo.'.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120945,
@@ -17117,15 +17117,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Từ nào có tiếng mang thanh ngã?",
+          "question_text": "Vật nào thường dùng để xem giờ?",
           "options": [
-            "nghỉ hè",
-            "nghĩ ngợi",
-            "nghe nhạc",
-            "nghề giáo"
+            "đồng hồ",
+            "thước kẻ",
+            "cục tẩy",
+            "bút màu"
           ],
-          "answer": "nghĩ ngợi",
-          "hint": "Đáp án đúng là “nghĩ ngợi”.",
+          "answer": "đồng hồ",
+          "hint": "Đồng hồ dùng để xem giờ.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120947,
@@ -17134,42 +17134,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Hạt đậu được gieo ở đâu?",
+          "question_text": "Nam nên làm gì sau khi nhận lại mũ?",
           "options": [
-            "trong cặp sách",
-            "trên mái nhà",
-            "dưới nước sâu",
-            "xuống đất ẩm"
+            "cảm ơn Linh",
+            "giấu mũ của Linh",
+            "bỏ đi không nói gì",
+            "ném mũ lên cao"
           ],
-          "answer": "xuống đất ẩm",
-          "hint": "Đáp án đúng: xuống đất ẩm.",
+          "answer": "cảm ơn Linh",
+          "hint": "Nam nói lời cảm ơn khi được bạn giúp.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120948,
-          "emoji": "🌱",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Cây đậu nhỏ",
-          "reading_passage": "Hạt đậu được gieo xuống đất ẩm. Vài ngày sau, một mầm xanh nhú lên. Mầm lớn dần thành cây có lá. Khi được tưới nước và có ánh nắng, cây phát triển khỏe mạnh."
+          "reading_title": "Cơn gió",
+          "reading_passage": "Gió thổi làm chiếc mũ của Nam bay xuống sân. Linh nhìn thấy, chạy nhặt chiếc mũ rồi đưa cho Nam. Nam nói lời cảm ơn bạn."
         },
         {
-          "question_text": "Ai nhận lại chiếc bút?",
+          "question_text": "Bình thay đổi điều gì ở lần sau?",
           "options": [
-            "bác bảo vệ",
-            "cô giáo",
-            "bạn Nam",
-            "Mai"
+            "rót lượng nước vừa đủ",
+            "không uống nước nữa",
+            "rót đầy tràn cốc",
+            "đổ nước đi"
           ],
-          "answer": "bạn Nam",
-          "hint": "Đáp án đúng: bạn Nam.",
+          "answer": "rót lượng nước vừa đủ",
+          "hint": "Bình rót ít hơn và uống hết.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120949,
-          "emoji": "🖊️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Cây bút nhặt được",
-          "reading_passage": "Giờ ra chơi, Mai thấy một chiếc bút đẹp dưới sân. Em không mang về mà đưa cho cô giáo. Cuối buổi, bạn Nam nhận lại được chiếc bút và cảm ơn Mai."
+          "reading_title": "Giọt nước cuối cùng",
+          "reading_passage": "Bình rót nước vào cốc nhưng chỉ uống một nửa. Bà nhắc em lấy vừa đủ để không lãng phí. Lần sau, Bình rót ít hơn và uống hết."
         }
       ]
     },
@@ -17199,15 +17199,15 @@
           "question_number": 1
         },
         {
-          "question_text": "🧣 Điền âm đầu đúng: \"...ăn mặt\"",
+          "question_text": "Âm đầu của tiếng 'phấn' là cụm chữ nào?",
           "options": [
             "ph",
             "th",
-            "n",
-            "kh"
+            "p",
+            "f"
           ],
-          "answer": "kh",
-          "hint": "Đúng rồi! \"khăn mặt\" viết với âm đầu \"kh\".",
+          "answer": "ph",
+          "hint": "Tiếng 'phấn' có âm đầu 'ph'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120951,
@@ -17216,15 +17216,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Cô đọc từng phần: 't' - 'ao' - thanh sắc. Bé tìm tiếng được ghép đúng.",
+          "question_text": "Âm đầu của tiếng 'thước' là cụm chữ nào?",
           "options": [
-            "bánh",
-            "chào",
-            "tôm",
-            "táo"
+            "th",
+            "tr",
+            "t",
+            "ch"
           ],
-          "answer": "táo",
-          "hint": "Ta ghép âm đầu 't' với vần 'ao', sau đó thêm thanh sắc để được tiếng 'táo'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "th",
+          "hint": "Tiếng 'thước' có âm đầu 'th'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120952,
@@ -17233,15 +17233,15 @@
           "question_number": 3
         },
         {
-          "question_text": "🍉 Điền âm đầu đúng: \"...ưa đỏ\"",
+          "question_text": "Điền âm đầu thích hợp: '...iên nhẫn'",
           "options": [
-            "d",
             "k",
-            "kh",
+            "c",
+            "q",
             "gh"
           ],
-          "answer": "d",
-          "hint": "Đúng rồi! \"dưa đỏ\" viết với âm đầu \"d\".",
+          "answer": "k",
+          "hint": "'Kiên nhẫn' viết với chữ k.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120953,
@@ -17267,7 +17267,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🧊 🧊 Nước đá thế nào?",
+          "question_text": "🧊 Nước đá thế nào?",
           "options": [
             "lạnh",
             "ấm",
@@ -17352,15 +17352,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Câu nào có 6 tiếng?",
+          "question_text": "Khi trời mưa, vật nào phù hợp nhất để che mưa?",
           "options": [
-            "Bé chăm học và rất ngoan.",
-            "Bé học bài.",
-            "Mẹ nấu cơm ngon.",
-            "Chim bay trên trời."
+            "ô",
+            "quạt",
+            "thước",
+            "phấn"
           ],
-          "answer": "Bé chăm học và rất ngoan.",
-          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”.",
+          "answer": "ô",
+          "hint": "Ô giúp che mưa.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120960,
@@ -17369,23 +17369,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Cô giáo được tả thế nào?",
+          "question_text": "Bài đọc muốn nhắc bé điều gì?",
           "options": [
-            "vội vàng",
-            "dịu hiền",
-            "dữ dằn",
-            "ồn ào"
+            "biết tiết kiệm nước",
+            "chỉ uống nước ngọt",
+            "không dùng cốc",
+            "luôn rót thật đầy"
           ],
-          "answer": "dịu hiền",
-          "hint": "Đáp án đúng: dịu hiền.",
+          "answer": "biết tiết kiệm nước",
+          "hint": "Lấy vừa đủ giúp tránh lãng phí nước.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120961,
-          "emoji": "🏫",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Bé đến trường",
-          "reading_passage": "Sáng em đến lớp\nNắng đậu vai em\nBạn cười ríu rít\nCô đón dịu hiền."
+          "reading_title": "Giọt nước cuối cùng",
+          "reading_passage": "Bình rót nước vào cốc nhưng chỉ uống một nửa. Bà nhắc em lấy vừa đủ để không lãng phí. Lần sau, Bình rót ít hơn và uống hết."
         },
         {
           "question_text": "Vì sao hai bạn cùng cười?",
@@ -17451,15 +17451,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Xưởng ghép tiếng nâng cao: âm đầu 'gh', vần 'ê', thanh sắc. Kết quả nào chính xác?",
+          "question_text": "Âm đầu của tiếng 'chổi' là cụm chữ nào?",
           "options": [
-            "ghế",
-            "lê",
-            "nghề",
-            "bánh"
+            "ch",
+            "tr",
+            "c",
+            "th"
           ],
-          "answer": "ghế",
-          "hint": "Ta ghép âm đầu 'gh' với vần 'ê', sau đó thêm thanh sắc để được tiếng 'ghế'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "ch",
+          "hint": "Tiếng 'chổi' có âm đầu 'ch'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120965,
@@ -17468,15 +17468,15 @@
           "question_number": 3
         },
         {
-          "question_text": "🛵 Điền âm đầu đúng: \"...e máy\"",
+          "question_text": "Điền âm đầu thích hợp: '...i nhớ'",
           "options": [
-            "s",
+            "gh",
             "g",
-            "n",
-            "x"
+            "k",
+            "c"
           ],
-          "answer": "x",
-          "hint": "Đúng rồi! \"xe máy\" viết với âm đầu \"x\".",
+          "answer": "gh",
+          "hint": "'Ghi nhớ' viết với cụm chữ 'gh'.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120966,
@@ -17553,15 +17553,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Yêu nước thương ...'?",
+          "question_text": "Câu nào viết hoa và đặt dấu chấm đúng?",
           "options": [
-            "bạn",
-            "em",
-            "dân",
-            "nhà"
+            "em yêu trường em.",
+            "Em yêu trường em.",
+            "Em yêu trường em",
+            "em yêu trường em"
           ],
-          "answer": "dân",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Yêu nước thương dân' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Em yêu trường em.",
+          "hint": "Đầu câu viết hoa và cuối câu có dấu chấm.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120971,
@@ -17587,15 +17587,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Từ nào có tiếng mang thanh ngã?",
+          "question_text": "Con vật nào sống dưới nước?",
           "options": [
-            "nghỉ hè",
-            "nghe nhạc",
-            "nghĩ ngợi",
-            "nghề giáo"
+            "cá",
+            "mèo",
+            "gà",
+            "thỏ"
           ],
-          "answer": "nghĩ ngợi",
-          "hint": "Đáp án đúng là “nghĩ ngợi”.",
+          "answer": "cá",
+          "hint": "Cá sống dưới nước.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120973,
@@ -17604,23 +17604,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Thuyền trôi theo gì?",
+          "question_text": "Vì sao cả tổ vui?",
           "options": [
-            "bầu trời",
-            "dòng nước nhỏ",
-            "cánh đồng",
-            "con đường"
+            "vì lớp học sạch sẽ sau khi cùng làm việc",
+            "vì được nghỉ học",
+            "vì có nhiều đồ chơi",
+            "vì trời mưa"
           ],
-          "answer": "dòng nước nhỏ",
-          "hint": "Đáp án đúng: dòng nước nhỏ.",
+          "answer": "vì lớp học sạch sẽ sau khi cùng làm việc",
+          "hint": "Cả tổ vui vì đã cùng làm cho lớp sạch đẹp.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120974,
-          "emoji": "⛵",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Con thuyền giấy",
-          "reading_passage": "Thuyền giấy bé xinh\nTheo dòng nước nhỏ\nLững lờ trôi mãi\nQua khóm cỏ xanh."
+          "reading_title": "Buổi trực nhật",
+          "reading_passage": "Tổ của Mai trực nhật cuối giờ. Bạn quét lớp, bạn lau bảng, bạn kê lại bàn ghế. Làm xong, cả tổ nhìn lớp học sạch sẽ và rất vui."
         },
         {
           "question_text": "Thỏ đã lựa chọn thế nào?",
@@ -17652,15 +17652,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"khoảng\" mang dấu thanh nào dưới đây?",
+          "question_text": "Âm đầu của tiếng 'khăn' là cụm chữ nào?",
           "options": [
-            "Thanh sắc",
-            "Thanh hỏi",
-            "Thanh huyền",
-            "Thanh nặng"
+            "kh",
+            "k",
+            "h",
+            "gh"
           ],
-          "answer": "Thanh hỏi",
-          "hint": "Từ \"khoảng\" mang thanh hỏi. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "kh",
+          "hint": "Tiếng 'khăn' có âm đầu 'kh'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120976,
@@ -17686,15 +17686,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Bé hãy tạo một tiếng hoàn chỉnh từ 'm' và 'eo', sau đó đặt thanh huyền.",
+          "question_text": "Vần của tiếng 'biển' là vần nào?",
           "options": [
-            "mưa",
-            "mực",
-            "mèo",
-            "mây"
+            "iên",
+            "ươn",
+            "iêng",
+            "ên"
           ],
-          "answer": "mèo",
-          "hint": "Ta ghép âm đầu 'm' với vần 'eo', sau đó thêm thanh huyền để được tiếng 'mèo'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "iên",
+          "hint": "Tiếng 'biển' có vần 'iên'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120978,
@@ -17703,15 +17703,15 @@
           "question_number": 3
         },
         {
-          "question_text": "☀️ Mặt chời sáng. Từ nào viết sai?",
+          "question_text": "Điền âm đầu thích hợp: '...e nhạc'",
           "options": [
-            "sáng",
-            "bé",
-            "chời",
-            "Mặt"
+            "ng",
+            "ngh",
+            "nh",
+            "g"
           ],
-          "answer": "chời",
-          "hint": "Đúng rồi! \"chời\" cần sửa thành \"trời\".",
+          "answer": "ngh",
+          "hint": "'Nghe nhạc' viết với 'ngh'.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120979,
@@ -17737,15 +17737,15 @@
           "question_number": 5
         },
         {
-          "question_text": "🐰 🐰 Lông thỏ thường thế nào?",
+          "question_text": "Từ nào chỉ đặc điểm của quả chanh?",
           "options": [
-            "gồ ghề",
-            "mềm mại",
-            "cứng ngắc",
-            "sắc nhọn"
+            "chua",
+            "ăn",
+            "quả",
+            "vắt"
           ],
-          "answer": "mềm mại",
-          "hint": "Đúng rồi! Đáp án là \"mềm mại\".",
+          "answer": "chua",
+          "hint": "'Chua' là từ chỉ đặc điểm.",
           "skill_tag": "C3",
           "diem": 0.5,
           "question_id": 120981,
@@ -17771,15 +17771,15 @@
           "question_number": 7
         },
         {
-          "question_text": "🧠 Sắp xếp các từ thành câu đúng.",
+          "question_text": "Câu nào là câu hỏi?",
           "options": [
-            "tưới ngoài cây sân? Ai",
-            "Ai tưới cây ngoài sân?",
-            "ngoài tưới cây sân? Ai",
-            "sân? Ai cây ngoài tưới"
+            "Bạn tên là gì?",
+            "Bạn tên là Lan.",
+            "Lan đang đọc sách.",
+            "Em rất vui."
           ],
-          "answer": "Ai tưới cây ngoài sân?",
-          "hint": "Câu đúng là: “Ai tưới cây ngoài sân?”",
+          "answer": "Bạn tên là gì?",
+          "hint": "Câu hỏi kết thúc bằng dấu hỏi.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 120983,
@@ -17822,15 +17822,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Câu nào thể hiện lễ phép?",
+          "question_text": "Đồ vật nào không thuộc góc học tập?",
           "options": [
-            "Đưa cháu cái này.",
-            "Bà tránh ra.",
-            "Cháu không cần chào.",
-            "Cháu chào bà ạ."
+            "bếp ga",
+            "bút chì",
+            "quyển vở",
+            "thước kẻ"
           ],
-          "answer": "Cháu chào bà ạ.",
-          "hint": "Đáp án đúng là “Cháu chào bà ạ.”.",
+          "answer": "bếp ga",
+          "hint": "Bếp ga thuộc khu vực nấu ăn, không phải góc học tập.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120986,
@@ -17839,42 +17839,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Sau mưa, lá thế nào?",
+          "question_text": "Các bạn đã làm việc theo cách nào?",
           "options": [
-            "khô hơn",
-            "đen đi",
-            "xanh hơn",
-            "rụng hết"
+            "cùng nhau chia việc",
+            "mỗi bạn bỏ về",
+            "chỉ một bạn làm hết",
+            "không ai làm"
           ],
-          "answer": "xanh hơn",
-          "hint": "Đáp án đúng: xanh hơn.",
+          "answer": "cùng nhau chia việc",
+          "hint": "Mỗi bạn làm một việc để hoàn thành trực nhật.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120987,
-          "emoji": "🌧️",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Mưa xuân",
-          "reading_passage": "Mưa rơi lất phất\nLá biếc xanh hơn\nChồi non hé mở\nVườn thơm dịu dàng."
+          "reading_title": "Buổi trực nhật",
+          "reading_passage": "Tổ của Mai trực nhật cuối giờ. Bạn quét lớp, bạn lau bảng, bạn kê lại bàn ghế. Làm xong, cả tổ nhìn lớp học sạch sẽ và rất vui."
         },
         {
-          "question_text": "Khi nào Thỏ đề nghị chơi bóng?",
+          "question_text": "Nam làm gì khi nhiều bạn muốn xem truyện?",
           "options": [
-            "giữa đường đi học",
-            "trong giờ học",
-            "lúc đang ăn",
-            "sau khi tan học"
+            "cùng các bạn đọc chung",
+            "cất truyện vào cặp",
+            "mang truyện về nhà",
+            "không cho ai xem"
           ],
-          "answer": "sau khi tan học",
-          "hint": "Đáp án đúng: sau khi tan học.",
+          "answer": "cùng các bạn đọc chung",
+          "hint": "Nam chia sẻ quyển truyện với các bạn.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 120988,
-          "emoji": "🐰",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Bạn thỏ đi học",
-          "reading_passage": "Trên đường đến lớp, Sóc rủ Thỏ dừng lại đá bóng. Thỏ nói: “Chúng mình đi học trước nhé. Tan học rồi chơi ở sân sẽ an toàn hơn.” Sóc gật đầu và cùng Thỏ đến trường."
+          "reading_title": "Chia sẻ quyển truyện",
+          "reading_passage": "Nam mang một quyển truyện mới đến lớp. Giờ nghỉ, nhiều bạn muốn xem. Nam ngồi giữa nhóm và mở truyện để mọi người cùng đọc."
         }
       ]
     },
@@ -17887,15 +17887,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"gương\" mang dấu thanh nào dưới đây?",
+          "question_text": "Vần của tiếng 'chuông' là vần nào?",
           "options": [
-            "Thanh ngã",
-            "Thanh ngang",
-            "Thanh hỏi",
-            "Thanh nặng"
+            "uông",
+            "ương",
+            "ông",
+            "ung"
           ],
-          "answer": "Thanh ngang",
-          "hint": "Từ \"gương\" mang thanh ngang. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "uông",
+          "hint": "Tiếng 'chuông' có vần 'uông'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120989,
@@ -17921,15 +17921,15 @@
           "question_number": 2
         },
         {
-          "question_text": "Ba mảnh ghép là 'l' + 'ơp' + thanh sắc. Bé chọn tiếng đúng nhé!",
+          "question_text": "Vần của tiếng 'bưởi' là vần nào?",
           "options": [
-            "lê",
-            "bánh",
-            "lá",
-            "lớp"
+            "ươi",
+            "uôi",
+            "ơi",
+            "ưi"
           ],
-          "answer": "lớp",
-          "hint": "Ta ghép âm đầu 'l' với vần 'ơp', sau đó thêm thanh sắc để được tiếng 'lớp'. Đây là bước ghép tiếng hoàn chỉnh.",
+          "answer": "ươi",
+          "hint": "Tiếng 'bưởi' có vần 'ươi'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 120991,
@@ -17938,15 +17938,15 @@
           "question_number": 3
         },
         {
-          "question_text": "🐢 Điền âm đầu đúng: \"...con rùa\"",
+          "question_text": "Từ nào viết đúng chính tả?",
           "options": [
-            "r",
-            "l",
-            "k",
-            "gh"
+            "trăm chỉ",
+            "chăm chỉ",
+            "chăm chĩ",
+            "trăm chĩ"
           ],
-          "answer": "r",
-          "hint": "Đúng rồi! \"con rùa\" viết với âm đầu \"r\".",
+          "answer": "chăm chỉ",
+          "hint": "'Chăm chỉ' là cách viết đúng.",
           "skill_tag": "C2",
           "diem": 0.5,
           "question_id": 120992,
@@ -17989,15 +17989,15 @@
           "question_number": 6
         },
         {
-          "question_text": "🐜 “nhỏ bé” thuộc nhóm nào?",
+          "question_text": "Từ nào khác nhóm với ba từ còn lại?",
           "options": [
-            "Từ chỉ hoạt động",
-            "Từ chỉ sự vật",
-            "Từ chỉ âm thanh",
-            "Từ chỉ đặc điểm"
+            "bút",
+            "thước",
+            "tẩy",
+            "quả táo"
           ],
-          "answer": "Từ chỉ đặc điểm",
-          "hint": "Đúng rồi! Đáp án là \"Từ chỉ đặc điểm\".",
+          "answer": "quả táo",
+          "hint": "Ba từ đầu là đồ dùng học tập; quả táo không cùng nhóm.",
           "skill_tag": "C3",
           "diem": 1.0,
           "question_id": 120995,
@@ -18057,15 +18057,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Từ nào có tiếng đầu thanh ngang, tiếng sau thanh nặng?",
+          "question_text": "Tiếng nào được tạo bởi 'tr' + 'ang' + thanh ngang?",
           "options": [
-            "mẹ bé",
-            "hoa phượng",
-            "mũ đỏ",
-            "bà ngoại"
+            "trang",
+            "tráng",
+            "tràng",
+            "trạng"
           ],
-          "answer": "hoa phượng",
-          "hint": "Đáp án đúng là “hoa phượng”.",
+          "answer": "trang",
+          "hint": "'tr' + 'ang' + thanh ngang tạo thành 'trang'.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 120999,
@@ -18074,23 +18074,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Nắng gọi ai thức dậy?",
+          "question_text": "Việc làm của Nam thể hiện điều gì?",
           "options": [
-            "mây",
-            "mưa",
-            "gió",
-            "hoa"
+            "biết chia sẻ",
+            "hay giận dỗi",
+            "sợ bạn bè",
+            "không thích đọc"
           ],
-          "answer": "hoa",
-          "hint": "Đáp án đúng: hoa.",
+          "answer": "biết chia sẻ",
+          "hint": "Nam cho các bạn cùng xem quyển truyện mới.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 121000,
-          "emoji": "🌼",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Hoa nắng",
-          "reading_passage": "Nắng vàng trước ngõ\nGọi hoa thức dậy\nCánh hoa rung nhẹ\nĐón ngày mới sang."
+          "reading_title": "Chia sẻ quyển truyện",
+          "reading_passage": "Nam mang một quyển truyện mới đến lớp. Giờ nghỉ, nhiều bạn muốn xem. Nam ngồi giữa nhóm và mở truyện để mọi người cùng đọc."
         },
         {
           "question_text": "Mai nhặt được gì?",
@@ -18122,15 +18122,15 @@
       "total_score": 10.0,
       "questions": [
         {
-          "question_text": "Bé cho biết từ \"nguồn\" mang dấu thanh nào dưới đây?",
+          "question_text": "Vần của tiếng 'trường' là vần nào?",
           "options": [
-            "Thanh ngã",
-            "Thanh huyền",
-            "Thanh hỏi",
-            "Thanh sắc"
+            "ương",
+            "ươn",
+            "uông",
+            "ông"
           ],
-          "answer": "Thanh huyền",
-          "hint": "Từ \"nguồn\" mang thanh huyền. Bé quan sát dấu trên tiếng và đọc lại một lần nhé!",
+          "answer": "ương",
+          "hint": "Tiếng 'trường' có vần 'ương'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 121002,
@@ -18258,15 +18258,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền chữ cái/từ còn thiếu để hoàn thành câu đồng dao, thành ngữ vui nhộn về con vật sau: 'Hỏi thăm chú ... đi đâu vắng nhà'?",
+          "question_text": "Điền từ thích hợp: 'Trời mưa, ... em vẫn đi học đúng giờ.'",
           "options": [
-            "bát cơm",
-            "lá tre",
-            "bàn học",
-            "chuột"
+            "nhưng",
+            "và",
+            "hoặc",
+            "vì"
           ],
-          "answer": "chuột",
-          "hint": "Đúng rồi bé ơi! Hỏi thăm chú chuột đi đâu vắng nhà / Chú chuột đi chợ đường xa.",
+          "answer": "nhưng",
+          "hint": "'Nhưng' nối hai ý có sự tương phản.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 121010,
@@ -18292,15 +18292,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Cặp từ nào trái nghĩa?",
+          "question_text": "Tiếng nào được tạo bởi 'm' + 'ăt' + thanh sắc?",
           "options": [
-            "cao - dài",
-            "nhanh - mau",
-            "đẹp - xinh",
-            "cao - thấp"
+            "mắt",
+            "mặt",
+            "mát",
+            "mất"
           ],
-          "answer": "cao - thấp",
-          "hint": "Đáp án đúng là “cao - thấp”.",
+          "answer": "mắt",
+          "hint": "'m' + 'ăt' + thanh sắc tạo thành 'mắt'.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 121012,
@@ -18309,42 +18309,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Thuyền đi qua đâu?",
+          "question_text": "Vì sao bố không cho bé tự trèo cây?",
           "options": [
-            "sân bóng",
-            "ngọn núi",
-            "mái trường",
-            "khóm cỏ xanh"
+            "để bé được an toàn",
+            "vì chim biết bay ngay",
+            "vì trời đang tối",
+            "vì cây không có lá"
           ],
-          "answer": "khóm cỏ xanh",
-          "hint": "Đáp án đúng: khóm cỏ xanh.",
+          "answer": "để bé được an toàn",
+          "hint": "Trèo cây có thể nguy hiểm với bé.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 121013,
-          "emoji": "⛵",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Con thuyền giấy",
-          "reading_passage": "Thuyền giấy bé xinh\nTheo dòng nước nhỏ\nLững lờ trôi mãi\nQua khóm cỏ xanh."
+          "reading_title": "Chú chim non",
+          "reading_passage": "Một chú chim non rơi khỏi tổ thấp. Bố bảo bé không tự trèo cây mà đứng xa quan sát. Bố dùng thang đưa chim về tổ an toàn."
         },
         {
-          "question_text": "An đã làm gì với chiếc bánh?",
+          "question_text": "Ai đưa chim non trở lại tổ?",
           "options": [
-            "ăn hết một mình",
-            "ném đi",
-            "cất vào cặp",
-            "bẻ đôi để chia"
+            "bố",
+            "bé",
+            "mẹ",
+            "bạn Nam"
           ],
-          "answer": "bẻ đôi để chia",
-          "hint": "Đáp án đúng: bẻ đôi để chia.",
+          "answer": "bố",
+          "hint": "Bố dùng thang đưa chim về tổ.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 121014,
-          "emoji": "🍰",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Chiếc bánh cuối cùng",
-          "reading_passage": "Trên đĩa chỉ còn một chiếc bánh. An rất thích nhưng em nhìn thấy em bé bên cạnh cũng đang thèm. An bẻ chiếc bánh làm đôi rồi chia cho em. Hai bạn cùng cười."
+          "reading_title": "Chú chim non",
+          "reading_passage": "Một chú chim non rơi khỏi tổ thấp. Bố bảo bé không tự trèo cây mà đứng xa quan sát. Bố dùng thang đưa chim về tổ an toàn."
         }
       ]
     },
@@ -18374,15 +18374,15 @@
           "question_number": 1
         },
         {
-          "question_text": "⭐ Điền âm đầu đúng: \"...ôi sao\"",
+          "question_text": "Vần của tiếng 'thuyền' là vần nào?",
           "options": [
-            "n",
-            "g",
-            "ng",
-            "ph"
+            "uyên",
+            "uyêt",
+            "iên",
+            "uên"
           ],
-          "answer": "ng",
-          "hint": "Đúng rồi! \"ngôi sao\" viết với âm đầu \"ng\".",
+          "answer": "uyên",
+          "hint": "Tiếng 'thuyền' có vần 'uyên'.",
           "skill_tag": "C1",
           "diem": 0.5,
           "question_id": 121016,
@@ -18442,7 +18442,7 @@
           "question_number": 5
         },
         {
-          "question_text": "🌳 🌳 “Cây có nhiều ... xanh.” Điền từ nào?",
+          "question_text": "🌳 “Cây có nhiều ... xanh.” Điền từ nào?",
           "options": [
             "bút",
             "lá",
@@ -18459,15 +18459,15 @@
           "question_number": 6
         },
         {
-          "question_text": "🌸 Từ nào khác nhóm?",
+          "question_text": "Từ nào khác nhóm với ba từ còn lại?",
           "options": [
-            "đẹp",
+            "chạy",
             "nhảy",
-            "bơi",
-            "chạy"
+            "đọc",
+            "xanh"
           ],
-          "answer": "đẹp",
-          "hint": "Đúng rồi! \"đẹp\" khác nhóm với ba từ còn lại.",
+          "answer": "xanh",
+          "hint": "'Xanh' chỉ đặc điểm, ba từ còn lại chỉ hoạt động.",
           "skill_tag": "C3",
           "diem": 1.0,
           "question_id": 121021,
@@ -18493,15 +18493,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Chăm như ...'?",
+          "question_text": "Điền từ thích hợp: 'Em rửa tay ... ăn cơm.'",
           "options": [
-            "ong",
-            "kiến",
-            "ve sầu",
-            "mèo"
+            "trước khi",
+            "vì",
+            "nhưng",
+            "hoặc"
           ],
-          "answer": "kiến",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Chăm như kiến' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "trước khi",
+          "hint": "Rửa tay trước khi ăn cơm là câu hoàn chỉnh và hợp nghĩa.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 121023,
@@ -18527,15 +18527,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Từ nào viết đúng quy tắc c/k?",
+          "question_text": "Từ nào có tiếng chứa âm đầu 'qu'?",
           "options": [
-            "cì nghỉ",
-            "kỳ ngỉ",
-            "kì nghỉ",
-            "qì nghỉ"
+            "quạt giấy",
+            "cá vàng",
+            "ghế gỗ",
+            "nhà nhỏ"
           ],
-          "answer": "kì nghỉ",
-          "hint": "Đáp án đúng là “kì nghỉ”.",
+          "answer": "quạt giấy",
+          "hint": "Tiếng 'quạt' có âm đầu 'qu'.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 121025,
@@ -18544,23 +18544,23 @@
           "question_number": 11
         },
         {
-          "question_text": "Đèn xanh cho phép làm gì?",
+          "question_text": "Lợi ích của việc đổi sách trong bài là gì?",
           "options": [
-            "dừng",
-            "quay về",
-            "đi",
-            "đỗ xe"
+            "có thêm sách để đọc mà không cần mua thêm",
+            "không phải đọc sách nữa",
+            "được nghỉ học",
+            "được mang hết sách về nhà"
           ],
-          "answer": "đi",
-          "hint": "Đáp án đúng: đi.",
+          "answer": "có thêm sách để đọc mà không cần mua thêm",
+          "hint": "Đổi sách giúp các bạn có thêm truyện để đọc.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 121026,
-          "emoji": "🚦",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Đèn giao thông",
-          "reading_passage": "Đèn giao thông có ba màu quen thuộc. Đèn đỏ báo dừng lại. Đèn xanh cho phép đi. Khi đèn vàng bật sáng, mọi người cần chú ý và chuẩn bị dừng."
+          "reading_title": "Ngày hội đọc sách",
+          "reading_passage": "Lớp tổ chức đổi sách. Mỗi bạn mang một cuốn đã đọc và chọn một cuốn khác để mượn. Nhờ vậy, ai cũng có thêm truyện mới mà không cần mua thêm."
         },
         {
           "question_text": "Chim sẻ thả gì xuống?",
@@ -18728,15 +18728,15 @@
           "question_number": 8
         },
         {
-          "question_text": "Bé hãy điền từ còn thiếu để hoàn thành câu ca dao, tục ngữ, đồng dao ý nghĩa sau: 'Công cha như núi Thái Sơn / Nghĩa mẹ như nước trong ... chảy ra'?",
+          "question_text": "Câu nào thể hiện lời đề nghị lịch sự?",
           "options": [
-            "hồ",
-            "suối",
-            "nguồn",
-            "sông"
+            "Bạn cho mình mượn bút nhé!",
+            "Đưa bút đây!",
+            "Bút của bạn đẹp.",
+            "Mình có bút."
           ],
-          "answer": "nguồn",
-          "hint": "Đúng rồi bé ơi! Câu hoàn chỉnh là: 'Công cha như núi Thái Sơn / Nghĩa mẹ như nước trong nguồn chảy ra' răn dạy chúng mình những điều hay lẽ phải trong cuộc sống hằng ngày đó!",
+          "answer": "Bạn cho mình mượn bút nhé!",
+          "hint": "Đây là lời đề nghị lịch sự.",
           "skill_tag": "C4",
           "diem": 1.0,
           "question_id": 121036,
@@ -18762,15 +18762,15 @@
           "question_number": 10
         },
         {
-          "question_text": "Câu nào có 6 tiếng?",
+          "question_text": "Câu nào có ý nhắc nhở giữ gìn đồ dùng?",
           "options": [
-            "Bé học bài.",
-            "Chim bay trên trời.",
-            "Mẹ nấu cơm ngon.",
-            "Bé chăm học và rất ngoan."
+            "Em bọc sách thật cẩn thận.",
+            "Em ném sách xuống sàn.",
+            "Em vẽ bậy lên bàn.",
+            "Em làm gãy thước."
           ],
-          "answer": "Bé chăm học và rất ngoan.",
-          "hint": "Đáp án đúng là “Bé chăm học và rất ngoan.”.",
+          "answer": "Em bọc sách thật cẩn thận.",
+          "hint": "Bọc sách cẩn thận là cách giữ gìn đồ dùng.",
           "skill_tag": "C6",
           "diem": 1.0,
           "question_id": 121038,
@@ -18779,42 +18779,42 @@
           "question_number": 11
         },
         {
-          "question_text": "Bé đến đâu vào buổi sáng?",
+          "question_text": "Mỗi bạn cần mang gì đến buổi đổi sách?",
           "options": [
-            "ra biển",
-            "đến lớp",
-            "ra chợ",
-            "về quê"
+            "một cuốn sách đã đọc",
+            "một món đồ chơi",
+            "một chiếc bánh",
+            "một chậu cây"
           ],
-          "answer": "đến lớp",
-          "hint": "Đáp án đúng: đến lớp.",
+          "answer": "một cuốn sách đã đọc",
+          "hint": "Mỗi bạn mang một cuốn đã đọc để đổi.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 121039,
-          "emoji": "🏫",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 12,
-          "reading_title": "Bé đến trường",
-          "reading_passage": "Sáng em đến lớp\nNắng đậu vai em\nBạn cười ríu rít\nCô đón dịu hiền."
+          "reading_title": "Ngày hội đọc sách",
+          "reading_passage": "Lớp tổ chức đổi sách. Mỗi bạn mang một cuốn đã đọc và chọn một cuốn khác để mượn. Nhờ vậy, ai cũng có thêm truyện mới mà không cần mua thêm."
         },
         {
-          "question_text": "Câu chuyện nhắc bé điều gì?",
+          "question_text": "Vì sao bé mang khăn cho bà?",
           "options": [
-            "trêu chọc bạn",
-            "không cần cảm ơn",
-            "chỉ lo cho mình",
-            "biết giúp đỡ người khác"
+            "vì trời trở lạnh",
+            "vì bà muốn đi chợ",
+            "vì khăn bị bẩn",
+            "vì bé muốn chơi"
           ],
-          "answer": "biết giúp đỡ người khác",
-          "hint": "Đáp án đúng: biết giúp đỡ người khác.",
+          "answer": "vì trời trở lạnh",
+          "hint": "Bé thấy trời lạnh nên mang khăn cho bà.",
           "skill_tag": "C5",
           "diem": 1.0,
           "question_id": 121040,
-          "emoji": "🐦",
+          "emoji": "📖",
           "img": "assets/images/tho_hong_giao_vien.webp",
           "question_number": 13,
-          "reading_title": "Chim sẻ và giọt nước",
-          "reading_passage": "Trưa hè nóng, chim sẻ thấy một chú kiến mắc kẹt bên vũng nước. Sẻ thả chiếc lá xuống. Kiến bám vào lá rồi bò lên bờ. Kiến ríu rít cảm ơn."
+          "reading_title": "Chiếc khăn của bà",
+          "reading_passage": "Trời trở lạnh, bé thấy bà ngồi ngoài hiên. Em lấy chiếc khăn mỏng trong phòng mang ra cho bà. Bà quàng khăn rồi xoa đầu bé."
         }
       ]
     }

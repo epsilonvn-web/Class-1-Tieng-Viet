@@ -1839,43 +1839,43 @@ function renderAlphabetBoard(index = 0) {
         const isActive = idx === index;
         const activeCls = isActive ? "bg-rose-500 text-white border-rose-600 shadow-md scale-105" : "bg-white text-gray-700 border-gray-200 hover:border-pink-300";
         return `
-          <button class="w-9 h-11 md:w-11 md:h-12 rounded-xl font-black text-xs md:text-sm border-2 transition-all flex flex-col items-center justify-center p-0.5 ${activeCls}" onclick="renderAlphabetBoard(${idx})">
+          <button class="w-9 h-11 md:w-[48px] md:h-[53px] rounded-xl font-black text-xs md:text-[15px] border-2 transition-all flex flex-col items-center justify-center p-0.5 ${activeCls}" onclick="renderAlphabetBoard(${idx})">
             <span>${l.u}</span>
-            <span class="text-[10px] opacity-75">${l.l}</span>
+            <span class="text-[10px] md:text-[11px] opacity-75">${l.l}</span>
           </button>`;
     }).join('');
 
     const html = `
         <div class="w-full flex flex-col items-center justify-between space-y-2.5">
-            <div class="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-4 gap-2.5">
+            <div class="w-full max-w-4xl md:max-w-[62rem] grid grid-cols-1 sm:grid-cols-4 gap-2.5 md:gap-[11px]">
                 <div class="p-3 bg-pink-50/70 border-2 border-pink-300 rounded-2xl flex flex-col items-center justify-center shadow-xs text-center">
                     <div class="flex items-baseline space-x-2 mb-1">
-                        <span class="text-3xl md:text-4xl font-black text-rose-600">${item.u}</span>
-                        <span class="text-2xl md:text-3xl font-bold text-pink-500">${item.l}</span>
-                        <span class="text-3xl font-serif italic text-indigo-600">${item.hw}</span>
+                        <span class="text-3xl md:text-[40px] font-black text-rose-600">${item.u}</span>
+                        <span class="text-2xl md:text-[33px] font-bold text-pink-500">${item.l}</span>
+                        <span class="text-3xl md:text-[33px] font-serif italic text-indigo-600">${item.hw}</span>
                     </div>
-                    <span class="text-xs font-bold text-purple-700 mb-2">Âm đọc: "${item.sound}"</span>
-                    <button onclick="speakVietnamese('${item.sound}')" class="px-3 py-1 bg-amber-200 hover:bg-amber-300 text-amber-900 rounded-xl text-xs font-black pastel-btn shadow-xs flex items-center space-x-1">
+                    <span class="text-xs md:text-[13px] font-bold text-purple-700 mb-2">Âm đọc: "${item.sound}"</span>
+                    <button onclick="speakVietnamese('${item.sound}')" class="px-3 py-1 md:px-[13px] md:py-[5px] bg-amber-200 hover:bg-amber-300 text-amber-900 rounded-xl text-xs md:text-[13px] font-black pastel-btn shadow-xs flex items-center space-x-1">
                         <i class="fa-solid fa-volume-high"></i><span>Nghe âm</span>
                     </button>
                 </div>
 
                 ${item.examples.map(ex => `
                     <div onclick="speakVietnamese('${ex.w}. ${ex.sent}')" class="p-2.5 bg-white hover:bg-pink-50/50 border-2 border-emerald-300 rounded-2xl flex flex-col items-center justify-between text-center cursor-pointer shadow-xs pastel-btn transition-all">
-                        <span class="text-2xl md:text-3xl mb-0.5">${ex.emo}</span>
-                        <span class="text-xs md:text-sm font-black text-emerald-800">${ex.w}</span>
-                        <span class="text-[9px] px-2 py-0.2 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full font-bold my-1">${ex.tag}</span>
-                        <p class="text-[11px] text-gray-600 font-medium italic leading-tight mb-1.5">"${ex.sent}"</p>
-                        <button onclick="event.stopPropagation(); speakVietnamese('${ex.w}. ${ex.sent}')" class="px-2.5 py-0.5 bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-lg text-[10px] font-black border border-amber-300">
+                        <span class="text-2xl md:text-[33px] mb-0.5">${ex.emo}</span>
+                        <span class="text-xs md:text-[15px] font-black text-emerald-800">${ex.w}</span>
+                        <span class="text-[9px] md:text-[10px] px-2 md:px-[9px] py-0.2 bg-indigo-50 text-indigo-700 border border-indigo-200 rounded-full font-bold my-1">${ex.tag}</span>
+                        <p class="text-[11px] md:text-[12px] text-gray-600 font-medium italic leading-tight mb-1.5">"${ex.sent}"</p>
+                        <button onclick="event.stopPropagation(); speakVietnamese('${ex.w}. ${ex.sent}')" class="px-2.5 md:px-[11px] py-0.5 bg-amber-100 hover:bg-amber-200 text-amber-900 rounded-lg text-[10px] md:text-[11px] font-black border border-amber-300">
                             <i class="fa-solid fa-volume-high mr-1"></i>Nghe
                         </button>
                     </div>
                 `).join('')}
             </div>
 
-            <div class="w-full max-w-4xl bg-white p-2.5 rounded-2xl border-2 border-pink-200 shadow-xs flex flex-col items-center space-y-1.5">
-                <div class="flex flex-wrap justify-center gap-1.5">${renderKeyRow(row1)}</div>
-                <div class="flex flex-wrap justify-center gap-1.5">${renderKeyRow(row2)}</div>
+            <div class="w-full max-w-4xl md:max-w-[62rem] bg-white p-2.5 md:p-[11px] rounded-2xl border-2 border-pink-200 shadow-xs flex flex-col items-center space-y-1.5 md:space-y-[7px]">
+                <div class="flex flex-wrap justify-center gap-1.5 md:gap-[7px]">${renderKeyRow(row1)}</div>
+                <div class="flex flex-wrap justify-center gap-1.5 md:gap-[7px]">${renderKeyRow(row2)}</div>
             </div>
         </div>
     `;

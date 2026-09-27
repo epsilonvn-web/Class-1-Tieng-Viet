@@ -1352,11 +1352,12 @@ function adaptiveQuestionId_(q, topicId = null) {
 
 function adaptiveLevel_(q) {
     const tags = Array.isArray(q?.tags) ? q.tags.map(x => String(x).toLowerCase()) : [];
-    for (let n = 1; n <= 4; n++) {
+    // Tập đọc Topic 4 có 6 cấp độ; các topic cũ vẫn hoạt động như trước vì chỉ trả về cấp có tag thực tế.
+    for (let n = 1; n <= 6; n++) {
         if (tags.includes(`level${n}`) || tags.includes(`tap_doc_cap${n}`) || tags.includes(`cap${n}_tap_doc`)) return n;
     }
     const m = String(q?.sub_topic || '').match(/cấp\s*(\d+)/i);
-    return m ? Math.max(1, Math.min(4, Number(m[1]) || 1)) : 0;
+    return m ? Math.max(1, Math.min(6, Number(m[1]) || 1)) : 0;
 }
 
 function adaptiveSkillKey_(q, topicId = null) {
@@ -2664,11 +2665,11 @@ function getTopic3FusionMeta(q) {
 
     const text = String(q.question_text || '');
     const quoted = [...text.matchAll(/'([^']+)'/g)].map(m => m[1]);
-    const toneMatch = text.match(/\bthanh\s+(sắc|huyền|hỏi|ngã|nặng|ngang)\b/i);
+    const toneMatch = text.match(/thanh\s+(sắc|huyền|hỏi|ngã|nặng|ngang)/i);
     let tone = toneMatch ? toneMatch[1].toLowerCase() : '';
-    // Fallback an toàn cho Level 2: suy ra thanh từ đáp án đúng nếu câu chữ thay đổi.
+    // Fallback an toàn cho Level 2 và Level 4: suy ra thanh từ đáp án đúng nếu câu chữ thay đổi.
     // Không dùng dấu ngang làm mặc định vì sẽ làm sai nghĩa bài học.
-    if (!tone && level === 2 && q?.answer) {
+    if (!tone && (level === 2 || level === 4) && q?.answer) {
         const ans = String(q.answer).normalize('NFD');
         if (/\u0301/.test(ans)) tone = 'sắc';
         else if (/\u0300/.test(ans)) tone = 'huyền';
@@ -2975,12 +2976,16 @@ function getTopic4ReadingMeta(q) {
     else if (tags.includes('tap_doc_cap2')) level = 2;
     else if (tags.includes('tap_doc_cap3')) level = 3;
     else if (tags.includes('tap_doc_cap4')) level = 4;
+    else if (tags.includes('tap_doc_cap5')) level = 5;
+    else if (tags.includes('tap_doc_cap6')) level = 6;
     if (!level) return null;
     const cfg = {
-        1: { label:'Cấp 1 · Mầm chữ bật tiếng', note:'Một từ · nhìn nhanh, đọc trơn', icon:'🌱' },
-        2: { label:'Cấp 2 · Đôi bạn thành lời', note:'Hai từ · đọc liền thành một cụm nghĩa', icon:'🫶' },
-        3: { label:'Cấp 3 · Bốn từ liền mạch', note:'Bốn từ · giữ nhịp đều, không đọc rời', icon:'🚂' },
-        4: { label:'Cấp 4 · Siêu sao đọc câu', note:'Câu dài · đọc rõ, biết ngắt hơi tự nhiên', icon:'⭐' }
+        1: { label:'Cấp 1 · Một từ dễ', note:'Vần đơn · từ rất quen thuộc quanh bé', icon:'🌱' },
+        2: { label:'Cấp 2 · Một từ nâng cao', note:'Vần kép / vần khó · đọc chậm rồi đọc trơn', icon:'🌿' },
+        3: { label:'Cấp 3 · Hai từ dễ', note:'Cụm hai từ quen thuộc · đọc liền thành nghĩa', icon:'🫶' },
+        4: { label:'Cấp 4 · Hai từ nâng cao', note:'Cụm hai từ có vần khó hơn · giữ nhịp đều', icon:'🌈' },
+        5: { label:'Cấp 5 · Bốn từ liền mạch', note:'Bốn từ · giữ nhịp đều, không đọc rời', icon:'🚂' },
+        6: { label:'Cấp 6 · Siêu sao đọc câu', note:'Câu dài · đọc rõ, biết ngắt hơi tự nhiên', icon:'⭐' }
     }[level];
     return { level, ...cfg, text:String(q?.question_text || '').trim(), speech:String(q?.audio_text || q?.question_text || '').trim() };
 }
@@ -3022,7 +3027,7 @@ function speakTopic4Reading_() {
     const supportKey = adaptivePracticeSupportKey_(q, 4);
     const st = topic4ReadingSupportState_[supportKey] || (topic4ReadingSupportState_[supportKey] = { hint:false, audio:false });
     st.audio = true;
-    speakVietnamese(meta.speech, meta.level >= 4 ? 0.88 : 0.92);
+    speakVietnamese(meta.speech, meta.level >= 5 ? 0.88 : 0.92);
     const status = document.getElementById('topic4-reading-status');
     if (status) status.textContent = 'Cô đọc mẫu xong, con tự đọc lại một lần nữa nhé!';
 }
@@ -3055,10 +3060,13 @@ function topic4ReadingHint_() {
     const st = topic4ReadingSupportState_[supportKey] || (topic4ReadingSupportState_[supportKey] = { hint:false, audio:false });
     st.hint = true;
     if (meta.level === 1) {
-        hint.textContent = 'Con nhìn cả từ, đọc chậm một lần rồi đọc liền lại nhé.';
+        hint.textContent = 'Con nhìn âm đầu, vần và dấu rồi đọc liền cả từ nhé.';
     } else if (meta.level === 2) {
+        const p = getTopic4Level1Parts_(meta.text);
+        hint.textContent = `${p.onset || '∅'}  •  ${p.rhyme}  •  thanh ${p.tone ? p.tone.name : 'ngang'}  →  ${meta.text}`;
+    } else if (meta.level === 3 || meta.level === 4) {
         hint.textContent = meta.text.split(/\s+/).join('  •  ');
-    } else if (meta.level === 3) {
+    } else if (meta.level === 5) {
         const a = meta.text.split(/\s+/);
         hint.textContent = `${a.slice(0,2).join(' ')}  │  ${a.slice(2).join(' ')}`;
     } else {
@@ -3102,7 +3110,7 @@ function getTopic4Level1Parts_(text) {
 
 function renderTopic4Level1Target_(text) {
     const p = getTopic4Level1Parts_(text);
-    // Cấp 1 Tập đọc: vẫn đọc MỘT TỪ hoàn chỉnh, nhưng dùng 3 ô màu để bé nhìn nhanh
+    // Hai cấp một-từ (4.1 và 4.2) vẫn đọc MỘT TỪ hoàn chỉnh, dùng 3 ô màu để bé nhìn nhanh
     // cấu tạo của tiếng: âm đầu | vần | dấu thanh. Không dùng dấu + để tránh quay lại kiểu ghép vần.
     const onsetText = p.onset || '—';
     const toneText = p.tone ? p.tone.name : 'ngang';
@@ -3125,7 +3133,7 @@ function renderTopic4Level1Target_(text) {
 }
 
 
-function renderTopic4Level2Target_(text) {
+function renderTopic4TwoWordTarget_(text) {
     const words = String(text || '').trim().split(/\s+/).filter(Boolean);
     if (!words.length) return '';
     return `<div class="flex flex-wrap items-center justify-center gap-x-4 md:gap-x-6 gap-y-2 leading-none select-none">${words.map((word, idx) => {
@@ -3139,14 +3147,14 @@ function renderTopic4ReadingQuestion(q) {
     if (!meta) return false;
     const box = document.getElementById('question-box');
     if (!box) return false;
-    const sizeCls = meta.level === 1 ? 'text-[2.7rem] md:text-[3.65rem]'
-        : meta.level === 2 ? 'text-[2.6rem] md:text-[3.5rem]'
-        : meta.level === 3 ? 'text-[2.05rem] md:text-[2.75rem]'
+    const sizeCls = meta.level <= 2 ? 'text-[2.7rem] md:text-[3.65rem]'
+        : meta.level <= 4 ? 'text-[2.3rem] md:text-[3.05rem]'
+        : meta.level === 5 ? 'text-[2.05rem] md:text-[2.75rem]'
         : 'text-[1.65rem] md:text-[2.15rem]';
-    const targetHtml = meta.level === 1
+    const targetHtml = meta.level <= 2
         ? renderTopic4Level1Target_(meta.text)
-        : meta.level === 2
-            ? renderTopic4Level2Target_(meta.text)
+        : meta.level <= 4
+            ? renderTopic4TwoWordTarget_(meta.text)
             : escapeHtml(meta.text);
     box.innerHTML = `
       <div class="topic4-reading-stage relative w-full max-w-5xl overflow-hidden rounded-[30px] border-2 border-pink-200 bg-gradient-to-b from-sky-50/80 via-white to-amber-50/55 px-4 md:px-8 py-5 md:py-7 text-center shadow-sm">

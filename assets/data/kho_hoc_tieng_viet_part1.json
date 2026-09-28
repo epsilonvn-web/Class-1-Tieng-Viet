@@ -25103,11 +25103,11 @@
         {
           "id": 44001,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bé",
+          "q": "ba",
           "o": [],
-          "a": "bé",
+          "a": "ba",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bé",
+          "aud": "ba",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25141,6 +25141,25 @@
         {
           "id": 44003,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "bé",
+          "o": [],
+          "a": "bé",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "bé",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44004,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "bố",
           "o": [],
           "a": "bố",
@@ -25158,32 +25177,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44004,
+          "id": 44005,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "mẹ",
           "o": [],
           "a": "mẹ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
           "aud": "mẹ",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44005,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ông",
-          "o": [],
-          "a": "ông",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ông",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25236,11 +25236,11 @@
         {
           "id": 44008,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "anh",
+          "q": "dì",
           "o": [],
-          "a": "anh",
+          "a": "dì",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "anh",
+          "aud": "dì",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25274,11 +25274,11 @@
         {
           "id": 44010,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "em",
+          "q": "cụ",
           "o": [],
-          "a": "em",
+          "a": "cụ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "em",
+          "aud": "cụ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25292,25 +25292,6 @@
         },
         {
           "id": 44011,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bạn",
-          "o": [],
-          "a": "bạn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bạn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44013,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "nhà",
           "o": [],
@@ -25329,26 +25310,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44014,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bàn",
-          "o": [],
-          "a": "bàn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bàn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44015,
+          "id": 44013,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "ghế",
           "o": [],
@@ -25367,368 +25329,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44016,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bút",
-          "o": [],
-          "a": "bút",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bút",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44017,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "vở",
-          "o": [],
-          "a": "vở",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "vở",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44018,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "sách",
-          "o": [],
-          "a": "sách",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "sách",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44019,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cặp",
-          "o": [],
-          "a": "cặp",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cặp",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44020,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bảng",
-          "o": [],
-          "a": "bảng",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bảng",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44021,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "phấn",
-          "o": [],
-          "a": "phấn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "phấn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44024,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "hộp",
-          "o": [],
-          "a": "hộp",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "hộp",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44026,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "mũ",
-          "o": [],
-          "a": "mũ",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "mũ",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44027,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "dép",
-          "o": [],
-          "a": "dép",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "dép",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44029,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "quần",
-          "o": [],
-          "a": "quần",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "quần",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44031,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "khăn",
-          "o": [],
-          "a": "khăn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "khăn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44032,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "chăn",
-          "o": [],
-          "a": "chăn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "chăn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44036,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "đèn",
-          "o": [],
-          "a": "đèn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "đèn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44037,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "quạt",
-          "o": [],
-          "a": "quạt",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "quạt",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44039,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bát",
-          "o": [],
-          "a": "bát",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bát",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44041,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ca",
-          "o": [],
-          "a": "ca",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ca",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44042,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cốc",
-          "o": [],
-          "a": "cốc",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cốc",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44045,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "sọt",
-          "o": [],
-          "a": "sọt",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "sọt",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44046,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "rổ",
-          "o": [],
-          "a": "rổ",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "rổ",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44047,
+          "id": 44014,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "xe",
           "o": [],
@@ -25747,13 +25348,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44052,
+          "id": 44015,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "phố",
+          "q": "tủ",
           "o": [],
-          "a": "phố",
+          "a": "tủ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "phố",
+          "aud": "tủ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25766,13 +25367,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44053,
+          "id": 44016,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "chợ",
+          "q": "ly",
           "o": [],
-          "a": "chợ",
+          "a": "ly",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "chợ",
+          "aud": "ly",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25785,13 +25386,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44055,
+          "id": 44017,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "lớp",
+          "q": "ca",
           "o": [],
-          "a": "lớp",
+          "a": "ca",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "lớp",
+          "aud": "ca",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25804,13 +25405,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44056,
+          "id": 44018,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "sân",
+          "q": "lọ",
           "o": [],
-          "a": "sân",
+          "a": "lọ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "sân",
+          "aud": "lọ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25823,13 +25424,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44058,
+          "id": 44019,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cổng",
+          "q": "nơ",
           "o": [],
-          "a": "cổng",
+          "a": "nơ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cổng",
+          "aud": "nơ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25842,13 +25443,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44059,
+          "id": 44020,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ngõ",
+          "q": "cờ",
           "o": [],
-          "a": "ngõ",
+          "a": "cờ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ngõ",
+          "aud": "cờ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25861,13 +25462,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44061,
+          "id": 44021,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "lá",
+          "q": "vở",
           "o": [],
-          "a": "lá",
+          "a": "vở",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "lá",
+          "aud": "vở",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25880,13 +25481,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44063,
+          "id": 44024,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cỏ",
+          "q": "mũ",
           "o": [],
-          "a": "cỏ",
+          "a": "mũ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cỏ",
+          "aud": "mũ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25899,13 +25500,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44064,
+          "id": 44026,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "mầm",
+          "q": "rổ",
           "o": [],
-          "a": "mầm",
+          "a": "rổ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "mầm",
+          "aud": "rổ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25918,13 +25519,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44065,
+          "id": 44027,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "hạt",
+          "q": "gỗ",
           "o": [],
-          "a": "hạt",
+          "a": "gỗ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "hạt",
+          "aud": "gỗ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25937,13 +25538,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44066,
+          "id": 44029,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "quả",
+          "q": "chỗ",
           "o": [],
-          "a": "quả",
+          "a": "chỗ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "quả",
+          "aud": "chỗ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25956,13 +25557,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44067,
+          "id": 44031,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cam",
+          "q": "vỏ",
           "o": [],
-          "a": "cam",
+          "a": "vỏ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cam",
+          "aud": "vỏ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25975,13 +25576,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44068,
+          "id": 44032,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "chanh",
+          "q": "kệ",
           "o": [],
-          "a": "chanh",
+          "a": "kệ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "chanh",
+          "aud": "kệ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -25994,13 +25595,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44069,
+          "id": 44036,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "na",
+          "q": "cỗ",
           "o": [],
-          "a": "na",
+          "a": "cỗ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "na",
+          "aud": "cỗ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26013,13 +25614,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44072,
+          "id": 44037,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "mận",
+          "q": "sọ",
           "o": [],
-          "a": "mận",
+          "a": "sọ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "mận",
+          "aud": "sọ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26032,13 +25633,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44076,
+          "id": 44039,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "mít",
+          "q": "thư",
           "o": [],
-          "a": "mít",
+          "a": "thư",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "mít",
+          "aud": "thư",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26051,102 +25652,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44077,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "nho",
-          "o": [],
-          "a": "nho",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "nho",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44081,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "chó",
-          "o": [],
-          "a": "chó",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "chó",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44082,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "gà",
-          "o": [],
-          "a": "gà",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "gà",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44083,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "vịt",
-          "o": [],
-          "a": "vịt",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "vịt",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44084,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "chim",
-          "o": [],
-          "a": "chim",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "chim",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44085,
+          "id": 44041,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "cá",
           "o": [],
@@ -26165,13 +25671,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44086,
+          "id": 44042,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "tôm",
+          "q": "gà",
           "o": [],
-          "a": "tôm",
+          "a": "gà",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "tôm",
+          "aud": "gà",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26184,13 +25690,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44088,
+          "id": 44045,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ong",
+          "q": "chó",
           "o": [],
-          "a": "ong",
+          "a": "chó",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ong",
+          "aud": "chó",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26203,26 +25709,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44091,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "thỏ",
-          "o": [],
-          "a": "thỏ",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "thỏ",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44092,
+          "id": 44046,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "dê",
           "o": [],
@@ -26241,7 +25728,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44093,
+          "id": 44047,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "bò",
           "o": [],
@@ -26260,13 +25747,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44096,
+          "id": 44052,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "lợn",
+          "q": "thỏ",
           "o": [],
-          "a": "lợn",
+          "a": "thỏ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "lợn",
+          "aud": "thỏ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26279,13 +25766,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44098,
+          "id": 44053,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "sóc",
+          "q": "hổ",
           "o": [],
-          "a": "sóc",
+          "a": "hổ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "sóc",
+          "aud": "hổ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26298,13 +25785,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44099,
+          "id": 44055,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ếch",
+          "q": "sò",
           "o": [],
-          "a": "ếch",
+          "a": "sò",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ếch",
+          "aud": "sò",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26317,13 +25804,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44101,
+          "id": 44056,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "nắng",
+          "q": "ve",
           "o": [],
-          "a": "nắng",
+          "a": "ve",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "nắng",
+          "aud": "ve",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26336,13 +25823,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44102,
+          "id": 44058,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "gió",
+          "q": "nho",
           "o": [],
-          "a": "gió",
+          "a": "nho",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "gió",
+          "aud": "nho",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26355,13 +25842,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44104,
+          "id": 44059,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "trăng",
+          "q": "na",
           "o": [],
-          "a": "trăng",
+          "a": "na",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "trăng",
+          "aud": "na",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26374,13 +25861,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44106,
+          "id": 44061,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "đất",
+          "q": "lê",
           "o": [],
-          "a": "đất",
+          "a": "lê",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "đất",
+          "aud": "lê",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26393,13 +25880,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44108,
+          "id": 44063,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "sông",
+          "q": "bí",
           "o": [],
-          "a": "sông",
+          "a": "bí",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "sông",
+          "aud": "bí",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26412,13 +25899,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44112,
+          "id": 44064,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "rừng",
+          "q": "bơ",
           "o": [],
-          "a": "rừng",
+          "a": "bơ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "rừng",
+          "aud": "bơ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26431,7 +25918,102 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44114,
+          "id": 44065,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "mơ",
+          "o": [],
+          "a": "mơ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "mơ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44066,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "ngô",
+          "o": [],
+          "a": "ngô",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "ngô",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44067,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "củ",
+          "o": [],
+          "a": "củ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "củ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44068,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "lá",
+          "o": [],
+          "a": "lá",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "lá",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44069,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "cỏ",
+          "o": [],
+          "a": "cỏ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "cỏ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44072,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "đá",
           "o": [],
@@ -26450,13 +26032,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44115,
+          "id": 44076,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cát",
+          "q": "gió",
           "o": [],
-          "a": "cát",
+          "a": "gió",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cát",
+          "aud": "gió",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26469,13 +26051,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44116,
+          "id": 44077,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "sáng",
+          "q": "hồ",
           "o": [],
-          "a": "sáng",
+          "a": "hồ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "sáng",
+          "aud": "hồ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26488,13 +26070,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44119,
+          "id": 44081,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "đêm",
+          "q": "bờ",
           "o": [],
-          "a": "đêm",
+          "a": "bờ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "đêm",
+          "aud": "bờ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26507,7 +26089,197 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44120,
+          "id": 44082,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "bể",
+          "o": [],
+          "a": "bể",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "bể",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44083,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "quà",
+          "o": [],
+          "a": "quà",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "quà",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44084,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "quê",
+          "o": [],
+          "a": "quê",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "quê",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44085,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "quế",
+          "o": [],
+          "a": "quế",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "quế",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44086,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "quả",
+          "o": [],
+          "a": "quả",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "quả",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44088,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "phở",
+          "o": [],
+          "a": "phở",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "phở",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44091,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "thợ",
+          "o": [],
+          "a": "thợ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "thợ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44092,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "khỉ",
+          "o": [],
+          "a": "khỉ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "khỉ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44093,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "nghề",
+          "o": [],
+          "a": "nghề",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "nghề",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44096,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "ngõ",
+          "o": [],
+          "a": "ngõ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "ngõ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44098,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "đi",
           "o": [],
@@ -26526,7 +26298,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44121,
+          "id": 44099,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "về",
           "o": [],
@@ -26545,26 +26317,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44122,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ăn",
-          "o": [],
-          "a": "ăn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ăn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44124,
+          "id": 44101,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "ngủ",
           "o": [],
@@ -26583,45 +26336,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44125,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "học",
-          "o": [],
-          "a": "học",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "học",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44126,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "đọc",
-          "o": [],
-          "a": "đọc",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "đọc",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44128,
+          "id": 44102,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "vẽ",
           "o": [],
@@ -26640,13 +26355,13 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44129,
+          "id": 44104,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "hát",
+          "q": "tô",
           "o": [],
-          "a": "hát",
+          "a": "tô",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "hát",
+          "aud": "tô",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26659,45 +26374,7 @@
           "skill_tag": "C5"
         },
         {
-          "id": 44137,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "nghe",
-          "o": [],
-          "a": "nghe",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "nghe",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44138,
-          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "nhìn",
-          "o": [],
-          "a": "nhìn",
-          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "nhìn",
-          "week": 7,
-          "tags": [
-            "tap_doc",
-            "tap_doc_cap1",
-            "cap1_tap_doc",
-            "roadmap",
-            "semester1"
-          ],
-          "emoji": "",
-          "skill_tag": "C5"
-        },
-        {
-          "id": 44140,
+          "id": 44106,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
           "q": "mở",
           "o": [],
@@ -26716,13 +26393,336 @@
           "skill_tag": "C5"
         },
         {
+          "id": 44108,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "bỏ",
+          "o": [],
+          "a": "bỏ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "bỏ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44112,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "cho",
+          "o": [],
+          "a": "cho",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "cho",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44114,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "chờ",
+          "o": [],
+          "a": "chờ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "chờ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44115,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "chê",
+          "o": [],
+          "a": "chê",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "chê",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44116,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "giữ",
+          "o": [],
+          "a": "giữ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "giữ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44119,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "nhớ",
+          "o": [],
+          "a": "nhớ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "nhớ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44120,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "sợ",
+          "o": [],
+          "a": "sợ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "sợ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44121,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "lo",
+          "o": [],
+          "a": "lo",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "lo",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44122,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "vỗ",
+          "o": [],
+          "a": "vỗ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "vỗ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44124,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "gõ",
+          "o": [],
+          "a": "gõ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "gõ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44125,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "dỗ",
+          "o": [],
+          "a": "dỗ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "dỗ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44126,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "đỡ",
+          "o": [],
+          "a": "đỡ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "đỡ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44128,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "nở",
+          "o": [],
+          "a": "nở",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "nở",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44129,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "thở",
+          "o": [],
+          "a": "thở",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "thở",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44137,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "to",
+          "o": [],
+          "a": "to",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "to",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44138,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "đỏ",
+          "o": [],
+          "a": "đỏ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "đỏ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
+          "id": 44140,
+          "sub": "Cấp 1 - Một từ dễ · Vần đơn",
+          "q": "lạ",
+          "o": [],
+          "a": "lạ",
+          "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
+          "aud": "lạ",
+          "week": 7,
+          "tags": [
+            "tap_doc",
+            "tap_doc_cap1",
+            "cap1_tap_doc",
+            "roadmap",
+            "semester1"
+          ],
+          "emoji": "",
+          "skill_tag": "C5"
+        },
+        {
           "id": 44141,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "đóng",
+          "q": "xa",
           "o": [],
-          "a": "đóng",
+          "a": "xa",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "đóng",
+          "aud": "xa",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26737,11 +26737,11 @@
         {
           "id": 44142,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cầm",
+          "q": "cũ",
           "o": [],
-          "a": "cầm",
+          "a": "cũ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cầm",
+          "aud": "cũ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26756,11 +26756,11 @@
         {
           "id": 44143,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "đặt",
+          "q": "khô",
           "o": [],
-          "a": "đặt",
+          "a": "khô",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "đặt",
+          "aud": "khô",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26775,11 +26775,11 @@
         {
           "id": 44144,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "xếp",
+          "q": "no",
           "o": [],
-          "a": "xếp",
+          "a": "no",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "xếp",
+          "aud": "no",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26794,11 +26794,11 @@
         {
           "id": 44145,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "gấp",
+          "q": "dữ",
           "o": [],
-          "a": "gấp",
+          "a": "dữ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "gấp",
+          "aud": "dữ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26813,11 +26813,11 @@
         {
           "id": 44147,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "quét",
+          "q": "nhẹ",
           "o": [],
-          "a": "quét",
+          "a": "nhẹ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "quét",
+          "aud": "nhẹ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26832,11 +26832,11 @@
         {
           "id": 44150,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "trồng",
+          "q": "trẻ",
           "o": [],
-          "a": "trồng",
+          "a": "trẻ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "trồng",
+          "aud": "trẻ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26870,11 +26870,11 @@
         {
           "id": 44602,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "cỗ",
+          "q": "là",
           "o": [],
-          "a": "cỗ",
+          "a": "là",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "cỗ",
+          "aud": "là",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26889,11 +26889,11 @@
         {
           "id": 44603,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "tô",
+          "q": "ở",
           "o": [],
-          "a": "tô",
+          "a": "ở",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "tô",
+          "aud": "ở",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26908,11 +26908,11 @@
         {
           "id": 44604,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ly",
+          "q": "và",
           "o": [],
-          "a": "ly",
+          "a": "và",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ly",
+          "aud": "và",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26927,11 +26927,11 @@
         {
           "id": 44605,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "tủ",
+          "q": "mà",
           "o": [],
-          "a": "tủ",
+          "a": "mà",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "tủ",
+          "aud": "mà",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26946,11 +26946,11 @@
         {
           "id": 44606,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "bí",
+          "q": "vì",
           "o": [],
-          "a": "bí",
+          "a": "vì",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "bí",
+          "aud": "vì",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26965,11 +26965,11 @@
         {
           "id": 44607,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "lê",
+          "q": "từ",
           "o": [],
-          "a": "lê",
+          "a": "từ",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "lê",
+          "aud": "từ",
           "week": 7,
           "tags": [
             "tap_doc",
@@ -26984,11 +26984,11 @@
         {
           "id": 44608,
           "sub": "Cấp 1 - Một từ dễ · Vần đơn",
-          "q": "ve",
+          "q": "để",
           "o": [],
-          "a": "ve",
+          "a": "để",
           "h": "Con hãy tự đọc trước. Nếu chưa chắc, nghe cô đọc mẫu rồi tự đọc lại một lần nữa nhé!",
-          "aud": "ve",
+          "aud": "để",
           "week": 7,
           "tags": [
             "tap_doc",

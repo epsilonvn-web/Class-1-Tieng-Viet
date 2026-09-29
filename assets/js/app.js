@@ -1375,12 +1375,12 @@ function adaptiveQuestionId_(q, topicId = null) {
 
 function adaptiveLevel_(q) {
     const tags = Array.isArray(q?.tags) ? q.tags.map(x => String(x).toLowerCase()) : [];
-    // Tập đọc Topic 4 có 6 cấp độ; các topic cũ vẫn hoạt động như trước vì chỉ trả về cấp có tag thực tế.
-    for (let n = 1; n <= 6; n++) {
+    // Tập đọc Topic 4 có 8 cấp độ; các topic cũ vẫn hoạt động như trước vì chỉ trả về cấp có tag thực tế.
+    for (let n = 1; n <= 8; n++) {
         if (tags.includes(`level${n}`) || tags.includes(`tap_doc_cap${n}`) || tags.includes(`cap${n}_tap_doc`)) return n;
     }
     const m = String(q?.sub_topic || '').match(/cấp\s*(\d+)/i);
-    return m ? Math.max(1, Math.min(6, Number(m[1]) || 1)) : 0;
+    return m ? Math.max(1, Math.min(8, Number(m[1]) || 1)) : 0;
 }
 
 function adaptiveSkillKey_(q, topicId = null) {
@@ -3001,14 +3001,18 @@ function getTopic4ReadingMeta(q) {
     else if (tags.includes('tap_doc_cap4')) level = 4;
     else if (tags.includes('tap_doc_cap5')) level = 5;
     else if (tags.includes('tap_doc_cap6')) level = 6;
+    else if (tags.includes('tap_doc_cap7')) level = 7;
+    else if (tags.includes('tap_doc_cap8')) level = 8;
     if (!level) return null;
     const cfg = {
-        1: { label:'Cấp 1 · Một từ dễ', note:'Vần đơn · từ rất quen thuộc quanh bé', icon:'🌱' },
-        2: { label:'Cấp 2 · Một từ nâng cao', note:'Vần kép / vần khó · đọc chậm rồi đọc trơn', icon:'🌿' },
-        3: { label:'Cấp 3 · Hai từ dễ', note:'Cụm hai từ quen thuộc · đọc liền thành nghĩa', icon:'🫶' },
-        4: { label:'Cấp 4 · Hai từ nâng cao', note:'Cụm hai từ có vần khó hơn · giữ nhịp đều', icon:'🌈' },
-        5: { label:'Cấp 5 · Bốn từ liền mạch', note:'Bốn từ · giữ nhịp đều, không đọc rời', icon:'🚂' },
-        6: { label:'Cấp 6 · Siêu sao đọc câu', note:'Câu dài · đọc rõ, biết ngắt hơi tự nhiên', icon:'⭐' }
+        1: { label:'Cấp 1 · Từ đơn dễ', note:'Vần đơn · một nguyên âm đơn, đọc thật chắc', icon:'🌱' },
+        2: { label:'Cấp 2 · Từ đơn vừa', note:'Vần dễ quen thuộc · bắt đầu có âm cuối hoặc vần đôi dễ', icon:'🌿' },
+        3: { label:'Cấp 3 · Từ đơn khó', note:'Các vần còn lại · đọc chậm phần vần rồi đọc trơn', icon:'🌳' },
+        4: { label:'Cấp 4 · Từ đôi dễ', note:'Hai từ rất quen thuộc · nối liền thành nghĩa', icon:'🫶' },
+        5: { label:'Cấp 5 · Từ đôi vừa', note:'Hai từ mức vừa · giữ nhịp đều và rõ tiếng', icon:'🌈' },
+        6: { label:'Cấp 6 · Từ đôi khó', note:'Cụm 2-3 từ khó hơn · chia nhịp rồi đọc liền', icon:'🧠' },
+        7: { label:'Cấp 7 · Câu ngắn', note:'Câu 5-6 từ · đọc liền mạch, rõ từng tiếng', icon:'🚂' },
+        8: { label:'Cấp 8 · Câu dài', note:'Câu dài · chú ý dấu câu và ngắt hơi tự nhiên', icon:'⭐' }
     }[level];
     return { level, ...cfg, text:String(q?.question_text || '').trim(), speech:String(q?.audio_text || q?.question_text || '').trim() };
 }
@@ -3050,7 +3054,7 @@ function speakTopic4Reading_() {
     const supportKey = adaptivePracticeSupportKey_(q, 4);
     const st = topic4ReadingSupportState_[supportKey] || (topic4ReadingSupportState_[supportKey] = { hint:false, audio:false });
     st.audio = true;
-    speakVietnamese(meta.speech, meta.level >= 5 ? 0.88 : 0.92);
+    speakVietnamese(meta.speech, meta.level >= 7 ? 0.86 : (meta.level >= 4 ? 0.89 : 0.92));
     const status = document.getElementById('topic4-reading-status');
     if (status) status.textContent = 'Cô đọc mẫu xong, con tự đọc lại một lần nữa nhé!';
 }
@@ -3082,16 +3086,15 @@ function topic4ReadingHint_() {
     const supportKey = adaptivePracticeSupportKey_(q, 4);
     const st = topic4ReadingSupportState_[supportKey] || (topic4ReadingSupportState_[supportKey] = { hint:false, audio:false });
     st.hint = true;
-    if (meta.level === 1) {
-        hint.textContent = 'Con nhìn âm đầu, vần và dấu rồi đọc liền cả từ nhé.';
-    } else if (meta.level === 2) {
+    if (meta.level <= 3) {
         const p = getTopic4Level1Parts_(meta.text);
         hint.textContent = `${p.onset || '∅'}  •  ${p.rhyme}  •  thanh ${p.tone ? p.tone.name : 'ngang'}  →  ${meta.text}`;
-    } else if (meta.level === 3 || meta.level === 4) {
+    } else if (meta.level <= 6) {
         hint.textContent = meta.text.split(/\s+/).join('  •  ');
-    } else if (meta.level === 5) {
+    } else if (meta.level === 7) {
         const a = meta.text.split(/\s+/);
-        hint.textContent = `${a.slice(0,2).join(' ')}  │  ${a.slice(2).join(' ')}`;
+        const cut = Math.ceil(a.length / 2);
+        hint.textContent = `${a.slice(0,cut).join(' ')}  │  ${a.slice(cut).join(' ')}`;
     } else {
         const t = meta.text;
         const comma = t.indexOf(',');
@@ -3133,7 +3136,7 @@ function getTopic4Level1Parts_(text) {
 
 function renderTopic4Level1Target_(text) {
     const p = getTopic4Level1Parts_(text);
-    // Hai cấp một-từ (4.1 và 4.2) vẫn đọc MỘT TỪ hoàn chỉnh, dùng 3 ô màu để bé nhìn nhanh
+    // Ba cấp từ đơn (4.1, 4.2, 4.3) đều đọc MỘT TỪ hoàn chỉnh, dùng 3 ô màu để bé nhìn nhanh
     // cấu tạo của tiếng: âm đầu | vần | dấu thanh. Không dùng dấu + để tránh quay lại kiểu ghép vần.
     const onsetText = p.onset || '—';
     const toneText = p.tone ? p.tone.name : 'ngang';
@@ -3170,13 +3173,14 @@ function renderTopic4ReadingQuestion(q) {
     if (!meta) return false;
     const box = document.getElementById('question-box');
     if (!box) return false;
-    const sizeCls = meta.level <= 2 ? 'text-[2.7rem] md:text-[3.65rem]'
-        : meta.level <= 4 ? 'text-[2.3rem] md:text-[3.05rem]'
-        : meta.level === 5 ? 'text-[2.05rem] md:text-[2.75rem]'
+    const sizeCls = meta.level <= 3 ? 'text-[2.7rem] md:text-[3.65rem]'
+        : meta.level <= 5 ? 'text-[2.3rem] md:text-[3.05rem]'
+        : meta.level === 6 ? 'text-[2.05rem] md:text-[2.75rem]'
+        : meta.level === 7 ? 'text-[1.9rem] md:text-[2.45rem]'
         : 'text-[1.65rem] md:text-[2.15rem]';
-    const targetHtml = meta.level <= 2
+    const targetHtml = meta.level <= 3
         ? renderTopic4Level1Target_(meta.text)
-        : meta.level <= 4
+        : meta.level <= 6
             ? renderTopic4TwoWordTarget_(meta.text)
             : escapeHtml(meta.text);
     box.innerHTML = `

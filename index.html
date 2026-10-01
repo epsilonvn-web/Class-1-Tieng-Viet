@@ -204,7 +204,7 @@
     
         /* TV1: tang be rong khung chuong trinh */
         #screen-dashboard {
-            max-width: 72rem !important;
+            max-width: 82rem !important;
         }
 
 
@@ -584,7 +584,7 @@
         /* Footer tranh dung chung - chu HTML luon sac net */
         #app-footer{
             width:100%;
-            max-width:72rem;
+            max-width:82rem;
             min-height:76px;
             margin:10px auto 0;
             padding:0 14px;
@@ -920,7 +920,7 @@
            de be rong artwork bang chinh xac banner. */
         #app-footer {
             width: calc(100% - 1rem) !important;
-            max-width: calc(72rem - 1rem) !important;
+            max-width: calc(82rem - 1rem) !important;
             aspect-ratio: 8 / 1 !important;
             min-height: 0 !important;
             height: auto !important;
@@ -932,55 +932,10 @@
         @media (max-width: 767px) {
             #app-footer {
                 width: calc(100% - 0.5rem) !important;
-                max-width: calc(72rem - 0.5rem) !important;
+                max-width: calc(82rem - 0.5rem) !important;
                 aspect-ratio: 8 / 1 !important;
                 min-height: 0 !important;
                 height: auto !important;
-            }
-        }
-
-        /* =========================================================
-           TV1 - FULL WIDTH RESPONSIVE
-           Tablet ngang + desktop tan dung toan bo chieu rong man hinh.
-           Giu nguyen co chu; chi mo rong shell/banner/luoi/footer.
-           Cac noi dung can de doc (bai hoc, bai giang, game...) van giu
-           max-width rieng ben trong de khong bi keo qua dai.
-           ========================================================= */
-        #screen-dashboard {
-            width: 100% !important;
-            max-width: none !important;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-        }
-
-        #app-main-banner,
-        #app-banner-slot,
-        #app-viewport,
-        #view-dashboard-grid {
-            width: 100% !important;
-            max-width: none !important;
-        }
-
-        #app-footer {
-            width: calc(100% - 1rem) !important;
-            max-width: none !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-        }
-
-        /* Font giu nguyen. Man hinh rong chi tang dien tich card/khoang trong,
-           khong phong chu theo viewport. */
-        @media (min-width: 768px) {
-            #screen-dashboard {
-                padding-left: 8px !important;
-                padding-right: 8px !important;
-            }
-        }
-
-        @media (max-width: 767px) {
-            #app-footer {
-                width: calc(100% - 0.5rem) !important;
-                max-width: none !important;
             }
         }
 </style>

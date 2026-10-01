@@ -2677,6 +2677,25 @@ function ensureTopic3FusionStyles() {
     document.head.appendChild(style);
 }
 
+// Mục 3 - khi đánh vần phải đọc ÂM của phụ âm, không đọc tên chữ cái.
+// Ví dụ: th -> thờ, tr -> trờ, ch -> chờ; tránh Google TTS đọc thành
+// "tê hát", "tê e-rờ", "xê hát" khi gặp chuỗi chữ đứng riêng.
+function getTopic3OnsetSpeech_(token) {
+    const key = String(token || '').trim().toLowerCase();
+    if (!key) return '';
+
+    const onsetSounds = {
+        'b':'bờ', 'c':'cờ', 'ch':'chờ', 'd':'dờ', 'đ':'đờ',
+        'g':'gờ', 'gh':'gờ', 'gi':'giờ', 'h':'hờ', 'k':'cờ',
+        'kh':'khờ', 'l':'lờ', 'm':'mờ', 'n':'nờ', 'ng':'ngờ',
+        'ngh':'ngờ', 'nh':'nhờ', 'p':'pờ', 'ph':'phờ', 'q':'cờ',
+        'qu':'quờ', 'r':'rờ', 's':'sờ', 't':'tờ', 'th':'thờ',
+        'tr':'trờ', 'v':'vờ', 'x':'xờ'
+    };
+
+    return onsetSounds[key] || token;
+}
+
 function getTopic3FusionMeta(q) {
     const tags = Array.isArray(q?.tags) ? q.tags : [];
     let level = 0;
@@ -2718,7 +2737,7 @@ function getTopic3FusionMeta(q) {
             level, label:'Cấp 1 · Ghép âm',
             instruction:'Ghép âm đầu với nguyên âm',
             pieces:[onset, vowel],
-            speech:`${onset}, ghép với ${vowel}, được tiếng gì?`
+            speech:`${getTopic3OnsetSpeech_(onset)}, ghép với ${vowel}, được tiếng gì?`
         };
     }
 
@@ -2761,7 +2780,7 @@ function getTopic3FusionMeta(q) {
             level, label:'Cấp 3 · Ghép vần',
             instruction:'Ghép âm đầu với vần',
             pieces:[onset, rime],
-            speech:`${onset}, ghép với vần ${rime}, được tiếng gì?`
+            speech:`${getTopic3OnsetSpeech_(onset)}, ghép với vần ${rime}, được tiếng gì?`
         };
     }
 
@@ -2772,7 +2791,7 @@ function getTopic3FusionMeta(q) {
         level, label:'Cấp 4 · Tiếng hoàn chỉnh',
         instruction:'Ghép âm đầu + vần + thanh',
         pieces:[onset, rime, tone ? `thanh ${tone}` : 'thanh'],
-        speech:`${onset}, ghép với vần ${rime}, thêm thanh ${tone || ''}, được tiếng gì?`
+        speech:`${getTopic3OnsetSpeech_(onset)}, ghép với vần ${rime}, thêm thanh ${tone || ''}, được tiếng gì?`
     };
 }
 
